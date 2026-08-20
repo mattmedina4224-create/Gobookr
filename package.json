@@ -1,0 +1,14 @@
+{
+  "name": "gobookr",
+  "version": "1.0.0",
+  "private": true,
+  "description": "GoBookr — find and book trusted barbers, hairstylists, and colorists.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "seed": "node db/seed.js"
+  },
+  "engines": {
+    "node": ">=22.5.0"
+  }
+}
