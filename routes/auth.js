@@ -1,8 +1,4 @@
-const { route } = require("../router");
+use strict';
 
-module.exports = function authRoutes() {
-  return route(async (req, res) => {
-    res.statusCode = 404;
-    res.end("Not found");
-  });
+module.exports = function (router) {
 };
