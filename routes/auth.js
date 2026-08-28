@@ -140,9 +140,31 @@ module.exports = function (router) {
             </div>
 
             <div class="field">
-              <label for="password">Password</label>
-              <input id="password" type="password" name="password" minlength="6" required />
-            </div>
+  <label for="password">Password</label>
+
+  <div style="position:relative;">
+    <input
+      id="password"
+      type="password"
+      name="password"
+      minlength="6"
+      required
+      style="width:100%;box-sizing:border-box;padding-right:70px;"
+    />
+
+    <button
+      type="button"
+      onclick="const p=document.getElementById('password'); p.type=p.type==='password'?'text':'password';"
+      aria-label="Show or hide password"
+      style="position:absolute;right:38px;top:50%;transform:translateY(-50%);border:0;background:transparent;padding:8px;cursor:pointer;"
+    >
+      <span style="display:block;width:20px;height:20px;position:relative;">
+        <span style="position:absolute;width:16px;height:16px;border:2px solid #555;border-radius:70% 0 70% 0;transform:rotate(45deg);left:2px;top:2px;"></span>
+        <span style="position:absolute;width:6px;height:6px;background:#555;border-radius:50%;left:7px;top:7px;"></span>
+      </span>
+    </button>
+  </div>
+</div>
 
             ${
               role === 'pro'
