@@ -42,7 +42,7 @@ module.exports = function (router) {
             <div class="field">
               <label for="password">Password</label>
               <div style="display:flex;gap:8px;align-items:center;">
-  <input id="password" type="password" name="password" required style="flex:1;" />
+  <input id="password" type="password" name="password" required style="flex:1;min-width:0;width:auto;" />
   <button
     type="button"
     onclick="const p=document.getElementById('password'); p.type=p.type==='password'?'text':'password';"
