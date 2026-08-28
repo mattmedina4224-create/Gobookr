@@ -40,15 +40,39 @@ module.exports = function (router) {
             </div>
 
             <div class="field">
-              <label for="password">Password</label>
-              <div style="display:flex;gap:8px;align-items:center;">
-  <input id="password" type="password" name="password" required style="flex:1;min-width:0;width:auto;" />
-  <button
-    type="button"
-    onclick="const p=document.getElementById('password'); p.type=p.type==='password'?'text':'password';"
-    style="width:48px;height:48px;border:1px solid #ddd;border-radius:10px;background:white;cursor:pointer;font-size:18px;"
-    aria-label="Show or hide password"
-  >👁</button>
+  <label for="password">Password</label>
+
+  <div style="display:flex;gap:8px;align-items:center;">
+    <input
+      id="password"
+      type="password"
+      name="password"
+      required
+      style="flex:1;"
+    />
+
+    <button
+      type="button"
+      onclick="const p=document.getElementById('password'); p.type=p.type==='password'?'text':'password';"
+      style="width:48px;height:48px;border:1px solid #ddd;border-radius:10px;background:white;cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0;"
+      aria-label="Show or hide password"
+    >
+      <svg
+        width="22"
+        height="22"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true"
+      >
+        <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"></path>
+        <circle cx="12" cy="12" r="3"></circle>
+      </svg>
+    </button>
+  </div>
 </div>
             </div>
 
