@@ -41,9 +41,14 @@ module.exports = function (router) {
 
             <div class="field">
               <label for="password">Password</label>
-              <div style="position:relative;">
-  <input id="password" type="password" name="password" required style="padding-right:48px;" />
-  <button type="button" onclick="const p=document.getElementById('password'); p.type=p.type==='password'?'text':'password';" style="position:absolute;z-index:10;right:44px;top:50%;transform:translateY(-50%);border:0;background:transparent;cursor:pointer;font-size:18px;" aria-label="Show or hide password">👁</button>
+              <div style="display:flex;gap:8px;align-items:center;">
+  <input id="password" type="password" name="password" required style="flex:1;" />
+  <button
+    type="button"
+    onclick="const p=document.getElementById('password'); p.type=p.type==='password'?'text':'password';"
+    style="width:48px;height:48px;border:1px solid #ddd;border-radius:10px;background:white;cursor:pointer;font-size:18px;"
+    aria-label="Show or hide password"
+  >👁</button>
 </div>
             </div>
 
