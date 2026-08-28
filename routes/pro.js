@@ -225,7 +225,10 @@ module.exports = function (router) {
        WHERE id = ?`
     ).run(
       business_name || profile.business_name,
-      city || profile.city,
+      (city || profile.city)
+  .trim()
+  .toLowerCase()
+  .replace(/\b\w/g, (letter) => letter.toUpperCase()),
       state || profile.state,
       Number(price_min) || 0,
       Number(price_max) || 0,
