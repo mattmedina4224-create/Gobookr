@@ -48,19 +48,19 @@ module.exports = function (router) {
     type="password"
     name="password"
     required
-    style="width:100%;box-sizing:border-box;padding-right:82px;"
+    style="width:100%;box-sizing:border-box;padding-right:70px;"
   />
 
   <button
     type="button"
     onclick="const p=document.getElementById('password'); p.type=p.type==='password'?'text':'password';"
     aria-label="Show or hide password"
-    style="position:absolute;right:42px;top:50%;transform:translateY(-50%);border:0;background:transparent;padding:6px;cursor:pointer;display:flex;align-items:center;justify-content:center;color:#555;"
+    style="position:absolute;right:38px;top:50%;transform:translateY(-50%);border:0;background:transparent;padding:8px;cursor:pointer;"
   >
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-      <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"></path>
-      <circle cx="12" cy="12" r="3"></circle>
-    </svg>
+    <span style="display:block;width:20px;height:20px;position:relative;">
+      <span style="position:absolute;width:16px;height:16px;border:2px solid #555;border-radius:70% 0 70% 0;transform:rotate(45deg);left:2px;top:2px;"></span>
+      <span style="position:absolute;width:6px;height:6px;background:#555;border-radius:50%;left:7px;top:7px;"></span>
+    </span>
   </button>
 </div>
     
