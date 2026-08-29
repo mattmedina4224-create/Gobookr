@@ -149,6 +149,27 @@ module.exports = function (router) {
                   <input id="state" name="state" value="${escapeHtml(profile.state)}" maxlength="2" required />
                 </div>
               </div>
+              <div class="field">
+    <label for="license_number">License #</label>
+    <input
+      id="license_number"
+      name="license_number"
+      value="${escapeHtml(profile.license_number || '')}"
+      placeholder="e.g. BAR.1234567"
+    />
+  </div>
+
+  <div class="field">
+    <label for="license_state">License state</label>
+    <input
+      id="license_state"
+      name="license_state"
+      value="${escapeHtml(profile.license_state || profile.state || '')}"
+      maxlength="2"
+      placeholder="CO"
+    />
+  </div>
+</div>
               <div class="field-row">
                 <div class="field">
                   <label for="price_min">Starting price ($)</label>
@@ -218,24 +239,35 @@ module.exports = function (router) {
   router.post('/dashboard/pro/profile', async (ctx) => {
     const profile = requirePro(ctx);
     if (!profile) return;
-    const { business_name, city, state, price_min, price_max, years_experience, bio } = ctx.body;
-
+    const { business_name, city, state, license_number, license_state, price_min, price_max, years_experience, bio } = ctx.body;
     db.prepare(
-      `UPDATE pro_profiles SET business_name = ?, city = ?, state = ?, price_min = ?, price_max = ?, years_experience = ?, bio = ?
-       WHERE id = ?`
-    ).run(
-      business_name || profile.business_name,
-      (city || profile.city)
-  .trim()
-  .toLowerCase()
-  .replace(/\b\w/g, (letter) => letter.toUpperCase()),
-      state || profile.state,
-      Number(price_min) || 0,
-      Number(price_max) || 0,
-      Number(years_experience) || 0,
-      bio || '',
-      profile.id
-    );
+  `UPDATE pro_profiles
+   SET business_name = ?,
+       city = ?,
+       state = ?,
+       license_number = ?,
+       license_state = ?,
+       license_verified = 0,
+       price_min = ?,
+       price_max = ?,
+       years_experience = ?,
+       bio = ?
+   WHERE id = ?`
+).run(
+  business_name || profile.business_name,
+  (city || profile.city)
+    .trim()
+    .toLowerCase()
+    .replace(/\b\w/g, (letter) => letter.toUpperCase()),
+  state || profile.state,
+  license_number || null,
+  license_state || profile.state,
+  Number(price_min) || 0,
+  Number(price_max) || 0,
+  Number(years_experience) || 0,
+  bio || '',
+  profile.id
+);
 
     redirect(ctx.res, '/dashboard/pro/profile?success=' + encodeURIComponent('Profile updated.'));
   });
