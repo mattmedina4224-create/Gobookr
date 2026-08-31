@@ -67,5 +67,6 @@ module.exports = function (router) {
       user: ctx.currentUser
     }));
   });
+};
 
 };
