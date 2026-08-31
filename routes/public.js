@@ -246,7 +246,17 @@ module.exports = function (router) {
         <div class="avatar lg accent-${escapeHtml(pro.accent)}">${escapeHtml(pro.initials)}</div>
         <div class="meta">
           <span class="badge category">${slugCategory(pro.category)}</span>
-          <h1 style="margin-top:8px;">${escapeHtml(pro.business_name)}</h1>
+          <h1 style="margin-top:8px; display:flex; align-items:center; gap:7px;">
+  ${escapeHtml(pro.business_name)}
+  ${pro.license_verified ? `
+    <span title="License verified" aria-label="License verified" style="display:inline-flex; align-items:center;">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M12 2.5l2.1 3 3.6-.7.7 3.6 3 2.1-2.1 3 0 3.6-3.6.7-2.1 3-3-2.1-3 2.1-2.1-3-3.6-.7.7-3.6-2.1-3 3-2.1.7-3.6 3.6.7z"/>
+        <path d="M8.4 12.1l2.2 2.2 5-5" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </span>
+  ` : ''}
+</h1>
           <p class="muted" style="margin:0;">${escapeHtml(pro.city)}, ${escapeHtml(pro.state)}</p>
           <div class="stat-row">
             <span class="stat">${rating != null ? `<span class="rating">${stars(rating)}</span> <b>${rating}</b> (${reviews.length} reviews)` : 'No reviews yet'}</span>
