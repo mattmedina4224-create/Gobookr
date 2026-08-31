@@ -37,6 +37,7 @@ module.exports = function (router) {
         <td>${escapeHtml(pro.license_number || '')}</td>
         <td>${escapeHtml(pro.license_state || '')}</td>
         <td>${pro.license_verified ? 'Verified' : 'Pending'}</td>
+        <td>${pro.license_verified ? '' : `<form method="POST" action="/admin/licenses/${pro.id}/verify"><button type="submit">Verify</button></form>`}</td>
       </tr>
     `).join('');
 
@@ -53,6 +54,7 @@ module.exports = function (router) {
               <th>License #</th>
               <th>State</th>
               <th>Status</th>
+              <th>Action</th>
             </tr>
           </thead>
           <tbody>
