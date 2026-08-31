@@ -13,7 +13,7 @@ require('./routes/public')(router);
 require('./routes/auth')(router);
 require('./routes/pro')(router);
 require('./routes/customer')(router);
-
+require('./routes/admin')(router);
 const PORT = process.env.PORT || 3000;
 const PUBLIC_DIR = path.join(__dirname, 'public');
 
