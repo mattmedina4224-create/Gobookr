@@ -6,13 +6,17 @@ const { send, redirect } = require('../lib/http');
 const { escapeHtml } = require('../lib/util');
 
 function requireAdmin(ctx) {
-  if (!ctx.currentUser || ctx.currentUser.role !== 'admin') {
+  if (
+    !ctx.currentUser ||
+    ctx.currentUser.email !== 'matt@novobarbers.com'
+  ) {
     redirect(ctx.res, '/login');
     return false;
   }
 
   return true;
 }
+
 module.exports = function (router) {
 
   // Admin license verification dashboard
