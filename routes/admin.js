@@ -18,10 +18,10 @@ function requireAdmin(ctx) {
 }
 
 module.exports = function (router) {
-
   // Admin license verification dashboard
   router.get('/admin/licenses', async (ctx) => {
-  if (!requireAdmin(ctx)) return;
+    if (!requireAdmin(ctx)) return;
+
     const pros = db.prepare(`
       SELECT id, business_name, city, state,
              license_number, license_state, license_verified
@@ -68,4 +68,5 @@ module.exports = function (router) {
       user: ctx.currentUser
     }));
   });
-
+}; 
+  
