@@ -5,10 +5,18 @@ const { layout } = require('../lib/layout');
 const { send, redirect } = require('../lib/http');
 const { escapeHtml } = require('../lib/util');
 
+function requireAdmin(ctx) {
+  if (!ctx.currentUser || ctx.currentUser.role !== 'admin') {
+    redirect(ctx.res, '/login');
+    return false;
+  }
+
+  return true;
+}
 module.exports = function (router) {
 
   // Admin license verification dashboard
-  router.get('/admin/licenses', async (ctx) => {
+  if (!requireAdmin(ctx)) return;
     const pros = db.prepare(`
       SELECT id, business_name, city, state,
              license_number, license_state, license_verified
