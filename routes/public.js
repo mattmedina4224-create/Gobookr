@@ -39,7 +39,17 @@ function proCard(pro) {
     <div class="pro-card-top">
       <div class="avatar accent-${escapeHtml(pro.accent)}">${escapeHtml(pro.initials)}</div>
       <div>
-        <h3>${escapeHtml(pro.business_name)}</h3>
+        <h3>
+  ${escapeHtml(pro.business_name)}
+  ${pro.license_verified ? `
+    <span class="verified-badge" title="License verified" aria-label="License verified">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="vertical-align:-3px;">
+        <path d="M12 2.5l2.2 2.1 3-.4.9 2.9 2.7 1.4-.9 2.9 1.3 2.7-2.4 1.8-.1 3-3 .5-2 2.3-2.7-1.3-2.7 1.3-2-2.3-3-.5-.1-3-2.4-1.8 1.3-2.7-.9-2.9 2.7-1.4.9-2.9 3 .4L12 2.5z"/>
+        <path d="M8.4 12.1l2.2 2.2 5-5" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </span>
+  ` : ''}
+</h3>
         <p class="muted">${escapeHtml(pro.city)}, ${escapeHtml(pro.state)}</p>
       </div>
     </div>
