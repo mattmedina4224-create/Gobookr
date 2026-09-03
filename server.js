@@ -74,7 +74,7 @@ function parseMultipart(rawBuffer, contentType) {
   const match = /boundary=(?:"([^"]+)"|([^;]+))/i.exec(contentType || '');
   if (!match) return { fields: {}, files: {} };
 
-  const boundary = match[1] || match[2];
+  const boundary = (match[1] || match[2] || '').trim();
   const raw = rawBuffer.toString('latin1');
   const parts = raw.split(`--${boundary}`);
   const fields = {};
@@ -82,20 +82,30 @@ function parseMultipart(rawBuffer, contentType) {
 
   for (const part of parts) {
     if (!part || part === '--\r\n' || part === '--') continue;
+
     const cleaned = part.startsWith('\r\n') ? part.slice(2) : part;
     const headerEnd = cleaned.indexOf('\r\n\r\n');
     if (headerEnd === -1) continue;
 
     const headers = cleaned.slice(0, headerEnd);
     let body = cleaned.slice(headerEnd + 4);
+
+    // Each multipart section ends with CRLF before the next boundary.
+    // Strip only multipart framing, not characters that are part of the field/file.
     if (body.endsWith('\r\n')) body = body.slice(0, -2);
-    if (body.endsWith('--')) body = body.slice(0, -2);
 
-    const disposition = /content-disposition:\s*form-data;\s*name="([^"]+)"(?:;\s*filename="([^"]*)")?/i.exec(headers);
-    if (!disposition) continue;
+    const dispositionLine = headers
+      .split('\r\n')
+      .find((line) => /^content-disposition:/i.test(line));
+    if (!dispositionLine) continue;
 
-    const name = disposition[1];
-    const filename = disposition[2];
+    const nameMatch = /(?:^|;)\s*name="([^"]+)"/i.exec(dispositionLine);
+    if (!nameMatch) continue;
+
+    const filenameMatch = /(?:^|;)\s*filename="([^"]*)"/i.exec(dispositionLine);
+    const name = nameMatch[1];
+    const filename = filenameMatch ? filenameMatch[1] : undefined;
+
     if (filename !== undefined && filename !== '') {
       const typeMatch = /content-type:\s*([^\r\n]+)/i.exec(headers);
       files[name] = {
@@ -149,8 +159,9 @@ const server = http.createServer(async (req, res) => {
 
       // Lightweight CSRF check for logged-in POSTs (login/signup happen pre-session).
       if (ctx.session) {
-        const submitted = ctx.body._csrf;
-        if (submitted !== ctx.session.csrf_token) {
+        const submitted = typeof ctx.body._csrf === 'string' ? ctx.body._csrf.trim() : '';
+        const expected = typeof ctx.session.csrf_token === 'string' ? ctx.session.csrf_token.trim() : '';
+        if (!submitted || submitted !== expected) {
           res.writeHead(403, { 'Content-Type': 'text/html; charset=utf-8' });
           res.end('<h1>403 — form expired, please go back and retry</h1>');
           return;
