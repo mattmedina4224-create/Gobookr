@@ -349,12 +349,14 @@ module.exports = function (router) {
     if (!profile) return;
     const { caption, image_url } = ctx.body;
     const accents = ['violet', 'gold', 'teal', 'rose', 'slate'];
-    db.prepare('INSERT INTO portfolio_items (pro_id, caption, accent, image_url) VALUES (?, ?, ?, ?)').run(
-      profile.id,
-      caption || 'Untitled',
-      accents[Math.floor(Math.random() * accents.length)]
-      image_url || ''
-    );
+    db.prepare(
+  'INSERT INTO portfolio_items (pro_id, caption, accent, image_url) VALUES (?, ?, ?, ?)'
+).run(
+  profile.id,
+  caption || 'Untitled',
+  accents[Math.floor(Math.random() * accents.length)],
+  image_url || ''
+);
     redirect(ctx.res, '/dashboard/pro/portfolio?success=' + encodeURIComponent('Added to portfolio.'));
   });
 
