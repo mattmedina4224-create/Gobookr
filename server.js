@@ -22,6 +22,12 @@ const MIME = {
   '.js': 'text/javascript; charset=utf-8',
   '.svg': 'image/svg+xml',
   '.png': 'image/png',
+  '.jpg': 'image/jpeg',
+  '.jpeg': 'image/jpeg',
+  '.webp': 'image/webp',
+  '.gif': 'image/gif',
+  '.heic': 'image/heic',
+  '.heif': 'image/heif',
   '.ico': 'image/x-icon',
 };
 
@@ -33,7 +39,7 @@ function serveStatic(req, res, pathname) {
     return true;
   }
   if (!fs.existsSync(filePath) || fs.statSync(filePath).isDirectory()) return false;
-  const ext = path.extname(filePath);
+  const ext = path.extname(filePath).toLowerCase();
   res.writeHead(200, { 'Content-Type': MIME[ext] || 'application/octet-stream', 'Cache-Control': 'public, max-age=300' });
   fs.createReadStream(filePath).pipe(res);
   return true;
@@ -45,23 +51,64 @@ function readBody(req) {
     let size = 0;
     req.on('data', (chunk) => {
       size += chunk.length;
-      if (size > 2 * 1024 * 1024) {
+      if (size > 12 * 1024 * 1024) {
         reject(new Error('Payload too large'));
         req.destroy();
         return;
       }
       chunks.push(chunk);
     });
-    req.on('end', () => resolve(Buffer.concat(chunks).toString('utf8')));
+    req.on('end', () => resolve(Buffer.concat(chunks)));
     req.on('error', reject);
   });
 }
 
-function parseForm(raw) {
-  const params = new URLSearchParams(raw);
+function parseForm(rawBuffer) {
+  const params = new URLSearchParams(rawBuffer.toString('utf8'));
   const out = {};
   for (const [key, value] of params.entries()) out[key] = value;
   return out;
+}
+
+function parseMultipart(rawBuffer, contentType) {
+  const match = /boundary=(?:"([^"]+)"|([^;]+))/i.exec(contentType || '');
+  if (!match) return { fields: {}, files: {} };
+
+  const boundary = match[1] || match[2];
+  const raw = rawBuffer.toString('latin1');
+  const parts = raw.split(`--${boundary}`);
+  const fields = {};
+  const files = {};
+
+  for (const part of parts) {
+    if (!part || part === '--\r\n' || part === '--') continue;
+    const cleaned = part.startsWith('\r\n') ? part.slice(2) : part;
+    const headerEnd = cleaned.indexOf('\r\n\r\n');
+    if (headerEnd === -1) continue;
+
+    const headers = cleaned.slice(0, headerEnd);
+    let body = cleaned.slice(headerEnd + 4);
+    if (body.endsWith('\r\n')) body = body.slice(0, -2);
+    if (body.endsWith('--')) body = body.slice(0, -2);
+
+    const disposition = /content-disposition:\s*form-data;\s*name="([^"]+)"(?:;\s*filename="([^"]*)")?/i.exec(headers);
+    if (!disposition) continue;
+
+    const name = disposition[1];
+    const filename = disposition[2];
+    if (filename !== undefined && filename !== '') {
+      const typeMatch = /content-type:\s*([^\r\n]+)/i.exec(headers);
+      files[name] = {
+        filename,
+        contentType: typeMatch ? typeMatch[1].trim().toLowerCase() : 'application/octet-stream',
+        data: Buffer.from(body, 'latin1'),
+      };
+    } else {
+      fields[name] = Buffer.from(body, 'latin1').toString('utf8');
+    }
+  }
+
+  return { fields, files };
 }
 
 const server = http.createServer(async (req, res) => {
@@ -86,11 +133,20 @@ const server = http.createServer(async (req, res) => {
       query: Object.fromEntries(parsedUrl.searchParams.entries()),
       currentUser: session ? session.user : null,
       session: session ? session.session : null,
+      files: {},
     };
 
     if (req.method === 'POST') {
       const raw = await readBody(req);
-      ctx.body = parseForm(raw);
+      const contentType = req.headers['content-type'] || '';
+      if (contentType.startsWith('multipart/form-data')) {
+        const parsed = parseMultipart(raw, contentType);
+        ctx.body = parsed.fields;
+        ctx.files = parsed.files;
+      } else {
+        ctx.body = parseForm(raw);
+      }
+
       // Lightweight CSRF check for logged-in POSTs (login/signup happen pre-session).
       if (ctx.session) {
         const submitted = ctx.body._csrf;
