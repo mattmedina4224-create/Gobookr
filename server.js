@@ -70,14 +70,33 @@ function parseForm(rawBuffer) {
   return out;
 }
 
+function boundaryFromHeader(contentType) {
+  const match = /boundary=(?:"([^"]+)"|([^;\s]+))/i.exec(contentType || '');
+  return match ? (match[1] || match[2] || '').trim() : '';
+}
+
+function boundaryFromBody(rawBuffer) {
+  const preview = rawBuffer.subarray(0, Math.min(rawBuffer.length, 300)).toString('latin1');
+  const lineEnd = preview.search(/\r?\n/);
+  const firstLine = (lineEnd === -1 ? preview : preview.slice(0, lineEnd)).trim();
+  return firstLine.startsWith('--') ? firstLine.slice(2) : '';
+}
+
 async function parseMultipart(rawBuffer, contentType) {
   const fields = {};
   const files = {};
 
-  // Node 22+ includes the same standards-based FormData parser used by fetch.
-  // Using it here avoids browser-specific multipart boundary/header quirks.
+  // Some Safari/local Node combinations have been arriving with a multipart
+  // Content-Type that does not expose a usable boundary. The multipart body
+  // itself always starts with "--<boundary>", so use that as a safe fallback.
+  const headerBoundary = boundaryFromHeader(contentType);
+  const bodyBoundary = boundaryFromBody(rawBuffer);
+  const boundary = bodyBoundary || headerBoundary;
+
+  if (!boundary) throw new Error('Multipart upload is missing a boundary.');
+
   const response = new Response(rawBuffer, {
-    headers: { 'content-type': contentType },
+    headers: { 'content-type': `multipart/form-data; boundary=${boundary}` },
   });
   const form = await response.formData();
 
