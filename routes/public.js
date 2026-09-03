@@ -281,7 +281,9 @@ module.exports = function (router) {
                   ? portfolio
                       .map(
                         (p, i) =>
-                          `<div class="portfolio-item" style="background:${gradientFor(i)};"><span>${escapeHtml(p.caption)}</span></div>`
+                          p.image_url
+                            ? `<div><div class="portfolio-item" style="background:#eee; overflow:hidden;"><img src="${escapeHtml(p.image_url)}" alt="${escapeHtml(p.caption || 'Portfolio photo')}" style="width:100%; height:100%; object-fit:cover; display:block;" /></div>${p.caption ? `<div style="margin-top:6px; font-size:14px;">${escapeHtml(p.caption)}</div>` : ''}</div>`
+                            : `<div><div class="portfolio-item" style="background:${gradientFor(i)};"><span>${escapeHtml(p.caption)}</span></div></div>`
                       )
                       .join('')
                   : '<p class="muted">No portfolio photos yet.</p>'
