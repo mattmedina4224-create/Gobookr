@@ -70,91 +70,29 @@ function parseForm(rawBuffer) {
   return out;
 }
 
-function multipartBoundary(contentType) {
-  const match = /boundary=(?:"([^"]+)"|([^;]+))/i.exec(contentType || '');
-  return match ? (match[1] || match[2] || '').trim() : '';
-}
-
-function extractMultipartField(rawBuffer, contentType, fieldName) {
-  const boundary = multipartBoundary(contentType);
-  const raw = rawBuffer.toString('latin1');
-
-  // First try a boundary-independent match. This is deliberately narrow:
-  // it only reads a normal text form field with the exact requested name.
-  const escapedName = String(fieldName).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-  const direct = new RegExp(
-    `content-disposition:\\s*form-data;[^\\r\\n]*name="${escapedName}"[^\\r\\n]*\\r\\n(?:[^\\r\\n]*\\r\\n)*\\r\\n([^\\r\\n]*)`,
-    'i'
-  ).exec(raw);
-  if (direct) return Buffer.from(direct[1], 'latin1').toString('utf8').trim();
-
-  if (!boundary) return '';
-  const parts = raw.split(`--${boundary}`);
-
-  for (const part of parts) {
-    const cleaned = part.startsWith('\r\n') ? part.slice(2) : part;
-    const headerEnd = cleaned.indexOf('\r\n\r\n');
-    if (headerEnd === -1) continue;
-
-    const headers = cleaned.slice(0, headerEnd);
-    const dispositionLine = headers
-      .split('\r\n')
-      .find((line) => /^content-disposition:/i.test(line));
-    if (!dispositionLine) continue;
-
-    const nameMatch = /name="([^"]+)"/i.exec(dispositionLine);
-    if (!nameMatch || nameMatch[1] !== fieldName) continue;
-
-    let body = cleaned.slice(headerEnd + 4);
-    if (body.endsWith('\r\n')) body = body.slice(0, -2);
-    return Buffer.from(body, 'latin1').toString('utf8').trim();
-  }
-
-  return '';
-}
-
-function parseMultipart(rawBuffer, contentType) {
-  const boundary = multipartBoundary(contentType);
-  if (!boundary) return { fields: {}, files: {} };
-
-  const raw = rawBuffer.toString('latin1');
-  const parts = raw.split(`--${boundary}`);
+async function parseMultipart(rawBuffer, contentType) {
   const fields = {};
   const files = {};
 
-  for (const part of parts) {
-    if (!part || part === '--\r\n' || part === '--') continue;
+  // Node 22+ includes the same standards-based FormData parser used by fetch.
+  // Using it here avoids browser-specific multipart boundary/header quirks.
+  const response = new Response(rawBuffer, {
+    headers: { 'content-type': contentType },
+  });
+  const form = await response.formData();
 
-    const cleaned = part.startsWith('\r\n') ? part.slice(2) : part;
-    const headerEnd = cleaned.indexOf('\r\n\r\n');
-    if (headerEnd === -1) continue;
-
-    const headers = cleaned.slice(0, headerEnd);
-    let body = cleaned.slice(headerEnd + 4);
-    if (body.endsWith('\r\n')) body = body.slice(0, -2);
-
-    const dispositionLine = headers
-      .split('\r\n')
-      .find((line) => /^content-disposition:/i.test(line));
-    if (!dispositionLine) continue;
-
-    const nameMatch = /name="([^"]+)"/i.exec(dispositionLine);
-    if (!nameMatch) continue;
-
-    const filenameMatch = /filename="([^"]*)"/i.exec(dispositionLine);
-    const name = nameMatch[1];
-    const filename = filenameMatch ? filenameMatch[1] : undefined;
-
-    if (filename !== undefined && filename !== '') {
-      const typeMatch = /content-type:\s*([^\r\n]+)/i.exec(headers);
-      files[name] = {
-        filename,
-        contentType: typeMatch ? typeMatch[1].trim().toLowerCase() : 'application/octet-stream',
-        data: Buffer.from(body, 'latin1'),
-      };
-    } else {
-      fields[name] = Buffer.from(body, 'latin1').toString('utf8');
+  for (const [name, value] of form.entries()) {
+    if (typeof value === 'string') {
+      fields[name] = value;
+      continue;
     }
+
+    const data = Buffer.from(await value.arrayBuffer());
+    files[name] = {
+      filename: value.name || 'upload',
+      contentType: (value.type || 'application/octet-stream').toLowerCase(),
+      data,
+    };
   }
 
   return { fields, files };
@@ -191,14 +129,9 @@ const server = http.createServer(async (req, res) => {
       const isMultipart = contentType.toLowerCase().startsWith('multipart/form-data');
 
       if (isMultipart) {
-        const parsed = parseMultipart(raw, contentType);
+        const parsed = await parseMultipart(raw, contentType);
         ctx.body = parsed.fields;
         ctx.files = parsed.files;
-
-        // Read CSRF from the raw multipart body too. This keeps the security
-        // check intact even if Safari formats a multipart section differently.
-        const rawCsrf = extractMultipartField(raw, contentType, '_csrf');
-        if (rawCsrf) ctx.body._csrf = rawCsrf;
       } else {
         ctx.body = parseForm(raw);
       }
@@ -208,8 +141,6 @@ const server = http.createServer(async (req, res) => {
         const submitted = typeof ctx.body._csrf === 'string' ? ctx.body._csrf.trim() : '';
         const expected = typeof ctx.session.csrf_token === 'string' ? ctx.session.csrf_token.trim() : '';
         if (!submitted || submitted !== expected) {
-          // Do not expose either token. These diagnostics are safe and useful
-          // locally if an upload ever fails again.
           console.error('CSRF mismatch', {
             path: pathname,
             multipart: isMultipart,
@@ -218,7 +149,7 @@ const server = http.createServer(async (req, res) => {
             bodyFields: Object.keys(ctx.body || {}),
           });
           res.writeHead(403, { 'Content-Type': 'text/html; charset=utf-8' });
-          res.end('<h1>403 — form expired, please go back and retry</h1><p>Check the Terminal window running GoBookr for the CSRF mismatch details.</p>');
+          res.end('<h1>403 — form expired, please go back and retry</h1>');
           return;
         }
       }
