@@ -77,9 +77,18 @@ function multipartBoundary(contentType) {
 
 function extractMultipartField(rawBuffer, contentType, fieldName) {
   const boundary = multipartBoundary(contentType);
-  if (!boundary) return '';
-
   const raw = rawBuffer.toString('latin1');
+
+  // First try a boundary-independent match. This is deliberately narrow:
+  // it only reads a normal text form field with the exact requested name.
+  const escapedName = String(fieldName).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const direct = new RegExp(
+    `content-disposition:\\s*form-data;[^\\r\\n]*name="${escapedName}"[^\\r\\n]*\\r\\n(?:[^\\r\\n]*\\r\\n)*\\r\\n([^\\r\\n]*)`,
+    'i'
+  ).exec(raw);
+  if (direct) return Buffer.from(direct[1], 'latin1').toString('utf8').trim();
+
+  if (!boundary) return '';
   const parts = raw.split(`--${boundary}`);
 
   for (const part of parts) {
@@ -186,11 +195,10 @@ const server = http.createServer(async (req, res) => {
         ctx.body = parsed.fields;
         ctx.files = parsed.files;
 
-        // Safari can format multipart headers a little differently. Read the
-        // CSRF token directly from the raw multipart body as a fallback.
-        if (!ctx.body._csrf) {
-          ctx.body._csrf = extractMultipartField(raw, contentType, '_csrf');
-        }
+        // Read CSRF from the raw multipart body too. This keeps the security
+        // check intact even if Safari formats a multipart section differently.
+        const rawCsrf = extractMultipartField(raw, contentType, '_csrf');
+        if (rawCsrf) ctx.body._csrf = rawCsrf;
       } else {
         ctx.body = parseForm(raw);
       }
@@ -200,8 +208,17 @@ const server = http.createServer(async (req, res) => {
         const submitted = typeof ctx.body._csrf === 'string' ? ctx.body._csrf.trim() : '';
         const expected = typeof ctx.session.csrf_token === 'string' ? ctx.session.csrf_token.trim() : '';
         if (!submitted || submitted !== expected) {
+          // Do not expose either token. These diagnostics are safe and useful
+          // locally if an upload ever fails again.
+          console.error('CSRF mismatch', {
+            path: pathname,
+            multipart: isMultipart,
+            submittedLength: submitted.length,
+            expectedLength: expected.length,
+            bodyFields: Object.keys(ctx.body || {}),
+          });
           res.writeHead(403, { 'Content-Type': 'text/html; charset=utf-8' });
-          res.end('<h1>403 — form expired, please go back and retry</h1>');
+          res.end('<h1>403 — form expired, please go back and retry</h1><p>Check the Terminal window running GoBookr for the CSRF mismatch details.</p>');
           return;
         }
       }
