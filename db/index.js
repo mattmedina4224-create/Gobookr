@@ -100,5 +100,9 @@ CREATE INDEX IF NOT EXISTS idx_bookings_pro ON booking_requests(pro_id);
 CREATE INDEX IF NOT EXISTS idx_bookings_customer ON booking_requests(customer_id);
 CREATE INDEX IF NOT EXISTS idx_sessions_user ON sessions(user_id);
 `);
+const portfolioColumns = db.prepare('PRAGMA table_info(portfolio_items)').all();
 
+if (!portfolioColumns.some((column) => column.name === 'image_url')) {
+  db.exec("ALTER TABLE portfolio_items ADD COLUMN image_url TEXT NOT NULL DEFAULT ''");
+}
 module.exports = db;
