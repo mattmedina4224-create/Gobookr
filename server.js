@@ -76,42 +76,70 @@ function boundaryFromHeader(contentType) {
 }
 
 function boundaryFromBody(rawBuffer) {
-  const preview = rawBuffer.subarray(0, Math.min(rawBuffer.length, 300)).toString('latin1');
-  const lineEnd = preview.search(/\r?\n/);
-  const firstLine = (lineEnd === -1 ? preview : preview.slice(0, lineEnd)).trim();
+  const lineEnd = rawBuffer.indexOf(Buffer.from('\r\n'));
+  if (lineEnd < 2) return '';
+  const firstLine = rawBuffer.subarray(0, lineEnd).toString('latin1');
   return firstLine.startsWith('--') ? firstLine.slice(2) : '';
 }
 
-async function parseMultipart(rawBuffer, contentType) {
+function parseMultipart(rawBuffer, contentType) {
   const fields = {};
   const files = {};
-
-  // Some Safari/local Node combinations have been arriving with a multipart
-  // Content-Type that does not expose a usable boundary. The multipart body
-  // itself always starts with "--<boundary>", so use that as a safe fallback.
-  const headerBoundary = boundaryFromHeader(contentType);
-  const bodyBoundary = boundaryFromBody(rawBuffer);
-  const boundary = bodyBoundary || headerBoundary;
-
+  const boundary = boundaryFromHeader(contentType) || boundaryFromBody(rawBuffer);
   if (!boundary) throw new Error('Multipart upload is missing a boundary.');
 
-  const response = new Response(rawBuffer, {
-    headers: { 'content-type': `multipart/form-data; boundary=${boundary}` },
-  });
-  const form = await response.formData();
+  const delimiter = Buffer.from(`--${boundary}`, 'latin1');
+  const headerSeparator = Buffer.from('\r\n\r\n', 'latin1');
+  let cursor = 0;
 
-  for (const [name, value] of form.entries()) {
-    if (typeof value === 'string') {
-      fields[name] = value;
+  while (true) {
+    const boundaryStart = rawBuffer.indexOf(delimiter, cursor);
+    if (boundaryStart === -1) break;
+
+    let partStart = boundaryStart + delimiter.length;
+    if (rawBuffer.subarray(partStart, partStart + 2).toString('latin1') === '--') break;
+    if (rawBuffer.subarray(partStart, partStart + 2).toString('latin1') === '\r\n') partStart += 2;
+
+    const nextBoundary = rawBuffer.indexOf(delimiter, partStart);
+    if (nextBoundary === -1) break;
+
+    let partEnd = nextBoundary;
+    if (rawBuffer.subarray(partEnd - 2, partEnd).toString('latin1') === '\r\n') partEnd -= 2;
+    const part = rawBuffer.subarray(partStart, partEnd);
+    const headerEnd = part.indexOf(headerSeparator);
+    if (headerEnd === -1) {
+      cursor = nextBoundary;
       continue;
     }
 
-    const data = Buffer.from(await value.arrayBuffer());
-    files[name] = {
-      filename: value.name || 'upload',
-      contentType: (value.type || 'application/octet-stream').toLowerCase(),
-      data,
-    };
+    const headers = part.subarray(0, headerEnd).toString('latin1');
+    const body = part.subarray(headerEnd + headerSeparator.length);
+    const disposition = /content-disposition:\s*form-data;[^\r\n]*/i.exec(headers);
+    if (!disposition) {
+      cursor = nextBoundary;
+      continue;
+    }
+
+    const nameMatch = /name="([^"]+)"/i.exec(disposition[0]);
+    if (!nameMatch) {
+      cursor = nextBoundary;
+      continue;
+    }
+
+    const name = nameMatch[1];
+    const filenameMatch = /filename="([^"]*)"/i.exec(disposition[0]);
+    if (filenameMatch && filenameMatch[1]) {
+      const typeMatch = /content-type:\s*([^\r\n]+)/i.exec(headers);
+      files[name] = {
+        filename: filenameMatch[1],
+        contentType: typeMatch ? typeMatch[1].trim().toLowerCase() : 'application/octet-stream',
+        data: Buffer.from(body),
+      };
+    } else {
+      fields[name] = body.toString('utf8');
+    }
+
+    cursor = nextBoundary;
   }
 
   return { fields, files };
@@ -148,14 +176,13 @@ const server = http.createServer(async (req, res) => {
       const isMultipart = contentType.toLowerCase().startsWith('multipart/form-data');
 
       if (isMultipart) {
-        const parsed = await parseMultipart(raw, contentType);
+        const parsed = parseMultipart(raw, contentType);
         ctx.body = parsed.fields;
         ctx.files = parsed.files;
       } else {
         ctx.body = parseForm(raw);
       }
 
-      // Lightweight CSRF check for logged-in POSTs (login/signup happen pre-session).
       if (ctx.session) {
         const submitted = typeof ctx.body._csrf === 'string' ? ctx.body._csrf.trim() : '';
         const expected = typeof ctx.session.csrf_token === 'string' ? ctx.session.csrf_token.trim() : '';
