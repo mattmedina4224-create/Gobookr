@@ -76,16 +76,19 @@ function boundaryFromHeader(contentType) {
 }
 
 function boundaryFromBody(rawBuffer) {
-  const lineEnd = rawBuffer.indexOf(Buffer.from('\r\n'));
+  let lineEnd = rawBuffer.indexOf(Buffer.from('\r\n'));
+  if (lineEnd === -1) lineEnd = rawBuffer.indexOf(Buffer.from('\n'));
   if (lineEnd < 2) return '';
-  const firstLine = rawBuffer.subarray(0, lineEnd).toString('latin1');
+  const firstLine = rawBuffer.subarray(0, lineEnd).toString('latin1').trim();
   return firstLine.startsWith('--') ? firstLine.slice(2) : '';
 }
 
 function parseMultipart(rawBuffer, contentType) {
   const fields = {};
   const files = {};
-  const boundary = boundaryFromHeader(contentType) || boundaryFromBody(rawBuffer);
+  const bodyBoundary = boundaryFromBody(rawBuffer);
+  const headerBoundary = boundaryFromHeader(contentType);
+  const boundary = bodyBoundary || headerBoundary;
   if (!boundary) throw new Error('Multipart upload is missing a boundary.');
 
   const delimiter = Buffer.from(`--${boundary}`, 'latin1');
@@ -99,21 +102,29 @@ function parseMultipart(rawBuffer, contentType) {
     let partStart = boundaryStart + delimiter.length;
     if (rawBuffer.subarray(partStart, partStart + 2).toString('latin1') === '--') break;
     if (rawBuffer.subarray(partStart, partStart + 2).toString('latin1') === '\r\n') partStart += 2;
+    else if (rawBuffer.subarray(partStart, partStart + 1).toString('latin1') === '\n') partStart += 1;
 
     const nextBoundary = rawBuffer.indexOf(delimiter, partStart);
     if (nextBoundary === -1) break;
 
     let partEnd = nextBoundary;
     if (rawBuffer.subarray(partEnd - 2, partEnd).toString('latin1') === '\r\n') partEnd -= 2;
+    else if (rawBuffer.subarray(partEnd - 1, partEnd).toString('latin1') === '\n') partEnd -= 1;
+
     const part = rawBuffer.subarray(partStart, partEnd);
-    const headerEnd = part.indexOf(headerSeparator);
+    let headerEnd = part.indexOf(headerSeparator);
+    let separatorLength = 4;
+    if (headerEnd === -1) {
+      headerEnd = part.indexOf(Buffer.from('\n\n', 'latin1'));
+      separatorLength = 2;
+    }
     if (headerEnd === -1) {
       cursor = nextBoundary;
       continue;
     }
 
     const headers = part.subarray(0, headerEnd).toString('latin1');
-    const body = part.subarray(headerEnd + headerSeparator.length);
+    const body = part.subarray(headerEnd + separatorLength);
     const disposition = /content-disposition:\s*form-data;[^\r\n]*/i.exec(headers);
     if (!disposition) {
       cursor = nextBoundary;
@@ -142,7 +153,7 @@ function parseMultipart(rawBuffer, contentType) {
     cursor = nextBoundary;
   }
 
-  return { fields, files };
+  return { fields, files, bodyBoundary, headerBoundary };
 }
 
 const server = http.createServer(async (req, res) => {
@@ -170,6 +181,7 @@ const server = http.createServer(async (req, res) => {
       files: {},
     };
 
+    let multipartDebug = null;
     if (req.method === 'POST') {
       const raw = await readBody(req);
       const contentType = req.headers['content-type'] || '';
@@ -179,6 +191,11 @@ const server = http.createServer(async (req, res) => {
         const parsed = parseMultipart(raw, contentType);
         ctx.body = parsed.fields;
         ctx.files = parsed.files;
+        multipartDebug = {
+          bodyBoundaryLength: parsed.bodyBoundary.length,
+          headerBoundaryLength: parsed.headerBoundary.length,
+          fileFields: Object.keys(parsed.files),
+        };
       } else {
         ctx.body = parseForm(raw);
       }
@@ -193,6 +210,7 @@ const server = http.createServer(async (req, res) => {
             submittedLength: submitted.length,
             expectedLength: expected.length,
             bodyFields: Object.keys(ctx.body || {}),
+            ...multipartDebug,
           });
           res.writeHead(403, { 'Content-Type': 'text/html; charset=utf-8' });
           res.end('<h1>403 — form expired, please go back and retry</h1>');
