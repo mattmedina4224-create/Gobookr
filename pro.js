@@ -325,6 +325,10 @@ module.exports = function (router) {
             <form method="POST" action="/dashboard/pro/portfolio" style="margin-top:20px; border-top:1px solid var(--paper-line); padding-top:16px; max-width:360px;">
               <input type="hidden" name="_csrf" value="${escapeHtml(ctx.session.csrf_token)}" />
               <div class="field">
+  <label for="image_url">Image URL</label>
+  <input id="image_url" name="image_url" type="url" placeholder="https://example.com/photo.jpg" required />
+</div>
+<div class="field">
                 <label for="caption">Caption</label>
                 <input id="caption" name="caption" placeholder="e.g. Balayage transformation" required />
               </div>
@@ -341,12 +345,13 @@ module.exports = function (router) {
   router.post('/dashboard/pro/portfolio', async (ctx) => {
     const profile = requirePro(ctx);
     if (!profile) return;
-    const { caption } = ctx.body;
+    const { caption, image_url } = ctx.body;
     const accents = ['violet', 'gold', 'teal', 'rose', 'slate'];
-    db.prepare('INSERT INTO portfolio_items (pro_id, caption, accent) VALUES (?, ?, ?)').run(
-      profile.id,
-      caption || 'Untitled',
-      accents[Math.floor(Math.random() * accents.length)]
+    db.prepare('INSERT INTO portfolio_items (pro_id, caption, accent, image_url) VALUES (?, ?, ?, ?)').run(
+  profile.id,
+  caption || 'Untitled',
+  accents[Math.floor(Math.random() * accents.length)],
+  image_url || ''
     );
     redirect(ctx.res, '/dashboard/pro/portfolio?success=' + encodeURIComponent('Added to portfolio.'));
   });
