@@ -70,11 +70,44 @@ function parseForm(rawBuffer) {
   return out;
 }
 
-function parseMultipart(rawBuffer, contentType) {
+function multipartBoundary(contentType) {
   const match = /boundary=(?:"([^"]+)"|([^;]+))/i.exec(contentType || '');
-  if (!match) return { fields: {}, files: {} };
+  return match ? (match[1] || match[2] || '').trim() : '';
+}
 
-  const boundary = (match[1] || match[2] || '').trim();
+function extractMultipartField(rawBuffer, contentType, fieldName) {
+  const boundary = multipartBoundary(contentType);
+  if (!boundary) return '';
+
+  const raw = rawBuffer.toString('latin1');
+  const parts = raw.split(`--${boundary}`);
+
+  for (const part of parts) {
+    const cleaned = part.startsWith('\r\n') ? part.slice(2) : part;
+    const headerEnd = cleaned.indexOf('\r\n\r\n');
+    if (headerEnd === -1) continue;
+
+    const headers = cleaned.slice(0, headerEnd);
+    const dispositionLine = headers
+      .split('\r\n')
+      .find((line) => /^content-disposition:/i.test(line));
+    if (!dispositionLine) continue;
+
+    const nameMatch = /name="([^"]+)"/i.exec(dispositionLine);
+    if (!nameMatch || nameMatch[1] !== fieldName) continue;
+
+    let body = cleaned.slice(headerEnd + 4);
+    if (body.endsWith('\r\n')) body = body.slice(0, -2);
+    return Buffer.from(body, 'latin1').toString('utf8').trim();
+  }
+
+  return '';
+}
+
+function parseMultipart(rawBuffer, contentType) {
+  const boundary = multipartBoundary(contentType);
+  if (!boundary) return { fields: {}, files: {} };
+
   const raw = rawBuffer.toString('latin1');
   const parts = raw.split(`--${boundary}`);
   const fields = {};
@@ -89,9 +122,6 @@ function parseMultipart(rawBuffer, contentType) {
 
     const headers = cleaned.slice(0, headerEnd);
     let body = cleaned.slice(headerEnd + 4);
-
-    // Each multipart section ends with CRLF before the next boundary.
-    // Strip only multipart framing, not characters that are part of the field/file.
     if (body.endsWith('\r\n')) body = body.slice(0, -2);
 
     const dispositionLine = headers
@@ -99,10 +129,10 @@ function parseMultipart(rawBuffer, contentType) {
       .find((line) => /^content-disposition:/i.test(line));
     if (!dispositionLine) continue;
 
-    const nameMatch = /(?:^|;)\s*name="([^"]+)"/i.exec(dispositionLine);
+    const nameMatch = /name="([^"]+)"/i.exec(dispositionLine);
     if (!nameMatch) continue;
 
-    const filenameMatch = /(?:^|;)\s*filename="([^"]*)"/i.exec(dispositionLine);
+    const filenameMatch = /filename="([^"]*)"/i.exec(dispositionLine);
     const name = nameMatch[1];
     const filename = filenameMatch ? filenameMatch[1] : undefined;
 
@@ -149,10 +179,18 @@ const server = http.createServer(async (req, res) => {
     if (req.method === 'POST') {
       const raw = await readBody(req);
       const contentType = req.headers['content-type'] || '';
-      if (contentType.startsWith('multipart/form-data')) {
+      const isMultipart = contentType.toLowerCase().startsWith('multipart/form-data');
+
+      if (isMultipart) {
         const parsed = parseMultipart(raw, contentType);
         ctx.body = parsed.fields;
         ctx.files = parsed.files;
+
+        // Safari can format multipart headers a little differently. Read the
+        // CSRF token directly from the raw multipart body as a fallback.
+        if (!ctx.body._csrf) {
+          ctx.body._csrf = extractMultipartField(raw, contentType, '_csrf');
+        }
       } else {
         ctx.body = parseForm(raw);
       }
