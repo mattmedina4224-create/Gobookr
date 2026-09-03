@@ -70,5 +70,14 @@ module.exports = function (router) {
       user: ctx.currentUser
     }));
   });
+  router.post('/admin/licenses/:id/verify', async (ctx) => {
+    if (!requireAdmin(ctx)) return;
+
+    db.prepare(
+      'UPDATE pro_profiles SET license_verified = 1 WHERE id = ?'
+    ).run(ctx.params.id);
+
+    redirect(ctx.res, '/admin/licenses');
+  });
 }; 
   
