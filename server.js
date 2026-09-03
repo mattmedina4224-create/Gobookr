@@ -51,7 +51,7 @@ function readBody(req) {
     let size = 0;
     req.on('data', (chunk) => {
       size += chunk.length;
-      if (size > 12 * 1024 * 1024) {
+      if (size > 16 * 1024 * 1024) {
         reject(new Error('Payload too large'));
         req.destroy();
         return;
@@ -68,6 +68,11 @@ function parseForm(rawBuffer) {
   const out = {};
   for (const [key, value] of params.entries()) out[key] = value;
   return out;
+}
+
+function mimeFromFilename(filename) {
+  const ext = path.extname(String(filename || '')).toLowerCase();
+  return MIME[ext] ? MIME[ext].split(';')[0] : 'application/octet-stream';
 }
 
 function boundaryFromHeader(contentType) {
@@ -185,7 +190,9 @@ const server = http.createServer(async (req, res) => {
     if (req.method === 'POST') {
       const raw = await readBody(req);
       const contentType = req.headers['content-type'] || '';
-      const isMultipart = contentType.toLowerCase().startsWith('multipart/form-data');
+      const lowerContentType = contentType.toLowerCase();
+      const isMultipart = lowerContentType.startsWith('multipart/form-data');
+      const isJson = lowerContentType.startsWith('application/json');
 
       if (isMultipart) {
         const parsed = parseMultipart(raw, contentType);
@@ -196,6 +203,20 @@ const server = http.createServer(async (req, res) => {
           headerBoundaryLength: parsed.headerBoundary.length,
           fileFields: Object.keys(parsed.files),
         };
+      } else if (isJson) {
+        ctx.body = JSON.parse(raw.toString('utf8') || '{}');
+
+        // Portfolio uploads use JSON + base64 instead of multipart. This is
+        // much more reliable across Safari/iPhone/Mac while preserving the
+        // same validation and route code below.
+        if (pathname === '/dashboard/pro/portfolio' && ctx.body.image_data) {
+          const filename = String(ctx.body.image_name || 'upload');
+          ctx.files.image = {
+            filename,
+            contentType: String(ctx.body.image_type || mimeFromFilename(filename)).toLowerCase(),
+            data: Buffer.from(String(ctx.body.image_data), 'base64'),
+          };
+        }
       } else {
         ctx.body = parseForm(raw);
       }
