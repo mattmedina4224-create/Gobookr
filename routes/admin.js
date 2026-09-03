@@ -37,7 +37,7 @@ module.exports = function (router) {
         <td>${escapeHtml(pro.license_number || '')}</td>
         <td>${escapeHtml(pro.license_state || '')}</td>
         <td>${pro.license_verified ? 'Verified' : 'Pending'}</td>
-        <td>${pro.license_verified ? '' : `<form method="POST" action="/admin/licenses/${pro.id}/verify"><input type="hidden" name="_csrf" value="${escapeHtml(ctx.session.csrf_token)}" /><button type="submit">Verify</button></form>`}</td>
+        <td>${pro.license_state === 'CO' ? `<a href="https://www.colorado.gov/myverification/" target="_blank" rel="noopener">Open DORA</a> ` : ''}${pro.license_verified ? '' : `<form method="POST" action="/admin/licenses/${pro.id}/verify" style="display:inline"><input type="hidden" name="_csrf" value="${escapeHtml(ctx.session.csrf_token)}" /><button type="submit">Verify</button></form>`}</td>
       </tr>
     `).join('');
 
