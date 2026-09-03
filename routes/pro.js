@@ -1,5 +1,8 @@
 'use strict';
 
+const fs = require('node:fs');
+const path = require('node:path');
+const crypto = require('node:crypto');
 const db = require('../db');
 const { layout } = require('../lib/layout');
 const { send, redirect, flashFromQuery } = require('../lib/http');
@@ -28,6 +31,14 @@ function dashNav(active) {
   return `<nav class="dash-nav">${items
     .map((i) => `<a href="${i.href}" class="${i.key === active ? 'active' : ''}">${i.label}</a>`)
     .join('')}</nav>`;
+}
+
+function portfolioTile(item, i, gradientFor) {
+  const visual = item.image_url
+    ? `<img src="${escapeHtml(item.image_url)}" alt="${escapeHtml(item.caption || 'Portfolio photo')}" style="width:100%; height:100%; object-fit:cover; display:block;" />`
+    : `<span>${escapeHtml(item.caption)}</span>`;
+  const background = item.image_url ? 'background:#eee;' : `background:${gradientFor(i)};`;
+  return `<div class="portfolio-item" style="${background} overflow:hidden;">${visual}</div>`;
 }
 
 module.exports = function (router) {
@@ -61,14 +72,7 @@ module.exports = function (router) {
           </div>
           <div class="panel">
             <h3>Recent requests</h3>
-            ${
-              requests.slice(0, 3).length
-                ? requests
-                    .slice(0, 3)
-                    .map((r) => requestCard(r, profile, ctx))
-                    .join('')
-                : '<p class="muted">No booking requests yet.</p>'
-            }
+            ${requests.slice(0, 3).length ? requests.slice(0, 3).map((r) => requestCard(r, profile, ctx)).join('') : '<p class="muted">No booking requests yet.</p>'}
           </div>
         </div>
       </div>
@@ -82,11 +86,9 @@ module.exports = function (router) {
     if (!profile) return;
 
     const requests = db
-      .prepare(
-        `SELECT booking_requests.*, users.name AS customer_name FROM booking_requests
+      .prepare(`SELECT booking_requests.*, users.name AS customer_name FROM booking_requests
          JOIN users ON users.id = booking_requests.customer_id
-         WHERE pro_id = ? ORDER BY created_at DESC`
-      )
+         WHERE pro_id = ? ORDER BY created_at DESC`)
       .all(profile.id);
 
     const body = `
@@ -95,11 +97,7 @@ module.exports = function (router) {
         ${dashNav('requests')}
         <div>
           <h1>Booking requests</h1>
-          ${
-            requests.length
-              ? requests.map((r) => requestCard(r, profile, ctx, true)).join('')
-              : '<div class="empty-state"><h3>Nothing here yet</h3><p>Booking requests from customers will show up here.</p></div>'
-          }
+          ${requests.length ? requests.map((r) => requestCard(r, profile, ctx, true)).join('') : '<div class="empty-state"><h3>Nothing here yet</h3><p>Booking requests from customers will show up here.</p></div>'}
         </div>
       </div>
     </section>`;
@@ -135,97 +133,33 @@ module.exports = function (router) {
             <h3>Business details</h3>
             <form method="POST" action="/dashboard/pro/profile">
               <input type="hidden" name="_csrf" value="${escapeHtml(ctx.session.csrf_token)}" />
-              <div class="field">
-                <label for="business_name">Business name</label>
-                <input id="business_name" name="business_name" value="${escapeHtml(profile.business_name)}" required />
-              </div>
+              <div class="field"><label for="business_name">Business name</label><input id="business_name" name="business_name" value="${escapeHtml(profile.business_name)}" required /></div>
               <div class="field-row">
-                <div class="field">
-                  <label for="city">City</label>
-                  <input id="city" name="city" value="${escapeHtml(profile.city)}" required />
-                </div>
-                <div class="field">
-                  <label for="state">State</label>
-                  <input id="state" name="state" value="${escapeHtml(profile.state)}" maxlength="2" required />
-                </div>
+                <div class="field"><label for="city">City</label><input id="city" name="city" value="${escapeHtml(profile.city)}" required /></div>
+                <div class="field"><label for="state">State</label><input id="state" name="state" value="${escapeHtml(profile.state)}" maxlength="2" required /></div>
               </div>
-              <div class="field">
-    <label for="license_number">License #</label>
-    <input
-      id="license_number"
-      name="license_number"
-      value="${escapeHtml(profile.license_number || '')}"
-      placeholder="e.g. BAR.1234567"
-    />
-  </div>
-
-  <div class="field">
-    <label for="license_state">License state</label>
-    <input
-      id="license_state"
-      name="license_state"
-      value="${escapeHtml(profile.license_state || profile.state || '')}"
-      maxlength="2"
-      placeholder="CO"
-    />
-  </div>
-</div>
+              <div class="field"><label for="license_number">License #</label><input id="license_number" name="license_number" value="${escapeHtml(profile.license_number || '')}" placeholder="e.g. BAR.1234567" /></div>
+              <div class="field"><label for="license_state">License state</label><input id="license_state" name="license_state" value="${escapeHtml(profile.license_state || profile.state || '')}" maxlength="2" placeholder="CO" /></div>
               <div class="field-row">
-                <div class="field">
-                  <label for="price_min">Starting price ($)</label>
-                  <input id="price_min" type="number" name="price_min" value="${profile.price_min}" min="0" />
-                </div>
-                <div class="field">
-                  <label for="price_max">Top price ($)</label>
-                  <input id="price_max" type="number" name="price_max" value="${profile.price_max}" min="0" />
-                </div>
+                <div class="field"><label for="price_min">Starting price ($)</label><input id="price_min" type="number" name="price_min" value="${profile.price_min}" min="0" /></div>
+                <div class="field"><label for="price_max">Top price ($)</label><input id="price_max" type="number" name="price_max" value="${profile.price_max}" min="0" /></div>
               </div>
-              <div class="field">
-                <label for="years_experience">Years of experience</label>
-                <input id="years_experience" type="number" name="years_experience" value="${profile.years_experience}" min="0" />
-              </div>
-              <div class="field">
-                <label for="bio">About / bio</label>
-                <textarea id="bio" name="bio" rows="4">${escapeHtml(profile.bio)}</textarea>
-              </div>
+              <div class="field"><label for="years_experience">Years of experience</label><input id="years_experience" type="number" name="years_experience" value="${profile.years_experience}" min="0" /></div>
+              <div class="field"><label for="bio">About / bio</label><textarea id="bio" name="bio" rows="4">${escapeHtml(profile.bio)}</textarea></div>
               <button class="btn" type="submit">Save changes</button>
             </form>
           </div>
 
           <div class="panel">
             <h3>Services</h3>
-            ${services
-              .map(
-                (s) => `
-              <div class="service-row">
-                <div>
-                  <div class="name">${escapeHtml(s.name)}</div>
-                  <div class="duration">${s.duration_minutes} min · ${money(s.price)}</div>
-                </div>
-                <form method="POST" action="/dashboard/pro/services/${s.id}/delete">
-                  <input type="hidden" name="_csrf" value="${escapeHtml(ctx.session.csrf_token)}" />
-                  <button class="btn ghost small" type="submit">Remove</button>
-                </form>
-              </div>`
-              )
-              .join('') || '<p class="muted">No services yet — add your first below.</p>'}
-
+            ${services.map((s) => `<div class="service-row"><div><div class="name">${escapeHtml(s.name)}</div><div class="duration">${s.duration_minutes} min · ${money(s.price)}</div></div><form method="POST" action="/dashboard/pro/services/${s.id}/delete"><input type="hidden" name="_csrf" value="${escapeHtml(ctx.session.csrf_token)}" /><button class="btn ghost small" type="submit">Remove</button></form></div>`).join('') || '<p class="muted">No services yet — add your first below.</p>'}
             <form method="POST" action="/dashboard/pro/services" style="margin-top:16px; border-top:1px solid var(--paper-line); padding-top:16px;">
               <input type="hidden" name="_csrf" value="${escapeHtml(ctx.session.csrf_token)}" />
               <div class="field-row">
-                <div class="field">
-                  <label for="name">Service name</label>
-                  <input id="name" name="name" placeholder="e.g. Skin fade" required />
-                </div>
-                <div class="field">
-                  <label for="price">Price ($)</label>
-                  <input id="price" type="number" name="price" min="0" required />
-                </div>
+                <div class="field"><label for="name">Service name</label><input id="name" name="name" placeholder="e.g. Skin fade" required /></div>
+                <div class="field"><label for="price">Price ($)</label><input id="price" type="number" name="price" min="0" required /></div>
               </div>
-              <div class="field">
-                <label for="duration_minutes">Duration (minutes)</label>
-                <input id="duration_minutes" type="number" name="duration_minutes" value="30" min="5" />
-              </div>
+              <div class="field"><label for="duration_minutes">Duration (minutes)</label><input id="duration_minutes" type="number" name="duration_minutes" value="30" min="5" /></div>
               <button class="btn secondary" type="submit">Add service</button>
             </form>
           </div>
@@ -240,35 +174,20 @@ module.exports = function (router) {
     const profile = requirePro(ctx);
     if (!profile) return;
     const { business_name, city, state, license_number, license_state, price_min, price_max, years_experience, bio } = ctx.body;
-    db.prepare(
-  `UPDATE pro_profiles
-   SET business_name = ?,
-       city = ?,
-       state = ?,
-       license_number = ?,
-       license_state = ?,
-       license_verified = 0,
-       price_min = ?,
-       price_max = ?,
-       years_experience = ?,
-       bio = ?
-   WHERE id = ?`
-).run(
-  business_name || profile.business_name,
-  (city || profile.city)
-    .trim()
-    .toLowerCase()
-    .replace(/\b\w/g, (letter) => letter.toUpperCase()),
-  state || profile.state,
-  license_number || null,
-  license_state || profile.state,
-  Number(price_min) || 0,
-  Number(price_max) || 0,
-  Number(years_experience) || 0,
-  bio || '',
-  profile.id
-);
-
+    db.prepare(`UPDATE pro_profiles
+       SET business_name = ?, city = ?, state = ?, license_number = ?, license_state = ?, license_verified = 0,
+           price_min = ?, price_max = ?, years_experience = ?, bio = ? WHERE id = ?`).run(
+      business_name || profile.business_name,
+      (city || profile.city).trim().toLowerCase().replace(/\b\w/g, (letter) => letter.toUpperCase()),
+      state || profile.state,
+      license_number || null,
+      license_state || profile.state,
+      Number(price_min) || 0,
+      Number(price_max) || 0,
+      Number(years_experience) || 0,
+      bio || '',
+      profile.id
+    );
     redirect(ctx.res, '/dashboard/pro/profile?success=' + encodeURIComponent('Profile updated.'));
   });
 
@@ -276,15 +195,8 @@ module.exports = function (router) {
     const profile = requirePro(ctx);
     if (!profile) return;
     const { name, price, duration_minutes } = ctx.body;
-    if (!name || !price) {
-      return redirect(ctx.res, '/dashboard/pro/profile?error=' + encodeURIComponent('Service name and price are required.'));
-    }
-    db.prepare('INSERT INTO services (pro_id, name, price, duration_minutes) VALUES (?, ?, ?, ?)').run(
-      profile.id,
-      name,
-      Number(price),
-      Number(duration_minutes) || 30
-    );
+    if (!name || !price) return redirect(ctx.res, '/dashboard/pro/profile?error=' + encodeURIComponent('Service name and price are required.'));
+    db.prepare('INSERT INTO services (pro_id, name, price, duration_minutes) VALUES (?, ?, ?, ?)').run(profile.id, name, Number(price), Number(duration_minutes) || 30);
     redirect(ctx.res, '/dashboard/pro/profile?success=' + encodeURIComponent('Service added.'));
   });
 
@@ -308,33 +220,20 @@ module.exports = function (router) {
         ${dashNav('portfolio')}
         <div>
           <h1>Portfolio</h1>
-          <p class="helptext" style="margin-top:-4px;">This demo doesn't support photo uploads — add a short caption for each piece and it'll show as a styled placeholder tile on your profile.</p>
+          <p class="helptext" style="margin-top:-4px;">Upload photos of your work from your phone, tablet, or computer. JPG, PNG, WEBP, GIF, HEIC and HEIF are supported up to 10 MB.</p>
           <div class="panel">
             <div class="portfolio-grid">
-              ${items
-                .map(
-                  (p, i) => `
-                <div style="position:relative;">
-                  <div class="portfolio-item" style="background:${gradientFor(i)};"><span>${escapeHtml(p.caption)}</span></div>
-                  <form method="POST" action="/dashboard/pro/portfolio/${p.id}/delete" style="margin-top:6px;">
-                    <input type="hidden" name="_csrf" value="${escapeHtml(ctx.session.csrf_token)}" />
-                    <button class="btn ghost small" type="submit">Remove</button>
-                  </form>
-                </div>`
-                )
-                .join('') || '<p class="muted">No portfolio items yet.</p>'}
+              ${items.map((p, i) => `<div style="position:relative;">${portfolioTile(p, i, gradientFor)}<div style="margin-top:6px; font-size:14px;">${escapeHtml(p.caption)}</div><form method="POST" action="/dashboard/pro/portfolio/${p.id}/delete" style="margin-top:6px;"><input type="hidden" name="_csrf" value="${escapeHtml(ctx.session.csrf_token)}" /><button class="btn ghost small" type="submit">Remove</button></form></div>`).join('') || '<p class="muted">No portfolio items yet.</p>'}
             </div>
-            <form method="POST" action="/dashboard/pro/portfolio" style="margin-top:20px; border-top:1px solid var(--paper-line); padding-top:16px; max-width:360px;">
+            <form method="POST" action="/dashboard/pro/portfolio" enctype="multipart/form-data" style="margin-top:20px; border-top:1px solid var(--paper-line); padding-top:16px; max-width:420px;">
               <input type="hidden" name="_csrf" value="${escapeHtml(ctx.session.csrf_token)}" />
               <div class="field">
-  <label for="image_url">Image URL</label>
-  <input id="image_url" name="image_url" type="url" placeholder="https://example.com/photo.jpg" required />
-</div>
-              <div class="field">
-                <label for="caption">Caption</label>
-                <input id="caption" name="caption" placeholder="e.g. Balayage transformation" required />
+                <label for="image">Photo</label>
+                <input id="image" name="image" type="file" accept="image/jpeg,image/png,image/webp,image/gif,image/heic,image/heif,.jpg,.jpeg,.png,.webp,.gif,.heic,.heif" required />
+                <div class="helptext">On a phone, tap this to choose from Photos or Files.</div>
               </div>
-              <button class="btn secondary" type="submit">Add portfolio item</button>
+              <div class="field"><label for="caption">Caption</label><input id="caption" name="caption" placeholder="e.g. Fresh fade" required /></div>
+              <button class="btn secondary" type="submit">Upload photo</button>
             </form>
           </div>
         </div>
@@ -347,22 +246,44 @@ module.exports = function (router) {
   router.post('/dashboard/pro/portfolio', async (ctx) => {
     const profile = requirePro(ctx);
     if (!profile) return;
-    const { caption, image_url } = ctx.body;
+
+    const { caption } = ctx.body;
+    const image = ctx.files && ctx.files.image;
+    if (!image || !image.data || !image.data.length) {
+      return redirect(ctx.res, '/dashboard/pro/portfolio?error=' + encodeURIComponent('Choose a photo to upload.'));
+    }
+
+    const allowedTypes = new Map([
+      ['image/jpeg', '.jpg'], ['image/png', '.png'], ['image/webp', '.webp'], ['image/gif', '.gif'], ['image/heic', '.heic'], ['image/heif', '.heif'],
+    ]);
+    const ext = allowedTypes.get(image.contentType);
+    if (!ext) return redirect(ctx.res, '/dashboard/pro/portfolio?error=' + encodeURIComponent('Please upload a JPG, PNG, WEBP, GIF, HEIC, or HEIF image.'));
+    if (image.data.length > 10 * 1024 * 1024) return redirect(ctx.res, '/dashboard/pro/portfolio?error=' + encodeURIComponent('Photo must be 10 MB or smaller.'));
+
+    const uploadDir = path.join(__dirname, '..', 'public', 'uploads', 'portfolio');
+    fs.mkdirSync(uploadDir, { recursive: true });
+    const filename = `${profile.id}-${Date.now()}-${crypto.randomBytes(6).toString('hex')}${ext}`;
+    fs.writeFileSync(path.join(uploadDir, filename), image.data);
+    const imageUrl = `/uploads/portfolio/${filename}`;
+
     const accents = ['violet', 'gold', 'teal', 'rose', 'slate'];
-    db.prepare(
-  'INSERT INTO portfolio_items (pro_id, caption, accent, image_url) VALUES (?, ?, ?, ?)'
-).run(
-  profile.id,
-  caption || 'Untitled',
-  accents[Math.floor(Math.random() * accents.length)],
-  image_url || ''
-);
-    redirect(ctx.res, '/dashboard/pro/portfolio?success=' + encodeURIComponent('Added to portfolio.'));
+    db.prepare('INSERT INTO portfolio_items (pro_id, caption, accent, image_url) VALUES (?, ?, ?, ?)').run(
+      profile.id,
+      caption || 'Portfolio photo',
+      accents[Math.floor(Math.random() * accents.length)],
+      imageUrl
+    );
+    redirect(ctx.res, '/dashboard/pro/portfolio?success=' + encodeURIComponent('Photo uploaded.'));
   });
 
   router.post('/dashboard/pro/portfolio/:id/delete', async (ctx) => {
     const profile = requirePro(ctx);
     if (!profile) return;
+    const item = db.prepare('SELECT * FROM portfolio_items WHERE id = ? AND pro_id = ?').get(ctx.params.id, profile.id);
+    if (item && item.image_url && item.image_url.startsWith('/uploads/portfolio/')) {
+      const filePath = path.join(__dirname, '..', 'public', item.image_url);
+      try { fs.unlinkSync(filePath); } catch (err) { if (err.code !== 'ENOENT') console.error(err); }
+    }
     db.prepare('DELETE FROM portfolio_items WHERE id = ? AND pro_id = ?').run(ctx.params.id, profile.id);
     redirect(ctx.res, '/dashboard/pro/portfolio?success=' + encodeURIComponent('Removed.'));
   });
@@ -379,20 +300,7 @@ function requestCard(r, profile, ctx, withActions) {
       <span class="status-pill ${r.status}">${r.status}</span>
     </div>
     ${r.message ? `<p style="margin-top:8px;">"${escapeHtml(r.message)}"</p>` : ''}
-    ${
-      withActions && r.status === 'pending'
-        ? `<div class="request-actions">
-            <form method="POST" action="/dashboard/pro/requests/${r.id}/status"><input type="hidden" name="_csrf" value="${escapeHtml(ctx.session.csrf_token)}" /><input type="hidden" name="status" value="accepted" /><button class="btn small" type="submit">Accept</button></form>
-            <form method="POST" action="/dashboard/pro/requests/${r.id}/status"><input type="hidden" name="_csrf" value="${escapeHtml(ctx.session.csrf_token)}" /><input type="hidden" name="status" value="declined" /><button class="btn secondary small" type="submit">Decline</button></form>
-          </div>`
-        : ''
-    }
-    ${
-      withActions && r.status === 'accepted'
-        ? `<div class="request-actions">
-            <form method="POST" action="/dashboard/pro/requests/${r.id}/status"><input type="hidden" name="_csrf" value="${escapeHtml(ctx.session.csrf_token)}" /><input type="hidden" name="status" value="completed" /><button class="btn small" type="submit">Mark completed</button></form>
-          </div>`
-        : ''
-    }
+    ${withActions && r.status === 'pending' ? `<div class="request-actions"><form method="POST" action="/dashboard/pro/requests/${r.id}/status"><input type="hidden" name="_csrf" value="${escapeHtml(ctx.session.csrf_token)}" /><input type="hidden" name="status" value="accepted" /><button class="btn small" type="submit">Accept</button></form><form method="POST" action="/dashboard/pro/requests/${r.id}/status"><input type="hidden" name="_csrf" value="${escapeHtml(ctx.session.csrf_token)}" /><input type="hidden" name="status" value="declined" /><button class="btn secondary small" type="submit">Decline</button></form></div>` : ''}
+    ${withActions && r.status === 'accepted' ? `<div class="request-actions"><form method="POST" action="/dashboard/pro/requests/${r.id}/status"><input type="hidden" name="_csrf" value="${escapeHtml(ctx.session.csrf_token)}" /><input type="hidden" name="status" value="completed" /><button class="btn small" type="submit">Mark completed</button></form></div>` : ''}
   </div>`;
 }
