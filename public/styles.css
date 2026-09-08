@@ -5,9 +5,9 @@
   --paper: #ffffff;
   --paper-soft: #f7f5fb;
   --paper-line: #e7e3f0;
-  --brand: #6d3bf0;
-  --brand-dark: #5527d6;
-  --brand-soft: #efe8ff;
+  --brand: #1e2a4a;
+  --brand-dark: #142038;
+  --brand-soft: #e7ebf5;
   --accent-gold: #e8a33d;
   --ok: #1c8a5c;
   --ok-soft: #e4f6ee;
@@ -68,12 +68,7 @@ label { display: block; font-size: 0.85rem; font-weight: 600; color: var(--ink-s
 }
 .site-header .container { display: flex; align-items: center; justify-content: space-between; height: 68px; gap: 20px; }
 .brand { display: flex; align-items: center; gap: 8px; font-weight: 800; font-size: 1.25rem; color: var(--ink); }
-.brand .mark {
-  width: 34px; height: 34px; border-radius: 10px;
-  background: linear-gradient(135deg, var(--brand), var(--accent-gold));
-  display: flex; align-items: center; justify-content: center;
-  color: white; font-weight: 800; font-size: 1rem;
-}
+.brand .brand-mark { border-radius: 10px; flex-shrink: 0; }
 .brand .dot { color: var(--brand); }
 .nav-links { display: flex; align-items: center; gap: 6px; }
 .nav-links a, .nav-links button {
@@ -103,7 +98,7 @@ label { display: block; font-size: 0.85rem; font-weight: 600; color: var(--ink-s
 
 /* ---- Hero / search ---- */
 .hero {
-  background: radial-gradient(1200px 480px at 15% -10%, #efe8ff 0%, transparent 60%),
+  background: radial-gradient(1200px 480px at 15% -10%, #e7ebf5 0%, transparent 60%),
               radial-gradient(900px 420px at 100% -20%, #fdf1de 0%, transparent 55%),
               var(--paper);
   border-bottom: 1px solid var(--paper-line);
@@ -244,3 +239,16 @@ label { display: block; font-size: 0.85rem; font-weight: 600; color: var(--ink-s
 .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 @media (max-width: 600px) { .grid-2 { grid-template-columns: 1fr; } }
 .helptext { font-size: 0.8rem; color: var(--ink-faint); margin-top: -10px; margin-bottom: 14px; }
+
+/* GoBookr official brand lockup */
+.brand {
+  width: 170px;
+  height: 40px;
+  flex: 0 0 170px;
+  font-size: 0;
+  line-height: 0;
+  gap: 0;
+  background: url('/logo-lockup.svg') no-repeat left center / contain;
+}
+.brand .mark,
+.brand .dot { display: none; }
