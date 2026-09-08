@@ -30,24 +30,29 @@ CREATE TABLE IF NOT EXISTS users (
 );
 
 CREATE TABLE IF NOT EXISTS pro_profiles (
-  id                INTEGER PRIMARY KEY AUTOINCREMENT,
-  user_id           INTEGER NOT NULL UNIQUE REFERENCES users(id) ON DELETE CASCADE,
-  business_name     TEXT NOT NULL,
-  category          TEXT NOT NULL CHECK (category IN ('barber','stylist','colorist')),
-  bio               TEXT NOT NULL DEFAULT '',
-  city              TEXT NOT NULL,
-  state             TEXT NOT NULL,
-  license_number    TEXT,
-  license_state     TEXT,
-  license_verified  INTEGER NOT NULL DEFAULT 0,
-  latitude          REAL,
-  longitude         REAL,
-  price_min         INTEGER NOT NULL DEFAULT 0,
-  price_max         INTEGER NOT NULL DEFAULT 0,
-  years_experience  INTEGER NOT NULL DEFAULT 0,
-  accent            TEXT NOT NULL DEFAULT 'violet',
-  initials          TEXT NOT NULL DEFAULT '',
-  created_at        TEXT NOT NULL DEFAULT (datetime('now'))
+  id                    INTEGER PRIMARY KEY AUTOINCREMENT,
+  user_id               INTEGER NOT NULL UNIQUE REFERENCES users(id) ON DELETE CASCADE,
+  business_name         TEXT NOT NULL,
+  category              TEXT NOT NULL CHECK (category IN ('barber','stylist','colorist')),
+  bio                   TEXT NOT NULL DEFAULT '',
+  city                  TEXT NOT NULL,
+  state                 TEXT NOT NULL,
+  license_number        TEXT,
+  license_state         TEXT,
+  license_verified      INTEGER NOT NULL DEFAULT 0,
+  latitude              REAL,
+  longitude             REAL,
+  instagram_url         TEXT NOT NULL DEFAULT '',
+  tiktok_url            TEXT NOT NULL DEFAULT '',
+  facebook_url          TEXT NOT NULL DEFAULT '',
+  website_url           TEXT NOT NULL DEFAULT '',
+  onboarding_completed  INTEGER NOT NULL DEFAULT 0,
+  price_min             INTEGER NOT NULL DEFAULT 0,
+  price_max             INTEGER NOT NULL DEFAULT 0,
+  years_experience      INTEGER NOT NULL DEFAULT 0,
+  accent                TEXT NOT NULL DEFAULT 'violet',
+  initials              TEXT NOT NULL DEFAULT '',
+  created_at            TEXT NOT NULL DEFAULT (datetime('now'))
 );
 
 CREATE TABLE IF NOT EXISTS services (
@@ -109,11 +114,15 @@ if (!portfolioColumns.some((column) => column.name === 'image_url')) {
 }
 
 const profileColumns = db.prepare('PRAGMA table_info(pro_profiles)').all();
-if (!profileColumns.some((column) => column.name === 'latitude')) {
-  db.exec('ALTER TABLE pro_profiles ADD COLUMN latitude REAL');
-}
-if (!profileColumns.some((column) => column.name === 'longitude')) {
-  db.exec('ALTER TABLE pro_profiles ADD COLUMN longitude REAL');
-}
+const addProfileColumn = (name, sql) => {
+  if (!profileColumns.some((column) => column.name === name)) db.exec(sql);
+};
+addProfileColumn('latitude', 'ALTER TABLE pro_profiles ADD COLUMN latitude REAL');
+addProfileColumn('longitude', 'ALTER TABLE pro_profiles ADD COLUMN longitude REAL');
+addProfileColumn('instagram_url', "ALTER TABLE pro_profiles ADD COLUMN instagram_url TEXT NOT NULL DEFAULT ''");
+addProfileColumn('tiktok_url', "ALTER TABLE pro_profiles ADD COLUMN tiktok_url TEXT NOT NULL DEFAULT ''");
+addProfileColumn('facebook_url', "ALTER TABLE pro_profiles ADD COLUMN facebook_url TEXT NOT NULL DEFAULT ''");
+addProfileColumn('website_url', "ALTER TABLE pro_profiles ADD COLUMN website_url TEXT NOT NULL DEFAULT ''");
+addProfileColumn('onboarding_completed', 'ALTER TABLE pro_profiles ADD COLUMN onboarding_completed INTEGER NOT NULL DEFAULT 0');
 
 module.exports = db;
