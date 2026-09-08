@@ -13,6 +13,13 @@ const {
 } = require('../lib/auth');
 const { escapeHtml, initialsFrom } = require('../lib/util');
 
+const PRO_CATEGORIES = [
+  { value: 'barber', label: 'Barber' },
+  { value: 'stylist', label: 'Hairstylist' },
+  { value: 'colorist', label: 'Colorist' },
+  { value: 'nail_technician', label: 'Nail Technician' },
+];
+
 async function geocodeBusinessAddress({ street, city, state, zip }) {
   const query = [street, city, state, zip, 'USA'].filter(Boolean).join(', ');
   const controller = new AbortController();
@@ -44,6 +51,12 @@ async function geocodeBusinessAddress({ street, city, state, zip }) {
   }
 }
 
+function selectedCategories(body) {
+  return PRO_CATEGORIES
+    .filter((item) => String(body[`category_${item.value}`] || '') === '1')
+    .map((item) => item.value);
+}
+
 module.exports = function (router) {
   require('./onboarding')(router);
 
@@ -71,11 +84,21 @@ module.exports = function (router) {
   router.get('/signup', async (ctx) => {
     if (ctx.currentUser) return redirect(ctx.res, '/');
     const role = ctx.query.role === 'pro' ? 'pro' : 'customer';
+    const categoryOptions = PRO_CATEGORIES.map((item) => `
+      <label style="display:flex; align-items:center; gap:9px; padding:11px 13px; border:1px solid var(--paper-line); border-radius:12px; cursor:pointer;">
+        <input type="checkbox" name="category_${item.value}" value="1" style="width:18px; height:18px; margin:0;" />
+        <span style="font-weight:700;">${item.label}</span>
+      </label>`).join('');
+
     const proFields = role === 'pro'
       ? `<div class="field"><label for="business_name">Business name</label><input id="business_name" name="business_name" required/><div class="helptext">Your personal or professional business name.</div></div>
-         <div class="field"><label for="category">Service</label><select id="category" name="category" required><option value="barber">Barber</option><option value="stylist">Hairstylist</option><option value="colorist">Colorist</option></select></div>
+         <div class="field">
+           <label>Services you offer</label>
+           <div class="helptext" style="margin-bottom:10px;">Select all that apply. You can be listed in more than one category.</div>
+           <div style="display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px;">${categoryOptions}</div>
+         </div>
          <div style="margin:24px 0 12px;"><h3 style="margin-bottom:4px;">Where do you work?</h3><p class="muted" style="margin:0;">Your address is used to calculate distance for nearby customers.</p></div>
-         <div class="field"><label for="workplace_name">Barbershop / Salon name</label><input id="workplace_name" name="workplace_name" placeholder="e.g. Novo Barbers" required/></div>
+         <div class="field"><label for="workplace_name">Business / workplace name</label><input id="workplace_name" name="workplace_name" placeholder="e.g. Novo Barbers" required/></div>
          <div class="field"><label for="street_address">Street address</label><input id="street_address" name="street_address" placeholder="e.g. 399 Perry St" autocomplete="street-address" required/></div>
          <div class="field"><label for="suite">Suite / Unit <span class="muted">(optional)</span></label><input id="suite" name="suite" placeholder="e.g. #100"/></div>
          <div class="field-row"><div class="field"><label for="city">City</label><input id="city" name="city" placeholder="Castle Rock" autocomplete="address-level2" required/></div><div class="field"><label for="state">State</label><input id="state" name="state" value="CO" maxlength="2" autocomplete="address-level1" required/></div></div>
@@ -100,10 +123,14 @@ module.exports = function (router) {
       return redirect(ctx.res, `/signup?role=${role}&error=` + encodeURIComponent('An account with that email already exists.'));
     }
 
+    const categories = role === 'pro' ? selectedCategories(ctx.body) : [];
     if (role === 'pro') {
       const required = ['business_name', 'workplace_name', 'street_address', 'city', 'state', 'zip_code'];
       if (required.some((key) => !String(ctx.body[key] || '').trim())) {
         return redirect(ctx.res, '/signup?role=pro&error=' + encodeURIComponent('Please complete your business and workplace address.'));
+      }
+      if (!categories.length) {
+        return redirect(ctx.res, '/signup?role=pro&error=' + encodeURIComponent('Select at least one service you offer.'));
       }
     }
 
@@ -114,7 +141,7 @@ module.exports = function (router) {
 
     if (role === 'pro') {
       const businessName = String(ctx.body.business_name || '').trim();
-      const category = ['barber', 'stylist', 'colorist'].includes(ctx.body.category) ? ctx.body.category : 'barber';
+      const legacyCategory = categories.find((category) => ['barber', 'stylist', 'colorist'].includes(category)) || 'barber';
       const city = String(ctx.body.city || '').trim().toLowerCase().replace(/\b\w/g, (letter) => letter.toUpperCase());
       const state = String(ctx.body.state || '').trim().toUpperCase();
       const workplace = String(ctx.body.workplace_name || '').trim();
@@ -124,13 +151,13 @@ module.exports = function (router) {
 
       const coordinates = await geocodeBusinessAddress({ street, city, state, zip });
 
-      db.prepare(`INSERT INTO pro_profiles (
+      const profileResult = db.prepare(`INSERT INTO pro_profiles (
         user_id,business_name,category,bio,city,state,workplace_name,street_address,suite,zip_code,
         latitude,longitude,price_min,price_max,years_experience,accent,initials
       ) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)`).run(
         userId,
         businessName || name,
-        category,
+        legacyCategory,
         '',
         city,
         state,
@@ -146,6 +173,10 @@ module.exports = function (router) {
         'violet',
         initialsFrom(businessName || name)
       );
+
+      const proId = profileResult.lastInsertRowid;
+      const addCategory = db.prepare('INSERT OR IGNORE INTO pro_categories (pro_id, category) VALUES (?, ?)');
+      for (const category of categories) addCategory.run(proId, category);
     }
 
     const token = createSession(userId);
