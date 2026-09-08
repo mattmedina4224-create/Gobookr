@@ -10,17 +10,29 @@ const CATEGORIES = [
   { value: 'barber', label: 'Barbers' },
   { value: 'stylist', label: 'Hairstylists' },
   { value: 'colorist', label: 'Colorists' },
+  { value: 'nail_technician', label: 'Nail Technicians' },
 ];
+
+function categoriesForPro(proId) {
+  const rows = db.prepare('SELECT category FROM pro_categories WHERE pro_id = ? ORDER BY category').all(proId);
+  return rows.length ? rows.map((row) => row.category) : [];
+}
 
 function proWithStats(pro) {
   const reviews = db.prepare('SELECT rating FROM reviews WHERE pro_id = ?').all(pro.id);
   const services = db.prepare('SELECT * FROM services WHERE pro_id = ? ORDER BY price ASC').all(pro.id);
+  const categories = categoriesForPro(pro.id);
   return {
     ...pro,
+    categories: categories.length ? categories : [pro.category],
     reviewCount: reviews.length,
     rating: avgRating(reviews),
     services,
   };
+}
+
+function categoryBadges(categories) {
+  return (categories || []).map((category) => `<span class="badge category">${slugCategory(category)}</span>`).join(' ');
 }
 
 function proCard(pro) {
@@ -47,21 +59,21 @@ function proCard(pro) {
       <div class="avatar accent-${escapeHtml(pro.accent)}">${escapeHtml(pro.initials)}</div>
       <div>
         <h3>
-  ${escapeHtml(pro.business_name)}
-  ${pro.license_verified ? `
-    <span class="verified-badge" title="License verified" aria-label="License verified">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="vertical-align:-3px;">
-        <path d="M12 2.5l2.2 2.1 3-.4.9 2.9 2.7 1.4-.9 2.9 1.3 2.7-2.4 1.8-.1 3-3 .5-2 2.3-2.7-1.3-2.7 1.3-2-2.3-3-.5-.1-3-2.4-1.8 1.3-2.7-.9-2.9 2.7-1.4.9-2.9 3 .4L12 2.5z"/>
-        <path d="M8.4 12.1l2.2 2.2 5-5" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-    </span>
-  ` : ''}
-</h3>
+          ${escapeHtml(pro.business_name)}
+          ${pro.license_verified ? `
+            <span class="verified-badge" title="License verified" aria-label="License verified">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="vertical-align:-3px;">
+                <path d="M12 2.5l2.2 2.1 3-.4.9 2.9 2.7 1.4-.9 2.9 1.3 2.7-2.4 1.8-.1 3-3 .5-2 2.3-2.7-1.3-2.7 1.3-2-2.3-3-.5-.1-3-2.4-1.8 1.3-2.7-.9-2.9 2.7-1.4.9-2.9 3 .4L12 2.5z"/>
+                <path d="M8.4 12.1l2.2 2.2 5-5" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+          ` : ''}
+        </h3>
         <p class="muted">${escapeHtml(pro.city)}, ${escapeHtml(pro.state)}</p>
         ${distanceHtml}
       </div>
     </div>
-    <span class="badge category">${slugCategory(pro.category)}</span>
+    <div style="display:flex; gap:6px; flex-wrap:wrap;">${categoryBadges(pro.categories)}</div>
     <div style="margin-top:10px;">${ratingHtml}</div>
     <div class="services-line">${serviceNames}</div>
     <div style="margin-top:10px;" class="price-tag">${priceLine}</div>
@@ -79,8 +91,8 @@ module.exports = function (router) {
     const body = `
     <section class="hero">
       <div class="container">
-        <h1>Book a barber, stylist, or colorist you can actually trust.</h1>
-        <p class="lede">GoBookr lists real reviews and real availability from local hair pros — so you know what you're walking into before you sit in the chair.</p>
+        <h1>Find a local professional you can actually trust.</h1>
+        <p class="lede">GoBookr helps you discover local barbers, hairstylists, colorists, nail technicians, and more.</p>
         <div class="search-card">
           <form method="GET" action="/search">
             <select name="category" aria-label="Service">
@@ -95,6 +107,7 @@ module.exports = function (router) {
           <a href="/search?category=barber">✂️ Barbers</a>
           <a href="/search?category=stylist">💇 Hairstylists</a>
           <a href="/search?category=colorist">🎨 Colorists</a>
+          <a href="/search?category=nail_technician">💅 Nail Technicians</a>
           <a href="/search">Browse everyone</a>
         </div>
       </div>
@@ -113,14 +126,14 @@ module.exports = function (router) {
     <section class="section container">
       <div class="card" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;">
         <div>
-          <h2 style="margin-bottom:4px;">Are you a barber, stylist, or colorist?</h2>
+          <h2 style="margin-bottom:4px;">Are you a personal-service professional?</h2>
           <p style="margin:0;">List your services, build your reviews, and get booking requests from new clients — free to join.</p>
         </div>
         <a class="btn" href="/signup?role=pro">Join as a pro</a>
       </div>
     </section>`;
 
-    send(ctx.res, layout({ title: 'Find trusted hair pros', currentUser: ctx.currentUser, session: ctx.session, flash: flashFromQuery(ctx.query), body }));
+    send(ctx.res, layout({ title: 'Find trusted local pros', currentUser: ctx.currentUser, session: ctx.session, flash: flashFromQuery(ctx.query), body }));
   });
 
   router.get('/search', async (ctx) => {
@@ -128,16 +141,16 @@ module.exports = function (router) {
     let sql = 'SELECT * FROM pro_profiles WHERE 1=1';
     const args = [];
     if (category) {
-      sql += ' AND category = ?';
+      sql += ' AND EXISTS (SELECT 1 FROM pro_categories pc WHERE pc.pro_id = pro_profiles.id AND pc.category = ?)';
       args.push(category);
     }
     if (city) {
-      sql += ' AND (city LIKE ? OR state LIKE ?)';
-      args.push(`%${city}%`, `%${city}%`);
+      sql += ' AND (city LIKE ? OR state LIKE ? OR zip_code LIKE ?)';
+      args.push(`%${city}%`, `%${city}%`, `%${city}%`);
     }
     if (q) {
-      sql += ' AND business_name LIKE ?';
-      args.push(`%${q}%`);
+      sql += ' AND (business_name LIKE ? OR workplace_name LIKE ?)';
+      args.push(`%${q}%`, `%${q}%`);
     }
     sql += ' ORDER BY id DESC';
 
@@ -184,16 +197,14 @@ module.exports = function (router) {
           </ul>
         </aside>
         <div>
-          ${
-            results.length
-              ? `<div class="pro-grid">${results.map(proCard).join('')}</div>`
-              : `<div class="empty-state"><h3>No pros match yet</h3><p>Try a different city or clear a filter.</p></div>`
-          }
+          ${results.length
+            ? `<div class="pro-grid">${results.map(proCard).join('')}</div>`
+            : `<div class="empty-state"><h3>No pros match yet</h3><p>Try a different city or clear a filter.</p></div>`}
         </div>
       </div>
     </section>`;
 
-    send(ctx.res, layout({ title: 'Search hair pros', currentUser: ctx.currentUser, session: ctx.session, flash: flashFromQuery(ctx.query), body }));
+    send(ctx.res, layout({ title: 'Search local pros', currentUser: ctx.currentUser, session: ctx.session, flash: flashFromQuery(ctx.query), body }));
   });
 
   router.post('/dashboard/pro/location', async (ctx) => {
@@ -213,6 +224,8 @@ module.exports = function (router) {
     const pro = db.prepare('SELECT * FROM pro_profiles WHERE id = ?').get(ctx.params.id);
     if (!pro) return send(ctx.res, '<h1>404 — pro not found</h1>', 404);
 
+    const categories = categoriesForPro(pro.id);
+    const displayCategories = categories.length ? categories : [pro.category];
     const services = db.prepare('SELECT * FROM services WHERE pro_id = ? ORDER BY price ASC').all(pro.id);
     const portfolio = db.prepare('SELECT * FROM portfolio_items WHERE pro_id = ?').all(pro.id);
     const reviews = db
@@ -261,7 +274,7 @@ module.exports = function (router) {
       <div class="profile-head"${hasLocation ? ` data-lat="${Number(pro.latitude)}" data-lon="${Number(pro.longitude)}"` : ''}>
         <div class="avatar lg accent-${escapeHtml(pro.accent)}">${escapeHtml(pro.initials)}</div>
         <div class="meta">
-          <span class="badge category">${slugCategory(pro.category)}</span>
+          <div style="display:flex; gap:6px; flex-wrap:wrap;">${categoryBadges(displayCategories)}</div>
           <h1 style="margin-top:8px; display:flex; align-items:center; gap:7px;">
             ${escapeHtml(pro.business_name)}
             ${pro.license_verified ? `<span title="License verified" aria-label="License verified" style="display:inline-flex; align-items:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.1 3 3.6-.7.7 3.6 3 2.1-2.1 3 0 3.6-3.6.7-2.1 3-3-2.1-3 2.1-2.1-3-3.6-.7.7-3.6-2.1-3 3-2.1.7-3.6 3.6.7z"/><path d="M8.4 12.1l2.2 2.2 5-5" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>` : ''}
