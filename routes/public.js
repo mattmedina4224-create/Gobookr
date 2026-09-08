@@ -3,7 +3,7 @@
 const db = require('../db');
 const { layout } = require('../lib/layout');
 const { send, flashFromQuery } = require('../lib/http');
-const { escapeHtml, money, slugCategory, avgRating, stars, initialsFrom } = require('../lib/util');
+const { escapeHtml, money, slugCategory, avgRating, stars } = require('../lib/util');
 
 const CATEGORIES = [
   { value: '', label: 'All services' },
@@ -33,9 +33,16 @@ function proCard(pro) {
       ? `<span class="rating">${stars(pro.rating)}<span class="count">${pro.rating} (${pro.reviewCount})</span></span>`
       : `<span class="muted">No reviews yet</span>`;
   const serviceNames = pro.services.slice(0, 3).map((s) => escapeHtml(s.name)).join(' · ') || 'Services coming soon';
+  const hasLocation = Number.isFinite(Number(pro.latitude)) && Number.isFinite(Number(pro.longitude));
+  const locationAttrs = hasLocation
+    ? ` data-lat="${Number(pro.latitude)}" data-lon="${Number(pro.longitude)}"`
+    : '';
+  const distanceHtml = hasLocation
+    ? `<div class="distance-away muted" style="margin-top:4px; font-weight:700;">Use location to see distance</div>`
+    : '';
 
   return `
-  <a class="pro-card" href="/pro/${pro.id}">
+  <a class="pro-card" href="/pro/${pro.id}"${locationAttrs}>
     <div class="pro-card-top">
       <div class="avatar accent-${escapeHtml(pro.accent)}">${escapeHtml(pro.initials)}</div>
       <div>
@@ -51,6 +58,7 @@ function proCard(pro) {
   ` : ''}
 </h3>
         <p class="muted">${escapeHtml(pro.city)}, ${escapeHtml(pro.state)}</p>
+        ${distanceHtml}
       </div>
     </div>
     <span class="badge category">${slugCategory(pro.category)}</span>
@@ -188,6 +196,19 @@ module.exports = function (router) {
     send(ctx.res, layout({ title: 'Search hair pros', currentUser: ctx.currentUser, session: ctx.session, flash: flashFromQuery(ctx.query), body }));
   });
 
+  router.post('/dashboard/pro/location', async (ctx) => {
+    if (!ctx.currentUser || ctx.currentUser.role !== 'pro') return send(ctx.res, 'Unauthorized', 401);
+    const latitude = Number(ctx.body.latitude);
+    const longitude = Number(ctx.body.longitude);
+    if (!Number.isFinite(latitude) || !Number.isFinite(longitude) || latitude < -90 || latitude > 90 || longitude < -180 || longitude > 180) {
+      return send(ctx.res, 'Invalid location.', 400);
+    }
+    const profile = db.prepare('SELECT id FROM pro_profiles WHERE user_id = ?').get(ctx.currentUser.id);
+    if (!profile) return send(ctx.res, 'Professional profile not found.', 404);
+    db.prepare('UPDATE pro_profiles SET latitude = ?, longitude = ? WHERE id = ?').run(latitude, longitude, profile.id);
+    send(ctx.res, 'Location saved.');
+  });
+
   router.get('/pro/:id', async (ctx) => {
     const pro = db.prepare('SELECT * FROM pro_profiles WHERE id = ?').get(ctx.params.id);
     if (!pro) return send(ctx.res, '<h1>404 — pro not found</h1>', 404);
@@ -225,39 +246,28 @@ module.exports = function (router) {
             ${services.map((s) => `<option value="${escapeHtml(s.name)}">${escapeHtml(s.name)} — ${money(s.price)}</option>`).join('') || '<option value="General appointment">General appointment</option>'}
           </select>
         </div>
-        <div class="field">
-          <label for="preferred_date">Preferred date</label>
-          <input id="preferred_date" type="date" name="preferred_date" />
-        </div>
-        <div class="field">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="3" placeholder="Tell them what you're looking for"></textarea>
-        </div>
+        <div class="field"><label for="preferred_date">Preferred date</label><input id="preferred_date" type="date" name="preferred_date" /></div>
+        <div class="field"><label for="message">Message</label><textarea id="message" name="message" rows="3" placeholder="Tell them what you're looking for"></textarea></div>
         <button class="btn block" type="submit">Request booking</button>
       </form>`;
     }
 
     const accentColors = ['#6d3bf0', '#a06bff', '#e8a33d', '#f2c675', '#1c8a8a', '#4fc7c0', '#d13b6f', '#ef7ba0'];
     const gradientFor = (i) => `linear-gradient(135deg, ${accentColors[i % accentColors.length]}, ${accentColors[(i + 3) % accentColors.length]})`;
+    const hasLocation = Number.isFinite(Number(pro.latitude)) && Number.isFinite(Number(pro.longitude));
 
     const body = `
     <section class="section container">
-      <div class="profile-head">
+      <div class="profile-head"${hasLocation ? ` data-lat="${Number(pro.latitude)}" data-lon="${Number(pro.longitude)}"` : ''}>
         <div class="avatar lg accent-${escapeHtml(pro.accent)}">${escapeHtml(pro.initials)}</div>
         <div class="meta">
           <span class="badge category">${slugCategory(pro.category)}</span>
           <h1 style="margin-top:8px; display:flex; align-items:center; gap:7px;">
-  ${escapeHtml(pro.business_name)}
-  ${pro.license_verified ? `
-    <span title="License verified" aria-label="License verified" style="display:inline-flex; align-items:center;">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-        <path d="M12 2.5l2.1 3 3.6-.7.7 3.6 3 2.1-2.1 3 0 3.6-3.6.7-2.1 3-3-2.1-3 2.1-2.1-3-3.6-.7.7-3.6-2.1-3 3-2.1.7-3.6 3.6.7z"/>
-        <path d="M8.4 12.1l2.2 2.2 5-5" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-    </span>
-  ` : ''}
-</h1>
+            ${escapeHtml(pro.business_name)}
+            ${pro.license_verified ? `<span title="License verified" aria-label="License verified" style="display:inline-flex; align-items:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.1 3 3.6-.7.7 3.6 3 2.1-2.1 3 0 3.6-3.6.7-2.1 3-3-2.1-3 2.1-2.1-3-3.6-.7.7-3.6-2.1-3 3-2.1.7-3.6 3.6.7z"/><path d="M8.4 12.1l2.2 2.2 5-5" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>` : ''}
+          </h1>
           <p class="muted" style="margin:0;">${escapeHtml(pro.city)}, ${escapeHtml(pro.state)}</p>
+          ${hasLocation ? '<p class="profile-distance muted" style="margin:4px 0 0; font-weight:700;">Use location to see distance</p>' : ''}
           <div class="stat-row">
             <span class="stat">${rating != null ? `<span class="rating">${stars(rating)}</span> <b>${rating}</b> (${reviews.length} reviews)` : 'No reviews yet'}</span>
             <span class="stat"><b>${pro.years_experience}</b> yrs experience</span>
@@ -269,68 +279,21 @@ module.exports = function (router) {
 
       <div class="tabs-grid">
         <div>
-          <div class="panel">
-            <h3>About</h3>
-            <p>${escapeHtml(pro.bio) || 'No bio yet.'}</p>
-          </div>
+          <div class="panel"><h3>About</h3><p>${escapeHtml(pro.bio) || 'No bio yet.'}</p></div>
           <div class="panel">
             <h3>Portfolio</h3>
             <div class="portfolio-grid">
-              ${
-                portfolio.length
-                  ? portfolio
-                      .map(
-                        (p, i) =>
-                          p.image_url
-                            ? `<div><div class="portfolio-item" style="background:#eee; overflow:hidden;"><img src="${escapeHtml(p.image_url)}" alt="${escapeHtml(p.caption || 'Portfolio photo')}" style="width:100%; height:100%; object-fit:cover; display:block;" /></div>${p.caption ? `<div style="margin-top:6px; font-size:14px;">${escapeHtml(p.caption)}</div>` : ''}</div>`
-                            : `<div><div class="portfolio-item" style="background:${gradientFor(i)};"><span>${escapeHtml(p.caption)}</span></div></div>`
-                      )
-                      .join('')
-                  : '<p class="muted">No portfolio photos yet.</p>'
-              }
+              ${portfolio.length ? portfolio.map((p, i) => p.image_url
+                ? `<div><div class="portfolio-item" style="background:#eee; overflow:hidden;"><img src="${escapeHtml(p.image_url)}" alt="${escapeHtml(p.caption || 'Portfolio photo')}" style="width:100%; height:100%; object-fit:cover; display:block;" /></div>${p.caption ? `<div style="margin-top:6px; font-size:14px;">${escapeHtml(p.caption)}</div>` : ''}</div>`
+                : `<div><div class="portfolio-item" style="background:${gradientFor(i)};"><span>${escapeHtml(p.caption)}</span></div></div>`).join('') : '<p class="muted">No portfolio photos yet.</p>'}
             </div>
           </div>
           <div class="panel">
             <h3>Reviews (${reviews.length})</h3>
-            ${
-              reviews.length
-                ? reviews
-                    .map(
-                      (r) => `
-              <div class="review">
-                <div class="review-top">
-                  <span class="name">${escapeHtml(r.customer_name)}</span>
-                  <span class="rating">${stars(r.rating)}</span>
-                </div>
-                <p style="margin:0;">${escapeHtml(r.comment)}</p>
-              </div>`
-                    )
-                    .join('')
-                : '<p class="muted">No reviews yet — be the first to book and leave one.</p>'
-            }
+            ${reviews.length ? reviews.map((r) => `<div class="review"><div class="review-top"><span class="name">${escapeHtml(r.customer_name)}</span><span class="rating">${stars(r.rating)}</span></div><p style="margin:0;">${escapeHtml(r.comment)}</p></div>`).join('') : '<p class="muted">No reviews yet — be the first to book and leave one.</p>'}
           </div>
         </div>
-        <div>
-          <div class="panel">
-            <h3>Services &amp; pricing</h3>
-            ${
-              services.length
-                ? services
-                    .map(
-                      (s) => `
-              <div class="service-row">
-                <div>
-                  <div class="name">${escapeHtml(s.name)}</div>
-                  <div class="duration">${s.duration_minutes} min</div>
-                </div>
-                <div class="price-tag">${money(s.price)}</div>
-              </div>`
-                    )
-                    .join('')
-                : '<p class="muted">No services listed yet.</p>'
-            }
-          </div>
-        </div>
+        <div><div class="panel"><h3>Services &amp; pricing</h3>${services.length ? services.map((s) => `<div class="service-row"><div><div class="name">${escapeHtml(s.name)}</div><div class="duration">${s.duration_minutes} min</div></div><div class="price-tag">${money(s.price)}</div></div>`).join('') : '<p class="muted">No services listed yet.</p>'}</div></div>
       </div>
     </section>`;
 
