@@ -98,10 +98,10 @@ module.exports = function (router) {
            <div style="display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px;">${categoryOptions}</div>
          </div>
          <div style="margin:24px 0 12px;"><h3 style="margin-bottom:4px;">Where do you work?</h3><p class="muted" style="margin:0;">Your address is used to calculate distance for nearby customers.</p></div>
-         <div class="field"><label for="workplace_name">Business / workplace name</label><input id="workplace_name" name="workplace_name" placeholder="e.g. Novo Barbers" required/></div>
-         <div class="field"><label for="street_address">Street address</label><input id="street_address" name="street_address" placeholder="e.g. 399 Perry St" autocomplete="street-address" required/></div>
+         <div class="field"><label for="workplace_name">Business / workplace name</label><input id="workplace_name" name="workplace_name" placeholder="e.g. Main Street Salon" required/></div>
+         <div class="field"><label for="street_address">Street address</label><input id="street_address" name="street_address" placeholder="e.g. 123 Main St" autocomplete="street-address" required/></div>
          <div class="field"><label for="suite">Suite / Unit <span class="muted">(optional)</span></label><input id="suite" name="suite" placeholder="e.g. #100"/></div>
-         <div class="field-row"><div class="field"><label for="city">City</label><input id="city" name="city" placeholder="Castle Rock" autocomplete="address-level2" required/></div><div class="field"><label for="state">State</label><input id="state" name="state" value="CO" maxlength="2" autocomplete="address-level1" required/></div></div>
+         <div class="field-row"><div class="field"><label for="city">City</label><input id="city" name="city" placeholder="Denver" autocomplete="address-level2" required/></div><div class="field"><label for="state">State</label><input id="state" name="state" value="CO" maxlength="2" autocomplete="address-level1" required/></div></div>
          <div class="field"><label for="zip_code">ZIP code</label><input id="zip_code" name="zip_code" inputmode="numeric" autocomplete="postal-code" maxlength="10" required/></div>
          <div class="helptext" style="margin-top:-6px; margin-bottom:18px;">We use this address to place your business on GoBookr and calculate mileage. Customers still see your city and state on search cards.</div>`
       : '';
