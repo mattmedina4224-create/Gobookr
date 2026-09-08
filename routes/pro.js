@@ -18,6 +18,34 @@ function requirePro(ctx) {
   return profile;
 }
 
+async function geocodeBusinessAddress({ street, city, state, zip }) {
+  const query = [street, city, state, zip, 'USA'].filter(Boolean).join(', ');
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 6000);
+
+  try {
+    const url = 'https://nominatim.openstreetmap.org/search?format=jsonv2&limit=1&countrycodes=us&q=' + encodeURIComponent(query);
+    const response = await fetch(url, {
+      headers: {
+        'User-Agent': 'GoBookr/1.0 (business address geocoding)',
+        'Accept-Language': 'en-US,en;q=0.9',
+      },
+      signal: controller.signal,
+    });
+    if (!response.ok) return null;
+    const results = await response.json();
+    if (!Array.isArray(results) || !results.length) return null;
+    const latitude = Number(results[0].lat);
+    const longitude = Number(results[0].lon);
+    if (!Number.isFinite(latitude) || !Number.isFinite(longitude)) return null;
+    return { latitude, longitude };
+  } catch {
+    return null;
+  } finally {
+    clearTimeout(timeout);
+  }
+}
+
 function dashNav(active) {
   const items = [
     { key: 'overview', href: '/dashboard/pro', label: 'Overview' },
@@ -64,15 +92,75 @@ module.exports = function (router) {
   router.get('/dashboard/pro/profile', async (ctx) => {
     const profile = requirePro(ctx); if (!profile) return;
     const services = db.prepare('SELECT * FROM services WHERE pro_id = ? ORDER BY price ASC').all(profile.id);
-    const body = `<section class="section container"><div class="dash-layout">${dashNav('profile')}<div><h1>Profile &amp; services</h1><div class="panel"><h3>Business details</h3><form method="POST" action="/dashboard/pro/profile"><input type="hidden" name="_csrf" value="${escapeHtml(ctx.session.csrf_token)}" /><div class="field"><label for="business_name">Business name</label><input id="business_name" name="business_name" value="${escapeHtml(profile.business_name)}" required /></div><div class="field-row"><div class="field"><label for="city">City</label><input id="city" name="city" value="${escapeHtml(profile.city)}" required /></div><div class="field"><label for="state">State</label><input id="state" name="state" value="${escapeHtml(profile.state)}" maxlength="2" required /></div></div><div class="field"><label for="license_number">License #</label><input id="license_number" name="license_number" value="${escapeHtml(profile.license_number || '')}" placeholder="e.g. BAR.1234567" /></div><div class="field"><label for="license_state">License state</label><input id="license_state" name="license_state" value="${escapeHtml(profile.license_state || profile.state || '')}" maxlength="2" placeholder="CO" /></div><div class="field-row"><div class="field"><label for="price_min">Starting price ($)</label><input id="price_min" type="number" name="price_min" value="${profile.price_min}" min="0" /></div><div class="field"><label for="price_max">Top price ($)</label><input id="price_max" type="number" name="price_max" value="${profile.price_max}" min="0" /></div></div><div class="field"><label for="years_experience">Years of experience</label><input id="years_experience" type="number" name="years_experience" value="${profile.years_experience}" min="0" /></div><div class="field"><label for="bio">About / bio</label><textarea id="bio" name="bio" rows="4">${escapeHtml(profile.bio)}</textarea></div><button class="btn" type="submit">Save changes</button></form></div><div class="panel"><h3>Services</h3>${services.map((s) => `<div class="service-row"><div><div class="name">${escapeHtml(s.name)}</div><div class="duration">${s.duration_minutes} min · ${money(s.price)}</div></div><form method="POST" action="/dashboard/pro/services/${s.id}/delete"><input type="hidden" name="_csrf" value="${escapeHtml(ctx.session.csrf_token)}" /><button class="btn ghost small" type="submit">Remove</button></form></div>`).join('') || '<p class="muted">No services yet — add your first below.</p>'}<form method="POST" action="/dashboard/pro/services" style="margin-top:16px; border-top:1px solid var(--paper-line); padding-top:16px;"><input type="hidden" name="_csrf" value="${escapeHtml(ctx.session.csrf_token)}" /><div class="field-row"><div class="field"><label for="name">Service name</label><input id="name" name="name" placeholder="e.g. Skin fade" required /></div><div class="field"><label for="price">Price ($)</label><input id="price" type="number" name="price" min="0" required /></div></div><div class="field"><label for="duration_minutes">Duration (minutes)</label><input id="duration_minutes" type="number" name="duration_minutes" value="30" min="5" /></div><button class="btn secondary" type="submit">Add service</button></form></div></div></div></section>`;
+    const locationStatus = Number.isFinite(Number(profile.latitude)) && Number.isFinite(Number(profile.longitude))
+      ? '<span style="color:#067647;font-weight:700;">Location ready for mileage</span>'
+      : '<span class="muted">Location will be refreshed from this address when you save.</span>';
+    const body = `<section class="section container"><div class="dash-layout">${dashNav('profile')}<div><h1>Profile &amp; services</h1><div class="panel"><h3>Business details</h3><form method="POST" action="/dashboard/pro/profile"><input type="hidden" name="_csrf" value="${escapeHtml(ctx.session.csrf_token)}" /><div class="field"><label for="business_name">Business name</label><input id="business_name" name="business_name" value="${escapeHtml(profile.business_name)}" required /></div>
+    <div style="margin:26px 0 12px; padding-top:20px; border-top:1px solid var(--paper-line);"><h3 style="margin-bottom:4px;">Where do you work?</h3><p class="muted" style="margin:0;">Keep this current so customers get accurate distance results.</p></div>
+    <div class="field"><label for="workplace_name">Barbershop / Salon name</label><input id="workplace_name" name="workplace_name" value="${escapeHtml(profile.workplace_name || '')}" placeholder="e.g. Novo Barbers" required /></div>
+    <div class="field"><label for="street_address">Street address</label><input id="street_address" name="street_address" value="${escapeHtml(profile.street_address || '')}" placeholder="e.g. 399 Perry St" autocomplete="street-address" required /></div>
+    <div class="field"><label for="suite">Suite / Unit <span class="muted">(optional)</span></label><input id="suite" name="suite" value="${escapeHtml(profile.suite || '')}" placeholder="e.g. #100" /></div>
+    <div class="field-row"><div class="field"><label for="city">City</label><input id="city" name="city" value="${escapeHtml(profile.city)}" autocomplete="address-level2" required /></div><div class="field"><label for="state">State</label><input id="state" name="state" value="${escapeHtml(profile.state)}" maxlength="2" autocomplete="address-level1" required /></div></div>
+    <div class="field"><label for="zip_code">ZIP code</label><input id="zip_code" name="zip_code" value="${escapeHtml(profile.zip_code || '')}" inputmode="numeric" autocomplete="postal-code" maxlength="10" required /></div>
+    <div class="helptext" style="margin-top:-6px; margin-bottom:18px;">${locationStatus}</div>
+    <div class="field"><label for="license_number">License #</label><input id="license_number" name="license_number" value="${escapeHtml(profile.license_number || '')}" placeholder="e.g. BAR.1234567" /></div><div class="field"><label for="license_state">License state</label><input id="license_state" name="license_state" value="${escapeHtml(profile.license_state || profile.state || '')}" maxlength="2" placeholder="CO" /></div><div class="field-row"><div class="field"><label for="price_min">Starting price ($)</label><input id="price_min" type="number" name="price_min" value="${profile.price_min}" min="0" /></div><div class="field"><label for="price_max">Top price ($)</label><input id="price_max" type="number" name="price_max" value="${profile.price_max}" min="0" /></div></div><div class="field"><label for="years_experience">Years of experience</label><input id="years_experience" type="number" name="years_experience" value="${profile.years_experience}" min="0" /></div><div class="field"><label for="bio">About / bio</label><textarea id="bio" name="bio" rows="4">${escapeHtml(profile.bio)}</textarea></div><button class="btn" type="submit">Save changes</button></form></div><div class="panel"><h3>Services</h3>${services.map((s) => `<div class="service-row"><div><div class="name">${escapeHtml(s.name)}</div><div class="duration">${s.duration_minutes} min · ${money(s.price)}</div></div><form method="POST" action="/dashboard/pro/services/${s.id}/delete"><input type="hidden" name="_csrf" value="${escapeHtml(ctx.session.csrf_token)}" /><button class="btn ghost small" type="submit">Remove</button></form></div>`).join('') || '<p class="muted">No services yet — add your first below.</p>'}<form method="POST" action="/dashboard/pro/services" style="margin-top:16px; border-top:1px solid var(--paper-line); padding-top:16px;"><input type="hidden" name="_csrf" value="${escapeHtml(ctx.session.csrf_token)}" /><div class="field-row"><div class="field"><label for="name">Service name</label><input id="name" name="name" placeholder="e.g. Skin fade" required /></div><div class="field"><label for="price">Price ($)</label><input id="price" type="number" name="price" min="0" required /></div></div><div class="field"><label for="duration_minutes">Duration (minutes)</label><input id="duration_minutes" type="number" name="duration_minutes" value="30" min="5" /></div><button class="btn secondary" type="submit">Add service</button></form></div></div></div></section>`;
     send(ctx.res, layout({ title: 'Edit profile', currentUser: ctx.currentUser, session: ctx.session, flash: flashFromQuery(ctx.query), body }));
   });
 
   router.post('/dashboard/pro/profile', async (ctx) => {
     const profile = requirePro(ctx); if (!profile) return;
-    const { business_name, city, state, license_number, license_state, price_min, price_max, years_experience, bio } = ctx.body;
-    db.prepare(`UPDATE pro_profiles SET business_name = ?, city = ?, state = ?, license_number = ?, license_state = ?, license_verified = 0, price_min = ?, price_max = ?, years_experience = ?, bio = ? WHERE id = ?`).run(business_name || profile.business_name, (city || profile.city).trim().toLowerCase().replace(/\b\w/g, (letter) => letter.toUpperCase()), state || profile.state, license_number || null, license_state || profile.state, Number(price_min) || 0, Number(price_max) || 0, Number(years_experience) || 0, bio || '', profile.id);
-    redirect(ctx.res, '/dashboard/pro/profile?success=' + encodeURIComponent('Profile updated.'));
+    const { business_name, workplace_name, street_address, suite, city, state, zip_code, license_number, license_state, price_min, price_max, years_experience, bio } = ctx.body;
+
+    const cleanCity = String(city || profile.city).trim().toLowerCase().replace(/\b\w/g, (letter) => letter.toUpperCase());
+    const cleanState = String(state || profile.state).trim().toUpperCase();
+    const cleanWorkplace = String(workplace_name || '').trim();
+    const cleanStreet = String(street_address || '').trim();
+    const cleanSuite = String(suite || '').trim();
+    const cleanZip = String(zip_code || '').trim();
+
+    if (!cleanWorkplace || !cleanStreet || !cleanCity || !cleanState || !cleanZip) {
+      return redirect(ctx.res, '/dashboard/pro/profile?error=' + encodeURIComponent('Please complete your workplace address.'));
+    }
+
+    const addressChanged =
+      cleanWorkplace !== String(profile.workplace_name || '') ||
+      cleanStreet !== String(profile.street_address || '') ||
+      cleanSuite !== String(profile.suite || '') ||
+      cleanCity !== String(profile.city || '') ||
+      cleanState !== String(profile.state || '') ||
+      cleanZip !== String(profile.zip_code || '');
+
+    let latitude = profile.latitude;
+    let longitude = profile.longitude;
+    if (addressChanged || latitude == null || longitude == null) {
+      const coordinates = await geocodeBusinessAddress({ street: cleanStreet, city: cleanCity, state: cleanState, zip: cleanZip });
+      latitude = coordinates ? coordinates.latitude : null;
+      longitude = coordinates ? coordinates.longitude : null;
+    }
+
+    db.prepare(`UPDATE pro_profiles SET business_name = ?, workplace_name = ?, street_address = ?, suite = ?, city = ?, state = ?, zip_code = ?, latitude = ?, longitude = ?, license_number = ?, license_state = ?, license_verified = 0, price_min = ?, price_max = ?, years_experience = ?, bio = ? WHERE id = ?`).run(
+      business_name || profile.business_name,
+      cleanWorkplace,
+      cleanStreet,
+      cleanSuite,
+      cleanCity,
+      cleanState,
+      cleanZip,
+      latitude,
+      longitude,
+      license_number || null,
+      license_state || cleanState,
+      Number(price_min) || 0,
+      Number(price_max) || 0,
+      Number(years_experience) || 0,
+      bio || '',
+      profile.id
+    );
+
+    const message = latitude != null && longitude != null
+      ? 'Profile and workplace location updated.'
+      : 'Profile updated, but we could not map that address yet. Check the address and save again.';
+    redirect(ctx.res, '/dashboard/pro/profile?success=' + encodeURIComponent(message));
   });
 
   router.post('/dashboard/pro/services', async (ctx) => {
