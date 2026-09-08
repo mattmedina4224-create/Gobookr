@@ -91,7 +91,7 @@ module.exports = function (router) {
       </label>`).join('');
 
     const proFields = role === 'pro'
-      ? `<div class="field"><label for="business_name">Business name</label><input id="business_name" name="business_name" required/><div class="helptext">Your personal or professional business name.</div></div>
+      ? `<div class="field" style="margin-bottom:22px;"><label for="business_name">Business name</label><input id="business_name" name="business_name" required/><div class="helptext" style="display:block; position:static; margin-top:8px; line-height:1.4;">Your personal or professional business name.</div></div>
          <div class="field">
            <label>Services you offer</label>
            <div class="helptext" style="margin-bottom:10px;">Select all that apply. You can be listed in more than one category.</div>
