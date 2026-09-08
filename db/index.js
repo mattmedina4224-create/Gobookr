@@ -37,9 +37,11 @@ CREATE TABLE IF NOT EXISTS pro_profiles (
   bio               TEXT NOT NULL DEFAULT '',
   city              TEXT NOT NULL,
   state             TEXT NOT NULL,
-  license_number   TEXT,
-license_state    TEXT,
-license_verified INTEGER NOT NULL DEFAULT 0,
+  license_number    TEXT,
+  license_state     TEXT,
+  license_verified  INTEGER NOT NULL DEFAULT 0,
+  latitude          REAL,
+  longitude         REAL,
   price_min         INTEGER NOT NULL DEFAULT 0,
   price_max         INTEGER NOT NULL DEFAULT 0,
   years_experience  INTEGER NOT NULL DEFAULT 0,
@@ -75,7 +77,7 @@ CREATE TABLE IF NOT EXISTS reviews (
 CREATE TABLE IF NOT EXISTS booking_requests (
   id              INTEGER PRIMARY KEY AUTOINCREMENT,
   customer_id     INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
-  pro_id          INTEGER NOT NULL REFERENCES pro_profiles(id) ON DELETE CASCADE,
+  pro_id           INTEGER NOT NULL REFERENCES pro_profiles(id) ON DELETE CASCADE,
   service_name    TEXT NOT NULL,
   preferred_date  TEXT NOT NULL DEFAULT '',
   message         TEXT NOT NULL DEFAULT '',
@@ -100,9 +102,18 @@ CREATE INDEX IF NOT EXISTS idx_bookings_pro ON booking_requests(pro_id);
 CREATE INDEX IF NOT EXISTS idx_bookings_customer ON booking_requests(customer_id);
 CREATE INDEX IF NOT EXISTS idx_sessions_user ON sessions(user_id);
 `);
-const portfolioColumns = db.prepare('PRAGMA table_info(portfolio_items)').all();
 
+const portfolioColumns = db.prepare('PRAGMA table_info(portfolio_items)').all();
 if (!portfolioColumns.some((column) => column.name === 'image_url')) {
   db.exec("ALTER TABLE portfolio_items ADD COLUMN image_url TEXT NOT NULL DEFAULT ''");
 }
+
+const profileColumns = db.prepare('PRAGMA table_info(pro_profiles)').all();
+if (!profileColumns.some((column) => column.name === 'latitude')) {
+  db.exec('ALTER TABLE pro_profiles ADD COLUMN latitude REAL');
+}
+if (!profileColumns.some((column) => column.name === 'longitude')) {
+  db.exec('ALTER TABLE pro_profiles ADD COLUMN longitude REAL');
+}
+
 module.exports = db;
