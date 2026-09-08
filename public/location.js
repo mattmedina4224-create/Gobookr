@@ -1,6 +1,10 @@
 'use strict';
 
 (() => {
+  // Keep the browser-tab icon in sync with GoBookr's navy calendar brand mark.
+  const favicon = document.querySelector('link[rel="icon"]');
+  if (favicon) favicon.href = '/gobookr-favicon.svg?v=2';
+
   const STORAGE_LAT = 'gobookr_user_lat';
   const STORAGE_LON = 'gobookr_user_lon';
 
