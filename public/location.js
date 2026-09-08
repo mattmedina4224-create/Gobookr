@@ -1,9 +1,13 @@
 'use strict';
 
 (() => {
-  // Keep the browser-tab icon in sync with GoBookr's navy calendar brand mark.
-  const favicon = document.querySelector('link[rel="icon"]');
-  if (favicon) favicon.href = '/gobookr-favicon.svg?v=2';
+  // Force every page, including Find a Pro, to use the navy GoBookr calendar favicon.
+  document.querySelectorAll('link[rel~="icon"]').forEach((link) => link.remove());
+  const favicon = document.createElement('link');
+  favicon.rel = 'icon';
+  favicon.type = 'image/svg+xml';
+  favicon.href = '/gobookr-tab-icon-v3.svg';
+  document.head.appendChild(favicon);
 
   const STORAGE_LAT = 'gobookr_user_lat';
   const STORAGE_LON = 'gobookr_user_lon';
