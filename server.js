@@ -14,6 +14,7 @@ require('./routes/auth')(router);
 require('./routes/pro')(router);
 require('./routes/customer')(router);
 require('./routes/admin')(router);
+require('./routes/legal')(router);
 const PORT = process.env.PORT || 3000;
 const PUBLIC_DIR = path.join(__dirname, 'public');
 
@@ -206,9 +207,6 @@ const server = http.createServer(async (req, res) => {
       } else if (isJson) {
         ctx.body = JSON.parse(raw.toString('utf8') || '{}');
 
-        // Portfolio uploads use JSON + base64 instead of multipart. This is
-        // much more reliable across Safari/iPhone/Mac while preserving the
-        // same validation and route code below.
         if (pathname === '/dashboard/pro/portfolio' && ctx.body.image_data) {
           const filename = String(ctx.body.image_name || 'upload');
           ctx.files.image = {
