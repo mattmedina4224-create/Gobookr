@@ -6,7 +6,7 @@ const crypto = require('node:crypto');
 const db = require('../db');
 const { layout } = require('../lib/layout');
 const { send, redirect, flashFromQuery } = require('../lib/http');
-const { escapeHtml, money, slugCategory, avgRating, stars, formatDate } = require('../lib/util');
+const { escapeHtml, money, slugCategory, avgRating } = require('../lib/util');
 
 function requirePro(ctx) {
   if (!ctx.currentUser || ctx.currentUser.role !== 'pro') {
@@ -56,7 +56,6 @@ async function geocodeBusinessAddress({ street, city, state, zip }) {
 function dashNav(active) {
   const items = [
     { key: 'overview', href: '/dashboard/pro', label: 'Overview' },
-    { key: 'requests', href: '/dashboard/pro/requests', label: 'Booking requests' },
     { key: 'profile', href: '/dashboard/pro/profile', label: 'Profile & services' },
     { key: 'portfolio', href: '/dashboard/pro/portfolio', label: 'Portfolio' },
   ];
@@ -72,28 +71,15 @@ function portfolioTile(item, i, gradientFor) {
 module.exports = function (router) {
   router.get('/dashboard/pro', async (ctx) => {
     const profile = requirePro(ctx); if (!profile) return;
-    const requests = db.prepare('SELECT * FROM booking_requests WHERE pro_id = ? ORDER BY created_at DESC').all(profile.id);
     const reviews = db.prepare('SELECT rating FROM reviews WHERE pro_id = ?').all(profile.id);
-    const pending = requests.filter((r) => r.status === 'pending').length;
-    const body = `<section class="section container"><div class="dash-layout">${dashNav('overview')}<div><h1>Welcome back, ${escapeHtml(ctx.currentUser.name.split(' ')[0])}</h1><div class="stat-cards"><div class="stat-card"><div class="num">${pending}</div><div class="label">Pending requests</div></div><div class="stat-card"><div class="num">${requests.length}</div><div class="label">Total requests</div></div><div class="stat-card"><div class="num">${avgRating(reviews) ?? '—'}</div><div class="label">Average rating</div></div><div class="stat-card"><div class="num">${reviews.length}</div><div class="label">Reviews</div></div></div><div class="panel"><h3>Your public profile</h3><p>${escapeHtml(profile.business_name)} · ${slugCategory(profile.category)} · ${escapeHtml(profile.city)}, ${escapeHtml(profile.state)}</p><a class="btn secondary" href="/pro/${profile.id}">View public profile</a><a class="btn ghost" href="/dashboard/pro/profile">Edit details</a></div><div class="panel"><h3>Recent requests</h3>${requests.slice(0, 3).length ? requests.slice(0, 3).map((r) => requestCard(r, profile, ctx)).join('') : '<p class="muted">No booking requests yet.</p>'}</div></div></div></section>`;
+    const bookingReady = Boolean(profile.booking_url);
+    const body = `<section class="section container"><div class="dash-layout">${dashNav('overview')}<div><h1>Welcome back, ${escapeHtml(ctx.currentUser.name.split(' ')[0])}</h1><div class="stat-cards"><div class="stat-card"><div class="num">${bookingReady ? '✓' : '—'}</div><div class="label">Booking link</div></div><div class="stat-card"><div class="num">${avgRating(reviews) ?? '—'}</div><div class="label">Average rating</div></div><div class="stat-card"><div class="num">${reviews.length}</div><div class="label">Reviews</div></div></div><div class="panel"><h3>Your public profile</h3><p>${escapeHtml(profile.business_name)} · ${slugCategory(profile.category)} · ${escapeHtml(profile.city)}, ${escapeHtml(profile.state)}</p><a class="btn secondary" href="/pro/${profile.id}">View public profile</a><a class="btn ghost" href="/dashboard/pro/profile">Edit details</a></div><div class="panel"><h3>Online booking</h3>${bookingReady ? '<p>Your Book Appointment button is connected to your scheduling site.</p><a class="btn secondary" href="/dashboard/pro/profile">Update booking link</a>' : '<p class="muted">Add your Square, Booksy, Vagaro, Fresha, GlossGenius, or other scheduling link so customers can book directly from your GoBookr profile.</p><a class="btn" href="/dashboard/pro/profile">Add booking link</a>'}</div></div></div></section>`;
     send(ctx.res, layout({ title: 'Pro dashboard', currentUser: ctx.currentUser, session: ctx.session, flash: flashFromQuery(ctx.query), body }));
   });
 
   router.get('/dashboard/pro/requests', async (ctx) => {
     const profile = requirePro(ctx); if (!profile) return;
-    const requests = db.prepare(`SELECT booking_requests.*, users.name AS customer_name FROM booking_requests JOIN users ON users.id = booking_requests.customer_id WHERE pro_id = ? ORDER BY created_at DESC`).all(profile.id);
-    const body = `<section class="section container"><div class="dash-layout">${dashNav('requests')}<div><h1>Booking requests</h1>${requests.length ? requests.map((r) => requestCard(r, profile, ctx, true)).join('') : '<div class="empty-state"><h3>Nothing here yet</h3><p>Booking requests from customers will show up here.</p></div>'}</div></div></section>`;
-    send(ctx.res, layout({ title: 'Booking requests', currentUser: ctx.currentUser, session: ctx.session, flash: flashFromQuery(ctx.query), body }));
-  });
-
-  router.post('/dashboard/pro/requests/:id/status', async (ctx) => {
-    const profile = requirePro(ctx); if (!profile) return;
-    const { status } = ctx.body;
-    if (!['accepted', 'declined', 'completed'].includes(status)) return redirect(ctx.res, '/dashboard/pro/requests?error=' + encodeURIComponent('Invalid status.'));
-    const req_ = db.prepare('SELECT * FROM booking_requests WHERE id = ? AND pro_id = ?').get(ctx.params.id, profile.id);
-    if (!req_) return send(ctx.res, '<h1>404</h1>', 404);
-    db.prepare('UPDATE booking_requests SET status = ? WHERE id = ?').run(status, req_.id);
-    redirect(ctx.res, '/dashboard/pro/requests?success=' + encodeURIComponent('Request updated.'));
+    redirect(ctx.res, '/dashboard/pro/profile?success=' + encodeURIComponent('GoBookr now sends customers directly to your scheduling link.'));
   });
 
   router.get('/dashboard/pro/profile', async (ctx) => {
@@ -215,7 +201,3 @@ module.exports = function (router) {
     db.prepare('DELETE FROM portfolio_items WHERE id = ? AND pro_id = ?').run(ctx.params.id, profile.id); redirect(ctx.res, '/dashboard/pro/portfolio?success=' + encodeURIComponent('Removed.'));
   });
 };
-
-function requestCard(r, profile, ctx, withActions) {
-  return `<div class="request-card"><div class="top"><div><div class="name" style="font-weight:700;">${escapeHtml(r.customer_name || 'Customer')} — ${escapeHtml(r.service_name)}</div><div class="muted">${r.preferred_date ? 'Requested for ' + escapeHtml(r.preferred_date) : 'No date specified'} · ${formatDate(r.created_at)}</div></div><span class="status-pill ${r.status}">${r.status}</span></div>${r.message ? `<p style="margin-top:8px;">"${escapeHtml(r.message)}"</p>` : ''}${withActions && r.status === 'pending' ? `<div class="request-actions"><form method="POST" action="/dashboard/pro/requests/${r.id}/status"><input type="hidden" name="_csrf" value="${escapeHtml(ctx.session.csrf_token)}" /><input type="hidden" name="status" value="accepted" /><button class="btn small" type="submit">Accept</button></form><form method="POST" action="/dashboard/pro/requests/${r.id}/status"><input type="hidden" name="_csrf" value="${escapeHtml(ctx.session.csrf_token)}" /><input type="hidden" name="status" value="declined" /><button class="btn secondary small" type="submit">Decline</button></form></div>` : ''}${withActions && r.status === 'accepted' ? `<div class="request-actions"><form method="POST" action="/dashboard/pro/requests/${r.id}/status"><input type="hidden" name="_csrf" value="${escapeHtml(ctx.session.csrf_token)}" /><input type="hidden" name="status" value="completed" /><button class="btn small" type="submit">Mark completed</button></form></div>` : ''}</div>`;
-}
