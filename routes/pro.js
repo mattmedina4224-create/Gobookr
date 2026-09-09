@@ -18,6 +18,13 @@ function requirePro(ctx) {
   return profile;
 }
 
+function normalizeUrl(value) {
+  const clean = String(value || '').trim();
+  if (!clean) return '';
+  if (/^https?:\/\//i.test(clean)) return clean;
+  return 'https://' + clean;
+}
+
 async function geocodeBusinessAddress({ street, city, state, zip }) {
   const query = [street, city, state, zip, 'USA'].filter(Boolean).join(', ');
   const controller = new AbortController();
@@ -96,6 +103,7 @@ module.exports = function (router) {
       ? '<span style="color:#067647;font-weight:700;">Location ready for mileage</span>'
       : '<span class="muted">Location will be refreshed from this address when you save.</span>';
     const body = `<section class="section container"><div class="dash-layout">${dashNav('profile')}<div><h1>Profile &amp; services</h1><div class="panel"><h3>Business details</h3><form method="POST" action="/dashboard/pro/profile"><input type="hidden" name="_csrf" value="${escapeHtml(ctx.session.csrf_token)}" /><div class="field"><label for="business_name">Business name</label><input id="business_name" name="business_name" value="${escapeHtml(profile.business_name)}" required /></div>
+    <div class="field"><label for="booking_url">Booking / scheduling link</label><input id="booking_url" name="booking_url" type="url" value="${escapeHtml(profile.booking_url || '')}" placeholder="https://square.site/book/..." /><div class="helptext">Paste the link customers use to book with you on Square, Booksy, Vagaro, Fresha, GlossGenius, or another scheduling system.</div></div>
     <div style="margin:26px 0 12px; padding-top:20px; border-top:1px solid var(--paper-line);"><h3 style="margin-bottom:4px;">Where do you work?</h3><p class="muted" style="margin:0;">Keep this current so customers get accurate distance results.</p></div>
     <div class="field"><label for="workplace_name">Barbershop / Salon name</label><input id="workplace_name" name="workplace_name" value="${escapeHtml(profile.workplace_name || '')}" placeholder="e.g. Novo Barbers" required /></div>
     <div class="field"><label for="street_address">Street address</label><input id="street_address" name="street_address" value="${escapeHtml(profile.street_address || '')}" placeholder="e.g. 399 Perry St" autocomplete="street-address" required /></div>
@@ -109,7 +117,7 @@ module.exports = function (router) {
 
   router.post('/dashboard/pro/profile', async (ctx) => {
     const profile = requirePro(ctx); if (!profile) return;
-    const { business_name, workplace_name, street_address, suite, city, state, zip_code, license_number, license_state, price_min, price_max, years_experience, bio } = ctx.body;
+    const { business_name, booking_url, workplace_name, street_address, suite, city, state, zip_code, license_number, license_state, price_min, price_max, years_experience, bio } = ctx.body;
 
     const cleanCity = String(city || profile.city).trim().toLowerCase().replace(/\b\w/g, (letter) => letter.toUpperCase());
     const cleanState = String(state || profile.state).trim().toUpperCase();
@@ -117,6 +125,7 @@ module.exports = function (router) {
     const cleanStreet = String(street_address || '').trim();
     const cleanSuite = String(suite || '').trim();
     const cleanZip = String(zip_code || '').trim();
+    const cleanBookingUrl = normalizeUrl(booking_url);
 
     if (!cleanWorkplace || !cleanStreet || !cleanCity || !cleanState || !cleanZip) {
       return redirect(ctx.res, '/dashboard/pro/profile?error=' + encodeURIComponent('Please complete your workplace address.'));
@@ -138,8 +147,9 @@ module.exports = function (router) {
       longitude = coordinates ? coordinates.longitude : null;
     }
 
-    db.prepare(`UPDATE pro_profiles SET business_name = ?, workplace_name = ?, street_address = ?, suite = ?, city = ?, state = ?, zip_code = ?, latitude = ?, longitude = ?, license_number = ?, license_state = ?, license_verified = 0, price_min = ?, price_max = ?, years_experience = ?, bio = ? WHERE id = ?`).run(
+    db.prepare(`UPDATE pro_profiles SET business_name = ?, booking_url = ?, workplace_name = ?, street_address = ?, suite = ?, city = ?, state = ?, zip_code = ?, latitude = ?, longitude = ?, license_number = ?, license_state = ?, license_verified = 0, price_min = ?, price_max = ?, years_experience = ?, bio = ? WHERE id = ?`).run(
       business_name || profile.business_name,
+      cleanBookingUrl,
       cleanWorkplace,
       cleanStreet,
       cleanSuite,
