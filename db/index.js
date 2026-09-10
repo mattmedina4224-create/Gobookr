@@ -40,6 +40,7 @@ CREATE TABLE IF NOT EXISTS subscriptions (
  stripe_price_id TEXT NOT NULL DEFAULT '',
  current_period_end TEXT,
  cancel_at_period_end INTEGER NOT NULL DEFAULT 0,
+ past_due_since TEXT,
  created_at TEXT NOT NULL DEFAULT (datetime('now')),
  updated_at TEXT NOT NULL DEFAULT (datetime('now'))
 );
@@ -63,6 +64,7 @@ const profileColumns=db.prepare('PRAGMA table_info(pro_profiles)').all(); const 
 addProfileColumn('latitude','ALTER TABLE pro_profiles ADD COLUMN latitude REAL'); addProfileColumn('longitude','ALTER TABLE pro_profiles ADD COLUMN longitude REAL');
 addProfileColumn('workplace_name',"ALTER TABLE pro_profiles ADD COLUMN workplace_name TEXT NOT NULL DEFAULT ''"); addProfileColumn('street_address',"ALTER TABLE pro_profiles ADD COLUMN street_address TEXT NOT NULL DEFAULT ''"); addProfileColumn('suite',"ALTER TABLE pro_profiles ADD COLUMN suite TEXT NOT NULL DEFAULT ''"); addProfileColumn('zip_code',"ALTER TABLE pro_profiles ADD COLUMN zip_code TEXT NOT NULL DEFAULT ''");
 addProfileColumn('instagram_url',"ALTER TABLE pro_profiles ADD COLUMN instagram_url TEXT NOT NULL DEFAULT ''"); addProfileColumn('tiktok_url',"ALTER TABLE pro_profiles ADD COLUMN tiktok_url TEXT NOT NULL DEFAULT ''"); addProfileColumn('facebook_url',"ALTER TABLE pro_profiles ADD COLUMN facebook_url TEXT NOT NULL DEFAULT ''"); addProfileColumn('website_url',"ALTER TABLE pro_profiles ADD COLUMN website_url TEXT NOT NULL DEFAULT ''"); addProfileColumn('booking_url',"ALTER TABLE pro_profiles ADD COLUMN booking_url TEXT NOT NULL DEFAULT ''"); addProfileColumn('onboarding_completed','ALTER TABLE pro_profiles ADD COLUMN onboarding_completed INTEGER NOT NULL DEFAULT 0');
+const subscriptionColumns=db.prepare('PRAGMA table_info(subscriptions)').all(); if(!subscriptionColumns.some(c=>c.name==='past_due_since')) db.exec('ALTER TABLE subscriptions ADD COLUMN past_due_since TEXT');
 
 db.exec(`
 INSERT OR IGNORE INTO pro_categories (pro_id, category)
