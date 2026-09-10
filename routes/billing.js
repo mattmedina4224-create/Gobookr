@@ -4,6 +4,7 @@ const db = require('../db');
 const { layout } = require('../lib/layout');
 const { send, redirect, flashFromQuery } = require('../lib/http');
 const { escapeHtml } = require('../lib/util');
+const { graceDaysRemaining } = require('../lib/subscription');
 const {
   stripeConfigured,
   webhookConfigured,
@@ -49,18 +50,10 @@ function json(res, status, value) {
 
 function findSubscriptionForStripeObject(object) {
   const metadataProId = Number(object && object.metadata && object.metadata.pro_id);
-  if (Number.isInteger(metadataProId) && metadataProId > 0) {
-    return db.prepare('SELECT * FROM subscriptions WHERE pro_id = ?').get(metadataProId);
-  }
-  if (object && object.id && String(object.id).startsWith('sub_')) {
-    return db.prepare('SELECT * FROM subscriptions WHERE stripe_subscription_id = ?').get(object.id);
-  }
-  if (object && object.subscription) {
-    return db.prepare('SELECT * FROM subscriptions WHERE stripe_subscription_id = ?').get(object.subscription);
-  }
-  if (object && object.customer) {
-    return db.prepare('SELECT * FROM subscriptions WHERE stripe_customer_id = ?').get(object.customer);
-  }
+  if (Number.isInteger(metadataProId) && metadataProId > 0) return db.prepare('SELECT * FROM subscriptions WHERE pro_id = ?').get(metadataProId);
+  if (object && object.id && String(object.id).startsWith('sub_')) return db.prepare('SELECT * FROM subscriptions WHERE stripe_subscription_id = ?').get(object.id);
+  if (object && object.subscription) return db.prepare('SELECT * FROM subscriptions WHERE stripe_subscription_id = ?').get(object.subscription);
+  if (object && object.customer) return db.prepare('SELECT * FROM subscriptions WHERE stripe_customer_id = ?').get(object.customer);
   return null;
 }
 
@@ -76,9 +69,11 @@ module.exports = function (router) {
     const cancelPending = Boolean(subscription.cancel_at_period_end);
     const configured = stripeConfigured();
     const hasStripeCustomer = Boolean(subscription.stripe_customer_id);
+    const graceRemaining = graceDaysRemaining(subscription);
 
     let notice = '';
-    if (isPastDue) notice = `<div class="alert error" style="margin-bottom:18px;"><strong>We couldn't process your payment.</strong> Your profile can remain active during GoBookr's 7-day payment grace period. Update your payment method to keep your profile active.</div>`;
+    if (isPastDue && graceRemaining > 0) notice = `<div class="alert error" style="margin-bottom:18px;"><strong>We couldn't process your payment.</strong> You have ${graceRemaining} day${graceRemaining === 1 ? '' : 's'} left in your payment grace period. Update your payment method to keep your profile visible.</div>`;
+    else if (isPastDue) notice = `<div class="alert error" style="margin-bottom:18px;"><strong>Payment is still overdue.</strong> Your 7-day grace period has ended, so your public profile is temporarily hidden. Update your payment method to restore it.</div>`;
     else if (cancelPending) notice = `<div class="alert" style="margin-bottom:18px;"><strong>Cancellation scheduled.</strong> Your membership remains available through the end of your current billing period.</div>`;
 
     const trialText = isTrial ? `<p style="margin:4px 0 0;"><strong>${remaining} day${remaining === 1 ? '' : 's'} remaining</strong> in your free trial.</p>` : '';
@@ -95,7 +90,7 @@ module.exports = function (router) {
       ? `<p class="helptext">Cancellation, reactivation, payment-method updates, and invoices are handled securely through Stripe's customer portal.</p>`
       : `<p class="helptext">Subscription management becomes available after Stripe checkout is connected.</p>`;
 
-    const body = `<section class="section container"><div class="dash-layout"><nav class="dash-nav"><a href="/dashboard/pro">Overview</a><a href="/dashboard/pro/profile">Profile &amp; services</a><a href="/dashboard/pro/portfolio">Portfolio</a><a class="active" href="/dashboard/pro/billing">Billing</a></nav><div><h1>Billing &amp; subscription</h1>${notice}<div class="panel"><div style="display:flex;justify-content:space-between;align-items:flex-start;gap:20px;flex-wrap:wrap;"><div><p class="muted" style="margin:0 0 4px;">GoBookr Professional</p><h2 style="margin:0;">$15 <span class="muted" style="font-size:16px;font-weight:500;">/ month</span></h2>${trialText}</div><span class="badge category">${escapeHtml(statusLabel(subscription.status))}</span></div><div style="border-top:1px solid var(--paper-line);margin-top:22px;padding-top:18px;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:18px;"><div><div class="muted" style="font-size:13px;">${billingLabel}</div><strong>${prettyDate(isTrial ? subscription.trial_ends_at : subscription.current_period_end)}</strong></div><div><div class="muted" style="font-size:13px;">Renewal price</div><strong>$15/month</strong></div><div><div class="muted" style="font-size:13px;">Auto-renewal</div><strong>${cancelPending ? 'Off' : 'On'}</strong></div></div></div><div class="panel"><h3>Payment method</h3><p class="muted">Payments are securely processed by Stripe. Professionals can use major cards and, when available on their device and browser, Apple Pay. GoBookr never stores raw card or Apple Pay payment details.</p>${paymentButton}</div><div class="panel"><h3>Manage subscription</h3><p>Your membership renews monthly after the 30-day free trial unless canceled. Failed payments receive a 7-day grace period before an unpaid professional profile can be temporarily hidden.</p>${manageArea}</div><p class="helptext">${configured ? 'Stripe test-mode billing is configured in code. Use test keys until the full billing flow is verified.' : 'No payment will be charged until Stripe environment keys are configured and tested.'}</p></div></div></section>`;
+    const body = `<section class="section container"><div class="dash-layout"><nav class="dash-nav"><a href="/dashboard/pro">Overview</a><a href="/dashboard/pro/profile">Profile &amp; services</a><a href="/dashboard/pro/portfolio">Portfolio</a><a class="active" href="/dashboard/pro/billing">Billing</a></nav><div><h1>Billing &amp; subscription</h1>${notice}<div class="panel"><div style="display:flex;justify-content:space-between;align-items:flex-start;gap:20px;flex-wrap:wrap;"><div><p class="muted" style="margin:0 0 4px;">GoBookr Professional</p><h2 style="margin:0;">$15 <span class="muted" style="font-size:16px;font-weight:500;">/ month</span></h2>${trialText}</div><span class="badge category">${escapeHtml(statusLabel(subscription.status))}</span></div><div style="border-top:1px solid var(--paper-line);margin-top:22px;padding-top:18px;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:18px;"><div><div class="muted" style="font-size:13px;">${billingLabel}</div><strong>${prettyDate(isTrial ? subscription.trial_ends_at : subscription.current_period_end)}</strong></div><div><div class="muted" style="font-size:13px;">Renewal price</div><strong>$15/month</strong></div><div><div class="muted" style="font-size:13px;">Auto-renewal</div><strong>${cancelPending ? 'Off' : 'On'}</strong></div></div></div><div class="panel"><h3>Payment method</h3><p class="muted">Payments are securely processed by Stripe. Professionals can use major cards and, when available on their device and browser, Apple Pay. GoBookr never stores raw card or Apple Pay payment details.</p>${paymentButton}</div><div class="panel"><h3>Manage subscription</h3><p>Your membership renews monthly after the 30-day free trial unless canceled. Failed payments receive a 7-day grace period before an unpaid professional profile is temporarily hidden.</p>${manageArea}</div><p class="helptext">${configured ? 'Stripe test-mode billing is configured in code. Use test keys until the full billing flow is verified.' : 'No payment will be charged until Stripe environment keys are configured and tested.'}</p></div></div></section>`;
     send(ctx.res, layout({ title: 'Billing & subscription', currentUser: ctx.currentUser, session: ctx.session, flash: flashFromQuery(ctx.query), body }));
   });
 
@@ -139,29 +134,29 @@ module.exports = function (router) {
     try {
       if (event.type === 'checkout.session.completed') {
         const proId = Number(object.metadata && object.metadata.pro_id);
-        if (Number.isInteger(proId) && proId > 0) {
-          db.prepare(`UPDATE subscriptions SET stripe_customer_id = ?, stripe_subscription_id = ?, updated_at = datetime('now') WHERE pro_id = ?`).run(String(object.customer || ''), String(object.subscription || ''), proId);
-        }
+        if (Number.isInteger(proId) && proId > 0) db.prepare(`UPDATE subscriptions SET stripe_customer_id = ?, stripe_subscription_id = ?, updated_at = datetime('now') WHERE pro_id = ?`).run(String(object.customer || ''), String(object.subscription || ''), proId);
       } else if (event.type === 'customer.subscription.created' || event.type === 'customer.subscription.updated' || event.type === 'customer.subscription.deleted') {
         const local = findSubscriptionForStripeObject(object);
         if (local) {
           const status = event.type === 'customer.subscription.deleted' ? 'canceled' : normalizedSubscriptionStatus(object.status);
-          db.prepare(`UPDATE subscriptions SET status = ?, stripe_customer_id = ?, stripe_subscription_id = ?, stripe_price_id = ?, current_period_end = ?, cancel_at_period_end = ?, updated_at = datetime('now') WHERE id = ?`).run(
+          const pastDueSince = ['past_due', 'unpaid'].includes(status) ? (local.past_due_since || new Date().toISOString().slice(0, 19).replace('T', ' ')) : null;
+          db.prepare(`UPDATE subscriptions SET status = ?, stripe_customer_id = ?, stripe_subscription_id = ?, stripe_price_id = ?, current_period_end = ?, cancel_at_period_end = ?, past_due_since = ?, updated_at = datetime('now') WHERE id = ?`).run(
             status,
             String(object.customer || local.stripe_customer_id || ''),
             String(object.id || local.stripe_subscription_id || ''),
             String((object.items && object.items.data && object.items.data[0] && object.items.data[0].price && object.items.data[0].price.id) || local.stripe_price_id || ''),
             unixToSqlite(object.current_period_end),
             object.cancel_at_period_end ? 1 : 0,
+            pastDueSince,
             local.id
           );
         }
       } else if (event.type === 'invoice.payment_failed') {
         const local = findSubscriptionForStripeObject(object);
-        if (local) db.prepare(`UPDATE subscriptions SET status = 'past_due', updated_at = datetime('now') WHERE id = ?`).run(local.id);
+        if (local) db.prepare(`UPDATE subscriptions SET status = 'past_due', past_due_since = COALESCE(past_due_since, datetime('now')), updated_at = datetime('now') WHERE id = ?`).run(local.id);
       } else if (event.type === 'invoice.paid') {
         const local = findSubscriptionForStripeObject(object);
-        if (local && local.status !== 'canceled') db.prepare(`UPDATE subscriptions SET status = 'active', updated_at = datetime('now') WHERE id = ?`).run(local.id);
+        if (local && local.status !== 'canceled') db.prepare(`UPDATE subscriptions SET status = 'active', past_due_since = NULL, updated_at = datetime('now') WHERE id = ?`).run(local.id);
       }
       json(ctx.res, 200, { received: true });
     } catch (err) {
