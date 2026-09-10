@@ -4,6 +4,7 @@ const db = require('../db');
 const { layout } = require('../lib/layout');
 const { send, flashFromQuery } = require('../lib/http');
 const { escapeHtml, money, slugCategory, avgRating, stars } = require('../lib/util');
+const { isProPubliclyVisible } = require('../lib/subscription');
 
 const CATEGORIES = [
   { value: '', label: 'All services' },
@@ -19,6 +20,7 @@ function categoriesForPro(proId) {
 }
 
 function proWithStats(pro) {
+  if (!isProPubliclyVisible(pro.id)) return null;
   const reviews = db.prepare('SELECT rating FROM reviews WHERE pro_id = ?').all(pro.id);
   const services = db.prepare('SELECT * FROM services WHERE pro_id = ? ORDER BY price ASC').all(pro.id);
   const categories = categoriesForPro(pro.id);
@@ -48,7 +50,7 @@ function proCard(pro) {
 
 module.exports = function (router) {
   router.get('/', async (ctx) => {
-    const featured = db.prepare('SELECT * FROM pro_profiles ORDER BY id DESC LIMIT 6').all().map(proWithStats).sort((a, b) => (b.rating || 0) - (a.rating || 0));
+    const featured = db.prepare('SELECT * FROM pro_profiles ORDER BY id DESC LIMIT 20').all().map(proWithStats).filter(Boolean).sort((a, b) => (b.rating || 0) - (a.rating || 0)).slice(0, 6);
     const body = `<section class="hero"><div class="container"><h1>Find a local professional you can actually trust.</h1><p class="lede">Discover barbers, hairstylists, colorists, nail technicians, and more — then book directly with the professional.</p><div class="search-card"><form method="GET" action="/search"><select name="category" aria-label="Service">${CATEGORIES.map((c) => `<option value="${c.value}">${c.label}</option>`).join('')}</select><input type="text" name="city" placeholder="City or ZIP" /><input type="text" name="q" placeholder="Name or business" /><button class="btn" type="submit">Search</button></form></div><div class="category-pills"><a href="/search?category=barber">Barbers</a><a href="/search?category=stylist">Hairstylists</a><a href="/search?category=colorist">Colorists</a><a href="/search?category=nail_technician">Nail Technicians</a><a href="/search">Browse everyone</a></div></div></section><section class="section container"><div class="section-head"><div><h2>Top-rated professionals</h2><p class="muted" style="margin:4px 0 0;">Explore local work, services, reviews, and booking options.</p></div><a class="btn secondary small" href="/search">See all</a></div><div class="pro-grid">${featured.map(proCard).join('') || '<p class="muted">No professionals listed yet.</p>'}</div></section><section class="section container"><div class="card" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;"><div><h2 style="margin-bottom:4px;">Are you a personal-service professional?</h2><p style="margin:0;">Show your work, build trust, and send new clients straight to your booking page.</p></div><a class="btn" href="/signup?role=pro">Start 30 days free</a></div></section>`;
     send(ctx.res, layout({ title: 'Find trusted local pros', currentUser: ctx.currentUser, session: ctx.session, flash: flashFromQuery(ctx.query), body }));
   });
@@ -60,7 +62,7 @@ module.exports = function (router) {
     if (city) { sql += ' AND (city LIKE ? OR state LIKE ? OR zip_code LIKE ?)'; args.push(`%${city}%`, `%${city}%`, `%${city}%`); }
     if (q) { sql += ' AND (business_name LIKE ? OR workplace_name LIKE ?)'; args.push(`%${q}%`, `%${q}%`); }
     sql += ' ORDER BY id DESC';
-    let results = db.prepare(sql).all(...args).map(proWithStats);
+    let results = db.prepare(sql).all(...args).map(proWithStats).filter(Boolean);
     if (minRating) { const min = Number(minRating); results = results.filter((p) => (p.rating || 0) >= min); }
     const filterLink = (overrides) => { const merged = { category, city, q, minRating, ...overrides }; const qs = new URLSearchParams(Object.entries(merged).filter(([, v]) => v)); return `/search?${qs.toString()}`; };
     const heading = `${category ? slugCategory(category) + 's' : 'Professionals'}${city ? ' near ' + escapeHtml(city) : ' near you'}`;
@@ -80,12 +82,14 @@ module.exports = function (router) {
   router.get('/pro/:id', async (ctx) => {
     const pro = db.prepare('SELECT * FROM pro_profiles WHERE id = ?').get(ctx.params.id);
     if (!pro) return send(ctx.res, '<h1>404 — pro not found</h1>', 404);
+    const ownProfile = ctx.currentUser && ctx.currentUser.role === 'pro' && db.prepare('SELECT id FROM pro_profiles WHERE user_id = ?').get(ctx.currentUser.id)?.id === pro.id;
+    if (!ownProfile && !isProPubliclyVisible(pro.id)) return send(ctx.res, '<h1>404 — pro not found</h1>', 404);
     const categories = categoriesForPro(pro.id); const displayCategories = categories.length ? categories : [pro.category];
     const services = db.prepare('SELECT * FROM services WHERE pro_id = ? ORDER BY price ASC').all(pro.id);
     const portfolio = db.prepare('SELECT * FROM portfolio_items WHERE pro_id = ? ORDER BY id DESC').all(pro.id);
     const reviews = db.prepare(`SELECT reviews.*, users.name AS customer_name FROM reviews JOIN users ON users.id = reviews.customer_id WHERE reviews.pro_id = ? ORDER BY reviews.created_at DESC`).all(pro.id);
     const rating = avgRating(reviews);
-    const isOwnProfile = ctx.currentUser && ctx.currentUser.role === 'pro' && db.prepare('SELECT id FROM pro_profiles WHERE user_id = ?').get(ctx.currentUser.id)?.id === pro.id;
+    const isOwnProfile = Boolean(ownProfile);
     let ctaHtml;
     if (isOwnProfile) ctaHtml = `<a class="btn secondary block" href="/dashboard/pro/profile">Manage your profile</a>`;
     else if (pro.booking_url) ctaHtml = `<a class="btn block profile-book-btn" href="${escapeHtml(pro.booking_url)}" target="_blank" rel="noopener noreferrer">Book Appointment <span aria-hidden="true">↗</span></a><p class="muted" style="font-size:12px; margin:8px 0 0; text-align:center;">You'll book securely on this professional's scheduling site.</p>`;
