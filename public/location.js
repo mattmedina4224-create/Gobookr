@@ -9,24 +9,6 @@
     document.head.appendChild(discoveryStyles);
   }
 
-  // Force every page to use a fresh GoBookr calendar favicon URL.
-  document.querySelectorAll('link[rel~="icon"], link[rel="shortcut icon"], link[rel="apple-touch-icon"]').forEach((link) => link.remove());
-  const favicon = document.createElement('link');
-  favicon.rel = 'icon';
-  favicon.type = 'image/svg+xml';
-  favicon.href = '/gobookr-tab-v7.svg?v=20260910';
-  document.head.appendChild(favicon);
-
-  const shortcut = document.createElement('link');
-  shortcut.rel = 'shortcut icon';
-  shortcut.href = '/gobookr-tab-v7.svg?v=20260910';
-  document.head.appendChild(shortcut);
-
-  const appleTouch = document.createElement('link');
-  appleTouch.rel = 'apple-touch-icon';
-  appleTouch.href = '/gobookr-tab-v7.svg?v=20260910';
-  document.head.appendChild(appleTouch);
-
   const STORAGE_LAT = 'gobookr_user_lat';
   const STORAGE_LON = 'gobookr_user_lon';
 
@@ -35,84 +17,78 @@
     const earthRadiusMiles = 3958.7613;
     const dLat = toRadians(lat2 - lat1);
     const dLon = toRadians(lon2 - lon1);
-    const a = Math.sin(dLat / 2) * Math.sin(dLat / 2) + Math.cos(toRadians(lat1)) * Math.cos(toRadians(lat2)) * Math.sin(dLon / 2) * Math.sin(dLon / 2);
+    const a = Math.sin(dLat / 2) ** 2 + Math.cos(toRadians(lat1)) * Math.cos(toRadians(lat2)) * Math.sin(dLon / 2) ** 2;
     return earthRadiusMiles * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
   }
-  function distanceLabel(miles) {
-    if (miles < 0.1) return 'Less than 0.1 miles away';
-    if (miles < 10) return miles.toFixed(1) + ' miles away';
-    return Math.round(miles) + ' miles away';
-  }
-  function setStoredLocation(lat, lon) {
-    try { sessionStorage.setItem(STORAGE_LAT, String(lat)); sessionStorage.setItem(STORAGE_LON, String(lon)); } catch (_) {}
-  }
-  function getStoredLocation() {
+
+  function storedLocation() {
     try {
       const lat = Number(sessionStorage.getItem(STORAGE_LAT));
       const lon = Number(sessionStorage.getItem(STORAGE_LON));
-      if (Number.isFinite(lat) && Number.isFinite(lon)) return { lat, lon };
-    } catch (_) {}
-    return null;
+      return Number.isFinite(lat) && Number.isFinite(lon) && sessionStorage.getItem(STORAGE_LAT) !== null ? { lat, lon } : null;
+    } catch (_) { return null; }
   }
-  function updateDistances(userLat, userLon) {
-    const cards = Array.from(document.querySelectorAll('.pro-card[data-lat][data-lon]'));
+
+  function saveLocation(lat, lon) {
+    try { sessionStorage.setItem(STORAGE_LAT, String(lat)); sessionStorage.setItem(STORAGE_LON, String(lon)); } catch (_) {}
+  }
+
+  function updateDistances(lat, lon) {
+    const cards = Array.from(document.querySelectorAll('[data-lat][data-lon]'));
     cards.forEach((card) => {
-      const proLat = Number(card.dataset.lat); const proLon = Number(card.dataset.lon);
-      if (!Number.isFinite(proLat) || !Number.isFinite(proLon)) return;
-      const miles = milesBetween(userLat, userLon, proLat, proLon);
-      card.dataset.distanceMiles = String(miles);
-      const label = card.querySelector('.distance-away');
-      if (label) label.textContent = distanceLabel(miles);
+      const targetLat = Number(card.dataset.lat);
+      const targetLon = Number(card.dataset.lon);
+      if (!Number.isFinite(targetLat) || !Number.isFinite(targetLon)) return;
+      const miles = milesBetween(lat, lon, targetLat, targetLon);
+      const target = card.querySelector('.distance-away, .profile-distance');
+      if (target) target.textContent = miles.toFixed(1) + ' miles away';
     });
-    Array.from(document.querySelectorAll('.pro-grid')).forEach((grid) => {
-      const locatedCards = Array.from(grid.children).filter((el) => el.matches && el.matches('.pro-card[data-distance-miles]'));
-      locatedCards.sort((a, b) => Number(a.dataset.distanceMiles) - Number(b.dataset.distanceMiles)).forEach((card) => grid.appendChild(card));
+
+    const cardParents = new Map();
+    cards.forEach((card) => {
+      if (!card.classList.contains('pro-card') || !card.parentElement) return;
+      if (!cardParents.has(card.parentElement)) cardParents.set(card.parentElement, []);
+      cardParents.get(card.parentElement).push(card);
     });
-    const profile = document.querySelector('.profile-head[data-lat][data-lon]');
-    if (profile) {
-      const proLat = Number(profile.dataset.lat); const proLon = Number(profile.dataset.lon); const label = profile.querySelector('.profile-distance');
-      if (label && Number.isFinite(proLat) && Number.isFinite(proLon)) label.textContent = distanceLabel(milesBetween(userLat, userLon, proLat, proLon));
-    }
+    cardParents.forEach((group, parent) => {
+      group.sort((a, b) => milesBetween(lat, lon, Number(a.dataset.lat), Number(a.dataset.lon)) - milesBetween(lat, lon, Number(b.dataset.lat), Number(b.dataset.lon)));
+      group.forEach((card) => parent.appendChild(card));
+    });
   }
-  function requestCustomerLocation() {
-    const needsDistance = document.querySelector('.pro-card[data-lat][data-lon], .profile-head[data-lat][data-lon]');
-    if (!needsDistance || !navigator.geolocation) return;
-    const stored = getStoredLocation();
-    if (stored) { updateDistances(stored.lat, stored.lon); return; }
+
+  function requestLocation(onSuccess, onError) {
+    if (!navigator.geolocation) return onError && onError('Location is not supported on this device.');
     navigator.geolocation.getCurrentPosition((position) => {
-      const lat = position.coords.latitude; const lon = position.coords.longitude;
-      setStoredLocation(lat, lon); updateDistances(lat, lon);
-    }, () => {}, { enableHighAccuracy: false, timeout: 10000, maximumAge: 300000 });
+      const lat = position.coords.latitude;
+      const lon = position.coords.longitude;
+      saveLocation(lat, lon);
+      updateDistances(lat, lon);
+      onSuccess && onSuccess(lat, lon);
+    }, () => onError && onError('Could not get your location. Try again or enter your city or ZIP.'), { enableHighAccuracy: true, timeout: 10000, maximumAge: 300000 });
   }
-  function setupBusinessLocationButton() {
-    if (window.location.pathname !== '/dashboard/pro/profile') return;
-    const profileForm = document.querySelector('form[action="/dashboard/pro/profile"]');
-    if (!profileForm || !navigator.geolocation) return;
-    const csrf = profileForm.querySelector('input[name="_csrf"]');
-    const block = document.createElement('div');
-    block.style.margin = '4px 0 18px'; block.style.padding = '14px'; block.style.border = '1px solid var(--paper-line)'; block.style.borderRadius = '12px'; block.style.background = 'var(--paper-soft)';
-    const title = document.createElement('div'); title.style.fontWeight = '800'; title.textContent = 'Business GPS location';
-    const help = document.createElement('p'); help.style.margin = '4px 0 10px'; help.style.fontSize = '0.9rem'; help.textContent = 'Set this while you are physically at your shop. Customers can then see how many miles away you are.';
-    const button = document.createElement('button'); button.type = 'button'; button.className = 'btn secondary small'; button.textContent = 'Set business location';
-    const status = document.createElement('div'); status.className = 'helptext'; status.style.marginTop = '8px';
-    block.appendChild(title); block.appendChild(help); block.appendChild(button); block.appendChild(status);
-    const firstField = profileForm.querySelector('.field'); if (firstField) profileForm.insertBefore(block, firstField); else profileForm.prepend(block);
-    button.addEventListener('click', () => {
-      button.disabled = true; button.textContent = 'Finding location...'; status.textContent = 'Allow location access when your browser asks.';
-      navigator.geolocation.getCurrentPosition(async (position) => {
-        try {
-          const body = new URLSearchParams({ _csrf: csrf ? csrf.value : '', latitude: String(position.coords.latitude), longitude: String(position.coords.longitude) });
-          const response = await fetch('/dashboard/pro/location', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, credentials: 'same-origin', body: body.toString() });
-          if (!response.ok) throw new Error('Could not save this location.');
-          status.textContent = 'Business location saved. Customers can now see their distance from you.'; status.style.color = 'var(--ok)'; button.textContent = 'Location saved';
-        } catch (err) {
-          status.textContent = err && err.message ? err.message : 'Could not save this location.'; status.style.color = 'var(--danger)'; button.disabled = false; button.textContent = 'Set business location';
+
+  const existing = storedLocation();
+  if (existing) updateDistances(existing.lat, existing.lon);
+  else if (document.querySelector('.distance-away, .profile-distance')) requestLocation();
+
+  document.addEventListener('click', (event) => {
+    const button = event.target.closest('[data-use-location]');
+    if (!button) return;
+    event.preventDefault();
+    const cityInput = document.querySelector('form[action="/search"] input[name="city"]');
+    const status = document.querySelector('[data-location-status]');
+    button.disabled = true;
+    if (status) status.textContent = 'Finding your location...';
+    requestLocation(async (lat, lon) => {
+      try {
+        const response = await fetch('https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=' + encodeURIComponent(lat) + '&longitude=' + encodeURIComponent(lon) + '&localityLanguage=en');
+        const place = await response.json();
+        const city = place.city || place.locality || place.principalSubdivision || '';
+        if (cityInput && city) {
+          cityInput.value = city;
+          cityInput.form.submit();
         }
-      }, (err) => {
-        status.textContent = err && err.code === 1 ? 'Location permission was denied.' : 'Could not get your current location.'; status.style.color = 'var(--danger)'; button.disabled = false; button.textContent = 'Set business location';
-      }, { enableHighAccuracy: true, timeout: 15000, maximumAge: 0 });
-    });
-  }
-  setupBusinessLocationButton();
-  requestCustomerLocation();
+      } catch (_) { if (status) status.textContent = 'Could not identify your city.'; button.disabled = false; }
+    }, (message) => { if (status) status.textContent = message; button.disabled = false; });
+  });
 })();
