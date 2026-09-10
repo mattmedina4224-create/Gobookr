@@ -21,6 +21,7 @@ function requirePro(ctx) {
 function normalizeUrl(value, allowedHosts = []) {
   const clean = String(value || '').trim();
   if (!clean) return '';
+  if (clean.length > 2048) return null;
   const candidate = /^https?:\/\//i.test(clean) ? clean : `https://${clean}`;
   try {
     const parsed = new URL(candidate);
@@ -28,6 +29,8 @@ function normalizeUrl(value, allowedHosts = []) {
     const hostname = parsed.hostname.toLowerCase().replace(/^www\./, '');
     if (!hostname || !hostname.includes('.')) return null;
     if (allowedHosts.length && !allowedHosts.some((host) => hostname === host || hostname.endsWith('.' + host))) return null;
+    parsed.username = '';
+    parsed.password = '';
     return parsed.toString();
   } catch {
     return null;
@@ -99,13 +102,13 @@ module.exports = function (router) {
 
         <div class="panel" id="social-links">
           <h3>Social links</h3>
-          <p class="muted">Optional, but helpful. These links can be shown on your public profile so customers can see more of your work.</p>
+          <p class="muted">Optional, but helpful. These links appear on your public profile so customers can see more of your work.</p>
           <form method="POST" action="/dashboard/pro/onboarding/socials">
             <input type="hidden" name="_csrf" value="${escapeHtml(ctx.session.csrf_token)}" />
-            <div class="field"><label for="instagram_url">Instagram</label><input id="instagram_url" name="instagram_url" value="${escapeHtml(profile.instagram_url || '')}" placeholder="instagram.com/yourname" /></div>
-            <div class="field"><label for="tiktok_url">TikTok</label><input id="tiktok_url" name="tiktok_url" value="${escapeHtml(profile.tiktok_url || '')}" placeholder="tiktok.com/@yourname" /></div>
-            <div class="field"><label for="facebook_url">Facebook</label><input id="facebook_url" name="facebook_url" value="${escapeHtml(profile.facebook_url || '')}" placeholder="facebook.com/yourpage" /></div>
-            <div class="field"><label for="website_url">Website</label><input id="website_url" name="website_url" value="${escapeHtml(profile.website_url || '')}" placeholder="yourwebsite.com" /></div>
+            <div class="field"><label for="instagram_url">Instagram</label><input id="instagram_url" name="instagram_url" maxlength="2048" value="${escapeHtml(profile.instagram_url || '')}" placeholder="instagram.com/yourname" /></div>
+            <div class="field"><label for="tiktok_url">TikTok</label><input id="tiktok_url" name="tiktok_url" maxlength="2048" value="${escapeHtml(profile.tiktok_url || '')}" placeholder="tiktok.com/@yourname" /></div>
+            <div class="field"><label for="facebook_url">Facebook</label><input id="facebook_url" name="facebook_url" maxlength="2048" value="${escapeHtml(profile.facebook_url || '')}" placeholder="facebook.com/yourpage" /></div>
+            <div class="field"><label for="website_url">Website</label><input id="website_url" name="website_url" maxlength="2048" value="${escapeHtml(profile.website_url || '')}" placeholder="yourwebsite.com" /></div>
             <button class="btn" type="submit">Save social links</button>
           </form>
         </div>
