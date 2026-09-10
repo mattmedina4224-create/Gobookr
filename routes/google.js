@@ -34,10 +34,15 @@ async function verifyGoogleCredential(credential) {
   }
 }
 
+function safeLocalPath(value) {
+  const path = String(value || '');
+  return path.startsWith('/') && !path.startsWith('//') ? path : '';
+}
+
 module.exports = function (router) {
   router.post('/auth/google', async (ctx) => {
     const credential = String(ctx.body.credential || ctx.body.google_credential || '');
-    const next = String(ctx.body.next || '');
+    const next = safeLocalPath(ctx.body.next);
     const role = ctx.body.role === 'pro' ? 'pro' : 'customer';
 
     let google;
@@ -60,17 +65,14 @@ module.exports = function (router) {
     if (!user) {
       const params = new URLSearchParams({
         role,
-        google_email: google.email,
-        google_name: google.name,
-        google_sub: google.sub,
-        error: 'Google verified your account. Complete the remaining signup details to finish creating your GoBookr account.',
+        error: 'Google verified your account, but new-account Google signup is not enabled yet. Create your GoBookr account here, then Google sign-in can be linked later.',
       });
       return redirect(ctx.res, '/signup?' + params.toString());
     }
 
     const token = createSession(user.id);
     setSessionCookie(ctx.res, token);
-    if (next && next.startsWith('/')) return redirect(ctx.res, next);
+    if (next) return redirect(ctx.res, next);
     return redirect(ctx.res, user.role === 'pro' ? '/dashboard/pro' : '/dashboard/customer');
   });
 };
