@@ -9,18 +9,23 @@
     document.head.appendChild(discoveryStyles);
   }
 
-  // Force every page to use a fresh navy GoBookr calendar favicon URL.
+  // Force every page to use a fresh GoBookr calendar favicon URL.
   document.querySelectorAll('link[rel~="icon"], link[rel="shortcut icon"], link[rel="apple-touch-icon"]').forEach((link) => link.remove());
   const favicon = document.createElement('link');
   favicon.rel = 'icon';
   favicon.type = 'image/svg+xml';
-  favicon.href = '/gobookr-navy-calendar-v4.svg';
+  favicon.href = '/gobookr-favicon-v6.svg';
   document.head.appendChild(favicon);
 
   const shortcut = document.createElement('link');
   shortcut.rel = 'shortcut icon';
-  shortcut.href = '/gobookr-navy-calendar-v4.svg';
+  shortcut.href = '/gobookr-favicon-v6.svg';
   document.head.appendChild(shortcut);
+
+  const appleTouch = document.createElement('link');
+  appleTouch.rel = 'apple-touch-icon';
+  appleTouch.href = '/gobookr-favicon-v6.svg';
+  document.head.appendChild(appleTouch);
 
   const STORAGE_LAT = 'gobookr_user_lat';
   const STORAGE_LON = 'gobookr_user_lon';
