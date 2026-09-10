@@ -44,7 +44,15 @@ CREATE TABLE IF NOT EXISTS subscriptions (
  updated_at TEXT NOT NULL DEFAULT (datetime('now'))
 );
 CREATE TABLE IF NOT EXISTS sessions (token TEXT PRIMARY KEY,user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,csrf_token TEXT NOT NULL,created_at TEXT NOT NULL DEFAULT (datetime('now')),expires_at TEXT NOT NULL);
-CREATE INDEX IF NOT EXISTS idx_pro_profiles_category ON pro_profiles(category); CREATE INDEX IF NOT EXISTS idx_pro_profiles_city ON pro_profiles(city); CREATE INDEX IF NOT EXISTS idx_pro_categories_category ON pro_categories(category); CREATE INDEX IF NOT EXISTS idx_services_pro ON services(pro_id); CREATE INDEX IF NOT EXISTS idx_portfolio_pro ON portfolio_items(pro_id); CREATE INDEX IF NOT EXISTS idx_reviews_pro ON reviews(pro_id); CREATE INDEX IF NOT EXISTS idx_bookings_pro ON booking_requests(pro_id); CREATE INDEX IF NOT EXISTS idx_bookings_customer ON booking_requests(customer_id); CREATE INDEX IF NOT EXISTS idx_subscriptions_status ON subscriptions(status); CREATE INDEX IF NOT EXISTS idx_sessions_user ON sessions(user_id);
+CREATE TABLE IF NOT EXISTS password_reset_tokens (
+ id INTEGER PRIMARY KEY AUTOINCREMENT,
+ user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+ token_hash TEXT NOT NULL UNIQUE,
+ expires_at TEXT NOT NULL,
+ used_at TEXT,
+ created_at TEXT NOT NULL DEFAULT (datetime('now'))
+);
+CREATE INDEX IF NOT EXISTS idx_pro_profiles_category ON pro_profiles(category); CREATE INDEX IF NOT EXISTS idx_pro_profiles_city ON pro_profiles(city); CREATE INDEX IF NOT EXISTS idx_pro_categories_category ON pro_categories(category); CREATE INDEX IF NOT EXISTS idx_services_pro ON services(pro_id); CREATE INDEX IF NOT EXISTS idx_portfolio_pro ON portfolio_items(pro_id); CREATE INDEX IF NOT EXISTS idx_reviews_pro ON reviews(pro_id); CREATE INDEX IF NOT EXISTS idx_bookings_pro ON booking_requests(pro_id); CREATE INDEX IF NOT EXISTS idx_bookings_customer ON booking_requests(customer_id); CREATE INDEX IF NOT EXISTS idx_subscriptions_status ON subscriptions(status); CREATE INDEX IF NOT EXISTS idx_sessions_user ON sessions(user_id); CREATE INDEX IF NOT EXISTS idx_password_reset_user ON password_reset_tokens(user_id); CREATE INDEX IF NOT EXISTS idx_password_reset_expires ON password_reset_tokens(expires_at);
 `);
 const portfolioColumns=db.prepare('PRAGMA table_info(portfolio_items)').all(); if(!portfolioColumns.some(c=>c.name==='image_url')) db.exec("ALTER TABLE portfolio_items ADD COLUMN image_url TEXT NOT NULL DEFAULT ''");
 const profileColumns=db.prepare('PRAGMA table_info(pro_profiles)').all(); const addProfileColumn=(name,sql)=>{if(!profileColumns.some(c=>c.name===name)) db.exec(sql);};
