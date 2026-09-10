@@ -1,0 +1,56 @@
+/* GoBookr public discovery polish */
+.pro-card { padding:0; overflow:hidden; display:block; }
+.pro-card-body { padding:18px; }
+.pro-card-photo { aspect-ratio:16/10; overflow:hidden; background:var(--paper-soft); }
+.pro-card-photo img { width:100%; height:100%; object-fit:cover; transition:transform .2s ease; }
+.pro-card:hover .pro-card-photo img { transform:scale(1.02); }
+.pro-card-main { min-width:0; }
+.pro-card h3 { display:flex; align-items:center; gap:5px; font-size:1.08rem; }
+.verified-badge { color:var(--brand); display:inline-flex; align-items:center; flex:0 0 auto; }
+.pro-workplace { color:var(--ink-soft); font-size:.86rem; font-weight:650; margin-top:2px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.pro-location { color:var(--ink-faint); font-size:.82rem; margin-top:2px; }
+.distance-away, .profile-distance { color:var(--brand); font-weight:700; }
+.pro-card-badges { display:flex; gap:6px; flex-wrap:wrap; }
+.pro-card-rating { margin-top:11px; min-height:22px; }
+.pro-card-footer { display:flex; justify-content:space-between; align-items:center; gap:12px; margin-top:14px; padding-top:13px; border-top:1px solid var(--paper-line); }
+.view-profile { color:var(--brand); font-size:.84rem; font-weight:750; }
+
+.profile-page { max-width:1080px; }
+.profile-page .profile-head { padding:30px; }
+.profile-page .profile-head h1 { margin:8px 0 4px; display:flex; align-items:center; gap:7px; font-size:2rem; }
+.profile-categories { display:flex; gap:6px; flex-wrap:wrap; }
+.profile-workplace { margin:0 0 2px; color:var(--ink); font-weight:700; }
+.profile-location { color:var(--ink-faint); font-size:.92rem; }
+.profile-verified { display:flex; align-items:center; gap:7px; margin-top:13px; color:var(--brand-dark); font-size:.82rem; font-weight:700; }
+.profile-page .cta-col { min-width:235px; }
+.profile-book-btn { min-height:48px; }
+.booking-unavailable { background:var(--paper-soft); border:1px solid var(--paper-line); border-radius:var(--radius); padding:14px; max-width:260px; }
+.booking-unavailable p { font-size:.8rem; }
+.profile-page .panel h2 { font-size:1.15rem; margin-bottom:14px; }
+.profile-about p { white-space:pre-line; }
+.profile-section-head { display:flex; align-items:baseline; justify-content:space-between; gap:12px; margin-bottom:14px; }
+.profile-section-head h2 { margin-bottom:0 !important; }
+.profile-portfolio figure { margin:0; min-width:0; }
+.profile-portfolio .portfolio-item { padding:0; background:#eee; }
+.profile-portfolio .portfolio-item img { width:100%; height:100%; object-fit:cover; }
+.profile-portfolio figcaption { margin-top:6px; color:var(--ink-soft); font-size:.8rem; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.services-panel { position:sticky; top:88px; }
+.services-panel .service-row { gap:16px; }
+.review p { margin:0; }
+
+@media (max-width:860px) {
+  .services-panel { position:static; }
+  .profile-page .cta-col { width:100%; }
+  .booking-unavailable { max-width:none; }
+}
+@media (max-width:620px) {
+  .section { padding:30px 0; }
+  .container { padding-left:16px; padding-right:16px; }
+  .pro-grid { grid-template-columns:1fr; }
+  .profile-page .profile-head { padding:20px; gap:15px; }
+  .profile-page .profile-head h1 { font-size:1.65rem; }
+  .avatar.lg { width:70px; height:70px; border-radius:18px; }
+  .stat-row { gap:10px 16px; }
+  .profile-page .tabs-grid { margin-top:18px; }
+  .profile-page .panel { padding:18px; }
+}
