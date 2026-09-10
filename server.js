@@ -7,6 +7,10 @@ const { URL } = require('node:url');
 
 const Router = require('./lib/router');
 const { getSessionUser } = require('./lib/auth');
+const layoutModule = require('./lib/layout');
+const { installBillingBanner } = require('./lib/pro-billing-banner');
+
+installBillingBanner(layoutModule);
 
 const router = new Router();
 require('./routes/public')(router);
