@@ -15,18 +15,18 @@ function page(ctx, title, content) {
 module.exports = function (router) {
   router.get('/terms', async (ctx) => page(ctx, 'Terms of Service', `
     <h1>Terms of Service</h1>
-    <p class="muted">Last updated: September 9, 2026</p>
+    <p class="muted">Last updated: September 10, 2026</p>
     <p>Welcome to GoBookr. These Terms of Service govern your use of GoBookr and its services. By creating an account or using GoBookr, you agree to these Terms.</p>
     <h2>1. What GoBookr Does</h2>
     <p>GoBookr is a discovery marketplace that helps customers find personal-service professionals and connect to their booking options. GoBookr does not perform the services listed by professionals and is not a party to appointments or transactions completed through an external scheduling provider.</p>
     <h2>2. Accounts and Professional Listings</h2>
     <p>You must provide accurate, current information and keep your account secure. Professionals are responsible for their profile information, qualifications, licenses, pricing, services, availability, external booking links, and compliance with applicable laws and professional requirements.</p>
     <h2>3. Professional Membership, Trial, and Renewal</h2>
-    <p>Eligible professional accounts receive a 30-day free trial. Unless canceled before the trial ends, the professional membership renews automatically at $15 per month using the payment method on file. Applicable taxes may be added where required. GoBookr will disclose material pricing changes before they take effect.</p>
+    <p>Eligible professional accounts receive a 30-day free trial. Paid membership is $15 per month. A professional must complete GoBookr's billing setup before paid renewal can occur. If billing is activated, the membership renews automatically each month using the payment method managed through GoBookr's payment processor unless canceled. If the trial ends before billing is activated, the professional listing may be hidden until billing is completed. Applicable taxes may be added where required. GoBookr will disclose material pricing changes before they take effect.</p>
     <h2>4. Cancellation</h2>
     <p>Professionals may cancel their subscription through the subscription-management tools provided by GoBookr. Unless otherwise stated during cancellation, cancellation takes effect at the end of the current paid billing period. Canceling prevents future renewal charges but does not ordinarily create a refund for time already paid.</p>
     <h2>5. Failed Payments</h2>
-    <p>If a recurring payment fails, GoBookr may retry the payment and provide a grace period. During a grace period, the professional may update their payment method. If payment remains unpaid after the grace period, GoBookr may temporarily hide or restrict the professional listing until the account returns to good standing. Account data may be retained so the membership can be restored after payment.</p>
+    <p>If a recurring payment fails, GoBookr may retry the payment and provide a 7-day grace period. During that grace period, the professional may update their payment method and the listing may remain visible. If payment remains unpaid after the grace period, GoBookr may temporarily hide or restrict the professional listing until the account returns to good standing. Account data may be retained so the membership can be restored after payment.</p>
     <h2>6. Payments and External Booking</h2>
     <p>Subscription payments may be processed by a third-party payment processor. GoBookr does not intend to store raw payment-card or bank-account credentials. When customers follow a professional's external booking link, that third-party service's terms and privacy practices apply.</p>
     <h2>7. Licenses and Verification</h2>
@@ -50,7 +50,7 @@ module.exports = function (router) {
 
   router.get('/privacy', async (ctx) => page(ctx, 'Privacy Policy', `
     <h1>Privacy Policy</h1>
-    <p class="muted">Last updated: September 9, 2026</p>
+    <p class="muted">Last updated: September 10, 2026</p>
     <p>This Privacy Policy explains how GoBookr collects, uses, shares, and protects information when you use the service.</p>
     <h2>1. Information We Collect</h2>
     <p>We may collect account information such as name and email address; professional profile information such as business name, workplace address, services, pricing, biography, portfolio content, license information, social links, and booking links; and technical information associated with use of the service.</p>
