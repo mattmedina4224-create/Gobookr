@@ -21,8 +21,16 @@ function requirePro(ctx) {
 function normalizeUrl(value) {
   const clean = String(value || '').trim();
   if (!clean) return '';
-  if (/^https?:\/\//i.test(clean)) return clean;
-  return 'https://' + clean;
+
+  const candidate = /^https?:\/\//i.test(clean) ? clean : `https://${clean}`;
+  try {
+    const parsed = new URL(candidate);
+    if (!['http:', 'https:'].includes(parsed.protocol)) return null;
+    if (!parsed.hostname || !parsed.hostname.includes('.')) return null;
+    return parsed.toString();
+  } catch {
+    return null;
+  }
 }
 
 async function geocodeBusinessAddress({ street, city, state, zip }) {
@@ -58,6 +66,7 @@ function dashNav(active) {
     { key: 'overview', href: '/dashboard/pro', label: 'Overview' },
     { key: 'profile', href: '/dashboard/pro/profile', label: 'Profile & services' },
     { key: 'portfolio', href: '/dashboard/pro/portfolio', label: 'Portfolio' },
+    { key: 'billing', href: '/dashboard/pro/billing', label: 'Billing' },
   ];
   return `<nav class="dash-nav">${items.map((i) => `<a href="${i.href}" class="${i.key === active ? 'active' : ''}">${i.label}</a>`).join('')}</nav>`;
 }
@@ -112,6 +121,10 @@ module.exports = function (router) {
     const cleanSuite = String(suite || '').trim();
     const cleanZip = String(zip_code || '').trim();
     const cleanBookingUrl = normalizeUrl(booking_url);
+
+    if (cleanBookingUrl === null) {
+      return redirect(ctx.res, '/dashboard/pro/profile?error=' + encodeURIComponent('Please enter a valid booking website, such as https://square.site/book/...'));
+    }
 
     if (!cleanWorkplace || !cleanStreet || !cleanCity || !cleanState || !cleanZip) {
       return redirect(ctx.res, '/dashboard/pro/profile?error=' + encodeURIComponent('Please complete your workplace address.'));
