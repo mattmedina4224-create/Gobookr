@@ -1,6 +1,14 @@
 'use strict';
 
 (() => {
+  // Load public discovery/profile polish without disturbing the base stylesheet.
+  if (!document.querySelector('link[href="/discovery.css"]')) {
+    const discoveryStyles = document.createElement('link');
+    discoveryStyles.rel = 'stylesheet';
+    discoveryStyles.href = '/discovery.css';
+    document.head.appendChild(discoveryStyles);
+  }
+
   // Force every page to use a fresh navy GoBookr calendar favicon URL.
   document.querySelectorAll('link[rel~="icon"], link[rel="shortcut icon"], link[rel="apple-touch-icon"]').forEach((link) => link.remove());
   const favicon = document.createElement('link');
@@ -49,7 +57,7 @@
       const miles = milesBetween(userLat, userLon, proLat, proLon);
       card.dataset.distanceMiles = String(miles);
       const label = card.querySelector('.distance-away');
-      if (label) { label.textContent = distanceLabel(miles); label.style.color = 'var(--brand-dark)'; }
+      if (label) label.textContent = distanceLabel(miles);
     });
     Array.from(document.querySelectorAll('.pro-grid')).forEach((grid) => {
       const locatedCards = Array.from(grid.children).filter((el) => el.matches && el.matches('.pro-card[data-distance-miles]'));
@@ -58,7 +66,7 @@
     const profile = document.querySelector('.profile-head[data-lat][data-lon]');
     if (profile) {
       const proLat = Number(profile.dataset.lat); const proLon = Number(profile.dataset.lon); const label = profile.querySelector('.profile-distance');
-      if (label && Number.isFinite(proLat) && Number.isFinite(proLon)) { label.textContent = distanceLabel(milesBetween(userLat, userLon, proLat, proLon)); label.style.color = 'var(--brand-dark)'; }
+      if (label && Number.isFinite(proLat) && Number.isFinite(proLon)) label.textContent = distanceLabel(milesBetween(userLat, userLon, proLat, proLon));
     }
   }
   function requestCustomerLocation() {
