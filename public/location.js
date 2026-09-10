@@ -14,17 +14,17 @@
   const favicon = document.createElement('link');
   favicon.rel = 'icon';
   favicon.type = 'image/svg+xml';
-  favicon.href = '/gobookr-favicon-v6.svg';
+  favicon.href = '/gobookr-tab-v7.svg?v=20260910';
   document.head.appendChild(favicon);
 
   const shortcut = document.createElement('link');
   shortcut.rel = 'shortcut icon';
-  shortcut.href = '/gobookr-favicon-v6.svg';
+  shortcut.href = '/gobookr-tab-v7.svg?v=20260910';
   document.head.appendChild(shortcut);
 
   const appleTouch = document.createElement('link');
   appleTouch.rel = 'apple-touch-icon';
-  appleTouch.href = '/gobookr-favicon-v6.svg';
+  appleTouch.href = '/gobookr-tab-v7.svg?v=20260910';
   document.head.appendChild(appleTouch);
 
   const STORAGE_LAT = 'gobookr_user_lat';
