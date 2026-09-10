@@ -87,10 +87,10 @@ const server = http.createServer(async (req, res) => {
     const match = router.match(req.method, pathname);
     if (!match) { res.writeHead(404, { 'Content-Type': 'text/html; charset=utf-8' }); res.end('<h1>404 — page not found</h1><p><a href="/">Back to GoBookr</a></p>'); return; }
     const session = getSessionUser(req);
-    const ctx = { req, res, params: match.params, query: Object.fromEntries(parsedUrl.searchParams.entries()), currentUser: session ? session.user : null, session: session ? session.session : null, files: {} };
+    const ctx = { req, res, params: match.params, query: Object.fromEntries(parsedUrl.searchParams.entries()), currentUser: session ? session.user : null, session: session ? session.session : null, files: {}, rawBody: null };
     let multipartDebug = null;
     if (req.method === 'POST') {
-      const raw = await readBody(req); const contentType = req.headers['content-type'] || ''; const lowerContentType = contentType.toLowerCase(); const isMultipart = lowerContentType.startsWith('multipart/form-data'); const isJson = lowerContentType.startsWith('application/json');
+      const raw = await readBody(req); ctx.rawBody = raw; const contentType = req.headers['content-type'] || ''; const lowerContentType = contentType.toLowerCase(); const isMultipart = lowerContentType.startsWith('multipart/form-data'); const isJson = lowerContentType.startsWith('application/json');
       if (isMultipart) { const parsed = parseMultipart(raw, contentType); ctx.body = parsed.fields; ctx.files = parsed.files; multipartDebug = { bodyBoundaryLength: parsed.bodyBoundary.length, headerBoundaryLength: parsed.headerBoundary.length, fileFields: Object.keys(parsed.files) }; }
       else if (isJson) { ctx.body = JSON.parse(raw.toString('utf8') || '{}'); if (pathname === '/dashboard/pro/portfolio' && ctx.body.image_data) { const filename = String(ctx.body.image_name || 'upload'); ctx.files.image = { filename, contentType: String(ctx.body.image_type || mimeFromFilename(filename)).toLowerCase(), data: Buffer.from(String(ctx.body.image_data), 'base64') }; } }
       else ctx.body = parseForm(raw);
