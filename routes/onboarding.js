@@ -34,6 +34,22 @@ function normalizeUrl(value, allowedHosts = []) {
   }
 }
 
+function onboardingState(profile) {
+  const serviceCount = db.prepare('SELECT COUNT(*) AS count FROM services WHERE pro_id = ?').get(profile.id).count;
+  const photoCount = db.prepare('SELECT COUNT(*) AS count FROM portfolio_items WHERE pro_id = ?').get(profile.id).count;
+  const basicsDone = Boolean(profile.business_name && profile.city && profile.state && profile.workplace_name && profile.street_address && profile.zip_code);
+  const detailsDone = Boolean(profile.bio && profile.years_experience > 0 && (profile.price_min > 0 || profile.price_max > 0));
+  const servicesDone = serviceCount > 0;
+  const photosDone = photoCount > 0;
+  const licenseDone = Boolean(profile.license_number && profile.license_state);
+  const gpsDone = Number.isFinite(Number(profile.latitude)) && Number.isFinite(Number(profile.longitude));
+  const bookingDone = Boolean(profile.booking_url);
+  const socialDone = Boolean(profile.instagram_url || profile.tiktok_url || profile.facebook_url || profile.website_url);
+  const requiredDone = basicsDone && detailsDone && servicesDone && photosDone && bookingDone;
+  const doneCount = [basicsDone, detailsDone, servicesDone, photosDone, licenseDone, gpsDone, bookingDone, socialDone].filter(Boolean).length;
+  return { basicsDone, detailsDone, servicesDone, photosDone, licenseDone, gpsDone, bookingDone, socialDone, requiredDone, progress: Math.round((doneCount / 8) * 100) };
+}
+
 function stepRow(done, title, detail, href, action) {
   return `
     <div style="display:flex; align-items:flex-start; gap:12px; padding:14px 0; border-bottom:1px solid var(--paper-line);">
@@ -49,19 +65,11 @@ function stepRow(done, title, detail, href, action) {
 module.exports = function (router) {
   router.get('/dashboard/pro/onboarding', async (ctx) => {
     const profile = requirePro(ctx); if (!profile) return;
-    const serviceCount = db.prepare('SELECT COUNT(*) AS count FROM services WHERE pro_id = ?').get(profile.id).count;
-    const photoCount = db.prepare('SELECT COUNT(*) AS count FROM portfolio_items WHERE pro_id = ?').get(profile.id).count;
-
-    const basicsDone = Boolean(profile.business_name && profile.city && profile.state);
-    const detailsDone = Boolean(profile.bio && profile.years_experience > 0 && (profile.price_min > 0 || profile.price_max > 0));
-    const servicesDone = serviceCount > 0;
-    const photosDone = photoCount > 0;
-    const licenseDone = Boolean(profile.license_number && profile.license_state);
-    const gpsDone = Number.isFinite(profile.latitude) && Number.isFinite(profile.longitude);
-    const bookingDone = Boolean(profile.booking_url);
-    const socialDone = Boolean(profile.instagram_url || profile.tiktok_url || profile.facebook_url || profile.website_url);
-    const doneCount = [basicsDone, detailsDone, servicesDone, photosDone, licenseDone, gpsDone, bookingDone, socialDone].filter(Boolean).length;
-    const progress = Math.round((doneCount / 8) * 100);
+    const state = onboardingState(profile);
+    const { basicsDone, detailsDone, servicesDone, photosDone, licenseDone, gpsDone, bookingDone, socialDone, requiredDone, progress } = state;
+    const finishHelp = requiredDone
+      ? '<p class="helptext" style="margin:8px 0 0;text-align:right;">Your core profile is ready. Optional license, GPS, and social details can still be added later.</p>'
+      : '<p class="helptext" style="margin:8px 0 0;text-align:right;">Finish the required profile, pricing, services, portfolio, and booking-link steps first.</p>';
 
     const body = `
       <section class="section container" style="max-width:920px;">
@@ -79,7 +87,7 @@ module.exports = function (router) {
 
         <div class="panel">
           <h3>Profile checklist</h3>
-          ${stepRow(basicsDone, 'Business basics', 'Business name, service category, city and state.', '/dashboard/pro/profile', basicsDone ? 'Edit' : 'Complete')}
+          ${stepRow(basicsDone, 'Business basics', 'Business name, workplace address, city and state.', '/dashboard/pro/profile', basicsDone ? 'Edit' : 'Complete')}
           ${stepRow(detailsDone, 'About & pricing', 'Add your bio, experience and typical pricing.', '/dashboard/pro/profile', detailsDone ? 'Edit' : 'Add details')}
           ${stepRow(servicesDone, 'Services', 'List at least one service customers can book.', '/dashboard/pro/profile', servicesDone ? 'Edit' : 'Add service')}
           ${stepRow(photosDone, 'Portfolio', 'Show customers examples of your work.', '/dashboard/pro/portfolio', photosDone ? 'Manage' : 'Add photos')}
@@ -102,12 +110,15 @@ module.exports = function (router) {
           </form>
         </div>
 
-        <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;">
+        <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:flex-start;">
           <a class="btn secondary" href="/pro/${profile.id}">Preview public profile</a>
-          <form method="POST" action="/dashboard/pro/onboarding/finish">
-            <input type="hidden" name="_csrf" value="${escapeHtml(ctx.session.csrf_token)}" />
-            <button class="btn" type="submit">Finish setup</button>
-          </form>
+          <div>
+            <form method="POST" action="/dashboard/pro/onboarding/finish">
+              <input type="hidden" name="_csrf" value="${escapeHtml(ctx.session.csrf_token)}" />
+              <button class="btn" type="submit"${requiredDone ? '' : ' disabled aria-disabled="true"'}>Finish setup</button>
+            </form>
+            ${finishHelp}
+          </div>
         </div>
       </section>`;
 
@@ -130,7 +141,10 @@ module.exports = function (router) {
 
   router.post('/dashboard/pro/onboarding/finish', async (ctx) => {
     const profile = requirePro(ctx); if (!profile) return;
+    if (!onboardingState(profile).requiredDone) {
+      return redirect(ctx.res, '/dashboard/pro/onboarding?error=' + encodeURIComponent('Complete your core profile, pricing, services, portfolio, and booking link before finishing setup.'));
+    }
     db.prepare('UPDATE pro_profiles SET onboarding_completed = 1 WHERE id = ?').run(profile.id);
-    redirect(ctx.res, '/dashboard/pro?success=' + encodeURIComponent('Profile setup saved.'));
+    redirect(ctx.res, '/dashboard/pro?success=' + encodeURIComponent('Profile setup complete.'));
   });
 };
