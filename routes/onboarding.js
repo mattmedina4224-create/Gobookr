@@ -28,7 +28,7 @@ function normalizeUrl(value) {
 function stepRow(done, title, detail, href, action) {
   return `
     <div style="display:flex; align-items:flex-start; gap:12px; padding:14px 0; border-bottom:1px solid var(--paper-line);">
-      <div style="width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex:0 0 auto;font-weight:800;background:${done ? 'var(--ok-soft)' : 'var(--paper-soft)'};color:${done ? 'var(--ok)' : 'var(--ink-faint)'};border:1px solid ${done ? 'var(--ok)' : 'var(--paper-line)'};">${done ? '✓' : '•'}</div>
+      <div style="min-width:48px;height:28px;border-radius:999px;display:flex;align-items:center;justify-content:center;flex:0 0 auto;font-size:12px;font-weight:800;background:${done ? 'var(--ok-soft)' : 'var(--paper-soft)'};color:${done ? 'var(--ok)' : 'var(--ink-faint)'};border:1px solid ${done ? 'var(--ok)' : 'var(--paper-line)'};">${done ? 'Done' : 'Open'}</div>
       <div style="flex:1;min-width:0;">
         <div style="font-weight:800;">${escapeHtml(title)}</div>
         <div class="muted" style="margin-top:2px;">${escapeHtml(detail)}</div>
@@ -49,16 +49,17 @@ module.exports = function (router) {
     const photosDone = photoCount > 0;
     const licenseDone = Boolean(profile.license_number && profile.license_state);
     const gpsDone = Number.isFinite(profile.latitude) && Number.isFinite(profile.longitude);
+    const bookingDone = Boolean(profile.booking_url);
     const socialDone = Boolean(profile.instagram_url || profile.tiktok_url || profile.facebook_url || profile.website_url);
-    const doneCount = [basicsDone, detailsDone, servicesDone, photosDone, licenseDone, gpsDone, socialDone].filter(Boolean).length;
-    const progress = Math.round((doneCount / 7) * 100);
+    const doneCount = [basicsDone, detailsDone, servicesDone, photosDone, licenseDone, gpsDone, bookingDone, socialDone].filter(Boolean).length;
+    const progress = Math.round((doneCount / 8) * 100);
 
     const body = `
       <section class="section container" style="max-width:920px;">
         <div style="margin-bottom:24px;">
           <span class="badge category">Professional setup</span>
-          <h1 style="margin-top:10px;">Let’s build your GoBookr profile</h1>
-          <p>Complete the steps below so customers can quickly understand who you are, what you offer, and where to find you.</p>
+          <h1 style="margin-top:10px;">Build your GoBookr profile</h1>
+          <p>Complete the steps below so customers can quickly understand who you are, what you offer, where to find you, and how to book with you.</p>
           <div style="display:flex;align-items:center;gap:12px;margin-top:16px;">
             <div style="height:10px;background:var(--paper-line);border-radius:999px;overflow:hidden;flex:1;">
               <div style="height:100%;width:${progress}%;background:var(--brand);border-radius:999px;"></div>
@@ -73,6 +74,7 @@ module.exports = function (router) {
           ${stepRow(detailsDone, 'About & pricing', 'Add your bio, experience and typical pricing.', '/dashboard/pro/profile', detailsDone ? 'Edit' : 'Add details')}
           ${stepRow(servicesDone, 'Services', 'List at least one service customers can book.', '/dashboard/pro/profile', servicesDone ? 'Edit' : 'Add service')}
           ${stepRow(photosDone, 'Portfolio', 'Show customers examples of your work.', '/dashboard/pro/portfolio', photosDone ? 'Manage' : 'Add photos')}
+          ${stepRow(bookingDone, 'Booking link', 'Connect Square, Booksy, Vagaro, Fresha, GlossGenius, or another scheduling page.', '/dashboard/pro/profile', bookingDone ? 'Update' : 'Add link')}
           ${stepRow(licenseDone, 'License information', 'Add your professional license details if your service requires them.', '/dashboard/pro/profile', licenseDone ? 'Edit' : 'Add license')}
           ${stepRow(gpsDone, 'Business GPS location', 'Set your business location so customers can see how many miles away you are.', '/dashboard/pro/profile', gpsDone ? 'Update' : 'Set location')}
         </div>
