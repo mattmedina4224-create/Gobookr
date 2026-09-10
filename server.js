@@ -9,6 +9,7 @@ const Router = require('./lib/router');
 const { getSessionUser } = require('./lib/auth');
 const layoutModule = require('./lib/layout');
 const { installBillingBanner } = require('./lib/pro-billing-banner');
+const { checkAuthRateLimit } = require('./lib/rate-limit');
 
 installBillingBanner(layoutModule);
 
@@ -88,6 +89,12 @@ const server = http.createServer(async (req, res) => {
   try {
     const parsedUrl = new URL(req.url, `http://${req.headers.host || 'localhost'}`); const pathname = decodeURIComponent(parsedUrl.pathname);
     if (req.method === 'GET' && serveStatic(req, res, pathname)) return;
+    const rate = checkAuthRateLimit(req, pathname);
+    if (!rate.allowed) {
+      res.writeHead(429, { 'Content-Type': 'text/html; charset=utf-8', 'Retry-After': String(rate.retryAfter) });
+      res.end('<h1>Too many attempts</h1><p>Please wait a few minutes and try again.</p>');
+      return;
+    }
     const match = router.match(req.method, pathname);
     if (!match) { res.writeHead(404, { 'Content-Type': 'text/html; charset=utf-8' }); res.end('<h1>404 — page not found</h1><p><a href="/">Back to GoBookr</a></p>'); return; }
     const session = getSessionUser(req);
