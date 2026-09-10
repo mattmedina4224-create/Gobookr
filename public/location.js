@@ -67,6 +67,47 @@
     }, () => onError && onError('Could not get your location. Try again or enter your city or ZIP.'), { enableHighAccuracy: true, timeout: 10000, maximumAge: 300000 });
   }
 
+  function addBusinessGpsHelper() {
+    if (window.location.pathname !== '/dashboard/pro/profile') return;
+    const form = document.querySelector('form[action="/dashboard/pro/profile"]');
+    if (!form || document.querySelector('[data-business-gps]')) return;
+    const csrf = form.querySelector('input[name="_csrf"]');
+    if (!csrf) return;
+
+    const block = document.createElement('div');
+    block.setAttribute('data-business-gps', '1');
+    block.style.margin = '0 0 18px';
+    block.style.padding = '14px';
+    block.style.border = '1px solid var(--paper-line)';
+    block.style.borderRadius = '12px';
+    block.innerHTML = '<strong>Business GPS location</strong><p class="helptext" style="margin:5px 0 10px;">If you are physically at your workplace, you can save this device location for more precise mileage.</p><button class="btn secondary small" type="button" data-save-business-location>Use my current location</button><div class="helptext" data-business-location-status style="margin-top:8px;"></div>';
+
+    const workplaceHeading = Array.from(form.querySelectorAll('h3')).find((el) => el.textContent.trim() === 'Where do you work?');
+    const anchor = workplaceHeading ? workplaceHeading.parentElement : form.querySelector('#workplace_name')?.closest('.field');
+    if (anchor) anchor.insertAdjacentElement('afterend', block); else form.insertBefore(block, form.firstChild);
+
+    const button = block.querySelector('[data-save-business-location]');
+    const status = block.querySelector('[data-business-location-status]');
+    button.addEventListener('click', () => {
+      button.disabled = true;
+      status.textContent = 'Finding your workplace location...';
+      requestLocation(async (lat, lon) => {
+        try {
+          const body = new URLSearchParams({ _csrf: csrf.value, latitude: String(lat), longitude: String(lon) });
+          const response = await fetch('/dashboard/pro/location', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, credentials: 'same-origin', body });
+          if (!response.ok) throw new Error('Could not save this location.');
+          status.textContent = 'Business GPS location saved.';
+        } catch (err) {
+          status.textContent = err && err.message ? err.message : 'Could not save this location.';
+        } finally {
+          button.disabled = false;
+        }
+      }, (message) => { status.textContent = message; button.disabled = false; });
+    });
+  }
+
+  addBusinessGpsHelper();
+
   const existing = storedLocation();
   if (existing) updateDistances(existing.lat, existing.lon);
   else if (document.querySelector('.distance-away, .profile-distance')) requestLocation();
