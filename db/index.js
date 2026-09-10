@@ -54,6 +54,10 @@ CREATE TABLE IF NOT EXISTS password_reset_tokens (
 );
 CREATE INDEX IF NOT EXISTS idx_pro_profiles_category ON pro_profiles(category); CREATE INDEX IF NOT EXISTS idx_pro_profiles_city ON pro_profiles(city); CREATE INDEX IF NOT EXISTS idx_pro_categories_category ON pro_categories(category); CREATE INDEX IF NOT EXISTS idx_services_pro ON services(pro_id); CREATE INDEX IF NOT EXISTS idx_portfolio_pro ON portfolio_items(pro_id); CREATE INDEX IF NOT EXISTS idx_reviews_pro ON reviews(pro_id); CREATE INDEX IF NOT EXISTS idx_bookings_pro ON booking_requests(pro_id); CREATE INDEX IF NOT EXISTS idx_bookings_customer ON booking_requests(customer_id); CREATE INDEX IF NOT EXISTS idx_subscriptions_status ON subscriptions(status); CREATE INDEX IF NOT EXISTS idx_sessions_user ON sessions(user_id); CREATE INDEX IF NOT EXISTS idx_password_reset_user ON password_reset_tokens(user_id); CREATE INDEX IF NOT EXISTS idx_password_reset_expires ON password_reset_tokens(expires_at);
 `);
+const userColumns=db.prepare('PRAGMA table_info(users)').all(); const addUserColumn=(name,sql)=>{if(!userColumns.some(c=>c.name===name)) db.exec(sql);};
+addUserColumn('google_sub','ALTER TABLE users ADD COLUMN google_sub TEXT');
+addUserColumn('auth_provider',"ALTER TABLE users ADD COLUMN auth_provider TEXT NOT NULL DEFAULT 'password'");
+db.exec('CREATE UNIQUE INDEX IF NOT EXISTS idx_users_google_sub ON users(google_sub) WHERE google_sub IS NOT NULL');
 const portfolioColumns=db.prepare('PRAGMA table_info(portfolio_items)').all(); if(!portfolioColumns.some(c=>c.name==='image_url')) db.exec("ALTER TABLE portfolio_items ADD COLUMN image_url TEXT NOT NULL DEFAULT ''");
 const profileColumns=db.prepare('PRAGMA table_info(pro_profiles)').all(); const addProfileColumn=(name,sql)=>{if(!profileColumns.some(c=>c.name===name)) db.exec(sql);};
 addProfileColumn('latitude','ALTER TABLE pro_profiles ADD COLUMN latitude REAL'); addProfileColumn('longitude','ALTER TABLE pro_profiles ADD COLUMN longitude REAL');
