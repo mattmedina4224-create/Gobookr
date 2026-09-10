@@ -11,6 +11,7 @@ const { getSessionUser } = require('./lib/auth');
 const router = new Router();
 require('./routes/public')(router);
 require('./routes/auth')(router);
+require('./routes/google')(router);
 require('./routes/pro')(router);
 require('./routes/customer')(router);
 require('./routes/admin')(router);
