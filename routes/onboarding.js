@@ -18,11 +18,20 @@ function requirePro(ctx) {
   return profile;
 }
 
-function normalizeUrl(value) {
+function normalizeUrl(value, allowedHosts = []) {
   const clean = String(value || '').trim();
   if (!clean) return '';
-  if (/^https?:\/\//i.test(clean)) return clean;
-  return 'https://' + clean;
+  const candidate = /^https?:\/\//i.test(clean) ? clean : `https://${clean}`;
+  try {
+    const parsed = new URL(candidate);
+    if (!['http:', 'https:'].includes(parsed.protocol)) return null;
+    const hostname = parsed.hostname.toLowerCase().replace(/^www\./, '');
+    if (!hostname || !hostname.includes('.')) return null;
+    if (allowedHosts.length && !allowedHosts.some((host) => hostname === host || hostname.endsWith('.' + host))) return null;
+    return parsed.toString();
+  } catch {
+    return null;
+  }
 }
 
 function stepRow(done, title, detail, href, action) {
@@ -77,9 +86,10 @@ module.exports = function (router) {
           ${stepRow(bookingDone, 'Booking link', 'Connect Square, Booksy, Vagaro, Fresha, GlossGenius, or another scheduling page.', '/dashboard/pro/profile', bookingDone ? 'Update' : 'Add link')}
           ${stepRow(licenseDone, 'License information', 'Add your professional license details if your service requires them.', '/dashboard/pro/profile', licenseDone ? 'Edit' : 'Add license')}
           ${stepRow(gpsDone, 'Business GPS location', 'Set your business location so customers can see how many miles away you are.', '/dashboard/pro/profile', gpsDone ? 'Update' : 'Set location')}
+          ${stepRow(socialDone, 'Social links', 'Optional links help customers see more of your work.', '#social-links', socialDone ? 'Update' : 'Add links')}
         </div>
 
-        <div class="panel">
+        <div class="panel" id="social-links">
           <h3>Social links</h3>
           <p class="muted">Optional, but helpful. These links can be shown on your public profile so customers can see more of your work.</p>
           <form method="POST" action="/dashboard/pro/onboarding/socials">
@@ -106,10 +116,13 @@ module.exports = function (router) {
 
   router.post('/dashboard/pro/onboarding/socials', async (ctx) => {
     const profile = requirePro(ctx); if (!profile) return;
-    const instagram = normalizeUrl(ctx.body.instagram_url);
-    const tiktok = normalizeUrl(ctx.body.tiktok_url);
-    const facebook = normalizeUrl(ctx.body.facebook_url);
+    const instagram = normalizeUrl(ctx.body.instagram_url, ['instagram.com']);
+    const tiktok = normalizeUrl(ctx.body.tiktok_url, ['tiktok.com']);
+    const facebook = normalizeUrl(ctx.body.facebook_url, ['facebook.com']);
     const website = normalizeUrl(ctx.body.website_url);
+    if ([instagram, tiktok, facebook, website].some((value) => value === null)) {
+      return redirect(ctx.res, '/dashboard/pro/onboarding?error=' + encodeURIComponent('One of those links is not valid. Use the correct Instagram, TikTok, Facebook, or website address.'));
+    }
     db.prepare('UPDATE pro_profiles SET instagram_url = ?, tiktok_url = ?, facebook_url = ?, website_url = ? WHERE id = ?')
       .run(instagram, tiktok, facebook, website, profile.id);
     redirect(ctx.res, '/dashboard/pro/onboarding?success=' + encodeURIComponent('Social links saved.'));
