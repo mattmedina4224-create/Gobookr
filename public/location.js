@@ -1,6 +1,29 @@
 'use strict';
 
 (() => {
+  const pageFavicons = {
+    '/signup': '/gobookr-signup-calendar-20260910.svg',
+    '/search': '/gobookr-find-pro-calendar-20260910.svg',
+  };
+  const faviconHref = pageFavicons[window.location.pathname];
+  if (faviconHref) {
+    document.querySelectorAll('link[rel*="icon"]').forEach((link) => link.remove());
+    const icon = document.createElement('link');
+    icon.rel = 'icon';
+    icon.type = 'image/svg+xml';
+    icon.sizes = 'any';
+    icon.href = faviconHref;
+    document.head.appendChild(icon);
+
+    const shortcut = document.createElement('link');
+    shortcut.rel = 'shortcut icon';
+    shortcut.type = 'image/svg+xml';
+    shortcut.href = faviconHref;
+    document.head.appendChild(shortcut);
+  }
+})();
+
+(() => {
   // Load public discovery/profile polish without disturbing the base stylesheet.
   if (!document.querySelector('link[href="/discovery.css"]')) {
     const discoveryStyles = document.createElement('link');
