@@ -1,27 +1,22 @@
 'use strict';
 
 (() => {
-  const pageFavicons = {
-    '/signup': '/gobookr-signup-calendar-20260910.svg',
-    '/search': '/gobookr-find-pro-calendar-20260910.svg',
-    '/login': '/gobookr-login-calendar-20260910.svg',
-  };
-  const faviconHref = pageFavicons[window.location.pathname];
-  if (faviconHref) {
-    document.querySelectorAll('link[rel*="icon"]').forEach((link) => link.remove());
-    const icon = document.createElement('link');
-    icon.rel = 'icon';
-    icon.type = 'image/svg+xml';
-    icon.sizes = 'any';
-    icon.href = faviconHref;
-    document.head.appendChild(icon);
+  // Force the same GoBookr navy-square/white-calendar favicon on every page.
+  const faviconHref = '/gobookr-safari-calendar-20260910.svg?v=all-pages-1';
+  document.querySelectorAll('link[rel*="icon"]').forEach((link) => link.remove());
 
-    const shortcut = document.createElement('link');
-    shortcut.rel = 'shortcut icon';
-    shortcut.type = 'image/svg+xml';
-    shortcut.href = faviconHref;
-    document.head.appendChild(shortcut);
-  }
+  const icon = document.createElement('link');
+  icon.rel = 'icon';
+  icon.type = 'image/svg+xml';
+  icon.sizes = 'any';
+  icon.href = faviconHref;
+  document.head.appendChild(icon);
+
+  const shortcut = document.createElement('link');
+  shortcut.rel = 'shortcut icon';
+  shortcut.type = 'image/svg+xml';
+  shortcut.href = faviconHref;
+  document.head.appendChild(shortcut);
 })();
 
 (() => {
