@@ -133,3 +133,20 @@
     }, (message) => { if (status) status.textContent = message; button.disabled = false; });
   });
 })();
+
+(() => {
+  const NAV_VERSION = 'gobookr-calendar-20260910-2';
+  document.querySelectorAll('a[href]').forEach((link) => {
+    const raw = link.getAttribute('href');
+    if (!raw || !raw.startsWith('/')) return;
+    if (raw.startsWith('//') || raw.startsWith('/logout')) return;
+
+    try {
+      const url = new URL(raw, window.location.origin);
+      if (url.pathname === '/search' || url.pathname === '/signup') {
+        url.searchParams.set('_gb', NAV_VERSION);
+        link.setAttribute('href', url.pathname + url.search + url.hash);
+      }
+    } catch (_) {}
+  });
+})();
