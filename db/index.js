@@ -22,7 +22,7 @@ CREATE TABLE IF NOT EXISTS pro_profiles (
  license_number TEXT,license_state TEXT,license_verified INTEGER NOT NULL DEFAULT 0,latitude REAL,longitude REAL,instagram_url TEXT NOT NULL DEFAULT '',tiktok_url TEXT NOT NULL DEFAULT '',facebook_url TEXT NOT NULL DEFAULT '',website_url TEXT NOT NULL DEFAULT '',booking_url TEXT NOT NULL DEFAULT '',onboarding_completed INTEGER NOT NULL DEFAULT 0,price_min INTEGER NOT NULL DEFAULT 0,price_max INTEGER NOT NULL DEFAULT 0,years_experience INTEGER NOT NULL DEFAULT 0,accent TEXT NOT NULL DEFAULT 'violet',initials TEXT NOT NULL DEFAULT '',created_at TEXT NOT NULL DEFAULT (datetime('now')));
 CREATE TABLE IF NOT EXISTS pro_categories (
  pro_id INTEGER NOT NULL REFERENCES pro_profiles(id) ON DELETE CASCADE,
- category TEXT NOT NULL CHECK (category IN ('barber','stylist','colorist','nail_technician')),
+ category TEXT NOT NULL CHECK (category IN ('barber','stylist','colorist','nail_technician','eyelash_technician','eyebrow_technician','waxing_specialist')),
  PRIMARY KEY (pro_id, category)
 );
 CREATE TABLE IF NOT EXISTS services (id INTEGER PRIMARY KEY AUTOINCREMENT,pro_id INTEGER NOT NULL REFERENCES pro_profiles(id) ON DELETE CASCADE,name TEXT NOT NULL,price INTEGER NOT NULL,duration_minutes INTEGER NOT NULL DEFAULT 30);
@@ -55,6 +55,35 @@ CREATE TABLE IF NOT EXISTS password_reset_tokens (
 );
 CREATE INDEX IF NOT EXISTS idx_pro_profiles_category ON pro_profiles(category); CREATE INDEX IF NOT EXISTS idx_pro_profiles_city ON pro_profiles(city); CREATE INDEX IF NOT EXISTS idx_pro_categories_category ON pro_categories(category); CREATE INDEX IF NOT EXISTS idx_services_pro ON services(pro_id); CREATE INDEX IF NOT EXISTS idx_portfolio_pro ON portfolio_items(pro_id); CREATE INDEX IF NOT EXISTS idx_reviews_pro ON reviews(pro_id); CREATE INDEX IF NOT EXISTS idx_bookings_pro ON booking_requests(pro_id); CREATE INDEX IF NOT EXISTS idx_bookings_customer ON booking_requests(customer_id); CREATE INDEX IF NOT EXISTS idx_subscriptions_status ON subscriptions(status); CREATE INDEX IF NOT EXISTS idx_sessions_user ON sessions(user_id); CREATE INDEX IF NOT EXISTS idx_password_reset_user ON password_reset_tokens(user_id); CREATE INDEX IF NOT EXISTS idx_password_reset_expires ON password_reset_tokens(expires_at);
 `);
+
+// SQLite cannot alter an existing CHECK constraint in place. Upgrade older
+// pro_categories tables so existing databases can store the expanded category set.
+const proCategoriesTable = db.prepare("SELECT sql FROM sqlite_master WHERE type = 'table' AND name = 'pro_categories'").get();
+if (proCategoriesTable && !String(proCategoriesTable.sql || '').includes("'eyelash_technician'")) {
+  db.exec('PRAGMA foreign_keys = OFF;');
+  try {
+    db.exec(`
+      BEGIN IMMEDIATE;
+      CREATE TABLE pro_categories_new (
+        pro_id INTEGER NOT NULL REFERENCES pro_profiles(id) ON DELETE CASCADE,
+        category TEXT NOT NULL CHECK (category IN ('barber','stylist','colorist','nail_technician','eyelash_technician','eyebrow_technician','waxing_specialist')),
+        PRIMARY KEY (pro_id, category)
+      );
+      INSERT OR IGNORE INTO pro_categories_new (pro_id, category)
+      SELECT pro_id, category FROM pro_categories;
+      DROP TABLE pro_categories;
+      ALTER TABLE pro_categories_new RENAME TO pro_categories;
+      CREATE INDEX IF NOT EXISTS idx_pro_categories_category ON pro_categories(category);
+      COMMIT;
+    `);
+  } catch (err) {
+    try { db.exec('ROLLBACK;'); } catch (_) {}
+    throw err;
+  } finally {
+    db.exec('PRAGMA foreign_keys = ON;');
+  }
+}
+
 const userColumns=db.prepare('PRAGMA table_info(users)').all(); const addUserColumn=(name,sql)=>{if(!userColumns.some(c=>c.name===name)) db.exec(sql);};
 addUserColumn('google_sub','ALTER TABLE users ADD COLUMN google_sub TEXT');
 addUserColumn('auth_provider',"ALTER TABLE users ADD COLUMN auth_provider TEXT NOT NULL DEFAULT 'password'");
