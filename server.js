@@ -25,6 +25,7 @@ require('./routes/billing')(router);
 const PORT = process.env.PORT || 3000;
 const PUBLIC_DIR = path.join(__dirname, 'public');
 
+// Keep session lookup defensive so a stale deployment cannot take the whole site down.
 function getSessionUserSafe(req) {
   if (typeof authModule.getSessionUser !== 'function') {
     console.warn('Session helper unavailable; continuing as signed out.');
