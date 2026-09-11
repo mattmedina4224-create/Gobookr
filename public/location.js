@@ -2,7 +2,7 @@
 
 (() => {
   // Use the same main GoBookr browser-tab favicon on every page.
-  const faviconHref = '/gobookr-favicon-final-20260910.svg?v=main-logo-final-1';
+  const faviconHref = '/gobookr-favicon-navy-20260910-v2.svg?v=navy-2';
   document.querySelectorAll('link[rel*="icon"]').forEach((link) => link.remove());
 
   const icon = document.createElement('link');
@@ -154,7 +154,7 @@
 })();
 
 (() => {
-  const NAV_VERSION = 'gobookr-main-logo-favicon-final-1';
+  const NAV_VERSION = 'gobookr-navy-favicon-v2';
   document.querySelectorAll('a[href]').forEach((link) => {
     const raw = link.getAttribute('href');
     if (!raw || !raw.startsWith('/')) return;
