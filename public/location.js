@@ -1,8 +1,8 @@
 'use strict';
 
 (() => {
-  // Force the same GoBookr navy-square/white-calendar favicon on every page.
-  const faviconHref = '/gobookr-safari-calendar-20260910.svg?v=all-pages-1';
+  // Force the exact filled GoBookr navy-square/white-calendar logo on every page.
+  const faviconHref = '/gobookr-navy-calendar-v5.svg?v=filled-logo-all-pages-1';
   document.querySelectorAll('link[rel*="icon"]').forEach((link) => link.remove());
 
   const icon = document.createElement('link');
