@@ -1,107 +1,81 @@
-// GoBookr database layer.
-//
-// Uses Node's built-in `node:sqlite` module (no external dependency needed).
 'use strict';
 
-const path = require('node:path');
-const fs = require('node:fs');
-const { DatabaseSync } = require('node:sqlite');
+// GoBookr production database adapter.
+//
+// The app was originally written against Node's synchronous SQLite API. Production
+// now lives in Supabase Postgres. Database calls run on a dedicated worker thread
+// that owns the Postgres connection and preserves the existing prepare().get/all/run
+// interface while the rest of the application is migrated incrementally.
 
-const DATA_DIR = path.join(__dirname, '..', 'data');
-if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true });
-const DB_PATH = path.join(DATA_DIR, 'gobookr.db');
-const db = new DatabaseSync(DB_PATH);
-db.exec('PRAGMA journal_mode = WAL;');
-db.exec('PRAGMA foreign_keys = ON;');
+const {
+  Worker,
+  MessageChannel,
+  receiveMessageOnPort,
+} = require('node:worker_threads');
 
-db.exec(`
-CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY AUTOINCREMENT,email TEXT UNIQUE NOT NULL,password_hash TEXT NOT NULL,role TEXT NOT NULL CHECK (role IN ('customer','pro')),name TEXT NOT NULL,phone TEXT,created_at TEXT NOT NULL DEFAULT (datetime('now')));
-CREATE TABLE IF NOT EXISTS pro_profiles (
- id INTEGER PRIMARY KEY AUTOINCREMENT,user_id INTEGER NOT NULL UNIQUE REFERENCES users(id) ON DELETE CASCADE,business_name TEXT NOT NULL,category TEXT NOT NULL CHECK (category IN ('barber','stylist','colorist')),bio TEXT NOT NULL DEFAULT '',city TEXT NOT NULL,state TEXT NOT NULL,
- workplace_name TEXT NOT NULL DEFAULT '',street_address TEXT NOT NULL DEFAULT '',suite TEXT NOT NULL DEFAULT '',zip_code TEXT NOT NULL DEFAULT '',
- license_number TEXT,license_state TEXT,license_verified INTEGER NOT NULL DEFAULT 0,latitude REAL,longitude REAL,instagram_url TEXT NOT NULL DEFAULT '',tiktok_url TEXT NOT NULL DEFAULT '',facebook_url TEXT NOT NULL DEFAULT '',website_url TEXT NOT NULL DEFAULT '',booking_url TEXT NOT NULL DEFAULT '',onboarding_completed INTEGER NOT NULL DEFAULT 0,price_min INTEGER NOT NULL DEFAULT 0,price_max INTEGER NOT NULL DEFAULT 0,years_experience INTEGER NOT NULL DEFAULT 0,accent TEXT NOT NULL DEFAULT 'violet',initials TEXT NOT NULL DEFAULT '',created_at TEXT NOT NULL DEFAULT (datetime('now')));
-CREATE TABLE IF NOT EXISTS pro_categories (
- pro_id INTEGER NOT NULL REFERENCES pro_profiles(id) ON DELETE CASCADE,
- category TEXT NOT NULL CHECK (category IN ('barber','stylist','colorist','nail_technician','eyelash_technician','eyebrow_technician','waxing_specialist','tattoo_artist')),
- PRIMARY KEY (pro_id, category)
-);
-CREATE TABLE IF NOT EXISTS services (id INTEGER PRIMARY KEY AUTOINCREMENT,pro_id INTEGER NOT NULL REFERENCES pro_profiles(id) ON DELETE CASCADE,name TEXT NOT NULL,price INTEGER NOT NULL,duration_minutes INTEGER NOT NULL DEFAULT 30);
-CREATE TABLE IF NOT EXISTS portfolio_items (id INTEGER PRIMARY KEY AUTOINCREMENT,pro_id INTEGER NOT NULL REFERENCES pro_profiles(id) ON DELETE CASCADE,accent TEXT NOT NULL DEFAULT 'violet',caption TEXT NOT NULL DEFAULT '');
-CREATE TABLE IF NOT EXISTS reviews (id INTEGER PRIMARY KEY AUTOINCREMENT,pro_id INTEGER NOT NULL REFERENCES pro_profiles(id) ON DELETE CASCADE,customer_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,rating INTEGER NOT NULL CHECK (rating BETWEEN 1 AND 5),comment TEXT NOT NULL DEFAULT '',created_at TEXT NOT NULL DEFAULT (datetime('now')));
-CREATE TABLE IF NOT EXISTS booking_requests (id INTEGER PRIMARY KEY AUTOINCREMENT,customer_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,pro_id INTEGER NOT NULL REFERENCES pro_profiles(id) ON DELETE CASCADE,service_name TEXT NOT NULL,preferred_date TEXT NOT NULL DEFAULT '',message TEXT NOT NULL DEFAULT '',status TEXT NOT NULL DEFAULT 'pending' CHECK (status IN ('pending','accepted','declined','completed')),created_at TEXT NOT NULL DEFAULT (datetime('now')));
-CREATE TABLE IF NOT EXISTS subscriptions (
- id INTEGER PRIMARY KEY AUTOINCREMENT,
- pro_id INTEGER NOT NULL UNIQUE REFERENCES pro_profiles(id) ON DELETE CASCADE,
- status TEXT NOT NULL DEFAULT 'trialing' CHECK (status IN ('trialing','active','past_due','canceled','incomplete','unpaid')),
- trial_started_at TEXT NOT NULL DEFAULT (datetime('now')),
- trial_ends_at TEXT NOT NULL DEFAULT (datetime('now','+30 days')),
- stripe_customer_id TEXT NOT NULL DEFAULT '',
- stripe_subscription_id TEXT NOT NULL DEFAULT '',
- stripe_price_id TEXT NOT NULL DEFAULT '',
- current_period_end TEXT,
- cancel_at_period_end INTEGER NOT NULL DEFAULT 0,
- past_due_since TEXT,
- created_at TEXT NOT NULL DEFAULT (datetime('now')),
- updated_at TEXT NOT NULL DEFAULT (datetime('now'))
-);
-CREATE TABLE IF NOT EXISTS sessions (token TEXT PRIMARY KEY,user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,csrf_token TEXT NOT NULL,created_at TEXT NOT NULL DEFAULT (datetime('now')),expires_at TEXT NOT NULL);
-CREATE TABLE IF NOT EXISTS password_reset_tokens (
- id INTEGER PRIMARY KEY AUTOINCREMENT,
- user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
- token_hash TEXT NOT NULL UNIQUE,
- expires_at TEXT NOT NULL,
- used_at TEXT,
- created_at TEXT NOT NULL DEFAULT (datetime('now'))
-);
-CREATE INDEX IF NOT EXISTS idx_pro_profiles_category ON pro_profiles(category); CREATE INDEX IF NOT EXISTS idx_pro_profiles_city ON pro_profiles(city); CREATE INDEX IF NOT EXISTS idx_pro_categories_category ON pro_categories(category); CREATE INDEX IF NOT EXISTS idx_services_pro ON services(pro_id); CREATE INDEX IF NOT EXISTS idx_portfolio_pro ON portfolio_items(pro_id); CREATE INDEX IF NOT EXISTS idx_reviews_pro ON reviews(pro_id); CREATE INDEX IF NOT EXISTS idx_bookings_pro ON booking_requests(pro_id); CREATE INDEX IF NOT EXISTS idx_bookings_customer ON booking_requests(customer_id); CREATE INDEX IF NOT EXISTS idx_subscriptions_status ON subscriptions(status); CREATE INDEX IF NOT EXISTS idx_sessions_user ON sessions(user_id); CREATE INDEX IF NOT EXISTS idx_password_reset_user ON password_reset_tokens(user_id); CREATE INDEX IF NOT EXISTS idx_password_reset_expires ON password_reset_tokens(expires_at);
-`);
+const WORKER_TIMEOUT_MS = Number(process.env.DB_QUERY_TIMEOUT_MS || 30000);
+const worker = new Worker(require.resolve('./postgres-worker'));
+worker.unref();
+let nextMessageId = 1;
 
-// SQLite cannot alter an existing CHECK constraint in place. Upgrade older
-// pro_categories tables so existing databases can store the expanded category set.
-const proCategoriesTable = db.prepare("SELECT sql FROM sqlite_master WHERE type = 'table' AND name = 'pro_categories'").get();
-if (proCategoriesTable && !String(proCategoriesTable.sql || '').includes("'tattoo_artist'")) {
-  db.exec('PRAGMA foreign_keys = OFF;');
-  try {
-    db.exec(`
-      BEGIN IMMEDIATE;
-      CREATE TABLE pro_categories_new (
-        pro_id INTEGER NOT NULL REFERENCES pro_profiles(id) ON DELETE CASCADE,
-        category TEXT NOT NULL CHECK (category IN ('barber','stylist','colorist','nail_technician','eyelash_technician','eyebrow_technician','waxing_specialist','tattoo_artist')),
-        PRIMARY KEY (pro_id, category)
-      );
-      INSERT OR IGNORE INTO pro_categories_new (pro_id, category)
-      SELECT pro_id, category FROM pro_categories;
-      DROP TABLE pro_categories;
-      ALTER TABLE pro_categories_new RENAME TO pro_categories;
-      CREATE INDEX IF NOT EXISTS idx_pro_categories_category ON pro_categories(category);
-      COMMIT;
-    `);
-  } catch (err) {
-    try { db.exec('ROLLBACK;'); } catch (_) {}
-    throw err;
-  } finally {
-    db.exec('PRAGMA foreign_keys = ON;');
+function callWorker(op, sql, args = []) {
+  if (!process.env.DATABASE_URL) {
+    throw new Error('DATABASE_URL is required. Add the Supabase Postgres connection string to the deployment environment.');
   }
+
+  const signalBuffer = new SharedArrayBuffer(Int32Array.BYTES_PER_ELEMENT);
+  const signal = new Int32Array(signalBuffer);
+  const { port1, port2 } = new MessageChannel();
+  const id = nextMessageId++;
+
+  worker.postMessage(
+    { id, op, sql: String(sql || ''), args, signalBuffer, responsePort: port2 },
+    [port2]
+  );
+
+  const waitResult = Atomics.wait(signal, 0, 0, WORKER_TIMEOUT_MS);
+  if (waitResult === 'timed-out') {
+    port1.close();
+    throw new Error(`Database query timed out after ${WORKER_TIMEOUT_MS}ms.`);
+  }
+
+  const packet = receiveMessageOnPort(port1);
+  port1.close();
+  if (!packet || !packet.message || packet.message.id !== id) {
+    throw new Error('Database worker returned an invalid response.');
+  }
+
+  const response = packet.message;
+  if (response.error) {
+    const err = new Error(response.error.message || 'Database query failed.');
+    if (response.error.code) err.code = response.error.code;
+    if (response.error.detail) err.detail = response.error.detail;
+    throw err;
+  }
+  return response.value;
 }
 
-const userColumns=db.prepare('PRAGMA table_info(users)').all(); const addUserColumn=(name,sql)=>{if(!userColumns.some(c=>c.name===name)) db.exec(sql);};
-addUserColumn('google_sub','ALTER TABLE users ADD COLUMN google_sub TEXT');
-addUserColumn('auth_provider',"ALTER TABLE users ADD COLUMN auth_provider TEXT NOT NULL DEFAULT 'password'");
-db.exec('CREATE UNIQUE INDEX IF NOT EXISTS idx_users_google_sub ON users(google_sub) WHERE google_sub IS NOT NULL');
-const portfolioColumns=db.prepare('PRAGMA table_info(portfolio_items)').all(); if(!portfolioColumns.some(c=>c.name==='image_url')) db.exec("ALTER TABLE portfolio_items ADD COLUMN image_url TEXT NOT NULL DEFAULT ''");
-const profileColumns=db.prepare('PRAGMA table_info(pro_profiles)').all(); const addProfileColumn=(name,sql)=>{if(!profileColumns.some(c=>c.name===name)) db.exec(sql);};
-addProfileColumn('latitude','ALTER TABLE pro_profiles ADD COLUMN latitude REAL'); addProfileColumn('longitude','ALTER TABLE pro_profiles ADD COLUMN longitude REAL');
-addProfileColumn('workplace_name',"ALTER TABLE pro_profiles ADD COLUMN workplace_name TEXT NOT NULL DEFAULT ''"); addProfileColumn('street_address',"ALTER TABLE pro_profiles ADD COLUMN street_address TEXT NOT NULL DEFAULT ''"); addProfileColumn('suite',"ALTER TABLE pro_profiles ADD COLUMN suite TEXT NOT NULL DEFAULT ''"); addProfileColumn('zip_code',"ALTER TABLE pro_profiles ADD COLUMN zip_code TEXT NOT NULL DEFAULT ''");
-addProfileColumn('instagram_url',"ALTER TABLE pro_profiles ADD COLUMN instagram_url TEXT NOT NULL DEFAULT ''"); addProfileColumn('tiktok_url',"ALTER TABLE pro_profiles ADD COLUMN tiktok_url TEXT NOT NULL DEFAULT ''"); addProfileColumn('facebook_url',"ALTER TABLE pro_profiles ADD COLUMN facebook_url TEXT NOT NULL DEFAULT ''"); addProfileColumn('website_url',"ALTER TABLE pro_profiles ADD COLUMN website_url TEXT NOT NULL DEFAULT ''"); addProfileColumn('booking_url',"ALTER TABLE pro_profiles ADD COLUMN booking_url TEXT NOT NULL DEFAULT ''"); addProfileColumn('onboarding_completed','ALTER TABLE pro_profiles ADD COLUMN onboarding_completed INTEGER NOT NULL DEFAULT 0');
-const subscriptionColumns=db.prepare('PRAGMA table_info(subscriptions)').all(); if(!subscriptionColumns.some(c=>c.name==='past_due_since')) db.exec('ALTER TABLE subscriptions ADD COLUMN past_due_since TEXT');
+function prepare(sql) {
+  return {
+    get(...args) {
+      return callWorker('get', sql, args);
+    },
+    all(...args) {
+      return callWorker('all', sql, args);
+    },
+    run(...args) {
+      return callWorker('run', sql, args);
+    },
+  };
+}
 
-db.exec(`
-INSERT OR IGNORE INTO pro_categories (pro_id, category)
-SELECT id, category FROM pro_profiles
-WHERE category IN ('barber','stylist','colorist');
+function exec(sql) {
+  return callWorker('exec', sql, []);
+}
 
-INSERT OR IGNORE INTO subscriptions (pro_id, status, trial_started_at, trial_ends_at)
-SELECT id, 'trialing', datetime('now'), datetime('now','+30 days') FROM pro_profiles;
-`);
+function close() {
+  try { callWorker('close', '', []); } catch (_) {}
+  worker.terminate();
+}
 
-module.exports=db;
+module.exports = { prepare, exec, close };
