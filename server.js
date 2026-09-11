@@ -6,7 +6,7 @@ const path = require('node:path');
 const { URL } = require('node:url');
 
 const Router = require('./lib/router');
-const { getSessionUser } = require('./lib/auth');
+const authModule = require('./lib/auth');
 const layoutModule = require('./lib/layout');
 const { installBillingBanner } = require('./lib/pro-billing-banner');
 const { checkAuthRateLimit } = require('./lib/rate-limit');
@@ -24,6 +24,14 @@ require('./routes/legal')(router);
 require('./routes/billing')(router);
 const PORT = process.env.PORT || 3000;
 const PUBLIC_DIR = path.join(__dirname, 'public');
+
+function getSessionUserSafe(req) {
+  if (typeof authModule.getSessionUser !== 'function') {
+    console.warn('Session helper unavailable; continuing as signed out.');
+    return null;
+  }
+  return authModule.getSessionUser(req);
+}
 
 const MIME = {
   '.css': 'text/css; charset=utf-8',
@@ -97,7 +105,7 @@ const server = http.createServer(async (req, res) => {
     }
     const match = router.match(req.method, pathname);
     if (!match) { res.writeHead(404, { 'Content-Type': 'text/html; charset=utf-8' }); res.end('<h1>404 — page not found</h1><p><a href="/">Back to GoBookr</a></p>'); return; }
-    const session = getSessionUser(req);
+    const session = getSessionUserSafe(req);
     const ctx = { req, res, params: match.params, query: Object.fromEntries(parsedUrl.searchParams.entries()), currentUser: session ? session.user : null, session: session ? session.session : null, files: {}, rawBody: null };
     let multipartDebug = null;
     if (req.method === 'POST') {
