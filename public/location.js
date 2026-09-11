@@ -4,6 +4,7 @@
   const pageFavicons = {
     '/signup': '/gobookr-signup-calendar-20260910.svg',
     '/search': '/gobookr-find-pro-calendar-20260910.svg',
+    '/login': '/gobookr-login-calendar-20260910.svg',
   };
   const faviconHref = pageFavicons[window.location.pathname];
   if (faviconHref) {
