@@ -22,7 +22,7 @@ CREATE TABLE IF NOT EXISTS pro_profiles (
  license_number TEXT,license_state TEXT,license_verified INTEGER NOT NULL DEFAULT 0,latitude REAL,longitude REAL,instagram_url TEXT NOT NULL DEFAULT '',tiktok_url TEXT NOT NULL DEFAULT '',facebook_url TEXT NOT NULL DEFAULT '',website_url TEXT NOT NULL DEFAULT '',booking_url TEXT NOT NULL DEFAULT '',onboarding_completed INTEGER NOT NULL DEFAULT 0,price_min INTEGER NOT NULL DEFAULT 0,price_max INTEGER NOT NULL DEFAULT 0,years_experience INTEGER NOT NULL DEFAULT 0,accent TEXT NOT NULL DEFAULT 'violet',initials TEXT NOT NULL DEFAULT '',created_at TEXT NOT NULL DEFAULT (datetime('now')));
 CREATE TABLE IF NOT EXISTS pro_categories (
  pro_id INTEGER NOT NULL REFERENCES pro_profiles(id) ON DELETE CASCADE,
- category TEXT NOT NULL CHECK (category IN ('barber','stylist','colorist','nail_technician','eyelash_technician','eyebrow_technician','waxing_specialist')),
+ category TEXT NOT NULL CHECK (category IN ('barber','stylist','colorist','nail_technician','eyelash_technician','eyebrow_technician','waxing_specialist','tattoo_artist')),
  PRIMARY KEY (pro_id, category)
 );
 CREATE TABLE IF NOT EXISTS services (id INTEGER PRIMARY KEY AUTOINCREMENT,pro_id INTEGER NOT NULL REFERENCES pro_profiles(id) ON DELETE CASCADE,name TEXT NOT NULL,price INTEGER NOT NULL,duration_minutes INTEGER NOT NULL DEFAULT 30);
@@ -59,14 +59,14 @@ CREATE INDEX IF NOT EXISTS idx_pro_profiles_category ON pro_profiles(category); 
 // SQLite cannot alter an existing CHECK constraint in place. Upgrade older
 // pro_categories tables so existing databases can store the expanded category set.
 const proCategoriesTable = db.prepare("SELECT sql FROM sqlite_master WHERE type = 'table' AND name = 'pro_categories'").get();
-if (proCategoriesTable && !String(proCategoriesTable.sql || '').includes("'eyelash_technician'")) {
+if (proCategoriesTable && !String(proCategoriesTable.sql || '').includes("'tattoo_artist'")) {
   db.exec('PRAGMA foreign_keys = OFF;');
   try {
     db.exec(`
       BEGIN IMMEDIATE;
       CREATE TABLE pro_categories_new (
         pro_id INTEGER NOT NULL REFERENCES pro_profiles(id) ON DELETE CASCADE,
-        category TEXT NOT NULL CHECK (category IN ('barber','stylist','colorist','nail_technician','eyelash_technician','eyebrow_technician','waxing_specialist')),
+        category TEXT NOT NULL CHECK (category IN ('barber','stylist','colorist','nail_technician','eyelash_technician','eyebrow_technician','waxing_specialist','tattoo_artist')),
         PRIMARY KEY (pro_id, category)
       );
       INSERT OR IGNORE INTO pro_categories_new (pro_id, category)
