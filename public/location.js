@@ -1,19 +1,20 @@
 'use strict';
 
 (() => {
-  // Use the same browser-tab favicon on every GoBookr page.
-  const faviconHref = '/favicon.ico?v=gobookr-tab-final-1';
+  // Use the same main GoBookr browser-tab favicon on every page.
+  const faviconHref = '/gobookr-favicon-final-20260910.svg?v=main-logo-final-1';
   document.querySelectorAll('link[rel*="icon"]').forEach((link) => link.remove());
 
   const icon = document.createElement('link');
   icon.rel = 'icon';
-  icon.type = 'image/x-icon';
+  icon.type = 'image/svg+xml';
+  icon.sizes = 'any';
   icon.href = faviconHref;
   document.head.appendChild(icon);
 
   const shortcut = document.createElement('link');
   shortcut.rel = 'shortcut icon';
-  shortcut.type = 'image/x-icon';
+  shortcut.type = 'image/svg+xml';
   shortcut.href = faviconHref;
   document.head.appendChild(shortcut);
 })();
@@ -153,7 +154,7 @@
 })();
 
 (() => {
-  const NAV_VERSION = 'gobookr-calendar-20260910-2';
+  const NAV_VERSION = 'gobookr-main-logo-favicon-final-1';
   document.querySelectorAll('a[href]').forEach((link) => {
     const raw = link.getAttribute('href');
     if (!raw || !raw.startsWith('/')) return;
