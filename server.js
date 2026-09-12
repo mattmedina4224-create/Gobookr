@@ -16,6 +16,7 @@ installBillingBanner(layoutModule);
 const router = new Router();
 require('./routes/public')(router);
 require('./routes/auth')(router);
+require('./routes/become-pro')(router);
 require('./routes/google')(router);
 require('./routes/pro')(router);
 require('./routes/customer')(router);
