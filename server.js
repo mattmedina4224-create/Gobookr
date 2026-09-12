@@ -22,6 +22,7 @@ require('./routes/pro')(router);
 require('./routes/customer')(router);
 require('./routes/admin')(router);
 require('./routes/legal')(router);
+require('./routes/embedded-billing')(router);
 require('./routes/billing')(router);
 const PORT = process.env.PORT || 3000;
 const PUBLIC_DIR = path.join(__dirname, 'public');
