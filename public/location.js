@@ -1,24 +1,40 @@
 'use strict';
 
 (() => {
-  // Use the same main GoBookr browser-tab favicon on every page.
-  const faviconHref = window.location.pathname === '/'
-    ? '/gobookr-home-tab-20260910.svg?v=home-tab-final-1'
-    : '/gobookr-favicon-navy-20260910-v2.svg?v=navy-home-final-3';
+  // Keep one GoBookr brand icon everywhere: browser tabs and the site header.
+  const brandHref = '/gobookr-brand-20260912.svg?v=brand-20260912-1';
   document.querySelectorAll('link[rel*="icon"]').forEach((link) => link.remove());
 
   const icon = document.createElement('link');
   icon.rel = 'icon';
   icon.type = 'image/svg+xml';
   icon.sizes = 'any';
-  icon.href = faviconHref;
+  icon.href = brandHref;
   document.head.appendChild(icon);
 
   const shortcut = document.createElement('link');
   shortcut.rel = 'shortcut icon';
   shortcut.type = 'image/svg+xml';
-  shortcut.href = faviconHref;
+  shortcut.href = brandHref;
   document.head.appendChild(shortcut);
+
+  const brand = document.querySelector('.site-header .brand');
+  if (brand) {
+    const oldMark = brand.querySelector('.mark, .brand-mark');
+    if (oldMark) {
+      const logo = document.createElement('img');
+      logo.src = brandHref;
+      logo.alt = '';
+      logo.className = 'brand-mark';
+      logo.width = 36;
+      logo.height = 36;
+      logo.style.width = '36px';
+      logo.style.height = '36px';
+      logo.style.borderRadius = '9px';
+      logo.style.flex = '0 0 auto';
+      oldMark.replaceWith(logo);
+    }
+  }
 })();
 
 (() => {
@@ -189,7 +205,7 @@
 })();
 
 (() => {
-  const NAV_VERSION = 'gobookr-home-tab-final-1';
+  const NAV_VERSION = 'gobookr-brand-20260912-1';
   document.querySelectorAll('a[href]').forEach((link) => {
     const raw = link.getAttribute('href');
     if (!raw || !raw.startsWith('/')) return;
