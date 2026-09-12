@@ -25,18 +25,29 @@ function requirePro(ctx) {
   return profile;
 }
 
+function parseDatabaseDate(value) {
+  if (!value) return null;
+  if (value instanceof Date) return Number.isNaN(value.getTime()) ? null : value;
+  const raw = String(value).trim();
+  if (!raw) return null;
+  const hasTimezone = /(?:Z|[+-]\d{2}:?\d{2})$/i.test(raw);
+  const normalized = hasTimezone
+    ? raw
+    : (/^\d{4}-\d{2}-\d{2}[ T]\d{2}:\d{2}/.test(raw) ? raw.replace(' ', 'T') + 'Z' : raw);
+  const date = new Date(normalized);
+  return Number.isNaN(date.getTime()) ? null : date;
+}
+
 function prettyDate(value) {
-  if (!value) return '—';
-  const date = new Date(String(value).replace(' ', 'T') + 'Z');
-  if (Number.isNaN(date.getTime())) return escapeHtml(value);
+  const date = parseDatabaseDate(value);
+  if (!date) return value ? escapeHtml(String(value)) : '—';
   return date.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
 }
 
 function daysRemaining(value) {
-  if (!value) return 0;
-  const end = new Date(String(value).replace(' ', 'T') + 'Z').getTime();
-  if (!Number.isFinite(end)) return 0;
-  return Math.max(0, Math.ceil((end - Date.now()) / 86400000));
+  const date = parseDatabaseDate(value);
+  if (!date) return 0;
+  return Math.max(0, Math.ceil((date.getTime() - Date.now()) / 86400000));
 }
 
 function statusLabel(status) {
@@ -90,7 +101,7 @@ module.exports = function (router) {
       ? `<p class="helptext">Cancellation, reactivation, payment-method updates, and invoices are handled securely through Stripe's customer portal.</p>`
       : `<p class="helptext">Subscription management becomes available after Stripe checkout is connected.</p>`;
 
-    const body = `<section class="section container"><div class="dash-layout"><nav class="dash-nav"><a href="/dashboard/pro">Overview</a><a href="/dashboard/pro/profile">Profile &amp; services</a><a href="/dashboard/pro/portfolio">Portfolio</a><a class="active" href="/dashboard/pro/billing">Billing</a></nav><div><h1>Billing &amp; subscription</h1>${notice}<div class="panel"><div style="display:flex;justify-content:space-between;align-items:flex-start;gap:20px;flex-wrap:wrap;"><div><p class="muted" style="margin:0 0 4px;">GoBookr Professional</p><h2 style="margin:0;">$15 <span class="muted" style="font-size:16px;font-weight:500;">/ month</span></h2>${trialText}</div><span class="badge category">${escapeHtml(statusLabel(subscription.status))}</span></div><div style="border-top:1px solid var(--paper-line);margin-top:22px;padding-top:18px;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:18px;"><div><div class="muted" style="font-size:13px;">${billingLabel}</div><strong>${prettyDate(isTrial ? subscription.trial_ends_at : subscription.current_period_end)}</strong></div><div><div class="muted" style="font-size:13px;">Renewal price</div><strong>$15/month</strong></div><div><div class="muted" style="font-size:13px;">Auto-renewal</div><strong>${cancelPending ? 'Off' : 'On'}</strong></div></div></div><div class="panel"><h3>Payment method</h3><p class="muted">Payments are securely processed by Stripe. Professionals can use major cards and, when available on their device and browser, Apple Pay. GoBookr never stores raw card or Apple Pay payment details.</p>${paymentButton}</div><div class="panel"><h3>Manage subscription</h3><p>Your membership renews monthly after the 30-day free trial unless canceled. Failed payments receive a 7-day grace period before an unpaid professional profile is temporarily hidden.</p>${manageArea}</div><p class="helptext">${configured ? 'Stripe test-mode billing is configured in code. Use test keys until the full billing flow is verified.' : 'No payment will be charged until Stripe environment keys are configured and tested.'}</p></div></div></section>`;
+    const body = `<section class="section container"><div class="dash-layout"><nav class="dash-nav"><a href="/dashboard/pro">Overview</a><a href="/dashboard/pro/profile">Profile &amp; services</a><a href="/dashboard/pro/portfolio">Portfolio</a><a class="active" href="/dashboard/pro/billing">Billing</a></nav><div><h1>Billing &amp; subscription</h1>${notice}<div class="panel"><div style="display:flex;justify-content:space-between;align-items:flex-start;gap:20px;flex-wrap:wrap;"><div><p class="muted" style="margin:0 0 4px;">GoBookr Professional</p><h2 style="margin:0;">$15 <span class="muted" style="font-size:16px;font-weight:500;">/ month</span></h2>${trialText}</div><span class="badge category">${escapeHtml(statusLabel(subscription.status))}</span></div><div style="border-top:1px solid var(--paper-line);margin-top:22px;padding-top:18px;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:18px;"><div><div class="muted" style="font-size:13px;">${billingLabel}</div><strong>${prettyDate(isTrial ? subscription.trial_ends_at : subscription.current_period_end)}</strong></div><div><div class="muted" style="font-size:13px;">Renewal price</div><strong>$15/month</strong></div><div><div class="muted" style="font-size:13px;">Auto-renewal</div><strong>${cancelPending ? 'Off' : 'On'}</strong></div></div></div><div class="panel"><h3>Payment method</h3><p class="muted">Payments are securely processed by Stripe. Professionals can use major cards and, when available on their device and browser, Apple Pay. GoBookr never stores raw card or Apple Pay payment details.</p>${paymentButton}</div><div class="panel"><h3>Manage subscription</h3><p>Your membership renews monthly after the 30-day free trial unless canceled. Failed payments receive a 7-day grace period before an unpaid professional profile is temporarily hidden.</p>${manageArea}</div><p class="helptext">${configured ? 'Stripe billing is configured.' : 'No payment will be charged until Stripe environment keys are configured and tested.'}</p></div></div></section>`;
     send(ctx.res, layout({ title: 'Billing & subscription', currentUser: ctx.currentUser, session: ctx.session, flash: flashFromQuery(ctx.query), body }));
   });
 
