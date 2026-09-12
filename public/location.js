@@ -127,7 +127,40 @@
     });
   }
 
-  addBusinessGpsHelper();
+  function polishProfessionalProfile() {
+    if (window.location.pathname !== '/dashboard/pro/profile') return;
+    const form = document.querySelector('form[action="/dashboard/pro/profile"]');
+    if (!form) return;
+
+    // Professional location comes from the saved business address, not device GPS.
+    document.querySelectorAll('[data-business-gps]').forEach((el) => el.remove());
+
+    const bookingInput = form.querySelector('#booking_url');
+    if (bookingInput) {
+      bookingInput.type = 'text';
+      bookingInput.inputMode = 'url';
+      bookingInput.autocomplete = 'url';
+      bookingInput.placeholder = 'novobarbers.com or your booking link';
+      const field = bookingInput.closest('.field');
+      const help = field && field.querySelector('.helptext');
+      if (field) field.style.marginBottom = '28px';
+      if (help) {
+        help.style.display = 'block';
+        help.style.position = 'static';
+        help.style.marginTop = '8px';
+        help.style.lineHeight = '1.45';
+      }
+    }
+
+    const workplaceHeading = Array.from(form.querySelectorAll('h3')).find((el) => el.textContent.trim() === 'Where do you work?');
+    if (workplaceHeading && workplaceHeading.parentElement) {
+      const detail = workplaceHeading.parentElement.querySelector('p');
+      if (detail) detail.textContent = 'Enter the business address below. GoBookr uses it to calculate distance for nearby customers.';
+    }
+  }
+
+  // Keep business location address-based for professionals.
+  polishProfessionalProfile();
 
   const existing = storedLocation();
   if (existing) updateDistances(existing.lat, existing.lon);
