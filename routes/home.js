@@ -58,28 +58,145 @@ module.exports = function (router) {
 
     const body = `
 <style>
-  .home-shell { background:#fff; }
+  .home-shell { background:#fff; color:#11131c; }
   .home-hero {
-    background: radial-gradient(900px 420px at 12% -10%, #eef3ff 0%, transparent 58%), #fff;
-    border-bottom:1px solid var(--paper-line);
-    padding:54px 0 46px;
+    background:
+      radial-gradient(760px 360px at 12% -10%, rgba(229,238,255,.9) 0%, rgba(255,255,255,0) 62%),
+      #fff;
+    border-bottom:1px solid #edf0f6;
+    padding:64px 0 54px;
   }
-  .home-eyebrow { margin:0 0 18px; color:#6077aa; font-size:.79rem; font-weight:800; letter-spacing:.16em; text-transform:uppercase; }
-  .home-hero h1 { max-width:760px; margin:0 0 18px; font-size:clamp(2.5rem,6vw,4.2rem); line-height:1.03; letter-spacing:-.045em; }
-  .home-hero .lede { max-width:700px; margin:0; font-size:1.12rem; line-height:1.55; color:#4a5063; }
-  .home-search-card { max-width:800px; margin-top:30px; padding:14px; border:1px solid #e3e7ef; border-radius:24px; background:#fff; box-shadow:0 14px 40px -28px rgba(25,40,80,.35); }
-  .home-search-card form { display:grid; grid-template-columns:1.15fr 1fr 1fr auto; align-items:center; gap:8px; }
-  .home-search-card select,
-  .home-search-card input { min-height:54px; border:1px solid #e5e8ef; border-radius:999px; padding:0 18px; background:#fff; }
-  .home-search-card .btn { min-height:54px; padding:0 26px; white-space:nowrap; }
-  .home-pills { display:flex; flex-wrap:wrap; gap:10px; margin-top:18px; }
-  .home-pills a { padding:8px 15px; border:1px solid #e1e5ed; border-radius:999px; background:#fff; color:#394057; font-size:.87rem; font-weight:650; }
-  .home-section { padding:48px 0 54px; background:#fff; }
+  .home-eyebrow {
+    margin:0 0 20px;
+    color:#627caf;
+    font-size:.8rem;
+    font-weight:850;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+  }
+  .home-hero h1 {
+    max-width:800px;
+    margin:0 0 22px;
+    font-size:clamp(2.8rem,6vw,4.65rem);
+    line-height:.98;
+    letter-spacing:-.052em;
+    color:#11131c;
+  }
+  .home-hero .lede {
+    max-width:750px;
+    margin:0;
+    color:#50586a;
+    font-size:1.15rem;
+    line-height:1.58;
+  }
+
+  .home-search-card {
+    max-width:850px;
+    margin-top:34px;
+    padding:18px;
+    border:1px solid #e2e7f0;
+    border-radius:28px;
+    background:rgba(255,255,255,.96);
+    box-shadow:0 20px 50px -32px rgba(21,44,87,.42);
+  }
+  .home-search-card form {
+    display:grid;
+    grid-template-columns:1.15fr 1fr 1fr auto;
+    gap:10px;
+    align-items:center;
+  }
+  .home-field {
+    min-height:58px;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:0 17px;
+    border:1px solid #dfe4ed;
+    border-radius:999px;
+    background:#fff;
+  }
+  .home-field svg { width:23px; height:23px; flex:0 0 23px; color:#11131c; }
+  .home-field select,
+  .home-field input {
+    width:100%;
+    min-width:0;
+    height:54px;
+    border:0 !important;
+    outline:0;
+    padding:0 !important;
+    background:transparent !important;
+    color:#171b26;
+    font:inherit;
+    box-shadow:none !important;
+  }
+  .home-field input::placeholder { color:#a0a6b3; }
+  .home-field:focus-within {
+    border-color:#b7ccf7;
+    box-shadow:0 0 0 3px rgba(78,126,214,.09);
+  }
+  .home-search-card .btn {
+    min-height:58px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    padding:0 30px;
+    border-radius:999px;
+    background:linear-gradient(135deg,#14264c,#123c70);
+    color:#fff;
+    font-weight:800;
+    border:0;
+    box-shadow:0 10px 24px -14px rgba(17,49,93,.75);
+    white-space:nowrap;
+  }
+  .home-search-card .btn:hover { transform:translateY(-1px); }
+
+  .home-trust-row {
+    max-width:850px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:0;
+    margin-top:22px;
+  }
+  .home-trust-item {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    padding:4px 16px;
+    color:#34405b;
+    font-size:.89rem;
+    font-weight:700;
+  }
+  .home-trust-item + .home-trust-item { border-left:1px solid #e6eaf1; }
+  .home-trust-icon {
+    width:38px;
+    height:38px;
+    display:grid;
+    place-items:center;
+    border-radius:50%;
+    background:#f0f5ff;
+    color:#2456a3;
+  }
+  .home-trust-icon svg { width:21px; height:21px; }
+
+  .home-pills { display:flex; flex-wrap:wrap; gap:10px; margin-top:24px; }
+  .home-pills a {
+    padding:8px 14px;
+    border:1px solid #e3e7ee;
+    border-radius:999px;
+    background:#fff;
+    color:#41495e;
+    font-size:.86rem;
+    font-weight:700;
+  }
+
+  .home-section { padding:52px 0 58px; background:#fff; }
   .home-section-head { display:flex; align-items:center; justify-content:space-between; gap:16px; margin-bottom:20px; }
-  .home-section-head h2 { margin:0; font-size:1.75rem; letter-spacing:-.025em; }
-  .home-see-all { color:#1967d2; font-weight:700; }
+  .home-section-head h2 { margin:0; font-size:1.75rem; letter-spacing:-.03em; }
+  .home-see-all { color:#215ca6; font-weight:750; }
   .home-pro-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; }
-  .home-pro-card { overflow:hidden; border:1px solid #e5e8ef; border-radius:20px; background:#fff; box-shadow:0 8px 28px -22px rgba(25,40,80,.4); }
+  .home-pro-card { overflow:hidden; border:1px solid #e5e8ef; border-radius:22px; background:#fff; box-shadow:0 10px 28px -24px rgba(25,40,80,.45); }
   .home-pro-photo { width:100%; aspect-ratio:1.45; object-fit:cover; background:#eef1f7; }
   .home-pro-placeholder { display:flex; align-items:center; justify-content:center; color:#fff; background:linear-gradient(135deg,#1e2a4a,#38568f); font-size:2rem; font-weight:800; }
   .home-pro-info { padding:15px; }
@@ -88,7 +205,13 @@ module.exports = function (router) {
   .home-pro-rating { color:#d28a20; font-size:.84rem; }
   .home-pro-rating b,.home-pro-rating span { color:#555b6e; }
   .home-pro-new { color:#777f92; font-size:.84rem; }
+
   .home-mobile-menu-button,.home-mobile-menu { display:none; }
+
+  @media (max-width:900px) {
+    .home-search-card form { grid-template-columns:1fr 1fr; }
+    .home-search-card .btn { grid-column:1 / -1; }
+  }
 
   @media (max-width:720px) {
     body { background:#fff; }
@@ -126,7 +249,7 @@ module.exports = function (router) {
       display:inline-flex !important;
       width:42px;
       height:42px;
-      border:1px solid #e3e7ef;
+      border:0;
       border-radius:12px;
       background:#fff;
       padding:7px;
@@ -135,7 +258,7 @@ module.exports = function (router) {
       justify-content:center;
       color:#111b35;
     }
-    .home-mobile-menu-button svg { width:25px; height:25px; }
+    .home-mobile-menu-button svg { width:27px; height:27px; }
     .home-mobile-menu {
       display:none;
       position:absolute;
@@ -153,22 +276,25 @@ module.exports = function (router) {
     .home-mobile-menu a { display:block; padding:12px 14px; border-radius:10px; font-weight:650; color:#252c40; }
     .home-mobile-menu a:last-child { background:#1e2a4a; color:#fff; text-align:center; margin-top:4px; }
 
-    .home-hero { padding:34px 0 34px; }
+    .home-hero { padding:36px 0 38px; }
     .home-hero .container { padding:0 18px; }
-    .home-eyebrow { margin-bottom:14px; font-size:.68rem; letter-spacing:.14em; }
-    .home-hero h1 { font-size:2.55rem; line-height:1.02; margin-bottom:18px; max-width:100%; }
-    .home-hero .lede { font-size:1rem; line-height:1.48; }
-    .home-search-card { margin-top:26px; padding:12px; border-radius:22px; }
-    .home-search-card form { display:grid !important; grid-template-columns:1fr !important; gap:9px !important; padding:0 !important; border:0 !important; border-radius:0 !important; overflow:visible !important; background:transparent !important; }
-    .home-search-card form > select,
-    .home-search-card form > input,
-    .home-search-card form > div { width:100% !important; min-height:58px !important; border:1px solid #e1e5ed !important; border-radius:999px !important; padding:0 16px !important; background:#fff !important; }
-    .home-search-card form > div { display:flex !important; align-items:center !important; border-top:1px solid #e1e5ed !important; }
-    .home-search-card form > div input { min-height:54px !important; padding:0 8px !important; }
-    .home-search-card form button[type="submit"] { width:100% !important; height:58px !important; min-height:58px !important; border-radius:999px !important; justify-self:stretch !important; font-size:1rem !important; gap:9px !important; }
-    .home-pills { gap:8px; margin-top:16px; }
-    .home-pills a { padding:7px 12px; font-size:.8rem; }
-    .home-section { padding:38px 0 44px; }
+    .home-eyebrow { margin-bottom:16px; font-size:.68rem; letter-spacing:.16em; }
+    .home-hero h1 { font-size:2.65rem; line-height:1.01; margin-bottom:20px; max-width:100%; }
+    .home-hero .lede { font-size:1rem; line-height:1.52; }
+
+    .home-search-card { margin-top:28px; padding:12px; border-radius:25px; box-shadow:0 16px 34px -28px rgba(25,40,80,.45); }
+    .home-search-card form { display:grid !important; grid-template-columns:1fr !important; gap:10px !important; }
+    .home-field { min-height:62px; padding:0 18px; }
+    .home-field select,.home-field input { height:58px; font-size:1rem; }
+    .home-search-card .btn { width:100%; min-height:62px; font-size:1rem; }
+
+    .home-trust-row { margin-top:20px; }
+    .home-trust-item { gap:8px; padding:4px 8px; font-size:.76rem; line-height:1.15; }
+    .home-trust-icon { width:34px; height:34px; flex:0 0 34px; }
+    .home-trust-icon svg { width:18px; height:18px; }
+
+    .home-pills { display:none; }
+    .home-section { padding:40px 0 46px; }
     .home-section .container { padding:0 18px; }
     .home-section-head { margin-bottom:16px; }
     .home-section-head h2 { font-size:1.42rem; }
@@ -179,7 +305,8 @@ module.exports = function (router) {
 
   @media (max-width:390px) {
     .brand { width:148px !important; flex-basis:148px !important; }
-    .home-hero h1 { font-size:2.3rem; }
+    .home-hero h1 { font-size:2.38rem; }
+    .home-trust-item { font-size:.72rem; }
   }
 </style>
 <div class="home-shell">
@@ -188,14 +315,34 @@ module.exports = function (router) {
       <p class="home-eyebrow">Real people. Real services. Near you.</p>
       <h1>Find a local professional you can actually trust.</h1>
       <p class="lede">Discover barbers, hairstylists, colorists, nail technicians, eyelash technicians, eyebrow technicians, waxing specialists, tattoo artists, and more then book directly with the professional.</p>
+
       <div class="home-search-card">
         <form method="GET" action="/search">
-          <select name="category" aria-label="Service">${CATEGORIES.map((c) => `<option value="${c.value}">${c.label}</option>`).join('')}</select>
-          <input type="text" name="city" maxlength="100" placeholder="City or ZIP" />
-          <input type="text" name="q" maxlength="100" placeholder="Name or business" />
-          <button class="btn" type="submit">Search</button>
+          <label class="home-field">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="4" width="6" height="6" rx="1" stroke="currentColor" stroke-width="2"/><rect x="14" y="4" width="6" height="6" rx="1" stroke="currentColor" stroke-width="2"/><rect x="4" y="14" width="6" height="6" rx="1" stroke="currentColor" stroke-width="2"/><rect x="14" y="14" width="6" height="6" rx="1" stroke="currentColor" stroke-width="2"/></svg>
+            <select name="category" aria-label="Service">${CATEGORIES.map((c) => `<option value="${c.value}">${c.label}</option>`).join('')}</select>
+          </label>
+          <label class="home-field">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="10" r="2.4" stroke="currentColor" stroke-width="2"/></svg>
+            <input type="text" name="city" maxlength="100" placeholder="City or ZIP" aria-label="City or ZIP" />
+          </label>
+          <label class="home-field">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="2"/><path d="M5 21c0-4 3-7 7-7s7 3 7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            <input type="text" name="q" maxlength="100" placeholder="Name or business" aria-label="Name or business" />
+          </label>
+          <button class="btn" type="submit" aria-label="Search">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="m20 20-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            <span>Search</span>
+          </button>
         </form>
       </div>
+
+      <div class="home-trust-row" aria-label="Why use GoBookr">
+        <div class="home-trust-item"><span class="home-trust-icon"><svg viewBox="0 0 24 24" fill="none"><path d="m12 3 7 3v5c0 4.4-2.8 8.2-7 10-4.2-1.8-7-5.6-7-10V6l7-3Z" stroke="currentColor" stroke-width="2"/><path d="m9 12 2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Verified professionals</span></div>
+        <div class="home-trust-item"><span class="home-trust-icon"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="5" width="16" height="15" rx="2" stroke="currentColor" stroke-width="2"/><path d="M8 3v4M16 3v4M4 10h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><span>Easy booking</span></div>
+        <div class="home-trust-item"><span class="home-trust-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="10" r="2.3" stroke="currentColor" stroke-width="2"/></svg></span><span>Local results</span></div>
+      </div>
+
       <div class="home-pills">
         <a href="/search?category=barber">Barbers</a>
         <a href="/search?category=stylist">Hairstylists</a>
@@ -205,7 +352,6 @@ module.exports = function (router) {
         <a href="/search?category=eyebrow_technician">Eyebrow Technicians</a>
         <a href="/search?category=waxing_specialist">Waxing Specialists</a>
         <a href="/search?category=tattoo_artist">Tattoo Artists</a>
-        <a href="/search">More⌄</a>
       </div>
     </div>
   </section>
@@ -242,14 +388,6 @@ module.exports = function (router) {
       document.addEventListener('click', (event) => {
         if (!menu.contains(event.target) && !button.contains(event.target)) menu.classList.remove('open');
       });
-    }
-
-    const form = document.querySelector('.home-search-card form');
-    const submit = form && form.querySelector('button[type="submit"]');
-    if (submit) {
-      submit.innerHTML = '<svg width="21" height="21" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="m20 20-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span>Search</span>';
-      submit.setAttribute('aria-label', 'Search');
-      submit.title = 'Search';
     }
   });
 </script>`;
