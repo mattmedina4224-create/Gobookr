@@ -252,3 +252,126 @@ label { display: block; font-size: 0.85rem; font-weight: 600; color: var(--ink-s
 }
 .brand .mark,
 .brand .dot { display: none; }
+
+/* ---- Mobile polish ---- */
+@media (max-width: 720px) {
+  html, body { overflow-x: hidden; }
+  .container { padding-left: 18px; padding-right: 18px; }
+
+  .site-header { position: static; }
+  .site-header .container {
+    height: auto;
+    min-height: 64px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    flex-wrap: wrap;
+    gap: 8px 12px;
+  }
+  .brand {
+    width: 150px;
+    height: 36px;
+    flex: 0 0 150px;
+  }
+  .nav-links {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 4px 8px;
+    padding-top: 8px;
+    border-top: 1px solid var(--paper-line);
+  }
+  .nav-links a,
+  .nav-links button {
+    width: 100%;
+    min-height: 36px;
+    padding: 7px 8px;
+    font-size: 0.8rem;
+    line-height: 1.15;
+    text-align: center;
+    white-space: nowrap;
+  }
+  .nav-links form { display: block; width: 100%; }
+  .nav-links .muted { display: none; }
+
+  .hero { padding: 34px 0 36px; }
+  .hero h1 {
+    font-size: clamp(2rem, 9.2vw, 2.35rem);
+    line-height: 1.04;
+    letter-spacing: -0.025em;
+    margin-bottom: 16px;
+  }
+  .hero .lede {
+    font-size: 1rem;
+    line-height: 1.55;
+    margin-bottom: 0;
+  }
+
+  .search-card {
+    margin-top: 22px;
+    padding: 10px;
+    border-radius: 18px;
+    box-shadow: 0 8px 24px -18px rgba(23, 21, 31, 0.34);
+  }
+  .search-card form {
+    grid-template-columns: 1fr !important;
+    gap: 0 !important;
+    padding: 6px !important;
+    border-radius: 14px !important;
+    overflow: visible !important;
+  }
+  .search-card form > select,
+  .search-card form > input,
+  .search-card form > div {
+    min-height: 50px;
+  }
+  .search-card form > select,
+  .search-card form > input {
+    padding: 12px 12px !important;
+  }
+  .search-card form > select,
+  .search-card form > input[name="name"] {
+    border-bottom: 1px solid var(--paper-line) !important;
+  }
+  .search-card form > div {
+    border-top: 0 !important;
+    border-left: 0 !important;
+    border-bottom: 1px solid var(--paper-line) !important;
+    padding: 2px 4px !important;
+  }
+  .search-card form button[type="submit"] {
+    min-height: 50px;
+    margin-top: 8px;
+  }
+
+  .category-pills {
+    gap: 6px;
+    margin-top: 14px;
+  }
+  .category-pills a {
+    padding: 6px 10px;
+    font-size: 0.76rem;
+  }
+
+  .section { padding: 34px 0; }
+  .section-head { margin-bottom: 14px; }
+  .section-head h2 { font-size: 1.35rem; }
+  .pro-grid { grid-template-columns: 1fr; gap: 12px; }
+  .pro-card { padding: 15px; }
+
+  .filters { position: static; top: auto; }
+  .dash-nav { position: static; top: auto; }
+  .profile-head { padding: 18px; gap: 14px; }
+  .profile-head .cta-col { width: 100%; min-width: 0; }
+  .panel { padding: 17px; }
+  .auth-wrap { margin: 28px auto; padding: 0 18px; }
+  .auth-card { padding: 22px 18px; }
+  .site-footer { margin-top: 24px; padding: 24px 0; }
+}
+
+@media (max-width: 430px) {
+  .container { padding-left: 16px; padding-right: 16px; }
+  .brand { width: 142px; height: 34px; flex-basis: 142px; }
+  .hero { padding-top: 30px; }
+  .hero h1 { font-size: 2rem; }
+  .nav-links a, .nav-links button { font-size: 0.76rem; }
+}
