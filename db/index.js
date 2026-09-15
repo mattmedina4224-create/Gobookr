@@ -14,13 +14,54 @@ const {
 } = require('node:worker_threads');
 
 const WORKER_TIMEOUT_MS = Number(process.env.DB_QUERY_TIMEOUT_MS || 30000);
+const READ_CACHE_TTL_MS = Number(process.env.DB_READ_CACHE_TTL_MS || 30000);
+const READ_CACHE_MAX = Number(process.env.DB_READ_CACHE_MAX || 2000);
 const worker = new Worker(require.resolve('./postgres-worker'));
 worker.unref();
 let nextMessageId = 1;
+const readCache = new Map();
+
+function cacheKey(op, sql, args) {
+  return `${op}|${sql}|${JSON.stringify(args || [])}`;
+}
+
+function readCached(op, sql, args) {
+  if (READ_CACHE_TTL_MS <= 0) return undefined;
+  const key = cacheKey(op, sql, args);
+  const item = readCache.get(key);
+  if (!item) return undefined;
+  if (Date.now() >= item.expiresAt) {
+    readCache.delete(key);
+    return undefined;
+  }
+  return item.value;
+}
+
+function writeCached(op, sql, args, value) {
+  if (READ_CACHE_TTL_MS <= 0) return;
+  if (readCache.size >= READ_CACHE_MAX) {
+    const oldest = readCache.keys().next().value;
+    if (oldest !== undefined) readCache.delete(oldest);
+  }
+  readCache.set(cacheKey(op, sql, args), {
+    value,
+    expiresAt: Date.now() + READ_CACHE_TTL_MS,
+  });
+}
+
+function clearReadCache() {
+  readCache.clear();
+}
 
 function callWorker(op, sql, args = []) {
   if (!process.env.DATABASE_URL) {
     throw new Error('DATABASE_URL is required. Add the Supabase Postgres connection string to the deployment environment.');
+  }
+
+  const isRead = (op === 'get' || op === 'all') && /^\s*SELECT\b/i.test(String(sql || ''));
+  if (isRead) {
+    const cached = readCached(op, sql, args);
+    if (cached !== undefined) return cached;
   }
 
   const signalBuffer = new SharedArrayBuffer(Int32Array.BYTES_PER_ELEMENT);
@@ -52,6 +93,10 @@ function callWorker(op, sql, args = []) {
     if (response.error.detail) err.detail = response.error.detail;
     throw err;
   }
+
+  if (isRead) writeCached(op, sql, args, response.value);
+  else if (op === 'run' || op === 'exec') clearReadCache();
+
   return response.value;
 }
 
@@ -74,6 +119,7 @@ function exec(sql) {
 }
 
 function close() {
+  clearReadCache();
   try { callWorker('close', '', []); } catch (_) {}
   worker.terminate();
 }
