@@ -36,13 +36,24 @@ for (const input of rows) {
     continue;
   }
 
-  const workplace = clean(raw.workplace_name);
+  // Accept both workplace_name (preferred import format) and workplace for older/staged files.
+  const workplace = clean(raw.workplace_name || raw.workplace);
+  const address = clean(raw.address || raw.workplace_address);
+  const zip = clean(raw.zip || raw.workplace_zip);
+
+  // A marketplace/shop source page can legitimately contain many professionals, so source_url
+  // is NOT a unique professional identifier. Dedupe on the professional + workplace/location.
+  // Address/ZIP strengthen the match when available without preventing older sparse rows from matching.
   const existing = db.prepare(`SELECT id FROM pro_profiles
-    WHERE source_url = ?
-       OR (LOWER(business_name) = LOWER(?) AND LOWER(COALESCE(workplace_name,'')) = LOWER(?) AND LOWER(city) = LOWER(?) AND UPPER(state) = UPPER(?))
-    LIMIT 1`).get(sourceUrl, name, workplace, city, state);
+    WHERE LOWER(business_name) = LOWER(?)
+      AND LOWER(COALESCE(workplace_name,'')) = LOWER(?)
+      AND LOWER(city) = LOWER(?)
+      AND UPPER(state) = UPPER(?)
+      AND (? = '' OR COALESCE(workplace_address,'') = '' OR LOWER(workplace_address) = LOWER(?))
+      AND (? = '' OR COALESCE(workplace_zip,'') = '' OR workplace_zip = ?)
+    LIMIT 1`).get(name, workplace, city, state, address, address, zip, zip);
   if (existing) {
-    console.log(`SKIP duplicate: ${name} (#${existing.id})`);
+    console.log(`SKIP duplicate professional: ${name} (#${existing.id})`);
     skipped += 1;
     continue;
   }
@@ -52,7 +63,7 @@ for (const input of rows) {
     (user_id, business_name, category, bio, city, state, workplace_name, workplace_address, workplace_zip,
      booking_url, initials, claim_status, source_url, source_name, source_checked_at)
     VALUES (NULL, ?, ?, '', ?, ?, ?, ?, ?, ?, ?, 'unclaimed', ?, ?, CURRENT_TIMESTAMP)`)
-    .run(name, legacyCategory, city, state, workplace, clean(raw.address || raw.workplace_address), clean(raw.zip || raw.workplace_zip), clean(raw.booking_url), initials(name), sourceUrl, sourceName);
+    .run(name, legacyCategory, city, state, workplace, address, zip, clean(raw.booking_url), initials(name), sourceUrl, sourceName);
 
   const proId = Number(result.lastInsertRowid);
   if (actualCategory) {
