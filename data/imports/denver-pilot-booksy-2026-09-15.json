@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Mac Smith",
+    "category": "barber",
+    "workplace_name": "Your Barber",
+    "city": "Denver",
+    "state": "CO",
+    "address": "1562 S. Parker Road, 123",
+    "zip": "80231",
+    "booking_url": "https://booksy.com/en-us/759429_your-barber_barber-shop_134761_denver",
+    "source_url": "https://booksy.com/en-us/759429_your-barber_barber-shop_134761_denver",
+    "source_name": "Booksy"
+  },
+  {
+    "name": "Janexy Guardado",
+    "category": "barber",
+    "workplace_name": "Janexy The Barber",
+    "city": "Denver",
+    "state": "CO",
+    "address": "2093 S Federal Blvd",
+    "zip": "80219",
+    "booking_url": "https://booksy.com/en-us/1293247_janexy-the-barber_hair-salon_134761_denver",
+    "source_url": "https://booksy.com/en-us/1293247_janexy-the-barber_hair-salon_134761_denver",
+    "source_name": "Booksy"
+  },
+  {
+    "name": "G. Padilla",
+    "category": "barber",
+    "workplace_name": "Steadyhand Barber Co.",
+    "city": "Denver",
+    "state": "CO",
+    "address": "938 Jersey Street",
+    "zip": "80220",
+    "booking_url": "",
+    "source_url": "https://booksy.com/en-us/s/barber-shop/134761_denver?businessesPage=8",
+    "source_name": "Booksy"
+  },
+  {
+    "name": "Anthony Craven",
+    "category": "barber",
+    "workplace_name": "Steadyhand Barber Co.",
+    "city": "Denver",
+    "state": "CO",
+    "address": "938 Jersey Street",
+    "zip": "80220",
+    "booking_url": "",
+    "source_url": "https://booksy.com/en-us/s/barber-shop/134761_denver?businessesPage=8",
+    "source_name": "Booksy"
+  },
+  {
+    "name": "Nick Billingsley",
+    "category": "barber",
+    "workplace_name": "Steadyhand Barber Co.",
+    "city": "Denver",
+    "state": "CO",
+    "address": "938 Jersey Street",
+    "zip": "80220",
+    "booking_url": "",
+    "source_url": "https://booksy.com/en-us/s/barber-shop/134761_denver?businessesPage=8",
+    "source_name": "Booksy"
+  }
+]
