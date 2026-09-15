@@ -22,12 +22,13 @@ require('./routes/pro')(router);
 require('./routes/customer')(router);
 require('./routes/admin')(router);
 require('./routes/legal')(router);
+require('./routes/claim')(router);
 require('./routes/embedded-billing')(router);
 require('./routes/billing')(router);
 const PORT = process.env.PORT || 3000;
 const PUBLIC_DIR = path.join(__dirname, 'public');
+const CSRF_EXEMPT_POST_PATHS = new Set(['/login', '/signup', '/forgot-password', '/reset-password']);
 
-// Keep session lookup defensive so a stale deployment cannot take the whole site down.
 function getSessionUserSafe(req) {
   if (typeof authModule.getSessionUser !== 'function') {
     console.warn('Session helper unavailable; continuing as signed out.');
@@ -37,17 +38,7 @@ function getSessionUserSafe(req) {
 }
 
 const MIME = {
-  '.css': 'text/css; charset=utf-8',
-  '.js': 'text/javascript; charset=utf-8',
-  '.svg': 'image/svg+xml',
-  '.png': 'image/png',
-  '.jpg': 'image/jpeg',
-  '.jpeg': 'image/jpeg',
-  '.webp': 'image/webp',
-  '.gif': 'image/gif',
-  '.heic': 'image/heic',
-  '.heif': 'image/heif',
-  '.ico': 'image/x-icon',
+  '.css': 'text/css; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.svg': 'image/svg+xml', '.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.webp': 'image/webp', '.gif': 'image/gif', '.heic': 'image/heic', '.heif': 'image/heif', '.ico': 'image/x-icon',
 };
 
 function serveStatic(req, res, pathname) {
@@ -101,11 +92,7 @@ const server = http.createServer(async (req, res) => {
     const parsedUrl = new URL(req.url, `http://${req.headers.host || 'localhost'}`); const pathname = decodeURIComponent(parsedUrl.pathname);
     if (req.method === 'GET' && serveStatic(req, res, pathname)) return;
     const rate = checkAuthRateLimit(req, pathname);
-    if (!rate.allowed) {
-      res.writeHead(429, { 'Content-Type': 'text/html; charset=utf-8', 'Retry-After': String(rate.retryAfter) });
-      res.end('<h1>Too many attempts</h1><p>Please wait a few minutes and try again.</p>');
-      return;
-    }
+    if (!rate.allowed) { res.writeHead(429, { 'Content-Type': 'text/html; charset=utf-8', 'Retry-After': String(rate.retryAfter) }); res.end('<h1>Too many attempts</h1><p>Please wait a few minutes and try again.</p>'); return; }
     const match = router.match(req.method, pathname);
     if (!match) { res.writeHead(404, { 'Content-Type': 'text/html; charset=utf-8' }); res.end('<h1>404 — page not found</h1><p><a href="/">Back to GoBookr</a></p>'); return; }
     const session = getSessionUserSafe(req);
@@ -116,7 +103,7 @@ const server = http.createServer(async (req, res) => {
       if (isMultipart) { const parsed = parseMultipart(raw, contentType); ctx.body = parsed.fields; ctx.files = parsed.files; multipartDebug = { bodyBoundaryLength: parsed.bodyBoundary.length, headerBoundaryLength: parsed.headerBoundary.length, fileFields: Object.keys(parsed.files) }; }
       else if (isJson) { ctx.body = JSON.parse(raw.toString('utf8') || '{}'); if (pathname === '/dashboard/pro/portfolio' && ctx.body.image_data) { const filename = String(ctx.body.image_name || 'upload'); ctx.files.image = { filename, contentType: String(ctx.body.image_type || mimeFromFilename(filename)).toLowerCase(), data: Buffer.from(String(ctx.body.image_data), 'base64') }; } }
       else ctx.body = parseForm(raw);
-      if (ctx.session) {
+      if (ctx.session && !CSRF_EXEMPT_POST_PATHS.has(pathname)) {
         const submitted = typeof ctx.body._csrf === 'string' ? ctx.body._csrf.trim() : ''; const expected = typeof ctx.session.csrf_token === 'string' ? ctx.session.csrf_token.trim() : '';
         if (!submitted || submitted !== expected) { console.error('CSRF mismatch', { path: pathname, multipart: isMultipart, submittedLength: submitted.length, expectedLength: expected.length, bodyFields: Object.keys(ctx.body || {}), ...multipartDebug }); res.writeHead(403, { 'Content-Type': 'text/html; charset=utf-8' }); res.end('<h1>403 — form expired, please go back and retry</h1>'); return; }
       }
