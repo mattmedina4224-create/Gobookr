@@ -8,6 +8,7 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const db = require('../db');
+const { normalizeSource } = require('../lib/booking-platforms');
 
 const inputPath = process.argv[2];
 if (!inputPath) throw new Error('Pass a JSON file: node scripts/import-unclaimed-profiles.js profiles.json');
@@ -21,7 +22,8 @@ const allowedLegacy = new Set(['barber', 'stylist', 'colorist']);
 let inserted = 0;
 let skipped = 0;
 
-for (const raw of rows) {
+for (const input of rows) {
+  const raw = normalizeSource(input);
   const name = clean(raw.name || raw.business_name);
   const city = clean(raw.city);
   const state = clean(raw.state).toUpperCase();
@@ -34,7 +36,6 @@ for (const raw of rows) {
     continue;
   }
 
-  // Conservative dedupe: same normalized name + workplace + city/state OR exact source URL.
   const workplace = clean(raw.workplace_name);
   const existing = db.prepare(`SELECT id FROM pro_profiles
     WHERE source_url = ?
@@ -58,7 +59,7 @@ for (const raw of rows) {
     try { db.prepare('INSERT INTO pro_categories (pro_id, category) VALUES (?, ?)').run(proId, actualCategory); }
     catch (err) { console.warn(`Category '${actualCategory}' not stored for ${name}: ${err.message}`); }
   }
-  console.log(`IMPORTED: ${name} (#${proId})`);
+  console.log(`IMPORTED: ${name} (#${proId}) from ${sourceName}${raw.source_platform ? ` [${raw.source_platform}]` : ''}`);
   inserted += 1;
 }
 
