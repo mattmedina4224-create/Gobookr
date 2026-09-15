@@ -5,6 +5,7 @@ const { layout } = require('../lib/layout');
 const { send, flashFromQuery } = require('../lib/http');
 const { escapeHtml, money, slugCategory, avgRating, stars } = require('../lib/util');
 const { isProPubliclyVisible } = require('../lib/subscription');
+const { hydratePros } = require('../lib/pro-listing-data');
 
 const CATEGORIES = [
   { value: '', label: 'All services' },
@@ -32,14 +33,6 @@ function categoriesForPro(proId) {
   const rows = db.prepare('SELECT category FROM pro_categories WHERE pro_id = ? ORDER BY category').all(proId);
   return rows.length ? rows.map((row) => row.category) : [];
 }
-function proWithStats(pro) {
-  if (!isProPubliclyVisible(pro.id)) return null;
-  const reviews = db.prepare('SELECT rating FROM reviews WHERE pro_id = ?').all(pro.id);
-  const services = db.prepare('SELECT * FROM services WHERE pro_id = ? ORDER BY price ASC').all(pro.id);
-  const categories = categoriesForPro(pro.id);
-  const portfolio = db.prepare('SELECT image_url, caption FROM portfolio_items WHERE pro_id = ? AND image_url IS NOT NULL AND image_url != ? ORDER BY id DESC LIMIT 1').get(pro.id, '');
-  return { ...pro, categories: categories.length ? categories : [pro.category], reviewCount: reviews.length, rating: avgRating(reviews), services, coverPhoto: portfolio || null };
-}
 function categoryBadges(categories) { return (categories || []).map((category) => `<span class="badge category">${escapeHtml(slugCategory(category))}</span>`).join(' '); }
 function verifiedBadge() { return `<span class="verified-badge" title="License verified by GoBookr" aria-label="License verified by GoBookr"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.2 2.1 3-.4.9 2.9 2.7 1.4-.9 2.9 1.3 2.7-2.4 1.8-.1 3-3 .5-2 2.3-2.7-1.3-2.7 1.3-2-2.3-3-.5-.1-3-2.4-1.8 1.3-2.7-.9-2.9 2.7-1.4.9-2.9 3 .4L12 2.5z"/><path d="M8.4 12.1l2.2 2.2 5-5" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>`; }
 function claimBadge(pro) {
@@ -66,7 +59,7 @@ function socialLinks(pro) {
 
 module.exports = function (router) {
   router.get('/', async (ctx) => {
-    const featured = db.prepare('SELECT * FROM pro_profiles ORDER BY id DESC LIMIT 20').all().map(proWithStats).filter(Boolean).sort((a, b) => (b.rating || 0) - (a.rating || 0)).slice(0, 6);
+    const featured = hydratePros(db.prepare('SELECT * FROM pro_profiles ORDER BY id DESC LIMIT 20').all()).sort((a, b) => (b.rating || 0) - (a.rating || 0)).slice(0, 6);
     const body = `<section class="hero"><div class="container"><h1>Find a local professional you can actually trust.</h1><p class="lede">Discover barbers, hairstylists, colorists, nail technicians, lash and brow professionals, waxing specialists, massage therapists, tattoo artists, and more — then book directly with the professional.</p><div class="search-card"><form method="GET" action="/search"><select name="category" aria-label="Service">${CATEGORIES.map((c) => `<option value="${c.value}">${c.label}</option>`).join('')}</select><input type="text" name="city" maxlength="100" placeholder="City or ZIP" /><input type="text" name="q" maxlength="100" placeholder="Name or business" /><button class="btn" type="submit">Search</button></form></div><div class="category-pills">${CATEGORIES.filter((c) => c.value).map((c) => `<a href="/search?category=${c.value}">${c.label}</a>`).join('')}<a href="/search">Browse everyone</a></div></div></section><section class="section container"><div class="section-head"><div><h2>Top-rated professionals</h2><p class="muted" style="margin:4px 0 0;">Explore local work, services, reviews, and booking options.</p></div><a class="btn secondary small" href="/search">See all</a></div><div class="pro-grid">${featured.map(proCard).join('') || '<p class="muted">No professionals listed yet.</p>'}</div></section><section class="section container"><div class="card" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;"><div><h2 style="margin-bottom:4px;">Are you a personal-service professional?</h2><p style="margin:0;">Show your work, build trust, and send new clients straight to your booking page.</p></div><a class="btn" href="/signup?role=pro">Start 30 days free</a></div></section>`;
     send(ctx.res, layout({ title: 'Find trusted local pros', currentUser: ctx.currentUser, session: ctx.session, flash: flashFromQuery(ctx.query), body }));
   });
@@ -79,7 +72,7 @@ module.exports = function (router) {
     if (city) { sql += " AND (city LIKE ? ESCAPE '\\' OR state LIKE ? ESCAPE '\\' OR zip_code LIKE ? ESCAPE '\\')"; const value = likeValue(city); args.push(value, value, value); }
     if (q) { sql += " AND (business_name LIKE ? ESCAPE '\\' OR workplace_name LIKE ? ESCAPE '\\')"; const value = likeValue(q); args.push(value, value); }
     sql += ' ORDER BY id DESC LIMIT 500';
-    let results = db.prepare(sql).all(...args).map(proWithStats).filter(Boolean); if (minRating) results = results.filter((p) => (p.rating || 0) >= Number(minRating));
+    let results = hydratePros(db.prepare(sql).all(...args)); if (minRating) results = results.filter((p) => (p.rating || 0) >= Number(minRating));
     const filterLink = (overrides) => { const merged = { category, city, q, minRating, ...overrides }; const qs = new URLSearchParams(Object.entries(merged).filter(([, v]) => v)); return `/search?${qs.toString()}`; };
     const heading = `${category ? slugCategory(category) + 's' : 'Professionals'}${city ? ' near ' + escapeHtml(city) : ' near you'}`;
     const body = `<section class="section container"><div class="section-head"><div><h2>${heading}</h2><p class="muted" style="margin:4px 0 0;">${results.length} professional${results.length === 1 ? '' : 's'} found</p></div>${(category || city || q || minRating) ? '<a class="btn secondary small" href="/search">Clear all filters</a>' : ''}</div><div class="search-layout"><aside class="filters"><h4>Service</h4><ul>${CATEGORIES.map((c) => `<li><a href="${filterLink({ category: c.value })}" style="display:block;padding:6px 0;font-weight:${c.value === category ? '800' : '500'};color:${c.value === category ? 'var(--brand)' : 'inherit'};">${c.label}</a></li>`).join('')}</ul><h4 style="margin-top:18px;">City or ZIP</h4><form method="GET" action="/search" class="field"><input type="hidden" name="category" value="${escapeHtml(category)}" /><input type="hidden" name="q" value="${escapeHtml(q)}" /><input type="text" name="city" maxlength="100" value="${escapeHtml(city)}" placeholder="City or ZIP" /><button class="btn secondary small block" type="submit" style="margin-top:8px;">Apply</button></form><h4>Minimum rating</h4><ul class="checks">${[4.5,4,3].map((r) => `<li><a href="${filterLink({ minRating:String(r) })}">${stars(r)} &amp; up</a></li>`).join('')}</ul></aside><div>${results.length ? `<div class="pro-grid">${results.map(proCard).join('')}</div>` : `<div class="empty-state"><h3>No professionals match those filters</h3><p>Try another city, ZIP code, service, or rating.</p><a class="btn secondary" href="/search">Clear filters</a></div>`}</div></div></section>`;
