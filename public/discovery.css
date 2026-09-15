@@ -15,6 +15,11 @@
 .pro-card-footer { display:flex; justify-content:space-between; align-items:center; gap:12px; margin-top:14px; padding-top:13px; border-top:1px solid var(--paper-line); }
 .view-profile { color:var(--brand); font-size:.84rem; font-weight:750; }
 
+/* The homepage already gets a clickable GPS pin from the shared layout helper.
+   Hide the decorative duplicate so City or ZIP has one clean location icon. */
+.home-field:has(input[name="city"]) > svg { display:none; }
+.home-field:has(input[name="city"]) { gap:0; }
+
 .profile-page { max-width:1080px; }
 .profile-page .profile-head { padding:30px; }
 .profile-page .profile-head h1 { margin:8px 0 4px; display:flex; align-items:center; gap:7px; font-size:2rem; }
