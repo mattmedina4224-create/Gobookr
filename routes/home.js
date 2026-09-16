@@ -3,8 +3,8 @@
 const db = require('../db');
 const { layout } = require('../lib/layout');
 const { send, flashFromQuery } = require('../lib/http');
-const { escapeHtml, slugCategory, avgRating, stars } = require('../lib/util');
-const { isProPubliclyVisible } = require('../lib/subscription');
+const { escapeHtml, slugCategory, stars } = require('../lib/util');
+const { hydratePros } = require('../lib/pro-listing-data');
 
 const CATEGORIES = [
   { value: '', label: 'All services' },
@@ -17,25 +17,6 @@ const CATEGORIES = [
   { value: 'waxing_specialist', label: 'Waxing Specialists' },
   { value: 'tattoo_artist', label: 'Tattoo Artists' },
 ];
-
-function categoriesForPro(proId) {
-  const rows = db.prepare('SELECT category FROM pro_categories WHERE pro_id = ? ORDER BY category').all(proId);
-  return rows.length ? rows.map((row) => row.category) : [];
-}
-
-function homepagePro(pro) {
-  if (!isProPubliclyVisible(pro.id)) return null;
-  const reviews = db.prepare('SELECT rating FROM reviews WHERE pro_id = ?').all(pro.id);
-  const categories = categoriesForPro(pro.id);
-  const portfolio = db.prepare('SELECT image_url, caption FROM portfolio_items WHERE pro_id = ? AND image_url IS NOT NULL AND image_url != ? ORDER BY id DESC LIMIT 1').get(pro.id, '');
-  return {
-    ...pro,
-    rating: avgRating(reviews),
-    reviewCount: reviews.length,
-    categories: categories.length ? categories : [pro.category],
-    coverPhoto: portfolio || null,
-  };
-}
 
 function homeCard(pro) {
   const photo = pro.coverPhoto
@@ -50,9 +31,10 @@ function homeCard(pro) {
 
 module.exports = function (router) {
   router.get('/', async (ctx) => {
-    const featured = db.prepare('SELECT * FROM pro_profiles ORDER BY id DESC LIMIT 30').all()
-      .map(homepagePro)
-      .filter(Boolean)
+    const featured = hydratePros(
+      db.prepare('SELECT * FROM pro_profiles ORDER BY id DESC LIMIT 30').all(),
+      { includeServices: false }
+    )
       .sort((a, b) => (b.rating || 0) - (a.rating || 0))
       .slice(0, 6);
 
