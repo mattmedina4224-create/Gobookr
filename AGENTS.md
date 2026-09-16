@@ -12,7 +12,7 @@ The product owner uses ChatGPT as the project manager. Codex is the implementati
 - Primary categories: barbers, hairstylists, colorists, nail technicians, eyelash technicians, eyebrow/brow professionals, waxing specialists, tattoo artists, massage therapists, and similar appointment-based personal services.
 - GoBookr is not intended to become a broad home-services marketplace.
 - Search should support service/category, city or ZIP, professional/business name, rating, and eventually geographic radius.
-- Desired radius choices: 1, 2, 3, 4, 5 miles, then 2-mile increments after 5.
+- Desired radius choices: 1, 2, 3, 4, 5, 10, 15, and 20 miles.
 
 ## Technology and deployment
 - Node.js / Express-style custom routing application.
