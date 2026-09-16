@@ -68,7 +68,7 @@ module.exports = function (router) {
   router.get('/search', async (ctx) => {
     const requestedCategory = queryText(ctx.query.category, 40); const category = CATEGORY_VALUES.has(requestedCategory) ? requestedCategory : '';
     const city = queryText(ctx.query.city, 100); const q = queryText(ctx.query.q, 100); const requestedRating = queryText(ctx.query.minRating, 8); const minRating = RATING_VALUES.has(requestedRating) ? requestedRating : '';
-    const radius = parseRadius(ctx.query.radius); const lat = Number(ctx.query.lat); const lon = Number(ctx.query.lon); const hasGps = Number.isFinite(lat) && lat >= -90 && lat <= 90 && Number.isFinite(lon) && lon >= -180 && lon <= 180 && radius !== null;
+    const radius = parseRadius(ctx.query.radius); const latText = queryText(ctx.query.lat, 30); const lonText = queryText(ctx.query.lon, 30); const lat = Number(latText); const lon = Number(lonText); const hasGps = latText !== '' && lonText !== '' && Number.isFinite(lat) && lat >= -90 && lat <= 90 && Number.isFinite(lon) && lon >= -180 && lon <= 180 && radius !== null;
     let sql = 'SELECT * FROM pro_profiles WHERE 1=1'; const args = [];
     if (category) { sql += ' AND EXISTS (SELECT 1 FROM pro_categories pc WHERE pc.pro_id = pro_profiles.id AND pc.category = ?)'; args.push(category); }
     if (city && !hasGps) { sql += " AND (city LIKE ? ESCAPE '\\' OR state LIKE ? ESCAPE '\\' OR zip_code LIKE ? ESCAPE '\\')"; const value = likeValue(city); args.push(value, value, value); }
