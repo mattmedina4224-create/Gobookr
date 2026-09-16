@@ -205,6 +205,68 @@
 })();
 
 (() => {
+  // Radius search controls: 1,2,3,4,5,10,15,20 miles. GPS coordinates are kept
+  // in the search request only when the customer uses their current location.
+  const allowed = ['1', '2', '3', '4', '5', '10', '15', '20'];
+  const params = new URLSearchParams(window.location.search);
+  const requestedRadius = allowed.includes(params.get('radius')) ? params.get('radius') : '5';
+  const style = document.createElement('style');
+  style.textContent = '.search-card form.gobookr-radius-search{grid-template-columns:1.05fr 1fr .72fr 1fr 56px !important}.gobookr-radius-select{min-width:0}@media(max-width:720px){.search-card form.gobookr-radius-search{grid-template-columns:1fr !important}.gobookr-radius-select{width:100%;min-height:58px}}';
+  document.head.appendChild(style);
+
+  function storedLocation() {
+    try {
+      const lat = Number(sessionStorage.getItem('gobookr_user_lat'));
+      const lon = Number(sessionStorage.getItem('gobookr_user_lon'));
+      return Number.isFinite(lat) && Number.isFinite(lon) && sessionStorage.getItem('gobookr_user_lat') !== null ? { lat, lon } : null;
+    } catch (_) { return null; }
+  }
+
+  document.querySelectorAll('form[action="/search"]').forEach((form) => {
+    form.classList.add('gobookr-radius-search');
+    let radius = form.querySelector('select[name="radius"]');
+    if (!radius) {
+      radius = document.createElement('select');
+      radius.name = 'radius';
+      radius.setAttribute('aria-label', 'Search radius');
+      radius.innerHTML = allowed.map((value) => `<option value="${value}">${value} mile${value === '1' ? '' : 's'}</option>`).join('');
+      const q = form.querySelector('input[name="q"]');
+      if (q) form.insertBefore(radius, q); else form.appendChild(radius);
+    }
+    radius.classList.add('gobookr-radius-select');
+    if (allowed.includes(requestedRadius)) radius.value = requestedRadius;
+
+    let latInput = form.querySelector('input[name="lat"]');
+    let lonInput = form.querySelector('input[name="lon"]');
+    if (!latInput) { latInput = document.createElement('input'); latInput.type = 'hidden'; latInput.name = 'lat'; form.appendChild(latInput); }
+    if (!lonInput) { lonInput = document.createElement('input'); lonInput.type = 'hidden'; lonInput.name = 'lon'; form.appendChild(lonInput); }
+
+    const cityInput = form.querySelector('input[name="city"]');
+    if (cityInput) {
+      cityInput.addEventListener('input', () => {
+        form.dataset.manualCity = '1';
+        latInput.value = '';
+        lonInput.value = '';
+      });
+    }
+
+    const syncGps = () => {
+      if (form.dataset.manualCity === '1') return;
+      const location = storedLocation();
+      if (!location) return;
+      latInput.value = String(location.lat);
+      lonInput.value = String(location.lon);
+    };
+
+    // The existing location-pin code uses form.submit(), which bypasses submit events.
+    // Shadow it for search forms so the GPS coordinates are attached before navigation.
+    const nativeSubmit = HTMLFormElement.prototype.submit;
+    form.submit = function () { syncGps(); nativeSubmit.call(form); };
+    form.addEventListener('submit', () => syncGps());
+  });
+})();
+
+(() => {
   const NAV_VERSION = 'gobookr-brand-20260912-1';
   document.querySelectorAll('a[href]').forEach((link) => {
     const raw = link.getAttribute('href');
