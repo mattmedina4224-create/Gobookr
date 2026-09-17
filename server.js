@@ -9,9 +9,11 @@ const Router = require('./lib/router');
 const authModule = require('./lib/auth');
 const layoutModule = require('./lib/layout');
 const { installBillingBanner } = require('./lib/pro-billing-banner');
+const { installSquareDashboardCard } = require('./lib/square-dashboard-card');
 const { checkAuthRateLimit } = require('./lib/rate-limit');
 
 installBillingBanner(layoutModule);
+installSquareDashboardCard(layoutModule);
 
 const router = new Router();
 require('./routes/public')(router);
