@@ -1,4 +1,6 @@
--- GoBookr shop accounts and professional-to-shop relationships.
+-- GoBookr independent shop accounts.
+-- Shops and individual professionals are separate marketplace listings.
+-- A shop does not own, contain, manage, or control professional profiles.
 -- Public-source shops may exist unclaimed until ownership is verified.
 
 CREATE TABLE IF NOT EXISTS shops (
@@ -28,16 +30,6 @@ CREATE INDEX IF NOT EXISTS idx_shops_location ON shops (state, city, zip_code);
 CREATE INDEX IF NOT EXISTS idx_shops_name_location ON shops (LOWER(name), LOWER(city), UPPER(state));
 CREATE INDEX IF NOT EXISTS idx_shops_owner ON shops (owner_user_id);
 
-CREATE TABLE IF NOT EXISTS shop_professionals (
-  shop_id BIGINT NOT NULL REFERENCES shops(id) ON DELETE CASCADE,
-  pro_id BIGINT NOT NULL REFERENCES pro_profiles(id) ON DELETE CASCADE,
-  relationship_status TEXT NOT NULL DEFAULT 'listed' CHECK (relationship_status IN ('listed','pending','confirmed')),
-  created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (shop_id, pro_id)
-);
-
-CREATE INDEX IF NOT EXISTS idx_shop_professionals_pro ON shop_professionals (pro_id);
-
 CREATE TABLE IF NOT EXISTS shop_claims (
   id BIGSERIAL PRIMARY KEY,
   shop_id BIGINT NOT NULL REFERENCES shops(id) ON DELETE CASCADE,
@@ -51,8 +43,8 @@ CREATE TABLE IF NOT EXISTS shop_claims (
 
 CREATE INDEX IF NOT EXISTS idx_shop_claims_shop_status ON shop_claims (shop_id, status);
 
--- Shop subscriptions are separate from individual professional subscriptions.
--- Billing should use the $35/month shop plan; price IDs stay in environment config, not the database migration.
+-- Shop subscriptions are independent from individual professional subscriptions.
+-- Billing uses the $35/month shop plan; provider price IDs stay in environment config.
 CREATE TABLE IF NOT EXISTS shop_subscriptions (
   id BIGSERIAL PRIMARY KEY,
   shop_id BIGINT NOT NULL UNIQUE REFERENCES shops(id) ON DELETE CASCADE,
