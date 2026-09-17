@@ -25,6 +25,7 @@ require('./routes/legal')(router);
 require('./routes/claim')(router);
 require('./routes/embedded-billing')(router);
 require('./routes/billing')(router);
+require('./routes/square')(router);
 const PORT = process.env.PORT || 3000;
 const PUBLIC_DIR = path.join(__dirname, 'public');
 const CSRF_EXEMPT_POST_PATHS = new Set(['/login', '/signup', '/forgot-password', '/reset-password']);
