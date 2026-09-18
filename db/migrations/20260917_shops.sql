@@ -44,7 +44,7 @@ CREATE TABLE IF NOT EXISTS shop_claims (
 CREATE INDEX IF NOT EXISTS idx_shop_claims_shop_status ON shop_claims (shop_id, status);
 
 -- Shop subscriptions are independent from individual professional subscriptions.
--- Billing uses the $35/month shop plan; provider price IDs stay in environment config.
+-- Billing uses the $49/month shop plan; provider price IDs stay in environment config.
 CREATE TABLE IF NOT EXISTS shop_subscriptions (
   id BIGSERIAL PRIMARY KEY,
   shop_id BIGINT NOT NULL UNIQUE REFERENCES shops(id) ON DELETE CASCADE,
@@ -52,7 +52,7 @@ CREATE TABLE IF NOT EXISTS shop_subscriptions (
   provider_customer_id TEXT,
   provider_subscription_id TEXT,
   status TEXT NOT NULL DEFAULT 'inactive',
-  plan_code TEXT NOT NULL DEFAULT 'shop_monthly_35',
+  plan_code TEXT NOT NULL DEFAULT 'shop_monthly_49',
   current_period_end TIMESTAMPTZ,
   created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
   updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP
