@@ -156,7 +156,7 @@ module.exports = function (router) {
         const shopId = Number(object.metadata && object.metadata.shop_id);
         if (Number.isInteger(shopId) && shopId > 0) {
           db.prepare(`INSERT INTO shop_subscriptions (shop_id, provider, provider_customer_id, provider_subscription_id, status, plan_code, updated_at)
-            VALUES (?, 'stripe', ?, ?, 'active', 'shop_monthly_35', CURRENT_TIMESTAMP)
+            VALUES (?, 'stripe', ?, ?, 'active', 'shop_monthly_49', CURRENT_TIMESTAMP)
             ON CONFLICT (shop_id) DO UPDATE SET provider_customer_id = EXCLUDED.provider_customer_id, provider_subscription_id = EXCLUDED.provider_subscription_id, updated_at = CURRENT_TIMESTAMP`)
             .run(shopId, String(object.customer || ''), String(object.subscription || ''));
         }
