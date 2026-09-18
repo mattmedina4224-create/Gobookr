@@ -30,6 +30,7 @@ require('./routes/billing')(router);
 require('./routes/square')(router);
 require('./routes/shops')(router);
 require('./routes/shop-dashboard')(router);
+require('./routes/shop-billing')(router);
 const PORT = process.env.PORT || 3000;
 const PUBLIC_DIR = path.join(__dirname, 'public');
 const CSRF_EXEMPT_POST_PATHS = new Set(['/login', '/signup', '/forgot-password', '/reset-password']);
