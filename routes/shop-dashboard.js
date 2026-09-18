@@ -13,14 +13,14 @@ function url(v) {
 function ownedShop(ctx) {
   if (!ctx.currentUser) { redirect(ctx.res, '/login?next=' + encodeURIComponent('/dashboard/shop')); return null; }
   const shop = db.prepare("SELECT * FROM shops WHERE owner_user_id = ? AND claim_status = 'claimed' ORDER BY id DESC LIMIT 1").get(ctx.currentUser.id);
-  if (!shop) { send(ctx.res, layout({ title:'Shop dashboard', currentUser:ctx.currentUser, session:ctx.session, body:'<section class="section container"><div class="panel"><h1>Shop dashboard</h1><p>No claimed shop is connected to this account yet.</p><a class="btn secondary" href="/search">Find your shop</a></div></section>' }), 403); return null; }
+  if (!shop) { send(ctx.res, layout({ title:'Business dashboard', currentUser:ctx.currentUser, session:ctx.session, body:'<section class="section container"><div class="panel"><h1>Business dashboard</h1><p>No claimed business is connected to this account yet.</p><a class="btn secondary" href="/search">Find your business</a></div></section>' }), 403); return null; }
   return shop;
 }
 
 module.exports = function (router) {
   router.get('/dashboard/shop', async (ctx) => {
     const shop = ownedShop(ctx); if (!shop) return;
-    const body = `<section class="section container" style="max-width:900px;"><div class="section-head"><div><h1>${escapeHtml(shop.name)}</h1><p class="muted">Manage your independent GoBookr shop page.</p></div><a class="btn secondary" href="/shop/${shop.id}">View public page</a></div>
+    const body = `<section class="section container" style="max-width:900px;"><div class="section-head"><div><h1>${escapeHtml(shop.name)}</h1><p class="muted">Manage your independent GoBookr business page.</p></div><a class="btn secondary" href="/shop/${shop.id}">View public page</a></div>
     <div class="panel"><h3>Shop details</h3><form method="POST" action="/dashboard/shop"><input type="hidden" name="_csrf" value="${escapeHtml(ctx.session?.csrf_token || '')}">
     <div class="field"><label>Shop name</label><input name="name" maxlength="160" required value="${escapeHtml(shop.name)}"></div>
     <div class="field"><label>Description</label><textarea name="description" rows="5" maxlength="3000">${escapeHtml(shop.description || '')}</textarea></div>
@@ -34,7 +34,7 @@ module.exports = function (router) {
     <div class="field"><label>Logo image URL</label><input name="logo_url" maxlength="2048" value="${escapeHtml(shop.logo_url || '')}" placeholder="https://"></div>
     <div class="field"><label>Cover image URL</label><input name="cover_url" maxlength="2048" value="${escapeHtml(shop.cover_url || '')}" placeholder="https://"></div>
     <button class="btn" type="submit">Save shop</button></form></div></section>`;
-    send(ctx.res, layout({ title:'Shop dashboard', currentUser:ctx.currentUser, session:ctx.session, flash:flashFromQuery(ctx.query), body }));
+    send(ctx.res, layout({ title:'Business dashboard', currentUser:ctx.currentUser, session:ctx.session, flash:flashFromQuery(ctx.query), body }));
   });
 
   router.post('/dashboard/shop', async (ctx) => {
