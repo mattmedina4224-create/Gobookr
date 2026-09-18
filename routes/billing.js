@@ -59,6 +59,15 @@ function json(res, status, value) {
   res.end(JSON.stringify(value));
 }
 
+function findShopSubscriptionForStripeObject(object) {
+  const shopId = Number(object && object.metadata && object.metadata.shop_id);
+  if (Number.isInteger(shopId) && shopId > 0) return db.prepare('SELECT * FROM shop_subscriptions WHERE shop_id = ?').get(shopId);
+  if (object && object.id && String(object.id).startsWith('sub_')) return db.prepare('SELECT * FROM shop_subscriptions WHERE provider_subscription_id = ?').get(object.id);
+  if (object && object.subscription) return db.prepare('SELECT * FROM shop_subscriptions WHERE provider_subscription_id = ?').get(object.subscription);
+  if (object && object.customer) return db.prepare('SELECT * FROM shop_subscriptions WHERE provider_customer_id = ?').get(object.customer);
+  return null;
+}
+
 function findSubscriptionForStripeObject(object) {
   const metadataProId = Number(object && object.metadata && object.metadata.pro_id);
   if (Number.isInteger(metadataProId) && metadataProId > 0) return db.prepare('SELECT * FROM subscriptions WHERE pro_id = ?').get(metadataProId);
@@ -144,9 +153,23 @@ module.exports = function (router) {
 
     try {
       if (event.type === 'checkout.session.completed') {
+        const shopId = Number(object.metadata && object.metadata.shop_id);
+        if (Number.isInteger(shopId) && shopId > 0) {
+          db.prepare(`INSERT INTO shop_subscriptions (shop_id, provider, provider_customer_id, provider_subscription_id, status, plan_code, updated_at)
+            VALUES (?, 'stripe', ?, ?, 'active', 'shop_monthly_35', CURRENT_TIMESTAMP)
+            ON CONFLICT (shop_id) DO UPDATE SET provider_customer_id = EXCLUDED.provider_customer_id, provider_subscription_id = EXCLUDED.provider_subscription_id, updated_at = CURRENT_TIMESTAMP`)
+            .run(shopId, String(object.customer || ''), String(object.subscription || ''));
+        }
         const proId = Number(object.metadata && object.metadata.pro_id);
         if (Number.isInteger(proId) && proId > 0) db.prepare(`UPDATE subscriptions SET stripe_customer_id = ?, stripe_subscription_id = ?, updated_at = datetime('now') WHERE pro_id = ?`).run(String(object.customer || ''), String(object.subscription || ''), proId);
       } else if (event.type === 'customer.subscription.created' || event.type === 'customer.subscription.updated' || event.type === 'customer.subscription.deleted') {
+        const shopLocal = findShopSubscriptionForStripeObject(object);
+        if (shopLocal) {
+          const shopStatus = event.type === 'customer.subscription.deleted' ? 'canceled' : normalizedSubscriptionStatus(object.status);
+          db.prepare(`UPDATE shop_subscriptions SET status = ?, provider_customer_id = ?, provider_subscription_id = ?, current_period_end = ?, updated_at = CURRENT_TIMESTAMP WHERE id = ?`).run(
+            shopStatus, String(object.customer || shopLocal.provider_customer_id || ''), String(object.id || shopLocal.provider_subscription_id || ''), unixToSqlite(object.current_period_end), shopLocal.id
+          );
+        }
         const local = findSubscriptionForStripeObject(object);
         if (local) {
           const status = event.type === 'customer.subscription.deleted' ? 'canceled' : normalizedSubscriptionStatus(object.status);
@@ -163,9 +186,13 @@ module.exports = function (router) {
           );
         }
       } else if (event.type === 'invoice.payment_failed') {
+        const shopLocal = findShopSubscriptionForStripeObject(object);
+        if (shopLocal) db.prepare("UPDATE shop_subscriptions SET status = 'past_due', updated_at = CURRENT_TIMESTAMP WHERE id = ?").run(shopLocal.id);
         const local = findSubscriptionForStripeObject(object);
         if (local) db.prepare(`UPDATE subscriptions SET status = 'past_due', past_due_since = COALESCE(past_due_since, datetime('now')), updated_at = datetime('now') WHERE id = ?`).run(local.id);
       } else if (event.type === 'invoice.paid') {
+        const shopLocal = findShopSubscriptionForStripeObject(object);
+        if (shopLocal && shopLocal.status !== 'canceled') db.prepare("UPDATE shop_subscriptions SET status = 'active', updated_at = CURRENT_TIMESTAMP WHERE id = ?").run(shopLocal.id);
         const local = findSubscriptionForStripeObject(object);
         if (local && local.status !== 'canceled') db.prepare(`UPDATE subscriptions SET status = 'active', past_due_since = NULL, updated_at = datetime('now') WHERE id = ?`).run(local.id);
       }
