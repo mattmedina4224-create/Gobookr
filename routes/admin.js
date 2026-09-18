@@ -74,7 +74,7 @@ module.exports = function (router) {
       FROM shop_claims sc JOIN shops s ON s.id=sc.shop_id JOIN users u ON u.id=sc.claimant_user_id
       WHERE sc.status='pending' ORDER BY sc.requested_at ASC`).all();
     const rows = claims.map(x => `<tr><td><a href="/shop/${x.shop_id}">${escapeHtml(x.shop_name)}</a></td><td>${escapeHtml(x.city)}, ${escapeHtml(x.state)}</td><td>${escapeHtml(x.claimant_name || '')}<br><span class="muted">${escapeHtml(x.claimant_email || '')}</span></td><td>${escapeHtml(String(x.requested_at || ''))}</td><td><form method="POST" action="/admin/shop-claims/${x.id}/approve" style="display:inline"><input type="hidden" name="_csrf" value="${escapeHtml(ctx.session.csrf_token)}"><button class="btn small" type="submit">Approve</button></form> <form method="POST" action="/admin/shop-claims/${x.id}/reject" style="display:inline"><input type="hidden" name="_csrf" value="${escapeHtml(ctx.session.csrf_token)}"><button class="btn ghost small" type="submit">Reject</button></form></td></tr>`).join('');
-    send(ctx.res, layout({title:'Shop claims',currentUser:ctx.currentUser,session:ctx.session,body:`<section class="section container"><h1>Shop Claim Requests</h1><p class="muted">Verify business ownership before approving access.</p>${rows ? `<table><thead><tr><th>Shop</th><th>Location</th><th>Claimant</th><th>Requested</th><th>Action</th></tr></thead><tbody>${rows}</tbody></table>` : '<div class="panel"><p class="muted" style="margin:0;">No shop claims are waiting for review.</p></div>'}</section>`}));
+    send(ctx.res, layout({title:'Business account claims',currentUser:ctx.currentUser,session:ctx.session,body:`<section class="section container"><h1>Business Account Claim Requests</h1><p class="muted">Verify business ownership before approving access.</p>${rows ? `<table><thead><tr><th>Shop</th><th>Location</th><th>Claimant</th><th>Requested</th><th>Action</th></tr></thead><tbody>${rows}</tbody></table>` : '<div class="panel"><p class="muted" style="margin:0;">No business account claims are waiting for review.</p></div>'}</section>`}));
   });
 
   router.post('/admin/shop-claims/:id/approve', async (ctx) => {
@@ -82,7 +82,7 @@ module.exports = function (router) {
     const id=Number(ctx.params.id); if(!Number.isInteger(id)||id<=0) return redirect(ctx.res,'/admin/shop-claims');
     const claim=db.prepare("SELECT * FROM shop_claims WHERE id=? AND status='pending'").get(id); if(!claim) return redirect(ctx.res,'/admin/shop-claims');
     const existing=db.prepare("SELECT id FROM shops WHERE owner_user_id=? AND claim_status='claimed' AND id != ? LIMIT 1").get(claim.claimant_user_id,claim.shop_id);
-    if(existing) return redirect(ctx.res,'/admin/shop-claims?error='+encodeURIComponent('That account already owns a claimed shop.'));
+    if(existing) return redirect(ctx.res,'/admin/shop-claims?error='+encodeURIComponent('That account already owns a claimed business.'));
     db.prepare("UPDATE shop_claims SET status='approved', reviewed_at=CURRENT_TIMESTAMP WHERE id=? AND status='pending'").run(id);
     db.prepare("UPDATE shops SET owner_user_id=?, claim_status='claimed', updated_at=CURRENT_TIMESTAMP WHERE id=?").run(claim.claimant_user_id,claim.shop_id);
     db.prepare("UPDATE shop_claims SET status='rejected', reviewed_at=CURRENT_TIMESTAMP WHERE shop_id=? AND id != ? AND status='pending'").run(claim.shop_id,id);
