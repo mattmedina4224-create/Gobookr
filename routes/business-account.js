@@ -21,7 +21,7 @@ module.exports = function (router) {
             <span style="font-size:32px;">›</span>
           </a>
 
-          <a class="panel" href="/login?next=/dashboard/shop" style="padding:24px;text-decoration:none;color:inherit;display:flex;align-items:center;gap:18px;">
+          <a class="panel" href="/signup?role=storefront" style="padding:24px;text-decoration:none;color:inherit;display:flex;align-items:center;gap:18px;">
             <div style="font-size:30px;width:48px;text-align:center;">▣</div>
             <div style="flex:1;">
               <h2 style="margin:0 0 6px;">Storefront</h2>
