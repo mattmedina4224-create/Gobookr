@@ -22,7 +22,14 @@ module.exports = function (router) {
           </a>
 
           <a class="panel" href="/signup?role=storefront" style="padding:24px;text-decoration:none;color:inherit;display:flex;align-items:center;gap:18px;">
-            <div style="font-size:30px;width:48px;text-align:center;">▣</div>
+            <div style="width:48px;display:flex;align-items:center;justify-content:center;color:#111827;">
+              <svg width="34" height="34" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M4 10v9h16v-9" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                <path d="M3 9l2-5h14l2 5" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                <path d="M3 9c0 1.4 1 2.5 2.3 2.5S7.7 10.4 7.7 9c0 1.4 1 2.5 2.3 2.5s2.3-1.1 2.3-2.5c0 1.4 1 2.5 2.3 2.5S17 10.4 17 9c0 1.4 1 2.5 2.3 2.5S21.7 10.4 21.7 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                <path d="M9 19v-5h6v5" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+              </svg>
+            </div>
             <div style="flex:1;">
               <h2 style="margin:0 0 6px;">Storefront</h2>
               <p class="muted" style="margin:0 0 8px;">Barbershop, salon, studio, or other physical service business.</p>
