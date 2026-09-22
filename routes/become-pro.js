@@ -14,7 +14,7 @@ module.exports = function (router) {
       <div class="panel">
         <span class="badge category">Professional membership</span>
         <h1 style="margin-top:12px;">Turn this account into a professional account</h1>
-        <p class="muted">Keep your same email and password. You’ll start a 30-day free trial, then GoBookr Professional is $15/month unless canceled.</p>
+        <p class="muted">Keep your same email and password. You’ll start a 30-day free trial, then GoBookr Professional is $20/month unless canceled.</p>
         <form method="POST" action="/become-pro">
           <input type="hidden" name="_csrf" value="${escapeHtml(ctx.session.csrf_token)}" />
           <button class="btn block" type="submit">Start my 30-day professional trial</button>
