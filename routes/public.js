@@ -97,7 +97,8 @@ module.exports = function (router) {
     if (city) { businessSql += " AND (city LIKE ? OR state LIKE ? OR zip_code LIKE ?)"; const value = likeValue(city); businessArgs.push(value, value, value); }
     if (q) { businessSql += " AND name LIKE ?"; businessArgs.push(likeValue(q)); }
     businessSql += ' ORDER BY id DESC LIMIT 200';
-    let businesses = db.prepare(businessSql).all(...businessArgs);
+    let businesses = [];
+    try { businesses = db.prepare(businessSql).all(...businessArgs); } catch (err) { console.error('Business search unavailable', err); }
     if (category || minRating || resultType === 'professionals') businesses = [];
     const totalResults = results.length + businesses.length;
     const filterLink = (overrides) => { const merged = { type: resultType === 'all' ? '' : resultType, category, city, q, minRating, radius: radius || '', lat: hasGps ? lat : '', lon: hasGps ? lon : '', ...overrides }; const qs = new URLSearchParams(Object.entries(merged).filter(([, v]) => v !== '' && v !== null && v !== undefined)); return `/search?${qs.toString()}`; };
