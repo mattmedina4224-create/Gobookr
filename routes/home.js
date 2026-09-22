@@ -310,7 +310,7 @@ module.exports = function (router) {
           </label>
           <label class="home-field">
             <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="2"/><path d="M5 21c0-4 3-7 7-7s7 3 7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-            <input type="text" name="q" maxlength="100" placeholder="Pro or business name" aria-label="Pro or business name" />
+            <input type="text" name="q" maxlength="100" placeholder="Who are you looking for?" aria-label="Who are you looking for?" />
           </label>
           <button class="btn" type="submit" aria-label="Search">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="m20 20-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
