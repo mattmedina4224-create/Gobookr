@@ -1,0 +1,189 @@
+[
+  {
+    "name": "Symone Anderson",
+    "category": "eyelash_technician",
+    "workplace_name": "NARD Lash Co.",
+    "city": "Denver",
+    "state": "CO",
+    "address": "2700 E. 2nd Ave.",
+    "zip": "80206",
+    "source_url": "https://www.solasalonstudios.com/locations/cherry-creek-clayton-lane",
+    "source_name": "Sola Salons - Cherry Creek"
+  },
+  {
+    "name": "Hair By Natalia",
+    "category": "stylist",
+    "workplace_name": "Hair by Natalia",
+    "city": "Denver",
+    "state": "CO",
+    "address": "2700 E. 2nd Ave.",
+    "zip": "80206",
+    "source_url": "https://www.solasalonstudios.com/locations/cherry-creek-clayton-lane",
+    "source_name": "Sola Salons - Cherry Creek"
+  },
+  {
+    "name": "Lexi Spiess",
+    "category": "stylist",
+    "workplace_name": "Lexi Elizabeth Hair Artistry",
+    "city": "Denver",
+    "state": "CO",
+    "address": "2700 E. 2nd Ave.",
+    "zip": "80206",
+    "source_url": "https://www.solasalonstudios.com/locations/cherry-creek-clayton-lane",
+    "source_name": "Sola Salons - Cherry Creek"
+  },
+  {
+    "name": "Elizabeth Rose",
+    "category": "stylist",
+    "workplace_name": "Elizabeth Rose Hair and Brows",
+    "city": "Greenwood Village",
+    "state": "CO",
+    "address": "6001 S. Willow Dr.",
+    "zip": "80111",
+    "source_url": "https://www.solasalonstudios.com/locations/denver-tech-center",
+    "source_name": "Sola Salons - Denver Tech Center"
+  },
+  {
+    "name": "Elizabeth Rose",
+    "category": "eyebrow_technician",
+    "workplace_name": "Elizabeth Rose Hair and Brows",
+    "city": "Greenwood Village",
+    "state": "CO",
+    "address": "6001 S. Willow Dr.",
+    "zip": "80111",
+    "source_url": "https://www.solasalonstudios.com/locations/denver-tech-center",
+    "source_name": "Sola Salons - Denver Tech Center"
+  },
+  {
+    "name": "Melissa Maagad",
+    "category": "barber",
+    "workplace_name": "1013 Barbershop",
+    "city": "Greenwood Village",
+    "state": "CO",
+    "address": "6001 S. Willow Dr.",
+    "zip": "80111",
+    "source_url": "https://www.solasalonstudios.com/locations/denver-tech-center",
+    "source_name": "Sola Salons - Denver Tech Center"
+  },
+  {
+    "name": "Sarah Rogers",
+    "category": "barber",
+    "workplace_name": "Dappers Cuts for Men",
+    "city": "Greenwood Village",
+    "state": "CO",
+    "address": "6001 S. Willow Dr.",
+    "zip": "80111",
+    "source_url": "https://www.solasalonstudios.com/locations/denver-tech-center",
+    "source_name": "Sola Salons - Denver Tech Center"
+  },
+  {
+    "name": "Alice Nguyen",
+    "category": "eyelash_technician",
+    "workplace_name": "Lashes by Alice",
+    "city": "Lakewood",
+    "state": "CO",
+    "address": "1370 Colorado Mills Pkwy.",
+    "zip": "80401",
+    "source_url": "https://www.solasalonstudios.com/locations/denver-west",
+    "source_name": "Sola Salons - Denver West"
+  },
+  {
+    "name": "Angela Lewis",
+    "category": "stylist",
+    "workplace_name": "Twisted Scissors Hair Studio",
+    "city": "Lakewood",
+    "state": "CO",
+    "address": "1370 Colorado Mills Pkwy.",
+    "zip": "80401",
+    "source_url": "https://www.solasalonstudios.com/locations/denver-west",
+    "source_name": "Sola Salons - Denver West"
+  },
+  {
+    "name": "Brandi Trujillo",
+    "category": "stylist",
+    "workplace_name": "Glossed Hair Studio",
+    "city": "Lakewood",
+    "state": "CO",
+    "address": "1370 Colorado Mills Pkwy.",
+    "zip": "80401",
+    "source_url": "https://www.solasalonstudios.com/locations/denver-west",
+    "source_name": "Sola Salons - Denver West"
+  },
+  {
+    "name": "Charlene Janke",
+    "category": "eyelash_technician",
+    "workplace_name": "Lash Out Loud",
+    "city": "Lakewood",
+    "state": "CO",
+    "address": "1370 Colorado Mills Pkwy.",
+    "zip": "80401",
+    "source_url": "https://www.solasalonstudios.com/locations/denver-west",
+    "source_name": "Sola Salons - Denver West"
+  },
+  {
+    "name": "Hollis Pendleton",
+    "category": "barber",
+    "workplace_name": "Hollis Barbering",
+    "city": "Lakewood",
+    "state": "CO",
+    "address": "1370 Colorado Mills Pkwy.",
+    "zip": "80401",
+    "source_url": "https://www.solasalonstudios.com/locations/denver-west",
+    "source_name": "Sola Salons - Denver West"
+  },
+  {
+    "name": "Jessica Pang",
+    "category": "eyelash_technician",
+    "workplace_name": "JP Nails and Lashes",
+    "city": "Lakewood",
+    "state": "CO",
+    "address": "1370 Colorado Mills Pkwy.",
+    "zip": "80401",
+    "source_url": "https://www.solasalonstudios.com/locations/denver-west",
+    "source_name": "Sola Salons - Denver West"
+  },
+  {
+    "name": "Jessica Pang",
+    "category": "nail_technician",
+    "workplace_name": "JP Nails and Lashes",
+    "city": "Lakewood",
+    "state": "CO",
+    "address": "1370 Colorado Mills Pkwy.",
+    "zip": "80401",
+    "source_url": "https://www.solasalonstudios.com/locations/denver-west",
+    "source_name": "Sola Salons - Denver West"
+  },
+  {
+    "name": "Kim Cline",
+    "category": "stylist",
+    "workplace_name": "Kim Cline Hair Design",
+    "city": "Lakewood",
+    "state": "CO",
+    "address": "1370 Colorado Mills Pkwy.",
+    "zip": "80401",
+    "source_url": "https://www.solasalonstudios.com/locations/denver-west",
+    "source_name": "Sola Salons - Denver West"
+  },
+  {
+    "name": "Robin Barela",
+    "category": "stylist",
+    "workplace_name": "Robin B Hairology",
+    "city": "Lakewood",
+    "state": "CO",
+    "address": "1370 Colorado Mills Pkwy.",
+    "zip": "80401",
+    "source_url": "https://www.solasalonstudios.com/locations/denver-west",
+    "source_name": "Sola Salons - Denver West"
+  },
+  {
+    "name": "Stacey Pacheo",
+    "category": "stylist",
+    "workplace_name": "Bloom_Hairstudio",
+    "city": "Lakewood",
+    "state": "CO",
+    "address": "1370 Colorado Mills Pkwy.",
+    "zip": "80401",
+    "source_url": "https://www.solasalonstudios.com/locations/denver-west",
+    "source_name": "Sola Salons - Denver West"
+  }
+]
