@@ -38,7 +38,7 @@ module.exports = function (router) {
             <div style="flex:1;">
               <h2 style="margin:0 0 6px;">Storefront</h2>
               <p class="muted" style="margin:0 0 8px;">For salons, barbershops, studios, and other physical service businesses.</p>
-              <strong style="font-size:20px;">$49/month</strong>
+              <strong style="font-size:20px;">Complimentary</strong>
             </div>
             <span style="font-size:32px;">›</span>
           </a>
