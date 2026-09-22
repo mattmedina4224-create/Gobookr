@@ -63,7 +63,7 @@ The old internal `booking_requests` database table remains only for compatibilit
 
 The codebase contains the Stripe subscription foundation for the professional plan:
 
-- $15/month after the 30-day free trial.
+- $20/month after the 30-day free trial.
 - Stripe Checkout session creation.
 - Stripe Customer Portal session creation.
 - Stripe webhook signature validation.
