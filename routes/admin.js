@@ -98,4 +98,45 @@ module.exports = function (router) {
     }
     redirect(ctx.res,'/admin/shop-claims');
   });
+
+  router.get('/admin/outreach', async (ctx) => {
+    if (!requireAdmin(ctx)) return;
+    const allowed = new Set(['not_contacted','contacted','replied','claimed','do_not_contact']);
+    const status = allowed.has(String(ctx.query.status || '')) ? String(ctx.query.status) : '';
+    const q = String(ctx.query.q || '').trim().slice(0, 100);
+    let sql = `SELECT id, name, city, state, contact_email, contact_email_source_url, contact_email_checked_at,
+      outreach_status, outreach_last_contacted_at, outreach_notes, claim_status
+      FROM shops WHERE 1=1`;
+    const args = [];
+    if (status) { sql += ' AND outreach_status = ?'; args.push(status); }
+    if (q) { sql += ' AND (name LIKE ? OR city LIKE ? OR contact_email LIKE ?)'; const like = '%' + q.replace(/[\\%_]/g, '\\
+};
+') + '%'; args.push(like, like, like); }
+    sql += ' ORDER BY CASE outreach_status WHEN \'replied\' THEN 1 WHEN \'not_contacted\' THEN 2 WHEN \'contacted\' THEN 3 WHEN \'claimed\' THEN 4 ELSE 5 END, name ASC';
+    let businesses = [];
+    try { businesses = db.prepare(sql).all(...args); } catch (err) { console.error('Outreach list unavailable', err); }
+    const counts = {};
+    try { db.prepare('SELECT outreach_status, COUNT(*) AS total FROM shops GROUP BY outreach_status').all().forEach(x => { counts[x.outreach_status] = x.total; }); } catch {}
+    const labels = {not_contacted:'Not contacted',contacted:'Contacted',replied:'Replied',claimed:'Claimed',do_not_contact:'Do not contact'};
+    const tabs = ['',...allowed].map(s => `<a class="btn small ${status===s?'':'secondary'}" href="/admin/outreach${s?'?status='+s:''}">${s ? labels[s] + ' (' + (counts[s] || 0) + ')' : 'All (' + businesses.length + ')'}</a>`).join(' ');
+    const rows = businesses.map(x => `<tr>
+      <td><a href="/shop/${x.id}"><strong>${escapeHtml(x.name)}</strong></a><br><span class="muted">${escapeHtml(x.city || '')}, ${escapeHtml(x.state || '')}</span></td>
+      <td>${x.contact_email ? '<a href="mailto:'+escapeHtml(x.contact_email)+'">'+escapeHtml(x.contact_email)+'</a>' : '<span class="muted">Not found</span>'}${x.contact_email_source_url ? '<br><a class="muted" target="_blank" rel="noopener noreferrer" href="'+escapeHtml(x.contact_email_source_url)+'">Source</a>' : ''}</td>
+      <td><strong>${escapeHtml(labels[x.outreach_status] || x.outreach_status)}</strong>${x.outreach_last_contacted_at ? '<br><span class="muted">'+escapeHtml(String(x.outreach_last_contacted_at))+'</span>' : ''}</td>
+      <td><form method="POST" action="/admin/outreach/${x.id}/status" style="display:flex;gap:6px;align-items:center"><input type="hidden" name="_csrf" value="${escapeHtml(ctx.session.csrf_token)}"><select name="status" style="min-width:140px">${Object.entries(labels).map(([v,l])=>'<option value="'+v+'"'+(x.outreach_status===v?' selected':'')+'>'+l+'</option>').join('')}</select><button class="btn small" type="submit">Save</button></form></td>
+    </tr>`).join('');
+    const body = `<section class="section container"><h1>Business Outreach</h1><p class="muted">Public business contact emails and GoBookr outreach progress.</p><div style="display:flex;gap:8px;flex-wrap:wrap;margin:18px 0">${tabs}</div><form method="GET" action="/admin/outreach" style="display:flex;gap:8px;max-width:520px;margin-bottom:18px"><input name="q" value="${escapeHtml(q)}" placeholder="Search business, city, or email"><button class="btn small">Search</button></form>${rows ? `<div style="overflow-x:auto"><table><thead><tr><th>Business</th><th>Email</th><th>Status</th><th>Update</th></tr></thead><tbody>${rows}</tbody></table></div>` : '<div class="panel"><p class="muted" style="margin:0;">No businesses match this filter.</p></div>'}</section>`;
+    send(ctx.res, layout({title:'Business Outreach',currentUser:ctx.currentUser,session:ctx.session,body}));
+  });
+
+  router.post('/admin/outreach/:id/status', async (ctx) => {
+    if (!requireAdmin(ctx)) return;
+    const id = Number(ctx.params.id); const status = String(ctx.body.status || '');
+    const allowed = new Set(['not_contacted','contacted','replied','claimed','do_not_contact']);
+    if (Number.isInteger(id) && id > 0 && allowed.has(status)) {
+      db.prepare(`UPDATE shops SET outreach_status=?, outreach_last_contacted_at=CASE WHEN ?='contacted' THEN CURRENT_TIMESTAMP ELSE outreach_last_contacted_at END, updated_at=CURRENT_TIMESTAMP WHERE id=?`).run(status,status,id);
+    }
+    redirect(ctx.res,'/admin/outreach');
+  });
+
 };
