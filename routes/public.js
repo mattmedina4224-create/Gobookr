@@ -42,15 +42,34 @@ function claimBadge(pro) {
   return '';
 }
 function proCard(pro) {
-  const priceLine = pro.price_min && pro.price_max ? `${money(pro.price_min)}${pro.price_min !== pro.price_max ? '–' + money(pro.price_max) : ''}` : 'Pricing varies';
-  const ratingHtml = pro.rating != null ? `<span class="rating">${stars(pro.rating)}<span class="count"><b>${pro.rating}</b> (${pro.reviewCount})</span></span>` : `<span class="muted">New on GoBookr</span>`;
-  const serviceNames = pro.services.slice(0, 3).map((s) => escapeHtml(s.name)).join(' · ') || 'Services coming soon';
+  const startingPrice = pro.services && pro.services.length ? money(Math.min(...pro.services.map((s) => Number(s.price)).filter(Number.isFinite))) + '+' : (pro.price_min ? money(pro.price_min) + '+' : 'Pricing varies');
+  const ratingHtml = pro.rating != null
+    ? `<div class="market-rating"><span class="market-star" aria-hidden="true">★</span><strong>${pro.rating}</strong><span class="market-review-count">(${pro.reviewCount} review${pro.reviewCount === 1 ? '' : 's'})</span></div>`
+    : `<div class="market-new">New on GoBookr</div>`;
+  const serviceNames = pro.services.slice(0, 2).map((s) => escapeHtml(s.name)).join(' · ') || escapeHtml(slugCategory((pro.categories || [pro.category])[0] || 'Professional'));
   const hasLocation = pro.latitude !== null && pro.latitude !== '' && pro.longitude !== null && pro.longitude !== '' && Number.isFinite(Number(pro.latitude)) && Number.isFinite(Number(pro.longitude));
   const locationAttrs = hasLocation ? ` data-lat="${Number(pro.latitude)}" data-lon="${Number(pro.longitude)}"` : '';
-  const distanceHtml = Number.isFinite(Number(pro.distanceMiles)) ? `<span class="distance-away">${Number(pro.distanceMiles).toFixed(1)} miles away</span>` : (hasLocation ? `<span class="distance-away">Use location for distance</span>` : '');
-  const workplaceHtml = pro.workplace_name ? `<div class="pro-workplace">${escapeHtml(pro.workplace_name)}</div>` : '';
-  const photoHtml = pro.coverPhoto ? `<div class="pro-card-photo"><img src="${escapeHtml(pro.coverPhoto.image_url)}" alt="${escapeHtml(pro.coverPhoto.caption || pro.business_name)}" loading="lazy" /></div>` : '';
-  return `<a class="pro-card${pro.coverPhoto ? ' has-photo' : ''}" href="/pro/${pro.id}"${locationAttrs}>${photoHtml}<div class="pro-card-body"><div class="pro-card-top"><div class="avatar accent-${escapeHtml(pro.accent)}">${escapeHtml(pro.initials)}</div><div class="pro-card-main"><h3>${escapeHtml(pro.business_name)}${pro.license_verified ? verifiedBadge() : ''}</h3>${workplaceHtml}<div class="pro-location">${escapeHtml(pro.city)}, ${escapeHtml(pro.state)}${distanceHtml ? ` <span aria-hidden="true">·</span> ${distanceHtml}` : ''}</div></div></div><div style="margin:8px 0;">${claimBadge(pro)}</div><div class="pro-card-badges">${categoryBadges(pro.categories)}</div><div class="pro-card-rating">${ratingHtml}</div><div class="services-line">${serviceNames}</div><div class="pro-card-footer"><span class="price-tag">${priceLine}</span><span class="view-profile">${pro.claim_status === 'unclaimed' ? 'View & claim profile →' : 'View profile →'}</span></div></div></a>`;
+  const distanceHtml = Number.isFinite(Number(pro.distanceMiles)) ? `<span class="market-distance">${Number(pro.distanceMiles).toFixed(1)} mi away</span>` : '';
+  const workplaceHtml = pro.workplace_name ? `<div class="market-workplace">${escapeHtml(pro.workplace_name)}</div>` : '';
+  const photoHtml = pro.coverPhoto
+    ? `<img class="market-avatar-img" src="${escapeHtml(pro.coverPhoto.image_url)}" alt="${escapeHtml(pro.coverPhoto.caption || pro.business_name)}" loading="lazy" />`
+    : `<div class="market-avatar-fallback accent-${escapeHtml(pro.accent)}">${escapeHtml(pro.initials)}</div>`;
+  const verified = pro.license_verified ? `<span class="market-verified">${verifiedBadge()}<span>Verified</span></span>` : '';
+  const claim = pro.claim_status === 'unclaimed' ? `<span class="market-status">Unclaimed</span>` : '';
+  return `<a class="pro-card market-pro-card" href="/pro/${pro.id}"${locationAttrs}>
+    <div class="market-pro-inner">
+      <div class="market-avatar-wrap">${photoHtml}</div>
+      <div class="market-pro-info">
+        <div class="market-name-row"><h3>${escapeHtml(pro.business_name)}</h3>${pro.license_verified ? verifiedBadge() : ''}</div>
+        ${workplaceHtml}
+        <div class="market-trust-row">${verified}${claim}</div>
+        ${ratingHtml}
+        <div class="market-service">${serviceNames}</div>
+        <div class="market-meta"><span class="market-price">From ${startingPrice}</span>${distanceHtml}${pro.city ? `<span class="market-place">${escapeHtml(pro.city)}, ${escapeHtml(pro.state)}</span>` : ''}</div>
+      </div>
+      <span class="market-chevron" aria-hidden="true">›</span>
+    </div>
+  </a>`;
 }
 function businessCard(shop) {
   const location = [shop.city, shop.state].filter(Boolean).join(', ');
