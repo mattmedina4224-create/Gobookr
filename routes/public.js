@@ -54,7 +54,6 @@ function proCard(pro) {
 }
 function businessCard(shop) {
   const location = [shop.city, shop.state].filter(Boolean).join(', ');
-  const distanceHtml = Number.isFinite(Number(shop.distanceMiles)) ? ` <span aria-hidden="true">·</span> <span class="distance-away">${Number(shop.distanceMiles).toFixed(1)} miles away</span>` : '';
   const status = shop.claim_status === 'unclaimed' ? '<span class="badge" style="background:#eef4ff;color:#0b1f3a;border:1px solid #c8d8f2;">Unclaimed business</span>' : '';
   const action = shop.claim_status === 'unclaimed' ? 'View & claim business →' : 'View business →';
   const distanceHtml = Number.isFinite(Number(shop.distanceMiles)) ? '<span class="distance-away">' + Number(shop.distanceMiles).toFixed(1) + ' miles away</span>' : '';
