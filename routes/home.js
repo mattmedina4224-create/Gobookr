@@ -46,7 +46,7 @@ module.exports = function (router) {
       radial-gradient(760px 360px at 12% -10%, rgba(229,238,255,.9) 0%, rgba(255,255,255,0) 62%),
       #fff;
     border-bottom:1px solid #edf0f6;
-    padding:64px 0 54px;
+    padding:78px 0 64px;
   }
   .home-eyebrow {
     margin:0 0 20px;
@@ -57,18 +57,18 @@ module.exports = function (router) {
     text-transform:uppercase;
   }
   .home-hero h1 {
-    max-width:800px;
+    max-width:720px;
     margin:0 0 22px;
-    font-size:clamp(2.8rem,6vw,4.65rem);
+    font-size:clamp(3rem,6vw,4.8rem);
     line-height:.98;
     letter-spacing:-.052em;
     color:#11131c;
   }
   .home-hero .lede {
-    max-width:750px;
+    max-width:620px;
     margin:0;
     color:#50586a;
-    font-size:1.15rem;
+    font-size:1.08rem;
     line-height:1.58;
   }
 
@@ -83,8 +83,8 @@ module.exports = function (router) {
   }
   .home-search-card form {
     display:grid;
-    grid-template-columns:1.15fr 1fr 1fr auto;
-    gap:10px;
+    grid-template-columns:1.15fr .9fr .9fr auto;
+    gap:0;
     align-items:center;
   }
   .home-field {
@@ -162,7 +162,7 @@ module.exports = function (router) {
   }
   .home-trust-icon svg { width:21px; height:21px; }
 
-  .home-pills { display:flex; flex-wrap:wrap; gap:10px; margin-top:24px; }
+  .home-search-hint { max-width:980px; margin:10px 0 0; color:#7a8292; font-size:.78rem; }\n\n  .home-pills { display:flex; flex-wrap:wrap; gap:10px; margin-top:24px; }
   .home-pills a {
     padding:8px 14px;
     border:1px solid #e3e7ee;
@@ -175,11 +175,11 @@ module.exports = function (router) {
 
   .home-section { padding:52px 0 58px; background:#fff; }
   .home-section-head { display:flex; align-items:center; justify-content:space-between; gap:16px; margin-bottom:20px; }
-  .home-section-head h2 { margin:0; font-size:1.75rem; letter-spacing:-.03em; }
+  .home-section-kicker { margin:0 0 5px; color:#6f7890; font-size:.75rem; font-weight:800; letter-spacing:.08em; text-transform:uppercase; }\n  .home-section-head h2 { margin:0; font-size:1.75rem; letter-spacing:-.03em; }
   .home-see-all { color:#215ca6; font-weight:750; }
   .home-pro-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; }
-  .home-pro-card { overflow:hidden; border:1px solid #e5e8ef; border-radius:22px; background:#fff; box-shadow:0 10px 28px -24px rgba(25,40,80,.45); }
-  .home-pro-photo { width:100%; aspect-ratio:1.45; object-fit:cover; background:#eef1f7; }
+  .home-pro-card { overflow:hidden; transition:transform .16s ease,box-shadow .16s ease; border:1px solid #e5e8ef; border-radius:16px; background:#fff; box-shadow:none; }
+  .home-pro-card:hover { transform:translateY(-2px); box-shadow:0 16px 34px -28px rgba(25,40,80,.5); }\n  .home-pro-photo { width:100%; aspect-ratio:1.45; object-fit:cover; background:#eef1f7; }
   .home-pro-placeholder { display:flex; align-items:center; justify-content:center; color:#fff; background:linear-gradient(135deg,#1e2a4a,#38568f); font-size:2rem; font-weight:800; }
   .home-pro-info { padding:15px; }
   .home-pro-info h3 { margin:0 0 4px; font-size:1rem; }
@@ -258,17 +258,17 @@ module.exports = function (router) {
     .home-mobile-menu a { display:block; padding:12px 14px; border-radius:10px; font-weight:650; color:#252c40; }
     .home-mobile-menu a:last-child { background:#1e2a4a; color:#fff; text-align:center; margin-top:4px; }
 
-    .home-hero { padding:36px 0 38px; }
+    .home-hero { padding:42px 0 38px; }
     .home-hero .container { padding:0 18px; }
     .home-eyebrow { margin-bottom:16px; font-size:.68rem; letter-spacing:.16em; }
-    .home-hero h1 { font-size:2.65rem; line-height:1.01; margin-bottom:20px; max-width:100%; }
+    .home-hero h1 { font-size:2.72rem; line-height:.99; margin-bottom:16px; max-width:360px; }
     .home-hero .lede { font-size:1rem; line-height:1.52; }
 
-    .home-search-card { margin-top:28px; padding:12px; border-radius:25px; box-shadow:0 16px 34px -28px rgba(25,40,80,.45); }
+    .home-search-card { margin-top:26px; padding:6px; border-radius:16px; box-shadow:0 16px 34px -28px rgba(25,40,80,.45); }
     .home-search-card form { display:grid !important; grid-template-columns:1fr !important; gap:10px !important; }
-    .home-field { min-height:62px; padding:0 18px; }
-    .home-field select,.home-field input { height:58px; font-size:1rem; }
-    .home-search-card .btn { width:100%; min-height:62px; font-size:1rem; }
+    .home-field { min-height:58px; padding:0 14px; border-radius:0; }\n    .home-field + .home-field { border-left:0; border-top:1px solid #e8ebf0; }
+    .home-field select,.home-field input { height:54px; font-size:.98rem; }
+    .home-search-card .btn { width:100%; min-height:52px; margin-top:4px; border-radius:11px; font-size:1rem; }\n    .home-search-hint { display:none; }
 
     .home-trust-row { margin-top:20px; }
     .home-trust-item { gap:8px; padding:4px 8px; font-size:.76rem; line-height:1.15; }
@@ -295,8 +295,8 @@ module.exports = function (router) {
   <section class="home-hero">
     <div class="container">
       <p class="home-eyebrow">Real people. Real services. Near you.</p>
-      <h1>Find a local professional you can actually trust.</h1>
-      <p class="lede">Discover barbers, hairstylists, colorists, nail technicians, eyelash technicians, eyebrow technicians, waxing specialists, tattoo artists, and more then book directly with the professional.</p>
+      <h1>Find your next favorite beauty pro.</h1>
+      <p class="lede">Search local beauty and wellness professionals, see their work, and book with confidence.</p>
 
       <div class="home-search-card" id="find">
         <form method="GET" action="/search">
@@ -310,7 +310,7 @@ module.exports = function (router) {
           </label>
           <label class="home-field">
             <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="2"/><path d="M5 21c0-4 3-7 7-7s7 3 7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-            <input type="text" name="q" maxlength="100" placeholder="Name or business" aria-label="Name or business" />
+            <input type="text" name="q" maxlength="100" placeholder="Pro or business name" aria-label="Pro or business name" />
           </label>
           <button class="btn" type="submit" aria-label="Search">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="m20 20-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
@@ -319,7 +319,7 @@ module.exports = function (router) {
         </form>
       </div>
 
-      <div class="home-trust-row" aria-label="Why use GoBookr">
+      <p class="home-search-hint">Search by service and location. Add a name only if you already know who you want.</p>\n      <div class="home-trust-row" aria-label="Why use GoBookr">
         <div class="home-trust-item"><span class="home-trust-icon"><svg viewBox="0 0 24 24" fill="none"><path d="m12 3 7 3v5c0 4.4-2.8 8.2-7 10-4.2-1.8-7-5.6-7-10V6l7-3Z" stroke="currentColor" stroke-width="2"/><path d="m9 12 2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Verified professionals</span></div>
         <div class="home-trust-item"><span class="home-trust-icon"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="5" width="16" height="15" rx="2" stroke="currentColor" stroke-width="2"/><path d="M8 3v4M16 3v4M4 10h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><span>Easy booking</span></div>
         <div class="home-trust-item"><span class="home-trust-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="10" r="2.3" stroke="currentColor" stroke-width="2"/></svg></span><span>Local results</span></div>
@@ -340,7 +340,7 @@ module.exports = function (router) {
 
   <section class="home-section">
     <div class="container">
-      <div class="home-section-head"><h2>Top-rated professionals</h2><a class="home-see-all" href="/search">See all →</a></div>
+      <div class="home-section-head"><div><p class="home-section-kicker">Discover local talent</p><h2>Professionals worth knowing</h2></div><a class="home-see-all" href="/#find">Search pros →</a></div>
       <div class="home-pro-grid">${featured.map(homeCard).join('') || '<p class="muted">No professionals listed yet.</p>'}</div>
     </div>
   </section>
