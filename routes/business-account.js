@@ -13,10 +13,10 @@ module.exports = function (router) {
         <div style="display:grid;gap:16px;">
           <a class="panel" href="/signup?role=pro" style="padding:24px;text-decoration:none;color:inherit;display:flex;align-items:center;gap:18px;">
             <div style="width:48px;display:flex;align-items:center;justify-content:center;color:#111827;">
-              <svg width="34" height="34" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <circle cx="12" cy="8" r="3.25" stroke="currentColor" stroke-width="1.8"/>
-                <path d="M5.5 20c.45-4.25 2.7-6.5 6.5-6.5s6.05 2.25 6.5 6.5H5.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
-                <path d="M16.5 5.5l1 1 2-2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <circle cx="12" cy="7" r="3" stroke="currentColor" stroke-width="1.8"/>
+                <path d="M7 21v-4.2c0-2.7 2.2-4.8 5-4.8s5 2.1 5 4.8V21" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                <path d="M9 13.1l3 2.3 3-2.3M10 15l-1 6M14 15l1 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </div>
             <div style="flex:1;">
@@ -29,7 +29,7 @@ module.exports = function (router) {
 
           <a class="panel" href="/signup?role=storefront" style="padding:24px;text-decoration:none;color:inherit;display:flex;align-items:center;gap:18px;">
             <div style="width:48px;display:flex;align-items:center;justify-content:center;color:#111827;">
-              <svg width="34" height="34" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                 <path d="M4 10v9h16v-9" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
                 <path d="M3 9l2-5h14l2 5" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
                 <path d="M3 9c0 1.4 1 2.5 2.3 2.5S7.7 10.4 7.7 9c0 1.4 1 2.5 2.3 2.5s2.3-1.1 2.3-2.5c0 1.4 1 2.5 2.3 2.5S17 10.4 17 9c0 1.4 1 2.5 2.3 2.5S21.7 10.4 21.7 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
