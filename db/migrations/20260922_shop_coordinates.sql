@@ -1,0 +1,4 @@
+ALTER TABLE shops ADD COLUMN IF NOT EXISTS latitude DOUBLE PRECISION;
+ALTER TABLE shops ADD COLUMN IF NOT EXISTS longitude DOUBLE PRECISION;
+
+CREATE INDEX IF NOT EXISTS idx_shops_coordinates ON shops (latitude, longitude);
