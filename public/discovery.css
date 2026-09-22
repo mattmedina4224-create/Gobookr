@@ -207,3 +207,41 @@
   .distance-control { flex:0 0 84px; }
   .distance-control select { width:100%; min-height:40px; }
 }
+
+
+/* GoBookr marketplace professional cards — compact, scannable mobile-first layout */
+.market-pro-card { border:1px solid #e3e7ee; border-radius:18px; background:#fff; overflow:hidden; box-shadow:0 3px 12px rgba(11,31,58,.06); }
+.market-pro-card:hover { transform:translateY(-1px); box-shadow:0 10px 28px rgba(11,31,58,.10); }
+.market-pro-inner { position:relative; display:grid; grid-template-columns:82px minmax(0,1fr) 18px; gap:16px; align-items:start; padding:20px; }
+.market-avatar-wrap { width:82px; height:82px; }
+.market-avatar-img,.market-avatar-fallback { width:82px; height:82px; border-radius:50%; object-fit:cover; display:flex; align-items:center; justify-content:center; font-size:1.15rem; font-weight:800; overflow:hidden; border:1px solid #e1e5ec; }
+.market-pro-info { min-width:0; }
+.market-name-row { display:flex; align-items:center; gap:5px; min-width:0; }
+.market-name-row h3 { margin:0; color:#171c2b; font-size:1.08rem; line-height:1.2; font-weight:800; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.market-workplace { margin-top:2px; color:var(--ink-faint); font-size:.8rem; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.market-trust-row { display:flex; align-items:center; flex-wrap:wrap; gap:7px; margin-top:6px; min-height:18px; }
+.market-verified { display:inline-flex; align-items:center; gap:3px; color:var(--brand); font-size:.76rem; font-weight:750; }
+.market-verified .verified-badge svg { width:15px; height:15px; }
+.market-status { padding:2px 7px; border-radius:999px; background:#f3f5f8; color:var(--ink-soft); font-size:.7rem; font-weight:700; }
+.market-rating { display:flex; align-items:center; gap:4px; margin-top:7px; color:#17213a; font-size:.86rem; }
+.market-star { color:#f2a900; font-size:.95rem; }
+.market-review-count { color:var(--ink-faint); font-weight:500; }
+.market-new { margin-top:7px; color:var(--ink-faint); font-size:.82rem; font-weight:650; }
+.market-service { margin-top:7px; color:var(--ink-soft); font-size:.84rem; line-height:1.35; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.market-meta { display:flex; align-items:center; flex-wrap:wrap; gap:6px 10px; margin-top:9px; font-size:.79rem; }
+.market-price { color:#111b35; font-weight:800; }
+.market-distance { color:var(--brand); font-weight:750; }
+.market-place { color:var(--ink-faint); }
+.market-chevron { align-self:center; color:#a0a8b5; font-size:1.55rem; line-height:1; }
+.search-results-page .pro-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; }
+
+@media (max-width:760px) {
+  .search-results-page .pro-grid { grid-template-columns:1fr; gap:12px; }
+  .market-pro-inner { grid-template-columns:72px minmax(0,1fr) 14px; gap:13px; padding:16px; }
+  .market-avatar-wrap,.market-avatar-img,.market-avatar-fallback { width:72px; height:72px; }
+  .market-name-row h3 { font-size:1.03rem; }
+  .market-trust-row { margin-top:5px; }
+  .market-rating { margin-top:6px; }
+  .market-service { margin-top:6px; }
+  .market-meta { margin-top:8px; }
+}
