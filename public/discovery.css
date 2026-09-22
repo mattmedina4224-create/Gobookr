@@ -100,3 +100,34 @@
   .profile-page .tabs-grid { margin-top:18px; }
   .profile-page .panel { padding:18px; }
 }
+
+
+/* Discovery search controls */
+.discovery-search { display:grid; grid-template-columns:auto minmax(0,1fr) auto; align-items:center; gap:10px; width:100%; margin:0 0 16px; padding:6px; border:1px solid #dfe4ec; border-radius:18px; background:#fff; box-shadow:0 8px 28px -26px rgba(11,31,58,.45); }
+.discovery-search-icon { padding-left:12px; color:var(--ink-faint); font-size:1.45rem; line-height:1; }
+.discovery-search input[type="search"] { width:100%; min-width:0; height:48px; border:0; outline:0; background:transparent; font-size:1rem; box-shadow:none; padding:0 4px; }
+.discovery-search .btn { min-height:48px; border-radius:13px; padding:0 22px; }
+.result-type-tabs { display:inline-flex; gap:4px; margin:0 0 22px; padding:4px; border:1px solid var(--paper-line); border-radius:14px; background:var(--paper-soft); }
+.result-type-tabs a { padding:9px 14px; border-radius:10px; color:var(--ink-soft); font-size:.88rem; font-weight:700; }
+.result-type-tabs a.active { background:#fff; color:var(--ink); box-shadow:0 1px 4px rgba(11,31,58,.09); }
+
+@media (max-width:620px) {
+  .discovery-page { padding-top:20px; }
+  .discovery-page .section-head { display:grid; grid-template-columns:minmax(0,1fr) auto; align-items:start; }
+  .discovery-page .section-head > div { min-width:0; }
+  .discovery-page .section-head h2 { font-size:1.42rem; line-height:1.16; }
+  .discovery-page .section-head p { font-size:.9rem; }
+  .discovery-page .section-head .btn.small { font-size:0; padding:8px 10px; min-width:38px; }
+  .discovery-page .section-head .btn.small::after { content:'Reset'; font-size:.78rem; }
+  .discovery-search { grid-template-columns:auto minmax(0,1fr); gap:4px; padding:3px 4px; margin-bottom:12px; border-radius:15px; }
+  .discovery-search-icon { padding-left:10px; font-size:1.25rem; }
+  .discovery-search input[type="search"] { height:48px; font-size:1rem; }
+  .discovery-search .btn { grid-column:1 / -1; width:100%; min-height:44px; border-radius:12px; }
+  .result-type-tabs { display:grid; grid-template-columns:repeat(3,1fr); width:100%; margin-bottom:14px; border-radius:13px; }
+  .result-type-tabs a { text-align:center; padding:9px 6px; font-size:.8rem; white-space:nowrap; }
+  .search-layout .filters { padding:16px; box-shadow:none; }
+  .search-layout .filters .field { grid-template-columns:minmax(0,1fr) auto; }
+  .search-layout .filters .field > input[type="text"] { border-radius:12px; }
+  .search-layout .filters .field > select { border-radius:12px; }
+  .search-layout .filters .field > button { min-width:92px; border-radius:12px; }
+}
