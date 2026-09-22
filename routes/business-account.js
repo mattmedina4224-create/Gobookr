@@ -14,9 +14,8 @@ module.exports = function (router) {
           <a class="panel" href="/signup?role=pro" style="padding:24px;text-decoration:none;color:inherit;display:flex;align-items:center;gap:18px;">
             <div style="width:48px;display:flex;align-items:center;justify-content:center;color:#111827;">
               <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <circle cx="12" cy="7" r="3" stroke="currentColor" stroke-width="1.8"/>
-                <path d="M7 21v-4.2c0-2.7 2.2-4.8 5-4.8s5 2.1 5 4.8V21" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-                <path d="M9 13.1l3 2.3 3-2.3M10 15l-1 6M14 15l1 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="12" cy="8" r="3.2" stroke="currentColor" stroke-width="1.8"/>
+                <path d="M5.5 20c.6-4.2 2.8-6.3 6.5-6.3s5.9 2.1 6.5 6.3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
               </svg>
             </div>
             <div style="flex:1;">
