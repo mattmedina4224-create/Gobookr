@@ -81,6 +81,9 @@ module.exports = function (router) {
     background:rgba(255,255,255,.96);
     box-shadow:0 20px 50px -32px rgba(21,44,87,.42);
   }
+  .home-search-mode { display:flex; gap:8px; margin:0 0 14px; padding:4px; width:max-content; max-width:100%; border-radius:999px; background:#f3f5f8; }
+  .home-search-mode a { padding:9px 16px; border-radius:999px; color:#596174; font-size:.88rem; font-weight:800; }
+  .home-search-mode a.active { background:#14264c; color:#fff; box-shadow:0 3px 10px rgba(20,38,76,.18); }
   .home-search-card form {
     display:grid;
     grid-template-columns:1.15fr .9fr .9fr auto;
@@ -264,7 +267,9 @@ module.exports = function (router) {
     .home-hero h1 { font-size:2.72rem; line-height:.99; margin-bottom:16px; max-width:360px; }
     .home-hero .lede { font-size:1rem; line-height:1.52; }
 
-    .home-search-card { margin-top:26px; padding:6px; border-radius:16px; box-shadow:0 16px 34px -28px rgba(25,40,80,.45); }
+    .home-search-card { margin-top:26px; padding:10px; border-radius:16px; box-shadow:0 16px 34px -28px rgba(25,40,80,.45); }
+    .home-search-mode { width:100%; display:grid; grid-template-columns:1fr 1fr; margin-bottom:10px; }
+    .home-search-mode a { text-align:center; padding:10px 8px; font-size:.86rem; }
     .home-search-card form { display:grid !important; grid-template-columns:1fr !important; gap:10px !important; }
     .home-field { min-height:58px; padding:0 14px; border-radius:0; }\n    .home-field + .home-field { border-left:0; border-top:1px solid #e8ebf0; }
     .home-field select,.home-field input { height:54px; font-size:.98rem; }
@@ -299,6 +304,7 @@ module.exports = function (router) {
       <p class="lede">Search local beauty and wellness professionals, see their work, and book with confidence.</p>
 
       <div class="home-search-card" id="find">
+        <div class="home-search-mode" aria-label="What are you looking for?"><a class="active" href="/#find">Find a professional</a><a href="/search?type=businesses">Find a business</a></div>
         <form method="GET" action="/search">
           <label class="home-field">
             <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="4" width="6" height="6" rx="1" stroke="currentColor" stroke-width="2"/><rect x="14" y="4" width="6" height="6" rx="1" stroke="currentColor" stroke-width="2"/><rect x="4" y="14" width="6" height="6" rx="1" stroke="currentColor" stroke-width="2"/><rect x="14" y="14" width="6" height="6" rx="1" stroke="currentColor" stroke-width="2"/></svg>
@@ -360,7 +366,7 @@ module.exports = function (router) {
 
       const menu = document.createElement('div');
       menu.className = 'home-mobile-menu';
-      menu.innerHTML = '<a href="/#find">Find a pro</a><a href="/business-account">Business Account</a><a href="/signup">Sign up</a>';
+      menu.innerHTML = '<a href="/#find">Find a pro</a><a href="/search?type=businesses">Find a business</a><a href="/business-account">Business Account</a><a href="/signup">Sign up</a>';
       document.querySelector('.site-header').appendChild(menu);
 
       button.addEventListener('click', () => {
