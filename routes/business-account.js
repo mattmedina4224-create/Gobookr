@@ -21,7 +21,7 @@ module.exports = function (router) {
             <div style="flex:1;">
               <h2 style="margin:0 0 6px;">Individual</h2>
               <p class="muted" style="margin:0 0 8px;">For independent professionals offering services directly to clients.</p>
-              <strong style="font-size:20px;">$15/month</strong>
+              <strong style="font-size:20px;">$20/month</strong>
             </div>
             <span style="font-size:32px;">›</span>
           </a>
