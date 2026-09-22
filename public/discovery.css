@@ -154,3 +154,56 @@
   .empty-state { border:0; background:transparent; padding:44px 12px; }
   .empty-state h3 { font-size:1.15rem; }
 }
+
+/* Marketplace discovery rebuild */
+.discovery-page { padding-bottom:64px; }
+.discovery-hero { padding:54px 0 46px; background:linear-gradient(180deg,#f7f8fb 0%,#fff 100%); border-bottom:1px solid var(--paper-line); }
+.discovery-hero-copy { max-width:720px; margin-bottom:26px; }
+.eyebrow { margin:0 0 8px; color:var(--brand); font-size:.78rem; line-height:1; font-weight:800; letter-spacing:.08em; text-transform:uppercase; }
+.discovery-hero h1 { margin:0 0 10px; color:#10182d; font-size:clamp(2.2rem,5vw,3.7rem); line-height:1.02; letter-spacing:-.045em; }
+.discovery-hero-copy > p:last-child { margin:0; color:var(--ink-soft); font-size:1.05rem; }
+.market-search { display:grid; grid-template-columns:minmax(0,1.45fr) minmax(220px,.8fr) auto; max-width:940px; padding:8px; background:#fff; border:1px solid #dfe4ec; border-radius:18px; box-shadow:0 18px 45px -34px rgba(11,31,58,.45); }
+.market-field { min-width:0; padding:8px 16px; }
+.market-field + .market-field { border-left:1px solid var(--paper-line); }
+.market-field span { display:block; margin-bottom:3px; color:#111b35; font-size:.75rem; font-weight:800; }
+.market-field input { width:100%; height:28px; padding:0; border:0; outline:0; background:transparent; color:var(--ink); font-size:1rem; box-shadow:none; }
+.market-search-btn { min-width:112px; border-radius:12px; }
+.discovery-content { padding-top:42px; }
+.browse-heading { margin-bottom:18px; }
+.browse-heading h2,.results-toolbar h2 { margin:0; color:#111b35; font-size:1.55rem; letter-spacing:-.025em; }
+.service-tiles { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; }
+.service-tile { display:flex; align-items:center; justify-content:space-between; min-height:72px; padding:0 20px; border:1px solid var(--paper-line); border-radius:14px; background:#fff; color:#111b35; font-weight:750; transition:border-color .15s ease,box-shadow .15s ease,transform .15s ease; }
+.service-tile:hover { transform:translateY(-1px); border-color:#cdd5e2; box-shadow:0 10px 25px -22px rgba(11,31,58,.45); }
+.service-tile span:last-child { color:var(--ink-faint); font-size:1.35rem; }
+.results-toolbar { display:flex; justify-content:space-between; align-items:end; gap:24px; margin-bottom:24px; }
+.results-toolbar p { margin:5px 0 0; color:var(--ink-faint); font-size:.9rem; }
+.back-search { display:inline-block; margin-bottom:9px; color:var(--brand); font-size:.82rem; font-weight:750; }
+.results-actions { display:flex; align-items:end; gap:10px; }
+.results-actions .result-type-tabs { margin:0; }
+.distance-control span { display:block; margin:0 0 4px; color:var(--ink-faint); font-size:.68rem; font-weight:750; }
+.distance-control select { min-height:42px; border:1px solid var(--paper-line); border-radius:12px; background:#fff; padding:0 28px 0 10px; }
+.results-shell .pro-grid { gap:18px; }
+
+@media (max-width:760px) {
+  .discovery-page { padding-bottom:40px; }
+  .discovery-hero { padding:30px 0 28px; }
+  .discovery-hero-copy { margin-bottom:18px; }
+  .discovery-hero h1 { max-width:330px; font-size:2.35rem; }
+  .discovery-hero-copy > p:last-child { max-width:340px; font-size:.94rem; }
+  .market-search { display:block; padding:6px; border-radius:16px; }
+  .market-field { display:block; padding:10px 12px; }
+  .market-field + .market-field { border-left:0; border-top:1px solid var(--paper-line); }
+  .market-field input { height:30px; font-size:1rem; }
+  .market-search-btn { width:100%; min-height:48px; margin-top:4px; border-radius:12px; }
+  .discovery-content { padding-top:28px; }
+  .browse-heading h2 { font-size:1.35rem; }
+  .service-tiles { grid-template-columns:1fr 1fr; gap:9px; }
+  .service-tile { min-height:58px; padding:0 14px; border-radius:12px; font-size:.88rem; }
+  .results-toolbar { display:block; margin-bottom:18px; }
+  .results-toolbar h2 { font-size:1.35rem; }
+  .results-actions { margin-top:16px; justify-content:space-between; }
+  .results-actions .result-type-tabs { width:auto; flex:1; }
+  .results-actions .result-type-tabs a { padding:8px 7px; }
+  .distance-control { flex:0 0 84px; }
+  .distance-control select { width:100%; min-height:40px; }
+}
