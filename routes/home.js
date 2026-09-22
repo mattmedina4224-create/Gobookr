@@ -360,7 +360,7 @@ module.exports = function (router) {
 
       const menu = document.createElement('div');
       menu.className = 'home-mobile-menu';
-      menu.innerHTML = '<a href="/search">Find a pro</a><a href="/business-account">Business Account</a><a href="/signup">Sign up</a>';
+      menu.innerHTML = '<a href="/#find">Find a pro</a><a href="/business-account">Business Account</a><a href="/signup">Sign up</a>';
       document.querySelector('.site-header').appendChild(menu);
 
       button.addEventListener('click', () => {
