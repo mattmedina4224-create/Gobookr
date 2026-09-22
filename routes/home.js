@@ -298,7 +298,7 @@ module.exports = function (router) {
       <h1>Find a local professional you can actually trust.</h1>
       <p class="lede">Discover barbers, hairstylists, colorists, nail technicians, eyelash technicians, eyebrow technicians, waxing specialists, tattoo artists, and more then book directly with the professional.</p>
 
-      <div class="home-search-card">
+      <div class="home-search-card" id="find">
         <form method="GET" action="/search">
           <label class="home-field">
             <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="4" width="6" height="6" rx="1" stroke="currentColor" stroke-width="2"/><rect x="14" y="4" width="6" height="6" rx="1" stroke="currentColor" stroke-width="2"/><rect x="4" y="14" width="6" height="6" rx="1" stroke="currentColor" stroke-width="2"/><rect x="14" y="14" width="6" height="6" rx="1" stroke="currentColor" stroke-width="2"/></svg>
