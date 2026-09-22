@@ -20,9 +20,10 @@ module.exports = function (router) {
     const logo = safeUrl(shop.logo_url);
     const cover = safeUrl(shop.cover_url);
     const booking = safeUrl(shop.booking_url);
-    const website = safeUrl(shop.website_url);
     const address = [shop.street_address, shop.suite, shop.city, shop.state, shop.zip_code].filter(Boolean).join(', ');
     const claimed = shop.claim_status === 'claimed';
+    const professionals = db.prepare(`SELECT id, business_name, category, bio, initials, license_verified FROM pro_profiles WHERE LOWER(COALESCE(workplace_name,'')) = LOWER(?) AND LOWER(city) = LOWER(?) AND UPPER(state) = UPPER(?) AND (? = '' OR COALESCE(street_address,'') = '' OR LOWER(street_address) = LOWER(?)) ORDER BY business_name ASC LIMIT 50`).all(shop.name, shop.city, shop.state, String(shop.street_address || ''), String(shop.street_address || ''));
+    const staffHtml = professionals.length ? professionals.map((pro) => `<a class="card" href="/pro/${pro.id}" style="text-decoration:none;color:inherit;display:flex;align-items:center;gap:12px;"><div style="width:48px;height:48px;border-radius:50%;background:var(--paper-soft);display:flex;align-items:center;justify-content:center;font-weight:800;flex:0 0 auto;">${escapeHtml(pro.initials || 'GB')}</div><div><strong>${escapeHtml(pro.business_name)}</strong><div class="muted" style="margin-top:2px;">${escapeHtml(String(pro.category || 'Professional').replace(/_/g,' '))}${pro.license_verified ? ' · Verified' : ''}</div></div></a>`).join('') : '<p class="muted">No GoBookr professionals are connected to this business yet.</p>';
     const body = `<section class="section container">
       <div class="panel" style="overflow:hidden;padding:0;">
         ${cover ? `<img src="${escapeHtml(cover)}" alt="" style="width:100%;height:260px;object-fit:cover;display:block;">` : ''}
@@ -34,8 +35,9 @@ module.exports = function (router) {
           ${shop.description ? `<p style="margin-top:20px;">${escapeHtml(shop.description)}</p>` : ''}
           <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:22px;">
             <div class="card"><h3>Location</h3><p>${escapeHtml(address || 'Address coming soon')}</p>${shop.phone ? `<p>${escapeHtml(shop.phone)}</p>` : ''}</div>
-            <div class="card"><h3>Book & learn more</h3><div style="display:flex;gap:8px;flex-wrap:wrap;">${booking ? `<a class="btn" href="${escapeHtml(booking)}" target="_blank" rel="noopener noreferrer">Book with shop</a>` : ''}${website ? `<a class="btn secondary" href="${escapeHtml(website)}" target="_blank" rel="noopener noreferrer">Website</a>` : ''}${!booking && !website ? '<span class="muted">Links coming soon</span>' : ''}</div></div>
+            <div class="card"><h3>GoBookr professionals</h3><p class="muted" style="margin-bottom:0;">Choose a professional below to view their profile and booking options.</p></div>
           </div>
+          <div style="margin-top:24px;"><h2>Professionals at this business</h2><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;">${staffHtml}</div></div>
           ${!claimed ? `<div class="card" style="margin-top:18px;"><h3>Own this business?</h3><p>Claim this business to manage its GoBookr business profile.</p><a class="btn secondary" href="/shop/${shop.id}/claim">Claim this business</a></div>` : ''}
         </div>
       </div>
