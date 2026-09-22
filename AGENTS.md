@@ -8,7 +8,7 @@ The product owner uses ChatGPT as the project manager. Codex is the implementati
 ## Current product direction
 - Customer-facing brand: **GoBookr** (capital G and B).
 - Domain: `gobookr.com`.
-- Professional plan: 30-day free trial, then $15/month.
+- Professional plan: 30-day free trial, then $20/month.
 - Primary categories: barbers, hairstylists, colorists, nail technicians, eyelash technicians, eyebrow/brow professionals, waxing specialists, tattoo artists, massage therapists, and similar appointment-based personal services.
 - GoBookr is not intended to become a broad home-services marketplace.
 - Search should support service/category, city or ZIP, professional/business name, rating, and eventually geographic radius.
@@ -88,7 +88,7 @@ The intended ownership flow is:
 - GoBookr needs a correction/removal/reporting path as the imported marketplace grows.
 
 ## Billing rules
-- GoBookr Professional is $15/month after a 30-day free trial.
+- GoBookr Professional is $20/month after a 30-day free trial.
 - Do not create real Stripe charges, subscriptions, refunds, or other financial actions without explicit authorization for that action.
 - Preserve the existing Stripe billing flow unless the task explicitly calls for changing it.
 
