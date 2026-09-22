@@ -7,15 +7,21 @@ module.exports = function (router) {
     const body = `
       <section class="section container" style="max-width:760px;">
         <div style="margin-bottom:22px;"><a href="/" style="text-decoration:none;">‹ &nbsp;Back</a></div>
-        <h1 style="font-size:clamp(34px,6vw,52px);line-height:1.02;margin-bottom:10px;">What type of business account are you creating?</h1>
-        <p class="muted" style="font-size:18px;margin-bottom:28px;">Choose the option that best describes you.</p>
+        <h1 style="font-size:clamp(34px,6vw,52px);line-height:1.02;margin-bottom:10px;">Choose your GoBookr account</h1>
+        <p class="muted" style="font-size:18px;margin-bottom:28px;">How will you use GoBookr?</p>
 
         <div style="display:grid;gap:16px;">
           <a class="panel" href="/signup?role=pro" style="padding:24px;text-decoration:none;color:inherit;display:flex;align-items:center;gap:18px;">
-            <div style="font-size:30px;width:48px;text-align:center;">♙</div>
+            <div style="width:48px;display:flex;align-items:center;justify-content:center;color:#111827;">
+              <svg width="34" height="34" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <circle cx="12" cy="8" r="3.25" stroke="currentColor" stroke-width="1.8"/>
+                <path d="M5.5 20c.45-4.25 2.7-6.5 6.5-6.5s6.05 2.25 6.5 6.5H5.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                <path d="M16.5 5.5l1 1 2-2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
             <div style="flex:1;">
               <h2 style="margin:0 0 6px;">Individual</h2>
-              <p class="muted" style="margin:0 0 8px;">Barber, stylist, tattoo artist, nail tech, massage therapist, or other independent professional.</p>
+              <p class="muted" style="margin:0 0 8px;">For independent professionals offering services directly to clients.</p>
               <strong style="font-size:20px;">$15/month</strong>
             </div>
             <span style="font-size:32px;">›</span>
@@ -32,7 +38,7 @@ module.exports = function (router) {
             </div>
             <div style="flex:1;">
               <h2 style="margin:0 0 6px;">Storefront</h2>
-              <p class="muted" style="margin:0 0 8px;">Barbershop, salon, studio, or other physical service business.</p>
+              <p class="muted" style="margin:0 0 8px;">For salons, barbershops, studios, and other physical service businesses.</p>
               <strong style="font-size:20px;">$49/month</strong>
             </div>
             <span style="font-size:32px;">›</span>
@@ -40,8 +46,8 @@ module.exports = function (router) {
         </div>
 
         <div style="border-top:1px solid #e4e7ee;margin-top:30px;padding-top:24px;text-align:center;">
-          <span class="muted">Already have an account?</span><br />
-          <a href="/login" style="font-size:18px;">Log in</a>
+          <p class="muted" style="margin:0 0 12px;font-size:16px;">Already have a GoBookr account?</p>
+          <a class="btn secondary" href="/login" style="min-width:180px;">Log in</a>
         </div>
       </section>`;
     send(ctx.res, layout({ title: 'Business Account', currentUser: ctx.currentUser, session: ctx.session, body }));
