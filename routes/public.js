@@ -6,7 +6,7 @@ const { send, redirect, flashFromQuery } = require('../lib/http');
 const { escapeHtml, money, slugCategory, avgRating, stars } = require('../lib/util');
 const { isProPubliclyVisible } = require('../lib/subscription');
 const { hydratePros } = require('../lib/pro-listing-data');
-const { parseRadius, resolveSearchCenter, filterByRadius } = require('../lib/geo-search');
+const { parseRadius, resolveSearchCenter, filterByRadius, filterBusinessesByRadius } = require('../lib/geo-search');
 
 const CATEGORIES = [
   { value: '', label: 'All services' },
@@ -57,9 +57,10 @@ function businessCard(shop) {
   const location = [shop.city, shop.state].filter(Boolean).join(', ');
   const status = shop.claim_status === 'unclaimed' ? '<span class="badge" style="background:#eef4ff;color:#0b1f3a;border:1px solid #c8d8f2;">Unclaimed business</span>' : '';
   const action = shop.claim_status === 'unclaimed' ? 'View & claim business →' : 'View business →';
+  const distanceHtml = Number.isFinite(Number(shop.distanceMiles)) ? '<span class="distance-away">' + Number(shop.distanceMiles).toFixed(1) + ' miles away</span>' : '';
   return '<a class="pro-card business-card" href="/shop/' + shop.id + '"><div class="pro-card-body"><div class="pro-card-top">' +
     (shop.logo_url ? '<img src="' + escapeHtml(shop.logo_url) + '" alt="" style="width:52px;height:52px;border-radius:14px;object-fit:cover;border:1px solid var(--paper-line);"/>' : '<div class="avatar accent-slate">B</div>') +
-    '<div class="pro-card-main"><div style="margin-bottom:5px;"><span class="badge category">Business</span></div><h3>' + escapeHtml(shop.name) + '</h3><div class="pro-location">' + escapeHtml(location) + '</div></div></div>' +
+    '<div class="pro-card-main"><div style="margin-bottom:5px;"><span class="badge category">Business</span></div><h3>' + escapeHtml(shop.name) + '</h3><div class="pro-location">' + escapeHtml(location) + (distanceHtml ? ' <span aria-hidden="true">·</span> ' + distanceHtml : '') + '</div></div></div>' +
     (status ? '<div style="margin:8px 0;">' + status + '</div>' : '') +
     '<div class="services-line">' + escapeHtml((shop.description || 'Local service business').slice(0, 140)) + '</div><div class="pro-card-footer"><span></span><span class="view-profile">' + action + '</span></div></div></a>';
 }
@@ -94,11 +95,12 @@ module.exports = function (router) {
     if (minRating) results = results.filter((p) => (p.rating || 0) >= Number(minRating));
     if (resultType === 'businesses') results = [];
     let businessSql = 'SELECT * FROM shops WHERE 1=1'; const businessArgs = [];
-    if (city) { businessSql += " AND (city LIKE ? OR state LIKE ? OR zip_code LIKE ?)"; const value = likeValue(city); businessArgs.push(value, value, value); }
+    if (city && !hasRadiusCenter) { businessSql += " AND (city LIKE ? OR state LIKE ? OR zip_code LIKE ?)"; const value = likeValue(city); businessArgs.push(value, value, value); }
     if (q) { businessSql += " AND name LIKE ?"; businessArgs.push(likeValue(q)); }
     businessSql += ' ORDER BY id DESC LIMIT 200';
     let businesses = [];
     try { businesses = db.prepare(businessSql).all(...businessArgs); } catch (err) { console.error('Business search unavailable', err); }
+    if (hasRadiusCenter && businesses.length) { const businessRadiusResult = await filterBusinessesByRadius(businesses, radiusLat, radiusLon, radius); businesses = businessRadiusResult.businesses; }
     if (category || minRating || resultType === 'professionals') businesses = [];
     const totalResults = results.length + businesses.length;
     const filterLink = (overrides) => { const merged = { type: resultType === 'all' ? '' : resultType, category, city, q, minRating, radius: radius || '', lat: hasGps ? lat : '', lon: hasGps ? lon : '', ...overrides }; const qs = new URLSearchParams(Object.entries(merged).filter(([, v]) => v !== '' && v !== null && v !== undefined)); return `/search?${qs.toString()}`; };
