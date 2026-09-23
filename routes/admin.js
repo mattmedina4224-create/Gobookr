@@ -109,9 +109,9 @@ module.exports = function (router) {
       FROM shops WHERE 1=1`;
     const args = [];
     if (status) { sql += ' AND outreach_status = ?'; args.push(status); }
-    if (q) { sql += ' AND (name LIKE ? OR city LIKE ? OR contact_email LIKE ?)'; const like = '%' + q.replace(/[\\%_]/g, '\\
+    if (q) { sql += ' AND (name LIKE ? OR city LIKE ? OR contact_email LIKE ?)'; const like = '%' + q.replace(/[\\%_]/g, '\\const like = '%' + q.replace(/[\\%_]/g, '\\
 };
-') + '%'; args.push(like, like, like); }
+') + '%';') + '%'; args.push(like, like, like); }
     sql += ' ORDER BY CASE outreach_status WHEN \'replied\' THEN 1 WHEN \'not_contacted\' THEN 2 WHEN \'contacted\' THEN 3 WHEN \'claimed\' THEN 4 ELSE 5 END, name ASC';
     let businesses = [];
     try { businesses = db.prepare(sql).all(...args); } catch (err) { console.error('Outreach list unavailable', err); }
