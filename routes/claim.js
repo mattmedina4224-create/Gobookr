@@ -4,10 +4,7 @@ const db = require('../db');
 const { layout } = require('../lib/layout');
 const { send, redirect } = require('../lib/http');
 const { escapeHtml } = require('../lib/util');
-
-function profileForClaim(id) {
-  return db.prepare('SELECT * FROM pro_profiles WHERE id = ?').get(id);
-}
+const { requireClaimProfile } = require('../lib/claims');
 
 function pendingClaim(proId, userId) {
   return db.prepare("SELECT id FROM profile_claims WHERE pro_id = ? AND claimant_user_id = ? AND status = 'pending' ORDER BY id DESC LIMIT 1").get(proId, userId);
@@ -15,10 +12,8 @@ function pendingClaim(proId, userId) {
 
 module.exports = function (router) {
   router.get('/pro/:id/claim', async (ctx) => {
-    const id = Number(ctx.params.id);
-    const pro = Number.isInteger(id) && id > 0 ? profileForClaim(id) : null;
-    if (!pro) return send(ctx.res, '<h1>404 — profile not found</h1>', 404);
-    if (pro.claim_status === 'claimed') return redirect(ctx.res, `/pro/${pro.id}?message=${encodeURIComponent('This profile has already been claimed.')}`);
+    const pro = requireClaimProfile(ctx, ctx.params.id);
+    if (!pro) return;
 
     const signedIn = Boolean(ctx.currentUser);
     const alreadyPending = signedIn ? Boolean(pendingClaim(pro.id, ctx.currentUser.id)) : false;
@@ -32,16 +27,23 @@ module.exports = function (router) {
   });
 
   router.post('/pro/:id/claim', async (ctx) => {
-    if (!ctx.currentUser) return redirect(ctx.res, `/login?claim=${encodeURIComponent(ctx.params.id)}`);
-    const id = Number(ctx.params.id);
-    const pro = Number.isInteger(id) && id > 0 ? profileForClaim(id) : null;
-    if (!pro) return send(ctx.res, '<h1>404 — profile not found</h1>', 404);
-    if (pro.claim_status === 'claimed') return redirect(ctx.res, `/pro/${pro.id}`);
+    const pro = requireClaimProfile(ctx, ctx.params.id);
+    if (!pro) return;
+    if (!ctx.currentUser) return redirect(ctx.res, `/login?claim=${pro.id}`);
 
-    if (!pendingClaim(pro.id, ctx.currentUser.id)) {
-      db.prepare("INSERT INTO profile_claims (pro_id, claimant_user_id, status, requested_at) VALUES (?, ?, 'pending', CURRENT_TIMESTAMP)").run(pro.id, ctx.currentUser.id);
-    }
-    db.prepare("UPDATE pro_profiles SET claim_status = 'claim_pending', claim_requested_at = CURRENT_TIMESTAMP WHERE id = ? AND claim_status != 'claimed'").run(pro.id);
-    redirect(ctx.res, `/pro/${pro.id}?message=${encodeURIComponent('Claim request received. GoBookr will verify ownership before transferring this profile.')}`);
+    // Check ownership in the write itself, not just the potentially cached lookup.
+    // The single statement locks the listing and makes repeated requests idempotent.
+    const result = db.prepare(`WITH eligible_profile AS (
+      UPDATE pro_profiles SET claim_status = 'claim_pending', claim_requested_at = CURRENT_TIMESTAMP
+      WHERE id = ? AND user_id IS NULL AND claim_status IN ('unclaimed', 'claim_pending')
+      RETURNING id
+    )
+    INSERT INTO profile_claims (pro_id, claimant_user_id, status, requested_at)
+    SELECT id, ?, 'pending', CURRENT_TIMESTAMP FROM eligible_profile
+    ON CONFLICT (pro_id, claimant_user_id) WHERE status = 'pending'
+    DO UPDATE SET status = 'pending'
+    RETURNING id`).run(pro.id, ctx.currentUser.id);
+    if (!result.changes) return send(ctx.res, '<h1>This profile is not available to claim.</h1>', 409);
+    redirect(ctx.res, `/pro/${pro.id}/claim`);
   });
 };

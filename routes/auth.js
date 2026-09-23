@@ -13,6 +13,7 @@ const {
   clearSessionCookie,
 } = require('../lib/auth');
 const { escapeHtml, initialsFrom } = require('../lib/util');
+const { requireClaimProfile } = require('../lib/claims');
 
 const PRO_CATEGORIES = [
   { value: 'barber', label: 'Barber' },
@@ -66,17 +67,25 @@ module.exports = function (router) {
   require('./onboarding')(router);
 
   router.get('/login', async (ctx) => {
+    const hasClaim = Object.hasOwn(ctx.query, 'claim');
+    const claim = hasClaim ? requireClaimProfile(ctx, ctx.query.claim) : null;
+    if (hasClaim && !claim) return;
+    if (claim && ctx.currentUser) return redirect(ctx.res, `/pro/${claim.id}/claim`);
     if (ctx.currentUser) return redirect(ctx.res, ctx.currentUser.role === 'pro' ? '/dashboard/pro' : '/dashboard/customer');
     const next = ctx.query.next || '';
-    const body = `<section class="section container" style="max-width:560px;"><div class="panel"><h1>Log in</h1><p class="muted">Welcome back to GoBookr.</p><form method="POST" action="/login"><input type="hidden" name="next" value="${escapeHtml(next)}"/><div class="field"><label>Email</label><input type="email" name="email" autocomplete="email" required/></div>${passwordField()}<div style="display:flex;justify-content:flex-end;margin:-4px 0 16px;"><a href="/forgot-password">Forgot password?</a></div><button class="btn block" type="submit">Log in</button></form></div></section>`;
+    const body = `<section class="section container" style="max-width:560px;"><div class="panel"><h1>Log in</h1><p class="muted">Welcome back to GoBookr.</p><form method="POST" action="/login">${claim ? `<input type="hidden" name="claim" value="${claim.id}"/>` : ''}<input type="hidden" name="next" value="${escapeHtml(next)}"/><div class="field"><label>Email</label><input type="email" name="email" autocomplete="email" required/></div>${passwordField()}<div style="display:flex;justify-content:flex-end;margin:-4px 0 16px;"><a href="/forgot-password">Forgot password?</a></div><button class="btn block" type="submit">Log in</button></form>${claim ? `<p><a href="/signup?claim=${claim.id}">Create an account to claim this profile</a></p>` : ''}</div></section>`;
     send(ctx.res, layout({ title: 'Log in', currentUser: null, session: null, flash: flashFromQuery(ctx.query), body }));
   });
 
   router.post('/login', async (ctx) => {
+    const hasClaim = Object.hasOwn(ctx.body, 'claim');
+    const claim = hasClaim ? requireClaimProfile(ctx, ctx.body.claim) : null;
+    if (hasClaim && !claim) return;
     const email = String(ctx.body.email || '').trim().toLowerCase(); const password = String(ctx.body.password || ''); const next = String(ctx.body.next || '');
     const user = db.prepare('SELECT * FROM users WHERE email = ?').get(email);
-    if (!user || !verifyPassword(password, user.password_hash)) return redirect(ctx.res, '/login?error=' + encodeURIComponent('Invalid email or password.'));
+    if (!user || !verifyPassword(password, user.password_hash)) return redirect(ctx.res, `/login?${claim ? `claim=${claim.id}&` : ''}error=` + encodeURIComponent('Invalid email or password.'));
     const token = createSession(user.id); setSessionCookie(ctx.res, token);
+    if (claim) return redirect(ctx.res, `/pro/${claim.id}/claim`);
     if (next && next.startsWith('/') && !next.startsWith('//')) return redirect(ctx.res, next);
     redirect(ctx.res, user.role === 'pro' ? '/dashboard/pro' : '/dashboard/customer');
   });
@@ -137,25 +146,34 @@ module.exports = function (router) {
   });
 
   router.get('/signup', async (ctx) => {
+    const hasClaim = Object.hasOwn(ctx.query, 'claim');
+    const claim = hasClaim ? requireClaimProfile(ctx, ctx.query.claim) : null;
+    if (hasClaim && !claim) return;
+    if (claim && ctx.currentUser) return redirect(ctx.res, `/pro/${claim.id}/claim`);
     if (ctx.currentUser) return redirect(ctx.res, '/');
-    const role = ctx.query.role === 'pro' ? 'pro' : ctx.query.role === 'storefront' ? 'storefront' : 'customer';
+    const role = claim ? 'customer' : ctx.query.role === 'pro' ? 'pro' : ctx.query.role === 'storefront' ? 'storefront' : 'customer';
     const categoryOptions = PRO_CATEGORIES.map((item) => `<label style="display:flex; align-items:center; gap:9px; padding:11px 13px; border:1px solid var(--paper-line); border-radius:12px; cursor:pointer;"><input type="checkbox" name="category_${item.value}" value="1" style="width:18px; height:18px; margin:0;" /><span style="font-weight:700;">${item.label}</span></label>`).join('');
     const proFields = role === 'pro' ? `<div class="field" style="margin-bottom:22px;"><label for="business_name">Business name</label><input id="business_name" name="business_name" required/><div class="helptext" style="display:block; position:static; margin-top:8px; line-height:1.4;">Your personal or professional business name.</div></div><div class="field"><label>Services you offer</label><div class="helptext" style="margin-bottom:10px;">Select all that apply. You can be listed in more than one category.</div><div style="display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px;">${categoryOptions}</div></div><div style="margin:24px 0 12px;"><h3 style="margin-bottom:4px;">Where do you work?</h3><p class="muted" style="margin:0;">Your address is used to calculate distance for nearby customers.</p></div><div class="field"><label for="workplace_name">Business / workplace name</label><input id="workplace_name" name="workplace_name" placeholder="e.g. Main Street Salon" required/></div><div class="field"><label for="street_address">Street address</label><input id="street_address" name="street_address" placeholder="e.g. 123 Main St" autocomplete="street-address" required/></div><div class="field"><label for="suite">Suite / Unit <span class="muted">(optional)</span></label><input id="suite" name="suite" placeholder="e.g. #100"/></div><div class="field-row"><div class="field"><label for="city">City</label><input id="city" name="city" placeholder="Denver" autocomplete="address-level2" required/></div><div class="field"><label for="state">State</label><input id="state" name="state" value="CO" maxlength="2" pattern="[A-Za-z]{2}" autocomplete="address-level1" required/></div></div><div class="field"><label for="zip_code">ZIP code</label><input id="zip_code" name="zip_code" inputmode="numeric" autocomplete="postal-code" maxlength="10" pattern="[0-9]{5}(-[0-9]{4})?" required/></div><div class="helptext" style="margin-top:-6px; margin-bottom:18px;">We use this address to place your business on GoBookr and calculate mileage. Customers still see your city and state on search cards.</div><div class="panel" style="margin:20px 0; background:var(--paper-soft);"><strong>30 days free</strong><p class="muted" style="margin:5px 0 0;">Professional membership is $15/month after your 30-day free trial. Cancel anytime.</p></div>` : '';
     const storefrontFields = role === 'storefront' ? `<div class="field"><label for="shop_name">Business name</label><input id="shop_name" name="shop_name" maxlength="160" required/></div><div class="field"><label for="street_address">Street address</label><input id="street_address" name="street_address" maxlength="200" autocomplete="street-address" required/></div><div class="field"><label for="suite">Suite / Unit <span class="muted">(optional)</span></label><input id="suite" name="suite" maxlength="80"/></div><div class="field-row"><div class="field"><label for="city">City</label><input id="city" name="city" maxlength="100" autocomplete="address-level2" required/></div><div class="field"><label for="state">State</label><input id="state" name="state" value="CO" maxlength="2" pattern="[A-Za-z]{2}" autocomplete="address-level1" required/></div></div><div class="field"><label for="zip_code">ZIP code</label><input id="zip_code" name="zip_code" maxlength="10" pattern="[0-9]{5}(-[0-9]{4})?" autocomplete="postal-code" required/></div><div class="field"><label for="phone">Business phone <span class="muted">(optional)</span></label><input id="phone" name="phone" maxlength="40" autocomplete="tel"/></div><div class="panel" style="margin:20px 0;background:var(--paper-soft);"><strong>Business Account</strong><p class="muted" style="margin:5px 0 0;">Complimentary. Your business page is separate from individual professional profiles.</p></div>` : '';
     const legalAgreement = `<label style="display:flex;align-items:flex-start;gap:9px;margin:18px 0;font-size:14px;"><input type="checkbox" name="legal_agreement" value="1" required style="width:18px;height:18px;margin-top:2px;flex:0 0 auto;"/><span>I agree to the <a href="/terms" target="_blank" rel="noopener">Terms of Service</a> and <a href="/privacy" target="_blank" rel="noopener">Privacy Policy</a>.</span></label>`;
-    const body = `<section class="section container" style="max-width:620px;"><div class="panel"><h1>${role === 'pro' ? 'Join GoBookr as a professional' : role === 'storefront' ? 'Create your business account' : 'Create your account'}</h1><form method="POST" action="/signup"><input type="hidden" name="role" value="${role}"/><div class="field"><label>Your name</label><input name="name" autocomplete="name" required/></div><div class="field"><label>Email</label><input type="email" name="email" autocomplete="email" required/></div>${passwordField({ minlength: 8 })}<div class="helptext" style="margin-top:-10px;margin-bottom:14px;">Use at least 8 characters.</div>${proFields}${storefrontFields}${legalAgreement}<button class="btn block" type="submit">${role === 'pro' ? 'Start 30-day free trial' : role === 'storefront' ? 'Create business account' : 'Create account'}</button></form></div></section>`;
+    const body = `<section class="section container" style="max-width:620px;"><div class="panel"><h1>${claim ? 'Create an account to claim this profile' : role === 'pro' ? 'Join GoBookr as a professional' : role === 'storefront' ? 'Create your business account' : 'Create your account'}</h1>${claim ? `<p>Continue claiming ${escapeHtml(claim.business_name)}. Ownership and your professional trial begin only after approval.</p>` : ''}<form method="POST" action="/signup">${claim ? `<input type="hidden" name="claim" value="${claim.id}"/>` : ''}<input type="hidden" name="role" value="${role}"/><div class="field"><label>Your name</label><input name="name" autocomplete="name" required/></div><div class="field"><label>Email</label><input type="email" name="email" autocomplete="email" required/></div>${passwordField({ minlength: 8 })}<div class="helptext" style="margin-top:-10px;margin-bottom:14px;">Use at least 8 characters.</div>${proFields}${storefrontFields}${legalAgreement}<button class="btn block" type="submit">${claim ? 'Create account and continue claim' : role === 'pro' ? 'Start 30-day free trial' : role === 'storefront' ? 'Create business account' : 'Create account'}</button></form>${claim ? `<p>Already have an account? <a href="/login?claim=${claim.id}">Log in to continue your claim</a></p>` : ''}</div></section>`;
     send(ctx.res, layout({ title: 'Sign up', currentUser: null, session: null, flash: flashFromQuery(ctx.query), body }));
   });
 
   router.post('/signup', async (ctx) => {
+    const hasClaim = Object.hasOwn(ctx.body, 'claim');
+    const claim = hasClaim ? requireClaimProfile(ctx, ctx.body.claim) : null;
+    if (hasClaim && !claim) return;
     const name = String(ctx.body.name || '').trim();
     const email = String(ctx.body.email || '').trim().toLowerCase();
     const password = String(ctx.body.password || '');
-    const signupType = ctx.body.role === 'pro' ? 'pro' : ctx.body.role === 'storefront' ? 'storefront' : 'customer';
+    // Claimants do not have professional access until ownership is approved.
+    const signupType = claim ? 'customer' : ctx.body.role === 'pro' ? 'pro' : ctx.body.role === 'storefront' ? 'storefront' : 'customer';
     const role = signupType === 'pro' ? 'pro' : 'customer';
-    if (!name || !validEmail(email) || password.length < 8) return redirect(ctx.res, `/signup?role=${signupType}&error=` + encodeURIComponent('Enter a valid name and email, and use a password with at least 8 characters.'));
-    if (String(ctx.body.legal_agreement || '') !== '1') return redirect(ctx.res, `/signup?role=${signupType}&error=` + encodeURIComponent('Please agree to the Terms of Service and Privacy Policy.'));
-    if (db.prepare('SELECT id FROM users WHERE email = ?').get(email)) return redirect(ctx.res, `/signup?role=${signupType}&error=` + encodeURIComponent('An account with that email already exists.'));
+    const signupUrl = claim ? `/signup?claim=${claim.id}` : `/signup?role=${signupType}`;
+    if (!name || !validEmail(email) || password.length < 8) return redirect(ctx.res, `${signupUrl}&error=` + encodeURIComponent('Enter a valid name and email, and use a password with at least 8 characters.'));
+    if (String(ctx.body.legal_agreement || '') !== '1') return redirect(ctx.res, `${signupUrl}&error=` + encodeURIComponent('Please agree to the Terms of Service and Privacy Policy.'));
+    if (db.prepare('SELECT id FROM users WHERE email = ?').get(email)) return redirect(ctx.res, `${signupUrl}&error=` + encodeURIComponent('An account with that email already exists.'));
 
     const categories = role === 'pro' ? selectedCategories(ctx.body) : [];
     let businessName = '';
@@ -214,12 +232,12 @@ module.exports = function (router) {
       try { db.exec('ROLLBACK'); } catch (_) {}
       console.error('Signup failed', err);
       const message = String(err && err.message || '').toLowerCase().includes('unique') ? 'An account with that email already exists.' : 'We could not create your account. Please try again.';
-      return redirect(ctx.res, `/signup?role=${signupType}&error=` + encodeURIComponent(message));
+      return redirect(ctx.res, `${signupUrl}&error=` + encodeURIComponent(message));
     }
 
     const token = createSession(userId);
     setSessionCookie(ctx.res, token);
-    redirect(ctx.res, role === 'pro' ? '/dashboard/pro/onboarding' : signupType === 'storefront' ? '/dashboard/shop/billing' : '/dashboard/customer');
+    redirect(ctx.res, claim ? `/pro/${claim.id}/claim` : role === 'pro' ? '/dashboard/pro/onboarding' : signupType === 'storefront' ? '/dashboard/shop/billing' : '/dashboard/customer');
   });
 
   router.post('/logout', async (ctx) => {
