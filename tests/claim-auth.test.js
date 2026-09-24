@@ -29,20 +29,25 @@ function load(file, dependencies, globals = {}) {
 function app(options = {}) {
   const state = {
     profiles: [{ id: 42, user_id: null, claim_status: 'unclaimed', business_name: 'Example <Salon>', city: 'Denver', state: 'CO' }],
-    users: [], claims: [], subscriptions: [], categories: [], writes: [], sessions: new Map(),
+    admins: new Set(), users: [], claims: [], subscriptions: [], categories: [], writes: [], sessions: new Map(),
   };
   const db = {
     exec(sql) { state.writes.push(sql); },
     prepare(sql) {
       return {
         get(...args) {
+          if (sql.startsWith('WITH admin_access')) return state.admins.has(args[0]) && state.sessions.has(args[1]) ? { user_id: args[0] } : undefined;
+          if (sql.includes('FROM users WHERE google_sub = ?')) return state.users.find(u => u.google_sub === args[0]);
+          if (sql.includes('FROM users WHERE id = ?')) return state.users.find(u => u.id === args[0]);
           if (sql.includes('FROM pro_profiles WHERE id = ?')) return state.profiles.find(p => p.id === args[0]);
           if (sql.includes('FROM profile_claims')) return state.claims.find(c => c.pro_id === args[0] && c.claimant_user_id === args[1] && c.status === 'pending');
           if (sql.includes('FROM users WHERE email = ?')) return state.users.find(u => u.email === args[0]);
           throw new Error(`Unexpected read: ${sql}`);
         },
+        all() { return []; },
         run(...args) {
           state.writes.push(sql);
+          if (sql.startsWith('UPDATE users SET google_sub')) { state.users.find(u => u.id === args[1]).google_sub = args[0]; return { changes: 1 }; }
           if (sql.startsWith('INSERT INTO users')) {
             if (options.failSignup) throw new Error('Simulated signup failure');
             const user = { id: state.users.length + 1, email: args[0], password_hash: args[1], role: args[2], name: args[3] };
@@ -79,7 +84,7 @@ function app(options = {}) {
   const auth = load('lib/auth.js', { '../db': db });
   auth.createSession = userId => {
     const token = `test-session-${state.sessions.size + 1}`;
-    state.sessions.set(token, { user: state.users.find(u => u.id === userId), session: { csrf_token: 'test-csrf' } });
+    state.sessions.set(token, { user: state.users.find(u => u.id === userId), session: { token, csrf_token: 'test-csrf' } });
     return token;
   };
   auth.getSessionUser = req => state.sessions.get(String(req.headers.cookie || '').split('=')[1]) || null;
@@ -89,9 +94,15 @@ function app(options = {}) {
     fetch: async () => { if (options.claimOnly) throw new Error('Claim signup must not geocode'); return { ok: true, json: async () => [] }; },
   });
   const claimRoute = load('routes/claim.js', common);
-  const dependencies = { './routes/auth': authRoute, './routes/claim': claimRoute, './lib/auth': auth, './lib/layout': common['../lib/layout'],
+  const admin = load('lib/admin.js', { '../db': db, './http': httpHelpers });
+  const adminRoute = load('routes/admin.js', { ...common, '../lib/admin': admin }, { process: { env: { ADMIN_EMAIL: 'owner@example.test' } } });
+  const googleRoute = load('routes/google.js', { '../db': db, '../lib/auth': auth, '../lib/http': httpHelpers }, {
+    process: { env: { GOOGLE_CLIENT_ID: 'test-client' } },
+    fetch: async () => ({ ok: true, json: async () => ({ aud: 'test-client', email_verified: true, exp: Math.floor(Date.now() / 1000) + 300, email: 'existing0@example.test', sub: 'google-owner' }) }),
+  });
+  const dependencies = { './routes/admin': adminRoute, './routes/google': googleRoute, './routes/auth': authRoute, './routes/claim': claimRoute, './lib/auth': auth, './lib/layout': common['../lib/layout'],
     './lib/pro-billing-banner': { installBillingBanner() {} }, './lib/square-dashboard-card': { installSquareDashboardCard() {} }, './lib/rate-limit': { checkAuthRateLimit: () => ({ allowed: true }) } };
-  for (const file of ['public', 'become-pro', 'google', 'pro', 'customer', 'admin', 'legal', 'embedded-billing', 'billing', 'square', 'shops', 'shop-dashboard', 'shop-billing', 'business-account']) dependencies[`./routes/${file}`] = () => {};
+  for (const file of ['public', 'become-pro', 'pro', 'customer', 'legal', 'embedded-billing', 'billing', 'square', 'shops', 'shop-dashboard', 'shop-billing', 'business-account']) dependencies[`./routes/${file}`] = () => {};
   dependencies['./lib/router'] = load('lib/router.js', { '../routes/home': () => {} });
   let handle;
   dependencies['node:http'] = { createServer(fn) { handle = fn; return { listen() {} }; } };
@@ -237,5 +248,55 @@ test('normal professional/customer signup and ordinary login keep existing behav
     assert.equal(login.headers.Location, '/search');
     const external = await a.request('POST', '/login', { email: signup.email, password: signup.password, next: '//evil.example' });
     assert.equal(external.headers.Location, role === 'pro' ? '/dashboard/pro' : '/dashboard/customer');
+  }
+});
+
+
+test('signup cannot grant admin through ADMIN_EMAIL or posted privileges', async () => {
+  for (const claiming of [false, true]) {
+    const a = app();
+    const body = { ...signup, email: 'owner@example.test', role: 'admin', is_admin: 'true', admin: '1' };
+    if (!claiming) delete body.claim;
+    const res = await a.request('POST', '/signup', body);
+    assert.equal(res.status, 302);
+    assert.equal(a.state.users[0].role, 'customer');
+    assert.equal(a.state.admins.size, 0);
+    assert.equal((await a.request('GET', '/admin/licenses', {}, sessionToken(res))).status, 403);
+  }
+});
+
+test('all admin routes deny non-admins; grants and revocations are checked each request', async () => {
+  const a = app();
+  const { user, token } = a.addUser();
+  user.email = 'owner@example.test';
+  const routes = [...fs.readFileSync(path.join(root, 'routes/admin.js'), 'utf8').matchAll(/router\.(get|post)\('([^']+)'/g)];
+  for (const [, method, url] of routes) {
+    const res = await a.request(method.toUpperCase(), url.replace(':id', '1'), { _csrf: 'test-csrf' }, token);
+    assert.equal(res.status, 403, url);
+  }
+  assert.equal(a.state.writes.length, 0);
+  assert.equal((await a.request('GET', '/admin/licenses')).headers.Location, '/login');
+  a.state.admins.add(user.id);
+  user.email = 'another@example.test'; // Email never supplies the privilege.
+  assert.equal((await a.request('GET', '/admin/licenses', {}, token)).status, 200);
+  assert.equal((await a.request('GET', '/admin/shop-claims', {}, token)).status, 200);
+  assert.equal((await a.request('POST', '/admin/shop-claims/1/approve', {}, token)).status, 403);
+  a.state.admins.delete(user.id);
+  assert.equal((await a.request('GET', '/admin/licenses', {}, token)).status, 403);
+  a.state.admins.add(user.id);
+  a.state.sessions.delete(token);
+  assert.equal((await a.request('GET', '/admin/licenses', {}, token)).headers.Location, '/login');
+});
+
+test('password and verified Google login preserve explicitly provisioned privileges', async () => {
+  for (const isAdmin of [false, true]) {
+    const a = app();
+    const { user } = a.addUser();
+    if (isAdmin) a.state.admins.add(user.id);
+    for (const [url, body] of [['/login', { email: user.email, password: 'password123' }], ['/auth/google', { credential: 'verified-test-credential' }]]) {
+      const res = await a.request('POST', url, body);
+      assert.equal(res.headers.Location, '/dashboard/customer');
+      assert.equal((await a.request('GET', '/admin/licenses', {}, sessionToken(res))).status, isAdmin ? 200 : 403);
+    }
   }
 });

@@ -103,10 +103,13 @@ Key production values include:
 - `STRIPE_PRICE_ID`
 - `STRIPE_WEBHOOK_SECRET`
 - `GOOGLE_CLIENT_ID`
-- `ADMIN_EMAIL`
 - `TRUST_PROXY=1` only when the app is actually behind a trusted reverse proxy that sets the forwarded client IP
 
 Never commit real credentials to the repository.
+
+Administrator privileges are provisioned explicitly by user ID; see
+[Administrator provisioning](docs/admin-access.md). Email matching does not grant
+admin access. Apply the admin_accounts migration before deploying that gate.
 
 ## Project structure
 

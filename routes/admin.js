@@ -5,18 +5,7 @@ const { layout } = require('../lib/layout');
 const { send, redirect } = require('../lib/http');
 const { escapeHtml } = require('../lib/util');
 
-function adminEmail() {
-  return String(process.env.ADMIN_EMAIL || 'matt@novobarbers.com').trim().toLowerCase();
-}
-
-function requireAdmin(ctx) {
-  const email = String((ctx.currentUser && ctx.currentUser.email) || '').trim().toLowerCase();
-  if (!ctx.currentUser || !email || email !== adminEmail()) {
-    redirect(ctx.res, '/login');
-    return false;
-  }
-  return true;
-}
+const { requireAdmin } = require('../lib/admin');
 
 module.exports = function (router) {
   router.get('/admin/licenses', async (ctx) => {
