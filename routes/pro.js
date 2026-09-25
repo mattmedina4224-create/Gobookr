@@ -197,6 +197,7 @@ module.exports = function (router) {
     const profile = requirePro(ctx); if (!profile) return;
     let totals = { profile_views: 0, booking_clicks: 0 };
     let recent = [];
+    let marketingTotals = { profile_views: 0, booking_clicks: 0 };
     try {
       totals = db.prepare(`SELECT
         COUNT(*) FILTER (WHERE event_type='profile_view') AS profile_views,
@@ -205,6 +206,11 @@ module.exports = function (router) {
       recent = db.prepare(`SELECT event_type, source, COUNT(*) AS total
         FROM pro_events WHERE pro_id=? AND created_at >= CURRENT_TIMESTAMP - INTERVAL '30 days'
         GROUP BY event_type, source ORDER BY total DESC LIMIT 12`).all(profile.id);
+      marketingTotals = db.prepare(`SELECT
+        COUNT(*) FILTER (WHERE event_type='profile_view') AS profile_views,
+        COUNT(*) FILTER (WHERE event_type='booking_click') AS booking_clicks
+        FROM pro_events WHERE pro_id=? AND created_at >= CURRENT_TIMESTAMP - INTERVAL '30 days'
+        AND source LIKE 'marketing-%'`).get(profile.id) || marketingTotals;
     } catch (err) { console.error('Professional analytics unavailable', err); }
     const views = Number(totals.profile_views || 0); const clicks = Number(totals.booking_clicks || 0);
     const rate = views ? Math.round((clicks / views) * 1000) / 10 : 0;
@@ -213,9 +219,8 @@ module.exports = function (router) {
       const sourceLabel = source.startsWith('marketing-') ? source.slice(10).split('-').map((part) => part.charAt(0).toUpperCase() + part.slice(1)).join(' ') : source;
       return `<tr><td>${escapeHtml(r.event_type === 'booking_click' ? 'Booking click' : 'Profile view')}</td><td>${escapeHtml(sourceLabel)}</td><td><strong>${Number(r.total || 0)}</strong></td></tr>`;
     }).join('');
-    const marketing = recent.filter((r) => String(r.source || '').startsWith('marketing-'));
-    const marketingViews = marketing.filter((r) => r.event_type === 'profile_view').reduce((sum, r) => sum + Number(r.total || 0), 0);
-    const marketingClicks = marketing.filter((r) => r.event_type === 'booking_click').reduce((sum, r) => sum + Number(r.total || 0), 0);
+    const marketingViews = Number(marketingTotals.profile_views || 0);
+    const marketingClicks = Number(marketingTotals.booking_clicks || 0);
     const body = `<section class="section container"><div class="dash-layout">${dashNav('analytics')}<div><p class="muted" style="margin-bottom:6px;">LAST 30 DAYS</p><h1>Your GoBookr results</h1><p class="muted">See how often customers discover your profile and continue to your booking page.</p><div class="stat-cards"><div class="stat-card"><div class="num">${views}</div><div class="label">Profile views</div></div><div class="stat-card"><div class="num">${clicks}</div><div class="label">Booking clicks</div></div><div class="stat-card"><div class="num">${rate}%</div><div class="label">View → booking click</div></div></div><div class="panel"><h3>Marketing Center impact</h3><p class="muted">Tracked campaign links generated <strong>${marketingViews}</strong> profile view${marketingViews === 1 ? '' : 's'} and <strong>${marketingClicks}</strong> booking click${marketingClicks === 1 ? '' : 's'} in the last 30 days.</p><a class="btn secondary small" href="/dashboard/pro/marketing">Create another campaign</a></div><div class="panel"><h3>Where activity came from</h3>${rows ? `<div style="overflow-x:auto"><table><thead><tr><th>Activity</th><th>Source</th><th>Total</th></tr></thead><tbody>${rows}</tbody></table></div>` : '<p class="muted">No tracked activity yet. As customers view your profile and click your booking link, results will appear here.</p>'}</div><div class="panel"><h3>What this means</h3><p class="muted">A booking click means a customer left GoBookr for your connected scheduling page. It does not necessarily mean the appointment was completed.</p></div></div></div></section>`;
     send(ctx.res, layout({ title: 'Professional analytics', currentUser: ctx.currentUser, session: ctx.session, flash: flashFromQuery(ctx.query), body }));
   });
