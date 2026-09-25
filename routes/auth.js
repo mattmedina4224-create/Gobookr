@@ -24,6 +24,7 @@ const PRO_CATEGORIES = [
   { value: 'eyebrow_technician', label: 'Eyebrow Technician' },
   { value: 'waxing_specialist', label: 'Waxing Specialist' },
   { value: 'tattoo_artist', label: 'Tattoo Artist' },
+  { value: 'massage_therapist', label: 'Massage Therapist' },
 ];
 
 async function geocodeBusinessAddress({ street, city, state, zip }) {
