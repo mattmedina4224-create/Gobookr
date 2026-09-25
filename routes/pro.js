@@ -101,6 +101,7 @@ async function geocodeBusinessAddress({ street, city, state, zip }) {
 function dashNav(active) {
   const items = [
     { key: 'overview', href: '/dashboard/pro', label: 'Overview' },
+    { key: 'onboarding', href: '/dashboard/pro/onboarding', label: 'Get started' },
     { key: 'profile', href: '/dashboard/pro/profile', label: 'Profile & services' },
     { key: 'portfolio', href: '/dashboard/pro/portfolio', label: 'Portfolio' },
     { key: 'billing', href: '/dashboard/pro/billing', label: 'Billing' },
@@ -119,8 +120,25 @@ module.exports = function (router) {
     const profile = requirePro(ctx); if (!profile) return;
     const reviews = db.prepare('SELECT rating FROM reviews WHERE pro_id = ?').all(profile.id);
     const bookingReady = Boolean(profile.booking_url);
-    const body = `<section class="section container"><div class="dash-layout">${dashNav('overview')}<div><h1>Welcome back, ${escapeHtml(ctx.currentUser.name.split(' ')[0])}</h1><div class="stat-cards"><div class="stat-card"><div class="num">${bookingReady ? '✓' : '—'}</div><div class="label">Booking link</div></div><div class="stat-card"><div class="num">${avgRating(reviews) ?? '—'}</div><div class="label">Average rating</div></div><div class="stat-card"><div class="num">${reviews.length}</div><div class="label">Reviews</div></div></div><div class="panel"><h3>Your public profile</h3><p>${escapeHtml(profile.business_name)} · ${slugCategory(profile.category)} · ${escapeHtml(profile.city)}, ${escapeHtml(profile.state)}</p><a class="btn secondary" href="/pro/${profile.id}">View public profile</a><a class="btn ghost" href="/dashboard/pro/profile">Edit details</a></div><div class="panel"><h3>Online booking</h3>${bookingReady ? '<p>Your Book Appointment button is connected to your scheduling site.</p><a class="btn secondary" href="/dashboard/pro/profile">Update booking link</a>' : '<p class="muted">Add your Square, Booksy, Vagaro, Fresha, GlossGenius, or other scheduling link so customers can book directly from your GoBookr profile.</p><a class="btn" href="/dashboard/pro/profile">Add booking link</a>'}</div></div></div></section>`;
+    const body = `<section class="section container"><div class="dash-layout">${dashNav('overview')}<div><h1>Welcome back, ${escapeHtml(ctx.currentUser.name.split(' ')[0])}</h1><div class="panel"><h3>Finish setting up your GoBookr profile</h3><p class="muted">A complete profile gives customers the information they need to choose you and book.</p><a class="btn" href="/dashboard/pro/onboarding">Continue setup</a></div><div class="stat-cards"><div class="stat-card"><div class="num">${bookingReady ? '✓' : '—'}</div><div class="label">Booking link</div></div><div class="stat-card"><div class="num">${avgRating(reviews) ?? '—'}</div><div class="label">Average rating</div></div><div class="stat-card"><div class="num">${reviews.length}</div><div class="label">Reviews</div></div></div><div class="panel"><h3>Your public profile</h3><p>${escapeHtml(profile.business_name)} · ${slugCategory(profile.category)} · ${escapeHtml(profile.city)}, ${escapeHtml(profile.state)}</p><a class="btn secondary" href="/pro/${profile.id}">View public profile</a><a class="btn ghost" href="/dashboard/pro/profile">Edit details</a></div><div class="panel"><h3>Online booking</h3>${bookingReady ? '<p>Your Book Appointment button is connected to your scheduling site.</p><a class="btn secondary" href="/dashboard/pro/profile">Update booking link</a>' : '<p class="muted">Add your Square, Booksy, Vagaro, Fresha, GlossGenius, or other scheduling link so customers can book directly from your GoBookr profile.</p><a class="btn" href="/dashboard/pro/profile">Add booking link</a>'}</div></div></div></section>`;
     send(ctx.res, layout({ title: 'Pro dashboard', currentUser: ctx.currentUser, session: ctx.session, flash: flashFromQuery(ctx.query), body }));
+  });
+
+  router.get('/dashboard/pro/onboarding', async (ctx) => {
+    const profile = requirePro(ctx); if (!profile) return;
+    const services = db.prepare('SELECT id FROM services WHERE pro_id = ? LIMIT 1').get(profile.id);
+    const portfolio = db.prepare('SELECT id FROM portfolio_items WHERE pro_id = ? LIMIT 1').get(profile.id);
+    const steps = [
+      { done: Boolean(profile.business_name && profile.workplace_name && profile.city && profile.state), title: 'Confirm your profile', text: 'Make sure your name, workplace, location and bio are accurate.', href: '/dashboard/pro/profile', cta: 'Edit profile' },
+      { done: Boolean(profile.booking_url), title: 'Connect online booking', text: 'Send customers directly to the scheduling system you already use.', href: '/dashboard/pro/profile', cta: 'Add booking link' },
+      { done: Boolean(services), title: 'Add your services', text: 'Show customers what you offer before they click to book.', href: '/dashboard/pro/profile', cta: 'Add services' },
+      { done: Boolean(portfolio), title: 'Add your work', text: 'Upload at least one photo so customers can see your style.', href: '/dashboard/pro/portfolio', cta: 'Add portfolio photo' },
+    ];
+    const complete = steps.filter((s) => s.done).length;
+    const percent = Math.round((complete / steps.length) * 100);
+    const cards = steps.map((s) => `<div class="panel" style="display:flex;align-items:flex-start;justify-content:space-between;gap:18px;"><div><h3 style="margin-bottom:6px;">${s.done ? '✓ ' : ''}${escapeHtml(s.title)}</h3><p class="muted" style="margin:0;">${escapeHtml(s.text)}</p></div><a class="btn ${s.done ? 'ghost' : 'secondary'} small" href="${s.href}">${s.done ? 'Review' : escapeHtml(s.cta)}</a></div>`).join('');
+    const body = `<section class="section container"><div class="dash-layout">${dashNav('onboarding')}<div><p class="muted" style="margin-bottom:6px;">PROFESSIONAL SETUP</p><h1>Get ready to be discovered</h1><p class="muted">Complete these basics so your GoBookr profile can turn searches into booking clicks.</p><div class="panel"><div style="display:flex;justify-content:space-between;gap:16px;align-items:center;"><div><strong>${complete} of ${steps.length} complete</strong><div class="muted">${percent}% profile setup</div></div><div style="font-size:1.8rem;font-weight:800;">${percent}%</div></div><div style="height:10px;background:#eef1f5;border-radius:999px;overflow:hidden;margin-top:14px;"><div style="height:100%;width:${percent}%;background:#14264c;"></div></div></div>${cards}${complete === steps.length ? '<div class="panel"><h3>You’re ready.</h3><p>Your core profile is set up. Next we’ll help you market it and measure the customers GoBookr sends you.</p></div>' : ''}</div></div></section>`;
+    send(ctx.res, layout({ title: 'Professional setup', currentUser: ctx.currentUser, session: ctx.session, flash: flashFromQuery(ctx.query), body }));
   });
 
   router.get('/dashboard/pro/requests', async (ctx) => {
