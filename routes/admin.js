@@ -115,7 +115,7 @@ module.exports = function (router) {
       db.prepare("UPDATE users SET role='pro' WHERE id=?").run(claim.claimant_user_id);
       db.prepare("UPDATE profile_claims SET status='approved', reviewed_at=CURRENT_TIMESTAMP, reviewer_user_id=? WHERE id=? AND status='pending'").run(ctx.currentUser.id, id);
       db.prepare("UPDATE profile_claims SET status='rejected', reviewed_at=CURRENT_TIMESTAMP, reviewer_user_id=? WHERE pro_id=? AND id != ? AND status='pending'").run(ctx.currentUser.id, claim.pro_id, id);
-      db.prepare("INSERT INTO subscriptions (pro_id, status, trial_started_at, trial_ends_at) VALUES (?, 'trialing', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP + INTERVAL '30 days') ON CONFLICT (pro_id) DO NOTHING").run(claim.pro_id);
+      db.prepare("INSERT INTO subscriptions (pro_id, status, trial_started_at, trial_ends_at) SELECT ?, 'trialing', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP + INTERVAL '30 days' WHERE NOT EXISTS (SELECT 1 FROM subscriptions WHERE pro_id = ?)").run(claim.pro_id, claim.pro_id);
       db.exec('COMMIT');
     } catch (err) {
       try { db.exec('ROLLBACK'); } catch (_) {}
