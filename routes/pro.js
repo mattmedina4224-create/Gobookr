@@ -104,6 +104,7 @@ function dashNav(active) {
     { key: 'onboarding', href: '/dashboard/pro/onboarding', label: 'Get started' },
     { key: 'profile', href: '/dashboard/pro/profile', label: 'Profile & services' },
     { key: 'portfolio', href: '/dashboard/pro/portfolio', label: 'Portfolio' },
+    { key: 'marketing', href: '/dashboard/pro/marketing', label: 'Marketing' },
     { key: 'analytics', href: '/dashboard/pro/analytics', label: 'Analytics' },
     { key: 'billing', href: '/dashboard/pro/billing', label: 'Billing' },
   ];
@@ -140,6 +141,25 @@ module.exports = function (router) {
     const cards = steps.map((s) => `<div class="panel" style="display:flex;align-items:flex-start;justify-content:space-between;gap:18px;"><div><h3 style="margin-bottom:6px;">${s.done ? '✓ ' : ''}${escapeHtml(s.title)}</h3><p class="muted" style="margin:0;">${escapeHtml(s.text)}</p></div><a class="btn ${s.done ? 'ghost' : 'secondary'} small" href="${s.href}">${s.done ? 'Review' : escapeHtml(s.cta)}</a></div>`).join('');
     const body = `<section class="section container"><div class="dash-layout">${dashNav('onboarding')}<div><p class="muted" style="margin-bottom:6px;">PROFESSIONAL SETUP</p><h1>Get ready to be discovered</h1><p class="muted">Complete these basics so your GoBookr profile can turn searches into booking clicks.</p><div class="panel"><div style="display:flex;justify-content:space-between;gap:16px;align-items:center;"><div><strong>${complete} of ${steps.length} complete</strong><div class="muted">${percent}% profile setup</div></div><div style="font-size:1.8rem;font-weight:800;">${percent}%</div></div><div style="height:10px;background:#eef1f5;border-radius:999px;overflow:hidden;margin-top:14px;"><div style="height:100%;width:${percent}%;background:#14264c;"></div></div></div>${cards}${complete === steps.length ? '<div class="panel"><h3>You’re ready.</h3><p>Your core profile is set up. Next we’ll help you market it and measure the customers GoBookr sends you.</p></div>' : ''}</div></div></section>`;
     send(ctx.res, layout({ title: 'Professional setup', currentUser: ctx.currentUser, session: ctx.session, flash: flashFromQuery(ctx.query), body }));
+  });
+
+  router.get('/dashboard/pro/marketing', async (ctx) => {
+    const profile = requirePro(ctx); if (!profile) return;
+    const campaigns = [
+      ['openings-today', 'Openings Today', 'I have openings today. Tap to view my work and book.'],
+      ['last-minute', 'Last-Minute Opening', 'A last-minute appointment just opened up. Grab it while it is available.'],
+      ['booking-week', 'Now Booking This Week', 'Now booking appointments this week. View my services and find a time that works for you.'],
+      ['book-with-me', 'Book With Me', 'Looking for your next appointment? Check out my work and book with me.'],
+      ['show-my-work', 'Show My Work', 'See more of my latest work and book your next appointment.'],
+    ];
+    const selected = campaigns.find(([key]) => key === ctx.query.campaign) || campaigns[0];
+    const source = 'marketing-' + selected[0];
+    const baseUrl = String(process.env.APP_URL || 'https://gobookr.com').replace(/\/$/, '');
+    const trackedUrl = baseUrl + '/pro/' + profile.id + '?source=' + encodeURIComponent(source);
+    const copy = clampText(ctx.query.copy || selected[2], 500);
+    const options = campaigns.map(([key, label]) => `<option value="${key}"${key === selected[0] ? ' selected' : ''}>${escapeHtml(label)}</option>`).join('');
+    const body = `<section class="section container"><div class="dash-layout">${dashNav('marketing')}<div><p class="muted" style="margin-bottom:6px;">MARKETING CENTER</p><h1>Turn openings into bookings</h1><p class="muted">Create something you can share to your socials in a few taps. Every link is tagged so GoBookr can measure the traffic it sends back to your profile.</p><div class="panel"><form method="GET" action="/dashboard/pro/marketing"><div class="field"><label for="campaign">What do you want to promote?</label><select id="campaign" name="campaign" onchange="this.form.submit()">${options}</select></div></form><div style="border:1px solid var(--paper-line);border-radius:18px;padding:24px;margin:18px 0;background:#fafafa;"><p class="muted" style="margin:0 0 8px;">${escapeHtml(selected[1]).toUpperCase()}</p><h2 style="margin:0 0 10px;">${escapeHtml(profile.business_name)}</h2><p style="font-size:1.08rem;">${escapeHtml(copy)}</p><p class="muted" style="word-break:break-all;">${escapeHtml(trackedUrl)}</p></div><form method="GET" action="/dashboard/pro/marketing"><input type="hidden" name="campaign" value="${escapeHtml(selected[0])}" /><div class="field"><label for="copy">Post / Story copy</label><textarea id="copy" name="copy" rows="4" maxlength="500">${escapeHtml(copy)}</textarea></div><button class="btn secondary" type="submit">Update preview</button></form><div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:16px;"><button class="btn" type="button" onclick="navigator.share ? navigator.share({title: ${JSON.stringify(profile.business_name)}, text: document.getElementById('copy').value, url: ${JSON.stringify(trackedUrl)}}) : navigator.clipboard.writeText(document.getElementById('copy').value + '\\n' + ${JSON.stringify(trackedUrl)}).then(() => alert('Post copy and link copied.'))">Share from phone</button><button class="btn ghost" type="button" onclick="navigator.clipboard.writeText(${JSON.stringify(trackedUrl)}).then(() => alert('Tracked link copied.'))">Copy tracked link</button></div></div><div class="panel"><h3>Coming next</h3><p class="muted">Portfolio-photo templates, saved campaigns, scheduled content, and connected social publishing. This first version establishes the tracked sharing loop before we connect external social accounts.</p></div></div></div></section>`;
+    send(ctx.res, layout({ title: 'Marketing Center', currentUser: ctx.currentUser, session: ctx.session, flash: flashFromQuery(ctx.query), body }));
   });
 
   router.get('/dashboard/pro/analytics', async (ctx) => {
