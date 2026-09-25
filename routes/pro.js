@@ -145,7 +145,7 @@ module.exports = function (router) {
 
   router.post('/dashboard/pro/marketing/campaigns', async (ctx) => {
     const profile = requirePro(ctx); if (!profile) return;
-    const allowed = new Set(['openings-today','last-minute','booking-week','book-with-me','show-my-work']);
+    const allowed = new Set(['openings-today','last-minute','booking-week','book-with-me','new-service','show-my-work']);
     const campaignType = clampText(ctx.body.campaign, 40);
     const copy = clampText(ctx.body.copy, 500);
     const scheduledFor = clampText(ctx.body.scheduled_for, 40);
@@ -174,6 +174,7 @@ module.exports = function (router) {
       ['last-minute', 'Last-Minute Opening', 'A last-minute appointment just opened up. Grab it while it is available.'],
       ['booking-week', 'Now Booking This Week', 'Now booking appointments this week. View my services and find a time that works for you.'],
       ['book-with-me', 'Book With Me', 'Looking for your next appointment? Check out my work and book with me.'],
+      ['new-service', 'New Service', 'I just added a new service. Tap to see the details and book your appointment.'],
       ['show-my-work', 'Show My Work', 'See more of my latest work and book your next appointment.'],
     ];
     const selected = campaigns.find(([key]) => key === ctx.query.campaign) || campaigns[0];
