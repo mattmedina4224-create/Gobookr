@@ -104,6 +104,7 @@ function dashNav(active) {
     { key: 'onboarding', href: '/dashboard/pro/onboarding', label: 'Get started' },
     { key: 'profile', href: '/dashboard/pro/profile', label: 'Profile & services' },
     { key: 'portfolio', href: '/dashboard/pro/portfolio', label: 'Portfolio' },
+    { key: 'analytics', href: '/dashboard/pro/analytics', label: 'Analytics' },
     { key: 'billing', href: '/dashboard/pro/billing', label: 'Billing' },
   ];
   return `<nav class="dash-nav">${items.map((i) => `<a href="${i.href}" class="${i.key === active ? 'active' : ''}">${i.label}</a>`).join('')}</nav>`;
@@ -139,6 +140,26 @@ module.exports = function (router) {
     const cards = steps.map((s) => `<div class="panel" style="display:flex;align-items:flex-start;justify-content:space-between;gap:18px;"><div><h3 style="margin-bottom:6px;">${s.done ? '✓ ' : ''}${escapeHtml(s.title)}</h3><p class="muted" style="margin:0;">${escapeHtml(s.text)}</p></div><a class="btn ${s.done ? 'ghost' : 'secondary'} small" href="${s.href}">${s.done ? 'Review' : escapeHtml(s.cta)}</a></div>`).join('');
     const body = `<section class="section container"><div class="dash-layout">${dashNav('onboarding')}<div><p class="muted" style="margin-bottom:6px;">PROFESSIONAL SETUP</p><h1>Get ready to be discovered</h1><p class="muted">Complete these basics so your GoBookr profile can turn searches into booking clicks.</p><div class="panel"><div style="display:flex;justify-content:space-between;gap:16px;align-items:center;"><div><strong>${complete} of ${steps.length} complete</strong><div class="muted">${percent}% profile setup</div></div><div style="font-size:1.8rem;font-weight:800;">${percent}%</div></div><div style="height:10px;background:#eef1f5;border-radius:999px;overflow:hidden;margin-top:14px;"><div style="height:100%;width:${percent}%;background:#14264c;"></div></div></div>${cards}${complete === steps.length ? '<div class="panel"><h3>You’re ready.</h3><p>Your core profile is set up. Next we’ll help you market it and measure the customers GoBookr sends you.</p></div>' : ''}</div></div></section>`;
     send(ctx.res, layout({ title: 'Professional setup', currentUser: ctx.currentUser, session: ctx.session, flash: flashFromQuery(ctx.query), body }));
+  });
+
+  router.get('/dashboard/pro/analytics', async (ctx) => {
+    const profile = requirePro(ctx); if (!profile) return;
+    let totals = { profile_views: 0, booking_clicks: 0 };
+    let recent = [];
+    try {
+      totals = db.prepare(`SELECT
+        COUNT(*) FILTER (WHERE event_type='profile_view') AS profile_views,
+        COUNT(*) FILTER (WHERE event_type='booking_click') AS booking_clicks
+        FROM pro_events WHERE pro_id=? AND created_at >= CURRENT_TIMESTAMP - INTERVAL '30 days'`).get(profile.id) || totals;
+      recent = db.prepare(`SELECT event_type, source, COUNT(*) AS total
+        FROM pro_events WHERE pro_id=? AND created_at >= CURRENT_TIMESTAMP - INTERVAL '30 days'
+        GROUP BY event_type, source ORDER BY total DESC LIMIT 12`).all(profile.id);
+    } catch (err) { console.error('Professional analytics unavailable', err); }
+    const views = Number(totals.profile_views || 0); const clicks = Number(totals.booking_clicks || 0);
+    const rate = views ? Math.round((clicks / views) * 1000) / 10 : 0;
+    const rows = recent.map((r) => `<tr><td>${escapeHtml(r.event_type === 'booking_click' ? 'Booking click' : 'Profile view')}</td><td>${escapeHtml(r.source || 'direct')}</td><td><strong>${Number(r.total || 0)}</strong></td></tr>`).join('');
+    const body = `<section class="section container"><div class="dash-layout">${dashNav('analytics')}<div><p class="muted" style="margin-bottom:6px;">LAST 30 DAYS</p><h1>Your GoBookr results</h1><p class="muted">See how often customers discover your profile and continue to your booking page.</p><div class="stat-cards"><div class="stat-card"><div class="num">${views}</div><div class="label">Profile views</div></div><div class="stat-card"><div class="num">${clicks}</div><div class="label">Booking clicks</div></div><div class="stat-card"><div class="num">${rate}%</div><div class="label">View → booking click</div></div></div><div class="panel"><h3>Where activity came from</h3>${rows ? `<div style="overflow-x:auto"><table><thead><tr><th>Activity</th><th>Source</th><th>Total</th></tr></thead><tbody>${rows}</tbody></table></div>` : '<p class="muted">No tracked activity yet. As customers view your profile and click your booking link, results will appear here.</p>'}</div><div class="panel"><h3>What this means</h3><p class="muted">A booking click means a customer left GoBookr for your connected scheduling page. It does not necessarily mean the appointment was completed.</p></div></div></div></section>`;
+    send(ctx.res, layout({ title: 'Professional analytics', currentUser: ctx.currentUser, session: ctx.session, flash: flashFromQuery(ctx.query), body }));
   });
 
   router.get('/dashboard/pro/requests', async (ctx) => {
