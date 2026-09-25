@@ -143,6 +143,7 @@ module.exports = function (router) {
     if (!bookingUrl) return redirect(ctx.res, '/pro/' + proId + '?error=' + encodeURIComponent('Online booking is not connected yet.'));
     try {
       db.prepare('INSERT INTO booking_clicks (pro_id, customer_user_id) VALUES (?, ?)').run(proId, ctx.currentUser ? ctx.currentUser.id : null);
+      db.prepare("INSERT INTO pro_events (pro_id, event_type, actor_user_id, source) VALUES (?, 'booking_click', ?, ?)").run(proId, ctx.currentUser ? ctx.currentUser.id : null, queryText(ctx.query.source, 80) || 'profile');
     } catch (err) {
       console.error('Booking click tracking failed', err);
     }
@@ -158,6 +159,10 @@ module.exports = function (router) {
     const services = db.prepare('SELECT * FROM services WHERE pro_id = ? ORDER BY price ASC').all(pro.id); const portfolio = db.prepare('SELECT * FROM portfolio_items WHERE pro_id = ? ORDER BY id DESC').all(pro.id);
     const reviews = db.prepare(`SELECT reviews.*, users.name AS customer_name FROM reviews JOIN users ON users.id = reviews.customer_id WHERE reviews.pro_id = ? ORDER BY reviews.created_at DESC`).all(pro.id);
     const rating = avgRating(reviews); const isOwnProfile = Boolean(ownProfile); const bookingUrl = safeExternalUrl(pro.booking_url);
+    if (!isOwnProfile) {
+      try { db.prepare("INSERT INTO pro_events (pro_id, event_type, actor_user_id, source) VALUES (?, 'profile_view', ?, ?)").run(pro.id, ctx.currentUser ? ctx.currentUser.id : null, queryText(ctx.query.source, 80) || 'marketplace'); }
+      catch (err) { console.error('Profile view tracking failed', err); }
+    }
     let ctaHtml;
     if (isOwnProfile) ctaHtml = `<a class="btn secondary block" href="/dashboard/pro/profile">Manage your profile</a>`;
     else if (pro.claim_status === 'unclaimed') ctaHtml = `${bookingUrl ? `<a class="btn block profile-book-btn" href="/book/${pro.id}">Book Appointment <span aria-hidden="true">↗</span></a>` : ''}<a class="btn secondary block" href="/pro/${pro.id}/claim" style="margin-top:10px;">Claim this profile</a><p class="muted" style="font-size:12px;margin:8px 0 0;text-align:center;">Are you this professional? Verify ownership to manage this listing.</p>`;
