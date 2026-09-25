@@ -71,7 +71,7 @@ function app(options = {}) {
             if (!p) return { changes: 0 };
             p.claim_status = 'claim_pending';
             if (!state.claims.some(c => c.pro_id === p.id && c.claimant_user_id === args[1] && c.status === 'pending')) {
-              state.claims.push({ id: state.claims.length + 1, pro_id: p.id, claimant_user_id: args[1], status: 'pending' });
+              state.claims.push({ id: state.claims.length + 1, pro_id: p.id, claimant_user_id: args[1], status: 'pending', verification_method: args[2], verification_evidence: args[3] });
             }
             return { changes: 1 };
           }
@@ -159,11 +159,13 @@ test('claim signup creates only an account; explicit request stays pending and i
   const page = await a.request('GET', '/pro/42/claim', {}, token);
   assert.match(page.body, /name="_csrf" value="test-csrf"/);
   for (let i = 0; i < 2; i++) {
-    const claim = await a.request('POST', '/pro/42/claim', { _csrf: 'test-csrf' }, token);
+    const claim = await a.request('POST', '/pro/42/claim', { _csrf: 'test-csrf', verification_method: 'social_account', verification_evidence: 'https://example.test/pro' }, token);
     assert.equal(claim.headers.Location, '/pro/42/claim');
   }
   assert.equal(a.state.claims.length, 1);
   assert.equal(a.state.claims[0].pro_id, 42);
+  assert.equal(a.state.claims[0].verification_method, 'social_account');
+  assert.equal(a.state.claims[0].verification_evidence, 'https://example.test/pro');
   assert.equal(a.state.profiles[0].user_id, null);
   assert.equal(a.state.subscriptions.length, 0);
   assert.match((await a.request('GET', '/pro/42/claim', {}, token)).body, /Claim request pending/);
@@ -271,7 +273,7 @@ test('all admin routes deny non-admins; grants and revocations are checked each 
   user.email = 'owner@example.test';
   const routes = [...fs.readFileSync(path.join(root, 'routes/admin.js'), 'utf8').matchAll(/router\.(get|post)\('([^']+)'/g)];
   for (const [, method, url] of routes) {
-    const res = await a.request(method.toUpperCase(), url.replace(':id', '1'), { _csrf: 'test-csrf' }, token);
+    const res = await a.request(method.toUpperCase(), url.replace(':id', '1'), { _csrf: 'test-csrf', verification_method: 'social_account', verification_evidence: 'https://example.test/pro' }, token);
     assert.equal(res.status, 403, url);
   }
   assert.equal(a.state.writes.length, 0);
