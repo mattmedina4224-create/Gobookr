@@ -225,7 +225,7 @@ test('owned and non-claimable listings are rejected, including stale claim-statu
 test('ownership changes after lookup reject the pending-claim write', async () => {
   const a = app({ beforeClaimWrite(state) { state.profiles[0].user_id = 999; } });
   const { token } = a.addUser();
-  assert.equal((await a.request('POST', '/pro/42/claim', { _csrf: 'test-csrf' }, token)).status, 409);
+  assert.equal((await a.request('POST', '/pro/42/claim', { _csrf: 'test-csrf', verification_method: 'social_account', verification_evidence: 'https://example.test/pro' }, token)).status, 409);
   assert.equal(a.state.claims.length, 0);
   assert.equal(a.state.profiles[0].user_id, 999);
 });
