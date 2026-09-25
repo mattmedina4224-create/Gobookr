@@ -88,6 +88,57 @@ module.exports = function (router) {
     redirect(ctx.res,'/admin/shop-claims');
   });
 
+  router.get('/admin/profile-claims', async (ctx) => {
+    if (!requireAdmin(ctx)) return;
+    const claims = db.prepare(`SELECT pc.id, pc.pro_id, pc.claimant_user_id, pc.status, pc.verification_method,
+      pc.verification_evidence, pc.requested_at, p.business_name, p.workplace_name, p.city, p.state,
+      u.name AS claimant_name, u.email AS claimant_email
+      FROM profile_claims pc JOIN pro_profiles p ON p.id=pc.pro_id JOIN users u ON u.id=pc.claimant_user_id
+      WHERE pc.status='pending' ORDER BY pc.requested_at ASC`).all();
+    const rows = claims.map(x => `<tr><td><a href="/pro/${x.pro_id}"><strong>${escapeHtml(x.business_name)}</strong></a>${x.workplace_name ? '<br><span class="muted">'+escapeHtml(x.workplace_name)+'</span>' : ''}<br><span class="muted">${escapeHtml(x.city || '')}, ${escapeHtml(x.state || '')}</span></td><td>${escapeHtml(x.claimant_name || '')}<br><span class="muted">${escapeHtml(x.claimant_email || '')}</span></td><td><strong>${escapeHtml(String(x.verification_method || '').replaceAll('_',' '))}</strong><br>${escapeHtml(x.verification_evidence || '')}</td><td>${escapeHtml(String(x.requested_at || ''))}</td><td><form method="POST" action="/admin/profile-claims/${x.id}/approve" style="display:inline"><input type="hidden" name="_csrf" value="${escapeHtml(ctx.session.csrf_token)}"><button class="btn small" type="submit">Approve</button></form> <form method="POST" action="/admin/profile-claims/${x.id}/reject" style="display:inline"><input type="hidden" name="_csrf" value="${escapeHtml(ctx.session.csrf_token)}"><button class="btn ghost small" type="submit">Reject</button></form></td></tr>`).join('');
+    send(ctx.res, layout({title:'Professional profile claims',currentUser:ctx.currentUser,session:ctx.session,body:`<section class="section container"><h1>Professional Claim Requests</h1><p class="muted">Review ownership evidence before giving a claimant control of an imported professional profile.</p>${rows ? `<div style="overflow-x:auto"><table><thead><tr><th>Profile</th><th>Claimant</th><th>Evidence</th><th>Requested</th><th>Action</th></tr></thead><tbody>${rows}</tbody></table></div>` : '<div class="panel"><p class="muted" style="margin:0;">No professional claims are waiting for review.</p></div>'}</section>`}));
+  });
+
+  router.post('/admin/profile-claims/:id/approve', async (ctx) => {
+    if (!requireAdmin(ctx)) return;
+    const id = Number(ctx.params.id);
+    if (!Number.isInteger(id) || id <= 0) return redirect(ctx.res, '/admin/profile-claims');
+    const claim = db.prepare("SELECT * FROM profile_claims WHERE id=? AND status='pending'").get(id);
+    if (!claim) return redirect(ctx.res, '/admin/profile-claims');
+    const existing = db.prepare('SELECT id FROM pro_profiles WHERE user_id=? AND id != ? LIMIT 1').get(claim.claimant_user_id, claim.pro_id);
+    if (existing) return redirect(ctx.res, '/admin/profile-claims?error=' + encodeURIComponent('That account already owns another professional profile.'));
+
+    try {
+      db.exec('BEGIN');
+      const attached = db.prepare("UPDATE pro_profiles SET user_id=?, claim_status='claimed' WHERE id=? AND user_id IS NULL AND claim_status IN ('unclaimed','claim_pending')").run(claim.claimant_user_id, claim.pro_id);
+      if (!attached.changes) throw new Error('Profile is no longer available to claim.');
+      db.prepare("UPDATE users SET role='pro' WHERE id=?").run(claim.claimant_user_id);
+      db.prepare("UPDATE profile_claims SET status='approved', reviewed_at=CURRENT_TIMESTAMP, reviewer_user_id=? WHERE id=? AND status='pending'").run(ctx.currentUser.id, id);
+      db.prepare("UPDATE profile_claims SET status='rejected', reviewed_at=CURRENT_TIMESTAMP, reviewer_user_id=? WHERE pro_id=? AND id != ? AND status='pending'").run(ctx.currentUser.id, claim.pro_id, id);
+      db.prepare("INSERT INTO subscriptions (pro_id, status, trial_started_at, trial_ends_at) SELECT ?, 'trialing', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP + INTERVAL '30 days' WHERE NOT EXISTS (SELECT 1 FROM subscriptions WHERE pro_id = ?)").run(claim.pro_id, claim.pro_id);
+      db.exec('COMMIT');
+    } catch (err) {
+      try { db.exec('ROLLBACK'); } catch (_) {}
+      console.error('Professional claim approval failed', err);
+      return redirect(ctx.res, '/admin/profile-claims?error=' + encodeURIComponent('Could not approve that claim. No ownership change was completed.'));
+    }
+    redirect(ctx.res, '/admin/profile-claims?success=' + encodeURIComponent('Professional claim approved. The 30-day trial has started.'));
+  });
+
+  router.post('/admin/profile-claims/:id/reject', async (ctx) => {
+    if (!requireAdmin(ctx)) return;
+    const id = Number(ctx.params.id);
+    if (Number.isInteger(id) && id > 0) {
+      const claim = db.prepare("SELECT pro_id FROM profile_claims WHERE id=? AND status='pending'").get(id);
+      db.prepare("UPDATE profile_claims SET status='rejected', reviewed_at=CURRENT_TIMESTAMP, reviewer_user_id=? WHERE id=? AND status='pending'").run(ctx.currentUser.id, id);
+      if (claim) {
+        const remaining = db.prepare("SELECT id FROM profile_claims WHERE pro_id=? AND status='pending' LIMIT 1").get(claim.pro_id);
+        if (!remaining) db.prepare("UPDATE pro_profiles SET claim_status='unclaimed' WHERE id=? AND user_id IS NULL AND claim_status='claim_pending'").run(claim.pro_id);
+      }
+    }
+    redirect(ctx.res, '/admin/profile-claims');
+  });
+
   router.get('/admin/outreach', async (ctx) => {
     if (!requireAdmin(ctx)) return;
     const allowed = new Set(['not_contacted','contacted','replied','claimed','do_not_contact']);
