@@ -4,6 +4,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const crypto = require('node:crypto');
 const db = require('../db');
+const { currentSaves } = require('../lib/favorites');
 const { layout } = require('../lib/layout');
 const { send, redirect, flashFromQuery } = require('../lib/http');
 const { escapeHtml, money, slugCategory, avgRating } = require('../lib/util');
@@ -279,6 +280,7 @@ module.exports = function (router) {
 
   router.get('/dashboard/pro/analytics', async (ctx) => {
     const profile = requirePro(ctx); if (!profile) return;
+    const saves = currentSaves(profile.id);
     let totals = { profile_views: 0, booking_clicks: 0 };
     let recent = [];
     let marketingTotals = { profile_views: 0, booking_clicks: 0 };
@@ -305,7 +307,7 @@ module.exports = function (router) {
     }).join('');
     const marketingViews = Number(marketingTotals.profile_views || 0);
     const marketingClicks = Number(marketingTotals.booking_clicks || 0);
-    const body = `<section class="section container"><div class="dash-layout">${dashNav('analytics')}<div><p class="muted" style="margin-bottom:6px;">LAST 30 DAYS</p><h1>Your GoBookr results</h1><p class="muted">See how often customers discover your profile and continue to your booking page.</p><div class="stat-cards"><div class="stat-card"><div class="num">${views}</div><div class="label">Profile views</div></div><div class="stat-card"><div class="num">${clicks}</div><div class="label">Booking clicks</div></div><div class="stat-card"><div class="num">${rate}%</div><div class="label">View → booking click</div></div></div><div class="panel"><h3>Marketing Center impact</h3><p class="muted">Tracked campaign links generated <strong>${marketingViews}</strong> profile view${marketingViews === 1 ? '' : 's'} and <strong>${marketingClicks}</strong> booking click${marketingClicks === 1 ? '' : 's'} in the last 30 days.</p><a class="btn secondary small" href="/dashboard/pro/marketing">Create another campaign</a></div><div class="panel"><h3>Where activity came from</h3>${rows ? `<div style="overflow-x:auto"><table><thead><tr><th>Activity</th><th>Source</th><th>Total</th></tr></thead><tbody>${rows}</tbody></table></div>` : '<p class="muted">No tracked activity yet. As customers view your profile and click your booking link, results will appear here.</p>'}</div><div class="panel"><h3>What this means</h3><p class="muted">A booking click means a customer left GoBookr for your connected scheduling page. It does not necessarily mean the appointment was completed.</p></div></div></div></section>`;
+    const body = `<section class="section container"><div class="dash-layout">${dashNav('analytics')}<div><p class="muted" style="margin-bottom:6px;">LAST 30 DAYS</p><h1>Your GoBookr results</h1><p class="muted">See how often customers discover your profile and continue to your booking page.</p><div class="stat-cards"><div class="stat-card"><div class="num">${views}</div><div class="label">Profile views</div></div><div class="stat-card"><div class="num">${clicks}</div><div class="label">Booking clicks</div></div><div class="stat-card"><div class="num">${rate}%</div><div class="label">View → booking click</div></div><div class="stat-card"><div class="num">${saves}</div><div class="label">Saves · current total</div><p class="muted">Customers who currently have you in Favorites. Not limited to 30 days.</p></div></div><div class="panel"><h3>Marketing Center impact</h3><p class="muted">Tracked campaign links generated <strong>${marketingViews}</strong> profile view${marketingViews === 1 ? '' : 's'} and <strong>${marketingClicks}</strong> booking click${marketingClicks === 1 ? '' : 's'} in the last 30 days.</p><a class="btn secondary small" href="/dashboard/pro/marketing">Create another campaign</a></div><div class="panel"><h3>Where activity came from</h3>${rows ? `<div style="overflow-x:auto"><table><thead><tr><th>Activity</th><th>Source</th><th>Total</th></tr></thead><tbody>${rows}</tbody></table></div>` : '<p class="muted">No tracked activity yet. As customers view your profile and click your booking link, results will appear here.</p>'}</div><div class="panel"><h3>What this means</h3><p class="muted">A booking click means a customer left GoBookr for your connected scheduling page. It does not necessarily mean the appointment was completed.</p></div></div></div></section>`;
     send(ctx.res, layout({ title: 'Professional analytics', currentUser: ctx.currentUser, session: ctx.session, flash: flashFromQuery(ctx.query), body }));
   });
 

@@ -375,3 +375,17 @@ label { display: block; font-size: 0.85rem; font-weight: 600; color: var(--ink-s
   .hero h1 { font-size: 2rem; }
   .nav-links a, .nav-links button { font-size: 0.76rem; }
 }
+
+/* Favorites controls remain outside profile links for keyboard and touch access. */
+.favorite-card { position:relative; min-width:0; }
+.favorite-card > a:not(.favorite-control) { display:block; height:100%; }
+.favorite-card > .favorite-form, .favorite-card > .favorite-control { position:absolute; right:10px; bottom:10px; }
+.favorite-card .market-pro-inner { padding-bottom:64px; }
+.home-favorite-card .home-pro-info { padding-bottom:64px; }
+.favorite-form { margin:8px 0; }
+.favorite-control { display:inline-flex; align-items:center; justify-content:center; gap:7px; min-height:44px; padding:8px 14px; border:1px solid #c8d8f2; border-radius:24px; background:#fff; color:#0B1F3A; font:inherit; cursor:pointer; text-decoration:none; }
+.favorite-control[aria-pressed="true"] { color:#2563EB; background:#eef4ff; }
+.favorite-control span { font-size:24px; line-height:1; }
+.favorite-control:focus-visible { outline:3px solid #2563EB; outline-offset:3px; }
+.favorite-dashboard-card { display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; }
+@media(max-width:640px) { .home-favorite-card { min-width:76vw; scroll-snap-align:start; } }
