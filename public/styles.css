@@ -390,6 +390,6 @@ label { display: block; font-size: 0.85rem; font-weight: 600; color: var(--ink-s
 .favorite-dashboard-card { display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; }
 @media(max-width:640px) { .home-favorite-card { min-width:76vw; scroll-snap-align:start; } }
 
-/* Keep profile booking availability readable in GoBookr navy. */
-.profile-page .booking-unavailable,
-.profile-page .booking-unavailable .muted { color:#0B1F3A; }
+/* GoBookr navy booking availability panel with high-contrast white text. */
+.profile-page .booking-unavailable { background:#0B1F3A; color:#fff; border:1px solid #0B1F3A; border-radius:14px; padding:14px; }
+.profile-page .booking-unavailable .muted { color:#fff; }
