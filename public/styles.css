@@ -389,3 +389,7 @@ label { display: block; font-size: 0.85rem; font-weight: 600; color: var(--ink-s
 .favorite-control:focus-visible { outline:3px solid #2563EB; outline-offset:3px; }
 .favorite-dashboard-card { display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; }
 @media(max-width:640px) { .home-favorite-card { min-width:76vw; scroll-snap-align:start; } }
+
+/* Keep profile booking availability readable in GoBookr navy. */
+.profile-page .booking-unavailable,
+.profile-page .booking-unavailable .muted { color:#0B1F3A; }
