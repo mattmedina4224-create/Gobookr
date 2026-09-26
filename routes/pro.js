@@ -11,7 +11,7 @@ const { escapeHtml, money, slugCategory, avgRating } = require('../lib/util');
 
 function storageConfig() {
   const baseUrl = String(process.env.SUPABASE_URL || '').trim().replace(/\/$/, '');
-  const serviceKey = String(process.env.SUPABASE_SERVICE_ROLE_KEY || '').trim();
+  const serviceKey = String(process.env.SUPABASE_SERVICE_ROLE_KEY || '').replace(/\s+/g, '');
   return baseUrl && serviceKey ? { baseUrl, serviceKey, bucket: 'portfolio' } : null;
 }
 
