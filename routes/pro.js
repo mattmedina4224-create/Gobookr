@@ -29,7 +29,7 @@ async function uploadPortfolioObject(profileId, filename, image) {
     },
     body: image.data,
   });
-  if (!response.ok) throw new Error('Supabase Storage upload failed: ' + response.status);
+  if (!response.ok) { const detail = await response.text().catch(() => ''); throw new Error('Supabase Storage upload failed: ' + response.status + (detail ? ' ' + detail.slice(0, 500) : '')); }
   return config.baseUrl + '/storage/v1/object/public/' + config.bucket + '/' + objectPath;
 }
 
@@ -453,7 +453,7 @@ module.exports = function (router) {
       db.prepare('INSERT INTO portfolio_items (pro_id, caption, accent, image_url) VALUES (?, ?, ?, ?)').run(profile.id, caption, accents[Math.floor(Math.random() * accents.length)], imageUrl);
     } catch (err) {
       if (imageUrl) { try { await deletePortfolioObject(imageUrl); } catch (_) {} }
-      console.error('Portfolio upload failed', err);
+      console.error('Portfolio upload failed', { message: err && err.message, name: err && err.name, storageConfigured: Boolean(storageConfig()), keyType: storageConfig() && storageConfig().serviceKey.startsWith('sb_secret_') ? 'secret' : 'legacy', supabaseHost: storageConfig() ? new URL(storageConfig().baseUrl).host : null });
       return redirect(ctx.res, '/dashboard/pro/portfolio?error=' + encodeURIComponent('We could not save that photo. Please try again.'));
     }
     redirect(ctx.res, '/dashboard/pro/portfolio?success=' + encodeURIComponent('Photo uploaded.'));
