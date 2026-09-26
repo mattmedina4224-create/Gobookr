@@ -21,7 +21,12 @@ async function uploadPortfolioObject(profileId, filename, image) {
   const objectPath = encodeURIComponent(String(profileId)) + '/' + encodeURIComponent(filename);
   const response = await fetch(config.baseUrl + '/storage/v1/object/' + config.bucket + '/' + objectPath, {
     method: 'POST',
-    headers: { authorization: 'Bearer ' + config.serviceKey, apikey: config.serviceKey, 'content-type': image.contentType, 'x-upsert': 'false' },
+    headers: {
+      ...(config.serviceKey.startsWith('sb_secret_') ? {} : { authorization: 'Bearer ' + config.serviceKey }),
+      apikey: config.serviceKey,
+      'content-type': image.contentType,
+      'x-upsert': 'false',
+    },
     body: image.data,
   });
   if (!response.ok) throw new Error('Supabase Storage upload failed: ' + response.status);
@@ -34,7 +39,10 @@ async function deletePortfolioObject(imageUrl) {
   const objectPath = imageUrl.slice((config.baseUrl + '/storage/v1/object/public/' + config.bucket + '/').length);
   const response = await fetch(config.baseUrl + '/storage/v1/object/' + config.bucket + '/' + objectPath, {
     method: 'DELETE',
-    headers: { authorization: 'Bearer ' + config.serviceKey, apikey: config.serviceKey },
+    headers: {
+      ...(config.serviceKey.startsWith('sb_secret_') ? {} : { authorization: 'Bearer ' + config.serviceKey }),
+      apikey: config.serviceKey,
+    },
   });
   if (!response.ok && response.status !== 404) throw new Error('Supabase Storage delete failed: ' + response.status);
 }
