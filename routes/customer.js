@@ -3,6 +3,9 @@
 const db = require('../db');
 const { layout } = require('../lib/layout');
 const { send, redirect, flashFromQuery } = require('../lib/http');
+const { favoriteControl, favoriteReturnPath } = require('../lib/favorites');
+const { hydratePros } = require('../lib/pro-listing-data');
+const { isProPubliclyVisible } = require('../lib/subscription');
 const { escapeHtml } = require('../lib/util');
 
 function requireCustomer(ctx) {
@@ -17,6 +20,16 @@ module.exports = function (router) {
   router.get('/dashboard/customer', async (ctx) => {
     if (!requireCustomer(ctx)) return;
 
+    const savedProfiles = db.prepare(`WITH favorites AS (
+      SELECT pro_id, created_at FROM customer_favorites WHERE customer_id = ?
+    ) SELECT p.* FROM favorites f JOIN pro_profiles p ON p.id = f.pro_id
+      ORDER BY f.created_at DESC, p.id DESC`).all(ctx.currentUser.id);
+    const visibleProfiles = hydratePros(savedProfiles, { includeServices: false });
+    const visibleIds = new Set(visibleProfiles.map(pro => Number(pro.id)));
+    const favorites = savedProfiles.map(pro => `<div class="panel favorite-dashboard-card">
+      ${visibleIds.has(Number(pro.id)) ? `<div><h3><a href="/pro/${pro.id}">${escapeHtml(pro.business_name)}</a></h3><p class="muted">${escapeHtml(pro.city)}, ${escapeHtml(pro.state)}</p><a href="/pro/${pro.id}">View profile &amp; booking options</a></div>` : '<div><h3>Professional currently unavailable</h3><p class="muted">You can keep this favorite or remove it.</p></div>'}
+      ${favoriteControl(pro, ctx, true, '/dashboard/customer')}
+    </div>`).join('');
     const body = `
     <section class="section container">
       <h1>Find your next professional</h1>
@@ -25,6 +38,11 @@ module.exports = function (router) {
         <p>GoBookr helps you discover the right local professional. When a professional has online booking connected, tap <strong>Book Appointment</strong> on their profile to continue to their scheduling site.</p>
         <a class="btn" href="/search">Browse professionals</a>
       </div>
+      <section aria-labelledby="favorites-heading" style="margin-top:32px;">
+        <h2 id="favorites-heading">Favorites</h2>
+        <p class="muted">Your saved professionals, ready when you are. Favorites are private; professionals only see their total Saves.</p>
+        ${favorites || '<div class="panel"><p>No favorites yet. Tap the heart on a professional to save them here.</p><a class="btn secondary" href="/search">Find professionals</a></div>'}
+      </section>
     </section>`;
 
     send(ctx.res, layout({
@@ -34,6 +52,30 @@ module.exports = function (router) {
       flash: flashFromQuery(ctx.query),
       body
     }));
+  });
+
+  router.post('/favorites/:id', async (ctx) => {
+    if (!ctx.currentUser) return redirect(ctx.res, '/login?next=%2Fdashboard%2Fcustomer');
+    if (ctx.currentUser.role !== 'customer') return send(ctx.res, 'Favorites are available to customer accounts.', 403);
+    const proId = Number(ctx.params.id);
+    if (!Number.isSafeInteger(proId) || proId <= 0 || !['0', '1'].includes(ctx.body.saved)) {
+      return send(ctx.res, 'Invalid favorite request.', 400);
+    }
+    const returnTo = favoriteReturnPath(ctx.body.return_to, proId);
+    try {
+      if (ctx.body.saved === '1') {
+        const pro = db.prepare('SELECT id FROM pro_profiles WHERE id = ?').get(proId);
+        if (!pro || !isProPubliclyVisible(proId)) return send(ctx.res, 'Professional not found.', 404);
+        db.prepare(`INSERT INTO customer_favorites (customer_id, pro_id) VALUES (?, ?)
+          ON CONFLICT (customer_id, pro_id) DO NOTHING`).run(ctx.currentUser.id, proId);
+      } else {
+        db.prepare('DELETE FROM customer_favorites WHERE customer_id = ? AND pro_id = ?').run(ctx.currentUser.id, proId);
+      }
+    } catch (err) {
+      console.error('Favorite update failed', err);
+      return redirect(ctx.res, returnTo + (returnTo.includes('?') ? '&' : '?') + 'error=' + encodeURIComponent('Could not update Favorites. Please try again.'));
+    }
+    redirect(ctx.res, returnTo);
   });
 
   // Legacy endpoint retained as a safe redirect for old links/forms.

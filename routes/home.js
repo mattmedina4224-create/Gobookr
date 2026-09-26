@@ -1,6 +1,7 @@
 'use strict';
 
 const db = require('../db');
+const { favoriteIds, favoriteControl } = require('../lib/favorites');
 const { layout } = require('../lib/layout');
 const { send, flashFromQuery } = require('../lib/http');
 const { escapeHtml, slugCategory, stars } = require('../lib/util');
@@ -18,7 +19,7 @@ const CATEGORIES = [
   { value: 'tattoo_artist', label: 'Tattoo Artists' },
 ];
 
-function homeCard(pro) {
+function homeCard(pro, ctx, savedIds) {
   const photo = pro.coverPhoto
     ? `<img class="home-pro-photo" src="${escapeHtml(pro.coverPhoto.image_url)}" alt="${escapeHtml(pro.coverPhoto.caption || pro.business_name)}" loading="lazy" />`
     : `<div class="home-pro-photo home-pro-placeholder">${escapeHtml((pro.business_name || 'G').slice(0, 1).toUpperCase())}</div>`;
@@ -26,7 +27,7 @@ function homeCard(pro) {
     ? `<span class="home-pro-rating">${stars(pro.rating)} <b>${pro.rating}</b> <span>(${pro.reviewCount})</span></span>`
     : `<span class="home-pro-new">New on GoBookr</span>`;
   const category = pro.categories[0] ? slugCategory(pro.categories[0]) : 'Professional';
-  return `<a class="home-pro-card" href="/pro/${pro.id}">${photo}<div class="home-pro-info"><h3>${escapeHtml(pro.business_name)}</h3><p>${escapeHtml(category)} · ${escapeHtml(pro.city)}, ${escapeHtml(pro.state)}</p>${rating}</div></a>`;
+  return `<div class="favorite-card home-favorite-card"><a class="home-pro-card" href="/pro/${pro.id}">${photo}<div class="home-pro-info"><h3>${escapeHtml(pro.business_name)}</h3><p>${escapeHtml(category)} · ${escapeHtml(pro.city)}, ${escapeHtml(pro.state)}</p>${rating}</div></a>${favoriteControl(pro, ctx, savedIds.has(Number(pro.id)))}</div>`;
 }
 
 module.exports = function (router) {
@@ -38,6 +39,7 @@ module.exports = function (router) {
       .sort((a, b) => (b.rating || 0) - (a.rating || 0))
       .slice(0, 6);
 
+    const savedIds = favoriteIds(ctx, featured);
     const body = `
 <style>
   .home-shell { background:#fff; color:#11131c; }
@@ -347,7 +349,7 @@ module.exports = function (router) {
   <section class="home-section">
     <div class="container">
       <div class="home-section-head"><div><p class="home-section-kicker">Discover local talent</p><h2>Professionals worth knowing</h2></div><a class="home-see-all" href="/#find">Search pros →</a></div>
-      <div class="home-pro-grid">${featured.map(homeCard).join('') || '<p class="muted">No professionals listed yet.</p>'}</div>
+      <div class="home-pro-grid">${featured.map(pro => homeCard(pro, ctx, savedIds)).join('') || '<p class="muted">No professionals listed yet.</p>'}</div>
     </div>
   </section>
 </div>
