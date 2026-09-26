@@ -8,6 +8,37 @@ const { layout } = require('../lib/layout');
 const { send, redirect, flashFromQuery } = require('../lib/http');
 const { escapeHtml, money, slugCategory, avgRating } = require('../lib/util');
 
+
+function storageConfig() {
+  const baseUrl = String(process.env.SUPABASE_URL || '').replace(/\/$/, '');
+  const serviceKey = String(process.env.SUPABASE_SERVICE_ROLE_KEY || '');
+  return baseUrl && serviceKey ? { baseUrl, serviceKey, bucket: 'portfolio' } : null;
+}
+
+async function uploadPortfolioObject(profileId, filename, image) {
+  const config = storageConfig();
+  if (!config) return null;
+  const objectPath = encodeURIComponent(String(profileId)) + '/' + encodeURIComponent(filename);
+  const response = await fetch(config.baseUrl + '/storage/v1/object/' + config.bucket + '/' + objectPath, {
+    method: 'POST',
+    headers: { authorization: 'Bearer ' + config.serviceKey, apikey: config.serviceKey, 'content-type': image.contentType, 'x-upsert': 'false' },
+    body: image.data,
+  });
+  if (!response.ok) throw new Error('Supabase Storage upload failed: ' + response.status);
+  return config.baseUrl + '/storage/v1/object/public/' + config.bucket + '/' + objectPath;
+}
+
+async function deletePortfolioObject(imageUrl) {
+  const config = storageConfig();
+  if (!config || !imageUrl || !imageUrl.startsWith(config.baseUrl + '/storage/v1/object/public/' + config.bucket + '/')) return;
+  const objectPath = imageUrl.slice((config.baseUrl + '/storage/v1/object/public/' + config.bucket + '/').length);
+  const response = await fetch(config.baseUrl + '/storage/v1/object/' + config.bucket + '/' + objectPath, {
+    method: 'DELETE',
+    headers: { authorization: 'Bearer ' + config.serviceKey, apikey: config.serviceKey },
+  });
+  if (!response.ok && response.status !== 404) throw new Error('Supabase Storage delete failed: ' + response.status);
+}
+
 function requirePro(ctx) {
   if (!ctx.currentUser || ctx.currentUser.role !== 'pro') {
     redirect(ctx.res, `/login?next=${encodeURIComponent('/dashboard/pro')}`);
@@ -404,18 +435,16 @@ module.exports = function (router) {
     if (!ext || !imageLooksValid(image.data, String(image.contentType || '').toLowerCase())) return redirect(ctx.res, '/dashboard/pro/portfolio?error=' + encodeURIComponent('That file does not appear to be a supported image.'));
     if (image.data.length > 10 * 1024 * 1024) return redirect(ctx.res, '/dashboard/pro/portfolio?error=' + encodeURIComponent('Photo must be 10 MB or smaller.'));
 
-    const uploadDir = path.join(__dirname, '..', 'public', 'uploads', 'portfolio');
-    fs.mkdirSync(uploadDir, { recursive: true });
-    const filename = `${profile.id}-${Date.now()}-${crypto.randomBytes(6).toString('hex')}${ext}`;
-    const filePath = path.join(uploadDir, filename);
-    const imageUrl = `/uploads/portfolio/${filename}`;
+    const filename = `${Date.now()}-${crypto.randomBytes(6).toString('hex')}${ext}`;
     const accents = ['violet', 'gold', 'teal', 'rose', 'slate'];
+    let imageUrl = null;
 
     try {
-      fs.writeFileSync(filePath, image.data, { flag: 'wx' });
+      imageUrl = await uploadPortfolioObject(profile.id, filename, image);
+      if (!imageUrl) throw new Error('Supabase Storage is not configured.');
       db.prepare('INSERT INTO portfolio_items (pro_id, caption, accent, image_url) VALUES (?, ?, ?, ?)').run(profile.id, caption, accents[Math.floor(Math.random() * accents.length)], imageUrl);
     } catch (err) {
-      try { fs.unlinkSync(filePath); } catch (_) {}
+      if (imageUrl) { try { await deletePortfolioObject(imageUrl); } catch (_) {} }
       console.error('Portfolio upload failed', err);
       return redirect(ctx.res, '/dashboard/pro/portfolio?error=' + encodeURIComponent('We could not save that photo. Please try again.'));
     }
@@ -427,10 +456,19 @@ module.exports = function (router) {
     const itemId = Number(ctx.params.id);
     if (!Number.isInteger(itemId) || itemId <= 0) return redirect(ctx.res, '/dashboard/pro/portfolio');
     const item = db.prepare('SELECT * FROM portfolio_items WHERE id = ? AND pro_id = ?').get(itemId, profile.id);
-    if (item && item.image_url && item.image_url.startsWith('/uploads/portfolio/')) {
-      const relativePath = item.image_url.replace(/^\/+/, '');
-      const filePath = path.join(__dirname, '..', 'public', relativePath);
-      try { fs.unlinkSync(filePath); } catch (err) { if (err.code !== 'ENOENT') console.error(err); }
+    if (item && item.image_url) {
+      try {
+        if (item.image_url.startsWith('/uploads/portfolio/')) {
+          const relativePath = item.image_url.replace(/^\/+/, '');
+          const filePath = path.join(__dirname, '..', 'public', relativePath);
+          try { fs.unlinkSync(filePath); } catch (err) { if (err.code !== 'ENOENT') console.error(err); }
+        } else {
+          await deletePortfolioObject(item.image_url);
+        }
+      } catch (err) {
+        console.error('Portfolio storage delete failed', err);
+        return redirect(ctx.res, '/dashboard/pro/portfolio?error=' + encodeURIComponent('We could not remove that photo. Please try again.'));
+      }
     }
     db.prepare('DELETE FROM portfolio_items WHERE id = ? AND pro_id = ?').run(itemId, profile.id);
     redirect(ctx.res, '/dashboard/pro/portfolio?success=' + encodeURIComponent('Removed.'));
