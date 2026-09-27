@@ -27,5 +27,9 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '24'
-      - name: Run automated tests
+      - name: Install test dependencies
+        run: npm install --no-audit --no-fund
+      - name: Run automated tests, including Postgres migration checks
+        env:
+          GOBOOKR_PGLITE_MODULE: '@electric-sql/pglite'
         run: npm test
