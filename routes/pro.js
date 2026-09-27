@@ -157,10 +157,6 @@ function portfolioTile(item, i, gradientFor) {
   return `<div class="portfolio-item" style="${background} overflow:hidden;">${visual}</div>`;
 }
 
-if (process.env.NODE_ENV === 'test') {
-  module.exports._portfolioStorage = { storageConfig, uploadPortfolioObject, deletePortfolioObject, imageLooksValid };
-}
-
 module.exports = function (router) {
   router.get('/dashboard/pro', async (ctx) => {
     const profile = requirePro(ctx); if (!profile) return;
@@ -514,3 +510,7 @@ module.exports = function (router) {
     redirect(ctx.res, '/dashboard/pro/portfolio?success=' + encodeURIComponent('Removed.'));
   });
 };
+
+if (process.env.NODE_ENV === 'test') {
+  module.exports._portfolioStorage = { storageConfig, uploadPortfolioObject, deletePortfolioObject, imageLooksValid };
+}
