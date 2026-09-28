@@ -16,11 +16,11 @@ function storageConfig() {
   return baseUrl && serviceKey ? { baseUrl, serviceKey, bucket: 'portfolio' } : null;
 }
 
-async function uploadPortfolioObject(profileId, filename, image) {
+async function uploadPublicImage(bucket, profileId, filename, image) {
   const config = storageConfig();
   if (!config) return null;
   const objectPath = encodeURIComponent(String(profileId)) + '/' + encodeURIComponent(filename);
-  const response = await fetch(config.baseUrl + '/storage/v1/object/' + config.bucket + '/' + objectPath, {
+  const response = await fetch(config.baseUrl + '/storage/v1/object/' + bucket + '/' + objectPath, {
     method: 'POST',
     headers: {
       ...(config.serviceKey.startsWith('sb_secret_') ? {} : { authorization: 'Bearer ' + config.serviceKey }),
@@ -31,7 +31,11 @@ async function uploadPortfolioObject(profileId, filename, image) {
     body: image.data,
   });
   if (!response.ok) { const detail = await response.text().catch(() => ''); throw new Error('Supabase Storage upload failed: ' + response.status + (detail ? ' ' + detail.slice(0, 500) : '')); }
-  return config.baseUrl + '/storage/v1/object/public/' + config.bucket + '/' + objectPath;
+  return config.baseUrl + '/storage/v1/object/public/' + bucket + '/' + objectPath;
+}
+
+async function uploadPortfolioObject(profileId, filename, image) {
+  return uploadPublicImage('portfolio', profileId, filename, image);
 }
 
 async function deletePortfolioObject(imageUrl) {
@@ -344,13 +348,33 @@ module.exports = function (router) {
     redirect(ctx.res, '/dashboard/pro/profile?success=' + encodeURIComponent('GoBookr now sends customers directly to your scheduling link.'));
   });
 
+  router.post('/dashboard/pro/profile-photo', async (ctx) => {
+    const profile = requirePro(ctx); if (!profile) return;
+    const image = ctx.files && ctx.files.image;
+    if (!image || !Buffer.isBuffer(image.data)) return redirect(ctx.res, '/dashboard/pro/profile?error=' + encodeURIComponent('Choose a profile photo first.'));
+    if (image.data.length > 5 * 1024 * 1024) return redirect(ctx.res, '/dashboard/pro/profile?error=' + encodeURIComponent('Profile photo must be 5 MB or smaller.'));
+    const allowed = new Set(['image/jpeg','image/png','image/webp','image/heic','image/heif']);
+    if (!allowed.has(image.contentType) || !imageLooksValid(image.data, image.contentType)) return redirect(ctx.res, '/dashboard/pro/profile?error=' + encodeURIComponent('Please choose a valid photo.'));
+    const ext = ({'image/jpeg':'jpg','image/png':'png','image/webp':'webp','image/heic':'heic','image/heif':'heif'})[image.contentType];
+    try {
+      const url = await uploadPublicImage('profile-photos', profile.id, crypto.randomUUID() + '.' + ext, image);
+      if (!url) return redirect(ctx.res, '/dashboard/pro/profile?error=' + encodeURIComponent('Photo storage is not configured.'));
+      db.prepare('UPDATE pro_profiles SET profile_photo_url = ? WHERE id = ?').run(url, profile.id);
+      return redirect(ctx.res, '/dashboard/pro/profile?success=' + encodeURIComponent('Profile photo updated.'));
+    } catch (err) {
+      console.error('Profile photo upload failed', err);
+      return redirect(ctx.res, '/dashboard/pro/profile?error=' + encodeURIComponent('Profile photo upload failed. Please try again.'));
+    }
+  });
+
   router.get('/dashboard/pro/profile', async (ctx) => {
     const profile = requirePro(ctx); if (!profile) return;
     const services = db.prepare('SELECT * FROM services WHERE pro_id = ? ORDER BY price ASC').all(profile.id);
     const locationStatus = Number.isFinite(Number(profile.latitude)) && Number.isFinite(Number(profile.longitude))
       ? '<span style="color:#067647;font-weight:700;">Location ready for mileage</span>'
       : '<span class="muted">Location will be refreshed from this address when you save.</span>';
-    const body = `<section class="section container"><div class="dash-layout">${dashNav('profile')}<div><h1>Profile &amp; services</h1><div class="panel"><h3>Business details</h3><form method="POST" action="/dashboard/pro/profile"><input type="hidden" name="_csrf" value="${escapeHtml(ctx.session.csrf_token)}" /><div class="field"><label for="business_name">Business name</label><input id="business_name" name="business_name" value="${escapeHtml(profile.business_name)}" maxlength="120" required /></div>
+    const body = `<section class="section container"><div class="dash-layout">${dashNav('profile')}<div><h1>Profile &amp; services</h1><div class="panel pro-identity-panel"><h3>Your professional profile</h3><p class="muted">This is how customers recognize you across GoBookr.</p><div class="pro-identity-photo">${profile.profile_photo_url ? `<img src="${escapeHtml(profile.profile_photo_url)}" alt="Your profile photo" />` : `<div class="avatar lg accent-${escapeHtml(profile.accent)}">${escapeHtml(profile.initials || "GB")}</div>`}</div><form method="POST" action="/dashboard/pro/profile-photo" enctype="multipart/form-data" class="pro-photo-form"><label class="btn secondary" for="profile_photo">Change photo</label><input id="profile_photo" name="image" type="file" accept="image/*,.heic,.heif" required /><button class="btn" type="submit">Save photo</button><div class="helptext">Choose from Photos, Camera, or Files. Up to 5 MB.</div></form></div><div class="panel"><h3>Professional details</h3><form method="POST" action="/dashboard/pro/profile"><input type="hidden" name="_csrf" value="${escapeHtml(ctx.session.csrf_token)}" /><div class="field"><label for="business_name">Display / professional name</label><input id="business_name" name="business_name" value="${escapeHtml(profile.business_name)}" maxlength="120" required /></div>
+    <div class="field"><label for="professional_handle">Professional handle <span class="muted">(optional)</span></label><input id="professional_handle" name="professional_handle" value="${escapeHtml(profile.professional_handle || '')}" maxlength="80" placeholder="e.g. mattkutz" autocapitalize="none" /></div>
     <div class="field"><label for="booking_url">Booking / scheduling link</label><input id="booking_url" name="booking_url" type="url" value="${escapeHtml(profile.booking_url || '')}" maxlength="2048" placeholder="https://square.site/book/..." /><div class="helptext">Paste the link customers use to book with you on Square, Booksy, Vagaro, Fresha, GlossGenius, or another scheduling system.</div></div>
     <div style="margin:26px 0 12px; padding-top:20px; border-top:1px solid var(--paper-line);"><h3 style="margin-bottom:4px;">Where do you work?</h3><p class="muted" style="margin:0;">Keep this current so customers get accurate distance results.</p></div>
     <div class="field"><label for="workplace_name">Barbershop / Salon name</label><input id="workplace_name" name="workplace_name" value="${escapeHtml(profile.workplace_name || '')}" maxlength="160" placeholder="e.g. Novo Barbers" required /></div>
@@ -365,9 +389,10 @@ module.exports = function (router) {
 
   router.post('/dashboard/pro/profile', async (ctx) => {
     const profile = requirePro(ctx); if (!profile) return;
-    const { business_name, booking_url, workplace_name, street_address, suite, city, state, zip_code, license_number, license_state, price_min, price_max, years_experience, bio } = ctx.body;
+    const { business_name, professional_handle, booking_url, workplace_name, street_address, suite, city, state, zip_code, license_number, license_state, price_min, price_max, years_experience, bio } = ctx.body;
 
     const cleanBusinessName = clampText(business_name || profile.business_name, 120);
+    const cleanHandle = clampText(professional_handle, 80).replace(/^@+/, '');
     const cleanCity = clampText(city || profile.city, 100).toLowerCase().replace(/\b\w/g, (letter) => letter.toUpperCase());
     const cleanState = clampText(state || profile.state, 2).toUpperCase();
     const cleanWorkplace = clampText(workplace_name, 160);
@@ -406,7 +431,7 @@ module.exports = function (router) {
     }
 
     const licenseChanged = cleanLicenseNumber !== (profile.license_number || null) || cleanLicenseState !== String(profile.license_state || profile.state || '').toUpperCase();
-    db.prepare(`UPDATE pro_profiles SET business_name = ?, booking_url = ?, workplace_name = ?, street_address = ?, suite = ?, city = ?, state = ?, zip_code = ?, latitude = ?, longitude = ?, license_number = ?, license_state = ?, license_verified = ?, price_min = ?, price_max = ?, years_experience = ?, bio = ? WHERE id = ?`).run(
+    db.prepare(`UPDATE pro_profiles SET business_name = ?, professional_handle = ?, booking_url = ?, workplace_name = ?, street_address = ?, suite = ?, city = ?, state = ?, zip_code = ?, latitude = ?, longitude = ?, license_number = ?, license_state = ?, license_verified = ?, price_min = ?, price_max = ?, years_experience = ?, bio = ? WHERE id = ?`).run(
       cleanBusinessName,
       cleanBookingUrl,
       cleanWorkplace,
