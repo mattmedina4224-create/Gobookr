@@ -16,7 +16,7 @@ test('marketing campaign design-state migration preserves reusable style and slo
 test('Marketing Center saves and reopens the selected Story style', () => {
   const source = fs.readFileSync(path.join(__dirname, '..', 'routes', 'pro.js'), 'utf8');
   assert.match(source, /name="style" value="\$\{escapeHtml\(storyStyle\)\}"/);
-  assert.match(source, /status, story_style, available_slots\\) VALUES \\(\\?, \\?, \\?, \\?, \\?, \\?, \\?, \\?, \\?::jsonb\\)/);
+  assert.ok(source.includes("status, story_style, available_slots) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?::jsonb)"));
   assert.match(source, /query\.set\('style', campaign\.story_style\)/);
   assert.match(source, /item\.story_style \? '&style='/);
 });
