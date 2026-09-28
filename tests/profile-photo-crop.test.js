@@ -1,0 +1,2 @@
+'use strict';const test=require('node:test');const assert=require('node:assert/strict');const fs=require('node:fs');const path=require('node:path');
+test('profile photo form includes CSRF and cropper',()=>{const pro=fs.readFileSync(path.join(__dirname,'..','routes','pro.js'),'utf8');const crop=fs.readFileSync(path.join(__dirname,'..','public','profile-photo-crop.js'),'utf8');assert.match(pro,/action="\/dashboard\/pro\/profile-photo"[\s\S]{0,500}_csrf/);assert.match(pro,/profile-crop-dialog/);assert.match(crop,/canvas\.toBlob/);assert.match(crop,/image\/jpeg/);});
