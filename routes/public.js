@@ -64,6 +64,7 @@ function proCard(pro, ctx, savedIds) {
       <div class="market-avatar-wrap">${photoHtml}</div>
       <div class="market-pro-info">
         <div class="market-name-row"><h3>${escapeHtml(pro.business_name)}</h3>${pro.license_verified ? verifiedBadge() : ''}</div>
+        ${pro.professional_handle ? `<div class="market-handle">@${escapeHtml(pro.professional_handle)}</div>` : ''}
         ${workplaceHtml}
         <div class="market-trust-row">${verified}${claim}</div>
         ${ratingHtml}
