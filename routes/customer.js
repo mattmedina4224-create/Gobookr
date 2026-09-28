@@ -31,17 +31,12 @@ module.exports = function (router) {
       ${favoriteControl(pro, ctx, true, '/dashboard/customer')}
     </div>`).join('');
     const body = `
-    <section class="section container">
-      <h1>Find your next professional</h1>
-      <div class="panel" style="max-width:720px;">
-        <h3>Book directly with professionals</h3>
-        <p>GoBookr helps you discover the right local professional. When a professional has online booking connected, tap <strong>Book Appointment</strong> on their profile to continue to their scheduling site.</p>
-        <a class="btn" href="/search">Browse professionals</a>
-      </div>
-      <section aria-labelledby="favorites-heading" style="margin-top:32px;">
+    <section class="section container customer-dashboard">
+      <div class="customer-dashboard-hero"><div><p class="muted customer-eyebrow">YOUR GOBOOKR</p><h1>Find your next professional</h1><p class="muted">Discover someone new or jump back to a professional you already trust.</p></div><a class="btn customer-browse-btn" href="/search">Find a professional</a></div>
+      <section aria-labelledby="favorites-heading" class="customer-favorites-section">
         <h2 id="favorites-heading">Favorites</h2>
         <p class="muted">Your saved professionals, ready when you are. Favorites are private; professionals only see their total Saves.</p>
-        ${favorites || '<div class="panel"><p>No favorites yet. Tap the heart on a professional to save them here.</p><a class="btn secondary" href="/search">Find professionals</a></div>'}
+        ${favorites || '<div class="panel"><p>No favorites yet. When you find someone you like, tap the heart and they’ll be waiting here for you.</p><a class="btn secondary" href="/search">Find professionals</a></div>'}
       </section>
     </section>`;
 
