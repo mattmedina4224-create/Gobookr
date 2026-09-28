@@ -407,7 +407,8 @@ module.exports = function (router) {
     const maxPrice = finiteInteger(price_max || 0, 0, 100000);
     const years = finiteInteger(years_experience || 0, 0, 100);
 
-    if (!cleanBusinessName) return redirect(ctx.res, '/dashboard/pro/profile?error=' + encodeURIComponent('Business name is required.'));
+    if (!cleanBusinessName) return redirect(ctx.res, '/dashboard/pro/profile?error=' + encodeURIComponent('Professional name is required.'));
+    if (cleanHandle && !/^[A-Za-z0-9._-]{2,80}$/.test(cleanHandle)) return redirect(ctx.res, '/dashboard/pro/profile?error=' + encodeURIComponent('Handle can use letters, numbers, periods, underscores, and hyphens.'));
     if (cleanBookingUrl === null) return redirect(ctx.res, '/dashboard/pro/profile?error=' + encodeURIComponent('Please enter a valid booking website, such as https://square.site/book/...'));
     if (!cleanWorkplace || !cleanStreet || !cleanCity || !validUsState(cleanState) || !validZip(cleanZip)) return redirect(ctx.res, '/dashboard/pro/profile?error=' + encodeURIComponent('Please complete a valid workplace address.'));
     if (cleanLicenseNumber && !validUsState(cleanLicenseState)) return redirect(ctx.res, '/dashboard/pro/profile?error=' + encodeURIComponent('Please enter a valid two-letter license state.'));
@@ -433,6 +434,7 @@ module.exports = function (router) {
     const licenseChanged = cleanLicenseNumber !== (profile.license_number || null) || cleanLicenseState !== String(profile.license_state || profile.state || '').toUpperCase();
     db.prepare(`UPDATE pro_profiles SET business_name = ?, professional_handle = ?, booking_url = ?, workplace_name = ?, street_address = ?, suite = ?, city = ?, state = ?, zip_code = ?, latitude = ?, longitude = ?, license_number = ?, license_state = ?, license_verified = ?, price_min = ?, price_max = ?, years_experience = ?, bio = ? WHERE id = ?`).run(
       cleanBusinessName,
+      cleanHandle,
       cleanBookingUrl,
       cleanWorkplace,
       cleanStreet,
