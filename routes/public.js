@@ -52,9 +52,11 @@ function proCard(pro, ctx, savedIds) {
   const locationAttrs = hasLocation ? ` data-lat="${Number(pro.latitude)}" data-lon="${Number(pro.longitude)}"` : '';
   const distanceHtml = Number.isFinite(Number(pro.distanceMiles)) ? `<span class="market-distance">${Number(pro.distanceMiles).toFixed(1)} mi away</span>` : '';
   const workplaceHtml = pro.workplace_name ? `<div class="market-workplace">${escapeHtml(pro.workplace_name)}</div>` : '';
-  const photoHtml = pro.coverPhoto
-    ? `<img class="market-avatar-img" src="${escapeHtml(pro.coverPhoto.image_url)}" alt="${escapeHtml(pro.coverPhoto.caption || pro.business_name)}" loading="lazy" />`
-    : `<div class="market-avatar-fallback accent-${escapeHtml(pro.accent)}">${escapeHtml(pro.initials)}</div>`;
+  const photoHtml = pro.profile_photo_url
+    ? `<img class="market-avatar-img" src="${escapeHtml(pro.profile_photo_url)}" alt="${escapeHtml(pro.business_name)} profile photo" loading="lazy" />`
+    : pro.coverPhoto
+      ? `<img class="market-avatar-img" src="${escapeHtml(pro.coverPhoto.image_url)}" alt="${escapeHtml(pro.coverPhoto.caption || pro.business_name)}" loading="lazy" />`
+      : `<div class="market-avatar-fallback accent-${escapeHtml(pro.accent)}">${escapeHtml(pro.initials)}</div>`;
   const verified = pro.license_verified ? `<span class="market-verified">${verifiedBadge()}<span>Verified</span></span>` : '';
   const claim = pro.claim_status === 'unclaimed' ? `<span class="market-status">Unclaimed</span>` : '';
   return `<div class="favorite-card"><a class="pro-card market-pro-card" href="/pro/${pro.id}"${locationAttrs}>
