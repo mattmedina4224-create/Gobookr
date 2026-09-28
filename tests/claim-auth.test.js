@@ -168,7 +168,7 @@ test('claim signup creates only an account; explicit request stays pending and i
   assert.equal(a.state.claims[0].verification_evidence, 'https://example.test/pro');
   assert.equal(a.state.profiles[0].user_id, null);
   assert.equal(a.state.subscriptions.length, 0);
-  assert.match((await a.request('GET', '/pro/42/claim', {}, token)).body, /Claim request pending/);
+  assert.match((await a.request('GET', '/pro/42/claim', {}, token)).body, /Claim request received/);
 });
 
 test('existing customer and professional login returns to claim, without changing role or creating profiles', async () => {
