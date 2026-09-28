@@ -185,10 +185,12 @@ test('existing customer and professional login returns to claim, without changin
 
 test('validation failures, existing email, and database errors keep claim context', async () => {
   const a = app(); const { user } = a.addUser();
-  for (const fields of [{ password: 'short' }, { legal_agreement: '' }, { email: user.email }]) {
+  for (const fields of [{ password: 'short' }, { legal_agreement: '' }]) {
     const res = await a.request('POST', '/signup', { ...signup, ...fields });
     assert.match(res.headers.Location, /^\/signup\?claim=42&error=/);
   }
+  const existing = await a.request('POST', '/signup', { ...signup, email: user.email });
+  assert.match(existing.headers.Location, /^\/login\?claim=42&error=/);
   const login = await a.request('POST', '/login', { email: user.email, password: 'wrong', claim: '42' });
   assert.match(login.headers.Location, /^\/login\?claim=42&error=/);
   const failed = await app({ failSignup: true }).request('POST', '/signup', signup);

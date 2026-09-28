@@ -174,7 +174,10 @@ module.exports = function (router) {
     const signupUrl = claim ? `/signup?claim=${claim.id}` : `/signup?role=${signupType}`;
     if (!name || !validEmail(email) || password.length < 8) return redirect(ctx.res, `${signupUrl}&error=` + encodeURIComponent('Enter a valid name and email, and use a password with at least 8 characters.'));
     if (String(ctx.body.legal_agreement || '') !== '1') return redirect(ctx.res, `${signupUrl}&error=` + encodeURIComponent('Please agree to the Terms of Service and Privacy Policy.'));
-    if (db.prepare('SELECT id FROM users WHERE email = ?').get(email)) return redirect(ctx.res, `${signupUrl}&error=` + encodeURIComponent('An account with that email already exists.'));
+    if (db.prepare('SELECT id FROM users WHERE email = ?').get(email)) {
+      const loginUrl = claim ? `/login?claim=${claim.id}&error=` : '/login?error=';
+      return redirect(ctx.res, loginUrl + encodeURIComponent('An account with that email already exists. Log in to continue.'));
+    }
 
     const categories = role === 'pro' ? selectedCategories(ctx.body) : [];
     let businessName = '';
