@@ -59,6 +59,7 @@ function proCard(pro, ctx, savedIds) {
       : `<div class="market-avatar-fallback accent-${escapeHtml(pro.accent)}">${escapeHtml(pro.initials)}</div>`;
   const verified = pro.license_verified ? `<span class="market-verified">${verifiedBadge()}<span>Verified</span></span>` : '';
   const claim = pro.claim_status === 'unclaimed' ? `<span class="market-status">Unclaimed</span>` : '';
+  const claimAction = pro.claim_status === 'unclaimed' ? `<a class="market-claim-link" href="/pro/${pro.id}/claim">Is this you? Claim profile</a>` : '';
   return `<div class="favorite-card"><a class="pro-card market-pro-card" href="/pro/${pro.id}"${locationAttrs}>
     <div class="market-pro-inner">
       <div class="market-avatar-wrap">${photoHtml}</div>
@@ -73,7 +74,7 @@ function proCard(pro, ctx, savedIds) {
       </div>
       <span class="market-chevron" aria-hidden="true">›</span>
     </div>
-  </a>${favoriteControl(pro, ctx, savedIds.has(Number(pro.id)))}</div>`;
+  </a>${claimAction}${favoriteControl(pro, ctx, savedIds.has(Number(pro.id)))}</div>`;
 }
 function businessCard(shop) {
   const location = [shop.city, shop.state].filter(Boolean).join(', ');
