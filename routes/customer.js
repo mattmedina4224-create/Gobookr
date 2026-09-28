@@ -27,7 +27,7 @@ module.exports = function (router) {
     const visibleProfiles = hydratePros(savedProfiles, { includeServices: false });
     const visibleIds = new Set(visibleProfiles.map(pro => Number(pro.id)));
     const favorites = savedProfiles.map(pro => `<div class="panel favorite-dashboard-card">
-      ${visibleIds.has(Number(pro.id)) ? `<div><h3><a href="/pro/${pro.id}">${escapeHtml(pro.business_name)}</a></h3><p class="muted">${escapeHtml(pro.city)}, ${escapeHtml(pro.state)}</p><a href="/pro/${pro.id}">View profile &amp; booking options</a></div>` : '<div><h3>Professional currently unavailable</h3><p class="muted">You can keep this favorite or remove it.</p></div>'}
+      ${visibleIds.has(Number(pro.id)) ? `<div class="favorite-pro-identity">${pro.profile_photo_url ? `<img class="favorite-pro-photo" src="${escapeHtml(pro.profile_photo_url)}" alt="${escapeHtml(pro.business_name)} profile photo" />` : `<div class="favorite-pro-photo avatar accent-${escapeHtml(pro.accent)}">${escapeHtml(pro.initials || "GB")}</div>`}<div><h3><a href="/pro/${pro.id}">${escapeHtml(pro.business_name)}</a></h3>${pro.professional_handle ? `<div class="profile-handle">@${escapeHtml(pro.professional_handle)}</div>` : ""}<p class="muted">${escapeHtml(pro.city)}, ${escapeHtml(pro.state)}</p><a href="/pro/${pro.id}">View profile &amp; booking options</a></div></div>` : '<div><h3>Professional currently unavailable</h3><p class="muted">You can keep this favorite or remove it.</p></div>'}
       ${favoriteControl(pro, ctx, true, '/dashboard/customer')}
     </div>`).join('');
     const body = `
