@@ -86,6 +86,8 @@ module.exports = function (router) {
   .home-search-mode { display:flex; gap:8px; margin:0 0 14px; padding:4px; width:max-content; max-width:100%; border-radius:999px; background:#f3f5f8; }
   .home-search-mode a { padding:9px 16px; border-radius:999px; color:#596174; font-size:.88rem; font-weight:800; }
   .home-search-mode a.active { background:#14264c; color:#fff; box-shadow:0 3px 10px rgba(20,38,76,.18); }
+    .home-pro-claim-entry { margin:0 4px 14px; padding:11px 14px; border-radius:14px; background:#f6f8fc; color:#4c566b; font-size:.84rem; line-height:1.4; }
+  .home-pro-claim-entry strong { color:#14264c; }
   .home-search-card form {
     display:grid;
     grid-template-columns:1.15fr .9fr .9fr auto;
@@ -306,6 +308,7 @@ module.exports = function (router) {
       <p class="lede">Search local beauty and wellness professionals, see their work, and book with confidence.</p>
 
       <div class="home-search-card" id="find">
+        <div class="home-pro-claim-entry"><strong>Are you a professional?</strong> Find your profile below, then choose <em>Claim profile</em> to take ownership. Your 30-day trial starts after approval.</div>
         <div class="home-search-mode" aria-label="What are you looking for?"><a class="active" href="/#find">Find a professional</a><a href="/search?type=businesses">Find a business</a></div>
         <form method="GET" action="/search">
           <label class="home-field">
