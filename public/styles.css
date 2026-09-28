@@ -418,3 +418,5 @@ label { display: block; font-size: 0.85rem; font-weight: 600; color: var(--ink-s
 .market-handle{font-size:14px;color:#667085;font-weight:600;margin-top:-2px;margin-bottom:3px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 
 .claim-status-card h2{margin:10px 0 6px}.claim-next-step{margin-bottom:0}.claim-review-form textarea{min-height:120px;resize:vertical}.claim-submit{min-height:48px}@media(max-width:640px){.claim-review-form select,.claim-review-form textarea{font-size:16px;min-height:48px}.claim-review-form textarea{min-height:132px}.claim-submit{width:100%;min-height:52px}.claim-status-card{padding:18px}.claim-status-card h2{font-size:22px}}
+
+.market-claim-link{display:block;margin:8px 12px 0;padding:10px 12px;border:1px solid var(--paper-line);border-radius:10px;text-align:center;font-size:13px;font-weight:750;color:#234f91;background:#f8faff}.market-claim-link:hover{background:#f0f5ff}@media(max-width:640px){.market-claim-link{min-height:44px;display:flex;align-items:center;justify-content:center}}
