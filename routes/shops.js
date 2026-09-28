@@ -33,7 +33,8 @@ module.exports = function (router) {
             <div><div class="badge">${claimed ? 'Claimed shop' : 'Unclaimed business'}</div><h1 style="margin:8px 0 4px;">${escapeHtml(shop.name)}</h1><p class="muted" style="margin:0;">${escapeHtml(shop.city)}, ${escapeHtml(shop.state)}</p></div>
           </div>
           ${shop.description ? `<p style="margin-top:20px;">${escapeHtml(shop.description)}</p>` : ''}
-          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:22px;">
+          ${booking ? `<a class="btn shop-book-btn" href="${escapeHtml(booking)}" target="_blank" rel="noopener noreferrer">Book with this business <span aria-hidden="true">↗</span></a>` : ''}
+          <div class="shop-info-grid">
             <div class="card"><h3>Location</h3><p>${escapeHtml(address || 'Address coming soon')}</p>${shop.phone ? `<p>${escapeHtml(shop.phone)}</p>` : ''}</div>
             <div class="card"><h3>GoBookr professionals</h3><p class="muted" style="margin-bottom:0;">Choose a professional below to view their profile and booking options.</p></div>
           </div>
