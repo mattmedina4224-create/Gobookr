@@ -38,11 +38,12 @@ async function uploadPortfolioObject(profileId, filename, image) {
   return uploadPublicImage('portfolio', profileId, filename, image);
 }
 
-async function deletePortfolioObject(imageUrl) {
+async function deletePublicImage(bucket, imageUrl) {
   const config = storageConfig();
-  if (!config || !imageUrl || !imageUrl.startsWith(config.baseUrl + '/storage/v1/object/public/' + config.bucket + '/')) return;
-  const objectPath = imageUrl.slice((config.baseUrl + '/storage/v1/object/public/' + config.bucket + '/').length);
-  const response = await fetch(config.baseUrl + '/storage/v1/object/' + config.bucket + '/' + objectPath, {
+  const prefix = config && config.baseUrl + '/storage/v1/object/public/' + bucket + '/';
+  if (!config || !imageUrl || !prefix || !imageUrl.startsWith(prefix)) return;
+  const objectPath = imageUrl.slice(prefix.length);
+  const response = await fetch(config.baseUrl + '/storage/v1/object/' + bucket + '/' + objectPath, {
     method: 'DELETE',
     headers: {
       ...(config.serviceKey.startsWith('sb_secret_') ? {} : { authorization: 'Bearer ' + config.serviceKey }),
@@ -50,6 +51,10 @@ async function deletePortfolioObject(imageUrl) {
     },
   });
   if (!response.ok && response.status !== 404) throw new Error('Supabase Storage delete failed: ' + response.status);
+}
+
+async function deletePortfolioObject(imageUrl) {
+  return deletePublicImage('portfolio', imageUrl);
 }
 
 function requirePro(ctx) {
@@ -359,12 +364,29 @@ module.exports = function (router) {
     try {
       const url = await uploadPublicImage('profile-photos', profile.id, crypto.randomUUID() + '.' + ext, image);
       if (!url) return redirect(ctx.res, '/dashboard/pro/profile?error=' + encodeURIComponent('Photo storage is not configured.'));
-      db.prepare('UPDATE pro_profiles SET profile_photo_url = ? WHERE id = ?').run(url, profile.id);
+      try {
+        db.prepare('UPDATE pro_profiles SET profile_photo_url = ? WHERE id = ?').run(url, profile.id);
+      } catch (dbErr) {
+        await deletePublicImage('profile-photos', url).catch((cleanupErr) => console.error('New profile photo cleanup failed', cleanupErr));
+        throw dbErr;
+      }
+      if (profile.profile_photo_url && profile.profile_photo_url !== url) {
+        await deletePublicImage('profile-photos', profile.profile_photo_url).catch((cleanupErr) => console.error('Old profile photo cleanup failed', cleanupErr));
+      }
       return redirect(ctx.res, '/dashboard/pro/profile?success=' + encodeURIComponent('Profile photo updated.'));
     } catch (err) {
       console.error('Profile photo upload failed', err);
       return redirect(ctx.res, '/dashboard/pro/profile?error=' + encodeURIComponent('Profile photo upload failed. Please try again.'));
     }
+  });
+
+
+  router.post('/dashboard/pro/profile-photo/remove', async (ctx) => {
+    const profile = requirePro(ctx); if (!profile) return;
+    const oldUrl = String(profile.profile_photo_url || '');
+    db.prepare('UPDATE pro_profiles SET profile_photo_url = ? WHERE id = ?').run('', profile.id);
+    if (oldUrl) await deletePublicImage('profile-photos', oldUrl).catch((err) => console.error('Profile photo cleanup failed', err));
+    redirect(ctx.res, '/dashboard/pro/profile?success=' + encodeURIComponent('Profile photo removed.'));
   });
 
   router.get('/dashboard/pro/profile', async (ctx) => {
@@ -373,7 +395,7 @@ module.exports = function (router) {
     const locationStatus = Number.isFinite(Number(profile.latitude)) && Number.isFinite(Number(profile.longitude))
       ? '<span style="color:#067647;font-weight:700;">Location ready for mileage</span>'
       : '<span class="muted">Location will be refreshed from this address when you save.</span>';
-    const body = `<section class="section container"><div class="dash-layout">${dashNav('profile')}<div><h1>Profile &amp; services</h1><div class="panel pro-identity-panel"><h3>Your professional profile</h3><p class="muted">This is how customers recognize you across GoBookr.</p><div class="pro-identity-photo">${profile.profile_photo_url ? `<img src="${escapeHtml(profile.profile_photo_url)}" alt="Your profile photo" />` : `<div class="avatar lg accent-${escapeHtml(profile.accent)}">${escapeHtml(profile.initials || "GB")}</div>`}</div><form method="POST" action="/dashboard/pro/profile-photo" enctype="multipart/form-data" class="pro-photo-form" id="profile-photo-form"><input type="hidden" name="_csrf" value="${escapeHtml(ctx.session.csrf_token)}" /><label class="btn secondary" for="profile_photo">Choose photo</label><input id="profile_photo" name="image" type="file" accept="image/jpeg,image/png,image/webp" required /><button class="btn" type="button" id="profile-photo-crop" disabled>Save photo</button><div class="helptext">Choose from Photos, Camera, or Files. You can crop and position your photo before saving.</div></form><dialog id="profile-crop-dialog" class="profile-crop-dialog"><form method="dialog"><div class="crop-dialog-head"><strong>Crop profile photo</strong><button class="crop-close" value="cancel" aria-label="Close">×</button></div><div class="crop-stage"><canvas id="profile-crop-canvas" width="640" height="640"></canvas></div><label class="crop-zoom">Zoom <input id="profile-crop-zoom" type="range" min="1" max="3" value="1" step="0.01" /></label><p class="helptext">Drag the photo to position it inside the circle.</p><div class="crop-actions"><button class="btn secondary" value="cancel">Cancel</button><button class="btn" type="button" id="profile-crop-save">Use photo</button></div></form></dialog><script src="/profile-photo-crop.js" defer></script></div><div class="panel professional-details-panel"><h3>Professional details</h3><p class="muted">Start with the identity customers will see when they find you.</p><form method="POST" action="/dashboard/pro/profile"><input type="hidden" name="_csrf" value="${escapeHtml(ctx.session.csrf_token)}" /><div class="profile-identity-fields"><div class="field"><label for="business_name">Display / professional name</label><input id="business_name" name="business_name" value="${escapeHtml(profile.business_name)}" maxlength="120" autocomplete="name" required /></div>
+    const body = `<section class="section container"><div class="dash-layout">${dashNav('profile')}<div><h1>Profile &amp; services</h1><div class="panel pro-identity-panel"><h3>Your professional profile</h3><p class="muted">This is how customers recognize you across GoBookr.</p><div class="pro-identity-photo">${profile.profile_photo_url ? `<img src="${escapeHtml(profile.profile_photo_url)}" alt="Your profile photo" />` : `<div class="avatar lg accent-${escapeHtml(profile.accent)}">${escapeHtml(profile.initials || "GB")}</div>`}</div><form method="POST" action="/dashboard/pro/profile-photo" enctype="multipart/form-data" class="pro-photo-form" id="profile-photo-form"><input type="hidden" name="_csrf" value="${escapeHtml(ctx.session.csrf_token)}" /><label class="btn secondary" for="profile_photo">Choose photo</label><input id="profile_photo" name="image" type="file" accept="image/jpeg,image/png,image/webp" required /><button class="btn" type="button" id="profile-photo-crop" disabled>Save photo</button><div class="helptext">Choose from Photos, Camera, or Files. You can crop and position your photo before saving.</div></form>${profile.profile_photo_url ? `<form method="POST" action="/dashboard/pro/profile-photo/remove" class="pro-photo-remove"><input type="hidden" name="_csrf" value="${escapeHtml(ctx.session.csrf_token)}" /><button class="btn ghost small" type="submit">Remove photo</button></form>` : ''}<dialog id="profile-crop-dialog" class="profile-crop-dialog"><form method="dialog"><div class="crop-dialog-head"><strong>Crop profile photo</strong><button class="crop-close" value="cancel" aria-label="Close">×</button></div><div class="crop-stage"><canvas id="profile-crop-canvas" width="640" height="640"></canvas></div><label class="crop-zoom">Zoom <input id="profile-crop-zoom" type="range" min="1" max="3" value="1" step="0.01" /></label><p class="helptext">Drag the photo to position it inside the circle.</p><div class="crop-actions"><button class="btn secondary" value="cancel">Cancel</button><button class="btn" type="button" id="profile-crop-save">Use photo</button></div></form></dialog><script src="/profile-photo-crop.js" defer></script></div><div class="panel professional-details-panel"><h3>Professional details</h3><p class="muted">Start with the identity customers will see when they find you.</p><form method="POST" action="/dashboard/pro/profile"><input type="hidden" name="_csrf" value="${escapeHtml(ctx.session.csrf_token)}" /><div class="profile-identity-fields"><div class="field"><label for="business_name">Display / professional name</label><input id="business_name" name="business_name" value="${escapeHtml(profile.business_name)}" maxlength="120" autocomplete="name" required /></div>
     <div class="field"><label for="professional_handle">Professional handle <span class="muted">(optional)</span></label><div class="handle-input"><span aria-hidden="true">@</span><input id="professional_handle" name="professional_handle" value="${escapeHtml(profile.professional_handle || '')}" maxlength="80" placeholder="mattkutz" autocapitalize="none" autocomplete="off" spellcheck="false" /></div><div class="helptext">Your recognizable name on GoBookr. Letters, numbers, periods, underscores, and hyphens.</div></div>
     <div class="field"><label for="bio">About you</label><textarea id="bio" name="bio" rows="4" maxlength="3000" placeholder="Tell customers what you specialize in and what they can expect.">${escapeHtml(profile.bio)}</textarea></div></div>
     <div class="profile-details-divider"><h3>Booking &amp; workplace</h3><p class="muted">Where customers book you and where you work.</p></div>
