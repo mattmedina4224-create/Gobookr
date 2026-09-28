@@ -407,3 +407,6 @@ label { display: block; font-size: 0.85rem; font-weight: 600; color: var(--ink-s
   .pro-identity-photo .avatar, .profile-photo-avatar { width:96px; height:96px; flex-basis:96px; }
   .pro-photo-form .btn { width:100%; min-height:48px; display:flex; align-items:center; justify-content:center; }
 }
+
+.favorite-pro-identity{display:flex;align-items:center;gap:14px;min-width:0}.favorite-pro-photo{width:64px;height:64px;border-radius:50%;object-fit:cover;flex:0 0 64px;overflow:hidden}.favorite-pro-identity h3{margin:0 0 2px}.favorite-pro-identity p{margin:4px 0}.market-avatar-img{object-fit:cover}
+@media(max-width:520px){.favorite-dashboard-card{gap:14px}.favorite-pro-photo{width:56px;height:56px;flex-basis:56px}.favorite-pro-identity{align-items:flex-start}}
