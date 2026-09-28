@@ -393,3 +393,17 @@ label { display: block; font-size: 0.85rem; font-weight: 600; color: var(--ink-s
 /* GoBookr navy booking availability panel with high-contrast white text. */
 .profile-page .booking-unavailable { background:#0B1F3A; color:#fff; border:1px solid #0B1F3A; border-radius:14px; padding:14px; }
 .profile-page .booking-unavailable .muted { color:#fff; }
+
+/* Mobile-first professional identity editor */
+.pro-identity-panel { text-align:center; }
+.pro-identity-photo { display:flex; justify-content:center; margin:18px 0 14px; }
+.pro-identity-photo .avatar, .profile-photo-avatar { width:112px; height:112px; border-radius:50%; overflow:hidden; flex:0 0 112px; }
+.pro-identity-photo img, .profile-photo-avatar img { width:100%; height:100%; object-fit:cover; display:block; }
+.pro-photo-form { max-width:360px; margin:0 auto; display:grid; gap:10px; }
+.pro-photo-form input[type=file] { position:absolute; width:1px; height:1px; opacity:0; pointer-events:none; }
+.profile-handle { color:var(--muted); font-weight:650; margin-top:-4px; margin-bottom:6px; }
+@media (max-width: 640px) {
+  .pro-identity-panel { padding:22px 16px; }
+  .pro-identity-photo .avatar, .profile-photo-avatar { width:96px; height:96px; flex-basis:96px; }
+  .pro-photo-form .btn { width:100%; min-height:48px; display:flex; align-items:center; justify-content:center; }
+}
