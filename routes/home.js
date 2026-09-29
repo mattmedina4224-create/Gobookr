@@ -17,6 +17,8 @@ const CATEGORIES = [
   { value: 'eyebrow_technician', label: 'Eyebrow Technicians' },
   { value: 'waxing_specialist', label: 'Waxing Specialists' },
   { value: 'tattoo_artist', label: 'Tattoo Artists' },
+  { value: 'makeup_artist', label: 'Makeup Artists' },
+  { value: 'wedding_services', label: 'Weddings' },
   { value: 'massage_therapist', label: 'Massage Therapists' },
 ];
 
