@@ -21,6 +21,7 @@ require('./routes/auth')(router);
 require('./routes/become-pro')(router);
 require('./routes/google')(router);
 require('./routes/pro')(router);
+require('./routes/onboarding')(router);
 require('./routes/customer')(router);
 require('./routes/admin')(router);
 require('./routes/legal')(router);
