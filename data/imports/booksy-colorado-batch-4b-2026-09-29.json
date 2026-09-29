@@ -1,0 +1,62 @@
+[
+  {
+    "name": "KevszFlores",
+    "category": "barber",
+    "workplace_name": "KevszFlores",
+    "city": "Aurora",
+    "state": "CO",
+    "address": "2323 S Troy St, Building 1, Suite 226-D",
+    "zip": "80014",
+    "booking_url": "https://booksy.com/en-us/s/barber-shop/134779_aurora?businessesPage=2",
+    "source_url": "https://booksy.com/en-us/s/barber-shop/134779_aurora?businessesPage=2",
+    "source_name": "Booksy"
+  },
+  {
+    "name": "Faderz Inc",
+    "category": "barber",
+    "workplace_name": "Faderz Inc",
+    "city": "Aurora",
+    "state": "CO",
+    "address": "2323 S Troy St, Unit 304 Building 1",
+    "zip": "80014",
+    "booking_url": "https://booksy.com/en-us/s/barber-shop/134779_aurora?businessesPage=2",
+    "source_url": "https://booksy.com/en-us/s/barber-shop/134779_aurora?businessesPage=2",
+    "source_name": "Booksy"
+  },
+  {
+    "name": "Chop Gawd",
+    "category": "barber",
+    "workplace_name": "Chop Gawd",
+    "city": "Aurora",
+    "state": "CO",
+    "address": "2323 S Troy St Building 3, Office 3, Suite 7",
+    "zip": "80014",
+    "booking_url": "https://booksy.com/en-us/s/barber-shop/134779_aurora?businessesPage=2",
+    "source_url": "https://booksy.com/en-us/s/barber-shop/134779_aurora?businessesPage=2",
+    "source_name": "Booksy"
+  },
+  {
+    "name": "BSN BLENDZ",
+    "category": "barber",
+    "workplace_name": "BSN BLENDZ",
+    "city": "Aurora",
+    "state": "CO",
+    "address": "1280 S Abilene St",
+    "zip": "80012",
+    "booking_url": "https://booksy.com/en-us/s/line-up/119671_north-aurora",
+    "source_url": "https://booksy.com/en-us/s/line-up/119671_north-aurora",
+    "source_name": "Booksy"
+  },
+  {
+    "name": "Angel's cutz",
+    "category": "barber",
+    "workplace_name": "Angel's cutz",
+    "city": "Aurora",
+    "state": "CO",
+    "address": "1929 S Mobile St",
+    "zip": "80013",
+    "booking_url": "https://booksy.com/en-us/s/line-up/119671_north-aurora",
+    "source_url": "https://booksy.com/en-us/s/line-up/119671_north-aurora",
+    "source_name": "Booksy"
+  }
+]
