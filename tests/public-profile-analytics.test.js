@@ -26,3 +26,11 @@ test('analytics attribution source is normalized before storage and forwarding',
   assert.match(src, /replace\(\/\[\^A-Za-z0-9\._-\]\/g, ''\)\.slice\(0, 80\)/);
   assert.match(src, /const attributionSource = queryText\(ctx\.query\.source, 80\)/);
 });
+
+
+test('public profile empty states are useful to customers and actionable for owners', () => {
+  assert.match(src, /Add an About section so customers understand your specialties/);
+  assert.match(src, /More details from this professional are coming soon/);
+  assert.match(src, /Add portfolio photos to show customers your work/);
+  assert.match(src, /More work from this professional is coming soon/);
+});
