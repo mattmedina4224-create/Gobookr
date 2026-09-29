@@ -10,6 +10,7 @@ const PRO_CATEGORIES = [
   ['nail_technician', 'Nail Technician'], ['eyelash_technician', 'Lash Technician'],
   ['eyebrow_technician', 'Brow Technician'], ['waxing_specialist', 'Waxing Specialist'],
   ['tattoo_artist', 'Tattoo Artist'], ['massage_therapist', 'Massage Therapist'],
+  ['makeup_artist', 'Makeup Artist'], ['wedding_services', 'Weddings'],
 ];
 const CATEGORY_VALUES = new Set(PRO_CATEGORIES.map(([value]) => value));
 const LEGACY_CATEGORY = new Set(['barber', 'stylist', 'colorist']);
