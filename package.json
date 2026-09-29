@@ -9,7 +9,8 @@
     "seed": "node db/seed.js",
     "check": "node scripts/check.js",
     "audit:imports": "node scripts/audit-imported-profiles.js",
-    "test": "node --test tests/*.test.js"
+    "test": "node --test tests/*.test.js",
+    "backfill:coordinates": "node scripts/backfill-profile-coordinates.js"
   },
   "dependencies": {
     "pg": "^8.13.1",
