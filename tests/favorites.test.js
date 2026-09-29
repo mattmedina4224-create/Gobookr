@@ -58,7 +58,7 @@ function app() {
     './lib/pro-billing-banner': { installBillingBanner() {} }, './lib/square-dashboard-card': { installSquareDashboardCard() {} },
     './lib/rate-limit': { checkAuthRateLimit: () => ({ allowed: true }) },
   };
-  for (const name of ['public','auth','become-pro','google','pro','admin','legal','claim','embedded-billing','billing','square','shops','shop-dashboard','shop-billing','business-account']) dependencies['./routes/' + name] = () => {};
+  for (const name of ['public','auth','become-pro','google','pro','onboarding','admin','legal','claim','embedded-billing','billing','square','shops','shop-dashboard','shop-billing','business-account']) dependencies['./routes/' + name] = () => {};
   dependencies['./routes/customer'] = customerRoute;
   let handle;
   dependencies['node:http'] = { createServer(fn) { handle = fn; return { listen() {} }; } };
