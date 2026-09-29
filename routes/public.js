@@ -20,6 +20,8 @@ const CATEGORIES = [
   { value: 'waxing_specialist', label: 'Waxing Specialists' },
   { value: 'massage_therapist', label: 'Massage Therapists' },
   { value: 'tattoo_artist', label: 'Tattoo Artists' },
+  { value: 'makeup_artist', label: 'Makeup Artists' },
+  { value: 'wedding_services', label: 'Weddings' },
 ];
 const CATEGORY_VALUES = new Set(CATEGORIES.map((item) => item.value));
 const RESULT_TYPES = new Set(['all', 'professionals', 'businesses']);
