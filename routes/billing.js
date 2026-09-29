@@ -85,6 +85,7 @@ module.exports = function (router) {
 
     const remaining = daysRemaining(subscription.trial_ends_at);
     const isTrial = subscription.status === 'trialing';
+    const isTrialExpired = isTrial && remaining === 0;
     const isPastDue = subscription.status === 'past_due' || subscription.status === 'unpaid';
     const cancelPending = Boolean(subscription.cancel_at_period_end);
     const configured = stripeConfigured();
@@ -92,12 +93,15 @@ module.exports = function (router) {
     const graceRemaining = graceDaysRemaining(subscription);
 
     let notice = '';
-    if (isPastDue && graceRemaining > 0) notice = `<div class="alert error" style="margin-bottom:18px;"><strong>We couldn't process your payment.</strong> You have ${graceRemaining} day${graceRemaining === 1 ? '' : 's'} left in your payment grace period. Update your payment method to keep your profile visible.</div>`;
+    if (isTrialExpired) notice = `<div class="alert error" style="margin-bottom:18px;"><strong>Your free trial has ended.</strong> Your public profile is temporarily hidden. Set up your $20/month membership to restore visibility.</div>`;
+    else if (isPastDue && graceRemaining > 0) notice = `<div class="alert error" style="margin-bottom:18px;"><strong>We couldn't process your payment.</strong> You have ${graceRemaining} day${graceRemaining === 1 ? '' : 's'} left in your payment grace period. Update your payment method to keep your profile visible.</div>`;
     else if (isPastDue) notice = `<div class="alert error" style="margin-bottom:18px;"><strong>Payment is still overdue.</strong> Your 7-day grace period has ended, so your public profile is temporarily hidden. Update your payment method to restore it.</div>`;
     else if (cancelPending) notice = `<div class="alert" style="margin-bottom:18px;"><strong>Cancellation scheduled.</strong> Your membership remains available through the end of your current billing period.</div>`;
 
-    const trialText = isTrial ? `<p style="margin:4px 0 0;"><strong>${remaining} day${remaining === 1 ? '' : 's'} remaining</strong> in your free trial.</p>` : '';
-    const billingLabel = isTrial ? 'Trial ends' : 'Current period ends';
+    const trialText = isTrialExpired
+      ? `<p style="margin:4px 0 0;"><strong>Free trial ended.</strong> Set up your membership to make your profile public again.</p>`
+      : isTrial ? `<p style="margin:4px 0 0;"><strong>${remaining} day${remaining === 1 ? '' : 's'} remaining</strong> in your free trial.</p>` : '';
+    const billingLabel = isTrial ? (isTrialExpired ? 'Trial ended' : 'Trial ends') : 'Current period ends';
 
     let paymentButton = `<button class="btn secondary" type="button" disabled>Set up payment method</button><p class="helptext" style="margin-top:8px;">Stripe test billing will activate after the required environment keys are configured.</p>`;
     if (configured && hasStripeCustomer) {
