@@ -74,6 +74,8 @@ Supported marketplace categories currently include:
 - `waxing_specialist`
 - `tattoo_artist`
 - `massage_therapist`
+- `makeup_artist`
+- `wedding_services`
 
 When changing category behavior, keep database constraints, signup/onboarding validation, search, profile display, imports, and admin tools consistent.
 
