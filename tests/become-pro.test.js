@@ -16,3 +16,13 @@ test('customer to professional conversion asks for and persists a real service c
   assert.match(src, /datetime\('now','\+30 days'\)/);
   assert.match(src, /\/dashboard\/pro\/onboarding/);
 });
+
+
+test('existing profile conversion is atomic and preserves an existing trial', () => {
+  const src = fs.readFileSync(path.join(__dirname, '..', 'routes', 'become-pro.js'), 'utf8');
+  const branch = src.slice(src.indexOf('if (existingProfile)'), src.indexOf('const businessName'));
+  assert.match(branch, /BEGIN IMMEDIATE/);
+  assert.match(branch, /INSERT OR IGNORE INTO subscriptions/);
+  assert.match(branch, /COMMIT/);
+  assert.match(branch, /ROLLBACK/);
+});
