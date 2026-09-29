@@ -43,7 +43,9 @@ module.exports = function (router) {
         </div>
       </div>
     </section>`;
-    send(ctx.res, layout({ title: shop.name, currentUser:ctx.currentUser, session:ctx.session, flash:flashFromQuery(ctx.query), body }));
+    const shopUrl = 'https://gobookr.com/shop/' + shop.id;
+    const structuredData = { '@context':'https://schema.org', '@type':'LocalBusiness', name:shop.name, url:shopUrl, description:shop.description || undefined, image:logo || cover || undefined, telephone:shop.phone || undefined, address: address ? { '@type':'PostalAddress', streetAddress:[shop.street_address,shop.suite].filter(Boolean).join(', ') || undefined, addressLocality:shop.city || undefined, addressRegion:shop.state || undefined, postalCode:shop.zip_code || undefined } : undefined };
+    send(ctx.res, layout({ title: shop.name + (shop.city ? ' · ' + shop.city + ', ' + shop.state : ''), description:`View ${shop.name}${shop.city ? ' in ' + shop.city + ', ' + shop.state : ''} on GoBookr. Explore professionals at this business and booking options.`, canonical:shopUrl, structuredData, currentUser:ctx.currentUser, session:ctx.session, flash:flashFromQuery(ctx.query), body }));
   });
   router.get('/shop/:id/claim', async (ctx) => {
     const id = Number(ctx.params.id); const shop = Number.isInteger(id) && id > 0 ? shopForClaim(id) : null;
