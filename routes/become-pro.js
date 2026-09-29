@@ -47,9 +47,17 @@ module.exports = function (router) {
 
     const existingProfile = db.prepare('SELECT id FROM pro_profiles WHERE user_id = ?').get(ctx.currentUser.id);
     if (existingProfile) {
-      db.prepare("UPDATE users SET role = 'pro' WHERE id = ?").run(ctx.currentUser.id);
-      db.prepare('INSERT INTO pro_categories (pro_id, category) VALUES (?, ?) ON CONFLICT (pro_id, category) DO NOTHING').run(existingProfile.id, selectedCategory);
-      db.prepare(`INSERT OR IGNORE INTO subscriptions (pro_id, status, trial_started_at, trial_ends_at) VALUES (?, 'trialing', datetime('now'), datetime('now','+30 days'))`).run(existingProfile.id);
+      try {
+        db.exec('BEGIN IMMEDIATE');
+        db.prepare("UPDATE users SET role = 'pro' WHERE id = ?").run(ctx.currentUser.id);
+        db.prepare('INSERT INTO pro_categories (pro_id, category) VALUES (?, ?) ON CONFLICT (pro_id, category) DO NOTHING').run(existingProfile.id, selectedCategory);
+        db.prepare(`INSERT OR IGNORE INTO subscriptions (pro_id, status, trial_started_at, trial_ends_at) VALUES (?, 'trialing', datetime('now'), datetime('now','+30 days'))`).run(existingProfile.id);
+        db.exec('COMMIT');
+      } catch (err) {
+        try { db.exec('ROLLBACK'); } catch (_) {}
+        console.error('Existing profile become-pro conversion failed', err);
+        return redirect(ctx.res, '/become-pro?error=' + encodeURIComponent('We could not activate the professional account. Please try again.'));
+      }
       return redirect(ctx.res, '/dashboard/pro/onboarding?success=' + encodeURIComponent('Professional account activated.'));
     }
 
