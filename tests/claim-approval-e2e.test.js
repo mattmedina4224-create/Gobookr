@@ -2,7 +2,7 @@
 const test=require('node:test');const assert=require('node:assert/strict');const fs=require('node:fs');const path=require('node:path');
 const src=fs.readFileSync(path.join(__dirname,'..','routes','admin.js'),'utf8');
 test('professional claim approval transfers one imported profile and starts one trial',()=>{
-  assert.match(src,/UPDATE pro_profiles SET user_id=\?, claim_status='claimed'.*user_id IS NULL.*claim_status IN \('unclaimed','claim_pending'\)/s);
+  assert.match(src,/UPDATE pro_profiles SET user_id=\?, claim_status='claimed', claimed_at=CURRENT_TIMESTAMP.*user_id IS NULL.*claim_status IN \('unclaimed','claim_pending'\)/s);
   assert.match(src,/SELECT id FROM pro_profiles WHERE user_id=\? AND id != \? LIMIT 1/);
   assert.match(src,/UPDATE users SET role='pro' WHERE id=\?/);
   assert.match(src,/UPDATE profile_claims SET status='approved'.*WHERE id=\? AND status='pending'/s);
