@@ -43,3 +43,10 @@ test('inventory tooling recognizes the new marketplace categories', () => {
     assert.match(src, /wedding_services/);
   }
 });
+
+
+test('public profile badges use friendly specialty labels', () => {
+  const src = read('lib/util.js');
+  assert.match(src, /makeup_artist: 'Makeup Artist'/);
+  assert.match(src, /wedding_services: 'Weddings'/);
+});
