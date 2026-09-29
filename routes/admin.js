@@ -190,9 +190,9 @@ module.exports = function (router) {
       WHERE p.user_id IS NULL`;
     const args = [];
     if (status) { sql += ' AND p.outreach_status = ?'; args.push(status); }
-    if (q) { sql += ' AND (p.business_name LIKE ? OR p.workplace_name LIKE ? OR p.city LIKE ? OR p.contact_email LIKE ? OR p.contact_phone LIKE ?)'; const like='%'+q.replace(/[\\%_]/g,'\\
+    if (q) { sql += ' AND (p.business_name LIKE ? OR p.workplace_name LIKE ? OR p.city LIKE ? OR p.contact_email LIKE ? OR p.contact_phone LIKE ?)'; const like = '%' + q.replace(/[\\%_]/g, '\\const like='%'+q.replace(/[\\%_]/g,'\\
 };
-')+'%'; args.push(like,like,like,like,like); }
+')+'%';') + '%'; args.push(like,like,like,like,like); }
     sql += ' GROUP BY p.id ORDER BY p.created_at DESC, p.id DESC LIMIT 1000';
     let pros=[]; try { pros=db.prepare(sql).all(...args); } catch(err) { console.error('New professional outreach list unavailable',err); }
     const labels={not_contacted:'Not contacted',contacted:'Contacted',replied:'Replied',claimed:'Claimed',do_not_contact:'Do not contact'};
