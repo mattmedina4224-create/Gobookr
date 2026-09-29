@@ -110,7 +110,7 @@ module.exports = function (router) {
 
     try {
       db.exec('BEGIN');
-      const attached = db.prepare("UPDATE pro_profiles SET user_id=?, claim_status='claimed' WHERE id=? AND user_id IS NULL AND claim_status IN ('unclaimed','claim_pending')").run(claim.claimant_user_id, claim.pro_id);
+      const attached = db.prepare("UPDATE pro_profiles SET user_id=?, claim_status='claimed', claimed_at=CURRENT_TIMESTAMP WHERE id=? AND user_id IS NULL AND claim_status IN ('unclaimed','claim_pending')").run(claim.claimant_user_id, claim.pro_id);
       if (!attached.changes) throw new Error('Profile is no longer available to claim.');
       db.prepare("UPDATE users SET role='pro' WHERE id=?").run(claim.claimant_user_id);
       db.prepare("UPDATE profile_claims SET status='approved', reviewed_at=CURRENT_TIMESTAMP, reviewer_user_id=? WHERE id=? AND status='pending'").run(ctx.currentUser.id, id);
