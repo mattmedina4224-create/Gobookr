@@ -173,7 +173,7 @@ module.exports = function (router) {
     if (!bookingUrl) return redirect(ctx.res, '/pro/' + proId + '?error=' + encodeURIComponent('Online booking is not connected yet.'));
     try {
       db.prepare('INSERT INTO booking_clicks (pro_id, customer_user_id) VALUES (?, ?)').run(proId, ctx.currentUser ? ctx.currentUser.id : null);
-      db.prepare("INSERT INTO pro_events (pro_id, event_type, actor_user_id, source) VALUES (?, 'booking_click', ?, ?)").run(proId, ctx.currentUser ? ctx.currentUser.id : null, queryText(ctx.query.source, 80) || 'profile');
+      db.prepare("INSERT INTO pro_events (pro_id, event_type, actor_user_id, source) VALUES (?, 'booking_click', ?, ?)").run(proId, ctx.currentUser ? ctx.currentUser.id : null, queryText(ctx.query.source, 80).replace(/[^A-Za-z0-9._-]/g, '').slice(0, 80) || 'profile');
     } catch (err) {
       console.error('Booking click tracking failed', err);
     }
@@ -190,10 +190,10 @@ module.exports = function (router) {
     const reviews = db.prepare(`SELECT reviews.*, users.name AS customer_name FROM reviews JOIN users ON users.id = reviews.customer_id WHERE reviews.pro_id = ? ORDER BY reviews.created_at DESC`).all(pro.id);
     const rating = avgRating(reviews); const isOwnProfile = Boolean(ownProfile); const bookingUrl = safeExternalUrl(pro.booking_url);
     if (!isOwnProfile) {
-      try { db.prepare("INSERT INTO pro_events (pro_id, event_type, actor_user_id, source) VALUES (?, 'profile_view', ?, ?)").run(pro.id, ctx.currentUser ? ctx.currentUser.id : null, queryText(ctx.query.source, 80) || 'marketplace'); }
+      try { db.prepare("INSERT INTO pro_events (pro_id, event_type, actor_user_id, source) VALUES (?, 'profile_view', ?, ?)").run(pro.id, ctx.currentUser ? ctx.currentUser.id : null, queryText(ctx.query.source, 80).replace(/[^A-Za-z0-9._-]/g, '').slice(0, 80) || 'marketplace'); }
       catch (err) { console.error('Profile view tracking failed', err); }
     }
-    const attributionSource = queryText(ctx.query.source, 80);
+    const attributionSource = queryText(ctx.query.source, 80).replace(/[^A-Za-z0-9._-]/g, '').slice(0, 80);
     const bookingHref = '/book/' + pro.id + (attributionSource ? '?source=' + encodeURIComponent(attributionSource) : '');
     let ctaHtml;
     if (isOwnProfile) ctaHtml = `<a class="btn secondary block" href="/dashboard/pro/profile">Manage your profile</a>`;
