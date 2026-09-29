@@ -5,6 +5,7 @@ const db = require('../db');
 const supportedCategories = new Set([
   'barber', 'stylist', 'colorist', 'nail_technician', 'eyelash_technician',
   'eyebrow_technician', 'waxing_specialist', 'tattoo_artist', 'massage_therapist',
+  'makeup_artist', 'wedding_services',
 ]);
 
 const profiles = db.prepare(`SELECT id, user_id, business_name, city, state, workplace_name, street_address, zip_code,
