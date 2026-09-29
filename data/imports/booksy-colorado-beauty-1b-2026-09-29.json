@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Vannenails",
+    "category": "nail_technician",
+    "workplace_name": "Vannenails",
+    "city": "Thornton",
+    "state": "CO",
+    "address": "550 Thornton Pkwy ste 226",
+    "zip": "80229",
+    "booking_url": "https://booksy.com/en-us/s/nail-salon/134761_denver",
+    "source_url": "https://booksy.com/en-us/s/nail-salon/134761_denver",
+    "source_name": "Booksy"
+  },
+  {
+    "name": "The Polished Cuticle",
+    "category": "nail_technician",
+    "workplace_name": "The Polished Cuticle",
+    "city": "Aurora",
+    "state": "CO",
+    "address": "4441 N Quatar Ct",
+    "zip": "80019",
+    "booking_url": "https://booksy.com/en-us/1316515_the-polished-cuticle_nail-salon_134779_aurora",
+    "source_url": "https://booksy.com/en-us/1316515_the-polished-cuticle_nail-salon_134779_aurora",
+    "source_name": "Booksy"
+  },
+  {
+    "name": "Lashifiedbyher",
+    "category": "eyelash_technician",
+    "workplace_name": "Lashifiedbyher",
+    "city": "Englewood",
+    "state": "CO",
+    "address": "River point",
+    "zip": "80110",
+    "booking_url": "https://booksy.com/en-us/s/brows-lashes/134761_denver",
+    "source_url": "https://booksy.com/en-us/s/brows-lashes/134761_denver",
+    "source_name": "Booksy"
+  }
+]
