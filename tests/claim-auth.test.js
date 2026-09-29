@@ -102,7 +102,7 @@ function app(options = {}) {
   });
   const dependencies = { './routes/admin': adminRoute, './routes/google': googleRoute, './routes/auth': authRoute, './routes/claim': claimRoute, './lib/auth': auth, './lib/layout': common['../lib/layout'],
     './lib/pro-billing-banner': { installBillingBanner() {} }, './lib/square-dashboard-card': { installSquareDashboardCard() {} }, './lib/rate-limit': { checkAuthRateLimit: () => ({ allowed: true }) } };
-  for (const file of ['public', 'become-pro', 'pro', 'customer', 'legal', 'embedded-billing', 'billing', 'square', 'shops', 'shop-dashboard', 'shop-billing', 'business-account']) dependencies[`./routes/${file}`] = () => {};
+  for (const file of ['public', 'become-pro', 'pro', 'onboarding', 'customer', 'legal', 'embedded-billing', 'billing', 'square', 'shops', 'shop-dashboard', 'shop-billing', 'business-account']) dependencies[`./routes/${file}`] = () => {};
   dependencies['./lib/router'] = load('lib/router.js', { '../routes/home': () => {} });
   let handle;
   dependencies['node:http'] = { createServer(fn) { handle = fn; return { listen() {} }; } };
