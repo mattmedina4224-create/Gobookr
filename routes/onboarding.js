@@ -41,7 +41,7 @@ function onboardingState(profile) {
   const serviceCount = db.prepare('SELECT COUNT(*) AS count FROM services WHERE pro_id = ?').get(profile.id).count;
   const photoCount = db.prepare('SELECT COUNT(*) AS count FROM portfolio_items WHERE pro_id = ?').get(profile.id).count;
   const basicsDone = Boolean(profile.business_name && profile.city && profile.state && profile.workplace_name && profile.street_address && profile.zip_code);
-  const detailsDone = Boolean(profile.bio && profile.years_experience > 0 && (profile.price_min > 0 || profile.price_max > 0));
+  const detailsDone = Boolean(profile.bio && Number.isFinite(Number(profile.years_experience)) && Number(profile.years_experience) >= 0 && (profile.price_min > 0 || profile.price_max > 0));
   const servicesDone = serviceCount > 0;
   const photosDone = photoCount > 0;
   const licenseDone = Boolean(profile.license_number && profile.license_state);
