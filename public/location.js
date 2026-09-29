@@ -205,9 +205,9 @@
 })();
 
 (() => {
-  // Radius search controls: 1,2,3,4,5,10,15,20 miles. GPS coordinates are kept
+  // Radius search controls: 1,2,3,4,5, then 7,9,11,13,15,17,19 miles. GPS coordinates are kept
   // in the search request only when the customer uses their current location.
-  const allowed = ['1', '2', '3', '4', '5', '10', '15', '20'];
+  const allowed = ['1', '2', '3', '4', '5', '7', '9', '11', '13', '15', '17', '19'];
   const params = new URLSearchParams(window.location.search);
   const requestedRadius = allowed.includes(params.get('radius')) ? params.get('radius') : '5';
   const style = document.createElement('style');
