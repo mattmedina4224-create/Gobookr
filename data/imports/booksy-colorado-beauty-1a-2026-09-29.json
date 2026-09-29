@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Esthetics By Marlin",
+    "category": "eyelash_technician",
+    "workplace_name": "Esthetics By Marlin",
+    "city": "Denver",
+    "state": "CO",
+    "address": "7282 Worley Dr",
+    "zip": "80221",
+    "booking_url": "https://booksy.com/en-us/1854243_esthetics-by-marlin_brows-lashes_134761_denver",
+    "source_url": "https://booksy.com/en-us/1854243_esthetics-by-marlin_brows-lashes_134761_denver",
+    "source_name": "Booksy"
+  },
+  {
+    "name": "Pauli_beauty_lash",
+    "category": "eyelash_technician",
+    "workplace_name": "Pauli_beauty_lash",
+    "city": "Aurora",
+    "state": "CO",
+    "address": "1440 Ironton St",
+    "zip": "80010",
+    "booking_url": "https://booksy.com/en-us/s/brows-lashes/134761_denver",
+    "source_url": "https://booksy.com/en-us/s/brows-lashes/134761_denver",
+    "source_name": "Booksy"
+  },
+  {
+    "name": "Lashesbrows_Gaby",
+    "category": "eyebrow_technician",
+    "workplace_name": "Lashesbrows_Gaby",
+    "city": "Denver",
+    "state": "CO",
+    "address": "6679 E Warren Ave",
+    "zip": "80224",
+    "booking_url": "https://booksy.com/en-us/s/brows-lashes/134761_denver",
+    "source_url": "https://booksy.com/en-us/s/brows-lashes/134761_denver",
+    "source_name": "Booksy"
+  }
+]
