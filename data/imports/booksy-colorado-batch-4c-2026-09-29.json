@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Miguel Un Estilo A Tu Gusto",
+    "category": "barber",
+    "workplace_name": "Miguel Un Estilo A Tu Gusto",
+    "city": "Aurora",
+    "state": "CO",
+    "address": "2153 S Chambers Rd",
+    "zip": "80014",
+    "booking_url": "https://booksy.com/en-us/s/beard-shaping/118168_south-aurora",
+    "source_url": "https://booksy.com/en-us/s/beard-shaping/118168_south-aurora",
+    "source_name": "Booksy"
+  },
+  {
+    "name": "Sosa Blessed Hands",
+    "category": "barber",
+    "workplace_name": "Sosa Blessed Hands",
+    "city": "Aurora",
+    "state": "CO",
+    "address": "2323 S Troy St Building 1 Room 314",
+    "zip": "80014",
+    "booking_url": "https://booksy.com/en-us/s/beard-shaping/118168_south-aurora",
+    "source_url": "https://booksy.com/en-us/s/beard-shaping/118168_south-aurora",
+    "source_name": "Booksy"
+  },
+  {
+    "name": "KrewKuts",
+    "category": "barber",
+    "workplace_name": "KrewKuts",
+    "city": "Aurora",
+    "state": "CO",
+    "address": "13697 E Iliff Ave",
+    "zip": "80014",
+    "booking_url": "https://booksy.com/en-us/s/beard-shaping/118168_south-aurora",
+    "source_url": "https://booksy.com/en-us/s/beard-shaping/118168_south-aurora",
+    "source_name": "Booksy"
+  },
+  {
+    "name": "Titaness Barbering",
+    "category": "barber",
+    "workplace_name": "Titaness Barbering",
+    "city": "Aurora",
+    "state": "CO",
+    "address": "5550 S Parker Rd, 37",
+    "zip": "80015",
+    "booking_url": "https://booksy.com/en-us/s/beard-shaping/118168_south-aurora",
+    "source_url": "https://booksy.com/en-us/s/beard-shaping/118168_south-aurora",
+    "source_name": "Booksy"
+  },
+  {
+    "name": "Juan Diego Barber",
+    "category": "barber",
+    "workplace_name": "Juan Diego Barber",
+    "city": "Aurora",
+    "state": "CO",
+    "address": "13130 E Mississippi Ave",
+    "zip": "80012",
+    "booking_url": "https://booksy.com/en-us/s/barber-shop/134779_aurora?businessesPage=8",
+    "source_url": "https://booksy.com/en-us/s/barber-shop/134779_aurora?businessesPage=8",
+    "source_name": "Booksy"
+  }
+]
