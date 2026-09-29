@@ -150,6 +150,6 @@ module.exports = function (router) {
       return redirect(ctx.res, '/dashboard/pro/onboarding?error=' + encodeURIComponent('Complete your core profile, pricing, services, portfolio, and booking link before finishing setup.'));
     }
     db.prepare('UPDATE pro_profiles SET onboarding_completed = 1 WHERE id = ?').run(profile.id);
-    redirect(ctx.res, '/dashboard/pro?success=' + encodeURIComponent('Profile setup complete.'));
+    redirect(ctx.res, `/dashboard/pro?success=${encodeURIComponent('Your GoBookr profile is ready for customers.')}&setup=complete`);
   });
 };
