@@ -15,6 +15,7 @@ test('zero years experience is valid for professional onboarding', () => {
 
 
 test('missing experience is not silently treated as zero experience', () => {
+  const src = fs.readFileSync(path.join(__dirname, '..', 'routes', 'onboarding.js'), 'utf8');
   assert.match(src, /profile\.years_experience !== null/);
   assert.match(src, /profile\.years_experience !== undefined/);
   assert.match(src, /String\(profile\.years_experience\)\.trim\(\) !== ''/);
