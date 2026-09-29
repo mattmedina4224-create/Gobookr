@@ -107,12 +107,14 @@ module.exports = function (router) {
     const city = queryText(ctx.query.city, 100); const q = queryText(ctx.query.q, 100); const requestedType = queryText(ctx.query.type, 20); const resultType = RESULT_TYPES.has(requestedType) ? requestedType : 'all';
     const radius = parseRadius(ctx.query.radius); const latText = queryText(ctx.query.lat, 30); const lonText = queryText(ctx.query.lon, 30); const lat = Number(latText); const lon = Number(lonText); const hasGps = latText !== '' && lonText !== '' && Number.isFinite(lat) && lat >= -90 && lat <= 90 && Number.isFinite(lon) && lon >= -180 && lon <= 180 && radius !== null;
     const manualCenter = !hasGps && city && radius ? resolveSearchCenter(city) : null;
+    const radiusBounds = hasGps || manualCenter ? require('../lib/geo-search').boundingBox(hasGps ? lat : manualCenter.latitude, hasGps ? lon : manualCenter.longitude, radius) : null;
     const radiusLat = hasGps ? lat : (manualCenter ? manualCenter.latitude : null); const radiusLon = hasGps ? lon : (manualCenter ? manualCenter.longitude : null); const hasRadiusCenter = hasGps || Boolean(manualCenter);
     let sql = 'SELECT * FROM pro_profiles WHERE 1=1'; const args = [];
     if (category) { sql += ' AND EXISTS (SELECT 1 FROM pro_categories pc WHERE pc.pro_id = pro_profiles.id AND pc.category = ?)'; args.push(category); }
     if (city && !hasRadiusCenter) { sql += " AND (city LIKE ? ESCAPE '\\' OR state LIKE ? ESCAPE '\\' OR zip_code LIKE ? ESCAPE '\\')"; const value = likeValue(city); args.push(value, value, value); }
     if (q) { const cleanQ = q.replace(/^@+/, ''); sql += " AND (business_name LIKE ? ESCAPE '\\' OR professional_handle LIKE ? ESCAPE '\\' OR workplace_name LIKE ? ESCAPE '\\')"; const value = likeValue(cleanQ); args.push(value, value, value); }
-    sql += ' ORDER BY id DESC LIMIT 500';
+    if (radiusBounds) { sql += ' AND latitude BETWEEN ? AND ? AND longitude BETWEEN ? AND ?'; args.push(radiusBounds.minLat, radiusBounds.maxLat, radiusBounds.minLon, radiusBounds.maxLon); }
+    sql += ' ORDER BY id DESC LIMIT 200';
     let results = hydratePros(db.prepare(sql).all(...args));
     const radiusResult = await filterByRadius(results, radiusLat, radiusLon, radius);
     results = radiusResult.profiles;
@@ -120,7 +122,8 @@ module.exports = function (router) {
     let businessSql = 'SELECT * FROM shops WHERE 1=1'; const businessArgs = [];
     if (city && !hasRadiusCenter) { businessSql += " AND (city LIKE ? OR state LIKE ? OR zip_code LIKE ?)"; const value = likeValue(city); businessArgs.push(value, value, value); }
     if (q) { businessSql += " AND name LIKE ?"; businessArgs.push(likeValue(q)); }
-    businessSql += ' ORDER BY id DESC LIMIT 200';
+    if (radiusBounds) { businessSql += ' AND latitude BETWEEN ? AND ? AND longitude BETWEEN ? AND ?'; businessArgs.push(radiusBounds.minLat, radiusBounds.maxLat, radiusBounds.minLon, radiusBounds.maxLon); }
+    businessSql += ' ORDER BY id DESC LIMIT 100';
     let businesses = [];
     try { businesses = db.prepare(businessSql).all(...businessArgs); } catch (err) { console.error('Business search unavailable', err); }
     if (hasRadiusCenter && businesses.length) { const businessRadiusResult = await filterBusinessesByRadius(businesses, radiusLat, radiusLon, radius); businesses = businessRadiusResult.businesses; }
