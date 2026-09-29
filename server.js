@@ -95,6 +95,8 @@ function parseMultipart(rawBuffer, contentType) {
 }
 
 const server = http.createServer(async (req, res) => {
+  if (req.method === 'GET' && req.url === '/robots.txt') { res.writeHead(200, {'Content-Type':'text/plain; charset=utf-8'}); res.end('User-agent: *\\nAllow: /\\nDisallow: /dashboard/\\nDisallow: /admin\\nDisallow: /login\\nDisallow: /signup\\nSitemap: https://gobookr.com/sitemap.xml\\n'); return; }
+  if (req.method === 'GET' && req.url === '/sitemap.xml') { try { const db=require('./db'); const pros=db.prepare("SELECT id FROM pro_profiles ORDER BY id DESC LIMIT 5000").all(); const shops=db.prepare("SELECT id FROM shops ORDER BY id DESC LIMIT 5000").all(); const urls=['https://gobookr.com/',...pros.map(x=>'https://gobookr.com/pro/'+x.id),...shops.map(x=>'https://gobookr.com/shop/'+x.id)]; res.writeHead(200,{'Content-Type':'application/xml; charset=utf-8','Cache-Control':'public, max-age=3600'}); res.end('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+urls.map(u=>'<url><loc>'+u+'</loc></url>').join('')+'</urlset>'); return; } catch(err){ console.error('Sitemap error',err); } }
   try {
     const parsedUrl = new URL(req.url, `http://${req.headers.host || 'localhost'}`); const pathname = decodeURIComponent(parsedUrl.pathname);
     if (req.method === 'GET' && serveStatic(req, res, pathname)) return;
