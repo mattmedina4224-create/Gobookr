@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Hector Beltran",
+    "category": "barber",
+    "workplace_name": "Hexfadez",
+    "city": "Aurora",
+    "state": "CO",
+    "address": "11089 E Mississippi Ave",
+    "zip": "80012",
+    "booking_url": "https://booksy.com/en-us/897846_hexfadez_barber-shop_134779_aurora",
+    "source_url": "https://booksy.com/en-us/897846_hexfadez_barber-shop_134779_aurora",
+    "source_name": "Booksy"
+  },
+  {
+    "name": "Dboycuttinup",
+    "category": "barber",
+    "workplace_name": "Dboycuttinup",
+    "city": "Aurora",
+    "state": "CO",
+    "address": "2323 S Troy St",
+    "zip": "80014",
+    "booking_url": "https://booksy.com/en-us/1737923_dboycuttinup_barber-shop_134779_aurora",
+    "source_url": "https://booksy.com/en-us/1737923_dboycuttinup_barber-shop_134779_aurora",
+    "source_name": "Booksy"
+  },
+  {
+    "name": "SinaloaCuts",
+    "category": "barber",
+    "workplace_name": "SinaloaCuts",
+    "city": "Aurora",
+    "state": "CO",
+    "address": "2323 S Troy St",
+    "zip": "80014",
+    "booking_url": "https://booksy.com/en-us/623375_sinaloacuts_barber-shop_134779_aurora",
+    "source_url": "https://booksy.com/en-us/623375_sinaloacuts_barber-shop_134779_aurora",
+    "source_name": "Booksy"
+  },
+  {
+    "name": "PeezyBlendz",
+    "category": "barber",
+    "workplace_name": "PeezyBlendz",
+    "city": "Denver",
+    "state": "CO",
+    "address": "501 S Fairfax St",
+    "zip": "80246",
+    "booking_url": "https://booksy.com/en-us/1431438_peezyblendz_barber-shop_134761_denver",
+    "source_url": "https://booksy.com/en-us/1431438_peezyblendz_barber-shop_134761_denver",
+    "source_name": "Booksy"
+  },
+  {
+    "name": "EmmxnuelBlendz",
+    "category": "barber",
+    "workplace_name": "EmmxnuelBlendz",
+    "city": "Aurora",
+    "state": "CO",
+    "address": "11089 E Mississippi Ave",
+    "zip": "80012",
+    "booking_url": "https://booksy.com/en-us/s/barber-shop/134779_aurora",
+    "source_url": "https://booksy.com/en-us/s/barber-shop/134779_aurora",
+    "source_name": "Booksy"
+  }
+]
