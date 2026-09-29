@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Sebastian Mancini",
+    "category": "barber",
+    "workplace_name": "The Real Barber",
+    "city": "Fort Collins",
+    "state": "CO",
+    "address": "3491 E Harmony Rd",
+    "zip": "80528",
+    "booking_url": "https://booksy.com/en-us/1695552_the-real-barber_barber-shop_15069_fort-collins",
+    "source_url": "https://booksy.com/en-us/1695552_the-real-barber_barber-shop_15069_fort-collins",
+    "source_name": "Booksy"
+  },
+  {
+    "name": "Christopher Saucedo",
+    "category": "barber",
+    "workplace_name": "Chris The Barber",
+    "city": "Fort Collins",
+    "state": "CO",
+    "address": "4321 Corbett Dr, Suite 106, Unit 13",
+    "zip": "80525",
+    "booking_url": "https://booksy.com/en-us/1662508_chris-the-barber_barber-shop_15069_fort-collins",
+    "source_url": "https://booksy.com/en-us/1662508_chris-the-barber_barber-shop_15069_fort-collins",
+    "source_name": "Booksy"
+  },
+  {
+    "name": "MoisesJ_Haircuts",
+    "category": "barber",
+    "workplace_name": "MoisesJ_Haircuts",
+    "city": "Fort Collins",
+    "state": "CO",
+    "address": "612 W Laurel St",
+    "zip": "80521",
+    "booking_url": "https://booksy.com/en-us/s/barber-shop/15069_fort-collins",
+    "source_url": "https://booksy.com/en-us/s/barber-shop/15069_fort-collins",
+    "source_name": "Booksy"
+  },
+  {
+    "name": "Silly Slicez",
+    "category": "barber",
+    "workplace_name": "Silly Slicez",
+    "city": "Colorado Springs",
+    "state": "CO",
+    "address": "1827 N Circle Dr",
+    "zip": "80917",
+    "booking_url": "https://booksy.com/en-us/s/barber-shop/14977_colorado-springs",
+    "source_url": "https://booksy.com/en-us/s/barber-shop/14977_colorado-springs",
+    "source_name": "Booksy"
+  },
+  {
+    "name": "Sammyfadez",
+    "category": "barber",
+    "workplace_name": "Sammyfadez",
+    "city": "Colorado Springs",
+    "state": "CO",
+    "address": "1827 N Circle Dr",
+    "zip": "80909",
+    "booking_url": "https://booksy.com/en-us/s/barber-shop/14977_colorado-springs",
+    "source_url": "https://booksy.com/en-us/s/barber-shop/14977_colorado-springs",
+    "source_name": "Booksy"
+  },
+  {
+    "name": "Juan the Barber",
+    "category": "barber",
+    "workplace_name": "Juan the Barber",
+    "city": "Lakewood",
+    "state": "CO",
+    "address": "6781 W Mississippi Ave",
+    "zip": "80226",
+    "booking_url": "https://booksy.com/en-us/s/male-haircut/122635_lakewood",
+    "source_url": "https://booksy.com/en-us/s/male-haircut/122635_lakewood",
+    "source_name": "Booksy"
+  },
+  {
+    "name": "Nick Did It",
+    "category": "barber",
+    "workplace_name": "Nick Did It",
+    "city": "Lakewood",
+    "state": "CO",
+    "address": "460 S Reed St",
+    "zip": "80226",
+    "booking_url": "https://booksy.com/en-us/s/male-haircut/122635_lakewood",
+    "source_url": "https://booksy.com/en-us/s/male-haircut/122635_lakewood",
+    "source_name": "Booksy"
+  }
+]
