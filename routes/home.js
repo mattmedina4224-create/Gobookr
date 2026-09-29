@@ -86,8 +86,12 @@ module.exports = function (router) {
   .home-search-mode { display:flex; gap:8px; margin:0 0 14px; padding:4px; width:max-content; max-width:100%; border-radius:999px; background:#f3f5f8; }
   .home-search-mode a { padding:9px 16px; border-radius:999px; color:#596174; font-size:.88rem; font-weight:800; }
   .home-search-mode a.active { background:#14264c; color:#fff; box-shadow:0 3px 10px rgba(20,38,76,.18); }
-    .home-pro-claim-entry { margin:0 4px 14px; padding:11px 14px; border-radius:14px; background:#f6f8fc; color:#4c566b; font-size:.84rem; line-height:1.4; }
+  .home-pro-claim-entry { max-width:850px; margin-top:22px; padding:16px 18px; border:1px solid #e2e7f0; border-radius:18px; background:#f6f8fc; color:#4c566b; font-size:.9rem; line-height:1.4; }
   .home-pro-claim-entry strong { color:#14264c; }
+  .home-claim-form { display:flex; gap:10px; margin-top:12px; }
+  .home-claim-input { flex:1; min-width:0; height:48px; padding:0 15px; border:1px solid #d9e0eb; border-radius:12px; background:#fff; color:#171b26; font:inherit; }
+  .home-claim-input:focus { outline:0; border-color:#9fbae9; box-shadow:0 0 0 3px rgba(78,126,214,.09); }
+  .home-claim-button { min-height:48px; padding:0 20px; border:0; border-radius:12px; background:#14264c; color:#fff; font-weight:800; white-space:nowrap; }
   .home-search-card form {
     display:grid;
     grid-template-columns:1.15fr .9fr .9fr auto;
@@ -272,6 +276,9 @@ module.exports = function (router) {
     .home-hero .lede { font-size:1rem; line-height:1.52; }
 
     .home-search-card { margin-top:26px; padding:10px; border-radius:16px; box-shadow:0 16px 34px -28px rgba(25,40,80,.45); }
+    .home-pro-claim-entry { margin-top:24px; padding:15px; border-radius:16px; }
+    .home-claim-form { display:grid; grid-template-columns:1fr; gap:9px; }
+    .home-claim-input,.home-claim-button { width:100%; }
     .home-search-mode { width:100%; display:grid; grid-template-columns:1fr 1fr; margin-bottom:10px; }
     .home-search-mode a { text-align:center; padding:10px 8px; font-size:.86rem; }
     .home-search-card form { display:grid !important; grid-template-columns:1fr !important; gap:10px !important; }
@@ -308,7 +315,6 @@ module.exports = function (router) {
       <p class="lede">Search local beauty and wellness professionals, see their work, and book with confidence.</p>
 
       <div class="home-search-card" id="find">
-        <div class="home-pro-claim-entry"><strong>Are you a professional?</strong> Find your profile below, then choose <em>Claim profile</em> to take ownership. Your 30-day trial starts after approval.</div>
         <div class="home-search-mode" aria-label="What are you looking for?"><a class="active" href="/#find">Find a professional</a><a href="/search?type=businesses">Find a business</a></div>
         <form method="GET" action="/search">
           <label class="home-field">
@@ -334,6 +340,15 @@ module.exports = function (router) {
         <div class="home-trust-item"><span class="home-trust-icon"><svg viewBox="0 0 24 24" fill="none"><path d="m12 3 7 3v5c0 4.4-2.8 8.2-7 10-4.2-1.8-7-5.6-7-10V6l7-3Z" stroke="currentColor" stroke-width="2"/><path d="m9 12 2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Verified professionals</span></div>
         <div class="home-trust-item"><span class="home-trust-icon"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="5" width="16" height="15" rx="2" stroke="currentColor" stroke-width="2"/><path d="M8 3v4M16 3v4M4 10h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><span>Easy booking</span></div>
         <div class="home-trust-item"><span class="home-trust-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="10" r="2.3" stroke="currentColor" stroke-width="2"/></svg></span><span>Local results</span></div>
+      </div>
+
+      <div class="home-pro-claim-entry">
+        <strong>Are you a professional?</strong> Find your profile, then choose <em>Claim profile</em> to take ownership. Your 30-day trial starts after approval.
+        <form class="home-claim-form" method="GET" action="/search">
+          <input type="hidden" name="type" value="professionals" />
+          <input class="home-claim-input" type="search" name="q" maxlength="100" placeholder="Search your name or business" aria-label="Search your professional profile" />
+          <button class="home-claim-button" type="submit">Find my profile</button>
+        </form>
       </div>
 
       <div class="home-pills">
