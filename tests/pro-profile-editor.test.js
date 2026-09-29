@@ -23,3 +23,10 @@ test('profile pricing explains relationship to service pricing', () => {
   assert.match(src, /quick profile summary/);
   assert.match(src, /individual service prices are managed below/);
 });
+
+
+test('service editor explains customer value and has a useful empty state', () => {
+  assert.match(src, /customers use your services, prices, and timing to decide whether to book/);
+  assert.match(src, /Add your first service/);
+  assert.match(src, /clear service name, price, and duration/);
+});
