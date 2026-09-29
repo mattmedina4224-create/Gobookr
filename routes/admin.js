@@ -177,4 +177,42 @@ module.exports = function (router) {
     redirect(ctx.res,'/admin/outreach');
   });
 
+  router.get('/admin/new-pros', async (ctx) => {
+    if (!requireAdmin(ctx)) return;
+    const allowed = new Set(['not_contacted','contacted','replied','claimed','do_not_contact']);
+    const status = allowed.has(String(ctx.query.status || '')) ? String(ctx.query.status) : '';
+    const q = String(ctx.query.q || '').trim().slice(0, 100);
+    let sql = `SELECT p.id, p.business_name, p.workplace_name, p.city, p.state, p.created_at,
+      p.contact_email, p.contact_phone, p.contact_email_source_url, p.contact_phone_source_url,
+      p.contact_checked_at, p.outreach_status, p.outreach_last_contacted_at, p.claim_status,
+      COALESCE(string_agg(DISTINCT pc.category, ', '), '') AS categories
+      FROM pro_profiles p LEFT JOIN pro_categories pc ON pc.pro_id=p.id
+      WHERE p.user_id IS NULL`;
+    const args = [];
+    if (status) { sql += ' AND p.outreach_status = ?'; args.push(status); }
+    if (q) { sql += ' AND (p.business_name LIKE ? OR p.workplace_name LIKE ? OR p.city LIKE ? OR p.contact_email LIKE ? OR p.contact_phone LIKE ?)'; const like='%'+q.replace(/[\\%_]/g,'\\
+};
+')+'%'; args.push(like,like,like,like,like); }
+    sql += ' GROUP BY p.id ORDER BY p.created_at DESC, p.id DESC LIMIT 1000';
+    let pros=[]; try { pros=db.prepare(sql).all(...args); } catch(err) { console.error('New professional outreach list unavailable',err); }
+    const labels={not_contacted:'Not contacted',contacted:'Contacted',replied:'Replied',claimed:'Claimed',do_not_contact:'Do not contact'};
+    const rows=pros.map(x=>`<tr>
+      <td><a href="/pro/${x.id}"><strong>${escapeHtml(x.business_name)}</strong></a>${x.workplace_name && x.workplace_name!==x.business_name?'<br><span class="muted">'+escapeHtml(x.workplace_name)+'</span>':''}<br><span class="muted">${escapeHtml(x.categories||'')}</span></td>
+      <td>${escapeHtml(x.city||'')}, ${escapeHtml(x.state||'')}<br><span class="muted">${escapeHtml(String(x.created_at||''))}</span></td>
+      <td>${x.contact_email?'<a href="mailto:'+escapeHtml(x.contact_email)+'">'+escapeHtml(x.contact_email)+'</a>':'<span class="muted">No public email found</span>'}${x.contact_email_source_url?'<br><a class="muted" target="_blank" rel="noopener noreferrer" href="'+escapeHtml(x.contact_email_source_url)+'">Email source</a>':''}</td>
+      <td>${x.contact_phone?'<a href="tel:'+escapeHtml(x.contact_phone)+'">'+escapeHtml(x.contact_phone)+'</a>':'<span class="muted">No public phone found</span>'}${x.contact_phone_source_url?'<br><a class="muted" target="_blank" rel="noopener noreferrer" href="'+escapeHtml(x.contact_phone_source_url)+'">Phone source</a>':''}</td>
+      <td><form method="POST" action="/admin/new-pros/${x.id}/status" style="display:flex;gap:6px;align-items:center"><input type="hidden" name="_csrf" value="${escapeHtml(ctx.session.csrf_token)}"><select name="status">${Object.entries(labels).map(([v,l])=>'<option value="'+v+'"'+(x.outreach_status===v?' selected':'')+'>'+l+'</option>').join('')}</select><button class="btn small" type="submit">Save</button></form></td>
+    </tr>`).join('');
+    const body=`<section class="section container"><h1>New Pros</h1><p class="muted">New unclaimed professionals and publicly listed business contact information. Email and phone are only shown when a public source provides them.</p><form method="GET" action="/admin/new-pros" style="display:flex;gap:8px;max-width:620px;margin:18px 0"><input name="q" value="${escapeHtml(q)}" placeholder="Search name, city, email, or phone"><button class="btn small">Search</button></form>${rows?`<div style="overflow-x:auto"><table><thead><tr><th>Professional</th><th>Location / Added</th><th>Public email</th><th>Public phone</th><th>Outreach</th></tr></thead><tbody>${rows}</tbody></table></div>`:'<div class="panel"><p class="muted" style="margin:0;">No professionals match this filter.</p></div>'}</section>`;
+    send(ctx.res,layout({title:'New Pros',currentUser:ctx.currentUser,session:ctx.session,body}));
+  });
+
+  router.post('/admin/new-pros/:id/status', async (ctx) => {
+    if (!requireAdmin(ctx)) return;
+    const id=Number(ctx.params.id); const status=String(ctx.body.status||'');
+    const allowed=new Set(['not_contacted','contacted','replied','claimed','do_not_contact']);
+    if(Number.isInteger(id)&&id>0&&allowed.has(status)) db.prepare(`UPDATE pro_profiles SET outreach_status=?, outreach_last_contacted_at=CASE WHEN ?='contacted' THEN CURRENT_TIMESTAMP ELSE outreach_last_contacted_at END WHERE id=?`).run(status,status,id);
+    redirect(ctx.res,'/admin/new-pros');
+  });
+
 };
