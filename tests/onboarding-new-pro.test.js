@@ -12,3 +12,10 @@ test('zero years experience is valid for professional onboarding', () => {
   assert.match(src, /profile\.price_min > 0 \|\| profile\.price_max > 0/);
   assert.match(src, /const requiredSteps = \[basicsDone, detailsDone, servicesDone, photosDone, bookingDone\]/);
 });
+
+
+test('missing experience is not silently treated as zero experience', () => {
+  assert.match(src, /profile\.years_experience !== null/);
+  assert.match(src, /profile\.years_experience !== undefined/);
+  assert.match(src, /String\(profile\.years_experience\)\.trim\(\) !== ''/);
+});
