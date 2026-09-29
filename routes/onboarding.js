@@ -48,9 +48,10 @@ function onboardingState(profile) {
   const gpsDone = Number.isFinite(Number(profile.latitude)) && Number.isFinite(Number(profile.longitude));
   const bookingDone = Boolean(profile.booking_url);
   const socialDone = Boolean(profile.instagram_url || profile.tiktok_url || profile.facebook_url || profile.website_url);
-  const requiredDone = basicsDone && detailsDone && servicesDone && photosDone && bookingDone;
-  const doneCount = [basicsDone, detailsDone, servicesDone, photosDone, licenseDone, gpsDone, bookingDone, socialDone].filter(Boolean).length;
-  return { basicsDone, detailsDone, servicesDone, photosDone, licenseDone, gpsDone, bookingDone, socialDone, requiredDone, progress: Math.round((doneCount / 8) * 100) };
+  const requiredSteps = [basicsDone, detailsDone, servicesDone, photosDone, bookingDone];
+  const requiredDone = requiredSteps.every(Boolean);
+  const coreDoneCount = requiredSteps.filter(Boolean).length;
+  return { basicsDone, detailsDone, servicesDone, photosDone, licenseDone, gpsDone, bookingDone, socialDone, requiredDone, progress: Math.round((coreDoneCount / requiredSteps.length) * 100) };
 }
 
 function stepRow(done, title, detail, href, action) {
@@ -90,6 +91,7 @@ module.exports = function (router) {
 
         <div class="panel">
           <h3>Profile checklist</h3>
+          <p class="muted">Complete the five core steps to get your profile ready for customers. License, GPS, and social links are optional enhancements.</p>
           ${stepRow(basicsDone, 'Business basics', 'Business name, workplace address, city and state.', '/dashboard/pro/profile', basicsDone ? 'Edit' : 'Complete')}
           ${stepRow(detailsDone, 'About & pricing', 'Add your bio, experience and typical pricing.', '/dashboard/pro/profile', detailsDone ? 'Edit' : 'Add details')}
           ${stepRow(servicesDone, 'Services', 'List at least one service customers can book.', '/dashboard/pro/profile', servicesDone ? 'Edit' : 'Add service')}
