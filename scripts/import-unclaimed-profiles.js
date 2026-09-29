@@ -34,6 +34,7 @@ const allowedLegacy = new Set(['barber', 'stylist', 'colorist']);
 const supportedCategories = new Set([
   'barber', 'stylist', 'colorist', 'nail_technician', 'eyelash_technician',
   'eyebrow_technician', 'waxing_specialist', 'tattoo_artist', 'massage_therapist',
+  'makeup_artist', 'wedding_services',
 ]);
 const approvedHosts = [
   'booksy.com', 'glossgenius.com', 'square.site', 'squareup.com', 'vagaro.com',
