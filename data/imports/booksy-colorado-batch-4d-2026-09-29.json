@@ -1,0 +1,62 @@
+[
+  {
+    "name": "TrueBlendz",
+    "category": "barber",
+    "workplace_name": "TrueBlendz",
+    "city": "Aurora",
+    "state": "CO",
+    "address": "2323 S Troy St Suite 1 Room 314",
+    "zip": "80014",
+    "booking_url": "https://booksy.com/en-us/s/barber-shop/134779_aurora?businessesPage=7",
+    "source_url": "https://booksy.com/en-us/s/barber-shop/134779_aurora?businessesPage=7",
+    "source_name": "Booksy"
+  },
+  {
+    "name": "Tsunami cutz",
+    "category": "barber",
+    "workplace_name": "Tsunami cutz",
+    "city": "Denver",
+    "state": "CO",
+    "address": "907 E Colfax Ave",
+    "zip": "80218",
+    "booking_url": "https://booksy.com/en-us/s/barber-shop/134761_denver",
+    "source_url": "https://booksy.com/en-us/s/barber-shop/134761_denver",
+    "source_name": "Booksy"
+  },
+  {
+    "name": "Khalid Cuts",
+    "category": "barber",
+    "workplace_name": "Khalid Cuts",
+    "city": "Aurora",
+    "state": "CO",
+    "address": "11089 E Mississippi Ave",
+    "zip": "80012",
+    "booking_url": "https://booksy.com/en-us/s/barber-shop/134779_aurora",
+    "source_url": "https://booksy.com/en-us/s/barber-shop/134779_aurora",
+    "source_name": "Booksy"
+  },
+  {
+    "name": "SteezyBlendz",
+    "category": "barber",
+    "workplace_name": "SteezyBlendz",
+    "city": "Aurora",
+    "state": "CO",
+    "address": "11089 E Mississippi Ave",
+    "zip": "80012",
+    "booking_url": "https://booksy.com/en-us/s/barber-shop/134779_aurora",
+    "source_url": "https://booksy.com/en-us/s/barber-shop/134779_aurora",
+    "source_name": "Booksy"
+  },
+  {
+    "name": "Vinnyz_cutz",
+    "category": "barber",
+    "workplace_name": "Vinnyz_cutz",
+    "city": "Aurora",
+    "state": "CO",
+    "address": "11089 E Mississippi Ave",
+    "zip": "80012",
+    "booking_url": "https://booksy.com/en-us/s/barber-shop/134779_aurora",
+    "source_url": "https://booksy.com/en-us/s/barber-shop/134779_aurora",
+    "source_name": "Booksy"
+  }
+]
