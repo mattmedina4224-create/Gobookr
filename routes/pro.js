@@ -201,23 +201,6 @@ module.exports = function (router) {
     send(ctx.res, layout({ title: 'Pro dashboard', currentUser: ctx.currentUser, session: ctx.session, flash: flashFromQuery(ctx.query), body }));
   });
 
-  router.get('/dashboard/pro/onboarding', async (ctx) => {
-    const profile = requirePro(ctx); if (!profile) return;
-    const services = db.prepare('SELECT id FROM services WHERE pro_id = ? LIMIT 1').get(profile.id);
-    const portfolio = db.prepare('SELECT id FROM portfolio_items WHERE pro_id = ? LIMIT 1').get(profile.id);
-    const steps = [
-      { done: Boolean(profile.business_name && profile.workplace_name && profile.city && profile.state), title: 'Confirm your profile', text: 'Make sure your name, workplace, location and bio are accurate.', href: '/dashboard/pro/profile', cta: 'Edit profile' },
-      { done: Boolean(profile.booking_url), title: 'Connect online booking', text: 'Send customers directly to the scheduling system you already use.', href: '/dashboard/pro/profile', cta: 'Add booking link' },
-      { done: Boolean(services), title: 'Add your services', text: 'Show customers what you offer before they click to book.', href: '/dashboard/pro/profile', cta: 'Add services' },
-      { done: Boolean(portfolio), title: 'Add your work', text: 'Upload at least one photo so customers can see your style.', href: '/dashboard/pro/portfolio', cta: 'Add portfolio photo' },
-    ];
-    const complete = steps.filter((s) => s.done).length;
-    const percent = Math.round((complete / steps.length) * 100);
-    const cards = steps.map((s) => `<div class="panel" style="display:flex;align-items:flex-start;justify-content:space-between;gap:18px;"><div><h3 style="margin-bottom:6px;">${s.done ? '✓ ' : ''}${escapeHtml(s.title)}</h3><p class="muted" style="margin:0;">${escapeHtml(s.text)}</p></div><a class="btn ${s.done ? 'ghost' : 'secondary'} small" href="${s.href}">${s.done ? 'Review' : escapeHtml(s.cta)}</a></div>`).join('');
-    const body = `<section class="section container"><div class="dash-layout">${dashNav('onboarding')}<div><p class="muted" style="margin-bottom:6px;">PROFESSIONAL SETUP</p><h1>Get ready to be discovered</h1><p class="muted">Complete these basics so your GoBookr profile can turn searches into booking clicks.</p><div class="panel"><div style="display:flex;justify-content:space-between;gap:16px;align-items:center;"><div><strong>${complete} of ${steps.length} complete</strong><div class="muted">${percent}% profile setup</div></div><div style="font-size:1.8rem;font-weight:800;">${percent}%</div></div><div style="height:10px;background:#eef1f5;border-radius:999px;overflow:hidden;margin-top:14px;"><div style="height:100%;width:${percent}%;background:#14264c;"></div></div></div>${cards}${complete === steps.length ? '<div class="panel"><h3>You’re ready.</h3><p>Your core profile is set up. Next we’ll help you market it and measure the customers GoBookr sends you.</p></div>' : ''}</div></div></section>`;
-    send(ctx.res, layout({ title: 'Professional setup', currentUser: ctx.currentUser, session: ctx.session, flash: flashFromQuery(ctx.query), body }));
-  });
-
   router.post('/dashboard/pro/marketing/campaigns', async (ctx) => {
     const profile = requirePro(ctx); if (!profile) return;
     const allowed = new Set(['openings-today','last-minute','booking-week','book-with-me','new-service','show-my-work']);
