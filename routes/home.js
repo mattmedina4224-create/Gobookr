@@ -93,6 +93,9 @@ module.exports = function (router) {
   .home-claim-input { flex:1; min-width:0; height:48px; padding:0 15px; border:1px solid #d9e0eb; border-radius:12px; background:#fff; color:#171b26; font:inherit; }
   .home-claim-input:focus { outline:0; border-color:#9fbae9; box-shadow:0 0 0 3px rgba(78,126,214,.09); }
   .home-claim-button { min-height:48px; padding:0 20px; border:0; border-radius:12px; background:#14264c; color:#fff; font-weight:800; white-space:nowrap; }
+  .home-pro-entry-actions { display:flex; align-items:center; gap:12px; margin-top:12px; flex-wrap:wrap; }
+  .home-create-profile { display:inline-flex; min-height:46px; align-items:center; justify-content:center; padding:0 18px; border:1px solid #b9c8e1; border-radius:12px; background:#fff; color:#14264c; font-weight:800; }
+  .home-create-profile:hover { background:#eef4ff; }
   .home-search-card form {
     display:grid;
     grid-template-columns:1.15fr .9fr .9fr auto;
@@ -280,6 +283,8 @@ module.exports = function (router) {
     .home-pro-claim-entry { margin-top:24px; padding:15px; border-radius:16px; }
     .home-claim-form { display:grid; grid-template-columns:1fr; gap:9px; }
     .home-claim-input,.home-claim-button { width:100%; }
+    .home-pro-entry-actions { display:grid; grid-template-columns:1fr; }
+    .home-create-profile { width:100%; }
     .home-search-mode { width:100%; display:grid; grid-template-columns:1fr 1fr; margin-bottom:10px; }
     .home-search-mode a { text-align:center; padding:10px 8px; font-size:.86rem; }
     .home-search-card form { display:grid !important; grid-template-columns:1fr !important; gap:10px !important; }
@@ -344,12 +349,16 @@ module.exports = function (router) {
       </div>
 
       <div class="home-pro-claim-entry">
-        <strong>Are you a professional?</strong> Find your profile, then choose <em>Claim profile</em> to take ownership. Your 30-day trial starts after approval.
+        <strong>Are you a professional?</strong> Already listed? Find and claim your profile. Not on GoBookr yet? Create a new profile from scratch.
         <form class="home-claim-form" method="GET" action="/search">
           <input type="hidden" name="type" value="professionals" />
           <input class="home-claim-input" type="search" name="q" maxlength="100" placeholder="Search your name or business" aria-label="Search your professional profile" />
-          <button class="home-claim-button" type="submit">Find my profile</button>
+          <button class="home-claim-button" type="submit">Find &amp; claim my profile</button>
         </form>
+        <div class="home-pro-entry-actions">
+          <a class="home-create-profile" href="/signup?role=pro">Create a new profile — 30 days free</a>
+          <span class="muted">$20/month after your free trial. Cancel anytime.</span>
+        </div>
       </div>
 
       <div class="home-pills">
