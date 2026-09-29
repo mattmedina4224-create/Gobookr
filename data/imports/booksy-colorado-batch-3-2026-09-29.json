@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Ron Koch",
+    "category": "barber",
+    "workplace_name": "The Foundry Barbers",
+    "city": "Fort Collins",
+    "state": "CO",
+    "address": "3491 E Harmony Rd., Suite 119",
+    "zip": "80524",
+    "booking_url": "https://booksy.com/en-us/403327_the-foundry-barbers_barber-shop_15069_fort-collins",
+    "source_url": "https://booksy.com/en-us/403327_the-foundry-barbers_barber-shop_15069_fort-collins",
+    "source_name": "Booksy"
+  },
+  {
+    "name": "Corbin Lee",
+    "category": "barber",
+    "workplace_name": "The Foundry Barbers",
+    "city": "Fort Collins",
+    "state": "CO",
+    "address": "3491 E Harmony Rd., Suite 119",
+    "zip": "80524",
+    "booking_url": "https://booksy.com/en-us/403327_the-foundry-barbers_barber-shop_15069_fort-collins",
+    "source_url": "https://booksy.com/en-us/403327_the-foundry-barbers_barber-shop_15069_fort-collins",
+    "source_name": "Booksy"
+  },
+  {
+    "name": "Lito_cutzz",
+    "category": "barber",
+    "workplace_name": "Lito_cutzz",
+    "city": "Fort Collins",
+    "state": "CO",
+    "address": "Pinto Ln, 235",
+    "zip": "80526",
+    "booking_url": "https://booksy.com/en-us/s/barber-shop/15069_fort-collins",
+    "source_url": "https://booksy.com/en-us/s/barber-shop/15069_fort-collins",
+    "source_name": "Booksy"
+  },
+  {
+    "name": "Redwine’sHairDesign",
+    "category": "stylist",
+    "workplace_name": "Winning Coiffures",
+    "city": "Denver",
+    "state": "CO",
+    "address": "6115 E Colfax Ave",
+    "zip": "80220",
+    "booking_url": "https://booksy.com/en-us/s/hair-salon/134761_denver",
+    "source_url": "https://booksy.com/en-us/s/hair-salon/134761_denver",
+    "source_name": "Booksy"
+  },
+  {
+    "name": "Kimyatta’s Living Phearless",
+    "category": "stylist",
+    "workplace_name": "Winning Coiffures",
+    "city": "Denver",
+    "state": "CO",
+    "address": "6115 Colfax Ave",
+    "zip": "80220",
+    "booking_url": "https://booksy.com/en-us/s/hair-salon/134761_denver",
+    "source_url": "https://booksy.com/en-us/s/hair-salon/134761_denver",
+    "source_name": "Booksy"
+  },
+  {
+    "name": "Stylez By J’Nice",
+    "category": "stylist",
+    "workplace_name": "Stylez By J’Nice",
+    "city": "Aurora",
+    "state": "CO",
+    "address": "13132 E Mississippi",
+    "zip": "80012",
+    "booking_url": "https://booksy.com/en-us/s/hair-salon/134779_aurora",
+    "source_url": "https://booksy.com/en-us/s/hair-salon/134779_aurora",
+    "source_name": "Booksy"
+  },
+  {
+    "name": "SADITTY SALONZ",
+    "category": "stylist",
+    "workplace_name": "SADITTY SALONZ",
+    "city": "Aurora",
+    "state": "CO",
+    "address": "2295 S Chambers Rd",
+    "zip": "80014",
+    "booking_url": "https://booksy.com/en-us/s/hair-salon/134779_aurora",
+    "source_url": "https://booksy.com/en-us/s/hair-salon/134779_aurora",
+    "source_name": "Booksy"
+  }
+]
