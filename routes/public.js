@@ -102,6 +102,17 @@ module.exports = function (router) {
     send(ctx.res, layout({ title: 'Find trusted local pros', currentUser: ctx.currentUser, session: ctx.session, flash: flashFromQuery(ctx.query), body }));
   });
 
+  router.get('/discover/:city/:category', async (ctx) => {
+    const citySlug = queryText(ctx.params.city, 80).toLowerCase(); const category = queryText(ctx.params.category, 40);
+    if (!CATEGORY_VALUES.has(category) || !category) return send(ctx.res, '<h1>404 — page not found</h1>', 404);
+    const cityName = citySlug.split('-').filter(Boolean).map((part)=>part.charAt(0).toUpperCase()+part.slice(1)).join(' ');
+    if (!cityName) return send(ctx.res, '<h1>404 — page not found</h1>', 404);
+    const rows = db.prepare("SELECT * FROM pro_profiles WHERE LOWER(city) = LOWER(?) AND EXISTS (SELECT 1 FROM pro_categories pc WHERE pc.pro_id = pro_profiles.id AND pc.category = ?) ORDER BY id DESC LIMIT 100").all(cityName, category);
+    const results = hydratePros(rows); const savedIds = favoriteIds(ctx, results); const categoryLabel = slugCategory(category); const canonical = 'https://gobookr.com/discover/' + encodeURIComponent(citySlug) + '/' + encodeURIComponent(category);
+    const body = `<section class="section container search-results-page"><div class="results-toolbar"><div><a class="back-search" href="/search">‹ Browse all</a><h1>${escapeHtml(categoryLabel)} in ${escapeHtml(cityName)}</h1><p>Compare local professionals, portfolios, reviews, services, and booking options.</p></div></div><div class="pro-grid">${results.map(pro=>proCard(pro,ctx,savedIds)).join('') || '<div class="empty-state"><h3>More professionals coming soon</h3><p>GoBookr is growing local inventory in this area.</p></div>'}</div></section>`;
+    send(ctx.res, layout({ title:`${categoryLabel} in ${cityName}`, description:`Find ${categoryLabel.toLowerCase()} in ${cityName}. Compare local professionals, portfolios, reviews, services, and booking options on GoBookr.`, canonical, robots:results.length ? 'index,follow' : 'noindex,follow', currentUser:ctx.currentUser, session:ctx.session, body }));
+  });
+
   router.get('/search', async (ctx) => {
     const requestedCategory = queryText(ctx.query.category, 40); const category = CATEGORY_VALUES.has(requestedCategory) ? requestedCategory : '';
     const city = queryText(ctx.query.city, 100); const q = queryText(ctx.query.q, 100); const requestedType = queryText(ctx.query.type, 20); const resultType = RESULT_TYPES.has(requestedType) ? requestedType : 'all';
