@@ -19,8 +19,10 @@ test('makeup and weddings are customer-searchable categories', () => {
 
 test('new professionals can select makeup and weddings alongside their main profession', () => {
   const src = read('routes/auth.js');
-  assert.match(src, /value: 'makeup_artist', label: 'Makeup Artist'/);
-  assert.match(src, /value: 'wedding_services', label: 'Weddings'/);
+  const catalog = require('../lib/pro-categories');
+  assert.ok(catalog.PROFESSIONAL_CATEGORY_VALUES.has('makeup_artist'));
+  assert.ok(catalog.PROFESSIONAL_CATEGORY_VALUES.has('wedding_services'));
+  assert.match(src, /PROFESSIONAL_CATEGORIES: PRO_CATEGORIES/);
   assert.match(src, /Hairstylist \+ Makeup Artist \+ Weddings/);
   assert.match(src, /for \(const category of categories\) addCategory\.run\(proId, category\)/);
 });
