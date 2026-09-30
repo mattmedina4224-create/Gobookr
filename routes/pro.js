@@ -560,7 +560,7 @@ module.exports = function (router) {
     const allowedTypes = new Map([['image/jpeg', '.jpg'], ['image/png', '.png'], ['image/webp', '.webp'], ['image/gif', '.gif'], ['image/heic', '.heic'], ['image/heif', '.heif']]);
     const ext = allowedTypes.get(String(image.contentType || '').toLowerCase());
     if (!ext || !imageLooksValid(image.data, String(image.contentType || '').toLowerCase())) return redirect(ctx.res, '/dashboard/pro/portfolio?error=' + encodeURIComponent('That file does not appear to be a supported image.'));
-    if (image.data.length > 10 * 1024 * 1024) return redirect(ctx.res, '/dashboard/pro/portfolio?error=' + encodeURIComponent('Photo must be 10 MB or smaller.'));
+    if (image.data.length > 3 * 1024 * 1024) return redirect(ctx.res, '/dashboard/pro/portfolio?error=' + encodeURIComponent('Photo must be 3 MB or smaller.'));
 
     const filename = `${Date.now()}-${crypto.randomBytes(6).toString('hex')}${ext}`;
     const accents = ['violet', 'gold', 'teal', 'rose', 'slate'];
