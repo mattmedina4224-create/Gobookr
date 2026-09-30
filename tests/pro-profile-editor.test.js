@@ -55,3 +55,11 @@ test('global request body ceiling leaves room for encoded 3 MB portfolio photos'
   assert.match(server, /size > 5 \* 1024 \* 1024/);
   assert.doesNotMatch(server, /size > 16 \* 1024 \* 1024/);
 });
+
+
+test('portfolio uploader announces selection, progress, and errors accessibly', () => {
+  const layout = fs.readFileSync(path.join(__dirname, '..', 'lib', 'layout.js'), 'utf8');
+  assert.match(layout, /portfolio-upload-status/);
+  assert.match(layout, /aria-live', 'polite'/);
+  assert.match(layout, /error\.setAttribute\('role', 'alert'\)/);
+});
