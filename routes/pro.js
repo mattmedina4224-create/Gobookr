@@ -220,7 +220,8 @@ module.exports = function (router) {
     const scheduledFor = clampText(ctx.body.scheduled_for, 40);
     const timezoneOffset = Number(ctx.body.timezone_offset);
     const photoId = Number(ctx.body.photo);
-    const availableSlots = String(ctx.body.available_slots || '').split(/\r?\n|,/).map((slot) => clampText(slot.trim(), 80)).filter(Boolean).slice(0, 8);\n    const publishNow = ctx.body.publish_now === '1' && ['openings-today','last-minute'].includes(campaignType);
+    const availableSlots = String(ctx.body.available_slots || '').split(/\r?\n|,/).map((slot) => clampText(slot.trim(), 80)).filter(Boolean).slice(0, 8);
+    const publishNow = ctx.body.publish_now === '1' && ['openings-today','last-minute'].includes(campaignType);
     if (!allowed.has(campaignType) || !copy) return redirect(ctx.res, '/dashboard/pro/marketing?error=' + encodeURIComponent('Choose a campaign and add your message.'));
     let portfolioItemId = null;
     if (Number.isInteger(photoId) && photoId > 0) {
