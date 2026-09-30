@@ -181,3 +181,9 @@ test('local discovery pages give useful result and empty-state context', () => {
   assert.match(src, /local \$\{results\.length === 1 \? 'professional' : 'professionals'\}/);
   assert.match(src, /Browse \$\{escapeHtml\(cityName\)\}/);
 });
+
+
+test('local discovery routes reject malformed city slugs before querying', () => {
+  const src = read('routes/public.js');
+  assert.match(src, /!\/\^\[a-z0-9-\]\+\$\/\.test\(citySlug\)/);
+});
