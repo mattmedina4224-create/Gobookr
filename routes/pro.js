@@ -248,6 +248,7 @@ module.exports = function (router) {
       }
       if (publishNow && isScheduled) return redirect(ctx.res, '/dashboard/pro/marketing?campaign=' + encodeURIComponent(campaignType) + '&error=' + encodeURIComponent('Publish now or schedule for later, not both.'));
       if (publishNow && !availableSlots.length) return redirect(ctx.res, '/dashboard/pro/marketing?campaign=' + encodeURIComponent(campaignType) + '&error=' + encodeURIComponent('Add at least one real open appointment time before publishing.'));
+      if (publishNow) db.prepare("UPDATE marketing_campaigns SET status = 'closed' WHERE pro_id = ? AND status = 'published' AND campaign_type IN ('openings-today','last-minute')").run(profile.id);
       const campaignStatus = publishNow ? 'published' : (isScheduled ? 'scheduled' : 'draft');
       db.prepare('INSERT INTO marketing_campaigns (pro_id, campaign_type, copy, portfolio_item_id, source, scheduled_for, status, story_style, available_slots) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?::jsonb)').run(profile.id, campaignType, copy, portfolioItemId, source, scheduledAt, campaignStatus, storyStyle, JSON.stringify(availableSlots));
       const successMessage = publishNow ? 'Your openings are live on GoBookr for today.' : 'Campaign saved.';
@@ -266,6 +267,7 @@ module.exports = function (router) {
       const campaign = db.prepare("SELECT id, available_slots FROM marketing_campaigns WHERE id = ? AND pro_id = ? AND campaign_type IN ('openings-today','last-minute')").get(campaignId, profile.id);
       const slots = campaign && Array.isArray(campaign.available_slots) ? campaign.available_slots.filter(Boolean) : [];
       if (!campaign || !slots.length) return redirect(ctx.res, '/dashboard/pro/marketing?error=' + encodeURIComponent('Add at least one real open appointment time before publishing.'));
+      db.prepare("UPDATE marketing_campaigns SET status = 'closed' WHERE pro_id = ? AND id != ? AND status = 'published' AND campaign_type IN ('openings-today','last-minute')").run(profile.id, campaignId);
       db.prepare("UPDATE marketing_campaigns SET status = 'published' WHERE id = ? AND pro_id = ?").run(campaignId, profile.id);
       return redirect(ctx.res, '/dashboard/pro/marketing?success=' + encodeURIComponent('Your openings are live on GoBookr for today.'));
     } catch (err) {
