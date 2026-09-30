@@ -30,3 +30,10 @@ test('Marketing Center summarizes live and scheduled work before the editor', ()
   assert.match(source, /live opening post/);
   assert.match(source, />See results</);
 });
+
+
+test('scheduled campaign save gives a distinct confirmation', () => {
+  const source = fs.readFileSync(path.join(__dirname, '..', 'routes', 'pro.js'), 'utf8');
+  assert.match(source, /isScheduled \? 'Campaign scheduled\.'/);
+  assert.match(source, /nextQuery\.set\('queue', 'scheduled'\)/);
+});
