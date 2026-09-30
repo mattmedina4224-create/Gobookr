@@ -334,7 +334,7 @@ module.exports = function (router) {
         </form>
       </div>
 
-      <p class="home-search-hint">Search by service and location. Add a name only if you already know who you want.</p>\n      <div class="home-trust-row" aria-label="Why use GoBookr">
+      <p class="home-search-hint">Search by service and location. Add a name only if you already know who you want.</p><a class="home-openings-cta" href="/openings"><strong>Need something today?</strong><span>See appointments professionals just opened up →</span></a>\n      <div class="home-trust-row" aria-label="Why use GoBookr">
         <div class="home-trust-item"><span class="home-trust-icon"><svg viewBox="0 0 24 24" fill="none"><path d="m12 3 7 3v5c0 4.4-2.8 8.2-7 10-4.2-1.8-7-5.6-7-10V6l7-3Z" stroke="currentColor" stroke-width="2"/><path d="m9 12 2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Verified professionals</span></div>
         <div class="home-trust-item"><span class="home-trust-icon"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="5" width="16" height="15" rx="2" stroke="currentColor" stroke-width="2"/><path d="M8 3v4M16 3v4M4 10h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><span>Easy booking</span></div>
         <div class="home-trust-item"><span class="home-trust-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="10" r="2.3" stroke="currentColor" stroke-width="2"/></svg></span><span>Local results</span></div>
@@ -391,7 +391,7 @@ module.exports = function (router) {
 
       const menu = document.createElement('div');
       menu.className = 'home-mobile-menu';
-      menu.innerHTML = '<a href="/#find">Find a pro</a><a href="/search?type=businesses">Find a business</a><a href="/business-account">For Businesses</a><a href="/login">Sign in</a><a href="/signup">Sign up</a>';
+      menu.innerHTML = '<a href="/#find">Find a pro</a><a href="/openings">Openings Today</a><a href="/search?type=businesses">Find a business</a><a href="/business-account">For Businesses</a><a href="/login">Sign in</a><a href="/signup">Sign up</a>';
       document.querySelector('.site-header').appendChild(menu);
 
       button.addEventListener('click', () => {
