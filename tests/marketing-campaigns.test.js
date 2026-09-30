@@ -61,3 +61,12 @@ test('marketing share actions provide accessible inline feedback', () => {
   assert.match(source, /setShareStatus\('Story image saved\.'\)/);
   assert.match(source, /setShareStatus\('Tracked link copied\.'\)/);
 });
+
+
+test('marketing sharing falls back when Clipboard API is unavailable', () => {
+  const source = fs.readFileSync(path.join(__dirname, '..', 'routes', 'pro.js'), 'utf8');
+  assert.match(source, /const copyText=async\(text\)=>/);
+  assert.match(source, /document\.execCommand\('copy'\)/);
+  assert.match(source, /copyText\(url\)/);
+  assert.match(source, /Post copy and link copied\./);
+});
