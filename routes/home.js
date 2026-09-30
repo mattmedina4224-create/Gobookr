@@ -6,21 +6,9 @@ const { layout } = require('../lib/layout');
 const { send, flashFromQuery } = require('../lib/http');
 const { escapeHtml, slugCategory, stars } = require('../lib/util');
 const { hydratePros } = require('../lib/pro-listing-data');
+const { PROFESSIONAL_CATEGORIES } = require('../lib/pro-categories');
 
-const CATEGORIES = [
-  { value: '', label: 'All services' },
-  { value: 'barber', label: 'Barbers' },
-  { value: 'stylist', label: 'Hairstylists' },
-  { value: 'colorist', label: 'Colorists' },
-  { value: 'nail_technician', label: 'Nail Technicians' },
-  { value: 'eyelash_technician', label: 'Eyelash Technicians' },
-  { value: 'eyebrow_technician', label: 'Eyebrow Technicians' },
-  { value: 'waxing_specialist', label: 'Waxing Specialists' },
-  { value: 'tattoo_artist', label: 'Tattoo Artists' },
-  { value: 'makeup_artist', label: 'Makeup Artists' },
-  { value: 'wedding_services', label: 'Weddings' },
-  { value: 'massage_therapist', label: 'Massage Therapists' },
-];
+const CATEGORIES = [{ value: '', label: 'All services' }, ...PROFESSIONAL_CATEGORIES.map((item) => ({ value: item.value, label: item.plural }))];
 
 function homeCard(pro, ctx, savedIds) {
   const photo = pro.coverPhoto
