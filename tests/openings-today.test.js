@@ -154,3 +154,13 @@ test('analytics measures opening-driven booking intent without claiming complete
   assert.match(src, /Your openings are creating booking intent/);
   assert.match(src, /A booking click shows intent, not a completed appointment/);
 });
+
+
+test('opening analytics reports booking intent and conversion rate', () => {
+  const src = read('routes/pro.js');
+  assert.match(src, /openingTotals = db\.prepare/);
+  assert.match(src, /source IN \('openings-today','profile-opening'\)/);
+  assert.match(src, /Opening view → click/);
+  assert.match(src, /Your openings are creating booking intent/);
+  assert.match(src, /A booking click shows intent, not a completed appointment/);
+});
