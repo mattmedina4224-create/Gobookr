@@ -112,3 +112,11 @@ test('publishing fresh availability replaces stale live opening posts', () => {
   const closePrevious = /UPDATE marketing_campaigns SET status = 'closed' WHERE pro_id = \?[^\n]+campaign_type IN \('openings-today','last-minute'\)/g;
   assert.ok((src.match(closePrevious) || []).length >= 2);
 });
+
+
+test('publishing a fresh opening closes older live opening posts for that pro', () => {
+  const src = read('routes/pro.js');
+  const closeOld = /UPDATE marketing_campaigns SET status = 'closed' WHERE pro_id = \?[^\n]+status = 'published'[^\n]+campaign_type IN \('openings-today','last-minute'\)/g;
+  assert.ok((src.match(closeOld) || []).length >= 2);
+  assert.match(src, /id != \?/);
+});
