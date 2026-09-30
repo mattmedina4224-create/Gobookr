@@ -37,3 +37,10 @@ test('scheduled campaign save gives a distinct confirmation', () => {
   assert.match(source, /isScheduled \? 'Campaign scheduled\.'/);
   assert.match(source, /nextQuery\.set\('queue', 'scheduled'\)/);
 });
+
+
+test('scheduled summary links pros directly to the campaign queue', () => {
+  const source = fs.readFileSync(path.join(__dirname, '..', 'routes', 'pro.js'), 'utf8');
+  assert.match(source, /href="#campaign-queue">View queue/);
+  assert.match(source, /id="campaign-queue"/);
+});
