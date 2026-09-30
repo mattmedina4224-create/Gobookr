@@ -20,3 +20,35 @@ test('Marketing Center saves and reopens the selected Story style', () => {
   assert.match(source, /query\.set\('style', campaign\.story_style\)/);
   assert.match(source, /item\.story_style \? '&style='/);
 });
+
+
+test('Marketing Center summarizes live and scheduled work before the editor', () => {
+  const source = fs.readFileSync(path.join(__dirname, '..', 'routes', 'pro.js'), 'utf8');
+  assert.match(source, /const scheduledCount = savedCampaigns\.filter/);
+  assert.match(source, /const liveOpeningCount = savedCampaigns\.filter/);
+  assert.match(source, /marketingStatusStrip/);
+  assert.match(source, /live opening post/);
+  assert.match(source, />See results</);
+});
+
+
+test('scheduled campaign save gives a distinct confirmation', () => {
+  const source = fs.readFileSync(path.join(__dirname, '..', 'routes', 'pro.js'), 'utf8');
+  assert.match(source, /isScheduled \? 'Campaign scheduled\.'/);
+  assert.match(source, /nextQuery\.set\('queue', 'scheduled'\)/);
+});
+
+
+test('scheduled summary links pros directly to the campaign queue', () => {
+  const source = fs.readFileSync(path.join(__dirname, '..', 'routes', 'pro.js'), 'utf8');
+  assert.match(source, /href="#campaign-queue">View queue/);
+  assert.match(source, /id="campaign-queue"/);
+});
+
+
+test('campaign scheduler prevents past picks and explains queue behavior', () => {
+  const source = fs.readFileSync(path.join(__dirname, '..', 'routes', 'pro.js'), 'utf8');
+  assert.match(source, /scheduledField\.min=/);
+  assert.match(source, /does not auto-post to Instagram/);
+  assert.match(source, /aria-describedby="scheduled-for-help"/);
+});
