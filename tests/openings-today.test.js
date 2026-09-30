@@ -40,3 +40,9 @@ test('homepage gives same-day intent a direct path into openings', () => {
   assert.match(home, /href="\/openings"/);
   assert.match(css, /\.home-openings-cta/);
 });
+
+
+test('Openings Today is part of the public SEO surface', () => {
+  const server = read('server.js');
+  assert.match(server, /https:\/\/gobookr\.com\/openings/);
+});
