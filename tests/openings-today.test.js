@@ -179,3 +179,21 @@ test('live opening controls stay usable on mobile', () => {
   assert.match(css, /\.live-opening-banner>div:last-child/);
   assert.match(css, /\.opening-detail-actions/);
 });
+
+
+test('live opening dashboard control center keeps the main actions together', () => {
+  const src = read('routes/pro.js');
+  assert.match(src, /View customer page/);
+  assert.match(src, /Share Story/);
+  assert.match(src, />Mark filled</);
+  assert.match(src, /\/pro\/\$\{profile\.id\}\/opening/);
+});
+
+test('opening detail pages are shareable and have rich social metadata', () => {
+  const src = read('routes/public.js');
+  assert.match(src, /Share these openings/);
+  assert.match(src, /navigator\.share/);
+  assert.match(src, /navigator\.clipboard\.writeText/);
+  assert.match(src, /canonical: shareUrl/);
+  assert.match(src, /shareImage: pro\.profile_photo_url/);
+});
