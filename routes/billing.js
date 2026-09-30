@@ -140,7 +140,7 @@ module.exports = function (router) {
   router.post('/dashboard/pro/billing/portal', async (ctx) => {
     const profile = requirePro(ctx); if (!profile) return;
     const subscription = db.prepare('SELECT * FROM subscriptions WHERE pro_id = ?').get(profile.id);
-    if (!subscription || !subscription.stripe_customer_id) return redirect(ctx.res, '/dashboard/pro/billing?error=' + encodeURIComponent('No Stripe billing account is connected yet.'));
+    if (!subscription || !subscription.stripe_customer_id || !subscription.stripe_subscription_id) return redirect(ctx.res, '/dashboard/pro/billing?error=' + encodeURIComponent('No confirmed Stripe subscription is connected yet.'));
     try {
       const portal = await createPortalSession(subscription.stripe_customer_id);
       if (!portal || !portal.url) throw new Error('Stripe did not return a portal URL.');
