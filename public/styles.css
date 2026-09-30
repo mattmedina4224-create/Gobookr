@@ -438,3 +438,14 @@ label { display: block; font-size: 0.85rem; font-weight: 600; color: var(--ink-s
   .profile-category-grid label{min-height:48px}
   .profile-category-save{width:100%;min-height:50px}
 }
+
+
+/* Multi-specialty marketplace identity */
+.market-specialties{margin-top:7px;color:#263b63;font-size:.84rem;font-weight:750;line-height:1.35}
+.market-specialty-more{display:inline-block;color:#667085;font-weight:700}
+.home-pro-specialties{margin:0 0 2px!important;color:#263b63;font-size:.84rem!important;font-weight:750;line-height:1.35}
+.home-pro-location{margin:0 0 8px!important;color:#667085!important;font-size:.82rem!important}
+@media(max-width:640px){
+  .market-specialties{font-size:.82rem}
+  .home-pro-specialties{white-space:normal;overflow-wrap:anywhere}
+}
