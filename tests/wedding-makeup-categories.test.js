@@ -48,9 +48,9 @@ test('inventory tooling recognizes the canonical marketplace categories', () => 
 
 
 test('public profile badges use friendly specialty labels', () => {
-  const src = read('lib/util.js');
-  assert.match(src, /makeup_artist: 'Makeup Artist'/);
-  assert.match(src, /wedding_services: 'Weddings'/);
+  const util = require('../lib/util');
+  assert.equal(util.slugCategory('makeup_artist'), 'Makeup Artist');
+  assert.equal(util.slugCategory('wedding_services'), 'Weddings');
 });
 
 
