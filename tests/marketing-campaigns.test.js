@@ -52,3 +52,12 @@ test('campaign scheduler prevents past picks and explains queue behavior', () =>
   assert.match(source, /does not auto-post to Instagram/);
   assert.match(source, /aria-describedby="scheduled-for-help"/);
 });
+
+
+test('marketing share actions provide accessible inline feedback', () => {
+  const source = fs.readFileSync(path.join(__dirname, '..', 'routes', 'pro.js'), 'utf8');
+  assert.match(source, /id="marketing-share-status"/);
+  assert.match(source, /role="status" aria-live="polite"/);
+  assert.match(source, /setShareStatus\('Story image saved\.'\)/);
+  assert.match(source, /setShareStatus\('Tracked link copied\.'\)/);
+});
