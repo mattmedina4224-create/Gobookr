@@ -5,9 +5,8 @@ const { layout } = require('../lib/layout');
 const { send, redirect, flashFromQuery } = require('../lib/http');
 const { escapeHtml, initialsFrom } = require('../lib/util');
 
-const { PROFESSIONAL_CATEGORIES, PROFESSIONAL_CATEGORY_VALUES: CATEGORY_VALUES } = require('../lib/pro-categories');
+const { PROFESSIONAL_CATEGORIES, PROFESSIONAL_CATEGORY_VALUES: CATEGORY_VALUES, LEGACY_PROFILE_CATEGORIES: LEGACY_CATEGORY } = require('../lib/pro-categories');
 const PRO_CATEGORIES = PROFESSIONAL_CATEGORIES.map((item) => [item.value, item.label]);
-const LEGACY_CATEGORY = new Set(['barber', 'stylist', 'colorist']);
 
 module.exports = function (router) {
   router.get('/become-pro', async (ctx) => {
