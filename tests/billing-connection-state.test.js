@@ -30,3 +30,13 @@ test('checkout does not force Cash App or stale promotion-code parameters', () =
   assert.doesNotMatch(src, /cashapp/);
   assert.doesNotMatch(src, /allow_promotion_codes/);
 });
+
+
+test('Stripe status normalization preserves non-public paused and expired-setup states', () => {
+  const src = read('lib/stripe.js');
+  assert.match(src, /'incomplete_expired'/);
+  assert.match(src, /'paused'/);
+  const visibility = read('lib/subscription.js');
+  assert.doesNotMatch(visibility, /subscription\.status === 'paused'\) return true/);
+  assert.doesNotMatch(visibility, /subscription\.status === 'incomplete_expired'\) return true/);
+});
