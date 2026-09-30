@@ -355,7 +355,8 @@ module.exports = function (router) {
     const saves = currentSaves(profile.id);
     let totals = { profile_views: 0, booking_clicks: 0 };
     let recent = [];
-    let marketingTotals = { profile_views: 0, booking_clicks: 0 };\n    let openingTotals = { profile_views: 0, booking_clicks: 0 };
+    let marketingTotals = { profile_views: 0, booking_clicks: 0 };
+    let openingTotals = { profile_views: 0, booking_clicks: 0 };
     try {
       totals = db.prepare(`SELECT
         COUNT(*) FILTER (WHERE event_type='profile_view') AS profile_views,
