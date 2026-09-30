@@ -164,3 +164,18 @@ test('opening analytics reports booking intent and conversion rate', () => {
   assert.match(src, /Your openings are creating booking intent/);
   assert.match(src, /A booking click shows intent, not a completed appointment/);
 });
+
+
+test('opening detail can be shared natively with a clipboard fallback', () => {
+  const src = read('routes/public.js');
+  assert.match(src, /Share these openings/);
+  assert.match(src, /navigator\.share/);
+  assert.match(src, /navigator\.clipboard\.writeText/);
+  assert.match(src, /has openings today on GoBookr/);
+});
+
+test('live opening controls stay usable on mobile', () => {
+  const css = read('public/styles.css');
+  assert.match(css, /\.live-opening-banner>div:last-child/);
+  assert.match(css, /\.opening-detail-actions/);
+});
