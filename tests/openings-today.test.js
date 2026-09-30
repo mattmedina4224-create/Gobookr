@@ -120,3 +120,12 @@ test('publishing a fresh opening closes older live opening posts for that pro', 
   assert.ok((src.match(closeOld) || []).length >= 2);
   assert.match(src, /id != \?/);
 });
+
+
+test('pro analytics separates tracked Openings Today impact', () => {
+  const src = read('routes/pro.js');
+  assert.match(src, /source IN \('openings-today','profile-opening'\)/);
+  assert.match(src, /Openings Today impact/);
+  assert.match(src, /Opening-driven profile views/);
+  assert.match(src, /Opening booking clicks/);
+});
