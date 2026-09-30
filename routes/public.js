@@ -99,6 +99,7 @@ module.exports = function (router) {
 
   router.get('/discover/:city/:category', async (ctx) => {
     const citySlug = queryText(ctx.params.city, 80).toLowerCase(); const category = queryText(ctx.params.category, 40);
+    if (!/^[a-z0-9-]+$/.test(citySlug)) return send(ctx.res, '<h1>404 — page not found</h1>', 404);
     if (!CATEGORY_VALUES.has(category) || !category) return send(ctx.res, '<h1>404 — page not found</h1>', 404);
     const cityName = citySlug.split('-').filter(Boolean).map((part)=>part.charAt(0).toUpperCase()+part.slice(1)).join(' ');
     if (!cityName) return send(ctx.res, '<h1>404 — page not found</h1>', 404);
