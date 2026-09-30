@@ -142,7 +142,7 @@ test('Openings Today reports real posted-time totals', () => {
 test('dashboard turns a live opening into a sharing action', () => {
   const src = read('routes/pro.js');
   assert.match(src, /else if \(liveOpenings\) nextAction/);
-  assert.match(src, /cta: 'Share my openings'/);
+  assert.match(src, /cta: 'Share today’s openings'/);
 });
 
 
