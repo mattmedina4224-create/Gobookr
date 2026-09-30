@@ -1,4 +1,6 @@
-'use strict';\n\n// Opening flow regression suite: customer discovery, pro publishing, Story Maker, and analytics.
+'use strict';
+
+// Opening flow regression suite: customer discovery, pro publishing, Story Maker, and analytics.
 
 const test = require('node:test');
 const assert = require('node:assert/strict');
