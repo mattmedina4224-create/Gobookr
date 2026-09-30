@@ -139,3 +139,9 @@ test('homepage introduction names makeup and wedding discovery', () => {
   const src = read('routes/home.js');
   assert.match(src, /makeup artists, wedding specialists/);
 });
+
+
+test('sitemap does not advertise incomplete owned professional profiles', () => {
+  const src = read('server.js');
+  assert.match(src, /SELECT id FROM pro_profiles WHERE user_id IS NULL OR onboarding_completed = 1 ORDER BY id DESC LIMIT 5000/);
+});
