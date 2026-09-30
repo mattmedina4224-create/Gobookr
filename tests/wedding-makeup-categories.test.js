@@ -148,3 +148,10 @@ test('sitemap does not advertise incomplete owned professional profiles', () => 
   assert.match(src, /s\.status='active'/);
   assert.match(src, /s\.status='trialing'/);
 });
+
+
+test('legacy category formatter delegates to the canonical catalog', () => {
+  const src = read('lib/util.js');
+  assert.match(src, /require\('\.\/pro-categories'\)\.categoryLabel\(cat\)/);
+  assert.doesNotMatch(src, /wedding_services: 'Weddings'/);
+});
