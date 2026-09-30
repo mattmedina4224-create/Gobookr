@@ -509,7 +509,8 @@ module.exports = function (router) {
     const profile = requirePro(ctx); if (!profile) return;
     const name = clampText(ctx.body.name, 120);
     const price = finiteInteger(ctx.body.price, 0, 100000);
-    const duration = finiteInteger(ctx.body.duration_minutes || 30, 5, 1440);
+    const durationRaw = String(ctx.body.duration_minutes == null ? '' : ctx.body.duration_minutes).trim();
+    const duration = finiteInteger(durationRaw || '30', 5, 1440);
     if (!name || price === null || duration === null) return redirect(ctx.res, '/dashboard/pro/profile?error=' + encodeURIComponent('Enter a valid service name, price, and duration.'));
     db.prepare('INSERT INTO services (pro_id, name, price, duration_minutes) VALUES (?, ?, ?, ?)').run(profile.id, name, price, duration);
     redirect(ctx.res, '/dashboard/pro/profile?success=' + encodeURIComponent('Service added.'));
@@ -532,8 +533,10 @@ module.exports = function (router) {
   router.post('/dashboard/pro/services/:id/delete', async (ctx) => {
     const profile = requirePro(ctx); if (!profile) return;
     const serviceId = Number(ctx.params.id);
-    if (Number.isInteger(serviceId) && serviceId > 0) db.prepare('DELETE FROM services WHERE id = ? AND pro_id = ?').run(serviceId, profile.id);
-    redirect(ctx.res, '/dashboard/pro/profile?success=' + encodeURIComponent('Service removed.'));
+    if (!Number.isInteger(serviceId) || serviceId <= 0) return redirect(ctx.res, '/dashboard/pro/profile?error=' + encodeURIComponent('Service not found.'));
+    const result = db.prepare('DELETE FROM services WHERE id = ? AND pro_id = ?').run(serviceId, profile.id);
+    const changed = Number(result.changes || result.rowCount || 0);
+    redirect(ctx.res, '/dashboard/pro/profile?' + (changed ? 'success=' + encodeURIComponent('Service removed.') : 'error=' + encodeURIComponent('Service not found.')));
   });
 
   router.get('/dashboard/pro/portfolio', async (ctx) => {
