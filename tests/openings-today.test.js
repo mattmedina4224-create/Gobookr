@@ -129,3 +129,16 @@ test('pro analytics separates tracked Openings Today impact', () => {
   assert.match(src, /Opening-driven profile views/);
   assert.match(src, /Opening booking clicks/);
 });
+
+
+test('Openings Today reports real posted-time totals', () => {
+  const src = read('routes/public.js');
+  assert.match(src, /const openingCount = visible\.reduce/);
+  assert.match(src, /posted \$\{openingCount === 1 \? 'time' : 'times'\}/);
+});
+
+test('dashboard turns a live opening into a sharing action', () => {
+  const src = read('routes/pro.js');
+  assert.match(src, /else if \(liveOpenings\) nextAction/);
+  assert.match(src, /cta: 'Share my openings'/);
+});
