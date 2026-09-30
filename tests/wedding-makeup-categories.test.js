@@ -133,3 +133,9 @@ test('category catalog has unique slugs and exactly one definition for new speci
   assert.equal(PROFESSIONAL_CATEGORIES.find((item) => item.value === 'makeup_artist').kind, 'specialty');
   assert.equal(PROFESSIONAL_CATEGORIES.find((item) => item.value === 'wedding_services').kind, 'specialty');
 });
+
+
+test('homepage introduction names makeup and wedding discovery', () => {
+  const src = read('routes/home.js');
+  assert.match(src, /makeup artists, wedding specialists/);
+});
