@@ -88,3 +88,12 @@ test('scheduled campaign confirmation focuses the queue', () => {
  assert.match(source,/scrollIntoView/);
  assert.match(source,/panel\.focus/);
 });
+
+
+test('campaign queue uses customer-friendly status labels', () => {
+ const source=fs.readFileSync(path.join(__dirname,'..','routes','pro.js'),'utf8');
+ assert.match(source,/campaignStatusLabel/);
+ assert.match(source,/published: 'Live'/);
+ assert.match(source,/closed: 'Filled'/);
+ assert.match(source,/escapeHtml\(campaignStatusLabel\(item\.status\)\)/);
+});
