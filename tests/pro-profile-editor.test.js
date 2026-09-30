@@ -30,3 +30,11 @@ test('service editor explains customer value and has a useful empty state', () =
   assert.match(src, /Add your first service/);
   assert.match(src, /clear service name, price, and duration/);
 });
+
+
+test('service creation defaults only a truly blank duration and delete reports ownership misses', () => {
+  assert.match(src, /durationRaw = String\(ctx\.body\.duration_minutes == null \? '' : ctx\.body\.duration_minutes\)\.trim\(\)/);
+  assert.match(src, /finiteInteger\(durationRaw \|\| '30', 5, 1440\)/);
+  assert.match(src, /DELETE FROM services WHERE id = \? AND pro_id = \?/);
+  assert.match(src, /changed \? 'success=' \+ encodeURIComponent\('Service removed\.'\) : 'error=' \+ encodeURIComponent\('Service not found\.'\)/);
+});
