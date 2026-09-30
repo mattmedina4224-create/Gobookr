@@ -40,7 +40,7 @@ function normalizeUrl(value, allowedHosts = []) {
 function onboardingState(profile) {
   const serviceCount = Number(db.prepare('SELECT COUNT(*) AS count FROM services WHERE pro_id = ?').get(profile.id).count) || 0;
   const photoCount = Number(db.prepare("SELECT COUNT(*) AS count FROM portfolio_items WHERE pro_id = ? AND image_url IS NOT NULL AND image_url != ''").get(profile.id).count) || 0;
-  const basicsDone = Boolean(profile.business_name && profile.city && profile.state && profile.workplace_name && profile.street_address && profile.zip_code);
+  const basicsDone = Boolean(profile.business_name && profile.city && /^[A-Za-z]{2}$/.test(String(profile.state || '').trim()) && profile.workplace_name && profile.street_address && /^\d{5}(?:-\d{4})?$/.test(String(profile.zip_code || '').trim()));
   const hasExperienceValue = profile.years_experience !== null && profile.years_experience !== undefined && String(profile.years_experience).trim() !== '';
   const detailsDone = Boolean(profile.bio && hasExperienceValue && Number.isFinite(Number(profile.years_experience)) && Number(profile.years_experience) >= 0 && (profile.price_min > 0 || profile.price_max > 0));
   const servicesDone = serviceCount > 0;
