@@ -132,13 +132,27 @@ module.exports = function (router) {
     const savedIds = favoriteIds(ctx, visible);
     const cards = visible.map((pro) => {
       const slots = Array.isArray(pro.available_slots) ? pro.available_slots.filter(Boolean).slice(0, 8) : [];
-      return `<div class="opening-card"><div class="opening-card-head"><span class="badge category">Available today</span><span class="muted">${slots.length} open ${slots.length === 1 ? 'time' : 'times'}</span></div>${proCard(pro, ctx, savedIds)}<div class="opening-times">${slots.map((slot) => `<span>${escapeHtml(slot)}</span>`).join('')}</div><a class="btn block" href="/pro/${pro.id}?source=openings-today">View &amp; book</a></div>`;
+      return `<div class="opening-card"><div class="opening-card-head"><span class="badge category">Available today</span><span class="muted">${slots.length} open ${slots.length === 1 ? 'time' : 'times'}</span></div>${proCard(pro, ctx, savedIds)}<div class="opening-times">${slots.map((slot) => `<span>${escapeHtml(slot)}</span>`).join('')}</div><a class="btn block" href="/pro/${pro.id}/opening">See today’s openings</a></div>`;
     }).join('');
     const categoryOptions = CATEGORIES.map((item) => `<option value="${escapeHtml(item.value)}"${item.value === category ? ' selected' : ''}>${escapeHtml(item.label)}</option>`).join('');
     const filter = `<form class="openings-filter" method="GET" action="/openings"><label><span>Service</span><select name="category">${categoryOptions}</select></label><label><span>City or ZIP</span><input name="city" value="${escapeHtml(city)}" maxlength="100" placeholder="Denver" /></label><button class="btn" type="submit">Find openings</button>${city || category ? '<a class="btn ghost" href="/openings">Clear</a>' : ''}</form>`;
     const summary = visible.length ? `${visible.length} professional${visible.length === 1 ? '' : 's'} with openings today` : 'No matching openings posted yet today';
     const body = `<section class="section container"><div class="results-toolbar"><div><span class="badge category">Openings Today</span><h1>Appointments you can grab today</h1><p>These times were posted by local professionals today. Availability can change, so confirm the time on the professional's booking page.</p></div><a class="btn secondary" href="/search">Browse all professionals</a></div>${filter}<p class="openings-summary" aria-live="polite">${escapeHtml(summary)}</p><div class="openings-grid">${cards || '<div class="empty-state"><h3>No openings match that search yet</h3><p>Try another service or location, browse professionals nearby, or check back as pros post last-minute availability.</p><a class="btn" href="/search">Find a professional</a></div>'}</div></section>`;
     send(ctx.res, layout({ title: 'Openings Today', description: 'Find same-day appointments posted by local personal-service professionals on GoBookr.', canonical: 'https://gobookr.com/openings', robots: city || category || !visible.length ? 'noindex,follow' : 'index,follow', currentUser: ctx.currentUser, session: ctx.session, body }));
+  });
+
+  router.get('/pro/:id/opening', async (ctx) => {
+    const id = Number(ctx.params.id);
+    if (!Number.isInteger(id) || id <= 0) return redirect(ctx.res, '/openings');
+    const pro = hydratePros(db.prepare('SELECT * FROM pro_profiles WHERE id = ?').all(id))[0];
+    if (!pro) return redirect(ctx.res, '/openings?error=' + encodeURIComponent('That professional is not currently available.'));
+    let opening = null;
+    try { opening = db.prepare("SELECT id, available_slots, copy FROM marketing_campaigns WHERE pro_id = ? AND status = 'published' AND campaign_type IN ('openings-today','last-minute') AND created_at >= CURRENT_DATE ORDER BY created_at DESC LIMIT 1").get(id) || null; } catch (err) { console.error('Opening detail unavailable', err); }
+    if (!opening) return redirect(ctx.res, '/pro/' + id);
+    const slots = Array.isArray(opening.available_slots) ? opening.available_slots.filter(Boolean).slice(0, 8) : [];
+    const bookingHref = '/book/' + id + '?source=openings-today';
+    const body = `<section class="section container narrow"><a class="back-link" href="/openings">← Openings Today</a><div class="opening-detail"><span class="badge category">Available today</span><h1>${escapeHtml(pro.business_name)}</h1>${pro.city ? `<p class="muted">${escapeHtml(pro.city)}, ${escapeHtml(pro.state)}</p>` : ''}<p>${escapeHtml(opening.copy || 'I have openings today.')}</p><div class="opening-times opening-times-large">${slots.map((slot) => `<span>${escapeHtml(slot)}</span>`).join('')}</div>${pro.booking_url ? `<a class="btn block" href="${bookingHref}">Check availability &amp; book</a>` : '<a class="btn block" href="/pro/' + id + '">View professional profile</a>'}<p class="helptext">Times are posted by the professional and can change. Confirm the appointment time on their booking page before making plans.</p><a class="btn ghost block" href="/pro/${id}">See full profile &amp; work</a></div></section>`;
+    send(ctx.res, layout({ title: `Today's openings · ${pro.business_name}`, description: `See today's appointment openings posted by ${pro.business_name} on GoBookr.`, canonical: 'https://gobookr.com/pro/' + id + '/opening', robots: 'noindex,follow', currentUser: ctx.currentUser, session: ctx.session, body }));
   });
 
   router.get('/search', async (ctx) => {
