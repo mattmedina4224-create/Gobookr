@@ -13,3 +13,10 @@ test('professionals are warned in final trial week when billing is not connected
   assert.match(src, /continues automatically at \$20\/month/);
   assert.match(src, /Set up billing/);
 });
+
+
+test('active trial under one day never displays zero days left', () => {
+  const src = fs.readFileSync(path.join(__dirname, '..', 'lib', 'pro-billing-banner.js'), 'utf8');
+  assert.match(src, /days < 1 \? 'Less than 1 day left'/);
+  assert.match(src, /timeLeft/);
+});
