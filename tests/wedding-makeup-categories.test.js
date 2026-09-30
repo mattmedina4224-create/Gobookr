@@ -163,6 +163,8 @@ test('site shell reflects the full marketplace and has share metadata', () => {
   assert.match(src, /property="og:title"/);
   assert.match(src, /property="og:description"/);
   assert.match(src, /name="twitter:card"/);
+  assert.match(src, /name="twitter:title"/);
+  assert.match(src, /name="twitter:description"/);
 });
 
 
