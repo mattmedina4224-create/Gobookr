@@ -120,3 +120,14 @@ test('inventory docs forbid duplicate profiles for secondary specialties', () =>
   assert.match(src, /wedding_services/);
   assert.match(src, /never create a duplicate profile solely to represent an additional specialty/);
 });
+
+
+test('category catalog has unique slugs and exactly one definition for new specialties', () => {
+  const { PROFESSIONAL_CATEGORIES, PROFESSIONAL_CATEGORY_VALUES } = require('../lib/pro-categories');
+  assert.equal(PROFESSIONAL_CATEGORIES.length, 11);
+  assert.equal(PROFESSIONAL_CATEGORY_VALUES.size, PROFESSIONAL_CATEGORIES.length);
+  assert.equal(PROFESSIONAL_CATEGORIES.filter((item) => item.value === 'makeup_artist').length, 1);
+  assert.equal(PROFESSIONAL_CATEGORIES.filter((item) => item.value === 'wedding_services').length, 1);
+  assert.equal(PROFESSIONAL_CATEGORIES.find((item) => item.value === 'makeup_artist').kind, 'specialty');
+  assert.equal(PROFESSIONAL_CATEGORIES.find((item) => item.value === 'wedding_services').kind, 'specialty');
+});
