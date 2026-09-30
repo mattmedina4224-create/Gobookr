@@ -93,3 +93,15 @@ test('opening cards lead to a focused tracked booking path', () => {
   assert.match(src, /Check availability &amp; book/);
   assert.match(src, /Times are posted by the professional and can change/);
 });
+
+
+test('professional profiles surface genuine same-day availability', () => {
+  const src = read('routes/public.js');
+  const css = read('public/styles.css');
+  assert.match(src, /Profile opening lookup failed/);
+  assert.match(src, /status = 'published'.*campaign_type IN \('openings-today','last-minute'\).*created_at >= CURRENT_DATE/s);
+  assert.match(src, /class="profile-opening-banner"/);
+  assert.match(src, /source=profile-opening/);
+  assert.match(src, /Confirm availability when you book/);
+  assert.match(css, /\.profile-opening-banner/);
+});
