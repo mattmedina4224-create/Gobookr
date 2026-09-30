@@ -20,3 +20,13 @@ test('Marketing Center saves and reopens the selected Story style', () => {
   assert.match(source, /query\.set\('style', campaign\.story_style\)/);
   assert.match(source, /item\.story_style \? '&style='/);
 });
+
+
+test('Marketing Center summarizes live and scheduled work before the editor', () => {
+  const source = fs.readFileSync(path.join(__dirname, '..', 'routes', 'pro.js'), 'utf8');
+  assert.match(source, /const scheduledCount = savedCampaigns\.filter/);
+  assert.match(source, /const liveOpeningCount = savedCampaigns\.filter/);
+  assert.match(source, /marketingStatusStrip/);
+  assert.match(source, /live opening post/);
+  assert.match(source, />See results</);
+});
