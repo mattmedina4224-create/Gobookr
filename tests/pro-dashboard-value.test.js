@@ -24,3 +24,10 @@ test('professional overview surfaces a measurable marketing pulse', () => {
   assert.match(src, /Campaign booking clicks · 30 days/);
   assert.match(src, /Open Marketing Center/);
 });
+
+
+test('professional dashboard uses direct Openings Today actions', () => {
+ const source=fs.readFileSync(path.join(__dirname,'..','routes','pro.js'),'utf8');
+ assert.match(source,/Post today’s openings/);
+ assert.match(source,/Share today’s openings/);
+});
