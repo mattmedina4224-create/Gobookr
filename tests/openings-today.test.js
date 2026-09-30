@@ -105,3 +105,10 @@ test('professional profiles surface genuine same-day availability', () => {
   assert.match(src, /Confirm availability when you book/);
   assert.match(css, /\.profile-opening-banner/);
 });
+
+
+test('publishing fresh availability replaces stale live opening posts', () => {
+  const src = read('routes/pro.js');
+  const closePrevious = /UPDATE marketing_campaigns SET status = 'closed' WHERE pro_id = \?[^\n]+campaign_type IN \('openings-today','last-minute'\)/g;
+  assert.ok((src.match(closePrevious) || []).length >= 2);
+});
