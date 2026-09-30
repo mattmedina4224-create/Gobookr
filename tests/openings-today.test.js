@@ -83,3 +83,13 @@ test('pro dashboard makes live availability obvious and closable', () => {
   assert.match(src, /href="\/openings">View live/);
   assert.match(css, /\.live-opening-banner/);
 });
+
+
+test('opening cards lead to a focused tracked booking path', () => {
+  const src = read('routes/public.js');
+  assert.match(src, /router\.get\('\/pro\/:id\/opening'/);
+  assert.match(src, /See today’s openings/);
+  assert.match(src, /\/book\/.*source=openings-today/);
+  assert.match(src, /Check availability &amp; book/);
+  assert.match(src, /Times are posted by the professional and can change/);
+});
