@@ -8,22 +8,10 @@ const { escapeHtml, money, slugCategory, avgRating, stars } = require('../lib/ut
 const { isProPubliclyVisible } = require('../lib/subscription');
 const { hydratePros } = require('../lib/pro-listing-data');
 const { parseRadius, resolveSearchCenter, filterByRadius, filterBusinessesByRadius } = require('../lib/geo-search');
+const { PROFESSIONAL_CATEGORIES, PROFESSIONAL_CATEGORY_VALUES, categoryPlural } = require('../lib/pro-categories');
 
-const CATEGORIES = [
-  { value: '', label: 'All services' },
-  { value: 'barber', label: 'Barbers' },
-  { value: 'stylist', label: 'Hairstylists' },
-  { value: 'colorist', label: 'Colorists' },
-  { value: 'nail_technician', label: 'Nail Technicians' },
-  { value: 'eyelash_technician', label: 'Eyelash Technicians' },
-  { value: 'eyebrow_technician', label: 'Eyebrow Technicians' },
-  { value: 'waxing_specialist', label: 'Waxing Specialists' },
-  { value: 'massage_therapist', label: 'Massage Therapists' },
-  { value: 'tattoo_artist', label: 'Tattoo Artists' },
-  { value: 'makeup_artist', label: 'Makeup Artists' },
-  { value: 'wedding_services', label: 'Weddings' },
-];
-const CATEGORY_VALUES = new Set(CATEGORIES.map((item) => item.value));
+const CATEGORIES = [{ value: '', label: 'All services' }, ...PROFESSIONAL_CATEGORIES.map((item) => ({ value: item.value, label: item.plural }))];
+const CATEGORY_VALUES = new Set(['', ...PROFESSIONAL_CATEGORY_VALUES]);
 const RESULT_TYPES = new Set(['all', 'professionals', 'businesses']);
 
 function queryText(value, max = 100) { return String(value || '').trim().slice(0, max); }
