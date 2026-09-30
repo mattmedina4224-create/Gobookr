@@ -14,20 +14,7 @@ const {
 } = require('../lib/auth');
 const { escapeHtml, initialsFrom } = require('../lib/util');
 const { requireClaimProfile } = require('../lib/claims');
-
-const PRO_CATEGORIES = [
-  { value: 'barber', label: 'Barber' },
-  { value: 'stylist', label: 'Hairstylist' },
-  { value: 'colorist', label: 'Colorist' },
-  { value: 'nail_technician', label: 'Nail Technician' },
-  { value: 'eyelash_technician', label: 'Eyelash Technician' },
-  { value: 'eyebrow_technician', label: 'Eyebrow Technician' },
-  { value: 'waxing_specialist', label: 'Waxing Specialist' },
-  { value: 'tattoo_artist', label: 'Tattoo Artist' },
-  { value: 'massage_therapist', label: 'Massage Therapist' },
-  { value: 'makeup_artist', label: 'Makeup Artist' },
-  { value: 'wedding_services', label: 'Weddings' },
-];
+const { PROFESSIONAL_CATEGORIES: PRO_CATEGORIES } = require('../lib/pro-categories');
 
 async function geocodeBusinessAddress({ street, city, state, zip }) {
   const query = [street, city, state, zip, 'USA'].filter(Boolean).join(', ');
