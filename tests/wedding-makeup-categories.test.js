@@ -102,3 +102,21 @@ test('local SEO discovery is category-driven so secondary specialties get their 
   assert.match(serverSrc, /JOIN pro_categories pc ON pc\.pro_id=p\.id/);
   assert.match(serverSrc, /pc\.category/);
 });
+
+
+test('all professional flows share one canonical category catalog', () => {
+  const catalog = read('lib/pro-categories.js');
+  assert.match(catalog, /makeup_artist/);
+  assert.match(catalog, /wedding_services/);
+  assert.match(catalog, /kind: 'specialty'/);
+  for (const file of ['routes/auth.js','routes/public.js','routes/home.js','routes/pro.js','routes/become-pro.js','lib/inventory-discovery.js','scripts/import-unclaimed-profiles.js','scripts/audit-imported-profiles.js']) {
+    assert.match(read(file), /pro-categories/);
+  }
+});
+
+test('inventory docs forbid duplicate profiles for secondary specialties', () => {
+  const src = read('docs/state-inventory-imports.md');
+  assert.match(src, /makeup_artist/);
+  assert.match(src, /wedding_services/);
+  assert.match(src, /never create a duplicate profile solely to represent an additional specialty/);
+});
