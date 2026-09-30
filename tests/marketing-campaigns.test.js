@@ -79,3 +79,12 @@ test('Marketing Center status counts are not limited to the eight-item queue', (
   assert.match(source, /const scheduledCount = Number\(campaignCounts\.scheduled_count/);
   assert.match(source, /const liveOpeningCount = Number\(campaignCounts\.live_opening_count/);
 });
+
+
+test('scheduled campaign confirmation focuses the queue', () => {
+ const source=fs.readFileSync(path.join(__dirname,'..','routes','pro.js'),'utf8');
+ assert.match(source,/focusScheduledQueue = ctx\.query\.queue === 'scheduled'/);
+ assert.match(source,/Campaign scheduled\. It is at the top of your queue\./);
+ assert.match(source,/scrollIntoView/);
+ assert.match(source,/panel\.focus/);
+});
