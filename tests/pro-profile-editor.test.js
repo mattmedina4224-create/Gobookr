@@ -48,3 +48,10 @@ test('portfolio upload UI is honest about one photo and keeps payloads serverles
   assert.match(src, /supported up to 3 MB/);
   assert.match(src, /image\.data\.length > 3 \* 1024 \* 1024/);
 });
+
+
+test('global request body ceiling leaves room for encoded 3 MB portfolio photos', () => {
+  const server = fs.readFileSync(path.join(__dirname, '..', 'server.js'), 'utf8');
+  assert.match(server, /size > 5 \* 1024 \* 1024/);
+  assert.doesNotMatch(server, /size > 16 \* 1024 \* 1024/);
+});
