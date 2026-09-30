@@ -44,3 +44,11 @@ test('scheduled summary links pros directly to the campaign queue', () => {
   assert.match(source, /href="#campaign-queue">View queue/);
   assert.match(source, /id="campaign-queue"/);
 });
+
+
+test('campaign scheduler prevents past picks and explains queue behavior', () => {
+  const source = fs.readFileSync(path.join(__dirname, '..', 'routes', 'pro.js'), 'utf8');
+  assert.match(source, /scheduledField\.min=/);
+  assert.match(source, /does not auto-post to Instagram/);
+  assert.match(source, /aria-describedby="scheduled-for-help"/);
+});
