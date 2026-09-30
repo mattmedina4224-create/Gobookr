@@ -29,8 +29,10 @@ function homeCard(pro, ctx, savedIds) {
   const rating = pro.rating != null
     ? `<span class="home-pro-rating">${stars(pro.rating)} <b>${pro.rating}</b> <span>(${pro.reviewCount})</span></span>`
     : `<span class="home-pro-new">New on GoBookr</span>`;
-  const category = pro.categories[0] ? slugCategory(pro.categories[0]) : 'Professional';
-  return `<div class="favorite-card home-favorite-card"><a class="home-pro-card" href="/pro/${pro.id}">${photo}<div class="home-pro-info"><h3>${escapeHtml(pro.business_name)}</h3><p>${escapeHtml(category)} · ${escapeHtml(pro.city)}, ${escapeHtml(pro.state)}</p>${rating}</div></a>${favoriteControl(pro, ctx, savedIds.has(Number(pro.id)))}</div>`;
+  const categories = (pro.categories || []).slice(0, 3).map(slugCategory);
+  const specialtyLine = categories.length ? categories.join(' · ') : 'Professional';
+  const extraSpecialties = (pro.categories || []).length > 3 ? ` +${pro.categories.length - 3}` : '';
+  return `<div class="favorite-card home-favorite-card"><a class="home-pro-card" href="/pro/${pro.id}">${photo}<div class="home-pro-info"><h3>${escapeHtml(pro.business_name)}</h3><p class="home-pro-specialties">${escapeHtml(specialtyLine + extraSpecialties)}</p><p class="home-pro-location">${escapeHtml(pro.city)}, ${escapeHtml(pro.state)}</p>${rating}</div></a>${favoriteControl(pro, ctx, savedIds.has(Number(pro.id)))}</div>`;
 }
 
 module.exports = function (router) {
@@ -372,6 +374,9 @@ module.exports = function (router) {
         <a href="/search?category=eyebrow_technician">Eyebrow Technicians</a>
         <a href="/search?category=waxing_specialist">Waxing Specialists</a>
         <a href="/search?category=tattoo_artist">Tattoo Artists</a>
+        <a href="/search?category=massage_therapist">Massage Therapists</a>
+        <a href="/search?category=makeup_artist">Makeup Artists</a>
+        <a href="/search?category=wedding_services">Weddings</a>
       </div>
     </div>
   </section>
