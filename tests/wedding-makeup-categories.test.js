@@ -36,11 +36,12 @@ test('existing professionals can manage multiple searchable specialties', () => 
   assert.match(src, /ROLLBACK/);
 });
 
-test('inventory tooling recognizes the new marketplace categories', () => {
+test('inventory tooling recognizes the canonical marketplace categories', () => {
+  const catalog = require('../lib/pro-categories');
+  assert.ok(catalog.PROFESSIONAL_CATEGORY_VALUES.has('makeup_artist'));
+  assert.ok(catalog.PROFESSIONAL_CATEGORY_VALUES.has('wedding_services'));
   for (const file of ['scripts/import-unclaimed-profiles.js', 'scripts/audit-imported-profiles.js']) {
-    const src = read(file);
-    assert.match(src, /makeup_artist/);
-    assert.match(src, /wedding_services/);
+    assert.match(read(file), /PROFESSIONAL_CATEGORY_VALUES/);
   }
 });
 
