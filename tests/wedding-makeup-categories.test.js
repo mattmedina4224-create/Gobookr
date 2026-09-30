@@ -137,7 +137,7 @@ test('category catalog has unique slugs and exactly one definition for new speci
 
 test('homepage introduction names makeup and wedding discovery', () => {
   const src = read('routes/home.js');
-  assert.match(src, /makeup artists, wedding specialists/);
+  assert.match(src, /hairstylists, makeup artists, wedding specialists, barbers/);
 });
 
 
