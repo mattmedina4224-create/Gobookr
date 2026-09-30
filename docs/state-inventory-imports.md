@@ -31,7 +31,8 @@ Preferred when publicly available:
 - `booking_url`
 
 Supported categories are barber, stylist, colorist, nail_technician, eyelash_technician,
-eyebrow_technician, waxing_specialist, tattoo_artist, and massage_therapist.
+eyebrow_technician, waxing_specialist, tattoo_artist, massage_therapist, makeup_artist,
+and wedding_services. Makeup and wedding categories may be secondary specialties on the same professional profile; never create a duplicate profile solely to represent an additional specialty.
 
 Approved source hosts are enforced by the importer: Booksy, GlossGenius, Square,
 Vagaro, Boulevard, Mangomint, Zenoti, Booker, and SQUIRE.
