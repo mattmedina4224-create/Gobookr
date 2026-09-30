@@ -272,8 +272,10 @@ module.exports = function (router) {
       if (publishNow) db.prepare("UPDATE marketing_campaigns SET status = 'closed' WHERE pro_id = ? AND status = 'published' AND campaign_type IN ('openings-today','last-minute')").run(profile.id);
       const campaignStatus = publishNow ? 'published' : (isScheduled ? 'scheduled' : 'draft');
       db.prepare('INSERT INTO marketing_campaigns (pro_id, campaign_type, copy, portfolio_item_id, source, scheduled_for, status, story_style, available_slots) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?::jsonb)').run(profile.id, campaignType, copy, portfolioItemId, source, scheduledAt, campaignStatus, storyStyle, JSON.stringify(availableSlots));
-      const successMessage = publishNow ? 'Your openings are live on GoBookr for today.' : 'Campaign saved.';
-      return redirect(ctx.res, '/dashboard/pro/marketing?campaign=' + encodeURIComponent(campaignType) + '&success=' + encodeURIComponent(successMessage));
+      const successMessage = publishNow ? 'Your openings are live on GoBookr for today.' : (isScheduled ? 'Campaign scheduled.' : 'Campaign saved.');
+      const nextQuery = new URLSearchParams({ campaign: campaignType, success: successMessage });
+      if (isScheduled) nextQuery.set('queue', 'scheduled');
+      return redirect(ctx.res, '/dashboard/pro/marketing?' + nextQuery.toString());
     } catch (err) {
       console.error('Campaign save failed', err);
       return redirect(ctx.res, '/dashboard/pro/marketing?campaign=' + encodeURIComponent(campaignType) + '&error=' + encodeURIComponent('Campaign could not be saved yet.'));
