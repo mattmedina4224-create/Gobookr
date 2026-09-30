@@ -38,3 +38,13 @@ test('service creation defaults only a truly blank duration and delete reports o
   assert.match(src, /DELETE FROM services WHERE id = \? AND pro_id = \?/);
   assert.match(src, /changed \? 'success=' \+ encodeURIComponent\('Service removed\.'\) : 'error=' \+ encodeURIComponent\('Service not found\.'\)/);
 });
+
+
+test('portfolio upload UI is honest about one photo and keeps payloads serverless-friendly', () => {
+  const layout = fs.readFileSync(path.join(__dirname, '..', 'lib', 'layout.js'), 'utf8');
+  assert.match(layout, /button\.textContent = 'Add Photo'/);
+  assert.doesNotMatch(layout, /button\.textContent = 'Add Photos'/);
+  assert.match(layout, /file\.size > 3 \* 1024 \* 1024/);
+  assert.match(src, /supported up to 3 MB/);
+  assert.match(src, /file\.size > 3 \* 1024 \* 1024/);
+});
