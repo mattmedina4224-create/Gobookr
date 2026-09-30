@@ -381,7 +381,8 @@ module.exports = function (router) {
     }).join('');
     const marketingViews = Number(marketingTotals.profile_views || 0);
     const marketingClicks = Number(marketingTotals.booking_clicks || 0);
-    const marketingRate = marketingViews ? Math.round((marketingClicks / marketingViews) * 1000) / 10 : 0;\n    const openingViews = Number(openingTotals.profile_views || 0); const openingClicks = Number(openingTotals.booking_clicks || 0);
+    const marketingRate = marketingViews ? Math.round((marketingClicks / marketingViews) * 1000) / 10 : 0;
+    const openingViews = Number(openingTotals.profile_views || 0); const openingClicks = Number(openingTotals.booking_clicks || 0);
     let insight = { title: 'Share your profile to start learning', text: 'Your analytics become more useful as customers view your profile and click your booking link.', href: '/dashboard/pro/marketing', cta: 'Create a campaign' };
     if (views > 0 && clicks === 0) insight = { title: 'People are looking — give them a reason to book', text: 'You have profile views but no booking clicks yet. Refresh your portfolio, services, and booking link, then share a Book With Me Story.', href: '/dashboard/pro/marketing?campaign=book-with-me', cta: 'Create Book With Me Story' };
     else if (clicks > 0 && marketingClicks === 0) insight = { title: 'Your profile is driving booking intent', text: 'Customers are clicking through to your booking page. Try a tracked Marketing Center Story so you can measure how social sharing contributes.', href: '/dashboard/pro/marketing', cta: 'Create a tracked Story' };
