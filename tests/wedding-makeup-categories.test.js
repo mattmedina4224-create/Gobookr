@@ -72,3 +72,33 @@ test('specialty editor stacks cleanly on phones', () => {
   assert.match(src, /@media\(max-width:640px\)[\s\S]*\.profile-category-grid\{grid-template-columns:1fr\}/);
   assert.match(src, /\.profile-category-save\{width:100%;min-height:50px\}/);
 });
+
+
+test('marketplace cards show multiple specialties instead of only the legacy category', () => {
+  const src = read('routes/public.js');
+  assert.match(src, /specialties\.slice\(0, 3\)/);
+  assert.match(src, /class="market-specialties"/);
+  assert.match(src, /market-specialty-more/);
+});
+
+test('homepage exposes makeup weddings and massage as direct discovery paths', () => {
+  const src = read('routes/home.js');
+  assert.match(src, /search\?category=massage_therapist">Massage Therapists/);
+  assert.match(src, /search\?category=makeup_artist">Makeup Artists/);
+  assert.match(src, /search\?category=wedding_services">Weddings/);
+  assert.match(src, /\(pro\.categories \|\| \[\]\)\.slice\(0, 3\)\.map\(slugCategory\)/);
+});
+
+test('multi-specialty discovery remains readable on mobile', () => {
+  const src = read('public/styles.css');
+  assert.match(src, /\.market-specialties\{[^}]*font-weight:750/);
+  assert.match(src, /@media\(max-width:640px\)[\s\S]*\.home-pro-specialties\{white-space:normal;overflow-wrap:anywhere\}/);
+});
+
+test('local SEO discovery is category-driven so secondary specialties get their own pages', () => {
+  const publicSrc = read('routes/public.js');
+  const serverSrc = read('server.js');
+  assert.match(publicSrc, /EXISTS \(SELECT 1 FROM pro_categories pc WHERE pc\.pro_id = pro_profiles\.id AND pc\.category = \?\)/);
+  assert.match(serverSrc, /JOIN pro_categories pc ON pc\.pro_id=p\.id/);
+  assert.match(serverSrc, /pc\.category/);
+});
