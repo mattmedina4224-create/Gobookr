@@ -88,7 +88,7 @@ function app(options = {}) {
     return token;
   };
   auth.getSessionUser = req => state.sessions.get(String(req.headers.cookie || '').split('=')[1]) || null;
-  const common = { '../db': db, '../lib/http': httpHelpers, '../lib/util': require('../lib/util'), '../lib/layout': require('../lib/layout') };
+  const common = { '../db': db, '../lib/http': httpHelpers, '../lib/util': require('../lib/util'), '../lib/layout': require('../lib/layout'), '../lib/pro-categories': require('../lib/pro-categories') };
   common['../lib/claims'] = load('lib/claims.js', { '../db': db, './http': httpHelpers });
   const authRoute = load('routes/auth.js', { ...common, '../lib/auth': auth, './onboarding': () => {} }, {
     fetch: async () => { if (options.claimOnly) throw new Error('Claim signup must not geocode'); return { ok: true, json: async () => [] }; },
