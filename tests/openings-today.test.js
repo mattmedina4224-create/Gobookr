@@ -30,3 +30,13 @@ test('Openings Today is linked globally and responsive', () => {
   assert.match(css, /\.openings-grid/);
   assert.match(css, /@media\(max-width:760px\)\{\.openings-grid\{grid-template-columns:1fr\}/);
 });
+
+
+test('homepage gives same-day intent a direct path into openings', () => {
+  const home = read('routes/home.js');
+  const css = read('public/styles.css');
+  assert.match(home, /Need something today\?/);
+  assert.match(home, /See appointments professionals just opened up/);
+  assert.match(home, /href="\/openings"/);
+  assert.match(css, /\.home-openings-cta/);
+});
