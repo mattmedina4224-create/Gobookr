@@ -40,3 +40,12 @@ test('Stripe status normalization preserves non-public paused and expired-setup 
   assert.doesNotMatch(visibility, /subscription\.status === 'paused'\) return true/);
   assert.doesNotMatch(visibility, /subscription\.status === 'incomplete_expired'\) return true/);
 });
+
+
+test('trial warning and portal both wait for a confirmed Stripe subscription', () => {
+  const banner = read('lib/pro-billing-banner.js');
+  const billing = read('routes/billing.js');
+  assert.match(banner, /!\(subscription\.stripe_customer_id && subscription\.stripe_subscription_id\)/);
+  assert.match(billing, /!subscription\.stripe_customer_id \|\| !subscription\.stripe_subscription_id/);
+  assert.match(billing, /No confirmed Stripe subscription is connected yet/);
+});
