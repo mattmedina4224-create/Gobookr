@@ -24,3 +24,10 @@ test('portfolio completion requires a stored image, not a legacy placeholder row
   assert.match(source, /portfolio_items WHERE pro_id = \? AND image_url IS NOT NULL AND image_url != ''/);
   assert.match(source, /const photoCount = Number/);
 });
+
+
+test('business basics require a valid state abbreviation and ZIP shape', () => {
+  const source = fs.readFileSync(path.join(__dirname, '..', 'routes', 'onboarding.js'), 'utf8');
+  assert.match(source, /\^\[A-Za-z\]\{2\}\$/);
+  assert.match(source, /\\d\{5\}/);
+});
