@@ -366,8 +366,15 @@ module.exports = function (router) {
     let savedCampaigns = [];
     try { savedCampaigns = db.prepare('SELECT id, campaign_type, copy, portfolio_item_id, story_style, available_slots, status, scheduled_for, created_at FROM marketing_campaigns WHERE pro_id = ? ORDER BY COALESCE(scheduled_for, created_at) DESC LIMIT 8').all(profile.id); }
     catch (err) { console.error('Saved campaigns unavailable', err); }
-    const scheduledCount = savedCampaigns.filter((item) => item.status === 'scheduled').length;
-    const liveOpeningCount = savedCampaigns.filter((item) => item.status === 'published' && ['openings-today','last-minute'].includes(item.campaign_type)).length;
+    let campaignCounts = { scheduled_count: 0, live_opening_count: 0 };
+    try {
+      campaignCounts = db.prepare(`SELECT
+        COUNT(*) FILTER (WHERE status = 'scheduled') AS scheduled_count,
+        COUNT(*) FILTER (WHERE status = 'published' AND campaign_type IN ('openings-today','last-minute')) AS live_opening_count
+        FROM marketing_campaigns WHERE pro_id = ?`).get(profile.id) || campaignCounts;
+    } catch (err) { console.error('Campaign counts unavailable', err); }
+    const scheduledCount = Number(campaignCounts.scheduled_count || 0);
+    const liveOpeningCount = Number(campaignCounts.live_opening_count || 0);
     const marketingStatusStrip = `<div class="panel" style="padding:12px 14px;margin:14px 0 18px;"><div style="display:flex;gap:18px;flex-wrap:wrap;align-items:center;"><span><strong>${liveOpeningCount}</strong> <span class="muted">live opening post${liveOpeningCount === 1 ? '' : 's'}</span></span><span><strong>${scheduledCount}</strong> <span class="muted">scheduled</span></span><a class="btn ghost small" href="/dashboard/pro/analytics">See results</a>${scheduledCount ? '<a class="btn ghost small" href="#campaign-queue">View queue</a>' : ''}</div></div>`;
     const options = campaigns.map(([key, label]) => `<option value="${key}"${key === selected[0] ? ' selected' : ''}>${escapeHtml(label)}</option>`).join('');
     const contentLibrary = campaigns.map(([key, label, defaultCopy]) => `<a class="marketing-library-card" href="/dashboard/pro/marketing?campaign=${encodeURIComponent(key)}"><strong>${escapeHtml(label)}</strong><span>${escapeHtml(defaultCopy)}</span><em>Use template →</em></a>`).join('');
