@@ -24,8 +24,8 @@ test('Marketing Center saves and reopens the selected Story style', () => {
 
 test('Marketing Center summarizes live and scheduled work before the editor', () => {
   const source = fs.readFileSync(path.join(__dirname, '..', 'routes', 'pro.js'), 'utf8');
-  assert.match(source, /const scheduledCount = savedCampaigns\.filter/);
-  assert.match(source, /const liveOpeningCount = savedCampaigns\.filter/);
+  assert.match(source, /const scheduledCount = Number\(campaignCounts\.scheduled_count/);
+  assert.match(source, /const liveOpeningCount = Number\(campaignCounts\.live_opening_count/);
   assert.match(source, /marketingStatusStrip/);
   assert.match(source, /live opening post/);
   assert.match(source, />See results</);
