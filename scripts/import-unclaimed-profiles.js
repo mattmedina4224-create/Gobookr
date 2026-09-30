@@ -30,12 +30,7 @@ if (!Array.isArray(rows)) throw new Error('Import file must contain a JSON array
 
 const clean = (v) => String(v || '').trim();
 const initials = (name) => clean(name).split(/\s+/).filter(Boolean).slice(0, 2).map((x) => x[0]).join('').toUpperCase() || 'GB';
-const allowedLegacy = new Set(['barber', 'stylist', 'colorist']);
-const supportedCategories = new Set([
-  'barber', 'stylist', 'colorist', 'nail_technician', 'eyelash_technician',
-  'eyebrow_technician', 'waxing_specialist', 'tattoo_artist', 'massage_therapist',
-  'makeup_artist', 'wedding_services',
-]);
+const { LEGACY_PROFILE_CATEGORIES: allowedLegacy, PROFESSIONAL_CATEGORY_VALUES: supportedCategories } = require('../lib/pro-categories');
 const approvedHosts = [
   'booksy.com', 'glossgenius.com', 'square.site', 'squareup.com', 'vagaro.com',
   'joinblvd.com', 'boulevard.io', 'mangomint.com', 'zenoti.com', 'booker.com',
