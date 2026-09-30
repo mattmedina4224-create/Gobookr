@@ -8,12 +8,11 @@ const path = require('node:path');
 const read = (file) => fs.readFileSync(path.join(__dirname, '..', file), 'utf8');
 
 test('makeup and weddings are customer-searchable categories', () => {
+  const catalog = require('../lib/pro-categories');
+  assert.equal(catalog.categoryPlural('makeup_artist'), 'Makeup Artists');
+  assert.equal(catalog.categoryPlural('wedding_services'), 'Weddings');
   for (const file of ['routes/public.js', 'routes/home.js']) {
-    const src = read(file);
-    assert.match(src, /makeup_artist/);
-    assert.match(src, /Makeup Artists/);
-    assert.match(src, /wedding_services/);
-    assert.match(src, /Weddings/);
+    assert.match(read(file), /PROFESSIONAL_CATEGORIES/);
   }
 });
 
