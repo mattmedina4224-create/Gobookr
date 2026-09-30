@@ -10,13 +10,8 @@ const { send, redirect, flashFromQuery } = require('../lib/http');
 const { escapeHtml, money, slugCategory, avgRating } = require('../lib/util');
 
 
-const PROFILE_CATEGORIES = [
-  ['barber', 'Barber'], ['stylist', 'Hairstylist'], ['colorist', 'Colorist'],
-  ['nail_technician', 'Nail Technician'], ['eyelash_technician', 'Eyelash Technician'],
-  ['eyebrow_technician', 'Eyebrow Technician'], ['waxing_specialist', 'Waxing Specialist'],
-  ['tattoo_artist', 'Tattoo Artist'], ['massage_therapist', 'Massage Therapist'],
-  ['makeup_artist', 'Makeup Artist'], ['wedding_services', 'Weddings'],
-];
+const { PROFESSIONAL_CATEGORIES } = require('../lib/pro-categories');
+const PROFILE_CATEGORIES = PROFESSIONAL_CATEGORIES.map((item) => [item.value, item.label]);
 
 function storageConfig() {
   const baseUrl = String(process.env.SUPABASE_URL || '').trim().replace(/\/$/, '');
