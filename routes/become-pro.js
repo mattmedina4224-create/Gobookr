@@ -5,14 +5,8 @@ const { layout } = require('../lib/layout');
 const { send, redirect, flashFromQuery } = require('../lib/http');
 const { escapeHtml, initialsFrom } = require('../lib/util');
 
-const PRO_CATEGORIES = [
-  ['barber', 'Barber'], ['stylist', 'Hairstylist'], ['colorist', 'Colorist'],
-  ['nail_technician', 'Nail Technician'], ['eyelash_technician', 'Lash Technician'],
-  ['eyebrow_technician', 'Brow Technician'], ['waxing_specialist', 'Waxing Specialist'],
-  ['tattoo_artist', 'Tattoo Artist'], ['massage_therapist', 'Massage Therapist'],
-  ['makeup_artist', 'Makeup Artist'], ['wedding_services', 'Weddings'],
-];
-const CATEGORY_VALUES = new Set(PRO_CATEGORIES.map(([value]) => value));
+const { PROFESSIONAL_CATEGORIES, PROFESSIONAL_CATEGORY_VALUES: CATEGORY_VALUES } = require('../lib/pro-categories');
+const PRO_CATEGORIES = PROFESSIONAL_CATEGORIES.map((item) => [item.value, item.label]);
 const LEGACY_CATEGORY = new Set(['barber', 'stylist', 'colorist']);
 
 module.exports = function (router) {
