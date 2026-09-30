@@ -40,3 +40,11 @@ test('professional structured data can use a real portfolio image when no avatar
   assert.match(src, /portfolio\.find\(\(item\) => item\.image_url\)/);
   assert.match(src, /'@type': 'Person'/);
 });
+
+
+test('professional pages pass a safe photo into social share metadata', () => {
+  assert.match(src, /shareImage: safeExternalUrl\(pro\.profile_photo_url\)/);
+  const layout = fs.readFileSync(path.join(__dirname, '..', 'lib', 'layout.js'), 'utf8');
+  assert.match(layout, /property="og:image"/);
+  assert.match(layout, /summary_large_image/);
+});
