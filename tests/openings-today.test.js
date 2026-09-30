@@ -73,3 +73,13 @@ test('Story Maker includes opening-time UX', () => {
   assert.match(src, /storySlotsText\.join/);
   assert.match(css, /\.quick-slot-row/);
 });
+
+
+test('pro dashboard makes live availability obvious and closable', () => {
+  const src = read('routes/pro.js');
+  const css = read('public/styles.css');
+  assert.match(src, /Your openings are live today/);
+  assert.match(src, /liveOpenings\.available_slots/);
+  assert.match(src, /href="\/openings">View live/);
+  assert.match(css, /\.live-opening-banner/);
+});
