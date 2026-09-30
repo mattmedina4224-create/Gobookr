@@ -61,7 +61,7 @@ function serveStatic(req, res, pathname) {
 function readBody(req) {
   return new Promise((resolve, reject) => {
     const chunks = []; let size = 0;
-    req.on('data', (chunk) => { size += chunk.length; if (size > 16 * 1024 * 1024) { reject(new Error('Payload too large')); req.destroy(); return; } chunks.push(chunk); });
+    req.on('data', (chunk) => { size += chunk.length; if (size > 5 * 1024 * 1024) { reject(new Error('Payload too large')); req.destroy(); return; } chunks.push(chunk); });
     req.on('end', () => resolve(Buffer.concat(chunks))); req.on('error', reject);
   });
 }
