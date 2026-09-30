@@ -90,6 +90,8 @@ module.exports = function (router) {
     const cancelPending = Boolean(subscription.cancel_at_period_end);
     const configured = stripeConfigured();
     const hasStripeCustomer = Boolean(subscription.stripe_customer_id);
+    const hasStripeSubscription = Boolean(subscription.stripe_subscription_id);
+    const billingConnected = hasStripeCustomer && hasStripeSubscription;
     const graceRemaining = graceDaysRemaining(subscription);
 
     let notice = '';
@@ -102,16 +104,16 @@ module.exports = function (router) {
       ? `<p style="margin:4px 0 0;"><strong>Free trial ended.</strong> Set up your membership to make your profile public again.</p>`
       : isTrial ? `<p style="margin:4px 0 0;"><strong>${remaining} day${remaining === 1 ? '' : 's'} remaining</strong> in your free trial.</p>` : '';
     const billingLabel = isTrial ? (isTrialExpired ? 'Trial ended' : 'Trial ends') : 'Current period ends';
-    const renewalStatus = cancelPending ? 'Cancels at period end' : (hasStripeCustomer ? 'Renews automatically monthly' : 'Set up payment to continue after trial');
+    const renewalStatus = cancelPending ? 'Cancels at period end' : (billingConnected ? 'Renews automatically monthly' : 'Set up payment to continue after trial');
 
     let paymentButton = `<button class="btn secondary" type="button" disabled>Set up payment method</button><p class="helptext" style="margin-top:8px;">Stripe test billing will activate after the required environment keys are configured.</p>`;
-    if (configured && hasStripeCustomer) {
+    if (configured && billingConnected) {
       paymentButton = `<form method="POST" action="/dashboard/pro/billing/portal"><input type="hidden" name="_csrf" value="${escapeHtml(ctx.session.csrf_token)}"/><button class="btn secondary" type="submit">Manage payment &amp; subscription</button></form>`;
     } else if (configured) {
       paymentButton = `<form method="POST" action="/dashboard/pro/billing/checkout"><input type="hidden" name="_csrf" value="${escapeHtml(ctx.session.csrf_token)}"/><button class="btn secondary" type="submit">Set up secure payment</button></form><p class="helptext" style="margin-top:8px;">Stripe Checkout will show eligible wallet options such as Apple Pay automatically on supported devices.</p>`;
     }
 
-    const manageArea = hasStripeCustomer && configured
+    const manageArea = billingConnected && configured
       ? `<p class="helptext">Cancellation, reactivation, payment-method updates, and invoices are handled securely through Stripe's customer portal.</p>`
       : `<p class="helptext">Subscription management becomes available after Stripe checkout is connected.</p>`;
 
@@ -124,7 +126,7 @@ module.exports = function (router) {
     const subscription = db.prepare('SELECT * FROM subscriptions WHERE pro_id = ?').get(profile.id);
     if (!subscription) return redirect(ctx.res, '/dashboard/pro/billing?error=' + encodeURIComponent('Subscription record missing.'));
     if (!stripeConfigured()) return redirect(ctx.res, '/dashboard/pro/billing?error=' + encodeURIComponent('Stripe billing is not configured yet.'));
-    if (subscription.stripe_customer_id) return redirect(ctx.res, '/dashboard/pro/billing?error=' + encodeURIComponent('Billing is already connected. Use Manage payment & subscription.'));
+    if (subscription.stripe_customer_id && subscription.stripe_subscription_id) return redirect(ctx.res, '/dashboard/pro/billing?error=' + encodeURIComponent('Billing is already connected. Use Manage payment & subscription.'));
     try {
       const session = await createCheckoutSession({ proId: profile.id, email: ctx.currentUser.email, trialDays: daysRemaining(subscription.trial_ends_at) });
       if (!session || !session.url) throw new Error('Stripe did not return a checkout URL.');
