@@ -51,7 +51,7 @@ function daysRemaining(value) {
 }
 
 function statusLabel(status) {
-  return ({ trialing: 'Free trial', active: 'Active', past_due: 'Past due', canceled: 'Canceled', incomplete: 'Payment setup incomplete', unpaid: 'Unpaid' })[status] || status;
+  return ({ trialing: 'Free trial', active: 'Active', past_due: 'Past due', canceled: 'Canceled', incomplete: 'Payment setup incomplete', incomplete_expired: 'Payment setup expired', unpaid: 'Unpaid', paused: 'Paused' })[status] || status;
 }
 
 function json(res, status, value) {
