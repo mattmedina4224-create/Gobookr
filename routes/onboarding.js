@@ -38,8 +38,8 @@ function normalizeUrl(value, allowedHosts = []) {
 }
 
 function onboardingState(profile) {
-  const serviceCount = db.prepare('SELECT COUNT(*) AS count FROM services WHERE pro_id = ?').get(profile.id).count;
-  const photoCount = db.prepare('SELECT COUNT(*) AS count FROM portfolio_items WHERE pro_id = ?').get(profile.id).count;
+  const serviceCount = Number(db.prepare('SELECT COUNT(*) AS count FROM services WHERE pro_id = ?').get(profile.id).count) || 0;
+  const photoCount = Number(db.prepare("SELECT COUNT(*) AS count FROM portfolio_items WHERE pro_id = ? AND image_url IS NOT NULL AND image_url != ''").get(profile.id).count) || 0;
   const basicsDone = Boolean(profile.business_name && profile.city && profile.state && profile.workplace_name && profile.street_address && profile.zip_code);
   const hasExperienceValue = profile.years_experience !== null && profile.years_experience !== undefined && String(profile.years_experience).trim() !== '';
   const detailsDone = Boolean(profile.bio && hasExperienceValue && Number.isFinite(Number(profile.years_experience)) && Number(profile.years_experience) >= 0 && (profile.price_min > 0 || profile.price_max > 0));
