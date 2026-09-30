@@ -46,3 +46,30 @@ test('Openings Today is part of the public SEO surface', () => {
   const server = read('server.js');
   assert.match(server, /https:\/\/gobookr\.com\/openings/);
 });
+
+
+test('customers can narrow openings by service and location', () => {
+  const src = read('routes/public.js');
+  assert.match(src, /name="category"/);
+  assert.match(src, /name="city"/);
+  assert.match(src, /EXISTS \(SELECT 1 FROM pro_categories pc WHERE pc\.pro_id = p\.id AND pc\.category = \?\)/);
+  assert.match(src, /No openings match that search yet/);
+});
+
+test('pros can publish and close same-day openings in one tap', () => {
+  const src = read('routes/pro.js');
+  assert.match(src, /name="publish_now" value="1">Post openings now/);
+  assert.match(src, /campaignStatus = publishNow \? 'published'/);
+  assert.match(src, /unpublish-openings/);
+  assert.match(src, /SET status = 'closed'/);
+  assert.match(src, />Mark filled</);
+});
+
+test('Story Maker includes opening-time UX', () => {
+  const src = read('routes/pro.js');
+  const css = read('public/styles.css');
+  assert.match(src, /class="quick-slot"/);
+  assert.match(src, /id="marketing-story-slots"/);
+  assert.match(src, /storySlotsText\.join/);
+  assert.match(css, /\.quick-slot-row/);
+});
