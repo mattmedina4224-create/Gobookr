@@ -144,3 +144,13 @@ test('dashboard turns a live opening into a sharing action', () => {
   assert.match(src, /else if \(liveOpenings\) nextAction/);
   assert.match(src, /cta: 'Share my openings'/);
 });
+
+
+test('analytics measures opening-driven booking intent without claiming completed appointments', () => {
+  const src = read('routes/pro.js');
+  assert.match(src, /source IN \('openings-today','profile-opening'\)/);
+  assert.match(src, /const openingRate = openingViews \?/);
+  assert.match(src, /Opening view → click/);
+  assert.match(src, /Your openings are creating booking intent/);
+  assert.match(src, /A booking click shows intent, not a completed appointment/);
+});
