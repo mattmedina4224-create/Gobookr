@@ -369,7 +369,8 @@ module.exports = function (router) {
         COUNT(*) FILTER (WHERE event_type='profile_view') AS profile_views,
         COUNT(*) FILTER (WHERE event_type='booking_click') AS booking_clicks
         FROM pro_events WHERE pro_id=? AND created_at >= CURRENT_TIMESTAMP - INTERVAL '30 days'
-        AND source LIKE 'marketing-%'`).get(profile.id) || marketingTotals;\n      openingTotals = db.prepare(`SELECT COUNT(*) FILTER (WHERE event_type='profile_view') AS profile_views, COUNT(*) FILTER (WHERE event_type='booking_click') AS booking_clicks FROM pro_events WHERE pro_id=? AND created_at >= CURRENT_TIMESTAMP - INTERVAL '30 days' AND source IN ('openings-today','profile-opening')`).get(profile.id) || openingTotals;
+        AND source LIKE 'marketing-%'`).get(profile.id) || marketingTotals;
+      openingTotals = db.prepare(`SELECT COUNT(*) FILTER (WHERE event_type='profile_view') AS profile_views, COUNT(*) FILTER (WHERE event_type='booking_click') AS booking_clicks FROM pro_events WHERE pro_id=? AND created_at >= CURRENT_TIMESTAMP - INTERVAL '30 days' AND source IN ('openings-today','profile-opening')`).get(profile.id) || openingTotals;
     } catch (err) { console.error('Professional analytics unavailable', err); }
     const views = Number(totals.profile_views || 0); const clicks = Number(totals.booking_clicks || 0);
     const rate = views ? Math.round((clicks / views) * 1000) / 10 : 0;
