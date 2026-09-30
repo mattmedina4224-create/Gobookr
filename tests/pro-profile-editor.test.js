@@ -46,5 +46,5 @@ test('portfolio upload UI is honest about one photo and keeps payloads serverles
   assert.doesNotMatch(layout, /button\.textContent = 'Add Photos'/);
   assert.match(layout, /file\.size > 3 \* 1024 \* 1024/);
   assert.match(src, /supported up to 3 MB/);
-  assert.match(src, /file\.size > 3 \* 1024 \* 1024/);
+  assert.match(src, /image\.data\.length > 3 \* 1024 \* 1024/);
 });
