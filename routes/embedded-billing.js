@@ -53,7 +53,7 @@ module.exports = function (router) {
     if (!subscription) {
       return redirect(ctx.res, '/dashboard/pro/billing?error=' + encodeURIComponent('Subscription record missing.'));
     }
-    if (subscription.stripe_customer_id) {
+    if (subscription.stripe_customer_id && subscription.stripe_subscription_id) {
       return redirect(ctx.res, '/dashboard/pro/billing?error=' + encodeURIComponent('Billing is already connected. Use Manage payment & subscription.'));
     }
     if (!embeddedCheckoutConfigured()) {
