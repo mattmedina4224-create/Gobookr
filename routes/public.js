@@ -49,7 +49,11 @@ function proCard(pro, ctx, savedIds) {
   const ratingHtml = pro.rating != null
     ? `<div class="market-rating"><span class="market-star" aria-hidden="true">★</span><strong>${pro.rating}</strong><span class="market-review-count">(${pro.reviewCount} review${pro.reviewCount === 1 ? '' : 's'})</span></div>`
     : `<div class="market-new">New on GoBookr</div>`;
-  const serviceNames = pro.services.slice(0, 2).map((s) => escapeHtml(s.name)).join(' · ') || escapeHtml(slugCategory((pro.categories || [pro.category])[0] || 'Professional'));
+  const specialties = (pro.categories || [pro.category]).filter(Boolean);
+  const specialtyLabels = specialties.slice(0, 3).map((category) => escapeHtml(slugCategory(category))).join(' · ');
+  const extraSpecialties = specialties.length > 3 ? ` <span class="market-specialty-more">+${specialties.length - 3}</span>` : '';
+  const serviceNames = pro.services.slice(0, 2).map((s) => escapeHtml(s.name)).join(' · ');
+  const specialtyHtml = specialtyLabels ? `<div class="market-specialties" aria-label="Specialties">${specialtyLabels}${extraSpecialties}</div>` : '';
   const hasLocation = pro.latitude !== null && pro.latitude !== '' && pro.longitude !== null && pro.longitude !== '' && Number.isFinite(Number(pro.latitude)) && Number.isFinite(Number(pro.longitude));
   const locationAttrs = hasLocation ? ` data-lat="${Number(pro.latitude)}" data-lon="${Number(pro.longitude)}"` : '';
   const distanceHtml = Number.isFinite(Number(pro.distanceMiles)) ? `<span class="market-distance">${Number(pro.distanceMiles).toFixed(1)} mi away</span>` : '';
@@ -71,7 +75,8 @@ function proCard(pro, ctx, savedIds) {
         ${workplaceHtml}
         <div class="market-trust-row">${verified}${claim}</div>
         ${ratingHtml}
-        <div class="market-service">${serviceNames}</div>
+        ${specialtyHtml}
+        ${serviceNames ? `<div class="market-service">${serviceNames}</div>` : ''}
         <div class="market-meta"><span class="market-price">From ${startingPrice}</span>${distanceHtml}${pro.city ? `<span class="market-place">${escapeHtml(pro.city)}, ${escapeHtml(pro.state)}</span>` : ''}</div>
       </div>
       <span class="market-chevron" aria-hidden="true">›</span>
