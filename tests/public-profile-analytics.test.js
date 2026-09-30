@@ -34,3 +34,9 @@ test('public profile empty states are useful to customers and actionable for own
   assert.match(src, /Add portfolio photos to show customers your work/);
   assert.match(src, /More work from this professional is coming soon/);
 });
+
+
+test('professional structured data can use a real portfolio image when no avatar exists', () => {
+  assert.match(src, /portfolio\.find\(\(item\) => item\.image_url\)/);
+  assert.match(src, /'@type': 'Person'/);
+});
