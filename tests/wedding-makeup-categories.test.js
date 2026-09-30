@@ -164,3 +164,20 @@ test('site shell reflects the full marketplace and has share metadata', () => {
   assert.match(src, /property="og:description"/);
   assert.match(src, /name="twitter:card"/);
 });
+
+
+test('global shell has keyboard navigation landmarks', () => {
+  const layout = read('lib/layout.js');
+  const css = read('public/styles.css');
+  assert.match(layout, /class="skip-link" href="#main-content"/);
+  assert.match(layout, /<main id="main-content">/);
+  assert.match(layout, /aria-label="GoBookr home"/);
+  assert.match(css, /\.skip-link:focus/);
+  assert.match(css, /:focus-visible/);
+});
+
+test('local discovery pages give useful result and empty-state context', () => {
+  const src = read('routes/public.js');
+  assert.match(src, /local \$\{results\.length === 1 \? 'professional' : 'professionals'\}/);
+  assert.match(src, /Browse \$\{escapeHtml\(cityName\)\}/);
+});
