@@ -244,8 +244,12 @@ module.exports = function (router) {
           return redirect(ctx.res, '/dashboard/pro/marketing?campaign=' + encodeURIComponent(campaignType) + '&error=' + encodeURIComponent('Scheduled time must be in the future.'));
         }
       }
-      db.prepare('INSERT INTO marketing_campaigns (pro_id, campaign_type, copy, portfolio_item_id, source, scheduled_for, status, story_style, available_slots) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?::jsonb)').run(profile.id, campaignType, copy, portfolioItemId, source, scheduledAt, isScheduled ? 'scheduled' : 'draft', storyStyle, JSON.stringify(availableSlots));
-      return redirect(ctx.res, '/dashboard/pro/marketing?campaign=' + encodeURIComponent(campaignType) + '&success=' + encodeURIComponent('Campaign saved.'));
+      if (publishNow && isScheduled) return redirect(ctx.res, '/dashboard/pro/marketing?campaign=' + encodeURIComponent(campaignType) + '&error=' + encodeURIComponent('Publish now or schedule for later, not both.'));
+      if (publishNow && !availableSlots.length) return redirect(ctx.res, '/dashboard/pro/marketing?campaign=' + encodeURIComponent(campaignType) + '&error=' + encodeURIComponent('Add at least one real open appointment time before publishing.'));
+      const campaignStatus = publishNow ? 'published' : (isScheduled ? 'scheduled' : 'draft');
+      db.prepare('INSERT INTO marketing_campaigns (pro_id, campaign_type, copy, portfolio_item_id, source, scheduled_for, status, story_style, available_slots) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?::jsonb)').run(profile.id, campaignType, copy, portfolioItemId, source, scheduledAt, campaignStatus, storyStyle, JSON.stringify(availableSlots));
+      const successMessage = publishNow ? 'Your openings are live on GoBookr for today.' : 'Campaign saved.';
+      return redirect(ctx.res, '/dashboard/pro/marketing?campaign=' + encodeURIComponent(campaignType) + '&success=' + encodeURIComponent(successMessage));
     } catch (err) {
       console.error('Campaign save failed', err);
       return redirect(ctx.res, '/dashboard/pro/marketing?campaign=' + encodeURIComponent(campaignType) + '&error=' + encodeURIComponent('Campaign could not be saved yet.'));
