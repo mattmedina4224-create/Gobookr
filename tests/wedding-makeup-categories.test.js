@@ -143,5 +143,8 @@ test('homepage introduction names makeup and wedding discovery', () => {
 
 test('sitemap does not advertise incomplete owned professional profiles', () => {
   const src = read('server.js');
-  assert.match(src, /SELECT id FROM pro_profiles WHERE user_id IS NULL OR onboarding_completed = 1 ORDER BY id DESC LIMIT 5000/);
+  assert.match(src, /SELECT p\.id FROM pro_profiles p LEFT JOIN subscriptions s ON s\.pro_id=p\.id/);
+  assert.match(src, /p\.onboarding_completed = 1/);
+  assert.match(src, /s\.status='active'/);
+  assert.match(src, /s\.status='trialing'/);
 });
