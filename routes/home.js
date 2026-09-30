@@ -310,7 +310,7 @@ module.exports = function (router) {
     <div class="container">
       <p class="home-eyebrow">Real people. Real services. Near you.</p>
       <h1>Find your next favorite beauty pro.</h1>
-      <p class="lede">Search local beauty and wellness professionals, see their work, and book with confidence.</p>
+      <p class="lede">Search local hairstylists, makeup artists, wedding specialists, barbers, and other beauty and wellness professionals—see their work and book with confidence.</p>
 
       <div class="home-search-card" id="find">
         <div class="home-search-mode" aria-label="What are you looking for?"><a class="active" href="/#find">Find a professional</a><a href="/search?type=businesses">Find a business</a></div>
