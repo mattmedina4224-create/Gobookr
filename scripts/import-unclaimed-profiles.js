@@ -13,7 +13,7 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const db = require('../db');
-const { normalizeSource } = require('../lib/booking-platforms');
+const { normalizeSource, isApprovedBookingSource } = require('../lib/booking-platforms');
 
 const args = process.argv.slice(2);
 const inputPath = args.find((x) => !x.startsWith('--'));
@@ -32,19 +32,6 @@ const clean = (v) => String(v || '').trim();
 const identity = (v) => clean(v).toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim().replace(/\s+/g, ' ');
 const initials = (name) => clean(name).split(/\s+/).filter(Boolean).slice(0, 2).map((x) => x[0]).join('').toUpperCase() || 'GB';
 const { LEGACY_PROFILE_CATEGORIES: allowedLegacy, PROFESSIONAL_CATEGORY_VALUES: supportedCategories } = require('../lib/pro-categories');
-const approvedHosts = [
-  'booksy.com', 'glossgenius.com', 'square.site', 'squareup.com', 'vagaro.com',
-  'joinblvd.com', 'boulevard.io', 'mangomint.com', 'zenoti.com', 'booker.com',
-  'squire.com', 'getsquire.com',
-];
-
-function sourceHost(value) {
-  try { return new URL(value).hostname.toLowerCase().replace(/^www\./, ''); } catch (_) { return ''; }
-}
-function isApprovedSource(value) {
-  const host = sourceHost(value);
-  return approvedHosts.some((allowed) => host === allowed || host.endsWith('.' + allowed));
-}
 function fingerprint(row) {
   return [row.name, row.workplace, row.city, row.state, row.address, row.zip].map(identity).join('|');
 }
@@ -87,7 +74,7 @@ for (const input of rows) {
   }
   if (!supportedCategories.has(row.category)) { reject('unsupported_category'); continue; }
   if (expectedState && row.state !== expectedState) { reject('state_mismatch'); continue; }
-  if (!isApprovedSource(row.sourceUrl)) { reject('unapproved_source_host'); continue; }
+  if (!isApprovedBookingSource(row.sourceUrl)) { reject('unapproved_source_host'); continue; }
 
   const key = fingerprint(row);
   if (seen.has(key)) { reject('duplicate_inside_import_file'); continue; }
