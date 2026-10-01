@@ -29,6 +29,7 @@ const rows = JSON.parse(fs.readFileSync(path.resolve(inputPath), 'utf8'));
 if (!Array.isArray(rows)) throw new Error('Import file must contain a JSON array.');
 
 const clean = (v) => String(v || '').trim();
+const identity = (v) => clean(v).toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim().replace(/\s+/g, ' ');
 const initials = (name) => clean(name).split(/\s+/).filter(Boolean).slice(0, 2).map((x) => x[0]).join('').toUpperCase() || 'GB';
 const { LEGACY_PROFILE_CATEGORIES: allowedLegacy, PROFESSIONAL_CATEGORY_VALUES: supportedCategories } = require('../lib/pro-categories');
 const approvedHosts = [
@@ -45,7 +46,7 @@ function isApprovedSource(value) {
   return approvedHosts.some((allowed) => host === allowed || host.endsWith('.' + allowed));
 }
 function fingerprint(row) {
-  return [row.name, row.workplace, row.city, row.state, row.address, row.zip].map((x) => clean(x).toLowerCase()).join('|');
+  return [row.name, row.workplace, row.city, row.state, row.address, row.zip].map(identity).join('|');
 }
 
 const report = {
@@ -92,14 +93,13 @@ for (const input of rows) {
   if (seen.has(key)) { reject('duplicate_inside_import_file'); continue; }
   seen.add(key);
 
-  const existing = db.prepare(`SELECT id FROM pro_profiles
-    WHERE LOWER(business_name) = LOWER(?)
-      AND LOWER(COALESCE(workplace_name,'')) = LOWER(?)
-      AND LOWER(city) = LOWER(?)
-      AND UPPER(state) = UPPER(?)
-      AND (? = '' OR COALESCE(street_address,'') = '' OR LOWER(street_address) = LOWER(?))
-      AND (? = '' OR COALESCE(zip_code,'') = '' OR zip_code = ?)
-    LIMIT 1`).get(row.name, row.workplace, row.city, row.state, row.address, row.address, row.zip, row.zip);
+  const candidates = db.prepare(`SELECT id, business_name, workplace_name, city, state, street_address, zip_code FROM pro_profiles
+    WHERE UPPER(state) = UPPER(?)`).all(row.state);
+  const existing = candidates.find((candidate) => identity(candidate.city) === identity(row.city)
+    && identity(candidate.business_name) === identity(row.name)
+    && identity(candidate.workplace_name) === identity(row.workplace)
+    && (!row.address || !candidate.street_address || identity(candidate.street_address) === identity(row.address))
+    && (!row.zip || !candidate.zip_code || clean(candidate.zip_code) === row.zip));
 
   if (existing) {
     const existingCategory = db.prepare('SELECT 1 AS found FROM pro_categories WHERE pro_id = ? AND category = ?').get(existing.id, row.category);
