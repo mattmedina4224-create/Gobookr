@@ -25,3 +25,8 @@ test('inventory importer normalizes ZIP+4 and rejects unsafe booking URLs',()=>{
  assert.match(src,/url\.protocol === 'https:' \|\| url\.protocol === 'http:'/);
  assert.match(src,/normalizeZip\(candidate\.zip_code\) === row\.zip/);
 });
+
+test('inventory report summarizes rejection reasons for batch cleanup',()=>{
+ assert.match(src,/const rejectedByReason = report\.rejected\.reduce/);
+ assert.match(src,/rejected_by_reason: rejectedByReason/);
+});
