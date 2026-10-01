@@ -30,6 +30,8 @@ if (!Array.isArray(rows)) throw new Error('Import file must contain a JSON array
 
 const clean = (v) => String(v || '').trim();
 const identity = (v) => clean(v).toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim().replace(/\s+/g, ' ');
+const normalizeZip = (v) => { const match = clean(v).match(/^(\d{5})(?:-\d{4})?$/); return match ? match[1] : clean(v); };
+const isHttpUrl = (v) => { try { const url = new URL(v); return url.protocol === 'https:' || url.protocol === 'http:'; } catch (_) { return false; } };
 const initials = (name) => clean(name).split(/\s+/).filter(Boolean).slice(0, 2).map((x) => x[0]).join('').toUpperCase() || 'GB';
 const { LEGACY_PROFILE_CATEGORIES: allowedLegacy, PROFESSIONAL_CATEGORY_VALUES: supportedCategories } = require('../lib/pro-categories');
 function fingerprint(row) {
@@ -58,7 +60,7 @@ for (const input of rows) {
     city: clean(raw.city),
     state: clean(raw.state).toUpperCase(),
     address: clean(raw.street_address || raw.address || raw.workplace_address),
-    zip: clean(raw.zip_code || raw.zip || raw.workplace_zip),
+    zip: normalizeZip(raw.zip_code || raw.zip || raw.workplace_zip),
     bookingUrl: clean(raw.booking_url),
     sourceUrl: clean(raw.source_url),
     sourceName: clean(raw.source_name),
@@ -75,6 +77,7 @@ for (const input of rows) {
   if (!supportedCategories.has(row.category)) { reject('unsupported_category'); continue; }
   if (expectedState && row.state !== expectedState) { reject('state_mismatch'); continue; }
   if (!isApprovedBookingSource(row.sourceUrl)) { reject('unapproved_source_host'); continue; }
+  if (row.bookingUrl && !isHttpUrl(row.bookingUrl)) { reject('invalid_booking_url'); continue; }
 
   const key = fingerprint(row);
   if (seen.has(key)) { reject('duplicate_inside_import_file'); continue; }
@@ -86,7 +89,7 @@ for (const input of rows) {
     && identity(candidate.business_name) === identity(row.name)
     && identity(candidate.workplace_name) === identity(row.workplace)
     && (!row.address || !candidate.street_address || identity(candidate.street_address) === identity(row.address))
-    && (!row.zip || !candidate.zip_code || clean(candidate.zip_code) === row.zip));
+    && (!row.zip || !candidate.zip_code || normalizeZip(candidate.zip_code) === row.zip));
 
   if (existing) {
     const existingCategory = db.prepare('SELECT 1 AS found FROM pro_categories WHERE pro_id = ? AND category = ?').get(existing.id, row.category);
