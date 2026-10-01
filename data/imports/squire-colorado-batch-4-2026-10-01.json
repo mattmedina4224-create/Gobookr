@@ -1,0 +1,112 @@
+[
+  {
+    "name": "Colorado Cutz - Barbershop",
+    "category": "barber",
+    "city": "Aurora",
+    "state": "CO",
+    "address": "22691 E Aurora Pkwy, Unit A3",
+    "zip": "80016",
+    "booking_url": "https://getsquire.com/discover/united-states/colorado/aurora",
+    "source_url": "https://getsquire.com/discover/united-states/colorado/aurora",
+    "source_name": "SQUIRE"
+  },
+  {
+    "name": "Semion Barbershop For All - Stanley Marketplace",
+    "category": "barber",
+    "city": "Aurora",
+    "state": "CO",
+    "address": "2501 Dallas St #264",
+    "zip": "80010",
+    "booking_url": "https://getsquire.com/discover/united-states/colorado/aurora",
+    "source_url": "https://getsquire.com/discover/united-states/colorado/aurora",
+    "source_name": "SQUIRE"
+  },
+  {
+    "name": "Faded & Braided Barbershop",
+    "category": "barber",
+    "city": "Aurora",
+    "state": "CO",
+    "address": "10180 E Colfax Ave Suite 103",
+    "zip": "80010",
+    "booking_url": "https://getsquire.com/discover/united-states/colorado/aurora",
+    "source_url": "https://getsquire.com/discover/united-states/colorado/aurora",
+    "source_name": "SQUIRE"
+  },
+  {
+    "name": "Clipper Over Comb Barbershop",
+    "category": "barber",
+    "city": "Aurora",
+    "state": "CO",
+    "address": "15270 E 6th Ave Unit 8",
+    "zip": "80011",
+    "booking_url": "https://getsquire.com/discover/united-states/colorado/aurora",
+    "source_url": "https://getsquire.com/discover/united-states/colorado/aurora",
+    "source_name": "SQUIRE"
+  },
+  {
+    "name": "Legends Barbershop",
+    "category": "barber",
+    "city": "Aurora",
+    "state": "CO",
+    "address": "14200 E Alameda Ave",
+    "zip": "80012",
+    "booking_url": "https://getsquire.com/discover/united-states/colorado/aurora",
+    "source_url": "https://getsquire.com/discover/united-states/colorado/aurora",
+    "source_name": "SQUIRE"
+  },
+  {
+    "name": "Mile High Barbers",
+    "category": "barber",
+    "city": "Lakewood",
+    "state": "CO",
+    "address": "98 Wadsworth Blvd",
+    "zip": "80226",
+    "booking_url": "https://getsquire.com/discover/united-states/colorado/lakewood",
+    "source_url": "https://getsquire.com/discover/united-states/colorado/lakewood",
+    "source_name": "SQUIRE"
+  },
+  {
+    "name": "Lakewood Barbershop",
+    "category": "barber",
+    "city": "Lakewood",
+    "state": "CO",
+    "address": "13701 W Jewell Ave",
+    "zip": "80228",
+    "booking_url": "https://getsquire.com/discover/united-states/colorado/lakewood",
+    "source_url": "https://getsquire.com/discover/united-states/colorado/lakewood",
+    "source_name": "SQUIRE"
+  },
+  {
+    "name": "The Barber Shoppe",
+    "category": "barber",
+    "city": "Littleton",
+    "state": "CO",
+    "address": "5935 S Zang St",
+    "zip": "80127",
+    "booking_url": "https://getsquire.com/discover/united-states/colorado/littleton",
+    "source_url": "https://getsquire.com/discover/united-states/colorado/littleton",
+    "source_name": "SQUIRE"
+  },
+  {
+    "name": "Downtown Littleton Barbers",
+    "category": "barber",
+    "city": "Littleton",
+    "state": "CO",
+    "address": "2670 W Main St",
+    "zip": "80120",
+    "booking_url": "https://getsquire.com/discover/united-states/colorado/littleton",
+    "source_url": "https://getsquire.com/discover/united-states/colorado/littleton",
+    "source_name": "SQUIRE"
+  },
+  {
+    "name": "Highlands Ranch Barbers",
+    "category": "barber",
+    "city": "Highlands Ranch",
+    "state": "CO",
+    "address": "9567 S University Blvd",
+    "zip": "80126",
+    "booking_url": "https://getsquire.com/discover/united-states/colorado/highlands-ranch",
+    "source_url": "https://getsquire.com/discover/united-states/colorado/highlands-ranch",
+    "source_name": "SQUIRE"
+  }
+]
