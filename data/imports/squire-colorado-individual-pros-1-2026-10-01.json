@@ -1,0 +1,74 @@
+[
+  {
+    "name": "Isaiah Hernandez",
+    "category": "barber",
+    "workplace_name": "Northside Barbers",
+    "city": "Boulder",
+    "state": "CO",
+    "address": "2525 Arapahoe Ave, Unit A2",
+    "zip": "80302",
+    "booking_url": "https://getsquire.com/discover/barbershop/northside-barbers-boulder/barber/isaiah-hernandez",
+    "source_url": "https://getsquire.com/discover/barbershop/northside-barbers-boulder/barber/isaiah-hernandez",
+    "source_name": "SQUIRE"
+  },
+  {
+    "name": "Drea",
+    "category": "barber",
+    "workplace_name": "Gold Society Barbershop",
+    "city": "Thornton",
+    "state": "CO",
+    "address": "2661 East 120th Avenue",
+    "zip": "80233",
+    "booking_url": "https://getsquire.com/discover/barbershop/gold-society-barbershop-thornton/barber/drea-17",
+    "source_url": "https://getsquire.com/discover/barbershop/gold-society-barbershop-thornton/barber/drea-17",
+    "source_name": "SQUIRE"
+  },
+  {
+    "name": "Travis Young",
+    "category": "barber",
+    "workplace_name": "Prospect Trail Barbershop",
+    "city": "Denver",
+    "state": "CO",
+    "address": "3746 Tejon St",
+    "zip": "80211",
+    "booking_url": "https://getsquire.com/discover/barbershop/prospect-trail-barbershop-denver/barber/travis-young",
+    "source_url": "https://getsquire.com/discover/barbershop/prospect-trail-barbershop-denver/barber/travis-young",
+    "source_name": "SQUIRE"
+  },
+  {
+    "name": "Lincoln Lafrombois",
+    "category": "barber",
+    "workplace_name": "The barber linc",
+    "city": "Denver",
+    "state": "CO",
+    "address": "10200 E Girard Ave",
+    "zip": "80231",
+    "booking_url": "https://getsquire.com/discover/barbershop/the-barber-linc-denver/barber/lincoln-lafrombois",
+    "source_url": "https://getsquire.com/discover/barbershop/the-barber-linc-denver/barber/lincoln-lafrombois",
+    "source_name": "SQUIRE"
+  },
+  {
+    "name": "Amber Hagedorn",
+    "category": "barber",
+    "workplace_name": "The Barbery",
+    "city": "Denver",
+    "state": "CO",
+    "address": "8384 East Northfield Boulevard",
+    "zip": "80238",
+    "booking_url": "https://getsquire.com/discover/barbershop/the-barbery-denver/barber/amber-hagedorn",
+    "source_url": "https://getsquire.com/discover/barbershop/the-barbery-denver/barber/amber-hagedorn",
+    "source_name": "SQUIRE"
+  },
+  {
+    "name": "Matt Mitchell-cupp",
+    "category": "barber",
+    "workplace_name": "The Jefferson Barbershop",
+    "city": "Denver",
+    "state": "CO",
+    "address": "2912 W 25th Ave",
+    "zip": "80211",
+    "booking_url": "https://getsquire.com/discover/barbershop/the-jefferson-barbershop-denver/barber/matt-mitchell-cupp",
+    "source_url": "https://getsquire.com/discover/barbershop/the-jefferson-barbershop-denver/barber/matt-mitchell-cupp",
+    "source_name": "SQUIRE"
+  }
+]
