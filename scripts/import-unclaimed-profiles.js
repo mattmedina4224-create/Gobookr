@@ -14,6 +14,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const db = require('../db');
 const { normalizeSource, isApprovedBookingSource } = require('../lib/booking-platforms');
+const { clean, identity, normalizeZip, isHttpUrl } = require('../lib/import-normalization');
 
 const args = process.argv.slice(2);
 const inputPath = args.find((x) => !x.startsWith('--'));
@@ -28,10 +29,6 @@ const reportPath = reportArg ? path.resolve(reportArg.slice('--report='.length))
 const rows = JSON.parse(fs.readFileSync(path.resolve(inputPath), 'utf8'));
 if (!Array.isArray(rows)) throw new Error('Import file must contain a JSON array.');
 
-const clean = (v) => String(v || '').trim();
-const identity = (v) => clean(v).toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim().replace(/\s+/g, ' ');
-const normalizeZip = (v) => { const match = clean(v).match(/^(\d{5})(?:-\d{4})?$/); return match ? match[1] : clean(v); };
-const isHttpUrl = (v) => { try { const url = new URL(v); return url.protocol === 'https:' || url.protocol === 'http:'; } catch (_) { return false; } };
 const initials = (name) => clean(name).split(/\s+/).filter(Boolean).slice(0, 2).map((x) => x[0]).join('').toUpperCase() || 'GB';
 const { LEGACY_PROFILE_CATEGORIES: allowedLegacy, PROFESSIONAL_CATEGORY_VALUES: supportedCategories } = require('../lib/pro-categories');
 function fingerprint(row) {
