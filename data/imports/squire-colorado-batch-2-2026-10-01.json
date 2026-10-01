@@ -1,0 +1,123 @@
+[
+  {
+    "name": "The barber linc",
+    "category": "barber",
+    "city": "Denver",
+    "state": "CO",
+    "address": "10200 E Girard Ave",
+    "zip": "80231",
+    "booking_url": "https://getsquire.com/discover/barbershop/the-barber-linc-denver",
+    "source_url": "https://getsquire.com/discover/barbershop/the-barber-linc-denver",
+    "source_name": "SQUIRE"
+  },
+  {
+    "name": "The Barbery",
+    "category": "barber",
+    "city": "Denver",
+    "state": "CO",
+    "address": "8384 East Northfield Boulevard",
+    "zip": "80238",
+    "booking_url": "https://getsquire.com/discover/barbershop/the-barbery-denver",
+    "source_url": "https://getsquire.com/discover/barbershop/the-barbery-denver",
+    "source_name": "SQUIRE"
+  },
+  {
+    "name": "Barba Denver",
+    "category": "barber",
+    "city": "Denver",
+    "state": "CO",
+    "address": "3460 Park Ave W",
+    "zip": "80216",
+    "booking_url": "https://getsquire.com/discover/barbershop/barba-denver-denver",
+    "source_url": "https://getsquire.com/discover/barbershop/barba-denver-denver",
+    "source_name": "SQUIRE"
+  },
+  {
+    "name": "Breeze Barber Company - Denver",
+    "category": "barber",
+    "city": "Denver",
+    "state": "CO",
+    "address": "The Modern Salon Studios, 8000 E Quincy Avenue",
+    "zip": "80237",
+    "booking_url": "https://getsquire.com/discover/barbershop/breeze-barber-company-denver-denver",
+    "source_url": "https://getsquire.com/discover/barbershop/breeze-barber-company-denver-denver",
+    "source_name": "SQUIRE"
+  },
+  {
+    "name": "Blade & Comb - A Barbershop Experience",
+    "category": "barber",
+    "city": "Aurora",
+    "state": "CO",
+    "address": "24300 E Smoky Hill Rd #107",
+    "zip": "80016",
+    "booking_url": "https://getsquire.com/discover/barbershop/blade-and-comb-a-barbershop-experience-aurora",
+    "source_url": "https://getsquire.com/discover/barbershop/blade-and-comb-a-barbershop-experience-aurora",
+    "source_name": "SQUIRE"
+  },
+  {
+    "name": "NoCO Stellar Barbers",
+    "category": "barber",
+    "city": "Fort Collins",
+    "state": "CO",
+    "address": "2026 Bear Mountain Dr Unit 105",
+    "zip": "80525",
+    "booking_url": "https://getsquire.com/discover/barbershop/noco-stellar-barbers-fort-collins",
+    "source_url": "https://getsquire.com/discover/barbershop/noco-stellar-barbers-fort-collins",
+    "source_name": "SQUIRE"
+  },
+  {
+    "name": "Avila's - Fort Collins Harmony",
+    "category": "barber",
+    "city": "Fort Collins",
+    "state": "CO",
+    "address": "1514 E. Harmony Rd.",
+    "zip": "80525",
+    "booking_url": "https://getsquire.com/discover/barbershop/avilas-fort-collins-harmony-fort-collins",
+    "source_url": "https://getsquire.com/discover/barbershop/avilas-fort-collins-harmony-fort-collins",
+    "source_name": "SQUIRE"
+  },
+  {
+    "name": "RICKYBs Barbershop",
+    "category": "barber",
+    "city": "Fort Collins",
+    "state": "CO",
+    "address": "1945 Jessup Drive",
+    "zip": "80525",
+    "booking_url": "https://getsquire.com/discover/barbershop/rickybs-barbershop-fort-collins",
+    "source_url": "https://getsquire.com/discover/barbershop/rickybs-barbershop-fort-collins",
+    "source_name": "SQUIRE"
+  },
+  {
+    "name": "Details Barbershop",
+    "category": "barber",
+    "city": "Colorado Springs",
+    "state": "CO",
+    "address": "3444 West Carefree Circle",
+    "zip": "80917",
+    "booking_url": "https://getsquire.com/discover/barbershop/details-barbershop-colorado-springs",
+    "source_url": "https://getsquire.com/discover/barbershop/details-barbershop-colorado-springs",
+    "source_name": "SQUIRE"
+  },
+  {
+    "name": "Forged & Finesse Barber Shop",
+    "category": "barber",
+    "city": "Colorado Springs",
+    "state": "CO",
+    "address": "1001 S. Tejon St.",
+    "zip": "80903",
+    "booking_url": "https://getsquire.com/discover/barbershop/forged-and-finesse-barber-shop-colorado-springs",
+    "source_url": "https://getsquire.com/discover/barbershop/forged-and-finesse-barber-shop-colorado-springs",
+    "source_name": "SQUIRE"
+  },
+  {
+    "name": "Top Tier Taperz Barbershop",
+    "category": "barber",
+    "city": "Colorado Springs",
+    "state": "CO",
+    "address": "3647 Star Ranch Rd",
+    "zip": "80906",
+    "booking_url": "https://getsquire.com/discover/barbershop/top-tier-taperz-barbershop-colorado-springs",
+    "source_url": "https://getsquire.com/discover/barbershop/top-tier-taperz-barbershop-colorado-springs",
+    "source_name": "SQUIRE"
+  }
+]
