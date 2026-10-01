@@ -33,3 +33,15 @@ jobs:
         env:
           GOBOOKR_PGLITE_MODULE: '@electric-sql/pglite'
         run: npm test
+
+  import-files:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Audit repository import batches
+        run: npm run audit:import-files
