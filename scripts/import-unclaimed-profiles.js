@@ -13,7 +13,8 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const db = require('../db');
-const { normalizeSource } = require('../lib/booking-platforms');
+const { normalizeSource, isApprovedBookingSource } = require('../lib/booking-platforms');
+const { clean, identity, normalizeZip, isHttpUrl } = require('../lib/import-normalization');
 
 const args = process.argv.slice(2);
 const inputPath = args.find((x) => !x.startsWith('--'));
@@ -28,23 +29,8 @@ const reportPath = reportArg ? path.resolve(reportArg.slice('--report='.length))
 const rows = JSON.parse(fs.readFileSync(path.resolve(inputPath), 'utf8'));
 if (!Array.isArray(rows)) throw new Error('Import file must contain a JSON array.');
 
-const clean = (v) => String(v || '').trim();
-const identity = (v) => clean(v).toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim().replace(/\s+/g, ' ');
 const initials = (name) => clean(name).split(/\s+/).filter(Boolean).slice(0, 2).map((x) => x[0]).join('').toUpperCase() || 'GB';
 const { LEGACY_PROFILE_CATEGORIES: allowedLegacy, PROFESSIONAL_CATEGORY_VALUES: supportedCategories } = require('../lib/pro-categories');
-const approvedHosts = [
-  'booksy.com', 'glossgenius.com', 'square.site', 'squareup.com', 'vagaro.com',
-  'joinblvd.com', 'boulevard.io', 'mangomint.com', 'zenoti.com', 'booker.com',
-  'squire.com', 'getsquire.com',
-];
-
-function sourceHost(value) {
-  try { return new URL(value).hostname.toLowerCase().replace(/^www\./, ''); } catch (_) { return ''; }
-}
-function isApprovedSource(value) {
-  const host = sourceHost(value);
-  return approvedHosts.some((allowed) => host === allowed || host.endsWith('.' + allowed));
-}
 function fingerprint(row) {
   return [row.name, row.workplace, row.city, row.state, row.address, row.zip].map(identity).join('|');
 }
@@ -71,7 +57,7 @@ for (const input of rows) {
     city: clean(raw.city),
     state: clean(raw.state).toUpperCase(),
     address: clean(raw.street_address || raw.address || raw.workplace_address),
-    zip: clean(raw.zip_code || raw.zip || raw.workplace_zip),
+    zip: normalizeZip(raw.zip_code || raw.zip || raw.workplace_zip),
     bookingUrl: clean(raw.booking_url),
     sourceUrl: clean(raw.source_url),
     sourceName: clean(raw.source_name),
@@ -86,8 +72,11 @@ for (const input of rows) {
     reject('missing_required_factual_fields'); continue;
   }
   if (!supportedCategories.has(row.category)) { reject('unsupported_category'); continue; }
+  if (!/^[A-Z]{2}$/.test(row.state)) { reject('invalid_state'); continue; }
+  if (row.zip && !/^\d{5}$/.test(row.zip)) { reject('invalid_zip'); continue; }
   if (expectedState && row.state !== expectedState) { reject('state_mismatch'); continue; }
-  if (!isApprovedSource(row.sourceUrl)) { reject('unapproved_source_host'); continue; }
+  if (!isApprovedBookingSource(row.sourceUrl)) { reject('unapproved_source_host'); continue; }
+  if (row.bookingUrl && !isHttpUrl(row.bookingUrl)) { reject('invalid_booking_url'); continue; }
 
   const key = fingerprint(row);
   if (seen.has(key)) { reject('duplicate_inside_import_file'); continue; }
@@ -99,7 +88,7 @@ for (const input of rows) {
     && identity(candidate.business_name) === identity(row.name)
     && identity(candidate.workplace_name) === identity(row.workplace)
     && (!row.address || !candidate.street_address || identity(candidate.street_address) === identity(row.address))
-    && (!row.zip || !candidate.zip_code || clean(candidate.zip_code) === row.zip));
+    && (!row.zip || !candidate.zip_code || normalizeZip(candidate.zip_code) === row.zip));
 
   if (existing) {
     const existingCategory = db.prepare('SELECT 1 AS found FROM pro_categories WHERE pro_id = ? AND category = ?').get(existing.id, row.category);
@@ -138,11 +127,13 @@ for (const input of rows) {
 }
 
 report.finished_at = new Date().toISOString();
+const rejectedByReason = report.rejected.reduce((counts, item) => { counts[item.reason] = (counts[item.reason] || 0) + 1; return counts; }, {});
 report.summary = {
   inserted: report.inserted.length,
   categories_added: report.categories_added.length,
   duplicates: report.duplicates.length,
   rejected: report.rejected.length,
+  rejected_by_reason: rejectedByReason,
 };
 
 if (reportPath) {
