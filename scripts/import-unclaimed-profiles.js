@@ -75,6 +75,8 @@ for (const input of rows) {
     reject('missing_required_factual_fields'); continue;
   }
   if (!supportedCategories.has(row.category)) { reject('unsupported_category'); continue; }
+  if (!/^[A-Z]{2}$/.test(row.state)) { reject('invalid_state'); continue; }
+  if (row.zip && !/^\d{5}$/.test(row.zip)) { reject('invalid_zip'); continue; }
   if (expectedState && row.state !== expectedState) { reject('state_mismatch'); continue; }
   if (!isApprovedBookingSource(row.sourceUrl)) { reject('unapproved_source_host'); continue; }
   if (row.bookingUrl && !isHttpUrl(row.bookingUrl)) { reject('invalid_booking_url'); continue; }
