@@ -102,6 +102,6 @@ test('campaign queue uses customer-friendly status labels', () => {
 test('empty campaign queue gives pros a clear next action', () => {
  const source=fs.readFileSync(path.join(__dirname,'..','routes','pro.js'),'utf8');
  assert.match(source,/Nothing queued yet\./);
- assert.match(source,/Create openings post/);
+ assert.match(source,/Post today’s openings/);
  assert.match(source,/campaign=openings-today/);
 });
