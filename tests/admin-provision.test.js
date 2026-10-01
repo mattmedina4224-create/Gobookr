@@ -89,7 +89,7 @@ test('migration, grants, session invalidation, revocation and rollback in isolat
 
 test('every admin route enforces server-side admin access', () => {
   const source = fs.readFileSync(path.join(__dirname, '..', 'routes', 'admin.js'), 'utf8');
-  const routeStarts = [...source.matchAll(/router\.(get|post)\('(?:\\\/)?admin[^']*'[\s\S]*?=> \{/g)].map((match) => match.index);
+  const routeStarts = [...source.matchAll(/router\.(?:get|post)\('\/admin[^']*', async \(ctx\) => \{/g)].map((match) => match.index);
   assert.ok(routeStarts.length >= 8, 'expected multiple admin routes');
   for (let i = 0; i < routeStarts.length; i += 1) {
     const start = routeStarts[i];
