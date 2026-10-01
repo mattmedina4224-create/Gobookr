@@ -1,0 +1,57 @@
+[
+  {
+    "name": "Hair by Audrey",
+    "category": "stylist",
+    "city": "Denver",
+    "state": "CO",
+    "address": "4700 E 23rd Ave",
+    "zip": "80207",
+    "booking_url": "https://hairbyaudreydenver.glossgenius.com/",
+    "source_url": "https://hairbyaudreydenver.glossgenius.com/",
+    "source_name": "GlossGenius"
+  },
+  {
+    "name": "The Curl Salon Denver",
+    "category": "stylist",
+    "city": "Denver",
+    "state": "CO",
+    "address": "1625 17th St",
+    "zip": "80202",
+    "booking_url": "https://thecurlsalondenver.glossgenius.com/",
+    "source_url": "https://thecurlsalondenver.glossgenius.com/",
+    "source_name": "GlossGenius"
+  },
+  {
+    "name": "Hair by Natalie",
+    "category": "stylist",
+    "city": "Denver",
+    "state": "CO",
+    "address": "300 Josephine St",
+    "zip": "80206",
+    "booking_url": "https://hairbynataliedenver.glossgenius.com/",
+    "source_url": "https://hairbynataliedenver.glossgenius.com/",
+    "source_name": "GlossGenius"
+  },
+  {
+    "name": "Lash Therapy Denver",
+    "category": "eyelash_technician",
+    "city": "Denver",
+    "state": "CO",
+    "address": "4340 E Kentucky Ave",
+    "zip": "80246",
+    "booking_url": "https://lashtherapydenver.glossgenius.com/",
+    "source_url": "https://lashtherapydenver.glossgenius.com/",
+    "source_name": "GlossGenius"
+  },
+  {
+    "name": "Brows by Bri",
+    "category": "eyebrow_technician",
+    "city": "Denver",
+    "state": "CO",
+    "address": "2839 W 44th Ave",
+    "zip": "80211",
+    "booking_url": "https://browsbybridenver.glossgenius.com/",
+    "source_url": "https://browsbybridenver.glossgenius.com/",
+    "source_name": "GlossGenius"
+  }
+]
