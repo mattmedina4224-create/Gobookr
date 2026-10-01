@@ -94,8 +94,9 @@ for (const input of rows) {
   seen.add(key);
 
   const candidates = db.prepare(`SELECT id, business_name, workplace_name, city, state, street_address, zip_code FROM pro_profiles
-    WHERE UPPER(state) = UPPER(?) AND LOWER(city) = LOWER(?)`).all(row.state, row.city);
-  const existing = candidates.find((candidate) => identity(candidate.business_name) === identity(row.name)
+    WHERE UPPER(state) = UPPER(?)`).all(row.state);
+  const existing = candidates.find((candidate) => identity(candidate.city) === identity(row.city)
+    && identity(candidate.business_name) === identity(row.name)
     && identity(candidate.workplace_name) === identity(row.workplace)
     && (!row.address || !candidate.street_address || identity(candidate.street_address) === identity(row.address))
     && (!row.zip || !candidate.zip_code || clean(candidate.zip_code) === row.zip));
