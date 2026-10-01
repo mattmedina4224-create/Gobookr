@@ -2,6 +2,7 @@
 
 const db = require('../db');
 const { PROFESSIONAL_CATEGORY_VALUES: supportedCategories } = require('../lib/pro-categories');
+const { identity } = require('../lib/import-normalization');
 
 const profiles = db.prepare(`SELECT id, user_id, business_name, city, state, workplace_name, street_address, zip_code,
   claim_status, source_url, source_name, source_checked_at
@@ -18,7 +19,6 @@ for (const row of categories) {
 
 const issues = [];
 const duplicateKeys = new Map();
-const norm = (v) => String(v || '').trim().toLowerCase().replace(/\s+/g, ' ');
 
 for (const pro of profiles) {
   const id = Number(pro.id);
@@ -28,7 +28,7 @@ for (const pro of profiles) {
   if (!cats.length) issues.push({ id, type: 'missing_category', detail: 'No pro_categories row.' });
   for (const category of cats) if (!supportedCategories.has(category)) issues.push({ id, type: 'unsupported_category', detail: category });
 
-  const key = [norm(pro.business_name), norm(pro.workplace_name), norm(pro.city), norm(pro.state)].join('|');
+  const key = [identity(pro.business_name), identity(pro.workplace_name), identity(pro.city), identity(pro.state)].join('|');
   if (!duplicateKeys.has(key)) duplicateKeys.set(key, []);
   duplicateKeys.get(key).push(id);
 }
