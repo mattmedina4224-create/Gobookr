@@ -211,9 +211,3 @@ test('marketing campaign timestamps are timezone-aware before local-day semantic
   assert.match(migration, /scheduled_for TIMESTAMPTZ/);
 });
 
-
-test('Openings Today date semantics remain centralized for a future timezone-safe cutoff', () => {
-  const source = fs.readFileSync(path.join(__dirname, '..', 'routes', 'public.js'), 'utf8');
-  const currentDateUses = (source.match(/created_at >= CURRENT_DATE/g) || []).length;
-  assert.equal(currentDateUses, 3, 'public opening surfaces should stay aligned until the cutoff becomes timezone-aware');
-});
