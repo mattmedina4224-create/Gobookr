@@ -18,3 +18,14 @@ test('claim approval is transactional and failure rolls ownership back',()=>{
   assert.match(block,/db\.exec\('ROLLBACK'\)/);
   assert.match(block,/if \(!attached\.changes\) throw new Error/);
 });
+
+
+test('claim rejection only reopens an unowned profile after the final pending claim',()=>{
+  assert.match(src,/SELECT id FROM profile_claims WHERE pro_id=\? AND status='pending' LIMIT 1/);
+  assert.match(src,/if \(!remaining\) db\.prepare\("UPDATE pro_profiles SET claim_status='unclaimed' WHERE id=\? AND user_id IS NULL AND claim_status='claim_pending'"\)/);
+});
+
+test('claim approval rejects competing pending claims and records the reviewer',()=>{
+  assert.match(src,/UPDATE profile_claims SET status='approved', reviewed_at=CURRENT_TIMESTAMP, reviewer_user_id=\? WHERE id=\? AND status='pending'/);
+  assert.match(src,/UPDATE profile_claims SET status='rejected', reviewed_at=CURRENT_TIMESTAMP, reviewer_user_id=\? WHERE pro_id=\? AND id != \? AND status='pending'/);
+});
