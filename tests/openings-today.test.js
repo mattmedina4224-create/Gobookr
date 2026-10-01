@@ -197,3 +197,17 @@ test('opening detail pages are shareable and have rich social metadata', () => {
   assert.match(src, /canonical: shareUrl/);
   assert.match(src, /shareImage: pro\.profile_photo_url/);
 });
+
+
+test('Openings Today uses one explicit marketplace day boundary everywhere', () => {
+  const source = fs.readFileSync(path.join(__dirname, '..', 'routes', 'public.js'), 'utf8');
+  const currentDateChecks = source.match(/created_at >= CURRENT_DATE/g) || [];
+  assert.equal(currentDateChecks.length, 3, 'listing, opening detail, and profile banner must share the same day rule');
+});
+
+test('marketing campaign timestamps are timezone-aware before local-day semantics change', () => {
+  const migration = fs.readFileSync(path.join(__dirname, '..', 'db', 'migrations', '20260925040500_marketing_campaigns.sql'), 'utf8');
+  assert.match(migration, /created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP/);
+  assert.match(migration, /scheduled_for TIMESTAMPTZ/);
+});
+
