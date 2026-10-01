@@ -12,17 +12,17 @@ test('existing profiles gain categories without overwriting profile ownership or
 });
 
 test('inventory importer normalizes punctuation and whitespace for identity dedupe',()=>{
- assert.match(src,/const identity = \(v\).*replace\(\/\[\^a-z0-9\]\+\/g, ' '\).*replace\(\/\\s\+\/g, ' '\)/);
+ assert.match(src,/require\('\.\.\/lib\/import-normalization'\)/);
  assert.match(src,/identity\(candidate\.city\) === identity\(row\.city\)/);
  assert.match(src,/identity\(candidate\.business_name\) === identity\(row\.name\)/);
  assert.match(src,/identity\(candidate\.workplace_name\) === identity\(row\.workplace\)/);
 });
 
 test('inventory importer normalizes ZIP+4 and rejects unsafe booking URLs',()=>{
- assert.match(src,/const normalizeZip =/);
+ assert.match(src,/normalizeZip\(raw\.zip_code/);
  assert.match(src,/normalizeZip\(raw\.zip_code \|\| raw\.zip \|\| raw\.workplace_zip\)/);
  assert.match(src,/invalid_booking_url/);
- assert.match(src,/url\.protocol === 'https:' \|\| url\.protocol === 'http:'/);
+ assert.match(src,/isHttpUrl\(row\.bookingUrl\)/);
  assert.match(src,/normalizeZip\(candidate\.zip_code\) === row\.zip/);
 });
 
