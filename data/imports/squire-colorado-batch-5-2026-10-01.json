@@ -1,0 +1,57 @@
+[
+  {
+    "name": "Gold Society Barbershop",
+    "category": "barber",
+    "city": "Thornton",
+    "state": "CO",
+    "address": "2661 East 120th Avenue",
+    "zip": "80233",
+    "booking_url": "https://getsquire.com/discover/barbershop/gold-society-barbershop-thornton",
+    "source_url": "https://getsquire.com/discover/barbershop/gold-society-barbershop-thornton",
+    "source_name": "SQUIRE"
+  },
+  {
+    "name": "Mountain Fades Barbershop",
+    "category": "barber",
+    "city": "Thornton",
+    "state": "CO",
+    "address": "3750 East 104th Avenue",
+    "zip": "80233",
+    "booking_url": "https://getsquire.com/discover/barbershop/mountain-fades-barbershop-thornton",
+    "source_url": "https://getsquire.com/discover/barbershop/mountain-fades-barbershop-thornton",
+    "source_name": "SQUIRE"
+  },
+  {
+    "name": "Northside Barbers",
+    "category": "barber",
+    "city": "Boulder",
+    "state": "CO",
+    "address": "2525 Arapahoe Ave, Unit A2",
+    "zip": "80302",
+    "booking_url": "https://getsquire.com/discover/barbershop/northside-barbers-boulder",
+    "source_url": "https://getsquire.com/discover/barbershop/northside-barbers-boulder",
+    "source_name": "SQUIRE"
+  },
+  {
+    "name": "Scissorhand Design Studio",
+    "category": "barber",
+    "city": "Northglenn",
+    "state": "CO",
+    "address": "421 west 104th Ave unit A",
+    "zip": "80234",
+    "booking_url": "https://getsquire.com/discover/barbershop/scissorhand-design-studio-northglenn-1",
+    "source_url": "https://getsquire.com/discover/barbershop/scissorhand-design-studio-northglenn-1",
+    "source_name": "SQUIRE"
+  },
+  {
+    "name": "Brixton Barbers",
+    "category": "barber",
+    "city": "Centennial",
+    "state": "CO",
+    "address": "5730 E Otero Ave",
+    "zip": "80112",
+    "booking_url": "https://getsquire.com/discover/barbershop/brixton-barbers-centennial",
+    "source_url": "https://getsquire.com/discover/barbershop/brixton-barbers-centennial",
+    "source_name": "SQUIRE"
+  }
+]
