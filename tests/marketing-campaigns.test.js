@@ -114,3 +114,9 @@ test('marketing share failures use accessible inline feedback', () => {
  assert.doesNotMatch(source,/alert\('Sharing is not available right now\.'\)/);
  assert.doesNotMatch(source,/alert\('Copy is not available right now\.'\)/);
 });
+
+
+test('Marketing Center live opening count matches public today semantics', () => {
+ const source=fs.readFileSync(path.join(__dirname,'..','routes','pro.js'),'utf8');
+ assert.match(source,/campaign_type IN \('openings-today','last-minute'\) AND created_at >= CURRENT_DATE\) AS live_opening_count/);
+});
