@@ -10,3 +10,9 @@ test('inventory importer is idempotent and never creates user accounts',()=>{
 test('existing profiles gain categories without overwriting profile ownership or details',()=>{
  assert.match(src,/INSERT INTO pro_categories \(pro_id, category\) VALUES \(\?, \?\)/);assert.doesNotMatch(src,/UPDATE pro_profiles SET/);
 });
+
+test('inventory importer normalizes punctuation and whitespace for identity dedupe',()=>{
+ assert.match(src,/const identity = \(v\).*replace\(\/\[\^a-z0-9\]\+\/g, ' '\).*replace\(\/\\s\+\/g, ' '\)/);
+ assert.match(src,/identity\(candidate\.business_name\) === identity\(row\.name\)/);
+ assert.match(src,/identity\(candidate\.workplace_name\) === identity\(row\.workplace\)/);
+});
