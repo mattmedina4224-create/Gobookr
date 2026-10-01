@@ -127,3 +127,15 @@ test('Marketing Center quick slots and share feedback are accessible', () => {
  assert.match(source,/aria-label="Add opening today at 12:00 PM"/);
  assert.match(source,/id="marketing-share-status"[^>]*aria-live="polite"[^>]*aria-atomic="true"/);
 });
+
+
+test('Marketing Center prevents duplicate async share actions', () => {
+  const source = fs.readFileSync(path.join(__dirname, '..', 'routes', 'pro.js'), 'utf8');
+  assert.match(source, /const withBusy=async\(button,work\)=>/);
+  assert.match(source, /button\.disabled=true/);
+  assert.match(source, /button\.setAttribute\('aria-busy','true'\)/);
+  assert.match(source, /button\.disabled=false/);
+  assert.match(source, /withBusy\(saveStory/);
+  assert.match(source, /withBusy\(share/);
+  assert.match(source, /withBusy\(copyLink/);
+});
