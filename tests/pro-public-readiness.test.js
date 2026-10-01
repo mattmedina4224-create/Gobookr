@@ -15,3 +15,9 @@ test('owned profiles require completed onboarding before public discovery', () =
   assert.match(listings, /if \(!subscription \|\| !isPubliclyVisibleSubscription\(subscription\)\) return null/);
   assert.match(listings, /importedListing/);
 });
+
+test('imported listings require core identity and provenance before discovery', () => {
+  const listings = fs.readFileSync(path.join(__dirname, '..', 'lib', 'pro-listing-data.js'), 'utf8');
+  assert.match(listings, /if \(importedListing\)/);
+  assert.match(listings, /!pro\.business_name \|\| !pro\.city \|\| !pro\.state \|\| !pro\.source_url \|\| !pro\.source_name/);
+});
