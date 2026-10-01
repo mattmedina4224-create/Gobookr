@@ -168,7 +168,7 @@ module.exports = function (router) {
     let sql = 'SELECT * FROM pro_profiles WHERE 1=1'; const args = [];
     if (category) { sql += ' AND EXISTS (SELECT 1 FROM pro_categories pc WHERE pc.pro_id = pro_profiles.id AND pc.category = ?)'; args.push(category); }
     if (city && !hasRadiusCenter) { sql += " AND (city LIKE ? ESCAPE '\\' OR state LIKE ? ESCAPE '\\' OR zip_code LIKE ? ESCAPE '\\')"; const value = likeValue(city); args.push(value, value, value); }
-    if (q) { const cleanQ = q.replace(/^@+/, ''); sql += " AND (business_name LIKE ? ESCAPE '\\' OR professional_handle LIKE ? ESCAPE '\\' OR workplace_name LIKE ? ESCAPE '\\')"; const value = likeValue(cleanQ); args.push(value, value, value); }
+    if (q) { const cleanQ = q.replace(/^@+/, ''); sql += " AND (business_name LIKE ? ESCAPE '\\' OR professional_handle LIKE ? ESCAPE '\\' OR workplace_name LIKE ? ESCAPE '\\' OR EXISTS (SELECT 1 FROM services qs WHERE qs.pro_id = pro_profiles.id AND qs.name LIKE ? ESCAPE '\\') OR EXISTS (SELECT 1 FROM pro_categories qc WHERE qc.pro_id = pro_profiles.id AND REPLACE(qc.category, '_', ' ') LIKE ? ESCAPE '\\'))"; const value = likeValue(cleanQ); args.push(value, value, value, value, value); }
     if (radiusBounds) { sql += ' AND latitude BETWEEN ? AND ? AND longitude BETWEEN ? AND ?'; args.push(radiusBounds.minLat, radiusBounds.maxLat, radiusBounds.minLon, radiusBounds.maxLon); }
     sql += ' ORDER BY id DESC LIMIT 200';
     let results = hydratePros(db.prepare(sql).all(...args));
