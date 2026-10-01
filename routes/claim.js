@@ -17,6 +17,7 @@ module.exports = function (router) {
 
     const signedIn = Boolean(ctx.currentUser);
     const alreadyPending = signedIn ? Boolean(pendingClaim(pro.id, ctx.currentUser.id)) : false;
+    if (pro.user_id || pro.claim_status === 'claimed') return send(ctx.res, '<h1>This profile has already been claimed.</h1>', 409);
     const actionHtml = alreadyPending
       ? `<div class="panel claim-status-card"><span class="badge category">Under review</span><h2>Claim request received</h2><p class="muted">We’re reviewing the ownership details you submitted. You can keep using GoBookr while the profile remains public.</p><p class="muted claim-next-step"><strong>What happens next:</strong> after approval, this profile will be connected to your account and your 30-day professional trial will begin.</p></div>`
       : signedIn

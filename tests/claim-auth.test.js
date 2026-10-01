@@ -304,3 +304,9 @@ test('password and verified Google login preserve explicitly provisioned privile
     }
   }
 });
+
+
+test('already claimed profiles fail closed on the claim page', () => {
+  const source = fs.readFileSync(path.join(__dirname, '..', 'routes', 'claim.js'), 'utf8');
+  assert.match(source, /if \(pro\.user_id \|\| pro\.claim_status === 'claimed'\) return send\(ctx\.res, '<h1>This profile has already been claimed\.<\/h1>', 409\);/);
+});
