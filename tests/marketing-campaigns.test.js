@@ -120,3 +120,10 @@ test('Marketing Center live opening count matches public today semantics', () =>
  const source=fs.readFileSync(path.join(__dirname,'..','routes','pro.js'),'utf8');
  assert.match(source,/campaign_type IN \('openings-today','last-minute'\) AND created_at >= CURRENT_DATE\) AS live_opening_count/);
 });
+
+
+test('Marketing Center quick slots and share feedback are accessible', () => {
+ const source=fs.readFileSync(path.join(__dirname,'..','routes','pro.js'),'utf8');
+ assert.match(source,/aria-label="Add opening today at 12:00 PM"/);
+ assert.match(source,/id="marketing-share-status"[^>]*aria-live="polite"[^>]*aria-atomic="true"/);
+});
