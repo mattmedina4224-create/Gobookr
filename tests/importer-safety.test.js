@@ -17,3 +17,11 @@ test('inventory importer normalizes punctuation and whitespace for identity dedu
  assert.match(src,/identity\(candidate\.business_name\) === identity\(row\.name\)/);
  assert.match(src,/identity\(candidate\.workplace_name\) === identity\(row\.workplace\)/);
 });
+
+test('inventory importer normalizes ZIP+4 and rejects unsafe booking URLs',()=>{
+ assert.match(src,/const normalizeZip =/);
+ assert.match(src,/normalizeZip\(raw\.zip_code \|\| raw\.zip \|\| raw\.workplace_zip\)/);
+ assert.match(src,/invalid_booking_url/);
+ assert.match(src,/url\.protocol === 'https:' \|\| url\.protocol === 'http:'/);
+ assert.match(src,/normalizeZip\(candidate\.zip_code\) === row\.zip/);
+});
