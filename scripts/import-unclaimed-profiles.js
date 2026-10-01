@@ -128,11 +128,13 @@ for (const input of rows) {
 }
 
 report.finished_at = new Date().toISOString();
+const rejectedByReason = report.rejected.reduce((counts, item) => { counts[item.reason] = (counts[item.reason] || 0) + 1; return counts; }, {});
 report.summary = {
   inserted: report.inserted.length,
   categories_added: report.categories_added.length,
   duplicates: report.duplicates.length,
   rejected: report.rejected.length,
+  rejected_by_reason: rejectedByReason,
 };
 
 if (reportPath) {
