@@ -48,3 +48,17 @@ test('professional pages pass a safe photo into social share metadata', () => {
   assert.match(layout, /property="og:image"/);
   assert.match(layout, /summary_large_image/);
 });
+
+
+test('booking links preserve sanitized campaign attribution end to end', () => {
+  const source = fs.readFileSync(path.join(__dirname, '..', 'routes', 'public.js'), 'utf8');
+  assert.match(source, /const attributionSource = queryText\(ctx\.query\.source, 80\)\.replace/);
+  assert.match(source, /const bookingHref = '\/book\/' \+ pro\.id \+ \(attributionSource \? '\?source=' \+ encodeURIComponent\(attributionSource\) : ''\);/);
+  assert.match(source, /event_type, actor_user_id, source\) VALUES \(\?, 'booking_click', \?, \?\)/);
+});
+
+test('marketing and opening analytics keep their attribution buckets separate', () => {
+  const source = fs.readFileSync(path.join(__dirname, '..', 'routes', 'pro.js'), 'utf8');
+  assert.match(source, /AND source LIKE 'marketing-%'/);
+  assert.match(source, /source IN \('openings-today','profile-opening'\)/);
+});
