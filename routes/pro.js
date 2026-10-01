@@ -370,7 +370,7 @@ module.exports = function (router) {
     try {
       campaignCounts = db.prepare(`SELECT
         COUNT(*) FILTER (WHERE status = 'scheduled') AS scheduled_count,
-        COUNT(*) FILTER (WHERE status = 'published' AND campaign_type IN ('openings-today','last-minute')) AS live_opening_count
+        COUNT(*) FILTER (WHERE status = 'published' AND campaign_type IN ('openings-today','last-minute') AND created_at >= CURRENT_DATE) AS live_opening_count
         FROM marketing_campaigns WHERE pro_id = ?`).get(profile.id) || campaignCounts;
     } catch (err) { console.error('Campaign counts unavailable', err); }
     const scheduledCount = Number(campaignCounts.scheduled_count || 0);
