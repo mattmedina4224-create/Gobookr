@@ -105,3 +105,12 @@ test('empty campaign queue gives pros a clear next action', () => {
  assert.match(source,/Post today’s openings/);
  assert.match(source,/campaign=openings-today/);
 });
+
+
+test('marketing share failures use accessible inline feedback', () => {
+ const source=fs.readFileSync(path.join(__dirname,'..','routes','pro.js'),'utf8');
+ assert.match(source,/setShareStatus\('Sharing is not available right now\.'\)/);
+ assert.match(source,/setShareStatus\('Copy is not available right now\.'\)/);
+ assert.doesNotMatch(source,/alert\('Sharing is not available right now\.'\)/);
+ assert.doesNotMatch(source,/alert\('Copy is not available right now\.'\)/);
+});
