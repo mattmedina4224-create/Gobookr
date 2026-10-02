@@ -21,3 +21,12 @@ test('imported listings require core identity and provenance before discovery', 
   assert.match(listings, /if \(importedListing\)/);
   assert.match(listings, /!pro\.business_name \|\| !pro\.city \|\| !pro\.state \|\| !pro\.source_url \|\| !pro\.source_name/);
 });
+
+
+test('sitemap only advertises structurally ready imported profiles', () => {
+  const server = fs.readFileSync(path.join(__dirname, '..', 'server.js'), 'utf8');
+  assert.match(server, /p\.claim_status IN \('unclaimed','claim_pending'\)/);
+  assert.match(server, /COALESCE\(p\.business_name,''\) <> ''/);
+  assert.match(server, /COALESCE\(p\.source_url,''\) <> ''/);
+  assert.match(server, /COALESCE\(p\.source_name,''\) <> ''/);
+});
