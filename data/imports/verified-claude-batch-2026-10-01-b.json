@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Fabiola Palacios",
+    "category": "nail_technician",
+    "workplace_name": "My Nails",
+    "city": "Loveland",
+    "state": "CO",
+    "address": "673 E Eisenhower Blvd",
+    "zip": "80537",
+    "booking_url": "https://booksy.com/en-us/1406172_my-nails_nail-salon_15073_loveland",
+    "source_url": "https://booksy.com/en-us/1406172_my-nails_nail-salon_15073_loveland",
+    "source_name": "Booksy"
+  },
+  {
+    "name": "Krystal Valero",
+    "category": "nail_technician",
+    "workplace_name": "Divine Nails of NoCo LLC",
+    "city": "Loveland",
+    "state": "CO",
+    "address": "673 E Eisenhower Blvd",
+    "zip": "80537",
+    "booking_url": "https://booksy.com/en-us/527698_divine-nails-of-noco-llc_nail-salon_15073_loveland",
+    "source_url": "https://booksy.com/en-us/527698_divine-nails-of-noco-llc_nail-salon_15073_loveland",
+    "source_name": "Booksy"
+  },
+  {
+    "name": "Emily Franklin",
+    "category": "stylist",
+    "workplace_name": "Hair By Emily At Josefinas",
+    "city": "Fort Collins",
+    "state": "CO",
+    "address": "353 W Drake Rd, Suite 110",
+    "zip": "80525",
+    "booking_url": "https://booksy.com/en-us/158102_hair-by-emily-at-josefinas_hair-salon_15069_fort-collins",
+    "source_url": "https://booksy.com/en-us/158102_hair-by-emily-at-josefinas_hair-salon_15069_fort-collins",
+    "source_name": "Booksy"
+  },
+  {
+    "name": "Aubrey Vialpando",
+    "category": "stylist",
+    "workplace_name": "Serenity Salon",
+    "city": "Castle Rock",
+    "state": "CO",
+    "address": "4714 Milestone Ln, Suite 102",
+    "zip": "80104",
+    "booking_url": "https://aubreycolegrove.glossgenius.com/about",
+    "source_url": "https://aubreycolegrove.glossgenius.com/about",
+    "source_name": "GlossGenius"
+  },
+  {
+    "name": "Kiley Nevling",
+    "category": "stylist",
+    "workplace_name": "Serenity Salon",
+    "city": "Castle Rock",
+    "state": "CO",
+    "address": "4714 Milestone Ln, Suite 102",
+    "zip": "80104",
+    "booking_url": "https://kileynevling.glossgenius.com/",
+    "source_url": "https://kileynevling.glossgenius.com/",
+    "source_name": "GlossGenius"
+  },
+  {
+    "name": "Kalli Holland",
+    "category": "stylist",
+    "workplace_name": "Calico Salon",
+    "city": "Castle Rock",
+    "state": "CO",
+    "address": "703 Wilcox St, Suite F",
+    "zip": "80104",
+    "booking_url": "https://calicosalon.glossgenius.com/team",
+    "source_url": "https://calicosalon.glossgenius.com/team",
+    "source_name": "GlossGenius"
+  },
+  {
+    "name": "Ariana Vo",
+    "category": "stylist",
+    "workplace_name": "Calico Salon",
+    "city": "Castle Rock",
+    "state": "CO",
+    "address": "703 Wilcox St, Suite F",
+    "zip": "80104",
+    "booking_url": "https://calicosalon.glossgenius.com/team",
+    "source_url": "https://calicosalon.glossgenius.com/team",
+    "source_name": "GlossGenius"
+  }
+]
