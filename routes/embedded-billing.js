@@ -5,6 +5,7 @@ const { layout } = require('../lib/layout');
 const { send, redirect } = require('../lib/http');
 const { escapeHtml } = require('../lib/util');
 const {
+  stripeConfigured,
   embeddedCheckoutConfigured,
   stripePublishableKey,
   createCheckoutSession,
@@ -56,18 +57,19 @@ module.exports = function (router) {
     if (subscription.stripe_customer_id && subscription.stripe_subscription_id) {
       return redirect(ctx.res, '/dashboard/pro/billing?error=' + encodeURIComponent('Billing is already connected. Use Manage payment & subscription.'));
     }
-    if (!embeddedCheckoutConfigured()) {
-      return redirect(ctx.res, '/dashboard/pro/billing?error=' + encodeURIComponent('Embedded checkout needs the Stripe publishable key configured.'));
+    if (!stripeConfigured()) {
+      return redirect(ctx.res, '/dashboard/pro/billing?error=' + encodeURIComponent('Secure billing is not available yet. Please try again later.'));
     }
 
     try {
       const checkoutSession = await createCheckoutSession({
         proId: profile.id,
         email: ctx.currentUser.email,
-        trialDays: daysRemaining(subscription.trial_ends_at),
-        embedded: true,
+        trialEndsAt: subscription.status === 'trialing' ? subscription.trial_ends_at : null,
+        embedded: embeddedCheckoutConfigured(),
       });
 
+      if (!embeddedCheckoutConfigured() && checkoutSession && checkoutSession.url) return redirect(ctx.res, checkoutSession.url);
       if (!checkoutSession || !checkoutSession.client_secret) {
         throw new Error('Stripe did not return an embedded checkout client secret.');
       }
@@ -80,7 +82,7 @@ module.exports = function (router) {
             <div>
               <p class="muted" style="margin:0 0 5px;">GoBookr Professional</p>
               <h1 style="margin:0;">Set up secure payment</h1>
-              <p class="muted" style="margin:8px 0 0;">Your 30-day trial stays free. Stripe securely handles your payment details without leaving GoBookr.</p>
+              <p class="muted" style="margin:8px 0 0;">${subscription.status === 'trialing' && daysRemaining(subscription.trial_ends_at) > 0 ? 'Your remaining trial stays free, then $20/month.' : '$20/month, billed when you confirm checkout.'} Stripe securely handles your payment details.</p>
             </div>
             <a class="btn secondary" href="/dashboard/pro/billing">Back to billing</a>
           </div>
@@ -115,7 +117,7 @@ module.exports = function (router) {
       }));
     } catch (err) {
       console.error('Embedded Stripe checkout creation failed', err);
-      redirect(ctx.res, '/dashboard/pro/billing?error=' + encodeURIComponent('We could not start secure checkout. Please try again.'));
+      redirect(ctx.res, '/dashboard/pro/billing?error=' + encodeURIComponent(['TRIAL_END_TOO_CLOSE', 'DEMO_ACCOUNT'].includes(err.code) ? err.message : err.code === 'PRICE_UNAVAILABLE' ? 'Payment setup is temporarily unavailable. Your account has not been charged.' : 'We could not start secure checkout. Please try again.'));
     }
   });
 };

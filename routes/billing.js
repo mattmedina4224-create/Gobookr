@@ -13,6 +13,7 @@ const {
   verifyWebhookSignature,
   unixToSqlite,
   normalizedSubscriptionStatus,
+  retrieveSubscription,
 } = require('../lib/stripe');
 
 function requirePro(ctx) {
@@ -106,12 +107,15 @@ module.exports = function (router) {
     const billingLabel = isTrial ? (isTrialExpired ? 'Trial ended' : 'Trial ends') : 'Current period ends';
     const renewalStatus = cancelPending ? 'Cancels at period end' : (billingConnected ? 'Renews automatically monthly' : 'Set up payment to continue after trial');
 
-    let paymentButton = `<button class="btn secondary" type="button" disabled>Set up payment method</button><p class="helptext" style="margin-top:8px;">Stripe test billing will activate after the required environment keys are configured.</p>`;
+    let paymentButton = `<button class="btn secondary" type="button" disabled>Set up payment method</button><p class="helptext" style="margin-top:8px;">Payment setup is currently unavailable.</p>`;
     if (configured && billingConnected) {
       paymentButton = `<form method="POST" action="/dashboard/pro/billing/portal"><input type="hidden" name="_csrf" value="${escapeHtml(ctx.session.csrf_token)}"/><button class="btn secondary" type="submit">Manage payment &amp; subscription</button></form>`;
     } else if (configured) {
       paymentButton = `<form method="POST" action="/dashboard/pro/billing/checkout"><input type="hidden" name="_csrf" value="${escapeHtml(ctx.session.csrf_token)}"/><button class="btn secondary" type="submit">Set up secure payment</button></form><p class="helptext" style="margin-top:8px;">Stripe Checkout will show eligible wallet options such as Apple Pay automatically on supported devices.</p>`;
     }
+
+    if (/\.test$/i.test(String(ctx.currentUser.email || ''))) paymentButton = '<p class="helptext">Demo account: paid checkout is disabled.</p>';
+    else if (configured && !billingConnected && isTrial && !isTrialExpired && parseDatabaseDate(subscription.trial_ends_at).getTime() - Date.now() < (48 * 3600 + 60) * 1000) paymentButton = '<p class="helptext">Your trial remains free. Return when your trial ends to activate your $20/month membership.</p>';
 
     const manageArea = billingConnected && configured
       ? `<p class="helptext">Cancellation, reactivation, payment-method updates, and invoices are handled securely through Stripe's customer portal.</p>`
@@ -128,12 +132,12 @@ module.exports = function (router) {
     if (!stripeConfigured()) return redirect(ctx.res, '/dashboard/pro/billing?error=' + encodeURIComponent('Stripe billing is not configured yet.'));
     if (subscription.stripe_customer_id && subscription.stripe_subscription_id) return redirect(ctx.res, '/dashboard/pro/billing?error=' + encodeURIComponent('Billing is already connected. Use Manage payment & subscription.'));
     try {
-      const session = await createCheckoutSession({ proId: profile.id, email: ctx.currentUser.email, trialDays: daysRemaining(subscription.trial_ends_at) });
+      const session = await createCheckoutSession({ proId: profile.id, email: ctx.currentUser.email, trialEndsAt: subscription.status === 'trialing' ? subscription.trial_ends_at : null });
       if (!session || !session.url) throw new Error('Stripe did not return a checkout URL.');
       redirect(ctx.res, session.url);
     } catch (err) {
       console.error('Stripe checkout creation failed', err);
-      redirect(ctx.res, '/dashboard/pro/billing?error=' + encodeURIComponent('We could not start secure checkout. Please try again.'));
+      redirect(ctx.res, '/dashboard/pro/billing?error=' + encodeURIComponent(['TRIAL_END_TOO_CLOSE', 'DEMO_ACCOUNT'].includes(err.code) ? err.message : err.code === 'PRICE_UNAVAILABLE' ? 'Payment setup is temporarily unavailable. Your account has not been charged.' : 'We could not start secure checkout. Please try again.'));
     }
   });
 
@@ -159,49 +163,31 @@ module.exports = function (router) {
     const object = event.data && event.data.object ? event.data.object : {};
 
     try {
-      if (event.type === 'checkout.session.completed') {
-        const shopId = Number(object.metadata && object.metadata.shop_id);
-        if (Number.isInteger(shopId) && shopId > 0) {
-          db.prepare(`INSERT INTO shop_subscriptions (shop_id, provider, provider_customer_id, provider_subscription_id, status, plan_code, updated_at)
-            VALUES (?, 'stripe', ?, ?, 'active', 'shop_monthly_49', CURRENT_TIMESTAMP)
-            ON CONFLICT (shop_id) DO UPDATE SET provider_customer_id = EXCLUDED.provider_customer_id, provider_subscription_id = EXCLUDED.provider_subscription_id, updated_at = CURRENT_TIMESTAMP`)
-            .run(shopId, String(object.customer || ''), String(object.subscription || ''));
-        }
-        const proId = Number(object.metadata && object.metadata.pro_id);
-        if (Number.isInteger(proId) && proId > 0) db.prepare(`UPDATE subscriptions SET stripe_customer_id = ?, stripe_subscription_id = ?, updated_at = datetime('now') WHERE pro_id = ?`).run(String(object.customer || ''), String(object.subscription || ''), proId);
-      } else if (event.type === 'customer.subscription.created' || event.type === 'customer.subscription.updated' || event.type === 'customer.subscription.deleted') {
-        const shopLocal = findShopSubscriptionForStripeObject(object);
-        if (shopLocal) {
-          const shopStatus = event.type === 'customer.subscription.deleted' ? 'canceled' : normalizedSubscriptionStatus(object.status);
-          db.prepare(`UPDATE shop_subscriptions SET status = ?, provider_customer_id = ?, provider_subscription_id = ?, current_period_end = ?, updated_at = CURRENT_TIMESTAMP WHERE id = ?`).run(
-            shopStatus, String(object.customer || shopLocal.provider_customer_id || ''), String(object.id || shopLocal.provider_subscription_id || ''), unixToSqlite(object.current_period_end), shopLocal.id
-          );
-        }
-        const local = findSubscriptionForStripeObject(object);
+      let subscriptionId;
+      if (event.type === 'checkout.session.completed') subscriptionId = object.subscription;
+      else if (event.type.startsWith('customer.subscription.')) subscriptionId = object.id;
+      else if (event.type === 'invoice.paid' || event.type === 'invoice.payment_failed') {
+        subscriptionId = object.subscription || (object.parent && object.parent.subscription_details && object.parent.subscription_details.subscription);
+      }
+      if (subscriptionId && typeof subscriptionId === 'object') subscriptionId = subscriptionId.id;
+      if (subscriptionId) {
+        // Retrieve current state so delayed invoices cannot undo a trial or cancellation.
+        const subscription = event.type === 'customer.subscription.deleted' ? object : await retrieveSubscription(subscriptionId);
+        const status = normalizedSubscriptionStatus(subscription.status);
+        const item = subscription.items && subscription.items.data && subscription.items.data[0];
+        const periodEnd = unixToSqlite(subscription.current_period_end || (item && item.current_period_end));
+        const shopLocal = findShopSubscriptionForStripeObject(subscription);
+        if (shopLocal) db.prepare(`UPDATE shop_subscriptions SET status = ?, provider_customer_id = ?, provider_subscription_id = ?, current_period_end = ?, updated_at = CURRENT_TIMESTAMP WHERE id = ?`)
+          .run(status, String(subscription.customer || shopLocal.provider_customer_id || ''), subscription.id, periodEnd, shopLocal.id);
+        const local = findSubscriptionForStripeObject(subscription);
         if (local) {
-          const status = event.type === 'customer.subscription.deleted' ? 'canceled' : normalizedSubscriptionStatus(object.status);
           const pastDueSince = ['past_due', 'unpaid'].includes(status) ? (local.past_due_since || new Date().toISOString().slice(0, 19).replace('T', ' ')) : null;
-          db.prepare(`UPDATE subscriptions SET status = ?, stripe_customer_id = ?, stripe_subscription_id = ?, stripe_price_id = ?, current_period_end = ?, cancel_at_period_end = ?, past_due_since = ?, updated_at = datetime('now') WHERE id = ?`).run(
-            status,
-            String(object.customer || local.stripe_customer_id || ''),
-            String(object.id || local.stripe_subscription_id || ''),
-            String((object.items && object.items.data && object.items.data[0] && object.items.data[0].price && object.items.data[0].price.id) || local.stripe_price_id || ''),
-            unixToSqlite(object.current_period_end),
-            object.cancel_at_period_end ? 1 : 0,
-            pastDueSince,
-            local.id
+          db.prepare(`UPDATE subscriptions SET status = ?, stripe_customer_id = ?, stripe_subscription_id = ?, stripe_price_id = ?, current_period_end = ?, cancel_at_period_end = ?, past_due_since = ?, trial_ends_at = COALESCE(?, trial_ends_at), updated_at = datetime('now') WHERE id = ?`).run(
+            status, String(subscription.customer || local.stripe_customer_id || ''), subscription.id,
+            String((item && item.price && item.price.id) || local.stripe_price_id || ''), periodEnd,
+            subscription.cancel_at_period_end ? 1 : 0, pastDueSince, unixToSqlite(subscription.trial_end), local.id
           );
         }
-      } else if (event.type === 'invoice.payment_failed') {
-        const shopLocal = findShopSubscriptionForStripeObject(object);
-        if (shopLocal) db.prepare("UPDATE shop_subscriptions SET status = 'past_due', updated_at = CURRENT_TIMESTAMP WHERE id = ?").run(shopLocal.id);
-        const local = findSubscriptionForStripeObject(object);
-        if (local) db.prepare(`UPDATE subscriptions SET status = 'past_due', past_due_since = COALESCE(past_due_since, datetime('now')), updated_at = datetime('now') WHERE id = ?`).run(local.id);
-      } else if (event.type === 'invoice.paid') {
-        const shopLocal = findShopSubscriptionForStripeObject(object);
-        if (shopLocal && shopLocal.status !== 'canceled') db.prepare("UPDATE shop_subscriptions SET status = 'active', updated_at = CURRENT_TIMESTAMP WHERE id = ?").run(shopLocal.id);
-        const local = findSubscriptionForStripeObject(object);
-        if (local && local.status !== 'canceled') db.prepare(`UPDATE subscriptions SET status = 'active', past_due_since = NULL, updated_at = datetime('now') WHERE id = ?`).run(local.id);
       }
       json(ctx.res, 200, { received: true });
     } catch (err) {

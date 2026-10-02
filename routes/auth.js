@@ -218,7 +218,7 @@ module.exports = function (router) {
       }
       if (signupType === 'storefront') {
         const shopResult = db.prepare(`INSERT INTO shops (owner_user_id,name,city,state,street_address,suite,zip_code,phone,claim_status) VALUES (?,?,?,?,?,?,?,?, 'claimed')`).run(userId,businessName,city,state,street,suite,zip,String(ctx.body.phone || '').trim().slice(0,40));
-        db.prepare(`INSERT INTO shop_subscriptions (shop_id,status,plan_code) VALUES (?, 'inactive', 'shop_monthly_49')`).run(shopResult.lastInsertRowid);
+        db.prepare(`INSERT INTO shop_subscriptions (shop_id,status,plan_code) VALUES (?, 'active', 'business_complimentary')`).run(shopResult.lastInsertRowid);
       }
       db.exec('COMMIT');
     } catch (err) {

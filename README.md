@@ -162,3 +162,9 @@ Before public launch, complete and verify these items:
 ## Deployment note
 
 The current database lives at `data/gobookr.db`, so the simplest deployment model is a long-running Node process with a **persistent disk**. If GoBookr later moves to horizontally scaled or serverless infrastructure, move the data layer to a managed database and move portfolio files to object storage first.
+
+### Professional and business billing
+
+Professional membership is 30 days free, then $20 USD per month. Stripe must have an active licensed monthly $20 USD price with lookup key `gobookr_professional_monthly_20` (or `STRIPE_PRO_PRICE_LOOKUP_KEY`). A correctly priced `STRIPE_PRICE_ID` is also accepted. Checkout rejects other prices, preserving existing subscribers. Trial checkout uses the original exact deadline; Stripe requires at least 48 hours remaining, so new payment setup during the final 48 hours becomes available when the trial expires. Demo `.test` accounts cannot start paid checkout.
+
+Business accounts are complimentary and never enter new paid checkout. Existing legacy Stripe subscriptions remain manageable through their customer portal. Configure `STRIPE_WEBHOOK_SECRET` and the `/stripe/webhook` endpoint for Checkout, subscription, and invoice events; invoice events sync the current subscription rather than treating a zero-dollar trial invoice as active membership.

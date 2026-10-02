@@ -26,7 +26,7 @@ test('checkout completion copy waits for webhook confirmation', () => {
 
 test('checkout does not force Cash App or stale promotion-code parameters', () => {
   const src = read('lib/stripe.js');
-  assert.match(src, /payment_method_types\[0\].*card/);
+  assert.doesNotMatch(src, /payment_method_types/);
   assert.doesNotMatch(src, /cashapp/);
   assert.doesNotMatch(src, /allow_promotion_codes/);
 });
