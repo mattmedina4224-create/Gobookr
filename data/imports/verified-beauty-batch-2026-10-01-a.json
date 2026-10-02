@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Jenna Spoelstra",
+    "category": "stylist",
+    "workplace_name": "Hair By Jenna",
+    "city": "Denver",
+    "state": "CO",
+    "address": "5600 W Dartmouth Ave",
+    "zip": "80227",
+    "booking_url": "https://hairbyjennaspoelstra.glossgenius.com/",
+    "source_url": "https://hairbyjennaspoelstra.glossgenius.com/about",
+    "source_name": "GlossGenius"
+  },
+  {
+    "name": "Alyssa",
+    "category": "eyelash_technician",
+    "workplace_name": "Revee Beauté",
+    "city": "Denver",
+    "state": "CO",
+    "address": "2714 W Alameda Ave",
+    "zip": "80219",
+    "booking_url": "https://reveebeaute.glossgenius.com/",
+    "source_url": "https://reveebeaute.glossgenius.com/services",
+    "source_name": "GlossGenius"
+  },
+  {
+    "name": "Emily",
+    "category": "nail_technician",
+    "workplace_name": "Nailsbyem",
+    "city": "Aurora",
+    "state": "CO",
+    "address": "465 N Helena Ct",
+    "zip": "80011",
+    "booking_url": "https://booksy.com/en-us/1781557_nailsbyem_nail-salon_134779_aurora",
+    "source_url": "https://booksy.com/en-us/1781557_nailsbyem_nail-salon_134779_aurora",
+    "source_name": "Booksy"
+  }
+]
