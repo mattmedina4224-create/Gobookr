@@ -30,3 +30,12 @@ test('sitemap only advertises structurally ready imported profiles', () => {
   assert.match(server, /COALESCE\(p\.source_url,''\) <> ''/);
   assert.match(server, /COALESCE\(p\.source_name,''\) <> ''/);
 });
+
+
+test('sitemap filters shops and discovery pages to public-ready inventory', () => {
+  const server = fs.readFileSync(path.join(__dirname, '..', 'server.js'), 'utf8');
+  assert.match(server, /owner_user_id IS NULL AND claim_status IN \('unclaimed','pending'\)/);
+  assert.match(server, /owner_user_id IS NOT NULL AND claim_status='claimed'/);
+  assert.match(server, /SELECT DISTINCT LOWER\(REPLACE\(p\.city/);
+  assert.match(server, /LEFT JOIN subscriptions s ON s\.pro_id=p\.id/);
+});
