@@ -103,17 +103,24 @@ module.exports = function (router) {
     if (!requireAdmin(ctx)) return;
     const id = Number(ctx.params.id);
     if (!Number.isInteger(id) || id <= 0) return redirect(ctx.res, '/admin/profile-claims');
-    const claim = db.prepare("SELECT * FROM profile_claims WHERE id=? AND status='pending'").get(id);
-    if (!claim) return redirect(ctx.res, '/admin/profile-claims');
-    const existing = db.prepare('SELECT id FROM pro_profiles WHERE user_id=? AND id != ? LIMIT 1').get(claim.claimant_user_id, claim.pro_id);
-    if (existing) return redirect(ctx.res, '/admin/profile-claims?error=' + encodeURIComponent('That account already owns another professional profile.'));
-
     try {
       db.exec('BEGIN');
+      // Lock fresh claim, profile and claimant state before deciding ownership.
+      const claim = db.prepare(`WITH locked_claim AS (
+        SELECT pc.* FROM profile_claims pc
+        JOIN pro_profiles p ON p.id = pc.pro_id
+        JOIN users u ON u.id = pc.claimant_user_id
+        WHERE pc.id = ? AND pc.status = 'pending'
+        FOR UPDATE OF p, u, pc
+      ) SELECT * FROM locked_claim`).get(id);
+      if (!claim) { db.exec('ROLLBACK'); return redirect(ctx.res, '/admin/profile-claims'); }
+      const existing = db.prepare('WITH owned AS (SELECT id FROM pro_profiles WHERE user_id=? AND id != ? LIMIT 1) SELECT id FROM owned').get(claim.claimant_user_id, claim.pro_id);
+      if (existing) { db.exec('ROLLBACK'); return redirect(ctx.res, '/admin/profile-claims?error=' + encodeURIComponent('That account already owns another professional profile.')); }
       const attached = db.prepare("UPDATE pro_profiles SET user_id=?, claim_status='claimed', claimed_at=CURRENT_TIMESTAMP WHERE id=? AND user_id IS NULL AND claim_status IN ('unclaimed','claim_pending')").run(claim.claimant_user_id, claim.pro_id);
       if (!attached.changes) throw new Error('Profile is no longer available to claim.');
       db.prepare("UPDATE users SET role='pro' WHERE id=?").run(claim.claimant_user_id);
-      db.prepare("UPDATE profile_claims SET status='approved', reviewed_at=CURRENT_TIMESTAMP, reviewer_user_id=? WHERE id=? AND status='pending'").run(ctx.currentUser.id, id);
+      const reviewed = db.prepare("UPDATE profile_claims SET status='approved', reviewed_at=CURRENT_TIMESTAMP, reviewer_user_id=? WHERE id=? AND status='pending'").run(ctx.currentUser.id, id);
+      if (!reviewed.changes) throw new Error('Claim is no longer pending.');
       db.prepare("UPDATE profile_claims SET status='rejected', reviewed_at=CURRENT_TIMESTAMP, reviewer_user_id=? WHERE pro_id=? AND id != ? AND status='pending'").run(ctx.currentUser.id, claim.pro_id, id);
       db.prepare("INSERT INTO subscriptions (pro_id, status, trial_started_at, trial_ends_at) SELECT ?, 'trialing', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP + INTERVAL '30 days' WHERE NOT EXISTS (SELECT 1 FROM subscriptions WHERE pro_id = ?)").run(claim.pro_id, claim.pro_id);
       db.exec('COMMIT');
@@ -129,11 +136,22 @@ module.exports = function (router) {
     if (!requireAdmin(ctx)) return;
     const id = Number(ctx.params.id);
     if (Number.isInteger(id) && id > 0) {
-      const claim = db.prepare("SELECT pro_id FROM profile_claims WHERE id=? AND status='pending'").get(id);
-      db.prepare("UPDATE profile_claims SET status='rejected', reviewed_at=CURRENT_TIMESTAMP, reviewer_user_id=? WHERE id=? AND status='pending'").run(ctx.currentUser.id, id);
-      if (claim) {
-        const remaining = db.prepare("SELECT id FROM profile_claims WHERE pro_id=? AND status='pending' LIMIT 1").get(claim.pro_id);
-        if (!remaining) db.prepare("UPDATE pro_profiles SET claim_status='unclaimed' WHERE id=? AND user_id IS NULL AND claim_status='claim_pending'").run(claim.pro_id);
+      try {
+        db.exec('BEGIN');
+        const claim = db.prepare(`WITH locked_claim AS (
+          SELECT pc.pro_id FROM profile_claims pc JOIN pro_profiles p ON p.id=pc.pro_id
+          WHERE pc.id=? AND pc.status='pending' FOR UPDATE OF p, pc
+        ) SELECT pro_id FROM locked_claim`).get(id);
+        if (claim) {
+          db.prepare("UPDATE profile_claims SET status='rejected', reviewed_at=CURRENT_TIMESTAMP, reviewer_user_id=? WHERE id=? AND status='pending'").run(ctx.currentUser.id, id);
+          const remaining = db.prepare("SELECT id FROM profile_claims WHERE pro_id=? AND status='pending' LIMIT 1").get(claim.pro_id);
+          if (!remaining) db.prepare("UPDATE pro_profiles SET claim_status='unclaimed' WHERE id=? AND user_id IS NULL AND claim_status='claim_pending'").run(claim.pro_id);
+        }
+        db.exec('COMMIT');
+      } catch (err) {
+        try { db.exec('ROLLBACK'); } catch (_) {}
+        console.error('Professional claim rejection failed', err);
+        return redirect(ctx.res, '/admin/profile-claims?error=' + encodeURIComponent('Could not reject that claim. No change was completed.'));
       }
     }
     redirect(ctx.res, '/admin/profile-claims');

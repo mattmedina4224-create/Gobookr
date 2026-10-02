@@ -20,6 +20,13 @@ module.exports = function (router) {
   router.get('/dashboard/customer', async (ctx) => {
     if (!requireCustomer(ctx)) return;
 
+    const claims = db.prepare(`WITH my_claims AS (
+      SELECT pro_id, status, requested_at FROM profile_claims WHERE claimant_user_id = ?
+      ORDER BY requested_at DESC, id DESC LIMIT 20
+    ) SELECT c.*, p.business_name FROM my_claims c JOIN pro_profiles p ON p.id=c.pro_id
+      ORDER BY c.requested_at DESC`).all(ctx.currentUser.id);
+    const claimStatus = claims.length ? `<section class="panel" aria-labelledby="claims-heading"><h2 id="claims-heading">Your profile claims</h2>${claims.map(claim => `<div><h3>${escapeHtml(claim.business_name)}</h3><p>${claim.status === 'pending' ? 'Under review. Your professional trial starts after ownership is approved.' : claim.status === 'approved' ? 'Approved. Your professional profile is ready to manage.' : 'This claim was not approved. You can submit new ownership evidence for review.'}</p><a href="${claim.status === 'approved' ? '/dashboard/pro' : `/pro/${claim.pro_id}/claim`}">${claim.status === 'approved' ? 'Manage profile' : claim.status === 'pending' ? 'View claim' : 'Review profile'}</a></div>`).join('')}</section>` : '';
+
     const savedProfiles = db.prepare(`WITH favorites AS (
       SELECT pro_id, created_at FROM customer_favorites WHERE customer_id = ?
     ) SELECT p.* FROM favorites f JOIN pro_profiles p ON p.id = f.pro_id
@@ -33,6 +40,7 @@ module.exports = function (router) {
     const body = `
     <section class="section container customer-dashboard">
       <div class="customer-dashboard-hero"><div><p class="muted customer-eyebrow">YOUR GOBOOKR</p><h1>Find your next professional</h1><p class="muted">Discover someone new or jump back to a professional you already trust.</p></div><a class="btn customer-browse-btn" href="/search">Find a professional</a></div>
+      ${claimStatus}
       <section aria-labelledby="favorites-heading" class="customer-favorites-section">
         <h2 id="favorites-heading">Favorites</h2>
         <p class="muted">Your saved professionals, ready when you are. Favorites are private; professionals only see their total Saves.</p>
