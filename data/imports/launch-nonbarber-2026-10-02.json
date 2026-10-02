@@ -61,5 +61,47 @@
     "_verification_urls": [
       "https://zentherapies.glossgenius.com/contact"
     ]
+  },
+  {
+    "name": "Emily Victoria",
+    "category": "tattoo_artist",
+    "workplace_name": "Victoria Ink",
+    "city": "Westminster",
+    "state": "CO",
+    "address": "2731 W 120th Ave, Suite 2",
+    "zip": "80234",
+    "booking_url": "https://victoriainktattoo.glossgenius.com/services",
+    "source_url": "https://victoriainktattoo.glossgenius.com/team",
+    "source_name": "GlossGenius",
+    "_verification_tier": "page_opened",
+    "_flags": [
+      "booking_url_is_shared_or_listing_page"
+    ],
+    "_source_page_opened": true,
+    "_booking_page_opened": true,
+    "_verification_urls": [
+      "https://victoriainktattoo.glossgenius.com/about"
+    ]
+  },
+  {
+    "name": "Sabrina Yvonne",
+    "category": "tattoo_artist",
+    "workplace_name": "Ink & Ivy Tattoo",
+    "city": "Colorado Springs",
+    "state": "CO",
+    "address": "1304 N Academy Blvd, Suite 106",
+    "zip": "80909",
+    "booking_url": "https://sabrinayvonne.glossgenius.com/services",
+    "source_url": "https://sabrinayvonne.glossgenius.com/about",
+    "source_name": "GlossGenius",
+    "_verification_tier": "page_opened",
+    "_flags": [
+      "booking_url_is_shared_or_listing_page"
+    ],
+    "_source_page_opened": true,
+    "_booking_page_opened": true,
+    "_verification_urls": [
+      "https://sabrinayvonne.glossgenius.com/contact"
+    ]
   }
 ]
