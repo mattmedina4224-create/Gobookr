@@ -1,0 +1,107 @@
+[
+  {
+    "name": "Annelise Lenderts",
+    "category": "massage_therapist",
+    "workplace_name": "Right Hand Massage Therapy",
+    "city": "Fort Collins",
+    "state": "CO",
+    "address": "126 W Harvard St, Suite 1",
+    "zip": "80525",
+    "booking_url": "https://righthandmassage.glossgenius.com/services",
+    "source_url": "https://righthandmassage.glossgenius.com/contact",
+    "source_name": "GlossGenius",
+    "_verification_tier": "page_opened",
+    "_flags": [
+      "booking_url_is_shared_or_listing_page"
+    ],
+    "_source_page_opened": true,
+    "_booking_page_opened": true,
+    "_verification_urls": [
+      "https://righthandmassage.glossgenius.com/about"
+    ]
+  },
+  {
+    "name": "Jessica Worster",
+    "category": "makeup_artist",
+    "workplace_name": "Jessica Faye Beauty",
+    "city": "Colorado Springs",
+    "state": "CO",
+    "address": "3582 Blue Horizon View Dr, Suite 140",
+    "zip": "80924",
+    "booking_url": "https://jessicafayebeauty.glossgenius.com/services",
+    "source_url": "https://jessicafayebeauty.glossgenius.com/contact",
+    "source_name": "GlossGenius",
+    "_verification_tier": "page_opened",
+    "_flags": [
+      "booking_url_is_shared_or_listing_page"
+    ],
+    "_source_page_opened": true,
+    "_booking_page_opened": true,
+    "_verification_urls": [
+      "https://jessicafayebeauty.glossgenius.com/about"
+    ]
+  },
+  {
+    "name": "Sheila O’Shaughnessy",
+    "category": "massage_therapist",
+    "workplace_name": "Zen Therapies",
+    "city": "Fort Collins",
+    "state": "CO",
+    "address": "333 W Drake Road, Suite 23",
+    "zip": "80525",
+    "booking_url": "https://zentherapies.glossgenius.com/services",
+    "source_url": "https://zentherapies.glossgenius.com/about",
+    "source_name": "GlossGenius",
+    "_verification_tier": "page_opened",
+    "_flags": [
+      "booking_url_is_shared_or_listing_page"
+    ],
+    "_source_page_opened": true,
+    "_booking_page_opened": true,
+    "_verification_urls": [
+      "https://zentherapies.glossgenius.com/contact"
+    ]
+  },
+  {
+    "name": "Emily Victoria",
+    "category": "tattoo_artist",
+    "workplace_name": "Victoria Ink",
+    "city": "Westminster",
+    "state": "CO",
+    "address": "2731 W 120th Ave, Suite 2",
+    "zip": "80234",
+    "booking_url": "https://victoriainktattoo.glossgenius.com/services",
+    "source_url": "https://victoriainktattoo.glossgenius.com/team",
+    "source_name": "GlossGenius",
+    "_verification_tier": "page_opened",
+    "_flags": [
+      "booking_url_is_shared_or_listing_page"
+    ],
+    "_source_page_opened": true,
+    "_booking_page_opened": true,
+    "_verification_urls": [
+      "https://victoriainktattoo.glossgenius.com/about"
+    ]
+  },
+  {
+    "name": "Sabrina Yvonne",
+    "category": "tattoo_artist",
+    "workplace_name": "Ink & Ivy Tattoo",
+    "city": "Colorado Springs",
+    "state": "CO",
+    "address": "1304 N Academy Blvd, Suite 106",
+    "zip": "80909",
+    "booking_url": "https://sabrinayvonne.glossgenius.com/services",
+    "source_url": "https://sabrinayvonne.glossgenius.com/about",
+    "source_name": "GlossGenius",
+    "_verification_tier": "page_opened",
+    "_flags": [
+      "booking_url_is_shared_or_listing_page"
+    ],
+    "_source_page_opened": true,
+    "_booking_page_opened": true,
+    "_verification_urls": [
+      "https://sabrinayvonne.glossgenius.com/contact"
+    ]
+  }
+]
