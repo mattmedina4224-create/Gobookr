@@ -93,7 +93,7 @@ test('scheduled campaign confirmation focuses the queue', () => {
 test('campaign queue uses customer-friendly status labels', () => {
  const source=fs.readFileSync(path.join(__dirname,'..','routes','pro.js'),'utf8');
  assert.match(source,/campaignStatusLabel/);
- assert.match(source,/published: 'Live'/);
+ assert.match(source,/published: 'Live on GoBookr'/);
  assert.match(source,/closed: 'Filled'/);
  assert.match(source,/escapeHtml\(campaignStatusLabel\(item\.status\)\)/);
 });
