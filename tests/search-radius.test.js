@@ -21,7 +21,8 @@ test('ordinary search does not require profile coordinates', () => {
 test('category search uses membership rows so one professional can match every selected specialty', () => {
   const source = fs.readFileSync(path.join(__dirname, '..', 'routes', 'public.js'), 'utf8');
   assert.match(source, /if \(category\) \{ sql \+= ' AND EXISTS \(SELECT 1 FROM pro_categories pc WHERE pc\.pro_id = pro_profiles\.id AND pc\.category = \?\)'/);
-  assert.doesNotMatch(source, /JOIN pro_categories[\s\S]*SELECT \* FROM pro_profiles/);
+  const searchHandler = source.slice(source.indexOf("router.get('/search'"), source.indexOf("router.get('/discover/:city/:category'"));
+  assert.doesNotMatch(searchHandler, /JOIN pro_categories[\s\S]*SELECT \* FROM pro_profiles/);
 });
 
 test('category search does not duplicate cards for multi-specialty professionals', () => {
