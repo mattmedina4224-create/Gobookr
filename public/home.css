@@ -272,3 +272,105 @@
   }
 
 .home-eyebrow,.home-hero .lede,.home-search-hint,.home-trust-item{color:var(--gb-border)}
+
+
+/* 2026-10-03 homepage cleanup: quiet, consumer-first marketplace UI */
+.home-shell { background:#fff; }
+.home-hero {
+  background:#fff !important;
+  color:var(--gb-ink) !important;
+  border-bottom:1px solid var(--gb-border) !important;
+  padding:48px 0 40px;
+}
+.home-eyebrow {
+  color:var(--gb-body) !important;
+  letter-spacing:.08em;
+  text-transform:none;
+  font-weight:700;
+}
+.home-hero h1,
+.gb-hero.home-hero h1 {
+  color:var(--gb-ink) !important;
+  max-width:760px;
+  line-height:1.03;
+}
+.home-hero .lede,
+.gb-hero.home-hero > .container > .lede {
+  color:var(--gb-body) !important;
+  max-width:680px;
+}
+.home-search-card,
+.gb-search.home-search-card {
+  background:#fff;
+  border:1px solid var(--gb-border);
+  box-shadow:0 2px 10px rgba(15,23,42,.08) !important;
+}
+.home-search-mode { background:#f5f6f7; }
+.home-search-mode a.active {
+  background:#fff;
+  color:var(--gb-ink);
+  border:1px solid var(--gb-border);
+  box-shadow:none;
+}
+.home-field,
+.home-field:focus-within {
+  background:#fff;
+  box-shadow:none;
+}
+.home-field:focus-within { border-color:var(--gb-ink); }
+.home-search-card .btn,
+.home-search-card .gb-btn-primary {
+  background:var(--gb-blue-600) !important;
+  box-shadow:none !important;
+  transform:none !important;
+}
+.home-search-card .btn:hover { background:var(--gb-blue-700) !important; transform:none !important; }
+.home-search-hint { color:var(--gb-body) !important; }
+.home-trust-item { color:var(--gb-body) !important; }
+.home-trust-icon { background:#f5f6f7; color:var(--gb-ink); }
+.home-pro-claim-entry { background:#fff; border:1px solid var(--gb-border); }
+.home-pro-claim-entry strong { color:var(--gb-ink); }
+.home-claim-button {
+  background:var(--gb-ink) !important;
+  color:#fff !important;
+  box-shadow:none !important;
+}
+.home-create-profile {
+  background:#fff !important;
+  color:var(--gb-ink) !important;
+  border:1px solid var(--gb-border) !important;
+  box-shadow:none !important;
+}
+.home-pills a { color:var(--gb-ink); box-shadow:none; }
+.home-pro-card,
+.home-pro-card:hover {
+  box-shadow:none !important;
+  transform:none !important;
+}
+.home-pro-placeholder {
+  background:#f1f3f5;
+  color:var(--gb-ink);
+}
+.home-section-kicker { text-transform:none; letter-spacing:0; color:var(--gb-body); }
+
+@media (max-width:720px) {
+  .home-hero { padding:32px 0 28px; }
+  .home-eyebrow { display:none; }
+  .home-search-card,
+  .gb-search.home-search-card {
+    border-radius:18px;
+    box-shadow:0 2px 8px rgba(15,23,42,.07) !important;
+  }
+  .home-search-mode { background:#f5f6f7; border-radius:14px; }
+  .home-search-mode a { border-radius:11px; }
+  .home-field {
+    border:1px solid var(--gb-border);
+    border-radius:14px !important;
+  }
+  .home-field + .home-field { border-left:1px solid var(--gb-border); border-top:1px solid var(--gb-border); }
+  .home-search-card .btn { border-radius:14px; }
+  .home-trust-row { display:none; }
+  .home-pro-claim-entry { margin-top:28px; background:#fafafa; }
+  .home-mobile-menu { box-shadow:0 4px 14px rgba(15,23,42,.08); }
+  .home-mobile-menu a:last-child { background:var(--gb-ink); }
+}
