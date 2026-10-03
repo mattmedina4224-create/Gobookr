@@ -66,7 +66,7 @@ input:focus,select:focus,textarea:focus { outline:none; border-color:var(--gb-bl
 .gb-stars,.stars,.market-star { color:var(--gb-rating); }
 .gb-stars .gb-icon.is-filled { fill:currentColor; }
 .favorite-control { min-height:44px; border-radius:var(--gb-radius-btn); color:var(--gb-blue-600); }
-.favorite-card > .market-claim-link,.favorite-card > .market-pro-card { height:auto; }
+.favorite-card > a.market-claim-link,.favorite-card > a.market-pro-card { height:auto; }
 .favorite-card > .market-claim-link { min-height:44px; display:flex; align-items:center; justify-content:center; }
 .favorite-card:has(> .market-claim-link) > .favorite-control,.favorite-card:has(> .market-claim-link) > .favorite-form { bottom:calc(44px + var(--gb-space-2) + var(--gb-space-2)); }
 .favorite-control .gb-icon.is-saved { fill:currentColor; }
