@@ -40,6 +40,8 @@ Mobile before screenshots and after comparisons are not yet complete. Vercel pre
 
 Owner configured the isolated Preview DATABASE_URL and redeployed on October 2. Deployment DMnYB3bbsHhg3AJPj24dRxSZvmZs returns HTTP 200 for homepage, search, pro /521, claim and signup. Browser access through Vercel's temporary share link succeeds. Desktop inspection caught a legacy logo background and zero-size font hiding the lowercase wordmark; reset those visual styles and keep the mobile menu button hidden on desktop. Required screenshot matrix and 375px rendered verification remain outstanding.
 
+Desktop search interaction returned the two expected Fort Collins massage profiles. Rendered inspection caught legacy favorite-card height:100% applying to both profile and claim links, making the claim links overflow into the footer. Limit both links to their natural height, keep claim tap targets at 44px and position favorite controls above the claim link. No destinations or form behavior changed.
+
 Configure a safely scoped preview database connection with explicit owner approval, then complete the required preview and screenshot matrix. No secret values should be shared in chat. Green build/CI alone is insufficient to approve this PR.
 
 ## Glow upgrade
