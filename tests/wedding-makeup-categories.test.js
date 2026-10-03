@@ -70,7 +70,7 @@ test('professional dashboard uses authoritative multi-category labels instead of
 
 test('specialty editor stacks cleanly on phones', () => {
   const src = read('public/styles.css');
-  assert.match(src, /\.profile-category-grid\{display:grid;grid-template-columns:repeat\(2,minmax\(0,1fr\)\);gap:10px\}/);
+  assert.match(src, /\.profile-category-grid\{display:grid;grid-template-columns:repeat\(2,minmax\(0,1fr\)\);gap:var\(--gb-space-2\)\}/);
   assert.match(src, /@media\(max-width:640px\)[\s\S]*\.profile-category-grid\{grid-template-columns:1fr\}/);
   assert.match(src, /\.profile-category-save\{width:100%;min-height:50px\}/);
 });

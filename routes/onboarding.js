@@ -57,11 +57,11 @@ function onboardingState(profile) {
 
 function stepRow(done, title, detail, href, action) {
   return `
-    <div style="display:flex; align-items:flex-start; gap:12px; padding:14px 0; border-bottom:1px solid var(--paper-line);">
-      <div style="min-width:48px;height:28px;border-radius:999px;display:flex;align-items:center;justify-content:center;flex:0 0 auto;font-size:12px;font-weight:800;background:${done ? 'var(--ok-soft)' : 'var(--paper-soft)'};color:${done ? 'var(--ok)' : 'var(--ink-faint)'};border:1px solid ${done ? 'var(--ok)' : 'var(--paper-line)'};">${done ? 'Done' : 'Open'}</div>
+    <div style="display:flex; align-items:flex-start; gap:var(--gb-space-2); padding:var(--gb-space-3) 0; border-bottom:1px solid var(--paper-line);">
+      <div style="min-width:48px;height:28px;border-radius:var(--gb-radius-pill);display:flex;align-items:center;justify-content:center;flex:0 0 auto;font-size:var(--gb-text-sm);font-weight:800;background:${done ? 'var(--ok-soft)' : 'var(--paper-soft)'};color:${done ? 'var(--ok)' : 'var(--ink-faint)'};border:1px solid ${done ? 'var(--ok)' : 'var(--paper-line)'};">${done ? 'Done' : 'Open'}</div>
       <div style="flex:1;min-width:0;">
         <div style="font-weight:800;">${escapeHtml(title)}</div>
-        <div class="muted" style="margin-top:2px;">${escapeHtml(detail)}</div>
+        <div class="muted" style="margin-top:var(--gb-space-1);">${escapeHtml(detail)}</div>
       </div>
       ${href ? `<a class="btn secondary small" href="${href}">${escapeHtml(action || (done ? 'Edit' : 'Add'))}</a>` : ''}
     </div>`;
@@ -73,18 +73,18 @@ module.exports = function (router) {
     const state = onboardingState(profile);
     const { basicsDone, detailsDone, servicesDone, photosDone, licenseDone, gpsDone, bookingDone, socialDone, requiredDone, progress } = state;
     const finishHelp = requiredDone
-      ? '<p class="helptext" style="margin:8px 0 0;text-align:right;">Your core profile is ready. Optional license, GPS, and social details can still be added later.</p>'
-      : '<p class="helptext" style="margin:8px 0 0;text-align:right;">Finish the required profile, pricing, services, portfolio, and booking-link steps first.</p>';
+      ? '<p class="helptext" style="margin:var(--gb-space-2) 0 0;text-align:right;">Your core profile is ready. Optional license, GPS, and social details can still be added later.</p>'
+      : '<p class="helptext" style="margin:var(--gb-space-2) 0 0;text-align:right;">Finish the required profile, pricing, services, portfolio, and booking-link steps first.</p>';
 
     const body = `
       <section class="section container" style="max-width:920px;">
-        <div style="margin-bottom:24px;">
+        <div style="margin-bottom:var(--gb-space-4);">
           <span class="badge category">Professional setup</span>
-          <h1 style="margin-top:10px;">Build your GoBookr profile</h1>
+          <h1 style="margin-top:var(--gb-space-2);">Build your GoBookr profile</h1>
           <p>Complete the steps below so customers can quickly understand who you are, what you offer, where to find you, and how to book with you.</p>
-          <div style="display:flex;align-items:center;gap:12px;margin-top:16px;">
-            <div style="height:10px;background:var(--paper-line);border-radius:999px;overflow:hidden;flex:1;">
-              <div style="height:100%;width:${progress}%;background:var(--brand);border-radius:999px;"></div>
+          <div style="display:flex;align-items:center;gap:var(--gb-space-2);margin-top:var(--gb-space-3);">
+            <div style="height:10px;background:var(--paper-line);border-radius:var(--gb-radius-pill);overflow:hidden;flex:1;">
+              <div style="height:100%;width:${progress}%;background:var(--brand);border-radius:var(--gb-radius-pill);"></div>
             </div>
             <strong>${progress}%</strong>
           </div>
@@ -116,7 +116,7 @@ module.exports = function (router) {
           </form>
         </div>
 
-        <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:flex-start;">
+        <div style="display:flex;justify-content:space-between;gap:var(--gb-space-2);flex-wrap:wrap;align-items:flex-start;">
           <a class="btn secondary" href="/pro/${profile.id}">Preview public profile</a>
           <div>
             <form method="POST" action="/dashboard/pro/onboarding/finish">

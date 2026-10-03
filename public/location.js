@@ -30,7 +30,7 @@
       logo.height = 36;
       logo.style.width = '36px';
       logo.style.height = '36px';
-      logo.style.borderRadius = '9px';
+      logo.style.borderRadius = 'var(--gb-radius-sm)';
       logo.style.flex = '0 0 auto';
       oldMark.replaceWith(logo);
     }
@@ -113,10 +113,10 @@
 
     const block = document.createElement('div');
     block.setAttribute('data-business-gps', '1');
-    block.style.margin = '0 0 18px';
-    block.style.padding = '14px';
+    block.style.margin = '0 0 var(--gb-space-3)';
+    block.style.padding = 'var(--gb-space-3)';
     block.style.border = '1px solid var(--paper-line)';
-    block.style.borderRadius = '12px';
+    block.style.borderRadius = 'var(--gb-radius-card)';
     block.innerHTML = '<strong>Business GPS location</strong><p class="helptext" style="margin:5px 0 10px;">If you are physically at your workplace, you can save this device location for more precise mileage.</p><button class="btn secondary small" type="button" data-save-business-location>Use my current location</button><div class="helptext" data-business-location-status style="margin-top:8px;"></div>';
 
     const workplaceHeading = Array.from(form.querySelectorAll('h3')).find((el) => el.textContent.trim() === 'Where do you work?');
@@ -159,11 +159,11 @@
       bookingInput.placeholder = 'novobarbers.com or your booking link';
       const field = bookingInput.closest('.field');
       const help = field && field.querySelector('.helptext');
-      if (field) field.style.marginBottom = '28px';
+      if (field) field.style.marginBottom = 'var(--gb-space-4)';
       if (help) {
         help.style.display = 'block';
         help.style.position = 'static';
-        help.style.marginTop = '8px';
+        help.style.marginTop = 'var(--gb-space-2)';
         help.style.lineHeight = '1.45';
       }
     }
