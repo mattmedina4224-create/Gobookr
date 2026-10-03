@@ -43,7 +43,8 @@ Configure a safely scoped preview database connection with explicit owner approv
 ## Glow upgrade
 
 - Added the requested electric-blue tokens, hero light orbs, focused input rings and active-chip glow. Ordinary cards keep soft neutral shadows; the optional featured class is not applied to any card.
-- Glow is applied to existing profile Book controls and the hero Search CTA. Only that Search CTA pulses; reduced-motion disables it. Other primary buttons retain a gradient without a glow.
+- Glow is applied to existing professional and business Book controls and the hero Search CTA. Only that Search CTA pulses; reduced-motion disables it. Other primary buttons retain a gradient without a glow.
 - The requested #4F8DFF button stop has white-text contrast of only 3.19:1. A 20% black face overlay preserves the supplied gradient while raising its minimum calculated contrast to 4.72:1. The halo is clipped outside the button face so it cannot lighten the label background. Hover uses the same accessible face.
-- No text, form behavior, route destinations or booking links changed in this follow-up.
+- Added a 15% hero overlay to preserve light-body-text contrast around the brighter orbs. A conservative sampled calculation (lightest base stop everywhere, 375px and 1363px widths) gives a minimum 4.80:1 for #E2E8F0 text; rendered verification is still pending.
+- Business booking arrows now use the same Lucide sprite. No text, form behavior, route destinations or booking links changed in this follow-up.
 - Follow-up local suite: 212 passed, zero failed or skipped. Rendered contrast, desktop/mobile after screenshots and end-to-end preview checks remain blocked by the missing preview DATABASE_URL.

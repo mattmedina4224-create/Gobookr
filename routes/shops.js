@@ -3,7 +3,7 @@
 const db = require('../db');
 const { layout } = require('../lib/layout');
 const { send, flashFromQuery } = require('../lib/http');
-const { escapeHtml } = require('../lib/util');
+const { escapeHtml, icon } = require('../lib/util');
 
 function safeUrl(value) {
   try { const u = new URL(String(value || '').trim()); return ['http:','https:'].includes(u.protocol) ? u.toString() : ''; } catch { return ''; }
@@ -33,7 +33,7 @@ module.exports = function (router) {
             <div><div class="badge">${claimed ? 'Claimed shop' : 'Unclaimed business'}</div><h1 style="margin:var(--gb-space-2) 0 var(--gb-space-1);">${escapeHtml(shop.name)}</h1><p class="muted" style="margin:0;">${escapeHtml(shop.city)}, ${escapeHtml(shop.state)}</p></div>
           </div>
           ${shop.description ? `<p style="margin-top:var(--gb-space-3);">${escapeHtml(shop.description)}</p>` : ''}
-          ${booking ? `<a class="btn shop-book-btn" href="${escapeHtml(booking)}" target="_blank" rel="noopener noreferrer">Book with this business <span aria-hidden="true">↗</span></a>` : ''}
+          ${booking ? `<a class="btn shop-book-btn gb-btn-primary" href="${escapeHtml(booking)}" target="_blank" rel="noopener noreferrer">Book with this business ${icon('arrow-up-right')}</a>` : ''}
           <div class="shop-info-grid">
             <div class="card"><h3>Location</h3><p>${escapeHtml(address || 'Address coming soon')}</p>${shop.phone ? `<p>${escapeHtml(shop.phone)}</p>` : ''}</div>
             <div class="card"><h3>GoBookr professionals</h3><p class="muted" style="margin-bottom:0;">Choose a professional below to view their profile and booking options.</p></div>
