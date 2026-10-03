@@ -57,7 +57,7 @@ module.exports = function (router) {
             ${icon('user-round')}
             <input type="text" name="q" maxlength="100" placeholder="Service, specialty, or name" aria-label="Service, specialty, or professional name" />
           </label>
-          <button class="btn" type="submit" aria-label="Search">
+          <button class="btn gb-btn-primary gb-btn-primary--pulse" type="submit" aria-label="Search">
             ${icon('search')}
             <span>Search</span>
           </button>

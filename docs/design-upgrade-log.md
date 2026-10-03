@@ -17,7 +17,7 @@ Branch: `design/sitewide-polish-2026-10-02`. Base: production main `fb3b85259ef7
 
 Initial complete suite: 212/212 passed, zero skipped. The existing wedding/mobile gap assertion was updated to the requested spacing token. Final validation status is recorded in the PR.
 
-Color-pair calculation (WCAG relative luminance; normal text minimum 4.5:1):
+Initial pre-glow color-pair calculation (WCAG relative luminance; normal text minimum 4.5:1):
 
 - body on white: 7.58:1
 - ink on white: 17.85:1
@@ -39,3 +39,11 @@ Mobile before screenshots and after comparisons are not yet complete. Vercel pre
 ## Merge gate
 
 Configure a safely scoped preview database connection with explicit owner approval, then complete the required preview and screenshot matrix. No secret values should be shared in chat. Green build/CI alone is insufficient to approve this PR.
+
+## Glow upgrade
+
+- Added the requested electric-blue tokens, hero light orbs, focused input rings and active-chip glow. Ordinary cards keep soft neutral shadows; the optional featured class is not applied to any card.
+- Glow is applied to existing profile Book controls and the hero Search CTA. Only that Search CTA pulses; reduced-motion disables it. Other primary buttons retain a gradient without a glow.
+- The requested #4F8DFF button stop has white-text contrast of only 3.19:1. A 20% black face overlay preserves the supplied gradient while raising its minimum calculated contrast to 4.72:1. The halo is clipped outside the button face so it cannot lighten the label background. Hover uses the same accessible face.
+- No text, form behavior, route destinations or booking links changed in this follow-up.
+- Follow-up local suite: 212 passed, zero failed or skipped. Rendered contrast, desktop/mobile after screenshots and end-to-end preview checks remain blocked by the missing preview DATABASE_URL.
