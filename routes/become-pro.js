@@ -16,7 +16,7 @@ module.exports = function (router) {
     const body = `<section class="section container" style="max-width:640px;">
       <div class="panel">
         <span class="badge category">Professional membership</span>
-        <h1 style="margin-top:var(--gb-space-2);">Turn this account into a professional account</h1>
+        <h1 style="margin-top:12px;">Turn this account into a professional account</h1>
         <p class="muted">Keep your same email and password. You’ll start a 30-day free trial, then GoBookr Professional is $20/month unless canceled.</p>
         <form method="POST" action="/become-pro">
           <input type="hidden" name="_csrf" value="${escapeHtml(ctx.session.csrf_token)}" />
@@ -25,7 +25,7 @@ module.exports = function (router) {
             <option value="">Choose your service</option>
             ${PRO_CATEGORIES.map(([value, label]) => `<option value="${value}">${label}</option>`).join('')}
           </select>
-          <button class="btn block" type="submit" style="margin-top:var(--gb-space-3);">Start my 30-day professional trial</button>
+          <button class="btn block" type="submit" style="margin-top:14px;">Start my 30-day professional trial</button>
         </form>
       </div>
     </section>`;

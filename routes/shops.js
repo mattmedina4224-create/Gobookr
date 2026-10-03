@@ -3,7 +3,7 @@
 const db = require('../db');
 const { layout } = require('../lib/layout');
 const { send, flashFromQuery } = require('../lib/http');
-const { escapeHtml, icon } = require('../lib/util');
+const { escapeHtml } = require('../lib/util');
 
 function safeUrl(value) {
   try { const u = new URL(String(value || '').trim()); return ['http:','https:'].includes(u.protocol) ? u.toString() : ''; } catch { return ''; }
@@ -23,23 +23,23 @@ module.exports = function (router) {
     const address = [shop.street_address, shop.suite, shop.city, shop.state, shop.zip_code].filter(Boolean).join(', ');
     const claimed = shop.claim_status === 'claimed';
     const professionals = db.prepare(`SELECT id, business_name, professional_handle, category, bio, initials, profile_photo_url, license_verified FROM pro_profiles WHERE LOWER(COALESCE(workplace_name,'')) = LOWER(?) AND LOWER(city) = LOWER(?) AND UPPER(state) = UPPER(?) AND (? = '' OR COALESCE(street_address,'') = '' OR LOWER(street_address) = LOWER(?)) ORDER BY business_name ASC LIMIT 50`).all(shop.name, shop.city, shop.state, String(shop.street_address || ''), String(shop.street_address || ''));
-    const staffHtml = professionals.length ? professionals.map((pro) => `<a class="card" href="/pro/${pro.id}" style="text-decoration:none;color:inherit;display:flex;align-items:center;gap:var(--gb-space-2);">${pro.profile_photo_url ? `<img class="shop-staff-photo" src="${escapeHtml(pro.profile_photo_url)}" alt="${escapeHtml(pro.business_name)} profile photo">` : `<div class="shop-staff-photo shop-staff-fallback">${escapeHtml(pro.initials || 'GB')}</div>`}<div><strong>${escapeHtml(pro.business_name)}</strong>${pro.professional_handle ? `<div class="profile-handle">@${escapeHtml(pro.professional_handle)}</div>` : ''}<div class="muted" style="margin-top:var(--gb-space-1);">${escapeHtml(String(pro.category || 'Professional').replace(/_/g,' '))}${pro.license_verified ? ' · Verified' : ''}</div></div></a>`).join('') : '<p class="muted">No GoBookr professionals are connected to this business yet.</p>';
+    const staffHtml = professionals.length ? professionals.map((pro) => `<a class="card" href="/pro/${pro.id}" style="text-decoration:none;color:inherit;display:flex;align-items:center;gap:12px;">${pro.profile_photo_url ? `<img class="shop-staff-photo" src="${escapeHtml(pro.profile_photo_url)}" alt="${escapeHtml(pro.business_name)} profile photo">` : `<div class="shop-staff-photo shop-staff-fallback">${escapeHtml(pro.initials || 'GB')}</div>`}<div><strong>${escapeHtml(pro.business_name)}</strong>${pro.professional_handle ? `<div class="profile-handle">@${escapeHtml(pro.professional_handle)}</div>` : ''}<div class="muted" style="margin-top:2px;">${escapeHtml(String(pro.category || 'Professional').replace(/_/g,' '))}${pro.license_verified ? ' · Verified' : ''}</div></div></a>`).join('') : '<p class="muted">No GoBookr professionals are connected to this business yet.</p>';
     const body = `<section class="section container shop-public-page">
       <div class="panel shop-public-shell" style="overflow:hidden;padding:0;">
         ${cover ? `<img src="${escapeHtml(cover)}" alt="" style="width:100%;height:260px;object-fit:cover;display:block;">` : ''}
-        <div style="padding:var(--gb-space-4);">
-          <div style="display:flex;gap:var(--gb-space-3);align-items:center;flex-wrap:wrap;">
-            ${logo ? `<img src="${escapeHtml(logo)}" alt="${escapeHtml(shop.name)} logo" style="width:84px;height:84px;border-radius:var(--gb-radius-card);object-fit:cover;border:1px solid var(--gb-border);">` : ''}
-            <div><div class="badge">${claimed ? 'Claimed shop' : 'Unclaimed business'}</div><h1 style="margin:var(--gb-space-2) 0 var(--gb-space-1);">${escapeHtml(shop.name)}</h1><p class="muted" style="margin:0;">${escapeHtml(shop.city)}, ${escapeHtml(shop.state)}</p></div>
+        <div style="padding:24px;">
+          <div style="display:flex;gap:18px;align-items:center;flex-wrap:wrap;">
+            ${logo ? `<img src="${escapeHtml(logo)}" alt="${escapeHtml(shop.name)} logo" style="width:84px;height:84px;border-radius:18px;object-fit:cover;border:1px solid #e5e7eb;">` : ''}
+            <div><div class="badge">${claimed ? 'Claimed shop' : 'Unclaimed business'}</div><h1 style="margin:8px 0 4px;">${escapeHtml(shop.name)}</h1><p class="muted" style="margin:0;">${escapeHtml(shop.city)}, ${escapeHtml(shop.state)}</p></div>
           </div>
-          ${shop.description ? `<p style="margin-top:var(--gb-space-3);">${escapeHtml(shop.description)}</p>` : ''}
-          ${booking ? `<a class="btn shop-book-btn gb-btn-primary" href="${escapeHtml(booking)}" target="_blank" rel="noopener noreferrer">Book with this business ${icon('arrow-up-right')}</a>` : ''}
+          ${shop.description ? `<p style="margin-top:20px;">${escapeHtml(shop.description)}</p>` : ''}
+          ${booking ? `<a class="btn shop-book-btn" href="${escapeHtml(booking)}" target="_blank" rel="noopener noreferrer">Book with this business <span aria-hidden="true">↗</span></a>` : ''}
           <div class="shop-info-grid">
             <div class="card"><h3>Location</h3><p>${escapeHtml(address || 'Address coming soon')}</p>${shop.phone ? `<p>${escapeHtml(shop.phone)}</p>` : ''}</div>
             <div class="card"><h3>GoBookr professionals</h3><p class="muted" style="margin-bottom:0;">Choose a professional below to view their profile and booking options.</p></div>
           </div>
           <div class="shop-staff-section"><h2>Professionals at this business</h2><div class="shop-staff-grid">${staffHtml}</div></div>
-          ${!claimed ? `<div class="card" style="margin-top:var(--gb-space-3);"><h3>Own this business?</h3><p>Claim this business to manage its GoBookr business profile.</p><a class="btn secondary" href="/shop/${shop.id}/claim">Claim this business</a></div>` : ''}
+          ${!claimed ? `<div class="card" style="margin-top:18px;"><h3>Own this business?</h3><p>Claim this business to manage its GoBookr business profile.</p><a class="btn secondary" href="/shop/${shop.id}/claim">Claim this business</a></div>` : ''}
         </div>
       </div>
     </section>`;
@@ -55,7 +55,7 @@ module.exports = function (router) {
     const action = pending ? '<div class="panel"><strong>Claim request pending</strong><p class="muted">GoBookr will verify ownership before transferring control of this business page.</p></div>' :
       signedIn ? `<form method="POST" action="/shop/${shop.id}/claim"><input type="hidden" name="_csrf" value="${escapeHtml(ctx.session?.csrf_token || '')}"><button class="btn" type="submit">Request to claim this shop</button></form>` :
       `<a class="btn" href="/signup?claim_shop=${shop.id}">Create an account to claim</a> <a class="btn secondary" href="/login?claim_shop=${shop.id}">Log in</a>`;
-    send(ctx.res, layout({ title:`Claim ${shop.name}`, currentUser:ctx.currentUser, session:ctx.session, body:`<section class="section container" style="max-width:720px;"><div class="card"><span class="badge">Unclaimed business</span><h1>Claim ${escapeHtml(shop.name)}</h1><p class="lede">If you own or manage this business, request control of its GoBookr business page.</p><div class="panel" style="margin:var(--gb-space-3) 0;"><strong>${escapeHtml(shop.name)}</strong><div class="muted">${escapeHtml(shop.city)}, ${escapeHtml(shop.state)}</div></div>${action}</div></section>` }));
+    send(ctx.res, layout({ title:`Claim ${shop.name}`, currentUser:ctx.currentUser, session:ctx.session, body:`<section class="section container" style="max-width:720px;"><div class="card"><span class="badge">Unclaimed business</span><h1>Claim ${escapeHtml(shop.name)}</h1><p class="lede">If you own or manage this business, request control of its GoBookr business page.</p><div class="panel" style="margin:20px 0;"><strong>${escapeHtml(shop.name)}</strong><div class="muted">${escapeHtml(shop.city)}, ${escapeHtml(shop.state)}</div></div>${action}</div></section>` }));
   });
 
   router.post('/shop/:id/claim', async (ctx) => {
