@@ -34,7 +34,7 @@ These calculations do not replace a rendered, site-wide contrast audit.
 
 Captured live production BEFORE desktop screenshots at 1363×936 (browser screenshot width varies with scrollbar). Files are in `docs/design-screenshots/` for homepage, search, pro /521, claim /521, and claim signup /521. These are genuine browser captures, not mockups.
 
-Mobile before screenshots and after comparisons are not yet complete. Vercel previews are missing DATABASE_URL; database-backed pages fail at runtime. No fabricated profiles or screenshot fixtures were introduced. The PR must remain unmerged until real homepage/search/profile/claim/signup previews are checked at 375px and desktop, and after screenshots are added.
+Desktop before/after screenshots are committed for homepage, search, profile, claim and signup. The isolated preview database now works. No fabricated profiles or screenshot fixtures were introduced. Mobile before/after screenshots and rendered 375px verification remain incomplete; the current browser API does not expose viewport resizing. The PR remains unmerged under the owner’s release gate.
 
 ## Merge gate
 
@@ -42,7 +42,7 @@ Owner configured the isolated Preview DATABASE_URL and redeployed on October 2. 
 
 Desktop search interaction returned the two expected Fort Collins massage profiles. Rendered inspection caught legacy favorite-card height:100% applying to both profile and claim links, making the claim links overflow into the footer. Limit both links to their natural height, keep claim tap targets at 44px and position favorite controls above the claim link. No destinations or form behavior changed.
 
-Configure a safely scoped preview database connection with explicit owner approval, then complete the required preview and screenshot matrix. No secret values should be shared in chat. Green build/CI alone is insufficient to approve this PR.
+Latest code deployment: https://gobookr-ij92gcuz3-mattmedina4224-7308s-projects.vercel.app (d4ac981). GitHub GoBookr checks run 736 succeeded. Desktop captures show the corrected lowercase wordmark, hidden desktop mobile-menu control, and non-overlapping search claim links (44px height). Profile → claim → signup navigation retained profile 521. Account submission and billing were not exercised in this visual pass. Green build/CI alone does not satisfy the outstanding mobile release gate.
 
 ## Glow upgrade
 
@@ -51,4 +51,4 @@ Configure a safely scoped preview database connection with explicit owner approv
 - The requested #4F8DFF button stop has white-text contrast of only 3.19:1. A 20% black face overlay preserves the supplied gradient while raising its minimum calculated contrast to 4.72:1. The halo is clipped outside the button face so it cannot lighten the label background. Hover uses the same accessible face.
 - Added a 15% hero overlay to preserve light-body-text contrast around the brighter orbs. A conservative sampled calculation (lightest base stop everywhere, 375px and 1363px widths) gives a minimum 4.80:1 for #E2E8F0 text; rendered verification is still pending.
 - Business booking arrows now use the same Lucide sprite. No text, form behavior, route destinations or booking links changed in this follow-up.
-- Follow-up local suite: 212 passed, zero failed or skipped. Rendered contrast, desktop/mobile after screenshots and end-to-end preview checks remain blocked by the missing preview DATABASE_URL.
+- Follow-up local suite: 212 passed, zero failed or skipped. Desktop after captures and page navigation now succeed with the isolated preview DATABASE_URL. A complete rendered contrast audit and 375px mobile captures/checks remain outstanding.
