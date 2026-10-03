@@ -374,3 +374,42 @@
   .home-mobile-menu { box-shadow:0 4px 14px rgba(15,23,42,.08); }
   .home-mobile-menu a:last-child { background:var(--gb-ink); }
 }
+
+
+/* Thumbtack-inspired restraint: familiar marketplace structure, GoBookr identity. */
+.home-hero { padding:56px 0 48px !important; }
+.home-hero .container { max-width:1080px; }
+.home-hero h1 { max-width:680px !important; font-size:clamp(2.35rem,5vw,4rem) !important; letter-spacing:-.045em; margin-bottom:14px; }
+.home-hero .lede { max-width:720px !important; font-size:18px; }
+.home-search-card { max-width:980px; margin-top:34px; padding:20px !important; border-radius:16px !important; }
+.home-search-title { margin:0 0 14px; font-size:20px; letter-spacing:-.02em; }
+.home-search-card form { grid-template-columns:1fr 1fr 1.25fr auto; gap:10px; }
+.home-field { border-radius:10px !important; min-height:56px; }
+.home-search-card .btn { border-radius:10px !important; min-height:56px; padding:0 24px; }
+.home-openings-cta { display:inline-flex; gap:8px; margin-top:14px; color:var(--gb-ink); font-size:14px; }
+.home-openings-cta span { color:var(--gb-blue-600); }
+.home-trust-row { margin-top:28px; }
+.home-pills { margin-top:28px; gap:10px; }
+.home-pills a { border-radius:10px; padding:10px 14px; background:#fff; }
+.home-section { border-top:0; padding-top:44px; }
+.home-section-kicker { display:none; }
+.home-section-head h2 { font-size:28px; }
+.home-pro-grid { gap:20px; }
+.home-pro-card { border:0; border-radius:12px; }
+.home-pro-photo { border-radius:12px; aspect-ratio:1.25; }
+.home-pro-info { padding:12px 2px 0; }
+
+@media (max-width:720px) {
+  .home-hero { padding:28px 0 24px !important; }
+  .home-hero h1 { font-size:34px !important; max-width:330px !important; }
+  .home-hero .lede { font-size:16px; line-height:1.5; }
+  .home-search-card { margin-top:24px; padding:16px !important; border-radius:16px !important; }
+  .home-search-title { font-size:18px; margin-bottom:12px; }
+  .home-search-card form { gap:10px !important; }
+  .home-field { min-height:54px; }
+  .home-openings-cta { margin-top:14px; }
+  .home-section { padding-top:32px; }
+}
+
+.home-pro-claim-entry--quiet { margin-top:28px; padding:16px; background:#fafafa; border-color:#eceff1; }
+.home-pro-claim-entry--quiet .home-claim-button { background:var(--gb-ink) !important; }

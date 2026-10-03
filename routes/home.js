@@ -38,12 +38,10 @@ module.exports = function (router) {
 <div class="home-shell">
   <section class="home-hero gb-hero">
     <div class="container">
-      <p class="home-eyebrow">Real people. Real services. Near you.</p>
-      <h1>Find your next favorite beauty pro.</h1>
-      <p class="lede">Search local hairstylists, makeup artists, wedding specialists, barbers, and other beauty and wellness professionals—see their work and book with confidence.</p>
+      <h1>Find the right pro for you.</h1>\n      <p class="lede">Discover trusted local hairstylists, makeup artists, wedding specialists, barbers, nail artists, lash artists, tattoo artists, massage therapists, and more.</p>
 
       <div class="home-search-card gb-search" id="find">
-        <div class="home-search-mode" aria-label="What are you looking for?"><a class="active" href="/#find">Find a professional</a><a href="/search?type=businesses">Find a business</a></div>
+        <h2 class="home-search-title">What are you looking for?</h2>
         <form method="GET" action="/search">
           <label class="home-field">
             ${icon('layout-grid')}
@@ -64,26 +62,13 @@ module.exports = function (router) {
         </form>
       </div>
 
-      <p class="home-search-hint">Try a service or specialty like “Russian manicure,” “skin fade,” or “balayage,” then add your location.</p><a class="home-openings-cta" href="/openings"><strong>Need something today?</strong><span>See appointments professionals just opened up →</span></a>\n      <div class="home-trust-row" aria-label="Why use GoBookr">
+      <p class="home-search-hint">Try a service or specialty like “Russian manicure,” “skin fade,” or “balayage,” then add your location.</p>\n      <a class="home-openings-cta" href="/openings"><strong>Need something today?</strong><span>See appointments professionals just opened up →</span></a>\n      <div class="home-trust-row" aria-label="Why use GoBookr">
         <div class="home-trust-item"><span class="home-trust-icon">${icon('shield-check')}</span><span>Verified professionals</span></div>
         <div class="home-trust-item"><span class="home-trust-icon">${icon('calendar')}</span><span>Easy booking</span></div>
         <div class="home-trust-item"><span class="home-trust-icon">${icon('map-pin')}</span><span>Local results</span></div>
       </div>
 
-      <div class="home-pro-claim-entry">
-        <strong>Are you a professional?</strong> Already listed? Find and claim your profile. Not on GoBookr yet? Create a new profile from scratch.
-        <form class="home-claim-form" method="GET" action="/search">
-          <input type="hidden" name="type" value="professionals" />
-          <input class="home-claim-input" type="search" name="q" maxlength="100" placeholder="Search your name or business" aria-label="Search your professional profile" />
-          <button class="home-claim-button" type="submit">Find &amp; claim my profile</button>
-        </form>
-        <div class="home-pro-entry-actions">
-          <a class="home-create-profile" href="/signup?role=pro">Create a new profile — 30 days free</a>
-          <span class="muted">$20/month after your free trial. Cancel anytime.</span>
-        </div>
-      </div>
-
-      <div class="home-pills">
+      <div class="home-pro-claim-entry home-pro-claim-entry--quiet">\n        <strong>Are you a professional?</strong> Already listed on GoBookr?\n        <form class="home-claim-form" method="GET" action="/search">\n          <input type="hidden" name="type" value="professionals" />\n          <input class="home-claim-input" type="search" name="q" maxlength="100" placeholder="Search your name or business" aria-label="Search your professional profile" />\n          <button class="home-claim-button" type="submit">Find &amp; claim my profile</button>\n        </form>\n        <div class="home-pro-entry-actions"><a class="home-create-profile" href="/signup?role=pro">Create a new profile — 30 days free</a><span class="muted">$20/month after your free trial. Cancel anytime.</span></div>\n      </div>\n\n      <div class="home-pills">
         <a href="/search?category=barber">Barbers</a>
         <a href="/search?category=stylist">Hairstylists</a>
         <a href="/search?category=colorist">Colorists</a>
