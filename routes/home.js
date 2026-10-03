@@ -62,7 +62,7 @@ module.exports = function (router) {
         </form>
       </div>
 
-      <a class="home-openings-cta" href="/openings"><strong>Need something today?</strong><span>See appointments professionals just opened up →</span></a>\n      <div class="home-trust-row" aria-label="Why use GoBookr">
+      <p class="home-search-hint">Try a service or specialty like “Russian manicure,” “skin fade,” or “balayage,” then add your location.</p>\n      <a class="home-openings-cta" href="/openings"><strong>Need something today?</strong><span>See appointments professionals just opened up →</span></a>\n      <div class="home-trust-row" aria-label="Why use GoBookr">
         <div class="home-trust-item"><span class="home-trust-icon">${icon('shield-check')}</span><span>Verified professionals</span></div>
         <div class="home-trust-item"><span class="home-trust-icon">${icon('calendar')}</span><span>Easy booking</span></div>
         <div class="home-trust-item"><span class="home-trust-icon">${icon('map-pin')}</span><span>Local results</span></div>
