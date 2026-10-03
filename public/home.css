@@ -410,3 +410,6 @@
   .home-openings-cta { margin-top:14px; }
   .home-section { padding-top:32px; }
 }
+
+.home-pro-claim-entry--quiet { margin-top:28px; padding:16px; background:#fafafa; border-color:#eceff1; }
+.home-pro-claim-entry--quiet .home-claim-button { background:var(--gb-ink) !important; }
