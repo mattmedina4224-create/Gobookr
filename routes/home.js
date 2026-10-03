@@ -38,7 +38,7 @@ module.exports = function (router) {
 <div class="home-shell">
   <section class="home-hero gb-hero">
     <div class="container">
-      <h1>Find the right pro for you.</h1>\n      <p class="lede">Discover trusted local barbers, hairstylists, nail artists, lash artists, tattoo artists, massage therapists, and more.</p>
+      <h1>Find the right pro for you.</h1>\n      <p class="lede">Discover trusted local hairstylists, makeup artists, wedding specialists, barbers, nail artists, lash artists, tattoo artists, massage therapists, and more.</p>
 
       <div class="home-search-card gb-search" id="find">
         <h2 class="home-search-title">What are you looking for?</h2>
