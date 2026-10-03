@@ -32,7 +32,8 @@ jobs:
       - name: Run automated tests, including Postgres migration checks
         env:
           GOBOOKR_PGLITE_MODULE: '@electric-sql/pglite'
-        run: npm test
+        # Bound simultaneous embedded Postgres engines and expose process-level failures.
+        run: node --test --test-reporter=tap --test-concurrency=2 tests/*.test.js
 
   import-files:
     runs-on: ubuntu-latest
