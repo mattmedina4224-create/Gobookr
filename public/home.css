@@ -413,3 +413,40 @@
 
 .home-pro-claim-entry--quiet { margin-top:28px; padding:16px; background:#fafafa; border-color:#eceff1; }
 .home-pro-claim-entry--quiet .home-claim-button { background:var(--gb-ink) !important; }
+
+
+.home-mobile-search-label,.home-mobile-popular-title { display:none; }
+
+@media (max-width:720px) {
+  /* Consumer marketplace mobile home: search first, content immediately after. */
+  .home-hero { padding:18px 0 12px !important; border-bottom:0 !important; }
+  .home-desktop-intro { display:none; }
+  .home-search-card,.gb-search.home-search-card {
+    margin-top:0 !important; padding:0 !important; border:0 !important;
+    border-radius:0 !important; box-shadow:none !important; background:#fff !important;
+  }
+  .home-search-title { display:none; }
+  .home-mobile-search-label { display:block; margin:0 0 10px; font-size:24px; line-height:1.2; font-weight:750; letter-spacing:-.025em; color:var(--gb-ink); }
+  .home-search-card form { position:relative; display:grid !important; grid-template-columns:1fr !important; gap:10px !important; }
+  .home-field { min-height:52px !important; border:1px solid #d8dde5 !important; border-radius:26px !important; padding:0 18px !important; }
+  .home-field:nth-child(1),.home-field:nth-child(2) { display:none; }
+  .home-field:nth-child(3) { order:1; box-shadow:0 2px 8px rgba(15,23,42,.08) !important; }
+  .home-field:nth-child(3) input { height:52px !important; font-size:16px !important; }
+  .home-search-card .btn { position:absolute; right:7px; top:7px; z-index:2; width:38px !important; min-height:38px !important; height:38px; padding:0 !important; border-radius:50% !important; background:var(--gb-ink) !important; }
+  .home-search-card .btn span { display:none; }
+  .home-search-card .btn svg { width:19px; height:19px; }
+  .home-search-hint,.home-trust-row,.home-pro-claim-entry--quiet { display:none !important; }
+  .home-openings-cta { display:flex; justify-content:space-between; align-items:center; margin:14px 0 0; padding:12px 0; border-bottom:1px solid #eceff1; font-size:14px; }
+  .home-openings-cta span { color:var(--gb-body); }
+  .home-mobile-popular-title { display:block; margin:24px 0 14px; font-size:22px; line-height:1.2; letter-spacing:-.025em; color:var(--gb-ink); }
+  .home-pills { display:flex !important; gap:10px; overflow-x:auto; margin:0; padding:0 0 6px; scrollbar-width:none; }
+  .home-pills::-webkit-scrollbar { display:none; }
+  .home-pills a { flex:0 0 auto; padding:10px 14px; border:1px solid #d8dde5; border-radius:22px; background:#fff; font-size:14px; font-weight:650; }
+  .home-section { padding:24px 0 72px !important; }
+  .home-section-head { align-items:end; }
+  .home-section-head h2 { font-size:24px !important; }
+  .home-pro-grid { gap:14px !important; }
+  .home-pro-card { min-width:72vw !important; border:0 !important; }
+  .home-pro-photo { aspect-ratio:1.2 !important; border-radius:14px !important; }
+  .home-pro-info { padding:10px 2px 0 !important; }
+}
