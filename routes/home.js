@@ -116,7 +116,7 @@ module.exports = function (router) {
     font:inherit;
     box-shadow:none !important;
   }
-  .home-field input::placeholder { color:#a0a6b3; }
+  .home-field input::placeholder { color:var(--ink-faint); }
   .home-field:focus-within {
     border-color:#b7ccf7;
     box-shadow:0 0 0 3px rgba(78,126,214,.09);
@@ -167,7 +167,7 @@ module.exports = function (router) {
   }
   .home-trust-icon svg { width:21px; height:21px; }
 
-  .home-search-hint { max-width:980px; margin:10px 0 0; color:#7a8292; font-size:.78rem; }\n\n  .home-pills { display:flex; flex-wrap:wrap; gap:10px; margin-top:24px; }
+  .home-search-hint { max-width:980px; margin:10px 0 0; color:var(--ink-faint); font-size:.78rem; }\n\n  .home-pills { display:flex; flex-wrap:wrap; gap:10px; margin-top:24px; }
   .home-pills a {
     padding:8px 14px;
     border:1px solid #e3e7ee;
@@ -180,7 +180,7 @@ module.exports = function (router) {
 
   .home-section { padding:52px 0 58px; background:#fff; }
   .home-section-head { display:flex; align-items:center; justify-content:space-between; gap:16px; margin-bottom:20px; }
-  .home-section-kicker { margin:0 0 5px; color:#6f7890; font-size:.75rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; }\n  .home-section-head h2 { margin:0; font-size:1.75rem; letter-spacing:-.03em; }
+  .home-section-kicker { margin:0 0 5px; color:var(--ink-faint); font-size:.75rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; }\n  .home-section-head h2 { margin:0; font-size:1.75rem; letter-spacing:-.03em; }
   .home-see-all { color:#215ca6; font-weight:750; }
   .home-pro-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; }
   .home-pro-card { overflow:hidden; transition:transform .16s ease,box-shadow .16s ease; border:1px solid #e5e8ef; border-radius:12px; background:#fff; box-shadow:none; }
@@ -191,7 +191,7 @@ module.exports = function (router) {
   .home-pro-info p { margin:0 0 8px; font-size:.86rem; }
   .home-pro-rating { color:#d28a20; font-size:.84rem; }
   .home-pro-rating b,.home-pro-rating span { color:#555b6e; }
-  .home-pro-new { color:#777f92; font-size:.84rem; }
+  .home-pro-new { color:var(--ink-faint); font-size:.84rem; }
 
   .home-mobile-menu-button,.home-mobile-menu { display:none; }
 
