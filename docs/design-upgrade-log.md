@@ -38,6 +38,8 @@ Mobile before screenshots and after comparisons are not yet complete. Vercel pre
 
 ## Merge gate
 
+Owner configured the isolated Preview DATABASE_URL and redeployed on October 2. Deployment DMnYB3bbsHhg3AJPj24dRxSZvmZs returns HTTP 200 for homepage, search, pro /521, claim and signup. Browser access through Vercel's temporary share link succeeds. Desktop inspection caught a legacy logo background and zero-size font hiding the lowercase wordmark; reset those visual styles and keep the mobile menu button hidden on desktop. Required screenshot matrix and 375px rendered verification remain outstanding.
+
 Configure a safely scoped preview database connection with explicit owner approval, then complete the required preview and screenshot matrix. No secret values should be shared in chat. Green build/CI alone is insufficient to approve this PR.
 
 ## Glow upgrade

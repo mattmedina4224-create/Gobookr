@@ -16,6 +16,7 @@ img { max-width:100%; display:block; }
 .gb-section { padding:var(--gb-space-7) 0; }
 .gb-wordmark,.brand { color:var(--gb-ink); font-weight:800; letter-spacing:-.04em; text-transform:lowercase; }
 .gb-wordmark:hover,.brand:hover { color:var(--gb-ink); }
+.brand { background:none; font-size:var(--gb-text-lg); line-height:1.15; gap:var(--gb-space-2); }
 .gb-icon { display:inline-block; width:20px; height:20px; flex:0 0 20px; vertical-align:middle; stroke-width:2; }
 .gb-btn,.btn,.home-claim-button,.home-create-profile,.home-mobile-menu-button {
   display:inline-flex; align-items:center; justify-content:center; gap:var(--gb-space-2); min-height:44px;
@@ -28,6 +29,8 @@ img { max-width:100%; display:block; }
 .gb-btn-primary:hover,.btn:not(.secondary):not(.ghost):not(.danger):hover,.home-claim-button:hover,.home-create-profile:hover { color:var(--gb-surface); transform:translateY(-1px); background:var(--gb-blue-700); box-shadow:var(--gb-shadow-blue); }
 .gb-btn-primary:active,.btn:active { transform:translateY(0); }
 .gb-btn-secondary,.btn.secondary,.home-mobile-menu-button { color:var(--gb-ink); background:var(--gb-surface); border-color:var(--gb-border); box-shadow:var(--gb-shadow-xs); }
+.home-mobile-menu-button { display:none; }
+@media (max-width:720px) { .home-mobile-menu-button { min-width:44px; min-height:44px; } }
 .gb-btn-secondary:hover,.btn.secondary:hover { color:var(--gb-ink); border-color:var(--gb-blue-200); background:var(--gb-blue-50); }
 .gb-btn-ghost,.btn.ghost { color:var(--gb-blue-600); background:transparent; box-shadow:none; }
 .gb-btn-ghost:hover,.btn.ghost:hover { background:var(--gb-blue-50); }
