@@ -29,7 +29,7 @@ img { max-width:100%; display:block; }
 .gb-btn-primary:hover,.btn:not(.secondary):not(.ghost):not(.danger):hover,.home-claim-button:hover,.home-create-profile:hover { color:var(--gb-surface); transform:translateY(-1px); background:var(--gb-blue-700); box-shadow:var(--gb-shadow-blue); }
 .gb-btn-primary:active,.btn:active { transform:translateY(0); }
 .gb-btn-secondary,.btn.secondary,.home-mobile-menu-button { color:var(--gb-ink); background:var(--gb-surface); border-color:var(--gb-border); box-shadow:var(--gb-shadow-xs); }
-.home-mobile-menu-button { display:none; }
+.nav-links .home-mobile-menu-button { display:none; }
 @media (max-width:720px) { .home-mobile-menu-button { min-width:44px; min-height:44px; } }
 .gb-btn-secondary:hover,.btn.secondary:hover { color:var(--gb-ink); border-color:var(--gb-blue-200); background:var(--gb-blue-50); }
 .gb-btn-ghost,.btn.ghost { color:var(--gb-blue-600); background:transparent; box-shadow:none; }
