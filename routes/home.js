@@ -37,26 +37,24 @@ module.exports = function (router) {
 <style>
   .home-shell { background:#fff; color:#11131c; }
   .home-hero {
-    background:
-      radial-gradient(760px 360px at 12% -10%, rgba(229,238,255,.9) 0%, rgba(255,255,255,0) 62%),
-      #fff;
+    background:var(--paper);
     border-bottom:1px solid #edf0f6;
-    padding:78px 0 64px;
+    padding:64px 0 48px;
   }
   .home-eyebrow {
     margin:0 0 20px;
-    color:#627caf;
+    color:var(--ink-soft);
     font-size:.8rem;
-    font-weight:850;
+    font-weight:700;
     letter-spacing:.18em;
     text-transform:uppercase;
   }
   .home-hero h1 {
     max-width:720px;
     margin:0 0 22px;
-    font-size:clamp(3rem,6vw,4.8rem);
-    line-height:.98;
-    letter-spacing:-.052em;
+    font-size:clamp(2.5rem,5vw,3.75rem);
+    line-height:1.08;
+    letter-spacing:-.035em;
     color:#11131c;
   }
   .home-hero .lede {
@@ -70,23 +68,23 @@ module.exports = function (router) {
   .home-search-card {
     max-width:850px;
     margin-top:34px;
-    padding:18px;
-    border:1px solid #e2e7f0;
-    border-radius:28px;
-    background:rgba(255,255,255,.96);
-    box-shadow:0 20px 50px -32px rgba(21,44,87,.42);
+    padding:16px;
+    border:1px solid var(--paper-line);
+    border-radius:12px;
+    background:var(--paper);
+    box-shadow:var(--shadow-sm);
   }
   .home-search-mode { display:flex; gap:8px; margin:0 0 14px; padding:4px; width:max-content; max-width:100%; border-radius:999px; background:#f3f5f8; }
-  .home-search-mode a { padding:9px 16px; border-radius:999px; color:#596174; font-size:.88rem; font-weight:800; }
-  .home-search-mode a.active { background:#14264c; color:#fff; box-shadow:0 3px 10px rgba(20,38,76,.18); }
+  .home-search-mode a { padding:9px 16px; border-radius:999px; color:#596174; font-size:.88rem; font-weight:700; }
+  .home-search-mode a.active { background:var(--paper); color:var(--brand); box-shadow:none; }
   .home-pro-claim-entry { max-width:850px; margin-top:22px; padding:16px 18px; border:1px solid #e2e7f0; border-radius:18px; background:#f6f8fc; color:#4c566b; font-size:.9rem; line-height:1.4; }
   .home-pro-claim-entry strong { color:#14264c; }
   .home-claim-form { display:flex; gap:10px; margin-top:12px; }
   .home-claim-input { flex:1; min-width:0; height:48px; padding:0 15px; border:1px solid #d9e0eb; border-radius:12px; background:#fff; color:#171b26; font:inherit; }
   .home-claim-input:focus { outline:0; border-color:#9fbae9; box-shadow:0 0 0 3px rgba(78,126,214,.09); }
-  .home-claim-button { min-height:48px; padding:0 20px; border:0; border-radius:12px; background:#14264c; color:#fff; font-weight:800; white-space:nowrap; }
+  .home-claim-button { min-height:48px; padding:0 20px; border:0; border-radius:12px; background:#14264c; color:#fff; font-weight:700; white-space:nowrap; }
   .home-pro-entry-actions { display:flex; align-items:center; gap:12px; margin-top:12px; flex-wrap:wrap; }
-  .home-create-profile { display:inline-flex; min-height:46px; align-items:center; justify-content:center; padding:0 18px; border:1px solid #b9c8e1; border-radius:12px; background:#fff; color:#14264c; font-weight:800; }
+  .home-create-profile { display:inline-flex; min-height:46px; align-items:center; justify-content:center; padding:0 18px; border:1px solid #b9c8e1; border-radius:12px; background:#fff; color:#14264c; font-weight:700; }
   .home-create-profile:hover { background:#eef4ff; }
   .home-search-card form {
     display:grid;
@@ -101,7 +99,7 @@ module.exports = function (router) {
     gap:12px;
     padding:0 17px;
     border:1px solid #dfe4ed;
-    border-radius:999px;
+    border-radius:8px;
     background:#fff;
   }
   .home-field svg { width:23px; height:23px; flex:0 0 23px; color:#11131c; }
@@ -130,12 +128,12 @@ module.exports = function (router) {
     justify-content:center;
     gap:10px;
     padding:0 30px;
-    border-radius:999px;
-    background:linear-gradient(135deg,#14264c,#123c70);
+    border-radius:8px;
+    background:var(--brand);
     color:#fff;
-    font-weight:800;
+    font-weight:700;
     border:0;
-    box-shadow:0 10px 24px -14px rgba(17,49,93,.75);
+    box-shadow:none;
     white-space:nowrap;
   }
   .home-search-card .btn:hover { transform:translateY(-1px); }
@@ -164,8 +162,8 @@ module.exports = function (router) {
     display:grid;
     place-items:center;
     border-radius:50%;
-    background:#f0f5ff;
-    color:#2456a3;
+    background:var(--paper-soft);
+    color:var(--ink-soft);
   }
   .home-trust-icon svg { width:21px; height:21px; }
 
@@ -173,7 +171,7 @@ module.exports = function (router) {
   .home-pills a {
     padding:8px 14px;
     border:1px solid #e3e7ee;
-    border-radius:999px;
+    border-radius:8px;
     background:#fff;
     color:#41495e;
     font-size:.86rem;
@@ -182,12 +180,12 @@ module.exports = function (router) {
 
   .home-section { padding:52px 0 58px; background:#fff; }
   .home-section-head { display:flex; align-items:center; justify-content:space-between; gap:16px; margin-bottom:20px; }
-  .home-section-kicker { margin:0 0 5px; color:#6f7890; font-size:.75rem; font-weight:800; letter-spacing:.08em; text-transform:uppercase; }\n  .home-section-head h2 { margin:0; font-size:1.75rem; letter-spacing:-.03em; }
+  .home-section-kicker { margin:0 0 5px; color:#6f7890; font-size:.75rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; }\n  .home-section-head h2 { margin:0; font-size:1.75rem; letter-spacing:-.03em; }
   .home-see-all { color:#215ca6; font-weight:750; }
   .home-pro-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; }
-  .home-pro-card { overflow:hidden; transition:transform .16s ease,box-shadow .16s ease; border:1px solid #e5e8ef; border-radius:16px; background:#fff; box-shadow:none; }
+  .home-pro-card { overflow:hidden; transition:transform .16s ease,box-shadow .16s ease; border:1px solid #e5e8ef; border-radius:12px; background:#fff; box-shadow:none; }
   .home-pro-card:hover { transform:translateY(-2px); box-shadow:0 16px 34px -28px rgba(25,40,80,.5); }\n  .home-pro-photo { width:100%; aspect-ratio:1.45; object-fit:cover; background:#eef1f7; }
-  .home-pro-placeholder { display:flex; align-items:center; justify-content:center; color:#fff; background:linear-gradient(135deg,#1e2a4a,#38568f); font-size:2rem; font-weight:800; }
+  .home-pro-placeholder { display:flex; align-items:center; justify-content:center; color:var(--ink-soft); background:var(--paper-soft); font-size:2rem; font-weight:700; }
   .home-pro-info { padding:15px; }
   .home-pro-info h3 { margin:0 0 4px; font-size:1rem; }
   .home-pro-info p { margin:0 0 8px; font-size:.86rem; }
@@ -236,8 +234,8 @@ module.exports = function (router) {
     .site-header .nav-links > span { display:none !important; }
     .home-mobile-menu-button {
       display:inline-flex !important;
-      width:42px;
-      height:42px;
+      width:44px;
+      height:44px;
       border:0;
       border-radius:12px;
       background:#fff;
@@ -268,10 +266,10 @@ module.exports = function (router) {
     .home-hero { padding:42px 0 38px; }
     .home-hero .container { padding:0 18px; }
     .home-eyebrow { margin-bottom:16px; font-size:.68rem; letter-spacing:.16em; }
-    .home-hero h1 { font-size:2.72rem; line-height:.99; margin-bottom:16px; max-width:360px; }
+    .home-hero h1 { font-size:2.25rem; line-height:1.1; margin-bottom:16px; max-width:360px; }
     .home-hero .lede { font-size:1rem; line-height:1.52; }
 
-    .home-search-card { margin-top:26px; padding:10px; border-radius:16px; box-shadow:0 16px 34px -28px rgba(25,40,80,.45); }
+    .home-search-card { margin-top:26px; padding:10px; border-radius:16px; box-shadow:none; }
     .home-pro-claim-entry { margin-top:24px; padding:15px; border-radius:16px; }
     .home-claim-form { display:grid; grid-template-columns:1fr; gap:9px; }
     .home-claim-input,.home-claim-button { width:100%; }
@@ -301,7 +299,7 @@ module.exports = function (router) {
 
   @media (max-width:390px) {
     .brand { width:148px !important; flex-basis:148px !important; }
-    .home-hero h1 { font-size:2.38rem; }
+    .home-hero h1 { font-size:2.125rem; }
     .home-trust-item { font-size:.72rem; }
   }
 </style>
