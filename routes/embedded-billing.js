@@ -78,17 +78,17 @@ module.exports = function (router) {
       const clientSecret = checkoutSession.client_secret;
       const body = `
         <section class="section container" style="max-width:980px;">
-          <div style="display:flex;align-items:center;justify-content:space-between;gap:var(--gb-space-3);flex-wrap:wrap;margin-bottom:var(--gb-space-3);">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:18px;">
             <div>
-              <p class="muted" style="margin:0 0 var(--gb-space-1);">GoBookr Professional</p>
+              <p class="muted" style="margin:0 0 5px;">GoBookr Professional</p>
               <h1 style="margin:0;">Set up secure payment</h1>
-              <p class="muted" style="margin:var(--gb-space-2) 0 0;">${subscription.status === 'trialing' && daysRemaining(subscription.trial_ends_at) > 0 ? 'Your remaining trial stays free, then $20/month.' : '$20/month, billed when you confirm checkout.'} Stripe securely handles your payment details.</p>
+              <p class="muted" style="margin:8px 0 0;">${subscription.status === 'trialing' && daysRemaining(subscription.trial_ends_at) > 0 ? 'Your remaining trial stays free, then $20/month.' : '$20/month, billed when you confirm checkout.'} Stripe securely handles your payment details.</p>
             </div>
             <a class="btn secondary" href="/dashboard/pro/billing">Back to billing</a>
           </div>
-          <div class="panel" style="padding:var(--gb-space-3);min-height:520px;">
+          <div class="panel" style="padding:14px;min-height:520px;">
             <div id="gobookr-embedded-checkout" aria-live="polite"></div>
-            <div id="gobookr-checkout-error" class="alert error" style="display:none;margin:var(--gb-space-3);"></div>
+            <div id="gobookr-checkout-error" class="alert error" style="display:none;margin:14px;"></div>
           </div>
         </section>
         <script src="https://js.stripe.com/v3/"></script>
