@@ -11,6 +11,7 @@ const layoutModule = require('./lib/layout');
 const { installBillingBanner } = require('./lib/pro-billing-banner');
 const { installSquareDashboardCard } = require('./lib/square-dashboard-card');
 const { checkAuthRateLimit } = require('./lib/rate-limit');
+const { installPublicAnalytics } = require('./lib/public-analytics');
 
 installBillingBanner(layoutModule);
 installSquareDashboardCard(layoutModule);
@@ -108,6 +109,7 @@ const server = http.createServer(async (req, res) => {
     if (!match) { res.writeHead(404, { 'Content-Type': 'text/html; charset=utf-8' }); res.end('<h1>404 — page not found</h1><p><a href="/">Back to GoBookr</a></p>'); return; }
     const session = getSessionUserSafe(req);
     const ctx = { req, res, params: match.params, query: Object.fromEntries(parsedUrl.searchParams.entries()), currentUser: session ? session.user : null, session: session ? session.session : null, files: {}, rawBody: null };
+    installPublicAnalytics(ctx, pathname);
     let multipartDebug = null;
     if (req.method === 'POST') {
       const raw = await readBody(req); ctx.rawBody = raw; const contentType = req.headers['content-type'] || ''; const lowerContentType = contentType.toLowerCase(); const isMultipart = lowerContentType.startsWith('multipart/form-data'); const isJson = lowerContentType.startsWith('application/json');

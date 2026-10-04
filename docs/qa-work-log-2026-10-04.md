@@ -76,3 +76,12 @@ Syntax: node scripts/check.js;119 files checked;exit0.
 
 ## Release decision
 No merge today. PR135 is mergeable and application-head checks green, but authenticated browser acceptance and remaining changed-flow mobile/desktop tests are incomplete. No production data writes or live billing operations. Screenshots attached under docs/qa-screenshots/2026-10-04.
+
+## Public follow-up push
+- Seven additional stored source/booking URLs opened; three personal-name listings corroborated, three brand-name listings need individual-vs-business review, one failed destination. Details: qa-source-rechecks-2026-10-04.md. No live records modified. Directory-wide legitimacy count remains unknown.
+- DE-PEACE WELLNESS profile423 Booksy URL redirects to a generic directory with do=showBusinessDeletedModal. Needs a verified replacement or approved hold; not certified working.
+- External Schema.org validator browser navigation timed out: `timed out awaiting tools/call after 300s`. Not retried; external validator is NOT passed. Added a local vocabulary checker with explicitly limited scope, using the current official Schema.org JSON-LD vocabulary.
+- Removed invalid aggregateRating from Person metadata; visible reviews unchanged. Added CollectionPage/ItemList metadata for populated discovery pages; empty pages omit schema and remain noindex. No made-up business/person identities in collection list metadata.
+- Added cookie-free visit/search request events to structured runtime logs, including actual result_count. No private query text, location coordinates, identity, cookies or referrers logged. DNT/GPC, prefetch, obvious bots, private routes and non-200/non-HTML responses excluded. Preview events labelled preview. These are not unique visitors or a durable analytics warehouse.
+- New analytics dependency initially broke strict VM test harness allowlists. Updated those dependency stubs and reran:227 pass,0 fail,0 skip; discovery schema render test then also passed. Final all-test run/deployed-event evidence follows.
+- No new schema migration, production data operation, billing operation, secret or authentication-provider change made in this push.
