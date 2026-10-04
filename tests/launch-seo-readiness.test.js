@@ -7,7 +7,6 @@ const path = require('node:path');
 
 const root = path.join(__dirname, '..');
 const server = fs.readFileSync(path.join(root, 'server.js'), 'utf8');
-const staticSitemap = fs.readFileSync(path.join(root, 'public', 'sitemap.xml'), 'utf8');
 
 test('launch SEO endpoints use the canonical GoBookr domain', () => {
   assert.match(server, /Sitemap: https:\/\/gobookr\.com\/sitemap\.xml/);
@@ -15,7 +14,7 @@ test('launch SEO endpoints use the canonical GoBookr domain', () => {
   assert.match(server, /https:\/\/gobookr\.com\/pro\//);
   assert.match(server, /https:\/\/gobookr\.com\/shop\//);
   assert.match(server, /https:\/\/gobookr\.com\/discover\//);
-  assert.match(staticSitemap, /<loc>https:\/\/gobookr\.com\/<\/loc>/);
+  assert.equal(fs.existsSync(path.join(root, 'public', 'sitemap.xml')), false, 'a static asset must not shadow the live inventory sitemap');
 });
 
 test('robots keeps private account surfaces out of search', () => {
