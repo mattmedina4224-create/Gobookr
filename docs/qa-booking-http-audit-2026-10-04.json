@@ -1,0 +1,2036 @@
+{
+  "checked_at": "2026-10-04T20:58:44.740Z",
+  "profile_rows": 500,
+  "unique_populated_urls": 222,
+  "production_changes": 0,
+  "scope": "HTTP reachability only; no identity/service/address verification or mobile booking-flow certification",
+  "counts": {
+    "reachable_unverified": 198,
+    "missing_booking": 185,
+    "generic_directory": 101,
+    "deleted_business_redirect": 12,
+    "http_response_requires_review": 3,
+    "network_unverified": 1
+  },
+  "results": [
+    {
+      "profile_ids": [
+        2
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/1293247_janexy-the-barber_hair-salon_134761_denver"
+    },
+    {
+      "profile_ids": [
+        3,
+        8,
+        11
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://glowdtc.glossgenius.com/"
+    },
+    {
+      "profile_ids": [
+        4
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/759429_your-barber_barber-shop_134761_denver"
+    },
+    {
+      "profile_ids": [
+        5
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://soleilskinbeauty.glossgenius.com/"
+    },
+    {
+      "profile_ids": [
+        6
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://yourgoldenglow.glossgenius.com/"
+    },
+    {
+      "profile_ids": [
+        7,
+        12,
+        14,
+        117,
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        140,
+        141,
+        142,
+        143,
+        144,
+        145,
+        146,
+        147,
+        148,
+        149,
+        150,
+        151,
+        152,
+        153,
+        154,
+        155,
+        156,
+        157,
+        158,
+        159,
+        160,
+        161,
+        162,
+        163,
+        164,
+        253,
+        254,
+        255,
+        256,
+        257,
+        258,
+        259,
+        260,
+        261,
+        262,
+        263,
+        264,
+        265,
+        266,
+        267,
+        268,
+        269,
+        270,
+        271,
+        272,
+        273,
+        274,
+        275,
+        276,
+        277,
+        278,
+        297,
+        298,
+        299,
+        300,
+        301,
+        302,
+        303,
+        304,
+        305,
+        306,
+        307,
+        308,
+        309,
+        310,
+        311,
+        312,
+        313,
+        314,
+        315,
+        316,
+        317,
+        318,
+        319,
+        336,
+        337,
+        338,
+        339,
+        340,
+        341,
+        342,
+        343,
+        344,
+        345,
+        346,
+        347,
+        348,
+        349,
+        350,
+        351,
+        352,
+        353,
+        354,
+        355,
+        356,
+        357,
+        358,
+        359,
+        360,
+        361,
+        362,
+        363,
+        364,
+        365,
+        366,
+        367,
+        368,
+        369,
+        370,
+        371,
+        372,
+        373,
+        374,
+        375,
+        376,
+        377,
+        378,
+        379,
+        380,
+        381,
+        382,
+        383,
+        384,
+        385,
+        386,
+        387,
+        388,
+        389,
+        390,
+        391,
+        392,
+        393,
+        394,
+        395,
+        396,
+        397,
+        398,
+        399,
+        400,
+        401,
+        402,
+        403,
+        404,
+        405,
+        406,
+        407,
+        408,
+        409,
+        410,
+        411,
+        412,
+        413,
+        414,
+        415,
+        416,
+        417,
+        418,
+        419,
+        420
+      ],
+      "status": "missing_booking"
+    },
+    {
+      "profile_ids": [
+        9
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://stellab.glossgenius.com/"
+    },
+    {
+      "profile_ids": [
+        10
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://thegloroomllc.glossgenius.com/"
+    },
+    {
+      "profile_ids": [
+        13
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://brilacyhair.glossgenius.com/"
+    },
+    {
+      "profile_ids": [
+        15,
+        21,
+        29,
+        32,
+        41,
+        54,
+        55,
+        56,
+        58,
+        228
+      ],
+      "status": "generic_directory",
+      "final_url": "https://booksy.com/en-us/s/nail-salon/134761_denver"
+    },
+    {
+      "profile_ids": [
+        16,
+        22,
+        25,
+        252
+      ],
+      "status": "generic_directory",
+      "final_url": "https://booksy.com/en-us/s/massage/134761_denver"
+    },
+    {
+      "profile_ids": [
+        17
+      ],
+      "status": "deleted_business_redirect",
+      "final_url": "https://booksy.com/en-us/s/brows-lashes/134761_denver?do=showBusinessDeletedModal"
+    },
+    {
+      "profile_ids": [
+        18,
+        24,
+        26,
+        28,
+        30,
+        31,
+        33
+      ],
+      "status": "generic_directory",
+      "final_url": "https://booksy.com/en-us/s/eyebrow-waxing/134761_denver"
+    },
+    {
+      "profile_ids": [
+        19,
+        229,
+        430
+      ],
+      "status": "generic_directory",
+      "final_url": "https://booksy.com/en-us/s/brows-lashes/134761_denver"
+    },
+    {
+      "profile_ids": [
+        20
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/1187747_beauty-x-diamond_brows-lashes_134761_denver"
+    },
+    {
+      "profile_ids": [
+        23,
+        36,
+        37,
+        38,
+        39,
+        40
+      ],
+      "status": "generic_directory",
+      "final_url": "https://booksy.com/en-us/s/tattoo-shop/134761_denver"
+    },
+    {
+      "profile_ids": [
+        27,
+        52,
+        53,
+        57
+      ],
+      "status": "generic_directory",
+      "final_url": "https://booksy.com/en-us/s/eyebrow-shaping/134761_denver"
+    },
+    {
+      "profile_ids": [
+        34
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/797964_studio-13-beauty-bar_skin-care_134761_denver"
+    },
+    {
+      "profile_ids": [
+        35
+      ],
+      "status": "deleted_business_redirect",
+      "final_url": "https://booksy.com/en-us/s/massage/134761_denver?do=showBusinessDeletedModal"
+    },
+    {
+      "profile_ids": [
+        42,
+        44
+      ],
+      "status": "generic_directory",
+      "final_url": "https://booksy.com/en-us/s/brows-lashes/14864_thornton"
+    },
+    {
+      "profile_ids": [
+        43,
+        45,
+        47,
+        48,
+        51
+      ],
+      "status": "generic_directory",
+      "final_url": "https://booksy.com/en-us/s/eyelash-extensions/134761_denver"
+    },
+    {
+      "profile_ids": [
+        46
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/1864696_beauty-lashes_brows-lashes_134761_denver"
+    },
+    {
+      "profile_ids": [
+        49
+      ],
+      "status": "deleted_business_redirect",
+      "final_url": "https://booksy.com/en-us/s/massage/134761_denver?do=showBusinessDeletedModal"
+    },
+    {
+      "profile_ids": [
+        50
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/787543_the-lilly-edit-verity_nail-salon_134761_denver"
+    },
+    {
+      "profile_ids": [
+        59,
+        60,
+        61,
+        62,
+        63
+      ],
+      "status": "generic_directory",
+      "final_url": "https://booksy.com/en-us/s/body-waxing/134761_denver"
+    },
+    {
+      "profile_ids": [
+        64
+      ],
+      "status": "generic_directory",
+      "final_url": "https://booksy.com/en-us/s/hair-removal/134761_denver"
+    },
+    {
+      "profile_ids": [
+        65
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/1716432_star-stone-studios_professional-services_14977_colorado-springs"
+    },
+    {
+      "profile_ids": [
+        66
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/1485509_shaydabarber_barber-shop_134779_aurora"
+    },
+    {
+      "profile_ids": [
+        67
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/502205_billy-d-the-barber_barber-shop_134779_aurora"
+    },
+    {
+      "profile_ids": [
+        68,
+        71,
+        79,
+        81
+      ],
+      "status": "generic_directory",
+      "final_url": "https://booksy.com/en-us/s/barber-shop/14891_boulder"
+    },
+    {
+      "profile_ids": [
+        69,
+        77,
+        78
+      ],
+      "status": "generic_directory",
+      "final_url": "https://booksy.com/en-us/s/barber-shop/134779_aurora"
+    },
+    {
+      "profile_ids": [
+        70,
+        74,
+        75,
+        80,
+        90
+      ],
+      "status": "generic_directory",
+      "final_url": "https://booksy.com/en-us/s/barber-shop/15069_fort-collins"
+    },
+    {
+      "profile_ids": [
+        72,
+        73,
+        76
+      ],
+      "status": "generic_directory",
+      "final_url": "https://booksy.com/en-us/s/barber-shop/14977_colorado-springs"
+    },
+    {
+      "profile_ids": [
+        82
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/1127278_beni-the-barber_barber-shop_134779_aurora"
+    },
+    {
+      "profile_ids": [
+        83
+      ],
+      "status": "generic_directory",
+      "final_url": "https://booksy.com/en-us/s/nail-salon/14891_boulder"
+    },
+    {
+      "profile_ids": [
+        84,
+        87,
+        88,
+        101,
+        105
+      ],
+      "status": "generic_directory",
+      "final_url": "https://booksy.com/en-us/s/nail-salon/14977_colorado-springs"
+    },
+    {
+      "profile_ids": [
+        85
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/1707706_nails-by-destinee_nail-salon_14977_colorado-springs"
+    },
+    {
+      "profile_ids": [
+        86
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/1398020_nails-by-jesy_nail-salon_14977_colorado-springs"
+    },
+    {
+      "profile_ids": [
+        89,
+        92,
+        104
+      ],
+      "status": "generic_directory",
+      "final_url": "https://booksy.com/en-us/s/nail-salon/15069_fort-collins"
+    },
+    {
+      "profile_ids": [
+        91
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/933064_7-1-9-barbershop_barber-shop_14977_colorado-springs"
+    },
+    {
+      "profile_ids": [
+        93,
+        96,
+        97,
+        98,
+        99,
+        100
+      ],
+      "status": "generic_directory",
+      "final_url": "https://booksy.com/en-us/s/tattoo-session/14977_colorado-springs"
+    },
+    {
+      "profile_ids": [
+        94,
+        95,
+        102
+      ],
+      "status": "generic_directory",
+      "final_url": "https://booksy.com/en-us/s/massage/14977_colorado-springs"
+    },
+    {
+      "profile_ids": [
+        103
+      ],
+      "status": "generic_directory",
+      "final_url": "https://booksy.com/en-us/s/tattoo-shop/14977_colorado-springs"
+    },
+    {
+      "profile_ids": [
+        106
+      ],
+      "status": "deleted_business_redirect",
+      "final_url": "https://booksy.com/en-us/s/brows-lashes/14977_colorado-springs?do=showBusinessDeletedModal"
+    },
+    {
+      "profile_ids": [
+        107
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/1404999_crazybeautiful-ink-lashes_brows-lashes_14977_colorado-springs"
+    },
+    {
+      "profile_ids": [
+        108
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/1233034_ciscos-barbering-styling_barber-shop_15180_pueblo"
+    },
+    {
+      "profile_ids": [
+        109,
+        112,
+        115
+      ],
+      "status": "generic_directory",
+      "final_url": "https://booksy.com/en-us/s/eyelash-extensions/14977_colorado-springs"
+    },
+    {
+      "profile_ids": [
+        110
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/614612_lashes-by-claudia_brows-lashes_14977_colorado-springs"
+    },
+    {
+      "profile_ids": [
+        111
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/1127137_mazzy-laser-and-lash_brows-lashes_15069_fort-collins"
+    },
+    {
+      "profile_ids": [
+        113
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/834827_hektic-barber_barber-shop_15238_greeley"
+    },
+    {
+      "profile_ids": [
+        114
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/1001630_pure-vibes-barbershop-salon_barber-shop_15238_greeley"
+    },
+    {
+      "profile_ids": [
+        116
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/177764_lincoln-street-barber-shop_barber-shop_15180_pueblo"
+    },
+    {
+      "profile_ids": [
+        167,
+        168,
+        172
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://betties.glossgenius.com/team"
+    },
+    {
+      "profile_ids": [
+        169,
+        171,
+        173,
+        174
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://adornsalondenver.glossgenius.com/team"
+    },
+    {
+      "profile_ids": [
+        170
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/56357_all-original-barbershop_barber-shop_134761_denver"
+    },
+    {
+      "profile_ids": [
+        175
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/12421_on-stage-cuts-styles_barber-shop_134761_denver"
+    },
+    {
+      "profile_ids": [
+        177
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/820458_andrade-the-barber_barber-shop_134761_denver"
+    },
+    {
+      "profile_ids": [
+        178
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/876631_gee-the-barber_barber-shop_134761_denver"
+    },
+    {
+      "profile_ids": [
+        179
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/1542191_denvers-true-barbers_barber-shop_134761_denver"
+    },
+    {
+      "profile_ids": [
+        180
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/1494550_v-p-barber_barber-shop_134761_denver"
+    },
+    {
+      "profile_ids": [
+        181,
+        182,
+        183
+      ],
+      "status": "http_response_requires_review",
+      "http_status": 502,
+      "final_url": "https://www.denversalonandspa.glossgenius.com/team"
+    },
+    {
+      "profile_ids": [
+        184
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://denverhairsalon.glossgenius.com/services"
+    },
+    {
+      "profile_ids": [
+        185
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://trademarcsalon.glossgenius.com/services"
+    },
+    {
+      "profile_ids": [
+        186
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://yellowrose.glossgenius.com/"
+    },
+    {
+      "profile_ids": [
+        187
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://aestheticsofdenver.glossgenius.com/services"
+    },
+    {
+      "profile_ids": [
+        188
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://chyka.glossgenius.com/"
+    },
+    {
+      "profile_ids": [
+        189
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://devoelashes.glossgenius.com/services"
+    },
+    {
+      "profile_ids": [
+        190
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://lashwaxfactory.glossgenius.com/"
+    },
+    {
+      "profile_ids": [
+        191
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://micaeladelisa.glossgenius.com/"
+    },
+    {
+      "profile_ids": [
+        192
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://glossgenius.com/"
+    },
+    {
+      "profile_ids": [
+        193
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://imdenverskinllc.glossgenius.com/"
+    },
+    {
+      "profile_ids": [
+        194
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://lashes444youu.glossgenius.com/"
+    },
+    {
+      "profile_ids": [
+        195
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://reveebeaute.glossgenius.com/"
+    },
+    {
+      "profile_ids": [
+        196
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://eyelashcandylashes.glossgenius.com/about"
+    },
+    {
+      "profile_ids": [
+        197
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://lashedbylene.glossgenius.com/"
+    },
+    {
+      "profile_ids": [
+        198,
+        199
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://babooshka.glossgenius.com/team"
+    },
+    {
+      "profile_ids": [
+        200
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://glossgenius.com/"
+    },
+    {
+      "profile_ids": [
+        201
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://sarazask.glossgenius.com/about"
+    },
+    {
+      "profile_ids": [
+        202
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://hairbyamberlynn.glossgenius.com/"
+    },
+    {
+      "profile_ids": [
+        203
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://villagesalon.glossgenius.com/"
+    },
+    {
+      "profile_ids": [
+        204
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://alexmackison.glossgenius.com/about"
+    },
+    {
+      "profile_ids": [
+        205
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://hairbyjennaspoelstra.glossgenius.com/"
+    },
+    {
+      "profile_ids": [
+        206
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://entwinesalon.glossgenius.com/"
+    },
+    {
+      "profile_ids": [
+        207
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://myhairtrip.glossgenius.com/"
+    },
+    {
+      "profile_ids": [
+        208
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://altardbeauty.glossgenius.com/"
+    },
+    {
+      "profile_ids": [
+        209
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://ametrinecollective.glossgenius.com/services"
+    },
+    {
+      "profile_ids": [
+        210
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://hairbyvalorierose.glossgenius.com/"
+    },
+    {
+      "profile_ids": [
+        211
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://beautysyndicate.glossgenius.com/services"
+    },
+    {
+      "profile_ids": [
+        212
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://gemaesthetics.glossgenius.com/services"
+    },
+    {
+      "profile_ids": [
+        213
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://thebrowplacedenver.glossgenius.com/services"
+    },
+    {
+      "profile_ids": [
+        214
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://natashaarocha.glossgenius.com/services"
+    },
+    {
+      "profile_ids": [
+        215
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://nvusskin.glossgenius.com/services"
+    },
+    {
+      "profile_ids": [
+        216
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://higharchsociety.glossgenius.com/services"
+    },
+    {
+      "profile_ids": [
+        217
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://browedbyro.glossgenius.com/services"
+    },
+    {
+      "profile_ids": [
+        218
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://princesstreatmentesthetics.glossgenius.com/services"
+    },
+    {
+      "profile_ids": [
+        219,
+        220,
+        221,
+        222,
+        223,
+        224,
+        225,
+        226,
+        227
+      ],
+      "status": "generic_directory",
+      "final_url": "https://booksy.com/en-us/s/hair-salon/134761_denver"
+    },
+    {
+      "profile_ids": [
+        230
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://ranaedeco.glossgenius.com/"
+    },
+    {
+      "profile_ids": [
+        231
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/690375_denver-s-best-hairstylist-the-place-salon-michael-eatmon_hair-salon_134761_denver"
+    },
+    {
+      "profile_ids": [
+        232
+      ],
+      "status": "generic_directory",
+      "final_url": "https://booksy.com/en-us/s/hair-salon/15037_golden"
+    },
+    {
+      "profile_ids": [
+        233
+      ],
+      "status": "deleted_business_redirect",
+      "final_url": "https://booksy.com/en-us/s/massage/134761_denver?do=showBusinessDeletedModal"
+    },
+    {
+      "profile_ids": [
+        234
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/642611_supremez-barbershop_massage_134761_denver"
+    },
+    {
+      "profile_ids": [
+        235
+      ],
+      "status": "deleted_business_redirect",
+      "final_url": "https://booksy.com/en-us/s/braids-locs/134761_denver?do=showBusinessDeletedModal"
+    },
+    {
+      "profile_ids": [
+        236
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/1319215_gloria-nails_nail-salon_134761_denver"
+    },
+    {
+      "profile_ids": [
+        237
+      ],
+      "status": "deleted_business_redirect",
+      "final_url": "https://booksy.com/en-us/s/nail-salon/134761_denver?do=showBusinessDeletedModal"
+    },
+    {
+      "profile_ids": [
+        238
+      ],
+      "status": "deleted_business_redirect",
+      "final_url": "https://booksy.com/en-us/s/nail-salon/134761_denver?do=showBusinessDeletedModal"
+    },
+    {
+      "profile_ids": [
+        239
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/1684124_aura-studio_nail-salon_134761_denver"
+    },
+    {
+      "profile_ids": [
+        240
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/1718872_moonshine-nails_nail-salon_134761_denver"
+    },
+    {
+      "profile_ids": [
+        241
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/1874265_emely-nails-arte_nail-salon_134761_denver"
+    },
+    {
+      "profile_ids": [
+        242
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/846403_domblend_barber-shop_134761_denver"
+    },
+    {
+      "profile_ids": [
+        243
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/798026_nick-billingsley-steadyhand_barber-shop_134761_denver"
+    },
+    {
+      "profile_ids": [
+        244
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/637074_anthony-craven-steadyhand_barber-shop_134761_denver"
+    },
+    {
+      "profile_ids": [
+        245
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/642005_diego-carreon-steadyhand_barber-shop_134761_denver"
+    },
+    {
+      "profile_ids": [
+        246
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/641895_gabriel-maestas-steadyhand_barber-shop_134761_denver"
+    },
+    {
+      "profile_ids": [
+        247
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/1131935_ismael-barber-king_barber-shop_134761_denver"
+    },
+    {
+      "profile_ids": [
+        248
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/1508090_sf-encanto-barbershop_barber-shop_134761_denver"
+    },
+    {
+      "profile_ids": [
+        249
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/1368707_cesar-the-barber-llc_barber-shop_134761_denver"
+    },
+    {
+      "profile_ids": [
+        250
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/1597527_t-p-blendz_barber-shop_134761_denver"
+    },
+    {
+      "profile_ids": [
+        251
+      ],
+      "status": "generic_directory",
+      "final_url": "https://booksy.com/en-us/s/braids-locs/134761_denver"
+    },
+    {
+      "profile_ids": [
+        279
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://square.site/book/TZMGSAXC3F578/barber-aurora-co"
+    },
+    {
+      "profile_ids": [
+        280,
+        281
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://square.site/book/4SZ2850CB8EB8/ab-barber-shop-salon-aurora-co"
+    },
+    {
+      "profile_ids": [
+        282
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://square.site/book/8DJDA55JR0MBR/stacy-the-barber-aurora-co"
+    },
+    {
+      "profile_ids": [
+        283
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://square.site/book/3NZGKMX2SJQFW/lashing-denver-denver-co"
+    },
+    {
+      "profile_ids": [
+        284,
+        285,
+        286,
+        287,
+        288
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://square.site/book/FCES8VEPCK1BZ/steel-and-lather-barber-co-lodo-denver-co"
+    },
+    {
+      "profile_ids": [
+        289,
+        290,
+        291
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://square.site/book/4ECMQP7E0ASNY/martucci-s-barber-company-denver-co"
+    },
+    {
+      "profile_ids": [
+        292
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://square.site/book/ZF3KNAB387DQZ/satellite-barber-denver-co"
+    },
+    {
+      "profile_ids": [
+        293
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://square.site/book/A90505ZJ05AWZ/barberstate25-denver-co"
+    },
+    {
+      "profile_ids": [
+        294
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://square.site/book/4NM7G8MM6AEMA/jafet-the-barber-denver-co"
+    },
+    {
+      "profile_ids": [
+        295
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://square.site/book/X0MYS2J67VKGF/hair-jordan-2303-mobile-barbershop-denver-co"
+    },
+    {
+      "profile_ids": [
+        296
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://square.site/book/E4NEQGTX5XG5Y/vibe-salon-denver-co"
+    },
+    {
+      "profile_ids": [
+        320
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://square.site/book/L4RYT7DMW1388/josiah-zock-common-barber-club-arvada-co"
+    },
+    {
+      "profile_ids": [
+        321
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://square.site/book/7TW0RSGW3TVNE/gene-s-barber-shop-littleton-co"
+    },
+    {
+      "profile_ids": [
+        322
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://square.site/book/0KNP3CX4S9879/marisa-r-littleton-co"
+    },
+    {
+      "profile_ids": [
+        323
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://square.site/book/DB6X8V94FB4DG/studio26-littleton-co"
+    },
+    {
+      "profile_ids": [
+        324
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://square.site/book/36JPCEK6NQX55/blown-away-lakewood-co"
+    },
+    {
+      "profile_ids": [
+        325
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://square.site/book/96M5HESX23H4V/hair-by-carlee-ann-lakewood-co"
+    },
+    {
+      "profile_ids": [
+        326
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://square.site/book/CRS5RPY8EPZBE/amida-rae-hair-studio-denver-co"
+    },
+    {
+      "profile_ids": [
+        327
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://square.site/book/45GP2SKZ5SK4R/stylist-grace-martin-denver-co"
+    },
+    {
+      "profile_ids": [
+        328
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://square.site/book/6TVKXBQBSZCYB/hair-by-lisa-nicole-denver-co"
+    },
+    {
+      "profile_ids": [
+        329
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://square.site/book/7FSVN7QA9ZJPA/yanin-lozano-hairartist-denver-co"
+    },
+    {
+      "profile_ids": [
+        330
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://square.site/book/AY3RA68DWEVAT/modern-sage-salon-denver-co"
+    },
+    {
+      "profile_ids": [
+        331,
+        332,
+        333
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://square.site/book/E5TX4Q38YN88K/lucky-lu-s-salon-denver-co"
+    },
+    {
+      "profile_ids": [
+        334
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://square.site/book/A4Q812DFKRTEE/volume-lash-studio-denver-co"
+    },
+    {
+      "profile_ids": [
+        335
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://square.site/book/Y1K2RJZ7GHSAH/beauty-bee-salon-denver-co"
+    },
+    {
+      "profile_ids": [
+        422
+      ],
+      "status": "generic_directory",
+      "final_url": "https://booksy.com/en-us/s/natural-hair-stylists/134761_denver"
+    },
+    {
+      "profile_ids": [
+        423
+      ],
+      "status": "deleted_business_redirect",
+      "final_url": "https://booksy.com/en-us/s/massage/134761_denver?do=showBusinessDeletedModal"
+    },
+    {
+      "profile_ids": [
+        424,
+        425
+      ],
+      "status": "generic_directory",
+      "final_url": "https://booksy.com/en-us/s/tattoo-shop/122635_lakewood"
+    },
+    {
+      "profile_ids": [
+        426,
+        427,
+        428
+      ],
+      "status": "generic_directory",
+      "final_url": "https://booksy.com/en-us/s/tattoo-shop/14950_franktown"
+    },
+    {
+      "profile_ids": [
+        429
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/497828_modglow-skin-lash-studio_brows-lashes_134779_aurora"
+    },
+    {
+      "profile_ids": [
+        431
+      ],
+      "status": "deleted_business_redirect",
+      "final_url": "https://booksy.com/en-us/s/massage/14864_thornton?do=showBusinessDeletedModal"
+    },
+    {
+      "profile_ids": [
+        432
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/693037_medical-massage-specialist_massage_14895_lafayette"
+    },
+    {
+      "profile_ids": [
+        433
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/688631_colorado-core-massage-active-lab_massage_14903_broomfield"
+    },
+    {
+      "profile_ids": [
+        434
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/688652_simply-magical-massage-group_massage_134779_aurora"
+    },
+    {
+      "profile_ids": [
+        435
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/1290567_kenias-palace_nail-salon_14858_commerce-city"
+    },
+    {
+      "profile_ids": [
+        436
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/1781557_nailsbyem_nail-salon_134779_aurora"
+    },
+    {
+      "profile_ids": [
+        437
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/678325_studiostraight-com-aka-hairstraighteningexpert-com_hair-salon_134761_denver"
+    },
+    {
+      "profile_ids": [
+        438
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/1451373_creative-nails-by-clara-llc_nail-salon_134779_aurora"
+    },
+    {
+      "profile_ids": [
+        439
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/1599681_the-shampoo-bar-barbershop-salon_hair-salon_14977_colorado-springs"
+    },
+    {
+      "profile_ids": [
+        440
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/166764_pamela-diamond-rock-salon-barber_hair-salon_14977_colorado-springs"
+    },
+    {
+      "profile_ids": [
+        441
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/1270137_beauty-by-maria-llc-asian-salon_hair-salon_14977_colorado-springs"
+    },
+    {
+      "profile_ids": [
+        442
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/1612372_beautybydestiny_nail-salon_134761_denver"
+    },
+    {
+      "profile_ids": [
+        443
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/478891_highly-favored-jacob_barber-shop_14977_colorado-springs"
+    },
+    {
+      "profile_ids": [
+        444
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/754381_styles-by-roshay_hair-salon_14977_colorado-springs"
+    },
+    {
+      "profile_ids": [
+        445
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/1507467_redefine-you_braids-locs_14977_colorado-springs"
+    },
+    {
+      "profile_ids": [
+        446
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/1009718_makena-blendz_barber-shop_14977_colorado-springs"
+    },
+    {
+      "profile_ids": [
+        447
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/1548498_esthetics-by-gabbrielle_skin-care_14977_colorado-springs"
+    },
+    {
+      "profile_ids": [
+        448
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/1246222_live-learn-lash-academy_brows-lashes_15073_loveland"
+    },
+    {
+      "profile_ids": [
+        449
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/628086_becky-puckett-voltage-salon_hair-salon_15069_fort-collins"
+    },
+    {
+      "profile_ids": [
+        450
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/1316515_the-polished-cuticle_nail-salon_134779_aurora"
+    },
+    {
+      "profile_ids": [
+        451
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/709194_star-forever-nails_nail-salon_134779_aurora"
+    },
+    {
+      "profile_ids": [
+        452
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/1720306_a-nails-art_nail-salon_14977_colorado-springs"
+    },
+    {
+      "profile_ids": [
+        468
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/350577_angel_massage_14977_colorado-springs"
+    },
+    {
+      "profile_ids": [
+        469
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/743246_ayiz-lavelle_hair-salon_14977_colorado-springs"
+    },
+    {
+      "profile_ids": [
+        470
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/1317877_baby-girlz-enterprises-inc_hair-salon_14977_colorado-springs"
+    },
+    {
+      "profile_ids": [
+        471
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/633105_benjamin-gifford_hair-salon_15069_fort-collins"
+    },
+    {
+      "profile_ids": [
+        472
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/244481_black-lotus-tattoo_tattoo-shop_134761_denver"
+    },
+    {
+      "profile_ids": [
+        473
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/1623167_braids-by-elisha_braids-locs_14977_colorado-springs"
+    },
+    {
+      "profile_ids": [
+        474
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/1764036_chemilyn-art_hair-salon_14977_colorado-springs"
+    },
+    {
+      "profile_ids": [
+        475
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/634764_dana-munoz_hair-salon_15069_fort-collins"
+    },
+    {
+      "profile_ids": [
+        476
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/409458_dev-at-grey-ish_hair-salon_14977_colorado-springs"
+    },
+    {
+      "profile_ids": [
+        477
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/527698_divine-nails-of-noco-llc_nail-salon_15073_loveland"
+    },
+    {
+      "profile_ids": [
+        478
+      ],
+      "status": "deleted_business_redirect",
+      "final_url": "https://booksy.com/en-us/s/braids-locs/14978_fountain?do=showBusinessDeletedModal"
+    },
+    {
+      "profile_ids": [
+        479
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/1353091_dolled-up-by-angie_brows-lashes_14858_commerce-city"
+    },
+    {
+      "profile_ids": [
+        480
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/454635_gel-nails-by-megan_nail-salon_15073_loveland"
+    },
+    {
+      "profile_ids": [
+        481
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/158102_hair-by-emily-at-josefinas_hair-salon_15069_fort-collins"
+    },
+    {
+      "profile_ids": [
+        482
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/424148_harmony-oasis-mobile-services_massage_14977_colorado-springs"
+    },
+    {
+      "profile_ids": [
+        483
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/625550_healthy-essentials-llc_massage_14875_englewood"
+    },
+    {
+      "profile_ids": [
+        484
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/634748_jennifer-eriksen_hair-salon_15069_fort-collins"
+    },
+    {
+      "profile_ids": [
+        485
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/633762_josie-wildflower-studio_hair-salon_15069_fort-collins"
+    },
+    {
+      "profile_ids": [
+        486
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/1599681_the-shampoo-bar-barbershop-salon_hair-salon_14977_colorado-springs"
+    },
+    {
+      "profile_ids": [
+        487
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/836596_kal-s-esthetician-clinic_brows-lashes_14977_colorado-springs"
+    },
+    {
+      "profile_ids": [
+        488
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/971865_kiya-did-that_braids-locs_14977_colorado-springs"
+    },
+    {
+      "profile_ids": [
+        489
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/502722_locdin_skin-care_14977_colorado-springs"
+    },
+    {
+      "profile_ids": [
+        490
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/345912_love-of-hands_massage_14977_colorado-springs"
+    },
+    {
+      "profile_ids": [
+        491
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/633038_matthew-kennedy-voltage_hair-salon_15069_fort-collins"
+    },
+    {
+      "profile_ids": [
+        492
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/16308_mint-beauty-lab_hair-salon_14977_colorado-springs"
+    },
+    {
+      "profile_ids": [
+        493
+      ],
+      "status": "network_unverified",
+      "reason": "12_second_timeout"
+    },
+    {
+      "profile_ids": [
+        494
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/332463_nocturnal-tattoo_tattoo-shop_134761_denver"
+    },
+    {
+      "profile_ids": [
+        495
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/716073_parlor-4502_hair-salon_15069_fort-collins"
+    },
+    {
+      "profile_ids": [
+        496
+      ],
+      "status": "deleted_business_redirect",
+      "final_url": "https://booksy.com/en-us/s/hair-removal/134761_denver?do=showBusinessDeletedModal"
+    },
+    {
+      "profile_ids": [
+        497
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/349491_reckless-ink_tattoo-shop_134761_denver"
+    },
+    {
+      "profile_ids": [
+        498
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/351648_renew-you-massage-therapy_massage_14977_colorado-springs"
+    },
+    {
+      "profile_ids": [
+        499
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/774939_salon-plush-llc_hair-salon_14977_colorado-springs"
+    },
+    {
+      "profile_ids": [
+        500
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/875594_shimi-salon_hair-salon_134779_aurora"
+    },
+    {
+      "profile_ids": [
+        501
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/1353655_solomia-nails_nail-salon_14876_littleton"
+    },
+    {
+      "profile_ids": [
+        502
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/349999_tattoo-addictions_tattoo-shop_134761_denver"
+    },
+    {
+      "profile_ids": [
+        503
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/599231_the-vine-salon-services_skin-care_14977_colorado-springs"
+    },
+    {
+      "profile_ids": [
+        504
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/448514_timberline-nails-and-lashes_nail-salon_15069_fort-collins"
+    },
+    {
+      "profile_ids": [
+        505
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/1827674_jaychic_hair-salon_15069_fort-collins"
+    },
+    {
+      "profile_ids": [
+        506
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/671829_carrie-luthi-mcnamee-opal-and-oak_hair-salon_15073_loveland"
+    },
+    {
+      "profile_ids": [
+        507
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/1309058_the-rustic-parlour_hair-salon_15066_berthoud"
+    },
+    {
+      "profile_ids": [
+        508
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/344016_extensions-at-mama-s-house_hair-salon_15069_fort-collins"
+    },
+    {
+      "profile_ids": [
+        509
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/353310_cc_hair-salon_15069_fort-collins"
+    },
+    {
+      "profile_ids": [
+        510
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/378947_sarah-at-salon-essentials_hair-salon_15069_fort-collins"
+    },
+    {
+      "profile_ids": [
+        511
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/243556_shear-hair-designs_hair-salon_15069_fort-collins"
+    },
+    {
+      "profile_ids": [
+        512
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/496232_cali-the-barber_other_14977_colorado-springs"
+    },
+    {
+      "profile_ids": [
+        513
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/631645_d-the-barber-dzhandsdoitall_professional-services_14977_colorado-springs"
+    },
+    {
+      "profile_ids": [
+        514
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/1796350_ascension-barbershop-llc_hair-salon_14977_colorado-springs"
+    },
+    {
+      "profile_ids": [
+        515
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/426966_nails-yare_nail-salon_15073_loveland"
+    },
+    {
+      "profile_ids": [
+        516
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://booksy.com/en-us/453739_bellezabstudio_nail-salon_15069_fort-collins"
+    },
+    {
+      "profile_ids": [
+        521
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://righthandmassage.glossgenius.com/services"
+    },
+    {
+      "profile_ids": [
+        522
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://zentherapies.glossgenius.com/services"
+    },
+    {
+      "profile_ids": [
+        523
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://victoriainktattoo.glossgenius.com/services"
+    },
+    {
+      "profile_ids": [
+        524
+      ],
+      "status": "reachable_unverified",
+      "http_status": 200,
+      "final_url": "https://sabrinayvonne.glossgenius.com/services"
+    }
+  ]
+}
