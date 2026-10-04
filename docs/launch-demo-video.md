@@ -21,7 +21,7 @@ Target length: 60–75 seconds. Record the current deployed site at 375px and de
 5. Assemble shots in order with simple cuts, record the narration above, and add readable captions. Use only licensed music, if any.
 6. Export MP4 at 1080p and review on a phone. Check factual claims, text legibility, audio and external-link destination. A vertical 1080 × 1920 edition can use the same mobile shots.
 
-No finished video has been rendered in this session. This file is the script, shot list and reproducible recording handoff.
+The full 60–75-second recording remains a handoff. A separate 30-second public still-capture MP4 was rendered on October4; see the evidence below.
 
 ## Short public-only edition — 30 seconds
 
@@ -35,4 +35,21 @@ This version avoids unverified authenticated dashboard, marketing, approval and 
 |20–26s|Verified external Zen Therapies service page; stop before selecting an appointment|“Check services and availability with the professional’s booking provider.”|
 |26–30s|Return to homepage; simple closing caption|“Find your next favorite pro. gobookr.com.”|
 
-Recording handoff: on Mac use Shift–Command–5, select Record Selected Portion, frame only the page, and record each shot. Press Stop in the menu bar. In an editor, trim to the timestamps above, add readable captions, and export H.264 MP4 with AAC audio. Review the exported file on an actual phone; confirm it plays and the provider link is still correct. Do not include notifications, login screens, payment details, customer activity claims, license claims or fabricated appointment availability. No finished MP4 is supplied here.
+Recording handoff: on Mac use Shift–Command–5, select Record Selected Portion, frame only the page, and record each shot. Press Stop in the menu bar. In an editor, trim to the timestamps above, add readable captions, and export H.264 MP4 with AAC audio. Review the exported file on an actual phone; confirm it plays and the provider link is still correct. Do not include notifications, login screens, payment details, customer activity claims, license claims or fabricated appointment availability.
+
+## Rendered public still-capture edition — October4
+
+Delivered `gobookr-public-demo-30s.mp4`: 30.000 seconds,1280×820,H.264/yuv420p with silent AAC audio and faststart. Four actual production desktop captures assembled with captions. On-screen label “Public walkthrough - still captures”; no continuous screen recording or narration.
+
+|Time|Actual capture|Caption|
+|---|---|---|
+|0–7.5s|Homepage search controls|Choose a service and a city|
+|7.5–15s|Two Fort Collins massage results|Browse local profiles|
+|15–22.5s|Sheila profile522|Explore a profile and its booking link|
+|22.5–30s|Public claim entry522|Already listed? Start a claim|
+
+Desktop search/profile/claim-entry navigation observed before capture. No appointment, account or claim submitted. Provider availability, approval, dashboard and billing are not demonstrated/certified. Crops focus on relevant controls, not whole-page certification. No fabricated reviews, license badge, customer activity or third-party portfolio photos.
+
+Validation: ffprobe confirmed codecs/duration; complete ffmpeg error-level decode exited0. Decoded frames at1,9,16,25 seconds visually reviewed. Actual phone playback remains untested. SHA256: `ee0d2385f037a4e3c24ae3660b9ab9d747264abb04abceff71764aca9ccc2c81`.
+
+Reproduce: four actual JPEG captures named `gobookr-demo-{home,search,profile,claim}-20261004.jpg`; `python3 scripts/render-public-demo.py CAPTURE_DIR OUTPUT.mp4` (installed ffmpeg/DejaVuSans required). Application code unchanged. Full narrated mobile/desktop recording remains open.

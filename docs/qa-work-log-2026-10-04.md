@@ -115,3 +115,21 @@ No merge today. PR135 is mergeable and application-head checks green, but authen
 - Radiant Roots /book redirects to /services; business/service menu corroborated. Primary extracted about page lacks street/ZIP; full-row verification still pending. Team/brand identity not silently converted to a person.
 - Read-only exact replacement booking/source lookup returned0 existing matches. Both current records unclaimed,user_id NULL. No production edits. Original12-row clearing proposal explicitly superseded for478/496; neither should be blindly cleared while replacements are under review. Remaining10 still have no approved replacements.
 - Owner-supplied research and independent findings documented in qa-replacement-review-2026-10-04.md. No whole workstream certified by these findings.
+
+## Rendered launch demo follow-up
+- Delivered30-second captioned MP4 from four actual production desktop screenshots:homepage,Fort Collins massage results,Sheila522 profile,claim entry. Clearly labelled still captures; no fabricated UI/activity or untested dashboard/billing footage.
+- H.264/yuv420p,AAC silent audio,faststart,1280×820;ffprobe duration30.000000;full decode exit0;four representative frames visually checked. Actual phone playback not tested. Recipe/evidence in launch-demo-video.md and scripts/render-public-demo.py.
+- Production search shows oversized empty claim-link panels below results; observed visual bug, not fixed/certified in this follow-up. Video crops show actual profile cards without claiming whole-page visual readiness.
+- No application changes,production writes,billing operations or merge. Preview sign-in,isolated auth lifecycle,Stripe sandbox and missing candidate CSV/script remain blockers.
+
+|Workstream|Status|Current evidence|Next step|
+|---|---|---|---|
+|4 Inventory|Blocked|500 visible rows,500-row HTTP audit,source rechecks,replacement review|Missing candidate files;identity re-verification;approved dry-run before bulk edits|
+|1 Walkthrough|In progress|Desktop public search/profile/claim navigation captured;earlier mobile evidence|Fresh preview mobile+desktop acceptance;booking destinations;claim-panel visual bug|
+|2 Claims|Blocked|Isolated lifecycle tests and public entry|Authenticated signup/approval/rejection/edit lifecycle|
+|3 Billing|Blocked|Mock tests;connector only live mode|Stripe sandbox provider/access lifecycle|
+|5 Profile polish|In progress|Safeguards and public profile rendering|Banner/staff/license-state cases at both widths|
+|9 Pro app|Blocked|Code/tests reviewed|Authenticated mobile ≤2-tap acceptance|
+|7 Analytics/SEO|In progress|Preview visit/search events,local schema checks,dynamic sitemap|External validation,durable analytics,remaining discovery pages|
+|6 Marketing|Blocked|Manual-post wording/tests|Authenticated upload/download/schedule acceptance|
+|8 Launch materials|In progress|Playable30s still-capture MP4 decoded;draft guides/scripts|Actual phone playback;full narrated/mobile demo;guides after pro-flow certification|
