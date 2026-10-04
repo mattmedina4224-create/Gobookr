@@ -109,3 +109,9 @@ No merge today. PR135 is mergeable and application-head checks green, but authen
 |7 Analytics/SEO|In progress|Actual visit/search preview logs;DB profile/booking events;local schema checks;sitemap|Durable analytics,external validator,full metadata/discovery coverage|
 |6 Marketing|Blocked|Manual-post labels/tests;no connected auto-publishing claim|Authenticated upload/download/schedule verification|
 |8 Launch materials|In progress|Guides plus60–75s and30s demo scripts/recording steps|Certified pro-flow guides and recorded/playable video|
+
+## Owner-supplied replacement research review
+- Independently opened Divine Queen’s Touch candidate1460320; matches stored478 name/address/ZIP, but stored URL uses1778499. Different destination, not old-URL recovery. Retrieved snapshot is cached; current mobile/desktop booking flow still unverified. Residential/mobile sensitivity flagged; no identity rename or review import.
+- Radiant Roots /book redirects to /services; business/service menu corroborated. Primary extracted about page lacks street/ZIP; full-row verification still pending. Team/brand identity not silently converted to a person.
+- Read-only exact replacement booking/source lookup returned0 existing matches. Both current records unclaimed,user_id NULL. No production edits. Original12-row clearing proposal explicitly superseded for478/496; neither should be blindly cleared while replacements are under review. Remaining10 still have no approved replacements.
+- Owner-supplied research and independent findings documented in qa-replacement-review-2026-10-04.md. No whole workstream certified by these findings.

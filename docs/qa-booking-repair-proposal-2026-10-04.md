@@ -2,6 +2,10 @@
 
 No production updates have been executed. This document is not approval and contains no executable update statement.
 
+## Updated review gate after owner-supplied research
+
+The original12-row clearing proposal below is historical and must NOT be approved/executed as a batch without revision. IDs478 and496 now have replacement candidates and are excluded from any immediate clearing proposal pending re-verification. See qa-replacement-review-2026-10-04.md for exact stored/replacement destinations and remaining gates. The other10 failures still need research and explicit approval before edits. Original HTTP audit counts are a timestamped snapshot, not changed by finding new URLs.
+
 ## Narrow proposed change requiring approval
 
 For the12 stored Booksy destinations observed redirecting to `showBusinessDeletedModal`, clear only `booking_url` to NULL, using an exact ID + old-URL comparison before each update. Keep every profile, name, address, category, claim status and source/provenance field unchanged. Preserve the before-values in the committed audit input. Do not infer that the business itself closed; the evidence only concerns the stored booking destination.
