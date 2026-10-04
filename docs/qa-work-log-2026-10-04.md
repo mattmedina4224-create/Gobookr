@@ -89,3 +89,23 @@ No merge today. PR135 is mergeable and application-head checks green, but authen
 - Final isolated suite:231 pass,0 fail,0 skip; syntax127 JavaScript files,exit0. Full evidence:qa-public-evidence-2026-10-04.md.
 - Read-only HTTP booking audit covered500 rows/222 unique populated URLs:198 reachable-unverified,185 missing,101 generic,12 deleted-business redirects,3 HTTP502 and1 timeout. Counts are profile rows. Full report and input saved with auditor/tests. No production edits and no claim that HTTP200 certifies correct identity or working booking flow.
 - Latest application commit still lacks mobile/desktop browser acceptance. PR135 remains unmerged; production unchanged. Authenticated signup/admin, Stripe sandbox, candidate files, marketing flow and pro dashboard gates remain open. No whole workstream newly certified.
+
+## Continued public push
+- Evidence commit e0650f2a0c188363259eec8af3e8e4c101cb1bf5: GitHub checks run764 completed success; Vercel dpl_Gv44q2mhGrYUaB3P4V7Y2H6hWsAC READY. No application change from previously verified runtime events.
+- Browser access to that preview redirects to Vercel login: current browser session expired. No deployment-protection setting, credential or permission changed. Fresh preview mobile/desktop acceptance remains blocked on sign-in, not a claim that the site is down.
+- Live production desktop: actual Service selection + Fort Collins + Search returns2 results; opening Sheila522 yields correct name/workplace, Book Appointment and Claim this profile; claim entry shows correct522 signup/login actions. Viewport1363px and scrollWidth1363px on claim page, no horizontal overflow. No account signup/claim submission or booking submitted. This is production desktop evidence, NOT latest-preview/mobile certification.
+- First read-only target query used nonexistent table `pros` and returned42P01. Inspected repository table/field definitions, corrected to pro_profiles/business_name/zip_code; one bounded SELECT succeeded for16 review IDs. No data mutation.
+- Prepared explicit12-row booking repair dry-run proposal with preserved before-values and approval gate;0 changes executed. Ambiguous502/timeout records excluded. Three replacement searches did not establish fully approved replacements; details in qa-booking-repair-proposal-2026-10-04.md.
+- Added30-second public-only demo script and Mac recording/export steps. Authenticated dashboard/billing shots excluded. No video rendered or mobile footage certified.
+
+| Workstream | Status | Current evidence | Next step |
+|---|---|---|---|
+|4 Inventory|Blocked|500 visible rows;500-row HTTP audit;7 source rechecks;12-row repair proposal|Candidate files, source identity research, approval before any bulk correction|
+|1 Walkthrough|In progress|Live desktop search/profile/claim;earlier preview mobile denied-location/search;HTTP link audit|Restore preview browser sign-in;mobile+desktop changed flows and provider destinations|
+|2 Claims|Blocked|Isolated transaction tests and public claim entry|Secure QA account/admin;submit/approve/edit/reject/duplicate browser tests|
+|3 Billing|Blocked|Mocked contracts;only live connector available|Stripe test sandbox;provider lifecycle/access tests|
+|5 Profile polish|In progress|Visibility/license safeguards and public profile render|Real banner/staff/verified-license mobile+desktop cases|
+|9 Pro app|Blocked|Dashboard code/tests inspected|Authenticated two-tap mobile test|
+|7 Analytics/SEO|In progress|Actual visit/search preview logs;DB profile/booking events;local schema checks;sitemap|Durable analytics,external validator,full metadata/discovery coverage|
+|6 Marketing|Blocked|Manual-post labels/tests;no connected auto-publishing claim|Authenticated upload/download/schedule verification|
+|8 Launch materials|In progress|Guides plus60–75s and30s demo scripts/recording steps|Certified pro-flow guides and recorded/playable video|

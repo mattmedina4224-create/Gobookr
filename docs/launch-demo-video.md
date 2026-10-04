@@ -22,3 +22,17 @@ Target length: 60–75 seconds. Record the current deployed site at 375px and de
 6. Export MP4 at 1080p and review on a phone. Check factual claims, text legibility, audio and external-link destination. A vertical 1080 × 1920 edition can use the same mobile shots.
 
 No finished video has been rendered in this session. This file is the script, shot list and reproducible recording handoff.
+
+## Short public-only edition — 30 seconds
+
+This version avoids unverified authenticated dashboard, marketing, approval and billing shots. Live desktop homepage → Fort Collins massage search → Sheila profile → claim entry was observed on October4. Earlier one-provider booking-page inspection did not submit an appointment. A fresh mobile recording and destination recheck are still required before publishing.
+
+| Time | Shot | Narration/caption |
+|---|---|---|
+|0–5s|Clean homepage and service/city controls|“Find your next local beauty or wellness pro with gobookr.”|
+|5–12s|Choose Massage Therapists, enter Fort Collins, click Search; show the actual two results|“Choose a service and your location. Browse real local listings.”|
+|12–20s|Open Sheila O’Shaughnessy at Zen Therapies; show workplace and Book Appointment|“Explore a profile, then follow its booking link.”|
+|20–26s|Verified external Zen Therapies service page; stop before selecting an appointment|“Check services and availability with the professional’s booking provider.”|
+|26–30s|Return to homepage; simple closing caption|“Find your next favorite pro. gobookr.com.”|
+
+Recording handoff: on Mac use Shift–Command–5, select Record Selected Portion, frame only the page, and record each shot. Press Stop in the menu bar. In an editor, trim to the timestamps above, add readable captions, and export H.264 MP4 with AAC audio. Review the exported file on an actual phone; confirm it plays and the provider link is still correct. Do not include notifications, login screens, payment details, customer activity claims, license claims or fabricated appointment availability. No finished MP4 is supplied here.
