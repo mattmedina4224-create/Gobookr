@@ -133,3 +133,12 @@ No merge today. PR135 is mergeable and application-head checks green, but authen
 |7 Analytics/SEO|In progress|Preview visit/search events,local schema checks,dynamic sitemap|External validation,durable analytics,remaining discovery pages|
 |6 Marketing|Blocked|Manual-post wording/tests|Authenticated upload/download/schedule acceptance|
 |8 Launch materials|In progress|Playable30s still-capture MP4 decoded;draft guides/scripts|Actual phone playback;full narrated/mobile demo;guides after pro-flow certification|
+
+## Compact search claim-action correction
+- Root cause: `.favorite-card > a:not(.favorite-control)` applied `height:100%` to the separate market-claim-link, producing the observed oversized blank claim panel. Save was positioned relative to the whole wrapper, including that panel.
+- Commit cf5e059d7b0d90c0eeafe8dcc97fe9ac910786ef excludes claim links from full-height styling. Only wrappers with direct claim actions use a two-row grid:profile/Save in row1,minimum44px claim target in row2. Claimed/home cards without that action retain previous layout. URLs/content/claim state untouched.
+- Targeted command with GOBOOKR_PGLITE_MODULE enabled:node --test tests/favorites.test.js tests/claim-discovery.test.js tests/claim-mobile-ui.test.js tests/claim-mobile-render.test.js. Result8 pass,0 fail,0 skipped. These verify behavior/markup and isolated Postgres constraints;they do NOT prove browser geometry.
+- Vercel dpl_E1PKeP6LTUjKBhjd45DApBvS2zBR READY:https://gobookr-du3vu8mw3-mattmedina4224-7308s-projects.vercel.app. Actual browser navigation to deployed search redirects to Vercel login. Mobile/desktop visual acceptance blocked on existing expired-session gate;no retry loop,protection change or bypass.
+- Correction is implemented,NOT visually verified or shipped. PR135 remains unmerged;production,data,billing and authentication settings unchanged. Claims/billing/inventory blockers remain as listed above.
+
+- Application correction CI:GitHub GoBookr checks run769 (37240982753) completed success. READY deployment and green CI do not replace pending mobile/desktop visual acceptance.
