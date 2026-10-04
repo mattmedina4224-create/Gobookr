@@ -14,6 +14,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const db = require('../db');
 const { normalizeSource, isApprovedBookingSource } = require('../lib/booking-platforms');
+const { bookingIdentity, sameProfessional, verificationApproved } = require('../lib/import-identity');
 const { clean, identity, normalizeZip, isHttpUrl } = require('../lib/import-normalization');
 
 const args = process.argv.slice(2);
@@ -48,6 +49,13 @@ const report = {
 };
 const seen = new Set();
 
+// Serialize importer writes and keep the profile and its categories atomic.
+// Read inventory once; update the in-memory index after each insertion.
+try {
+if (!dryRun) { db.exec('BEGIN'); db.prepare('SELECT pg_advisory_xact_lock(2072026)').get(); }
+const candidates = db.prepare(`WITH inventory AS (
+  SELECT id, business_name, workplace_name, city, state, street_address, zip_code, booking_url FROM pro_profiles
+) SELECT * FROM inventory`).all();
 for (const input of rows) {
   const raw = normalizeSource(input);
   const row = {
@@ -65,32 +73,34 @@ for (const input of rows) {
 
   const reject = (reason) => {
     console.warn('REJECT:', reason, row.name || '(unnamed)');
-    report.rejected.push({ name: row.name, reason });
+    report.rejected.push({ name: row.name, reason, source_url: row.sourceUrl, booking_url: row.bookingUrl, verification_tier: raw._verification_tier || 'unverified', flags: raw._flags || [] });
   };
 
   if (!row.name || !row.city || !row.state || !row.sourceUrl || !row.sourceName || !row.category) {
     reject('missing_required_factual_fields'); continue;
   }
+  if (!verificationApproved(raw)) { reject('verification_required'); continue; }
+  if (!row.address || !row.zip || !row.bookingUrl) { reject('missing_address_zip_or_booking'); continue; }
   if (!supportedCategories.has(row.category)) { reject('unsupported_category'); continue; }
   if (!/^[A-Z]{2}$/.test(row.state)) { reject('invalid_state'); continue; }
   if (row.zip && !/^\d{5}$/.test(row.zip)) { reject('invalid_zip'); continue; }
   if (expectedState && row.state !== expectedState) { reject('state_mismatch'); continue; }
   if (!isApprovedBookingSource(row.sourceUrl)) { reject('unapproved_source_host'); continue; }
-  if (row.bookingUrl && !isHttpUrl(row.bookingUrl)) { reject('invalid_booking_url'); continue; }
+  if (row.bookingUrl && (!isHttpUrl(row.bookingUrl) || !bookingIdentity(row.bookingUrl))) { reject('invalid_booking_url'); continue; }
 
   const key = fingerprint(row);
   if (seen.has(key)) { reject('duplicate_inside_import_file'); continue; }
   seen.add(key);
 
-  const candidates = db.prepare(`SELECT id, business_name, workplace_name, city, state, street_address, zip_code FROM pro_profiles
-    WHERE UPPER(state) = UPPER(?)`).all(row.state);
-  const existing = candidates.find((candidate) => identity(candidate.city) === identity(row.city)
-    && identity(candidate.business_name) === identity(row.name)
-    && identity(candidate.workplace_name) === identity(row.workplace)
-    && (!row.address || !candidate.street_address || identity(candidate.street_address) === identity(row.address))
-    && (!row.zip || !candidate.zip_code || normalizeZip(candidate.zip_code) === row.zip));
+  const bookingKey = bookingIdentity(row.bookingUrl);
+  const existing = candidates.find(candidate =>
+    (bookingKey && bookingIdentity(candidate.booking_url) === bookingKey) || sameProfessional(candidate, row));
 
   if (existing) {
+    if (!sameProfessional(existing, row)) {
+      report.duplicates.push({ name: row.name, pro_id: existing.id, reason: 'shared_booking_url_requires_review', flags: raw._flags || [] });
+      continue;
+    }
     const existingCategory = db.prepare('SELECT 1 AS found FROM pro_categories WHERE pro_id = ? AND category = ?').get(existing.id, row.category);
     if (existingCategory) {
       console.log(`SKIP duplicate professional: ${row.name} (#${existing.id})`);
@@ -108,7 +118,8 @@ for (const input of rows) {
 
   if (dryRun) {
     console.log(`DRY RUN import: ${row.name} [${row.category}] ${row.city}, ${row.state}`);
-    report.inserted.push({ name: row.name, category: row.category, city: row.city, state: row.state, dry_run: true });
+    report.inserted.push({ name: row.name, category: row.category, city: row.city, state: row.state, source_url: row.sourceUrl, source_name: row.sourceName, booking_url: row.bookingUrl, verification_tier: raw._verification_tier, flags: raw._flags || [], dry_run: true });
+    candidates.push({ id: null, business_name: row.name, workplace_name: row.workplace, zip_code: row.zip, booking_url: row.bookingUrl });
     continue;
   }
 
@@ -121,10 +132,14 @@ for (const input of rows) {
       row.bookingUrl, initials(row.name), row.sourceUrl, row.sourceName);
 
   const proId = Number(result.lastInsertRowid);
+  candidates.push({ id: proId, business_name: row.name, workplace_name: row.workplace, zip_code: row.zip, booking_url: row.bookingUrl });
   db.prepare('INSERT INTO pro_categories (pro_id, category) VALUES (?, ?)').run(proId, row.category);
   console.log(`IMPORTED: ${row.name} (#${proId}) from ${row.sourceName}`);
-  report.inserted.push({ name: row.name, pro_id: proId, category: row.category, city: row.city, state: row.state });
+  report.inserted.push({ name: row.name, pro_id: proId, category: row.category, city: row.city, state: row.state, source_url: row.sourceUrl, source_name: row.sourceName, booking_url: row.bookingUrl, verification_tier: raw._verification_tier, flags: raw._flags || [] });
 }
+
+if (!dryRun) db.exec('COMMIT');
+} catch (error) { if (!dryRun) { try { db.exec('ROLLBACK'); } catch (_) {} } throw error; }
 
 report.finished_at = new Date().toISOString();
 const rejectedByReason = report.rejected.reduce((counts, item) => { counts[item.reason] = (counts[item.reason] || 0) + 1; return counts; }, {});
