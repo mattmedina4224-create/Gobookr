@@ -4,11 +4,12 @@ const db = require('../db');
 const { layout } = require('../lib/layout');
 const { send, redirect, flashFromQuery } = require('../lib/http');
 const { escapeHtml } = require('../lib/util');
+const { businessBanner } = require('../lib/profile-polish');
 
 const clean = (v, max) => String(v || '').trim().slice(0, max);
 function url(v) {
   const s = clean(v, 2048); if (!s) return '';
-  try { const u = new URL(/^https?:\/\//i.test(s) ? s : 'https://' + s); return ['http:','https:'].includes(u.protocol) && u.hostname ? u.toString() : null; } catch { return null; }
+  try { const u = new URL(/^https?:\/\//i.test(s) ? s : 'https://' + s); return ['http:','https:'].includes(u.protocol) && u.hostname && !u.username && !u.password ? u.toString() : null; } catch { return null; }
 }
 function ownedShop(ctx) {
   if (!ctx.currentUser) { redirect(ctx.res, '/login?next=' + encodeURIComponent('/dashboard/shop')); return null; }
@@ -31,8 +32,8 @@ module.exports = function (router) {
     <div class="field"><label>Phone</label><input name="phone" maxlength="40" value="${escapeHtml(shop.phone || '')}"></div>
     <div class="field"><label>Booking link</label><input name="booking_url" maxlength="2048" value="${escapeHtml(shop.booking_url || '')}" placeholder="https://"></div>
     <div class="field"><label>Logo image URL</label><input name="logo_url" maxlength="2048" value="${escapeHtml(shop.logo_url || '')}" placeholder="https://"></div>
-    <div class="field"><label>Cover image URL</label><input name="cover_url" maxlength="2048" value="${escapeHtml(shop.cover_url || '')}" placeholder="https://"></div>
-    <button class="btn" type="submit">Save business</button></form></div></section>`;
+    <div class="business-banner-preview">${businessBanner(shop.cover_url, shop.name)}</div><div class="field"><label for="cover_url">Banner photo URL</label><input id="cover_url" name="cover_url" maxlength="2048" value="${escapeHtml(shop.cover_url || '')}" placeholder="https://"></div>
+    <p class="helptext">Use a direct image URL for a photo you own or have permission to use. Leave blank for a neutral banner.</p><button class="btn" type="submit">Save business</button></form></div></section><script src="/business-banner.js" defer></script>`;
     send(ctx.res, layout({ title:'Business dashboard', currentUser:ctx.currentUser, session:ctx.session, flash:flashFromQuery(ctx.query), body }));
   });
 

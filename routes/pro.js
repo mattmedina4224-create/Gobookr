@@ -555,7 +555,7 @@ module.exports = function (router) {
       longitude = coordinates ? coordinates.longitude : null;
     }
 
-    const licenseChanged = cleanLicenseNumber !== (profile.license_number || null) || cleanLicenseState !== String(profile.license_state || profile.state || '').toUpperCase();
+    const licenseChanged = cleanBusinessName !== String(profile.business_name || '').trim() || cleanLicenseNumber !== (profile.license_number || null) || cleanLicenseState !== String(profile.license_state || profile.state || '').toUpperCase();
     db.prepare(`UPDATE pro_profiles SET business_name = ?, professional_handle = ?, booking_url = ?, workplace_name = ?, street_address = ?, suite = ?, city = ?, state = ?, zip_code = ?, latitude = ?, longitude = ?, license_number = ?, license_state = ?, license_verified = ?, price_min = ?, price_max = ?, years_experience = ?, bio = ? WHERE id = ?`).run(
       cleanBusinessName,
       cleanHandle,

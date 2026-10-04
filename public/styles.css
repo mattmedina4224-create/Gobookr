@@ -469,3 +469,9 @@ label { display: block; font-size: 0.85rem; font-weight: 600; color: var(--ink-s
 .profile-opening-banner{display:flex;justify-content:space-between;align-items:center;gap:18px;margin:0 0 18px;padding:16px 18px;border:1px solid var(--paper-line);border-radius:18px;background:linear-gradient(135deg,#f8fbff,#fff);box-shadow:0 8px 24px rgba(17,34,68,.05)}.profile-opening-banner strong{display:block;margin:7px 0 3px;font-size:1.05rem}.profile-opening-banner p{margin:7px 0 0;color:#667085;font-size:.84rem}@media(max-width:640px){.profile-opening-banner{align-items:stretch;flex-direction:column}.profile-opening-banner .btn{width:100%;text-align:center}}
 
 .opening-detail-actions{display:grid;gap:8px;margin-top:10px}.opening-detail .opening-times-large span{font-size:.95rem;min-height:40px;padding:9px 13px}.live-opening-banner form{margin:0}.live-opening-banner>div:last-child{display:flex;flex-wrap:wrap;gap:8px;align-items:center}@media(max-width:640px){.live-opening-banner>div:last-child{width:100%}.live-opening-banner>div:last-child .btn,.live-opening-banner>div:last-child form{width:100%}.live-opening-banner>div:last-child form .btn{width:100%}}
+
+:root {
+  --ink: #202124;
+  --ink-soft: #4b5563;
+  --ink-faint: #64748b;
+  --paper: #ffffff;
