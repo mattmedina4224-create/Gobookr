@@ -9,6 +9,16 @@ const { database } = require('./helpers/postgres-test-db');
 const polish = require('../lib/profile-polish');
 const evidence = { business_name:'Internal test fixture', license_number:'TEST', license_state:'CO', reviewer_user_id:9, status:'active', identity_confirmed:true, source_url:'https://registry.example.test/result', checked_at:'2026-01-01T00:00:00Z', expires_at:'2099-01-01T00:00:00Z' };
 const pro = { business_name:evidence.business_name, license_number:'TEST', license_state:'CO', license_verified:1, license_verification:evidence };
+test('viewport harness is preview-only and cannot open authenticated or external routes', () => {
+  const { serveProfilePolishPreview }=require('../lib/profile-polish-preview');
+  const previous=process.env.VERCEL_ENV, res={writeHead(){},end(b){this.body=b;}};
+  try {
+    process.env.VERCEL_ENV='production';assert.equal(serveProfilePolishPreview({method:'GET',url:'/__profile-polish-preview'},res),false);
+    process.env.VERCEL_ENV='preview';assert.equal(serveProfilePolishPreview({method:'POST',url:'/__profile-polish-preview'},res),false);
+    assert.equal(serveProfilePolishPreview({method:'GET',url:'/__profile-polish-preview?page=/admin/licenses&width=1024'},res),true);
+    assert.match(res.body,/width:1024px/);assert.match(res.body,/src="\/shop\/1"/);assert.doesNotMatch(res.body,/src="\/admin/);
+  } finally {if(previous===undefined)delete process.env.VERCEL_ENV;else process.env.VERCEL_ENV=previous;}
+});
 test('license badge fails closed on legacy flags, changed identities/licenses, expired or incomplete reviews', () => {
   assert.equal(polish.licenseIsVerified(pro),true);
   for (const value of [{...pro,license_verification:null},{...pro,license_verified:0},{...pro,business_name:'Changed'},{...pro,license_number:'CHANGED'}, {...pro,license_state:'WY'}, {...pro,license_verification:{...evidence,identity_confirmed:false}}, {...pro,license_verification:{...evidence,source_url:'javascript:alert(1)'}}, {...pro,license_verification:{...evidence,expires_at:'2020-01-01'}}, {...pro,license_verification:{...evidence,checked_at:'2099-01-01'}}]) assert.equal(polish.licenseIsVerified(value),false);
