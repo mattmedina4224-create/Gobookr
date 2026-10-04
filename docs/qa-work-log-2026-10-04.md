@@ -40,3 +40,13 @@
 - No rendered demo video or external schema-tool validation yet.
 
 No whole workstream is marked Verified at this audit stage. This log is updated as evidence arrives.
+
+## Additional verified evidence
+- PR135: https://github.com/mattmedina4224-create/Gobookr/pull/135. Changes remain unmerged pending final preview/authenticated verification.
+- Local suite after mobile claim regression: 222 pass, 0 fail, 0 skipped. These include isolated Postgres claim transactions and mocked billing contracts; they do not certify Stripe provider behavior.
+- Mobile public harness outer width390 (content width375 due scrollbar): location-denied warning appeared; manual Fort Collins massage search returned two real profiles; Any distance selected; document scrollWidth375 equals clientWidth375.
+- Mobile claim entry for profile522 rendered Create an account to claim and Log in actions. Signup submission/admin approval still blocked by missing QA credentials.
+- Mobile profile action column omitted Claim this profile. Added an unclaimed-only mobile claim action and regression coverage; final deployed browser retest still required.
+- Static public/sitemap.xml shadowed dynamic sitemap with only five URLs. Removed static shadow and added regression coverage; final deployed fetch still required.
+- Production pro_events read-only query confirmed test profile_view at 2026-10-04 17:08:16.796982+00 and booking_click at 17:08:22.322787+00 for profile522. Visit/search event tracking is not implemented or verified.
+- Screenshots captured for mobile search and claim entry. Whole workstreams remain uncertified.

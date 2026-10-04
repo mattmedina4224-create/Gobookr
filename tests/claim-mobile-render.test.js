@@ -1,0 +1,22 @@
+'use strict';
+const test = require('node:test'), assert = require('node:assert/strict');
+const fs = require('node:fs'), path = require('node:path'), vm = require('node:vm');
+const { createRequire } = require('node:module');
+test('unclaimed mobile profile exposes a claim action without booking, and claimed profile does not', async () => {
+  const filename=path.join(__dirname,'../routes/public.js'), localRequire=createRequire(filename);
+  const pro={id:42,business_name:'Internal fixture',city:'Denver',state:'CO',category:'barber',claim_status:'unclaimed',initials:'IF'};
+  const db={prepare:sql=>({get:()=>sql.includes('SELECT * FROM pro_profiles')?pro:null,all:()=>[],run:()=>({})})};
+  const module={exports:{}}, routes={};
+  const stubs={'../db':db,'../lib/layout':{layout:x=>x.body},'../lib/favorites':{favoriteIds:()=>new Set(),favoriteControl:()=>''},'../lib/subscription':{isProPubliclyVisible:()=>true}};
+  vm.runInNewContext(fs.readFileSync(filename,'utf8'),{module,URL,URLSearchParams,console,Date,require:n=>stubs[n]||localRequire(n)});
+  module.exports({get:(p,h)=>routes[p]=h,post(){}});
+  const res={writeHead(){},end(body){this.body=body;}};
+  const ctx={params:{id:'42'},query:{},currentUser:null,res};
+  await routes['/pro/:id'](ctx);
+  const mobile=res.body.split('class="profile-mobile-actions"')[1].split('<div class="tabs-grid">')[0];
+  assert.match(mobile,/href="\/pro\/42\/claim">Claim this profile/);
+  assert.doesNotMatch(mobile,/Book Appointment/);
+  pro.claim_status='claimed';
+  await routes['/pro/:id'](ctx);
+  assert.doesNotMatch(res.body,/Claim this profile/);
+});
