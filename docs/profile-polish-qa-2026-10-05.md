@@ -24,4 +24,16 @@ PR: https://github.com/mattmedina4224-create/Gobookr/pull/136
 - No actual professional license was verified in this work. Real registry review remains an authorized admin task.
 - PR must not be merged until required preview/mobile/desktop acceptance and current checks pass.
 
+## Follow-up verification
+
+- Commit fd2b4c passed GitHub run 774 and its Vercel preview reached READY.
+- Browser recovered. Desktop staff link /shop/1 -> /pro/522 and professional backlink -> /shop/1 both passed on that preview. No license badge was displayed for this unverified professional.
+- Browser inspection found the business fallback had zero height because the stylesheet change was incomplete. Fixed by restoring the complete baseline stylesheet and appending the scoped banner rules.
+- Corrected commit c40564b passed GitHub run 775. Browser reopened its Vercel preview successfully. Fallback measured 311.875px high with neutral rgb(247,248,250) background; viewport width 1363px and document scroll width 1348px (no horizontal overflow).
+- Screenshots below are desktop evidence only; the first image shows the discovered bug before correction, not a production baseline. Mobile, signed-in owner/admin, loaded-photo and broken-photo browser acceptance remain outstanding. This supersedes the earlier browser-timeout status for desktop public pages.
+
+![Banner before correction](profile-polish-evidence/gobookr-profile-polish-business-desktop.jpg)
+![Corrected neutral banner](profile-polish-evidence/gobookr-profile-polish-business-fixed-desktop.jpg)
+![Professional with matching workplace backlink](profile-polish-evidence/gobookr-profile-polish-professional-desktop.jpg)
+
 The existing production design is unchanged by this open PR. Only the additive nullable database column has reached production.
