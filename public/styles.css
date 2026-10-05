@@ -476,3 +476,27 @@ label { display: block; font-size: 0.85rem; font-weight: 600; color: var(--ink-s
 .business-banner img{display:block;width:100%;height:100%;object-fit:cover}.business-banner img[hidden]{display:none}.business-banner--fallback{background:var(--paper-soft,#f8fafc)}
 .business-banner--preview{border-radius:14px;margin:16px 0}.shop-staff-grid>.card{min-height:76px;overflow-wrap:anywhere}.license-review-form{display:grid;gap:8px;margin-top:8px}.license-review-form input:not([type=checkbox]){min-height:44px;width:100%}
 @media(max-width:640px){.business-banner{aspect-ratio:16/7}.shop-public-shell>.business-banner{padding:0!important}}
+
+/* Compact mobile disclosure; native details works without JavaScript. */
+.mobile-navigation { display: none; }
+@media (max-width: 720px) {
+  .site-header .desktop-navigation { display: none; }
+  .site-header .container { position: relative; flex-wrap: nowrap; }
+  .mobile-navigation { display: block; margin-left: auto; }
+  .mobile-navigation summary {
+    display: flex; align-items: center; justify-content: center;
+    width: 44px; height: 44px; list-style: none; cursor: pointer;
+    color: var(--ink); background: var(--paper); border: 1px solid var(--paper-line);
+    border-radius: 10px;
+  }
+  .mobile-navigation summary::-webkit-details-marker { display: none; }
+  .mobile-navigation summary:focus-visible { outline: 2px solid var(--brand); outline-offset: 2px; }
+  .mobile-navigation > nav {
+    position: absolute; right: 18px; top: calc(100% - 4px);
+    width: min(280px, calc(100vw - 36px)); z-index: 30;
+    padding: 8px; background: var(--paper); border: 1px solid var(--paper-line);
+    border-radius: 14px; box-shadow: 0 8px 24px rgba(15,23,42,.08);
+  }
+  .mobile-navigation .nav-links { display: flex; flex-direction: column; align-items: stretch; gap: 4px; padding: 0; border: 0; }
+  .mobile-navigation .nav-links a, .mobile-navigation .nav-links button { min-height: 44px; text-align: left; padding: 12px 16px; border-radius: 8px; }
+}
