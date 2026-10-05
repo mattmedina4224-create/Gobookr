@@ -48,3 +48,7 @@ The existing production design is unchanged by this open PR. Only the additive n
 
 ![Loaded QA image, owned GoBookr logo rather than a business photo](profile-polish-evidence/gobookr-banner-loaded-test.jpg)
 ![Failed-image neutral fallback](profile-polish-evidence/gobookr-banner-failed-fallback.jpg)
+
+## Preview account setup
+
+User explicitly approved preview-only admin access on 2026-10-05. Inserted admin_accounts grant for preview user 2 idempotently; fresh SQL JOIN confirmed grant at 2026-10-05 03:33:17.642217+00. Account role remains customer; no business ownership or professional profile was assigned. No production account, auth-provider setting, password or secret changed. Signed-in browser acceptance still requires the user's preview session and is not certified by this database grant.
