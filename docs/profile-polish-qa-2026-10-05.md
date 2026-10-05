@@ -37,3 +37,14 @@ PR: https://github.com/mattmedina4224-create/Gobookr/pull/136
 ![Professional with matching workplace backlink](profile-polish-evidence/gobookr-profile-polish-professional-desktop.jpg)
 
 The existing production design is unchanged by this open PR. Only the additive nullable database column has reached production.
+
+## Banner image acceptance, 2026-10-05
+
+- Latest evidence commit e8764e0 passed GitHub run 776; deployment dpl_2Mexqu9itfnkr3fFhonmgpWGo1wo READY.
+- Isolated preview shop 1 temporarily used GoBookr's own favicon SVG solely as a QA image (not a business photo). Browser confirmed complete=true, naturalWidth=150, naturalHeight=150, hidden=false, object-fit=cover, rendered 998 x 310.875px. This establishes loaded-image rendering on desktop, not photo upload acceptance.
+- Temporary missing asset URL tested a real network/image failure. After the 30-second database read cache expired, the browser confirmed complete=true, naturalWidth=0, hidden=true, display=none; banner had business-banner--fallback, aria-hidden=true and retained height 311.875px. No broken-image icon remained visible.
+- Restored preview cover_url to its original empty string; SQL UPDATE RETURNING confirmed id 1 and cover_url="". No production data changed.
+- Preview users count: 0. Signed-in owner/admin browser acceptance remains blocked. Mobile acceptance remains incomplete; the available browser API does not expose viewport resizing. Neither desktop screenshots nor automated route tests certify mobile.
+
+![Loaded QA image, owned GoBookr logo rather than a business photo](profile-polish-evidence/gobookr-banner-loaded-test.jpg)
+![Failed-image neutral fallback](profile-polish-evidence/gobookr-banner-failed-fallback.jpg)
