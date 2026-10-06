@@ -389,7 +389,7 @@ module.exports = function (router) {
 
       const menu = document.createElement('div');
       menu.className = 'home-mobile-menu';
-      menu.innerHTML = '<a href="/#find">Find a pro</a><a href="/openings">Openings Today</a><a href="/search?type=businesses">Find a business</a><a href="/business-account">For Businesses</a><a href="/login">Sign in</a><a href="/signup">Sign up</a>';
+      menu.innerHTML = '<a href="/#find">Find a pro</a><a href="/search?type=businesses">Find a business</a><a href="/business-account">For Businesses</a><a href="/login">Sign in</a><a href="/signup">Sign up</a>';
       document.querySelector('.site-header').appendChild(menu);
 
       button.addEventListener('click', () => {
