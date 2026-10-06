@@ -130,6 +130,7 @@ test('portal routes are dormant by default, require owner access and reject forg
   const disabled=ctx();await routes.get('GET /owner')(disabled);assert.equal(disabled.res.status,404);assert.equal(reads,0);
   module.exports(router,{enabled:()=>true,store:fakeStore});
   const anonymous=ctx();anonymous.currentUser=null;await routes.get('GET /owner')(anonymous);assert.equal(anonymous.res.status,302);assert.equal(reads,0);
+  const staffLogin=ctx();staffLogin.currentUser=null;staffLogin.req={url:'/staff'};await routes.get('GET /staff')(staffLogin);assert.equal(staffLogin.res.url,'/login?next=%2Fstaff');
   const home=ctx();await routes.get('GET /owner')(home);assert.equal(home.res.status,200);assert.equal(reads,1);
   const forged=ctx();await routes.get('POST /owner/staff')(forged);assert.equal(forged.res.status,403);assert.equal(mutations,0);
   const good=ctx();good.body._csrf='csrf';await routes.get('POST /owner/staff')(good);assert.equal(good.res.url,'/owner/staff/7');assert.equal(mutations,1);

@@ -17,7 +17,10 @@ module.exports=function(router,{enabled=()=>process.env.GOBOOKR_STAFF_PORTAL_ENA
   const actor=ctx=>({userId:Number(ctx.currentUser?.id),token:ctx.session?.token});
   function available(ctx) {
     if(!enabled()){send(ctx.res,'<h1>404 — page not found</h1>',404);return false;}
-    if(!ctx.currentUser || !ctx.session?.token){redirect(ctx.res,'/login?next='+encodeURIComponent('/owner'));return false;}
+    if(!ctx.currentUser || !ctx.session?.token){
+      const destination=String(ctx.req?.url||'').split('?')[0]==='/staff'?'/staff':'/owner';
+      redirect(ctx.res,'/login?next='+encodeURIComponent(destination));return false;
+    }
     return true;
   }
   function page(ctx,title,body) {
