@@ -10,7 +10,7 @@ test('mobile menu starts collapsed and preserves navigation for guests and membe
     assert.match(html, /<summary aria-label="Main menu">/);
     assert.match(html, /<nav class="desktop-navigation" aria-label="Main navigation">/);
     assert.match(html, /aria-label="Mobile navigation"/);
-    assert.match(html, /href="\/openings"/);
+    assert.doesNotMatch(html, /href="\/openings"/);
     if (currentUser) { assert.match(html, /action="\/logout"/); assert.match(html, /name="_csrf" value="fixture"/); }
     else assert.match(html, /href="\/login"/);
   }
