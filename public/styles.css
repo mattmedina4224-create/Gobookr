@@ -486,8 +486,8 @@ label { display: block; font-size: 0.85rem; font-weight: 600; color: var(--ink-s
   .mobile-navigation summary {
     display: flex; align-items: center; justify-content: center;
     width: 44px; height: 44px; list-style: none; cursor: pointer;
-    color: var(--ink); background: var(--paper); border: 1px solid var(--paper-line);
-    border-radius: 10px;
+    color: var(--ink); background: transparent; border: 0;
+    border-radius: 0; box-shadow: none;
   }
   .mobile-navigation summary::-webkit-details-marker { display: none; }
   .mobile-navigation summary:focus-visible { outline: 2px solid var(--brand); outline-offset: 2px; }
