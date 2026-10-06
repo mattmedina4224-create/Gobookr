@@ -52,8 +52,16 @@ test('Postgres business matching, bidirectional links, owner edits and license e
     assert.equal(polish.businessForProfessional(db,matched),null);
     db.exec('DELETE FROM shops WHERE id=2;'); // Disposable local fixture only.
     const request=routes(db);
+    for (const id of ['invalid', '1.5', '9007199254740993', 0, -1]) assert.equal((await request('GET','/shop/:id',{id})).status,404);
     const page=await request('GET','/shop/:id');
     assert.match(page.body,/href="\/pro\/1"/);assert.doesNotMatch(page.body,/href="\/pro\/[234]"/);assert.match(page.body,/business-banner--fallback/);assert.doesNotMatch(page.body,/License verified/);
+    db.prepare('UPDATE shops SET booking_url=?, logo_url=?, cover_url=? WHERE id=1').run('https://owner:private-booking@example.test/book','https://owner:private-logo@example.test/logo.png','https://owner:private-cover@example.test/banner.png');
+    db.prepare('UPDATE pro_profiles SET profile_photo_url=? WHERE id=1').run('https://owner:private-staff@example.test/photo.png');
+    const unsafePage=await request('GET','/shop/:id');
+    assert.doesNotMatch(unsafePage.body,/private-(booking|logo|cover|staff)/);
+    assert.doesNotMatch(unsafePage.body,/Book with this business/);
+    assert.match(unsafePage.body,/business-banner--fallback/);
+    db.exec("UPDATE shops SET booking_url='',logo_url='',cover_url='' WHERE id=1; UPDATE pro_profiles SET profile_photo_url='' WHERE id=1;");
     const owner={id:9}, stranger={id:10};
     const editor=await request('GET','/dashboard/shop',{user:owner});assert.match(editor.body,/Banner photo URL/);
     const denied=await request('POST','/dashboard/shop',{user:stranger,body:{name:'Hijack'}});assert.equal(denied.status,403);

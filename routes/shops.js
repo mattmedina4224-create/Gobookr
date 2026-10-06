@@ -4,18 +4,15 @@ const db = require('../db');
 const { layout } = require('../lib/layout');
 const { send, flashFromQuery } = require('../lib/http');
 const { escapeHtml, slugCategory } = require('../lib/util');
-const { professionalsAtBusiness, businessBanner, licenseIsVerified } = require('../lib/profile-polish');
-
-function safeUrl(value) {
-  try { const u = new URL(String(value || '').trim()); return ['http:','https:'].includes(u.protocol) ? u.toString() : ''; } catch { return ''; }
-}
+const { professionalsAtBusiness, businessBanner, licenseIsVerified, safeImageUrl: safeUrl } = require('../lib/profile-polish');
 
 function shopForClaim(id) { return db.prepare('SELECT * FROM shops WHERE id = ?').get(id); }
 function pendingShopClaim(shopId, userId) { return db.prepare("SELECT id FROM shop_claims WHERE shop_id = ? AND claimant_user_id = ? AND status = 'pending' ORDER BY id DESC LIMIT 1").get(shopId, userId); }
 
 module.exports = function (router) {
   router.get('/shop/:id', async (ctx) => {
-    const shop = db.prepare('SELECT * FROM shops WHERE id = ?').get(ctx.params.id);
+    const id = Number(ctx.params.id);
+    const shop = Number.isSafeInteger(id) && id > 0 ? db.prepare('SELECT * FROM shops WHERE id = ?').get(id) : null;
     if (!shop) return send(ctx.res, layout({ title:'Shop not found', currentUser:ctx.currentUser, session:ctx.session, body:'<section class="section container"><div class="panel"><h1>Shop not found</h1><p>This shop listing is not available.</p></div></section>' }), 404);
 
     const logo = safeUrl(shop.logo_url);
