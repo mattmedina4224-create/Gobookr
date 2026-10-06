@@ -103,7 +103,7 @@ const server = http.createServer(async (req, res) => {
     if (req.method === 'GET' && serveStatic(req, res, pathname)) return;
     const rate = checkAuthRateLimit(req, pathname);
     if (!rate.allowed) { res.writeHead(429, { 'Content-Type': 'text/html; charset=utf-8', 'Retry-After': String(rate.retryAfter) }); res.end('<h1>Too many attempts</h1><p>Please wait a few minutes and try again.</p>'); return; }
-    const match = router.match(req.method, pathname);
+      const match = router.match(req.method, pathname);
     if (!match) { res.writeHead(404, { 'Content-Type': 'text/html; charset=utf-8' }); res.end('<h1>404 — page not found</h1><p><a href="/">Back to GoBookr</a></p>'); return; }
     const session = getSessionUserSafe(req);
     const ctx = { req, res, params: match.params, query: Object.fromEntries(parsedUrl.searchParams.entries()), currentUser: session ? session.user : null, session: session ? session.session : null, files: {}, rawBody: null };

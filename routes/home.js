@@ -193,8 +193,6 @@ module.exports = function (router) {
   .home-pro-rating b,.home-pro-rating span { color:#555b6e; }
   .home-pro-new { color:var(--ink-faint); font-size:.84rem; }
 
-  .home-mobile-menu-button,.home-mobile-menu { display:none; }
-
   @media (max-width:900px) {
     .home-search-card form { grid-template-columns:1fr 1fr; }
     .home-search-card .btn { grid-column:1 / -1; }
@@ -218,50 +216,7 @@ module.exports = function (router) {
       height:42px !important;
       flex:0 0 156px !important;
     }
-    .site-header .nav-links {
-      margin-left:auto !important;
-      display:flex !important;
-      align-items:center !important;
-      justify-content:flex-end !important;
-      gap:0 !important;
-      flex-wrap:nowrap !important;
-      width:auto !important;
-      padding:0 !important;
-      border-top:0 !important;
-    }
-    .site-header .nav-links > a,
-    .site-header .nav-links > form,
-    .site-header .nav-links > span { display:none !important; }
-    .home-mobile-menu-button {
-      display:inline-flex !important;
-      width:44px;
-      height:44px;
-      border:0;
-      border-radius:12px;
-      background:#fff;
-      padding:7px;
-      margin:0;
-      align-items:center;
-      justify-content:center;
-      color:#111b35;
-    }
-    .home-mobile-menu-button svg { width:27px; height:27px; }
-    .home-mobile-menu {
-      display:none;
-      position:absolute;
-      z-index:40;
-      top:60px;
-      right:14px;
-      min-width:210px;
-      padding:8px;
-      border:1px solid #e4e7ee;
-      border-radius:15px;
-      background:#fff;
-      box-shadow:0 16px 40px -18px rgba(20,32,56,.35);
-    }
-    .home-mobile-menu.open { display:block; }
-    .home-mobile-menu a { display:block; padding:12px 14px; border-radius:10px; font-weight:650; color:#252c40; }
-    .home-mobile-menu a:last-child { background:#1e2a4a; color:#fff; text-align:center; margin-top:4px; }
+
 
     .home-hero { padding:42px 0 38px; }
     .home-hero .container { padding:0 18px; }
@@ -374,34 +329,7 @@ module.exports = function (router) {
     </div>
   </section>
 </div>
-<script>
-  window.addEventListener('DOMContentLoaded', () => {
-    if (window.location.pathname !== '/') return;
-
-    const nav = document.querySelector('.site-header .nav-links');
-    if (nav && !nav.querySelector('.home-mobile-menu-button')) {
-      const button = document.createElement('button');
-      button.type = 'button';
-      button.className = 'home-mobile-menu-button';
-      button.setAttribute('aria-label', 'Open menu');
-      button.innerHTML = '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>';
-      nav.appendChild(button);
-
-      const menu = document.createElement('div');
-      menu.className = 'home-mobile-menu';
-      menu.innerHTML = '<a href="/#find">Find a pro</a><a href="/openings">Openings Today</a><a href="/search?type=businesses">Find a business</a><a href="/business-account">For Businesses</a><a href="/login">Sign in</a><a href="/signup">Sign up</a>';
-      document.querySelector('.site-header').appendChild(menu);
-
-      button.addEventListener('click', () => {
-        const open = menu.classList.toggle('open');
-        button.setAttribute('aria-expanded', open ? 'true' : 'false');
-      });
-      document.addEventListener('click', (event) => {
-        if (!menu.contains(event.target) && !button.contains(event.target)) menu.classList.remove('open');
-      });
-    }
-  });
-</script>`;
+`;
 
     send(ctx.res, layout({ title: 'Find trusted local pros', currentUser: ctx.currentUser, session: ctx.session, flash: flashFromQuery(ctx.query), body }));
   });

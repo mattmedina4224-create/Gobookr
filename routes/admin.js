@@ -4,6 +4,7 @@ const db = require('../db');
 const { layout } = require('../lib/layout');
 const { send, redirect } = require('../lib/http');
 const { escapeHtml } = require('../lib/util');
+const { licenseIsVerified, safeImageUrl } = require('../lib/profile-polish');
 
 const { requireAdmin } = require('../lib/admin');
 
@@ -13,7 +14,7 @@ module.exports = function (router) {
 
     const pros = db.prepare(`
       SELECT id, business_name, city, state,
-             license_number, license_state, license_verified
+             license_number, license_state, license_verified, license_verification
       FROM pro_profiles
       WHERE license_number IS NOT NULL AND trim(license_number) != ''
       ORDER BY license_verified ASC, business_name ASC
@@ -25,19 +26,19 @@ module.exports = function (router) {
         <td>${escapeHtml(pro.city || '')}, ${escapeHtml(pro.state || '')}</td>
         <td>${escapeHtml(pro.license_number || '')}</td>
         <td>${escapeHtml(pro.license_state || '')}</td>
-        <td>${pro.license_verified ? 'Verified' : 'Pending'}</td>
-        <td>${String(pro.license_state || '').toUpperCase() === 'CO' ? `<a href="https://www.colorado.gov/myverification/" target="_blank" rel="noopener noreferrer">Open DORA</a> ` : ''}${pro.license_verified ? '' : `<form method="POST" action="/admin/licenses/${pro.id}/verify" style="display:inline"><input type="hidden" name="_csrf" value="${escapeHtml(ctx.session.csrf_token)}" /><button type="submit">Verify</button></form>`}</td>
+        <td>${licenseIsVerified(pro) ? 'Verified' : 'Needs review'}</td>
+        <td>${String(pro.license_state || '').toUpperCase() === 'CO' ? '<a href="https://apps2.colorado.gov/dora/licensing/lookup/licenselookup.aspx" target="_blank" rel="noopener noreferrer">Open DORA</a>' : ''}<form class="license-review-form" method="POST" action="/admin/licenses/${pro.id}/verify"><input type="hidden" name="_csrf" value="${escapeHtml(ctx.session.csrf_token)}"><input type="hidden" name="license_number" value="${escapeHtml(pro.license_number || '')}"><input type="hidden" name="license_state" value="${escapeHtml(pro.license_state || '')}"><label>Official registry result URL<input name="source_url" type="url" required maxlength="2048" placeholder="https://"></label><label>License expiration date<input name="expires_at" type="date" required></label><label><input name="identity_confirmed" type="checkbox" value="1" required> I checked the issuing registry: identity and license number match, and the license is active.</label><button class="btn secondary small" type="submit">Record verification</button></form>${licenseIsVerified(pro) ? `<form method="POST" action="/admin/licenses/${pro.id}/revoke"><input type="hidden" name="_csrf" value="${escapeHtml(ctx.session.csrf_token)}"><button class="btn ghost small">Remove badge</button></form>` : ''}</td>
       </tr>
     `).join('');
 
     const body = `
       <section class="section container">
         <h1>License Verification</h1>
-        <p class="muted">Review professional licenses submitted to GoBookr.</p>
-        ${rows ? `<table>
+        <p class="muted">Open the issuing registry and confirm the identity, number, active status and expiration before recording a review. A submitted number alone never grants a badge.</p>
+        ${rows ? `<div style="overflow-x:auto;"><table>
           <thead><tr><th>Professional</th><th>Location</th><th>License #</th><th>State</th><th>Status</th><th>Action</th></tr></thead>
           <tbody>${rows}</tbody>
-        </table>` : '<div class="panel"><p class="muted" style="margin:0;">No licenses are waiting for review.</p></div>'}
+        </table></div>` : '<div class="panel"><p class="muted" style="margin:0;">No licenses are waiting for review.</p></div>'}
       </section>
     `;
 
@@ -45,6 +46,7 @@ module.exports = function (router) {
       title: 'License Verification',
       currentUser: ctx.currentUser,
       session: ctx.session,
+      flash: require('../lib/http').flashFromQuery(ctx.query),
       body,
     }));
   });
@@ -53,8 +55,21 @@ module.exports = function (router) {
     if (!requireAdmin(ctx)) return;
     const proId = Number(ctx.params.id);
     if (!Number.isInteger(proId) || proId <= 0) return redirect(ctx.res, '/admin/licenses');
-    db.prepare('UPDATE pro_profiles SET license_verified = 1 WHERE id = ?').run(proId);
-    redirect(ctx.res, '/admin/licenses');
+    const pro = db.prepare('SELECT id, business_name, license_number, license_state FROM pro_profiles WHERE id = ?').get(proId);
+    const number = String(pro?.license_number || '').trim(), state = String(pro?.license_state || '').trim().toUpperCase();
+    const source = safeImageUrl(ctx.body.source_url), rawExpiry = String(ctx.body.expires_at || '');
+    const expiresAt = /^\d{4}-\d{2}-\d{2}$/.test(rawExpiry) ? Date.parse(rawExpiry + 'T00:00:00Z') : NaN;
+    const fail = () => redirect(ctx.res, '/admin/licenses?error=' + encodeURIComponent('Confirm the current license against an official HTTPS registry result and enter a future expiration date.'));
+    if (!number || !/^[A-Z]{2}$/.test(state) || String(ctx.body.license_number || '').trim() !== number || String(ctx.body.license_state || '').trim().toUpperCase() !== state || ctx.body.identity_confirmed !== '1' || !source.startsWith('https://') || !Number.isFinite(expiresAt) || new Date(expiresAt).toISOString().slice(0,10) !== rawExpiry || expiresAt <= Date.now()) return fail();
+    const evidence = { business_name:String(pro.business_name || '').trim(), license_number:number, license_state:state, status:'active', identity_confirmed:true, source_url:source, checked_at:new Date().toISOString(), expires_at:new Date(expiresAt).toISOString(), reviewer_user_id:Number(ctx.currentUser.id) };
+    const result = db.prepare('UPDATE pro_profiles SET license_verified = 1, license_verification = ?::jsonb WHERE id = ? AND license_number = ? AND license_state = ?').run(JSON.stringify(evidence), proId, pro.license_number, pro.license_state);
+    redirect(ctx.res, '/admin/licenses?' + (result.changes === 1 ? 'message=License%20review%20recorded.' : 'error=License%20changed.%20Review%20again.'));
+  });
+  router.post('/admin/licenses/:id/revoke', async (ctx) => {
+    if (!requireAdmin(ctx)) return;
+    const id = Number(ctx.params.id);
+    if (Number.isInteger(id) && id > 0) db.prepare('UPDATE pro_profiles SET license_verified = 0 WHERE id = ?').run(id);
+    redirect(ctx.res, '/admin/licenses?message=License%20badge%20removed.');
   });
   router.get('/admin/shop-claims', async (ctx) => {
     if (!requireAdmin(ctx)) return;
@@ -236,3 +251,4 @@ module.exports = function (router) {
   });
 
 };
+

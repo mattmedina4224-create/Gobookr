@@ -469,3 +469,69 @@ label { display: block; font-size: 0.85rem; font-weight: 600; color: var(--ink-s
 .profile-opening-banner{display:flex;justify-content:space-between;align-items:center;gap:18px;margin:0 0 18px;padding:16px 18px;border:1px solid var(--paper-line);border-radius:18px;background:linear-gradient(135deg,#f8fbff,#fff);box-shadow:0 8px 24px rgba(17,34,68,.05)}.profile-opening-banner strong{display:block;margin:7px 0 3px;font-size:1.05rem}.profile-opening-banner p{margin:7px 0 0;color:#667085;font-size:.84rem}@media(max-width:640px){.profile-opening-banner{align-items:stretch;flex-direction:column}.profile-opening-banner .btn{width:100%;text-align:center}}
 
 .opening-detail-actions{display:grid;gap:8px;margin-top:10px}.opening-detail .opening-times-large span{font-size:.95rem;min-height:40px;padding:9px 13px}.live-opening-banner form{margin:0}.live-opening-banner>div:last-child{display:flex;flex-wrap:wrap;gap:8px;align-items:center}@media(max-width:640px){.live-opening-banner>div:last-child{width:100%}.live-opening-banner>div:last-child .btn,.live-opening-banner>div:last-child form{width:100%}.live-opening-banner>div:last-child form .btn{width:100%}}
+
+
+/* Workstream 5: business banners and staff */
+.business-banner{width:100%;aspect-ratio:16/5;overflow:hidden;background:var(--paper-soft,#f8fafc);border-bottom:1px solid var(--paper-line,#e2e8f0)}
+.business-banner img{display:block;width:100%;height:100%;object-fit:cover}.business-banner img[hidden]{display:none}.business-banner--fallback{background:var(--paper-soft,#f8fafc)}
+.business-banner--preview{border-radius:14px;margin:16px 0}.shop-staff-grid>.card{min-height:76px;overflow-wrap:anywhere}.license-review-form{display:grid;gap:8px;margin-top:8px}.license-review-form input:not([type=checkbox]){min-height:44px;width:100%}
+@media(max-width:640px){.business-banner{aspect-ratio:16/7}.shop-public-shell>.business-banner{padding:0!important}}
+
+/* Compact mobile disclosure; native details works without JavaScript. */
+.mobile-navigation { display: none; }
+@media (max-width: 720px) {
+  .site-header .desktop-navigation { display: none; }
+  .site-header .container { position: relative; flex-wrap: nowrap; }
+  .mobile-navigation { display: block; margin-left: auto; }
+  .mobile-navigation summary {
+    display: flex; align-items: center; justify-content: center;
+    width: 44px; height: 44px; list-style: none; cursor: pointer;
+    color: var(--ink); background: transparent; border: 0;
+    border-radius: 0; box-shadow: none;
+  }
+  .mobile-navigation summary::-webkit-details-marker { display: none; }
+  .mobile-navigation summary:focus-visible { outline: 2px solid var(--brand); outline-offset: 2px; }
+  .mobile-navigation > nav {
+    position: absolute; right: 18px; top: calc(100% - 4px);
+    width: min(280px, calc(100vw - 36px)); z-index: 30;
+    padding: 8px; background: var(--paper); border: 1px solid var(--paper-line);
+    border-radius: 14px; box-shadow: 0 8px 24px rgba(15,23,42,.08);
+  }
+  .mobile-navigation .nav-links { display: flex; flex-direction: column; align-items: stretch; gap: 4px; padding: 0; border: 0; }
+  .mobile-navigation .nav-links a, .mobile-navigation .nav-links button { min-height: 44px; text-align: left; padding: 12px 16px; border-radius: 8px; }
+}
+
+/* Business owner editor: compact, neutral surfaces and clear mobile actions. */
+.business-editor { max-width: var(--max); padding-top: 32px; padding-bottom: 48px; }
+.business-editor__header { display: flex; justify-content: space-between; align-items: center; gap: 24px; margin-bottom: 32px; }
+.business-editor__eyebrow { margin: 0 0 8px; font-size: .875rem; font-weight: 600; color: var(--ink-faint); }
+.business-editor__header h1 { font-size: 1.75rem; margin-bottom: 8px; letter-spacing: -.025em; }
+.business-editor__header .muted { margin: 0; font-size: 1rem; }
+.business-editor__header .btn { flex-shrink: 0; }
+.business-editor__grid { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: 24px; align-items: start; }
+.business-editor__details { display: grid; gap: 24px; min-width: 0; }
+.business-editor__photos { min-width: 0; }
+.business-editor__section { margin: 0; padding: 24px; min-width: 0; border: 1px solid var(--paper-line); border-radius: var(--radius); background: var(--paper); box-shadow: var(--shadow-sm); }
+.business-editor__section legend { float: left; width: 100%; margin-bottom: 24px; padding: 0; color: var(--ink); font-size: 1.25rem; font-weight: 700; letter-spacing: -.015em; }
+.business-editor__section legend + * { clear: both; }
+.business-editor__section .field { margin-bottom: 16px; }
+.business-editor__section .field:last-child { margin-bottom: 0; }
+.business-editor__section .field-row { gap: 16px; }
+.business-editor__section label { font-size: .875rem; margin-bottom: 8px; }
+.business-editor__section input, .business-editor__section textarea { font-size: 1rem; padding: 8px 16px; min-height: 44px; }
+.business-editor__section textarea { min-height: 128px; resize: vertical; }
+.business-editor__section .business-banner-preview { margin: 0 0 24px; }
+.business-editor__section .business-banner { aspect-ratio: 4 / 3; border-radius: var(--radius-sm); }
+.business-editor__section .helptext { color: var(--ink-faint); font-size: .875rem; margin: 0 0 24px; }
+.business-editor__save { grid-column: 1 / -1; display: flex; align-items: center; gap: 24px; border-top: 1px solid var(--paper-line); padding-top: 24px; }
+.business-editor__save .btn, .business-editor__header .btn { min-height: 44px; }
+.business-editor__save a { display: inline-flex; align-items: center; min-height: 44px; font-size: .875rem; }
+@media (max-width: 720px) {
+  .business-editor { padding-top: 24px; padding-bottom: 32px; }
+  .business-editor__header { display: block; margin-bottom: 24px; }
+  .business-editor__header .btn { margin-top: 16px; }
+  .business-editor__grid { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+  .business-editor__section { padding: 24px; }
+  .business-editor__save { flex-direction: column; align-items: stretch; gap: 8px; }
+  .business-editor__save a { justify-content: center; }
+}
