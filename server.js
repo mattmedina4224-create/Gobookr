@@ -11,6 +11,7 @@ const layoutModule = require('./lib/layout');
 const { installBillingBanner } = require('./lib/pro-billing-banner');
 const { installSquareDashboardCard } = require('./lib/square-dashboard-card');
 const { checkAuthRateLimit } = require('./lib/rate-limit');
+const { installPublicAnalytics } = require('./lib/public-analytics');
 
 installBillingBanner(layoutModule);
 installSquareDashboardCard(layoutModule);
@@ -96,7 +97,8 @@ function parseMultipart(rawBuffer, contentType) {
 }
 
 const server = http.createServer(async (req, res) => {
-  if (req.method === 'GET' && req.url === '/robots.txt') { res.writeHead(200, {'Content-Type':'text/plain; charset=utf-8'}); res.end('User-agent: *\\nAllow: /\\nDisallow: /dashboard/\\nDisallow: /admin\\nDisallow: /login\\nDisallow: /signup\\nSitemap: https://gobookr.com/sitemap.xml\\n'); return; }
+  if (process.env.VERCEL_ENV === 'preview' && require('./lib/launch-preview').serveLaunchPreview(req, res)) return;
+  if (req.method === 'GET' && req.url === '/robots.txt') { res.writeHead(200, {'Content-Type':'text/plain; charset=utf-8'}); res.end('User-agent: *\nAllow: /\nDisallow: /dashboard/\nDisallow: /admin\nDisallow: /login\nDisallow: /signup\nSitemap: https://gobookr.com/sitemap.xml\n'); return; }
   if (req.method === 'GET' && req.url === '/sitemap.xml') { try { const db=require('./db'); const pros=db.prepare("SELECT p.id FROM pro_profiles p LEFT JOIN subscriptions s ON s.pro_id=p.id WHERE (p.user_id IS NULL AND p.claim_status IN ('unclaimed','claim_pending') AND COALESCE(p.business_name,'') <> '' AND COALESCE(p.city,'') <> '' AND COALESCE(p.state,'') <> '' AND COALESCE(p.source_url,'') <> '' AND COALESCE(p.source_name,'') <> '') OR (p.user_id IS NOT NULL AND p.onboarding_completed = 1 AND (s.status='active' OR (s.status='trialing' AND s.trial_ends_at > CURRENT_TIMESTAMP) OR (s.status IN ('past_due','unpaid') AND s.past_due_since IS NOT NULL AND s.past_due_since > CURRENT_TIMESTAMP - INTERVAL '7 days'))) ORDER BY p.id DESC LIMIT 5000").all(); const shops=db.prepare("SELECT id FROM shops WHERE (owner_user_id IS NULL AND claim_status IN ('unclaimed','pending') AND COALESCE(name,'') <> '' AND COALESCE(city,'') <> '' AND COALESCE(state,'') <> '' AND COALESCE(source_url,'') <> '' AND COALESCE(source_name,'') <> '') OR (owner_user_id IS NOT NULL AND claim_status='claimed') ORDER BY id DESC LIMIT 5000").all(); const combos=db.prepare("SELECT DISTINCT LOWER(REPLACE(p.city,' ','-')) AS city_slug, pc.category FROM pro_profiles p JOIN pro_categories pc ON pc.pro_id=p.id LEFT JOIN subscriptions s ON s.pro_id=p.id WHERE COALESCE(p.city,'') <> '' AND ((p.user_id IS NULL AND p.claim_status IN ('unclaimed','claim_pending') AND COALESCE(p.business_name,'') <> '' AND COALESCE(p.state,'') <> '' AND COALESCE(p.source_url,'') <> '' AND COALESCE(p.source_name,'') <> '') OR (p.user_id IS NOT NULL AND p.onboarding_completed=1 AND (s.status='active' OR (s.status='trialing' AND s.trial_ends_at > CURRENT_TIMESTAMP) OR (s.status IN ('past_due','unpaid') AND s.past_due_since IS NOT NULL AND s.past_due_since > CURRENT_TIMESTAMP - INTERVAL '7 days')))) ORDER BY city_slug, pc.category LIMIT 5000").all(); const urls=['https://gobookr.com/','https://gobookr.com/openings',...pros.map(x=>'https://gobookr.com/pro/'+x.id),...shops.map(x=>'https://gobookr.com/shop/'+x.id),...combos.map(x=>'https://gobookr.com/discover/'+encodeURIComponent(x.city_slug)+'/'+encodeURIComponent(x.category))]; res.writeHead(200,{'Content-Type':'application/xml; charset=utf-8','Cache-Control':'public, max-age=3600'}); res.end('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+urls.map(u=>'<url><loc>'+u+'</loc></url>').join('')+'</urlset>'); return; } catch(err){ console.error('Sitemap error',err); } }
   try {
     const parsedUrl = new URL(req.url, `http://${req.headers.host || 'localhost'}`); const pathname = decodeURIComponent(parsedUrl.pathname);
@@ -107,6 +109,7 @@ const server = http.createServer(async (req, res) => {
     if (!match) { res.writeHead(404, { 'Content-Type': 'text/html; charset=utf-8' }); res.end('<h1>404 — page not found</h1><p><a href="/">Back to GoBookr</a></p>'); return; }
     const session = getSessionUserSafe(req);
     const ctx = { req, res, params: match.params, query: Object.fromEntries(parsedUrl.searchParams.entries()), currentUser: session ? session.user : null, session: session ? session.session : null, files: {}, rawBody: null };
+    installPublicAnalytics(ctx, pathname);
     let multipartDebug = null;
     if (req.method === 'POST') {
       const raw = await readBody(req); ctx.rawBody = raw; const contentType = req.headers['content-type'] || ''; const lowerContentType = contentType.toLowerCase(); const isMultipart = lowerContentType.startsWith('multipart/form-data'); const isJson = lowerContentType.startsWith('application/json');

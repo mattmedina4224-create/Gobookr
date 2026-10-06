@@ -57,6 +57,7 @@ function app() {
     } },
     './lib/pro-billing-banner': { installBillingBanner() {} }, './lib/square-dashboard-card': { installSquareDashboardCard() {} },
     './lib/rate-limit': { checkAuthRateLimit: () => ({ allowed: true }) },
+    './lib/public-analytics': { installPublicAnalytics() {} },
   };
   for (const name of ['public','auth','become-pro','google','pro','onboarding','admin','legal','claim','embedded-billing','billing','square','shops','shop-dashboard','shop-billing','business-account']) dependencies['./routes/' + name] = () => {};
   dependencies['./routes/customer'] = customerRoute;

@@ -378,8 +378,14 @@ label { display: block; font-size: 0.85rem; font-weight: 600; color: var(--ink-s
 
 /* Favorites controls remain outside profile links for keyboard and touch access. */
 .favorite-card { position:relative; min-width:0; }
-.favorite-card > a:not(.favorite-control) { display:block; height:100%; }
+.favorite-card > a:not(.favorite-control):not(.market-claim-link) { display:block; height:100%; }
 .favorite-card > .favorite-form, .favorite-card > .favorite-control { position:absolute; right:10px; bottom:10px; }
+/* Unclaimed listings have a separate claim row, outside the profile link. */
+.favorite-card:has(> .market-claim-link) { display:grid; grid-template-rows:1fr auto; }
+.favorite-card:has(> .market-claim-link) > .pro-card { grid-area:1 / 1; height:auto; }
+.favorite-card > .market-claim-link { grid-area:2 / 1; min-height:44px; display:flex; align-items:center; justify-content:center; }
+.favorite-card:has(> .market-claim-link) > .favorite-form,
+.favorite-card:has(> .market-claim-link) > .favorite-control { grid-area:1 / 1; position:relative; right:auto; bottom:auto; align-self:end; justify-self:end; margin:10px; z-index:1; }
 .favorite-card .market-pro-inner { padding-bottom:64px; }
 .home-favorite-card .home-pro-info { padding-bottom:64px; }
 .favorite-form { margin:8px 0; }

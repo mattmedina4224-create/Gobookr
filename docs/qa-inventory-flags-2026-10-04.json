@@ -1,0 +1,2011 @@
+{
+  "audit_date": "2026-10-04",
+  "production_changes": 0,
+  "visible_profiles": 500,
+  "missing_booking": 185,
+  "generic_booksy_search": 101,
+  "flags": [
+    {
+      "id": 7,
+      "name": "Anthony Craven",
+      "source_url": "https://booksy.com/en-us/s/barber-shop/134761_denver?businessesPage=8",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 12,
+      "name": "G. Padilla",
+      "source_url": "https://booksy.com/en-us/s/barber-shop/134761_denver?businessesPage=8",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 14,
+      "name": "Nick Billingsley",
+      "source_url": "https://booksy.com/en-us/s/barber-shop/134761_denver?businessesPage=8",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 15,
+      "name": "Nailed It By Eve",
+      "source_url": "https://booksy.com/en-us/s/nail-salon/134761_denver",
+      "booking_url": "https://booksy.com/en-us/s/nail-salon/134761_denver",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 16,
+      "name": "Domanic Guzman LMT, LLC",
+      "source_url": "https://booksy.com/en-us/s/massage/134761_denver",
+      "booking_url": "https://booksy.com/en-us/s/massage/134761_denver",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 18,
+      "name": "Nekadam Skin Esthetics",
+      "source_url": "https://booksy.com/en-us/s/eyebrow-waxing/134761_denver",
+      "booking_url": "https://booksy.com/en-us/s/eyebrow-waxing/134761_denver",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 19,
+      "name": "Divine Wax &Co.",
+      "source_url": "https://booksy.com/en-us/s/brows-lashes/134761_denver",
+      "booking_url": "https://booksy.com/en-us/s/brows-lashes/134761_denver",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 21,
+      "name": "Extravagance nails&spa",
+      "source_url": "https://booksy.com/en-us/s/nail-salon/134761_denver",
+      "booking_url": "https://booksy.com/en-us/s/nail-salon/134761_denver",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 22,
+      "name": "AURA MASSAGE SERVICE",
+      "source_url": "https://booksy.com/en-us/s/massage/134761_denver",
+      "booking_url": "https://booksy.com/en-us/s/massage/134761_denver",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 23,
+      "name": "Anna Lansdon",
+      "source_url": "https://booksy.com/en-us/s/tattoo-shop/134761_denver",
+      "booking_url": "https://booksy.com/en-us/s/tattoo-shop/134761_denver",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 24,
+      "name": "Scissor Cult",
+      "source_url": "https://booksy.com/en-us/s/eyebrow-waxing/134761_denver",
+      "booking_url": "https://booksy.com/en-us/s/eyebrow-waxing/134761_denver",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 25,
+      "name": "Os Relaxing Massages",
+      "source_url": "https://booksy.com/en-us/s/massage/134761_denver",
+      "booking_url": "https://booksy.com/en-us/s/massage/134761_denver",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 26,
+      "name": "Her Gold Minks luxury lash extensions",
+      "source_url": "https://booksy.com/en-us/s/eyebrow-waxing/134761_denver",
+      "booking_url": "https://booksy.com/en-us/s/eyebrow-waxing/134761_denver",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 27,
+      "name": "Marco Barber",
+      "source_url": "https://booksy.com/en-us/s/eyebrow-shaping/134761_denver",
+      "booking_url": "https://booksy.com/en-us/s/eyebrow-shaping/134761_denver",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 28,
+      "name": "Face2Face Aesthetics",
+      "source_url": "https://booksy.com/en-us/s/eyebrow-waxing/134761_denver",
+      "booking_url": "https://booksy.com/en-us/s/eyebrow-waxing/134761_denver",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 29,
+      "name": "Kimyatta’s Living Phearless @ Winning Coiffures",
+      "source_url": "https://booksy.com/en-us/s/nail-salon/134761_denver",
+      "booking_url": "https://booksy.com/en-us/s/nail-salon/134761_denver",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 30,
+      "name": "Tips To Tops Barbershop & Salon By Kayley",
+      "source_url": "https://booksy.com/en-us/s/eyebrow-waxing/134761_denver",
+      "booking_url": "https://booksy.com/en-us/s/eyebrow-waxing/134761_denver",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 31,
+      "name": "Medusa Hair Salon",
+      "source_url": "https://booksy.com/en-us/s/eyebrow-waxing/134761_denver",
+      "booking_url": "https://booksy.com/en-us/s/eyebrow-waxing/134761_denver",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 32,
+      "name": "Redwine’sHairDesign",
+      "source_url": "https://booksy.com/en-us/s/nail-salon/134761_denver",
+      "booking_url": "https://booksy.com/en-us/s/nail-salon/134761_denver",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 33,
+      "name": "Cecilee_styles at Stealth Barber",
+      "source_url": "https://booksy.com/en-us/s/eyebrow-waxing/134761_denver",
+      "booking_url": "https://booksy.com/en-us/s/eyebrow-waxing/134761_denver",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 36,
+      "name": "Shelliedidit Llc",
+      "source_url": "https://booksy.com/en-us/s/tattoo-shop/134761_denver",
+      "booking_url": "https://booksy.com/en-us/s/tattoo-shop/134761_denver",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 37,
+      "name": "Weezythewiz",
+      "source_url": "https://booksy.com/en-us/s/tattoo-shop/134761_denver",
+      "booking_url": "https://booksy.com/en-us/s/tattoo-shop/134761_denver",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 38,
+      "name": "Studio 1642",
+      "source_url": "https://booksy.com/en-us/s/tattoo-shop/134761_denver",
+      "booking_url": "https://booksy.com/en-us/s/tattoo-shop/134761_denver",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 39,
+      "name": "Beautifully Inked",
+      "source_url": "https://booksy.com/en-us/s/tattoo-shop/134761_denver",
+      "booking_url": "https://booksy.com/en-us/s/tattoo-shop/134761_denver",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 40,
+      "name": "Chuco Style Arte",
+      "source_url": "https://booksy.com/en-us/s/tattoo-shop/134761_denver",
+      "booking_url": "https://booksy.com/en-us/s/tattoo-shop/134761_denver",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 41,
+      "name": "Vannenails",
+      "source_url": "https://booksy.com/en-us/s/nail-salon/134761_denver",
+      "booking_url": "https://booksy.com/en-us/s/nail-salon/134761_denver",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 42,
+      "name": "Beauty Within LLC",
+      "source_url": "https://booksy.com/en-us/s/brows-lashes/14864_thornton",
+      "booking_url": "https://booksy.com/en-us/s/brows-lashes/14864_thornton",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 43,
+      "name": "GABRIELA BEAUTY STUDIO & SPA LLC",
+      "source_url": "https://booksy.com/en-us/s/eyelash-extensions/134761_denver",
+      "booking_url": "https://booksy.com/en-us/s/eyelash-extensions/134761_denver",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 44,
+      "name": "WinkzByJ",
+      "source_url": "https://booksy.com/en-us/s/brows-lashes/14864_thornton",
+      "booking_url": "https://booksy.com/en-us/s/brows-lashes/14864_thornton",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 45,
+      "name": "StudioMargaretMartinez",
+      "source_url": "https://booksy.com/en-us/s/eyelash-extensions/134761_denver",
+      "booking_url": "https://booksy.com/en-us/s/eyelash-extensions/134761_denver",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 47,
+      "name": "Netskin Studio",
+      "source_url": "https://booksy.com/en-us/s/eyelash-extensions/134761_denver",
+      "booking_url": "https://booksy.com/en-us/s/eyelash-extensions/134761_denver",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 48,
+      "name": "Pauli_beauty_lash",
+      "source_url": "https://booksy.com/en-us/s/eyelash-extensions/134761_denver",
+      "booking_url": "https://booksy.com/en-us/s/eyelash-extensions/134761_denver",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 51,
+      "name": "Lashesbrows_Gaby",
+      "source_url": "https://booksy.com/en-us/s/eyelash-extensions/134761_denver",
+      "booking_url": "https://booksy.com/en-us/s/eyelash-extensions/134761_denver",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 52,
+      "name": "Angelica the Barber",
+      "source_url": "https://booksy.com/en-us/s/eyebrow-shaping/134761_denver",
+      "booking_url": "https://booksy.com/en-us/s/eyebrow-shaping/134761_denver",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 53,
+      "name": "Crispy Cutz By Rob",
+      "source_url": "https://booksy.com/en-us/s/eyebrow-shaping/134761_denver",
+      "booking_url": "https://booksy.com/en-us/s/eyebrow-shaping/134761_denver",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 54,
+      "name": "Kira @ Verity Collective",
+      "source_url": "https://booksy.com/en-us/s/nail-salon/134761_denver",
+      "booking_url": "https://booksy.com/en-us/s/nail-salon/134761_denver",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 55,
+      "name": "Nails by Sofia Luna",
+      "source_url": "https://booksy.com/en-us/s/nail-salon/134761_denver",
+      "booking_url": "https://booksy.com/en-us/s/nail-salon/134761_denver",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 56,
+      "name": "Maria X Nails (Verity)",
+      "source_url": "https://booksy.com/en-us/s/nail-salon/134761_denver",
+      "booking_url": "https://booksy.com/en-us/s/nail-salon/134761_denver",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 57,
+      "name": "KobeKutIt",
+      "source_url": "https://booksy.com/en-us/s/eyebrow-shaping/134761_denver",
+      "booking_url": "https://booksy.com/en-us/s/eyebrow-shaping/134761_denver",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 58,
+      "name": "Espibeauty",
+      "source_url": "https://booksy.com/en-us/s/nail-salon/134761_denver",
+      "booking_url": "https://booksy.com/en-us/s/nail-salon/134761_denver",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 59,
+      "name": "Studio 86 Wax",
+      "source_url": "https://booksy.com/en-us/s/body-waxing/134761_denver",
+      "booking_url": "https://booksy.com/en-us/s/body-waxing/134761_denver",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 60,
+      "name": "Don Julia Waxing & Threading beauty bar",
+      "source_url": "https://booksy.com/en-us/s/body-waxing/134761_denver",
+      "booking_url": "https://booksy.com/en-us/s/body-waxing/134761_denver",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 61,
+      "name": "Wax And Relax",
+      "source_url": "https://booksy.com/en-us/s/body-waxing/134761_denver",
+      "booking_url": "https://booksy.com/en-us/s/body-waxing/134761_denver",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 62,
+      "name": "Pink Beauty House USA",
+      "source_url": "https://booksy.com/en-us/s/body-waxing/134761_denver",
+      "booking_url": "https://booksy.com/en-us/s/body-waxing/134761_denver",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 63,
+      "name": "Studio 104",
+      "source_url": "https://booksy.com/en-us/s/body-waxing/134761_denver",
+      "booking_url": "https://booksy.com/en-us/s/body-waxing/134761_denver",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 64,
+      "name": "Beauty by nani",
+      "source_url": "https://booksy.com/en-us/s/hair-removal/134761_denver",
+      "booking_url": "https://booksy.com/en-us/s/hair-removal/134761_denver",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 68,
+      "name": "The Barbers Throne",
+      "source_url": "https://booksy.com/en-us/s/barber-shop/14891_boulder",
+      "booking_url": "https://booksy.com/en-us/s/barber-shop/14891_boulder",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 69,
+      "name": "2 Faded Studio",
+      "source_url": "https://booksy.com/en-us/s/barber-shop/134779_aurora",
+      "booking_url": "https://booksy.com/en-us/s/barber-shop/134779_aurora",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 70,
+      "name": "MoisesJ_Haircuts",
+      "source_url": "https://booksy.com/en-us/s/barber-shop/15069_fort-collins",
+      "booking_url": "https://booksy.com/en-us/s/barber-shop/15069_fort-collins",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 71,
+      "name": "ReyBlendz",
+      "source_url": "https://booksy.com/en-us/s/barber-shop/14891_boulder",
+      "booking_url": "https://booksy.com/en-us/s/barber-shop/14891_boulder",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 72,
+      "name": "Silly Slicez",
+      "source_url": "https://booksy.com/en-us/s/barber-shop/14977_colorado-springs",
+      "booking_url": "https://booksy.com/en-us/s/barber-shop/14977_colorado-springs",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 73,
+      "name": "Living Proof Barbershop",
+      "source_url": "https://booksy.com/en-us/s/barber-shop/14977_colorado-springs",
+      "booking_url": "https://booksy.com/en-us/s/barber-shop/14977_colorado-springs",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 74,
+      "name": "The Real Barber",
+      "source_url": "https://booksy.com/en-us/s/barber-shop/15069_fort-collins",
+      "booking_url": "https://booksy.com/en-us/s/barber-shop/15069_fort-collins",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 75,
+      "name": "The Foundry Barbers",
+      "source_url": "https://booksy.com/en-us/s/barber-shop/15069_fort-collins",
+      "booking_url": "https://booksy.com/en-us/s/barber-shop/15069_fort-collins",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 76,
+      "name": "Sammyfadez",
+      "source_url": "https://booksy.com/en-us/s/barber-shop/14977_colorado-springs",
+      "booking_url": "https://booksy.com/en-us/s/barber-shop/14977_colorado-springs",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 77,
+      "name": "PeezyBlendz",
+      "source_url": "https://booksy.com/en-us/s/barber-shop/134779_aurora",
+      "booking_url": "https://booksy.com/en-us/s/barber-shop/134779_aurora",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 78,
+      "name": "Saldana Blessed",
+      "source_url": "https://booksy.com/en-us/s/barber-shop/134779_aurora",
+      "booking_url": "https://booksy.com/en-us/s/barber-shop/134779_aurora",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 79,
+      "name": "Guapo Blendz",
+      "source_url": "https://booksy.com/en-us/s/barber-shop/14891_boulder",
+      "booking_url": "https://booksy.com/en-us/s/barber-shop/14891_boulder",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 80,
+      "name": "Lito_cutzz",
+      "source_url": "https://booksy.com/en-us/s/barber-shop/15069_fort-collins",
+      "booking_url": "https://booksy.com/en-us/s/barber-shop/15069_fort-collins",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 81,
+      "name": "iago.blendz",
+      "source_url": "https://booksy.com/en-us/s/barber-shop/14891_boulder",
+      "booking_url": "https://booksy.com/en-us/s/barber-shop/14891_boulder",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 83,
+      "name": "Nails by Molly",
+      "source_url": "https://booksy.com/en-us/s/nail-salon/14891_boulder",
+      "booking_url": "https://booksy.com/en-us/s/nail-salon/14891_boulder",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 84,
+      "name": "Devout Beauty",
+      "source_url": "https://booksy.com/en-us/s/nail-salon/14977_colorado-springs",
+      "booking_url": "https://booksy.com/en-us/s/nail-salon/14977_colorado-springs",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 87,
+      "name": "Just the Tips By Luis",
+      "source_url": "https://booksy.com/en-us/s/nail-salon/14977_colorado-springs",
+      "booking_url": "https://booksy.com/en-us/s/nail-salon/14977_colorado-springs",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 88,
+      "name": "Briii's Nails",
+      "source_url": "https://booksy.com/en-us/s/nail-salon/14977_colorado-springs",
+      "booking_url": "https://booksy.com/en-us/s/nail-salon/14977_colorado-springs",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 89,
+      "name": "Amis Nails",
+      "source_url": "https://booksy.com/en-us/s/nail-salon/15069_fort-collins",
+      "booking_url": "https://booksy.com/en-us/s/nail-salon/15069_fort-collins",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 90,
+      "name": "Dorje the Barber",
+      "source_url": "https://booksy.com/en-us/s/barber-shop/15069_fort-collins",
+      "booking_url": "https://booksy.com/en-us/s/barber-shop/15069_fort-collins",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 92,
+      "name": "Voltage Salon",
+      "source_url": "https://booksy.com/en-us/s/nail-salon/15069_fort-collins",
+      "booking_url": "https://booksy.com/en-us/s/nail-salon/15069_fort-collins",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 93,
+      "name": "JEREL INK",
+      "source_url": "https://booksy.com/en-us/s/tattoo-session/14977_colorado-springs",
+      "booking_url": "https://booksy.com/en-us/s/tattoo-session/14977_colorado-springs",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 94,
+      "name": "Magic Fingers Massage Therapy, LLC",
+      "source_url": "https://booksy.com/en-us/s/massage/14977_colorado-springs",
+      "booking_url": "https://booksy.com/en-us/s/massage/14977_colorado-springs",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 95,
+      "name": "Self & Soul",
+      "source_url": "https://booksy.com/en-us/s/massage/14977_colorado-springs",
+      "booking_url": "https://booksy.com/en-us/s/massage/14977_colorado-springs",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 96,
+      "name": "Skriblez Kustom Ink",
+      "source_url": "https://booksy.com/en-us/s/tattoo-session/14977_colorado-springs",
+      "booking_url": "https://booksy.com/en-us/s/tattoo-session/14977_colorado-springs",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 97,
+      "name": "Whimsical Body Art",
+      "source_url": "https://booksy.com/en-us/s/tattoo-session/14977_colorado-springs",
+      "booking_url": "https://booksy.com/en-us/s/tattoo-session/14977_colorado-springs",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 98,
+      "name": "Dalton Frizzell",
+      "source_url": "https://booksy.com/en-us/s/tattoo-session/14977_colorado-springs",
+      "booking_url": "https://booksy.com/en-us/s/tattoo-session/14977_colorado-springs",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 99,
+      "name": "S. P. T. TATTOO",
+      "source_url": "https://booksy.com/en-us/s/tattoo-session/14977_colorado-springs",
+      "booking_url": "https://booksy.com/en-us/s/tattoo-session/14977_colorado-springs",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 100,
+      "name": "13 Autumns Body Illustration Studio",
+      "source_url": "https://booksy.com/en-us/s/tattoo-session/14977_colorado-springs",
+      "booking_url": "https://booksy.com/en-us/s/tattoo-session/14977_colorado-springs",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 101,
+      "name": "Maya’s Place",
+      "source_url": "https://booksy.com/en-us/s/nail-salon/14977_colorado-springs",
+      "booking_url": "https://booksy.com/en-us/s/nail-salon/14977_colorado-springs",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 102,
+      "name": "Ryan Crawford Salon",
+      "source_url": "https://booksy.com/en-us/s/massage/14977_colorado-springs",
+      "booking_url": "https://booksy.com/en-us/s/massage/14977_colorado-springs",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 103,
+      "name": "Bearded Lady Custom Tattoo Company LLC",
+      "source_url": "https://booksy.com/en-us/s/tattoo-shop/14977_colorado-springs",
+      "booking_url": "https://booksy.com/en-us/s/tattoo-shop/14977_colorado-springs",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 104,
+      "name": "My Nails",
+      "source_url": "https://booksy.com/en-us/s/nail-salon/15069_fort-collins",
+      "booking_url": "https://booksy.com/en-us/s/nail-salon/15069_fort-collins",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 105,
+      "name": "nailsbya.na",
+      "source_url": "https://booksy.com/en-us/s/nail-salon/14977_colorado-springs",
+      "booking_url": "https://booksy.com/en-us/s/nail-salon/14977_colorado-springs",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 109,
+      "name": "wINKed",
+      "source_url": "https://booksy.com/en-us/s/eyelash-extensions/14977_colorado-springs",
+      "booking_url": "https://booksy.com/en-us/s/eyelash-extensions/14977_colorado-springs",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 112,
+      "name": "Hair Addicts Salon",
+      "source_url": "https://booksy.com/en-us/s/eyelash-extensions/14977_colorado-springs",
+      "booking_url": "https://booksy.com/en-us/s/eyelash-extensions/14977_colorado-springs",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 115,
+      "name": "Feather Touch By Yenisel",
+      "source_url": "https://booksy.com/en-us/s/eyelash-extensions/14977_colorado-springs",
+      "booking_url": "https://booksy.com/en-us/s/eyelash-extensions/14977_colorado-springs",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 117,
+      "name": "Ashley Melissa Salon",
+      "source_url": "https://www.solasalonstudios.com/locations/cherry-creek-clayton-lane",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 118,
+      "name": "Ashley Smith",
+      "source_url": "https://www.solasalonstudios.com/locations/cherry-creek-clayton-lane",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 119,
+      "name": "Hair Bar",
+      "source_url": "https://www.solasalonstudios.com/locations/cherry-creek-clayton-lane",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 120,
+      "name": "Obst Design",
+      "source_url": "https://www.solasalonstudios.com/locations/cherry-creek-clayton-lane",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 121,
+      "name": "Hair by Natalia",
+      "source_url": "https://www.solasalonstudios.com/locations/cherry-creek-clayton-lane",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 122,
+      "name": "James Studio",
+      "source_url": "https://www.solasalonstudios.com/locations/cherry-creek-clayton-lane",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 123,
+      "name": "Busy Bee Salon",
+      "source_url": "https://www.solasalonstudios.com/locations/cherry-creek-clayton-lane",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 124,
+      "name": "Lexi Elizabeth Hair Artistry",
+      "source_url": "https://www.solasalonstudios.com/locations/cherry-creek-clayton-lane",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 125,
+      "name": "Queen City Salon",
+      "source_url": "https://www.solasalonstudios.com/locations/cherry-creek-clayton-lane",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 126,
+      "name": "NARD Lash Co.",
+      "source_url": "https://www.solasalonstudios.com/locations/cherry-creek-clayton-lane",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 127,
+      "name": "Lashes by Alice",
+      "source_url": "https://www.solasalonstudios.com/locations/denver-west",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 128,
+      "name": "Twisted Scissors Hair Studio",
+      "source_url": "https://www.solasalonstudios.com/locations/denver-west",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 129,
+      "name": "Glossed Hair Studio",
+      "source_url": "https://www.solasalonstudios.com/locations/denver-west",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 130,
+      "name": "Lash Out Loud",
+      "source_url": "https://www.solasalonstudios.com/locations/denver-west",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 131,
+      "name": "Hollis Barbering",
+      "source_url": "https://www.solasalonstudios.com/locations/denver-west",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 132,
+      "name": "Kim Cline Hair Design",
+      "source_url": "https://www.solasalonstudios.com/locations/denver-west",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 133,
+      "name": "Bloom_Hairstudio",
+      "source_url": "https://www.solasalonstudios.com/locations/denver-west",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 134,
+      "name": "Elizabeth Rose Hair and Brows",
+      "source_url": "https://www.solasalonstudios.com/locations/denver-tech-center",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 135,
+      "name": "1013 Barbershop",
+      "source_url": "https://www.solasalonstudios.com/locations/denver-tech-center",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 136,
+      "name": "Dappers Cuts for Men",
+      "source_url": "https://www.solasalonstudios.com/locations/denver-tech-center",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 137,
+      "name": "Aspire Nail Care Studio",
+      "source_url": "https://www.solasalonstudios.com/locations/denver-tech-center",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 138,
+      "name": "Ashley Alverson",
+      "source_url": "https://www.solasalonstudios.com/locations/denver-tech-center",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 139,
+      "name": "Bo's",
+      "source_url": "https://www.solasalonstudios.com/locations/denver-tech-center",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 140,
+      "name": "D Eisele Studio",
+      "source_url": "https://www.solasalonstudios.com/locations/denver-tech-center",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 141,
+      "name": "Donna Jacobsen",
+      "source_url": "https://www.solasalonstudios.com/locations/denver-tech-center",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 142,
+      "name": "Jeffrey Winzenried",
+      "source_url": "https://www.solasalonstudios.com/locations/denver-tech-center",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 143,
+      "name": "Julie Kudryasheva",
+      "source_url": "https://www.solasalonstudios.com/locations/denver-tech-center",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 144,
+      "name": "Katya Taylor",
+      "source_url": "https://www.solasalonstudios.com/locations/denver-tech-center",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 145,
+      "name": "Studio C Hair Design",
+      "source_url": "https://www.solasalonstudios.com/locations/denver-tech-center",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 146,
+      "name": "Leslie Jadowski Stone",
+      "source_url": "https://www.solasalonstudios.com/locations/denver-tech-center",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 147,
+      "name": "Priscilla Romero",
+      "source_url": "https://www.solasalonstudios.com/locations/denver-tech-center",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 148,
+      "name": "Rachel Flynn",
+      "source_url": "https://www.solasalonstudios.com/locations/denver-tech-center",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 149,
+      "name": "Painted Hair Studio",
+      "source_url": "https://www.solasalonstudios.com/locations/denver-tech-center",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 150,
+      "name": "Curly Republic",
+      "source_url": "https://www.solasalonstudios.com/locations/denver-tech-center",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 151,
+      "name": "Stephanie Kamlet",
+      "source_url": "https://www.solasalonstudios.com/locations/denver-tech-center",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 152,
+      "name": "Infinite Skincare & Nails",
+      "source_url": "https://www.solasalonstudios.com/locations/cherry-creek-clayton-lane",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 153,
+      "name": "Skin Within",
+      "source_url": "https://www.solasalonstudios.com/locations/cherry-creek-clayton-lane",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 154,
+      "name": "The Place Salon Denver Best Salon",
+      "source_url": "https://www.solasalonstudios.com/locations/cherry-creek-clayton-lane",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 155,
+      "name": "Diamonds on Pearls",
+      "source_url": "https://www.solasalonstudios.com/locations/cherry-creek-clayton-lane",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 156,
+      "name": "Polly and Company",
+      "source_url": "https://www.solasalonstudios.com/locations/cherry-creek-clayton-lane",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 157,
+      "name": "Soul Industries",
+      "source_url": "https://www.solasalonstudios.com/locations/cherry-creek-clayton-lane",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 158,
+      "name": "RSTUDIO inc.",
+      "source_url": "https://www.solasalonstudios.com/locations/cherry-creek-clayton-lane",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 159,
+      "name": "Salon Apparenza",
+      "source_url": "https://www.solasalonstudios.com/locations/cherry-creek-clayton-lane",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 160,
+      "name": "Vida Beauty Wellness",
+      "source_url": "https://www.solasalonstudios.com/locations/cherry-creek-clayton-lane",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 161,
+      "name": "NAILS BY Christina",
+      "source_url": "https://www.solasalonstudios.com/locations/denver-west",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 162,
+      "name": "JP Nails and Lashes",
+      "source_url": "https://www.solasalonstudios.com/locations/denver-west",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 163,
+      "name": "NailsbyJulia",
+      "source_url": "https://www.solasalonstudios.com/locations/denver-west",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 164,
+      "name": "Hox Shop LLC",
+      "source_url": "https://www.solasalonstudios.com/locations/denver-west",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 219,
+      "name": "Duece Designs",
+      "source_url": "https://booksy.com/en-us/s/hair-salon/134761_denver",
+      "booking_url": "https://booksy.com/en-us/s/hair-salon/134761_denver",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 220,
+      "name": "Goddess-hair",
+      "source_url": "https://booksy.com/en-us/s/hair-salon/134761_denver",
+      "booking_url": "https://booksy.com/en-us/s/hair-salon/134761_denver",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 221,
+      "name": "Beaida Way Beauty & Barbering",
+      "source_url": "https://booksy.com/en-us/s/hair-salon/134761_denver",
+      "booking_url": "https://booksy.com/en-us/s/hair-salon/134761_denver",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 222,
+      "name": "JahDidThat",
+      "source_url": "https://booksy.com/en-us/s/hair-salon/134761_denver",
+      "booking_url": "https://booksy.com/en-us/s/hair-salon/134761_denver",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 223,
+      "name": "Queen Exa-Braidings Hairstyle",
+      "source_url": "https://booksy.com/en-us/s/hair-salon/134761_denver",
+      "booking_url": "https://booksy.com/en-us/s/hair-salon/134761_denver",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 224,
+      "name": "STUDIOStraight.com",
+      "source_url": "https://booksy.com/en-us/s/hair-salon/134761_denver",
+      "booking_url": "https://booksy.com/en-us/s/hair-salon/134761_denver",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 225,
+      "name": "Blondies Beauty Bar- Sophie Myller",
+      "source_url": "https://booksy.com/en-us/s/hair-salon/134761_denver",
+      "booking_url": "https://booksy.com/en-us/s/hair-salon/134761_denver",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 226,
+      "name": "Bellezza Hair studio By Ana Inzaurralde",
+      "source_url": "https://booksy.com/en-us/s/hair-salon/134761_denver",
+      "booking_url": "https://booksy.com/en-us/s/hair-salon/134761_denver",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 227,
+      "name": "GarciaBlendzzz",
+      "source_url": "https://booksy.com/en-us/s/hair-salon/134761_denver",
+      "booking_url": "https://booksy.com/en-us/s/hair-salon/134761_denver",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 228,
+      "name": "NAILZBYCORAL",
+      "source_url": "https://booksy.com/en-us/s/nail-salon/134761_denver",
+      "booking_url": "https://booksy.com/en-us/s/nail-salon/134761_denver",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 229,
+      "name": "ManezTamed-118 At Phenix Salon Studio",
+      "source_url": "https://booksy.com/en-us/s/brows-lashes/134761_denver",
+      "booking_url": "https://booksy.com/en-us/s/brows-lashes/134761_denver",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 232,
+      "name": "Rico Braids+Fades",
+      "source_url": "https://booksy.com/en-us/s/hair-salon/15037_golden",
+      "booking_url": "https://booksy.com/en-us/s/hair-salon/15037_golden",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 251,
+      "name": "Agies Golden Touch Beauty",
+      "source_url": "https://booksy.com/en-us/s/braids-locs/134761_denver",
+      "booking_url": "https://booksy.com/en-us/s/braids-locs/134761_denver",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 252,
+      "name": "Velvet Touch Studio",
+      "source_url": "https://booksy.com/en-us/s/massage/134761_denver",
+      "booking_url": "https://booksy.com/en-us/s/massage/134761_denver",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 253,
+      "name": "Ruperto",
+      "source_url": "https://getsquire.com/discover/barbershop/mountain-fades-barbershop-thornton",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 254,
+      "name": "Alvaro J.",
+      "source_url": "https://getsquire.com/discover/barbershop/mountain-fades-barbershop-thornton",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 255,
+      "name": "Gerardo F.",
+      "source_url": "https://getsquire.com/discover/barbershop/mountain-fades-barbershop-thornton",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 256,
+      "name": "Armando V.",
+      "source_url": "https://getsquire.com/discover/barbershop/mountain-fades-barbershop-thornton",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 257,
+      "name": "Holly D.",
+      "source_url": "https://getsquire.com/discover/barbershop/east-lake-barber-shop-thornton-thornton",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 258,
+      "name": "Beto A.",
+      "source_url": "https://getsquire.com/discover/barbershop/east-lake-barber-shop-thornton-thornton",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 259,
+      "name": "Bradley M.",
+      "source_url": "https://getsquire.com/discover/barbershop/east-lake-barber-shop-thornton-thornton",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 260,
+      "name": "A.b.",
+      "source_url": "https://getsquire.com/discover/barbershop/gold-society-barbershop-thornton",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 261,
+      "name": "Adrien",
+      "source_url": "https://getsquire.com/discover/barbershop/gold-society-barbershop-thornton",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 262,
+      "name": "Nolyn",
+      "source_url": "https://getsquire.com/discover/barbershop/gold-society-barbershop-thornton",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 263,
+      "name": "Kojo",
+      "source_url": "https://getsquire.com/discover/barbershop/gold-society-barbershop-thornton",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 264,
+      "name": "Ever",
+      "source_url": "https://getsquire.com/discover/barbershop/gold-society-barbershop-thornton",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 265,
+      "name": "Alyssa",
+      "source_url": "https://getsquire.com/discover/barbershop/gold-society-barbershop-thornton",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 266,
+      "name": "Emmanuel",
+      "source_url": "https://getsquire.com/discover/barbershop/gold-society-barbershop-thornton",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 267,
+      "name": "Drea",
+      "source_url": "https://getsquire.com/discover/barbershop/gold-society-barbershop-thornton",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 268,
+      "name": "Eric V.",
+      "source_url": "https://getsquire.com/discover/barbershop/cut-and-fade-broomfield",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 269,
+      "name": "Brandon C.",
+      "source_url": "https://getsquire.com/discover/barbershop/avilas-broomfield-broomfield",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 270,
+      "name": "Edgar",
+      "source_url": "https://getsquire.com/discover/barbershop/avilas-broomfield-broomfield",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 271,
+      "name": "( j.r ) enrique D.",
+      "source_url": "https://getsquire.com/discover/barbershop/avilas-broomfield-broomfield",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 272,
+      "name": "Kari A.",
+      "source_url": "https://getsquire.com/discover/barbershop/avilas-broomfield-broomfield",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 273,
+      "name": "Isaias R.",
+      "source_url": "https://getsquire.com/discover/barbershop/avilas-broomfield-broomfield",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 274,
+      "name": "Faith A.",
+      "source_url": "https://getsquire.com/discover/barbershop/avilas-broomfield-broomfield",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 275,
+      "name": "Reynaldo Z.",
+      "source_url": "https://getsquire.com/discover/barbershop/avilas-broomfield-broomfield",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 276,
+      "name": "Demetrius M.",
+      "source_url": "https://getsquire.com/discover/barbershop/banter-barber-shop-wheat-ridge",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 277,
+      "name": "Bella R.",
+      "source_url": "https://getsquire.com/discover/barbershop/banter-barber-shop-wheat-ridge",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 278,
+      "name": "Dane V.",
+      "source_url": "https://getsquire.com/discover/barbershop/banter-barber-shop-wheat-ridge",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 297,
+      "name": "Courtney E.",
+      "source_url": "https://getsquire.com/discover/barbershop/northside-barbers-boulder",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 298,
+      "name": "Andrew S.",
+      "source_url": "https://getsquire.com/discover/barbershop/northside-barbers-boulder",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 299,
+      "name": "Isaiah H.",
+      "source_url": "https://getsquire.com/discover/barbershop/northside-barbers-boulder",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 300,
+      "name": "David B.",
+      "source_url": "https://getsquire.com/discover/barbershop/northside-barbers-boulder",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 301,
+      "name": "Josh H.",
+      "source_url": "https://getsquire.com/discover/barbershop/northside-barbers-boulder",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 302,
+      "name": "Temka A.",
+      "source_url": "https://getsquire.com/discover/barbershop/kingsmen-haircuts-for-men-littleton-littleton",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 303,
+      "name": "Madison",
+      "source_url": "https://getsquire.com/discover/barbershop/kingsmen-haircuts-for-men-littleton-littleton",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 304,
+      "name": "Cindy P.",
+      "source_url": "https://getsquire.com/discover/barbershop/kingsmen-haircuts-for-men-littleton-littleton",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 305,
+      "name": "Oyu",
+      "source_url": "https://getsquire.com/discover/barbershop/kingsmen-haircuts-for-men-littleton-littleton",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 306,
+      "name": "Timmi",
+      "source_url": "https://getsquire.com/discover/barbershop/kingsmen-haircuts-for-men-littleton-littleton",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 307,
+      "name": "Anna",
+      "source_url": "https://getsquire.com/discover/barbershop/kingsmen-haircuts-for-men-littleton-littleton",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 308,
+      "name": "Saki",
+      "source_url": "https://getsquire.com/discover/barbershop/kingsmen-haircuts-for-men-littleton-littleton",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 309,
+      "name": "Naumi",
+      "source_url": "https://getsquire.com/discover/barbershop/kingsmen-haircuts-for-men-littleton-littleton",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 310,
+      "name": "Brennan C.",
+      "source_url": "https://getsquire.com/discover/united-states/colorado/fort-collins",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 311,
+      "name": "Lorena A.",
+      "source_url": "https://getsquire.com/discover/united-states/colorado/fort-collins",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 312,
+      "name": "Isaak M.",
+      "source_url": "https://getsquire.com/discover/barbershop/noco-stellar-barbers-fort-collins",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 313,
+      "name": "Erik S.",
+      "source_url": "https://getsquire.com/discover/barbershop/noco-stellar-barbers-fort-collins",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 314,
+      "name": "Isaac A.",
+      "source_url": "https://getsquire.com/discover/barbershop/noco-stellar-barbers-fort-collins",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 315,
+      "name": "Victor X.",
+      "source_url": "https://getsquire.com/discover/barbershop/noco-stellar-barbers-fort-collins",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 316,
+      "name": "Patrick C.",
+      "source_url": "https://getsquire.com/discover/barbershop/rickybs-barbershop-fort-collins",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 317,
+      "name": "Aidan M.",
+      "source_url": "https://getsquire.com/discover/barbershop/rickybs-barbershop-fort-collins",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 318,
+      "name": "Ricky B.",
+      "source_url": "https://getsquire.com/discover/barbershop/rickybs-barbershop-fort-collins",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 319,
+      "name": "Ariana C.",
+      "source_url": "https://getsquire.com/discover/barbershop/sammies-in-campus-west-lucky-27-barbershop-fort-collins/barber/ariana-castaneda",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 336,
+      "name": "Meagan C.",
+      "source_url": "https://getsquire.com/discover/barbershop/brixton-barbers-centennial",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 337,
+      "name": "Nick Z.",
+      "source_url": "https://getsquire.com/discover/barbershop/brixton-barbers-centennial",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 338,
+      "name": "Lucas R.",
+      "source_url": "https://getsquire.com/discover/barbershop/brixton-barbers-centennial",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 339,
+      "name": "Connor S.",
+      "source_url": "https://getsquire.com/discover/barbershop/brixton-barbers-centennial",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 340,
+      "name": "Ethan H.",
+      "source_url": "https://getsquire.com/discover/barbershop/brixton-barbers-centennial",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 341,
+      "name": "Ezra B.",
+      "source_url": "https://getsquire.com/discover/barbershop/brixton-barbers-centennial",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 342,
+      "name": "Roy S.",
+      "source_url": "https://getsquire.com/discover/barbershop/forum-barbershop-centennial",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 343,
+      "name": "Mercedes B.",
+      "source_url": "https://getsquire.com/discover/barbershop/forum-barbershop-centennial",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 344,
+      "name": "Micki B.",
+      "source_url": "https://getsquire.com/discover/barbershop/forum-barbershop-centennial",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 345,
+      "name": "John P.",
+      "source_url": "https://getsquire.com/discover/barbershop/forum-barbershop-centennial",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 346,
+      "name": "Matt G.",
+      "source_url": "https://getsquire.com/discover/barbershop/forum-barbershop-centennial",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 347,
+      "name": "Johan L.",
+      "source_url": "https://getsquire.com/discover/barbershop/forum-barbershop-centennial",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 348,
+      "name": "Mike F.",
+      "source_url": "https://getsquire.com/discover/barbershop/blade-and-comb-a-barbershop-experience-aurora",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 349,
+      "name": "Dan A.",
+      "source_url": "https://getsquire.com/discover/barbershop/blade-and-comb-a-barbershop-experience-aurora",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 350,
+      "name": "Shante T.",
+      "source_url": "https://getsquire.com/discover/barbershop/blade-and-comb-a-barbershop-experience-aurora",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 351,
+      "name": "Diana C.",
+      "source_url": "https://getsquire.com/discover/barbershop/blade-and-comb-a-barbershop-experience-aurora",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 352,
+      "name": "Jessica T.",
+      "source_url": "https://getsquire.com/discover/barbershop/blade-and-comb-a-barbershop-experience-aurora",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 353,
+      "name": "Freddy S.",
+      "source_url": "https://getsquire.com/discover/barbershop/blade-and-comb-a-barbershop-experience-aurora",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 354,
+      "name": "Tylor A.",
+      "source_url": "https://getsquire.com/discover/barbershop/gq-barbershop-aurora",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 355,
+      "name": "Angie H.",
+      "source_url": "https://getsquire.com/discover/barbershop/gq-barbershop-aurora",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 356,
+      "name": "Dominique M.",
+      "source_url": "https://getsquire.com/discover/barbershop/gq-barbershop-aurora",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 357,
+      "name": "Madison",
+      "source_url": "https://getsquire.com/discover/barbershop/kingsmen-haircuts-for-men-parker-parker",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 358,
+      "name": "Naumi",
+      "source_url": "https://getsquire.com/discover/barbershop/kingsmen-haircuts-for-men-parker-parker",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 359,
+      "name": "Sonja",
+      "source_url": "https://getsquire.com/discover/barbershop/kingsmen-haircuts-for-men-parker-parker",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 360,
+      "name": "Timmi",
+      "source_url": "https://getsquire.com/discover/barbershop/kingsmen-haircuts-for-men-parker-parker",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 361,
+      "name": "Martina",
+      "source_url": "https://getsquire.com/discover/barbershop/kingsmen-haircuts-for-men-parker-parker",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 362,
+      "name": "Duke",
+      "source_url": "https://getsquire.com/discover/barbershop/kingsmen-haircuts-for-men-parker-parker",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 363,
+      "name": "Suzie",
+      "source_url": "https://getsquire.com/discover/barbershop/kingsmen-haircuts-for-men-parker-parker",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 364,
+      "name": "Maddy",
+      "source_url": "https://getsquire.com/discover/barbershop/kingsmen-haircuts-for-men-parker-parker",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 365,
+      "name": "T33 S.",
+      "source_url": "https://getsquire.com/discover/united-states/colorado/colorado-springs/barbers",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 366,
+      "name": "Kiana K.",
+      "source_url": "https://getsquire.com/discover/united-states/colorado/colorado-springs/barbers",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 367,
+      "name": "Jazzmin c.",
+      "source_url": "https://getsquire.com/discover/united-states/colorado/colorado-springs/barbers",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 368,
+      "name": "Nic N.",
+      "source_url": "https://getsquire.com/discover/united-states/colorado/colorado-springs/barbers",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 369,
+      "name": "Drew W.",
+      "source_url": "https://getsquire.com/discover/united-states/colorado/colorado-springs/barbers",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 370,
+      "name": "Myleen L.",
+      "source_url": "https://getsquire.com/discover/united-states/colorado/colorado-springs/barbers",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 371,
+      "name": "Carlos L.",
+      "source_url": "https://getsquire.com/discover/united-states/colorado/colorado-springs/barbers",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 372,
+      "name": "Note",
+      "source_url": "https://getsquire.com/discover/united-states/colorado/colorado-springs/barbers",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 373,
+      "name": "Dalton",
+      "source_url": "https://getsquire.com/discover/united-states/colorado/colorado-springs/barbers",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 374,
+      "name": "Vanessa K.",
+      "source_url": "https://getsquire.com/discover/united-states/colorado/colorado-springs/barbers",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 375,
+      "name": "Myke F.",
+      "source_url": "https://getsquire.com/discover/united-states/colorado/colorado-springs/barbers",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 376,
+      "name": "Matthew S.",
+      "source_url": "https://getsquire.com/discover/united-states/colorado/colorado-springs/barbers",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 377,
+      "name": "David K.",
+      "source_url": "https://getsquire.com/discover/united-states/colorado/colorado-springs/barbers",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 378,
+      "name": "Alan B.",
+      "source_url": "https://getsquire.com/discover/united-states/colorado/colorado-springs/barbers",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 379,
+      "name": "Brandon",
+      "source_url": "https://getsquire.com/discover/united-states/colorado/colorado-springs/barbers",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 380,
+      "name": "Tony T.",
+      "source_url": "https://getsquire.com/discover/united-states/colorado/colorado-springs/barbers",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 381,
+      "name": "Gabriel T.",
+      "source_url": "https://getsquire.com/discover/united-states/colorado/colorado-springs/barbers",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 382,
+      "name": "Joe barberz",
+      "source_url": "https://getsquire.com/discover/united-states/colorado/colorado-springs/barbers",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 383,
+      "name": "Diego T.",
+      "source_url": "https://getsquire.com/discover/united-states/colorado/colorado-springs/barbers",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 384,
+      "name": "A.j. D.",
+      "source_url": "https://getsquire.com/discover/united-states/colorado/colorado-springs/barbers",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 385,
+      "name": "Tim C.",
+      "source_url": "https://getsquire.com/discover/united-states/colorado/colorado-springs/barbers",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 386,
+      "name": "Derrick M.",
+      "source_url": "https://getsquire.com/discover/united-states/colorado/colorado-springs/barbers",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 387,
+      "name": "Darius S.",
+      "source_url": "https://getsquire.com/discover/united-states/colorado/colorado-springs/barbers",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 388,
+      "name": "Christopher B.",
+      "source_url": "https://getsquire.com/discover/united-states/colorado/colorado-springs/barbers",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 389,
+      "name": "Tim B.",
+      "source_url": "https://getsquire.com/discover/barbershop/native-barber-salon-denver",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 390,
+      "name": "Chelsie K.",
+      "source_url": "https://getsquire.com/discover/barbershop/native-barber-salon-denver",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 391,
+      "name": "Michael W.",
+      "source_url": "https://getsquire.com/discover/barbershop/native-barber-salon-denver",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 392,
+      "name": "Jay E.",
+      "source_url": "https://getsquire.com/discover/barbershop/native-barber-salon-denver",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 393,
+      "name": "Catherine B.",
+      "source_url": "https://getsquire.com/discover/barbershop/native-barber-salon-denver",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 394,
+      "name": "Dennis S.",
+      "source_url": "https://getsquire.com/discover/barbershop/native-barber-salon-denver",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 395,
+      "name": "Marisa",
+      "source_url": "https://getsquire.com/discover/barbershop/fresh-barbershop-denver",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 396,
+      "name": "Eddie D.",
+      "source_url": "https://getsquire.com/discover/barbershop/barba-denver-denver",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 397,
+      "name": "Memphis N.",
+      "source_url": "https://getsquire.com/discover/barbershop/barba-denver-denver",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 398,
+      "name": "Sammy M.",
+      "source_url": "https://getsquire.com/discover/barbershop/barba-denver-denver",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 399,
+      "name": "Kat L.",
+      "source_url": "https://getsquire.com/discover/barbershop/barba-denver-denver",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 400,
+      "name": "Nini A.",
+      "source_url": "https://getsquire.com/discover/barbershop/barba-denver-denver",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 401,
+      "name": "Jake J.",
+      "source_url": "https://getsquire.com/discover/barbershop/the-jefferson-barbershop-denver",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 402,
+      "name": "Brianna M.",
+      "source_url": "https://getsquire.com/discover/barbershop/the-jefferson-barbershop-denver",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 403,
+      "name": "Autumn M.",
+      "source_url": "https://getsquire.com/discover/barbershop/the-jefferson-barbershop-denver",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 404,
+      "name": "Matt M.",
+      "source_url": "https://getsquire.com/discover/barbershop/the-jefferson-barbershop-denver",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 405,
+      "name": "Wil Z.",
+      "source_url": "https://getsquire.com/discover/barbershop/prospect-trail-barbershop-denver",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 406,
+      "name": "Travis Y.",
+      "source_url": "https://getsquire.com/discover/barbershop/prospect-trail-barbershop-denver",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 407,
+      "name": "Justin M.",
+      "source_url": "https://getsquire.com/discover/barbershop/prospect-trail-barbershop-denver",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 408,
+      "name": "Jason S.",
+      "source_url": "https://getsquire.com/discover/barbershop/prospect-trail-barbershop-denver",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 409,
+      "name": "David Y.",
+      "source_url": "https://getsquire.com/discover/barbershop/prospect-trail-barbershop-denver",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 410,
+      "name": "Debra T.",
+      "source_url": "https://getsquire.com/discover/barbershop/prospect-trail-barbershop-denver",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 411,
+      "name": "Stephen O.",
+      "source_url": "https://getsquire.com/discover/barbershop/prospect-trail-barbershop-denver",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 412,
+      "name": "Wil Z.",
+      "source_url": "https://getsquire.com/discover/barbershop/golden-road-barbershop-denver",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 413,
+      "name": "Allie D.",
+      "source_url": "https://getsquire.com/discover/barbershop/golden-road-barbershop-denver",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 414,
+      "name": "David Y.",
+      "source_url": "https://getsquire.com/discover/barbershop/golden-road-barbershop-denver",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 415,
+      "name": "Josh B.",
+      "source_url": "https://getsquire.com/discover/barbershop/golden-road-barbershop-denver",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 416,
+      "name": "Travis Y.",
+      "source_url": "https://getsquire.com/discover/barbershop/golden-road-barbershop-denver",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 417,
+      "name": "Amber H.",
+      "source_url": "https://getsquire.com/discover/barbershop/the-barbery-denver",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 418,
+      "name": "Ash P.",
+      "source_url": "https://getsquire.com/discover/barbershop/the-barbery-denver",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 419,
+      "name": "Lincoln L.",
+      "source_url": "https://getsquire.com/discover/barbershop/the-barber-linc-denver",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 420,
+      "name": "Josue R.",
+      "source_url": "https://getsquire.com/discover/barbershop/jg-barber-studio-denver",
+      "booking_url": "",
+      "reason": "missing_booking"
+    },
+    {
+      "id": 422,
+      "name": "SALMA MICHELLE STYLE By Medusa Hair Salon",
+      "source_url": "https://booksy.com/en-us/s/natural-hair-stylists/134761_denver",
+      "booking_url": "https://booksy.com/en-us/s/natural-hair-stylists/134761_denver",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 424,
+      "name": "Artis Garcia Tattoos",
+      "source_url": "https://booksy.com/en-us/s/tattoo-shop/122635_lakewood",
+      "booking_url": "https://booksy.com/en-us/s/tattoo-shop/122635_lakewood",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 425,
+      "name": "Gabriel Fuerzas ink",
+      "source_url": "https://booksy.com/en-us/s/tattoo-shop/122635_lakewood",
+      "booking_url": "https://booksy.com/en-us/s/tattoo-shop/122635_lakewood",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 426,
+      "name": "Tatted.by.kk",
+      "source_url": "https://booksy.com/en-us/s/tattoo-shop/14950_franktown",
+      "booking_url": "https://booksy.com/en-us/s/tattoo-shop/14950_franktown",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 427,
+      "name": "Felonyink",
+      "source_url": "https://booksy.com/en-us/s/tattoo-shop/14950_franktown",
+      "booking_url": "https://booksy.com/en-us/s/tattoo-shop/14950_franktown",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 428,
+      "name": "UNDRGRND ink",
+      "source_url": "https://booksy.com/en-us/s/tattoo-shop/14950_franktown",
+      "booking_url": "https://booksy.com/en-us/s/tattoo-shop/14950_franktown",
+      "reason": "generic_booksy_search"
+    },
+    {
+      "id": 430,
+      "name": "A Fabulash Experience",
+      "source_url": "https://booksy.com/en-us/s/brows-lashes/134761_denver",
+      "booking_url": "https://booksy.com/en-us/s/brows-lashes/134761_denver",
+      "reason": "generic_booksy_search"
+    }
+  ]
+}
