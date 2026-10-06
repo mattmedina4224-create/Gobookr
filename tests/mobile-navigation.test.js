@@ -15,3 +15,12 @@ test('mobile menu starts collapsed and preserves navigation for guests and membe
     else assert.match(html, /href="\/login"/);
   }
 });
+
+// The homepage must not override the shared mobile dropdown with legacy hiding rules.
+test('homepage preserves shared menu visibility and does not inject a second menu', () => {
+  const fs = require('node:fs');
+  const path = require('node:path');
+  const home = fs.readFileSync(path.join(__dirname, '../routes/home.js'), 'utf8');
+  assert.doesNotMatch(home, /\.site-header \.nav-links > (?:a|form|span)/);
+  assert.doesNotMatch(home, /home-mobile-menu-button|home-mobile-menu/);
+});
