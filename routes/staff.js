@@ -34,6 +34,7 @@ module.exports=function(router,{enabled=()=>process.env.GOBOOKR_STAFF_PORTAL_ENA
   function denied(ctx,error) {
     const expected=/access required|not found|unavailable|Invalid|already|existing|Confirm|changed|elevated/.test(error.message);
     const code=/access required/.test(error.message)?403:expected?400:503;
+    if (!expected) console.error('[staff-portal] request failed', {code: /^[A-Z0-9_]{1,64}$/.test(String(error.code||'')) ? error.code : 'UNCLASSIFIED'});
     pageError(ctx,code,expected?error.message:'Employee portal is unavailable. No change was completed.');
   }
   function pageError(ctx,status,message) {
