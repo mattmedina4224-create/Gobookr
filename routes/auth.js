@@ -39,10 +39,10 @@ function selectedCategories(body) {
 function passwordField({ minlength = '', name = 'password', label = 'Password' } = {}) {
   const min = minlength ? ` minlength="${minlength}"` : '';
   const id = escapeHtml(name);
-  return `<div class="field"><label for="${id}">${escapeHtml(label)}</label><div style="position:relative;"><input id="${id}" type="password" name="${id}"${min} required style="padding-right:48px;"/><button type="button" class="password-toggle" aria-label="Show password" aria-pressed="false" onclick="const input=this.previousElementSibling; const showing=input.type==='text'; input.type=showing?'password':'text'; this.setAttribute('aria-label',showing?'Show password':'Hide password'); this.setAttribute('aria-pressed',String(!showing)); this.querySelector('.eye-open').style.display=showing?'block':'none'; this.querySelector('.eye-off').style.display=showing?'none':'block';" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);border:0;background:transparent;padding:6px;cursor:pointer;color:var(--muted);display:flex;align-items:center;justify-content:center;">
+  return `<div class="field"><label for="${id}">${escapeHtml(label)}</label><div style="position:relative;"><input id="${id}" type="password" name="${id}"${min} required style="padding-right:48px;"/><button type="button" class="password-toggle" aria-label="Show password" aria-pressed="false" data-password-target="${id}" aria-controls="${id}" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);border:0;background:transparent;padding:10px;width:44px;height:44px;z-index:2;touch-action:manipulation;cursor:pointer;color:var(--ink-soft);display:flex;align-items:center;justify-content:center;">
     <svg class="eye-open" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>
     <svg class="eye-off" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:none;"><path d="M3 3l18 18"/><path d="M10.6 10.6a2 2 0 002.8 2.8"/><path d="M9.9 4.2A10.8 10.8 0 0112 4c6.5 0 10 8 10 8a18 18 0 01-2.1 3.2"/><path d="M6.6 6.6C3.6 8.5 2 12 2 12s3.5 8 10 8a9.7 9.7 0 005.4-1.6"/></svg>
-  </button></div></div>`;
+  </button></div></div><script src="/password-toggle.js" defer></script>`;
 }
 
 function resetTokenHash(token) {
