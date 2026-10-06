@@ -10,7 +10,10 @@ module.exports=function(router,{enabled=()=>process.env.GOBOOKR_STAFF_PORTAL_ENA
     if(!store) {
       const {Pool}=require('pg');
       // Existing server connection settings only. No new secrets or provider calls.
-      store=createStaffStore(new Pool({connectionString:process.env.DATABASE_URL,max:2,connectionTimeoutMillis:5000,statement_timeout:5000}));
+      const connectionString=process.env.DATABASE_URL;
+      const hostname=new URL(connectionString).hostname;
+      const ssl=['localhost','127.0.0.1','[::1]','::1'].includes(hostname)?false:{rejectUnauthorized:true};
+      store=createStaffStore(new Pool({connectionString,ssl,max:2,connectionTimeoutMillis:5000,statement_timeout:5000}));
     }
     return store;
   }
