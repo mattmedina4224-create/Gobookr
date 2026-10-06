@@ -21,19 +21,28 @@ function ownedShop(ctx) {
 module.exports = function (router) {
   router.get('/dashboard/shop', async (ctx) => {
     const shop = ownedShop(ctx); if (!shop) return;
-    const body = `<section class="section container" style="max-width:900px;"><div class="section-head"><div><h1>${escapeHtml(shop.name)}</h1><p class="muted">Manage your independent GoBookr business page.</p></div><a class="btn secondary" href="/shop/${shop.id}">View public page</a></div>
-    <div class="panel"><h3>Business details</h3><form method="POST" action="/dashboard/shop"><input type="hidden" name="_csrf" value="${escapeHtml(ctx.session?.csrf_token || '')}">
-    <div class="field"><label>Business name</label><input name="name" maxlength="160" required value="${escapeHtml(shop.name)}"></div>
-    <div class="field"><label>Description</label><textarea name="description" rows="5" maxlength="3000">${escapeHtml(shop.description || '')}</textarea></div>
-    <div class="field"><label>Street address</label><input name="street_address" maxlength="200" value="${escapeHtml(shop.street_address || '')}"></div>
-    <div class="field"><label>Suite / Unit</label><input name="suite" maxlength="80" value="${escapeHtml(shop.suite || '')}"></div>
-    <div class="field-row"><div class="field"><label>City</label><input name="city" maxlength="100" required value="${escapeHtml(shop.city)}"></div><div class="field"><label>State</label><input name="state" maxlength="2" required value="${escapeHtml(shop.state)}"></div></div>
-    <div class="field"><label>ZIP</label><input name="zip_code" maxlength="10" value="${escapeHtml(shop.zip_code || '')}"></div>
-    <div class="field"><label>Phone</label><input name="phone" maxlength="40" value="${escapeHtml(shop.phone || '')}"></div>
-    <div class="field"><label>Booking link</label><input name="booking_url" maxlength="2048" value="${escapeHtml(shop.booking_url || '')}" placeholder="https://"></div>
-    <div class="field"><label>Logo image URL</label><input name="logo_url" maxlength="2048" value="${escapeHtml(shop.logo_url || '')}" placeholder="https://"></div>
-    <div class="business-banner-preview">${businessBanner(shop.cover_url, shop.name)}</div><div class="field"><label for="cover_url">Banner photo URL</label><input id="cover_url" name="cover_url" maxlength="2048" value="${escapeHtml(shop.cover_url || '')}" placeholder="https://"></div>
-    <p class="helptext">Use a direct image URL for a photo you own or have permission to use. Leave blank for a neutral banner.</p><button class="btn" type="submit">Save business</button></form></div></section><script src="/business-banner.js" defer></script>`;
+    const body = `<section class="section container business-editor">
+    <header class="business-editor__header"><div><p class="business-editor__eyebrow">Your business page</p><h1>${escapeHtml(shop.name)}</h1><p class="muted">Manage your independent GoBookr business page.</p></div><a class="btn secondary" href="/shop/${shop.id}">View public page</a></header>
+    <form id="business-editor-form" class="business-editor__grid" method="POST" action="/dashboard/shop"><input type="hidden" name="_csrf" value="${escapeHtml(ctx.session?.csrf_token || '')}">
+    <div class="business-editor__details">
+    <fieldset class="panel business-editor__section"><legend>Business details</legend>
+    <div class="field"><label for="name">Business name</label><input id="name" name="name" maxlength="160" required value="${escapeHtml(shop.name)}"></div>
+    <div class="field"><label for="description">Description</label><textarea id="description" name="description" rows="4" maxlength="3000">${escapeHtml(shop.description || '')}</textarea></div></fieldset>
+    <fieldset class="panel business-editor__section"><legend>Location</legend>
+    <div class="field"><label for="street_address">Street address</label><input id="street_address" name="street_address" maxlength="200"  value="${escapeHtml(shop.street_address || '')}"></div>
+    <div class="field"><label for="suite">Suite / Unit</label><input id="suite" name="suite" maxlength="80"  value="${escapeHtml(shop.suite || '')}"></div>
+    <div class="field-row"><div class="field"><label for="city">City</label><input id="city" name="city" maxlength="100" required value="${escapeHtml(shop.city)}"></div><div class="field"><label for="state">State</label><input id="state" name="state" maxlength="2" required value="${escapeHtml(shop.state)}"></div></div>
+    <div class="field"><label for="zip_code">ZIP</label><input id="zip_code" name="zip_code" maxlength="10" autocomplete="postal-code" value="${escapeHtml(shop.zip_code || '')}"></div></fieldset>
+    <fieldset class="panel business-editor__section"><legend>Booking &amp; contact</legend>
+    <div class="field"><label for="phone">Phone</label><input id="phone" name="phone" maxlength="40" type="tel" value="${escapeHtml(shop.phone || '')}"></div>
+    <div class="field"><label for="booking_url">Booking link</label><input id="booking_url" name="booking_url" maxlength="2048" placeholder="https://" value="${escapeHtml(shop.booking_url || '')}"></div></fieldset></div>
+    <aside class="business-editor__photos"><fieldset class="panel business-editor__section"><legend>Photos</legend>
+    <div class="business-banner-preview">${businessBanner(shop.cover_url, shop.name)}</div>
+    <div class="field"><label for="cover_url">Banner photo URL</label><input id="cover_url" name="cover_url" maxlength="2048" placeholder="https://" aria-describedby="banner-help" value="${escapeHtml(shop.cover_url || '')}"></div>
+    <p id="banner-help" class="helptext">Use a direct image URL for a photo you own or have permission to use. Leave blank for a neutral banner.</p>
+    <div class="field"><label for="logo_url">Logo image URL</label><input id="logo_url" name="logo_url" maxlength="2048" placeholder="https://" value="${escapeHtml(shop.logo_url || '')}"></div></fieldset></aside>
+    <div class="business-editor__save"><button class="btn" type="submit">Save business</button><a href="/shop/${shop.id}">View public page</a></div>
+    </form></section><script src="/business-banner.js" defer></script>`;
     send(ctx.res, layout({ title:'Business dashboard', currentUser:ctx.currentUser, session:ctx.session, flash:flashFromQuery(ctx.query), body }));
   });
 
