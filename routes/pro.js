@@ -153,14 +153,15 @@ async function geocodeBusinessAddress({ street, city, state, zip }) {
 function dashNav(active) {
   const items = [
     { key: 'overview', href: '/dashboard/pro', label: 'Overview' },
-    { key: 'onboarding', href: '/dashboard/pro/onboarding', label: 'Get started' },
     { key: 'profile', href: '/dashboard/pro/profile', label: 'Profile & services' },
-    { key: 'portfolio', href: '/dashboard/pro/portfolio', label: 'Portfolio' },
+    { key: 'openings', href: '/dashboard/pro/marketing?campaign=openings-today', label: 'Openings Today' },
     { key: 'marketing', href: '/dashboard/pro/marketing', label: 'Marketing' },
+    { key: 'onboarding', href: '/dashboard/pro/onboarding', label: 'Get started' },
+    { key: 'portfolio', href: '/dashboard/pro/portfolio', label: 'Portfolio' },
     { key: 'analytics', href: '/dashboard/pro/analytics', label: 'Analytics' },
     { key: 'billing', href: '/dashboard/pro/billing', label: 'Billing' },
   ];
-  return `<nav class="dash-nav">${items.map((i) => `<a href="${i.href}" class="${i.key === active ? 'active' : ''}">${i.label}</a>`).join('')}</nav>`;
+  return `<nav class="dash-nav" aria-label="Professional dashboard">${items.map((i) => `<a href="${i.href}" class="${i.key === active ? 'active' : ''}"${i.key === active ? ' aria-current="page"' : ''}>${i.label}</a>`).join('')}</nav>`;
 }
 
 function portfolioTile(item, i, gradientFor) {
