@@ -87,6 +87,8 @@ test('Square-style pages escape employee data, label payroll honestly, and disti
   assert.match(views.form({member,section:'access',csrf:'safe-token'}),/name="version" value="1"/);
   assert.ok(!views.payroll().includes('<button'));
   assert.match(views.roster([]),/Your team starts here/);
+  const preview=views.employee({...member,id:0,name:'Employee page preview'},{preview:true});
+  assert.match(preview,/Design preview only/);assert.ok(!preview.includes('/owner/staff/0/edit'));assert.ok(!preview.includes('Active access'));
   const css=fs.readFileSync(path.join(__dirname,'../public/staff-portal.css'),'utf8');
   assert.match(css,/min-height:44px/);assert.match(css,/min-width:0/);
 });

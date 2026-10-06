@@ -21,7 +21,8 @@ module.exports=function(router,{enabled=()=>process.env.GOBOOKR_STAFF_PORTAL_ENA
   function available(ctx) {
     if(!enabled()){send(ctx.res,'<h1>404 — page not found</h1>',404);return false;}
     if(!ctx.currentUser || !ctx.session?.token){
-      const destination=String(ctx.req?.url||'').split('?')[0]==='/staff'?'/staff':'/owner';
+      const requested=String(ctx.req?.url||'').split('?')[0];
+      const destination=requested==='/staff'||requested==='/owner'||requested.startsWith('/owner/')?requested:'/owner';
       redirect(ctx.res,'/login?next='+encodeURIComponent(destination));return false;
     }
     return true;
@@ -44,6 +45,10 @@ module.exports=function(router,{enabled=()=>process.env.GOBOOKR_STAFF_PORTAL_ENA
   route('get','/owner',async(ctx,s)=>{await s.list(actor(ctx));page(ctx,'GoBookr owner',views.overview());});
   route('get','/owner/staff',async(ctx,s)=>page(ctx,'GoBookr team',views.roster(await s.list(actor(ctx)))));
   route('get','/owner/staff/new',async(ctx,s)=>{await s.list(actor(ctx));page(ctx,'Add employee',views.form({csrf:ctx.session.csrf_token}));});
+  route('get','/owner/staff/design',async(ctx,s)=>{
+    await s.list(actor(ctx));
+    page(ctx,'Employee page preview',views.employee({id:0,name:'Employee page preview',email:'',phone:'',job_title:'',department:'',permissions:[],status:'preview'},{preview:true}));
+  });
   route('get','/owner/staff/:id',async(ctx,s)=>page(ctx,'Employee',views.employee(await s.get(actor(ctx),Number(ctx.params.id)))));
   route('get','/owner/staff/:id/edit/:section',async(ctx,s)=>{
     const section=ctx.params.section;if(!['personal','job','access'].includes(section))return pageError(ctx,404,'Page not found');

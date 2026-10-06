@@ -29,6 +29,7 @@ Owner confirmed internal GoBookr employees and a separate GoBookr owner dashboar
 - Every owner/staff route is OFF unless GOBOOKR_STAFF_PORTAL_ENABLED=true. Disabled routes return 404 and never open a database pool. This non-secret flag is enabled only for the staff feature branch in Vercel Preview; production and other branches are unchanged. No secrets or authentication-provider settings changed.
 - Production activation still requires full signed-in mobile/desktop flows, reviewed backend DB privileges, verified production owner identity, and a reviewed rollout. Preview owner provisioning follows the user's request for their existing GoBookr account to access a separate owner dashboard; no barbershop ownership grants were modified.
 - Payroll shows Not connected with no run/enroll/payment action. No provider selected, connected, or certified.
+- Owner-only /owner/staff/design renders the actual employee template with blank fields and an explicit Design preview label; it creates no employee. Preview edit rows are non-interactive. This allows design review before real employees are onboarded.
 
 ## Portal completion
 
