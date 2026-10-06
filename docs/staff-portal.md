@@ -15,9 +15,20 @@ lib/staff-permissions.js separates platform staff and business employees, valida
 
 This library is unreferenced by live routes. It does not change existing admin access, provision staff, create tables, send invitations or connect payroll. Tests demonstrate policy behavior, not a functioning staff portal.
 
-## Required scope decision
+## Confirmed scope
 
-Confirm whether the owner's dashboard means internal GoBookr company administration or business owners managing their own employees. This determines tenant boundaries, invitation destination and which existing routes must enforce permissions. Do not silently give barbers access to platform administration.
+Owner confirmed internal GoBookr employees and a separate GoBookr owner dashboard. Novo Barbers and other business dashboards are untouched. Screenshot references specify employee name/avatar and Personal, Job, Access and Payroll sections with simple icons and edit rows. No employee identity or credential from those screenshots is imported.
+
+## Staged implementation
+
+- /owner overview, /owner/staff roster, /owner/staff/new add-existing-account form, employee detail and Personal/Job/Access editors, /owner/payroll disconnected status, /staff read-only self profile and granted tools.
+- Manual staff_ops schema: trusted owners, employee membership/details, versioned permissions, audit history. It is NOT installed on any remote database and has no automatic owner grant.
+- Async store validates a live owner/session for every owner action, locks owner/session within transactions, rejects elevated or duplicate accounts, normalizes review permissions to include read, uses optimistic versions and rolls changes back if audit fails.
+- Add employee uses an existing GoBookr account and requires owner identity confirmation. It does not send invitations or modify account emails/passwords. Email invitations remain pending a verified sender and verified identity acceptance flow.
+- Existing admin guard optionally checks fresh scoped staff permissions for known claim/license/outreach routes. Unknown operations deny. Legacy administrator grants remain unchanged; an account with one is rejected from the restricted staff onboarding flow because that grant would override employee permissions.
+- Every owner/staff route is OFF unless GOBOOKR_STAFF_PORTAL_ENABLED=true. Disabled routes return 404 and never open a database pool. No settings or secrets were changed.
+- Activate only after installing the manual schema on isolated preview, verifying the exact owner user ID/account and separately provisioning that owner grant, passing full signed-in mobile/desktop flows, reviewing backend DB privileges, and enabling the flag in a reviewed rollout. Auth/owner grants and settings require explicit owner authorization.
+- Payroll shows Not connected with no run/enroll/payment action. No provider selected, connected, or certified.
 
 ## Portal completion
 
@@ -36,4 +47,4 @@ Square's Team API supports roster/wage information, but its documentation says t
 
 Determine employer and provider before implementation. A provider handoff is not embedded payroll; label status honestly as Not connected until verified. No fabricated pay runs, Paid labels or automatic financial execution. Sandbox tests only; separate owner authorization for employer enrollment, sensitive settings or real payroll.
 
-Remaining gates: scope, provider selection/access, isolated database schema and permission testing, portal UI, invitation delivery, full-flow mobile/desktop QA, payroll sandbox evidence. No employee invitation, financial action or production database change performed.
+Remaining gates: verified owner provisioning, isolated preview activation, full-flow mobile/desktop visual and save testing, email invitation delivery, payroll provider/employer selection and sandbox evidence. No employee invitation, financial action or production database change performed. Local embedded Postgres tests are evidence for SQL/security behavior, not remote deployment or visual acceptance.
