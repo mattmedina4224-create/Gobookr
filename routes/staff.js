@@ -11,9 +11,8 @@ module.exports=function(router,{enabled=()=>process.env.GOBOOKR_STAFF_PORTAL_ENA
       const {Pool}=require('pg');
       // Existing server connection settings only. No new secrets or provider calls.
       const connectionString=process.env.DATABASE_URL;
-      const hostname=new URL(connectionString).hostname;
-      const ssl=['localhost','127.0.0.1','[::1]','::1'].includes(hostname)?false:{rejectUnauthorized:true};
-      store=createStaffStore(new Pool({connectionString,ssl,max:2,connectionTimeoutMillis:5000,statement_timeout:5000}));
+      const {staffConnectionOptions}=require('../lib/staff-tls');
+      store=createStaffStore(new Pool({...staffConnectionOptions(connectionString),max:2,connectionTimeoutMillis:5000,statement_timeout:5000}));
     }
     return store;
   }
