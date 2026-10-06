@@ -21,7 +21,7 @@ module.exports=function(router,{enabled=()=>process.env.GOBOOKR_STAFF_PORTAL_ENA
     if(!enabled()){send(ctx.res,'<h1>404 — page not found</h1>',404);return false;}
     if(!ctx.currentUser || !ctx.session?.token){
       const requested=String(ctx.req?.url||'').split('?')[0];
-      const destination=requested==='/staff'||requested==='/owner'||requested.startsWith('/owner/')?requested:'/owner';
+      const destination=requested==='/staff'||requested.startsWith('/staff/')||requested==='/owner'||requested.startsWith('/owner/')?requested:'/owner';
       redirect(ctx.res,'/login?next='+encodeURIComponent(destination));return false;
     }
     return true;
@@ -66,5 +66,20 @@ module.exports=function(router,{enabled=()=>process.env.GOBOOKR_STAFF_PORTAL_ENA
     redirect(ctx.res,'/owner/staff/'+Number(ctx.params.id));
   });
   route('get','/owner/payroll',async(ctx,s)=>{await s.list(actor(ctx));page(ctx,'Payroll setup',views.payroll());});
-  route('get','/staff',async(ctx,s)=>page(ctx,'My employee profile',views.employee(await s.self(actor(ctx)),{readOnly:true})));
+  route('get','/owner/work',async(ctx,s)=>page(ctx,'Assigned work',views.ownerWork(await s.list(actor(ctx)),await s.workList(actor(ctx),true),ctx.session.csrf_token)));
+  route('post','/owner/work',async(ctx,s)=>{
+    if(!csrf(ctx))return pageError(ctx,403,'Form expired. Reload before trying again.');
+    const w=await s.workAdd(actor(ctx),ctx.body);redirect(ctx.res,'/owner/work/'+w.id);
+  });
+  route('get','/staff',async(ctx,s)=>page(ctx,'My work',views.dashboard(await s.self(actor(ctx)),await s.workList(actor(ctx)))));
+  route('get','/staff/profile',async(ctx,s)=>page(ctx,'My employee profile',views.employee(await s.self(actor(ctx)),{readOnly:true})));
+  route('get','/staff/guides',async(ctx,s)=>{await s.self(actor(ctx));page(ctx,'Working at GoBookr',views.guides());});
+  for(const isOwner of [false,true]) {
+    const base=isOwner?'/owner/work':'/staff/work';
+    route('get',base+'/:id',async(ctx,s)=>page(ctx,'Task',views.workDetail(await s.workGet(actor(ctx),Number(ctx.params.id),isOwner),ctx.session.csrf_token,isOwner)));
+    route('post',base+'/:id',async(ctx,s)=>{
+      if(!csrf(ctx))return pageError(ctx,403,'Form expired. Reload before trying again.');
+      await s.workUpdate(actor(ctx),Number(ctx.params.id),Number(ctx.body.version),ctx.body,isOwner);redirect(ctx.res,base+'/'+Number(ctx.params.id));
+    });
+  }
 };

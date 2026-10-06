@@ -5,3 +5,4 @@
 .staff-portal .staff-add-button{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:8px 16px;border:1px solid var(--staff-border);border-radius:10px;background:#fff;color:var(--staff-ink);font-family:inherit;font-size:16px;font-weight:600;line-height:1.5;text-decoration:none;box-shadow:0 1px 2px rgba(15,23,42,.04);cursor:pointer}
 .staff-portal .staff-add-button:hover{background:var(--staff-soft);color:var(--staff-ink);border-color:var(--staff-body)}
 .staff-portal .staff-add-button:active{box-shadow:none}
+\n.staff-field textarea{width:100%;padding:16px;border:1px solid var(--staff-border);border-radius:8px;font:inherit;color:var(--staff-ink);background:#fff;resize:vertical}.staff-task-text{white-space:pre-wrap;overflow-wrap:anywhere}\n

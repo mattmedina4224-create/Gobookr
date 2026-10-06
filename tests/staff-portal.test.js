@@ -136,5 +136,6 @@ test('portal routes are dormant by default, require owner access and reject forg
   const home=ctx();await routes.get('GET /owner')(home);assert.equal(home.res.status,200);assert.equal(reads,1);
   const forged=ctx();await routes.get('POST /owner/staff')(forged);assert.equal(forged.res.status,403);assert.equal(mutations,0);
   const good=ctx();good.body._csrf='csrf';await routes.get('POST /owner/staff')(good);assert.equal(good.res.url,'/owner/staff/7');assert.equal(mutations,1);
+  for(const endpoint of ['POST /owner/work','POST /staff/work/:id','POST /owner/work/:id']){const attempt=ctx();await routes.get(endpoint)(attempt);assert.equal(attempt.res.status,403);}
   const forbidden=ctx();await routes.get('GET /owner/staff/:id')(forbidden);assert.equal(forbidden.res.status,403);
 });
