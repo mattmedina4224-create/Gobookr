@@ -1,0 +1,156 @@
+[
+  {
+    "name": "Beauty Lane Aesthetics LLC",
+    "category": "eyelash_technician",
+    "city": "Aurora",
+    "state": "CO",
+    "address": "6616 S Parker Road Unit 101, suite 119",
+    "zip": "80016",
+    "booking_url": "https://beautylaneaesthetics.glossgenius.com/",
+    "source_url": "https://beautylaneaesthetics.glossgenius.com/",
+    "source_name": "GlossGenius"
+  },
+  {
+    "name": "aurora sydel",
+    "category": "eyelash_technician",
+    "city": "Lakewood",
+    "state": "CO",
+    "address": "965 Teller Street",
+    "zip": "80214",
+    "booking_url": "https://aurorasydel.glossgenius.com/",
+    "source_url": "https://aurorasydel.glossgenius.com/",
+    "source_name": "GlossGenius"
+  },
+  {
+    "name": "The Beauty Parlor By Lovelex",
+    "category": "eyebrow_technician",
+    "city": "Aurora",
+    "state": "CO",
+    "address": "27140 E Cedar Avenue",
+    "zip": "80018",
+    "booking_url": "https://thebeautyparlorbylovelex.glossgenius.com/",
+    "source_url": "https://thebeautyparlorbylovelex.glossgenius.com/",
+    "source_name": "GlossGenius"
+  },
+  {
+    "name": "BEAUTYWITHKARII",
+    "category": "eyelash_technician",
+    "city": "Aurora",
+    "state": "CO",
+    "address": "2950 S Jamaica Ct, STE 303",
+    "zip": "80014",
+    "booking_url": "https://beautywithkarii.glossgenius.com/",
+    "source_url": "https://beautywithkarii.glossgenius.com/",
+    "source_name": "GlossGenius"
+  },
+  {
+    "name": "Denver Hair Salon",
+    "category": "stylist",
+    "city": "Denver",
+    "state": "CO",
+    "address": "",
+    "zip": "",
+    "booking_url": "https://denverhairsalon.glossgenius.com/",
+    "source_url": "https://denverhairsalon.glossgenius.com/",
+    "source_name": "GlossGenius"
+  },
+  {
+    "name": "Adorn Salon",
+    "category": "stylist",
+    "city": "Denver",
+    "state": "CO",
+    "address": "",
+    "zip": "",
+    "booking_url": "https://adornsalondenver.glossgenius.com/",
+    "source_url": "https://adornsalondenver.glossgenius.com/",
+    "source_name": "GlossGenius"
+  },
+  {
+    "name": "Modellista Salon",
+    "category": "stylist",
+    "city": "Littleton",
+    "state": "CO",
+    "address": "8601 W Cross Dr. Ste A1",
+    "zip": "80123",
+    "booking_url": "https://modellistasalon.glossgenius.com/",
+    "source_url": "https://modellistasalon.glossgenius.com/",
+    "source_name": "GlossGenius"
+  },
+  {
+    "name": "KB Hair Co",
+    "category": "stylist",
+    "city": "Littleton",
+    "state": "CO",
+    "address": "8340 Sangre De Cristo Rd, Suite 202",
+    "zip": "80127",
+    "booking_url": "https://kbhair.glossgenius.com/",
+    "source_url": "https://kbhair.glossgenius.com/",
+    "source_name": "GlossGenius"
+  },
+  {
+    "name": "V|A Beauty House",
+    "category": "stylist",
+    "city": "Littleton",
+    "state": "CO",
+    "address": "",
+    "zip": "",
+    "booking_url": "https://vabeautyhouse.glossgenius.com/",
+    "source_url": "https://vabeautyhouse.glossgenius.com/",
+    "source_name": "GlossGenius"
+  },
+  {
+    "name": "HoneyBee Hair",
+    "category": "stylist",
+    "city": "Littleton",
+    "state": "CO",
+    "address": "7301 S Santa Fe Dr. Unit 630 Suite 23",
+    "zip": "80123",
+    "booking_url": "https://honeybeehair21.glossgenius.com/",
+    "source_url": "https://honeybeehair21.glossgenius.com/",
+    "source_name": "GlossGenius"
+  },
+  {
+    "name": "Yvonne Stanley @ Shay Studios",
+    "category": "stylist",
+    "city": "Littleton",
+    "state": "CO",
+    "address": "",
+    "zip": "",
+    "booking_url": "https://yvonnestanley.glossgenius.com/",
+    "source_url": "https://yvonnestanley.glossgenius.com/",
+    "source_name": "GlossGenius"
+  },
+  {
+    "name": "EM & ESSENCE",
+    "category": "stylist",
+    "city": "Centennial",
+    "state": "CO",
+    "address": "7790 E Arapahoe Rd",
+    "zip": "80112",
+    "booking_url": "https://emessence.glossgenius.com/",
+    "source_url": "https://emessence.glossgenius.com/",
+    "source_name": "GlossGenius"
+  },
+  {
+    "name": "Hair By Cass",
+    "category": "stylist",
+    "city": "Lakewood",
+    "state": "CO",
+    "address": "98 Wadsworth Blvd Building 108 Room 111",
+    "zip": "80226",
+    "booking_url": "https://cassidivillano.glossgenius.com/",
+    "source_url": "https://cassidivillano.glossgenius.com/",
+    "source_name": "GlossGenius"
+  },
+  {
+    "name": "Summit Hair & Facial Bar",
+    "category": "stylist",
+    "city": "Centennial",
+    "state": "CO",
+    "address": "8230 S Colorado Blvd, 9, inside Sola Salon",
+    "zip": "80122",
+    "booking_url": "https://summithairfacialbar.glossgenius.com/",
+    "source_url": "https://summithairfacialbar.glossgenius.com/",
+    "source_name": "GlossGenius"
+  }
+]
