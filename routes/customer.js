@@ -1,6 +1,7 @@
 'use strict';
 
 const db = require('../db');
+const { dashboardDestination } = require('../lib/dashboard-destination');
 const { layout } = require('../lib/layout');
 const { send, redirect, flashFromQuery } = require('../lib/http');
 const { favoriteControl, favoriteReturnPath } = require('../lib/favorites');
@@ -19,6 +20,8 @@ function requireCustomer(ctx) {
 module.exports = function (router) {
   router.get('/dashboard/customer', async (ctx) => {
     if (!requireCustomer(ctx)) return;
+    const destination = dashboardDestination(ctx.currentUser, ctx.session);
+    if (destination !== '/dashboard/customer') return redirect(ctx.res, destination);
 
     const claims = db.prepare(`WITH my_claims AS (
       SELECT pro_id, status, requested_at FROM profile_claims WHERE claimant_user_id = ?
