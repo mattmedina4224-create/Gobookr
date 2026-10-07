@@ -1,6 +1,7 @@
 'use strict';
 
 const crypto = require('node:crypto');
+const { dashboardDestination } = require('../lib/dashboard-destination');
 const db = require('../db');
 const { layout } = require('../lib/layout');
 const { redirect, send, flashFromQuery } = require('../lib/http');
@@ -61,7 +62,7 @@ module.exports = function (router) {
     const claim = hasClaim ? requireClaimProfile(ctx, ctx.query.claim) : null;
     if (hasClaim && !claim) return;
     if (claim && ctx.currentUser) return redirect(ctx.res, `/pro/${claim.id}/claim`);
-    if (ctx.currentUser) return redirect(ctx.res, ctx.currentUser.role === 'pro' ? '/dashboard/pro' : '/dashboard/customer');
+    if (ctx.currentUser) return redirect(ctx.res, dashboardDestination(ctx.currentUser, ctx.session));
     const next = ctx.query.next || '';
     const body = `<section class="section container" style="max-width:560px;"><div class="panel"><h1>Log in</h1><p class="muted">Welcome back to GoBookr.</p><form method="POST" action="/login">${claim ? `<input type="hidden" name="claim" value="${claim.id}"/>` : ''}<input type="hidden" name="next" value="${escapeHtml(next)}"/><div class="field"><label>Email</label><input type="email" name="email" autocomplete="email" required/></div>${passwordField()}<div style="display:flex;justify-content:flex-end;margin:-4px 0 16px;"><a href="/forgot-password">Forgot password?</a></div><button class="btn block" type="submit">Log in</button></form>${claim ? `<p><a href="/signup?claim=${claim.id}">Create an account to claim this profile</a></p>` : ''}</div></section>`;
     send(ctx.res, layout({ title: 'Log in', currentUser: null, session: null, flash: flashFromQuery(ctx.query), body }));
@@ -77,11 +78,11 @@ module.exports = function (router) {
     const token = createSession(user.id); setSessionCookie(ctx.res, token);
     if (claim) return redirect(ctx.res, `/pro/${claim.id}/claim`);
     if (next && next.startsWith('/') && !next.startsWith('//')) return redirect(ctx.res, next);
-    redirect(ctx.res, user.role === 'pro' ? '/dashboard/pro' : '/dashboard/customer');
+    redirect(ctx.res, dashboardDestination(user, {token}));
   });
 
   router.get('/forgot-password', async (ctx) => {
-    if (ctx.currentUser) return redirect(ctx.res, ctx.currentUser.role === 'pro' ? '/dashboard/pro' : '/dashboard/customer');
+    if (ctx.currentUser) return redirect(ctx.res, dashboardDestination(ctx.currentUser, ctx.session));
     const body = `<section class="section container" style="max-width:560px;"><div class="panel"><h1>Reset your password</h1><p class="muted">Enter the email address on your GoBookr account. If an account exists, we'll send password reset instructions.</p><form method="POST" action="/forgot-password"><div class="field"><label for="reset_email">Email</label><input id="reset_email" type="email" name="email" autocomplete="email" required/></div><button class="btn block" type="submit">Send reset instructions</button></form><p class="helptext" style="margin-top:16px;"><a href="/login">Back to log in</a></p></div></section>`;
     send(ctx.res, layout({ title: 'Forgot password', currentUser: null, session: null, flash: flashFromQuery(ctx.query), body }));
   });
@@ -103,7 +104,7 @@ module.exports = function (router) {
   });
 
   router.get('/reset-password', async (ctx) => {
-    if (ctx.currentUser) return redirect(ctx.res, ctx.currentUser.role === 'pro' ? '/dashboard/pro' : '/dashboard/customer');
+    if (ctx.currentUser) return redirect(ctx.res, dashboardDestination(ctx.currentUser, ctx.session));
     const token = String(ctx.query.token || '');
     const record = token ? db.prepare("SELECT id FROM password_reset_tokens WHERE token_hash = ? AND used_at IS NULL AND expires_at > datetime('now')").get(resetTokenHash(token)) : null;
     if (!record) return redirect(ctx.res, '/forgot-password?error=' + encodeURIComponent('That password reset link is invalid or has expired. Please request a new one.'));
