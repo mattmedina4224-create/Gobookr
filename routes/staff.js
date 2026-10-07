@@ -16,6 +16,7 @@ module.exports=function(router,{enabled=()=>process.env.GOBOOKR_STAFF_PORTAL_ENA
     }
     return store;
   }
+  require('./support')(router,{enabled,staffStore:getStore});
   const actor=ctx=>({userId:Number(ctx.currentUser?.id),token:ctx.session?.token});
   function available(ctx) {
     if(!enabled()){send(ctx.res,'<h1>404 — page not found</h1>',404);return false;}
