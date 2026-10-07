@@ -124,6 +124,7 @@ test('portal routes are dormant by default, require owner access and reject forg
     if(id==='../lib/util')return{escapeHtml:v=>String(v)};
     if(id==='../lib/staff-views')return views;
     if(id==='../lib/staff-store')return require('../lib/staff-store');
+    if(id==='./support')return ()=>{};
     throw new Error('Unexpected dependency '+id);
   }});
   const router={get(p,h){routes.set('GET '+p,h);},post(p,h){routes.set('POST '+p,h);}};
