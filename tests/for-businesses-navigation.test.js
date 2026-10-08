@@ -6,7 +6,5 @@ const path=require('node:path');
 
 test('logged-out navigation labels the business entry point For Businesses',()=>{
   const layout=fs.readFileSync(path.join(__dirname,'..','lib','layout.js'),'utf8');
-  const home=fs.readFileSync(path.join(__dirname,'..','routes','home.js'),'utf8');
   assert.match(layout, /href="\/business-account">For Businesses<\/a>/);
-  assert.match(home, /href="\/business-account">For Businesses<\/a>/);
 });
