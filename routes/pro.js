@@ -11,6 +11,8 @@ const { escapeHtml, money, slugCategory, avgRating } = require('../lib/util');
 
 
 const { dashboardNav, renderDashboard } = require('../lib/pro-dashboard-view');
+const { mergeSetupProfile, setupDestination, PROFILE_FIELDS } = require('../lib/pro-setup');
+const { renderSetupPage } = require('./onboarding');
 const { PROFESSIONAL_CATEGORIES } = require('../lib/pro-categories');
 const PROFILE_CATEGORIES = PROFESSIONAL_CATEGORIES.map((item) => [item.value, item.label]);
 
@@ -170,9 +172,27 @@ function portfolioTile(item, i, gradientFor) {
   return `<div class="portfolio-item" style="${background} overflow:hidden;">${visual}</div>`;
 }
 
+
+function setupRedirect(ctx, profile, allowed, destination) {
+  const setupStep = String(ctx.body._setup_step || '');
+  const res = ctx.res;
+  const parsed = new URL(destination, 'https://gobookr.invalid');
+  const error = parsed.searchParams.get('error');
+  const target = allowed.includes(setupStep) ? setupDestination(setupStep, ctx.body._setup_exit, error) : null;
+  if (!target) return redirect(res, destination);
+  if (error) {
+    const draft = mergeSetupProfile(profile, ctx.body);
+    const selected = setupStep === 'categories' ? Object.fromEntries(PROFILE_CATEGORIES.map(([key]) => [key, ctx.body['category_' + key] === '1'])) : null;
+    return renderSetupPage(ctx, { ...profile, ...Object.fromEntries((PROFILE_FIELDS[setupStep] || []).map(field => [field, draft[field]])) }, error, setupStep === 'license' ? 'extras' : setupStep, selected);
+  }
+  if (ctx.body._setup_add_more === '1' && ['services', 'portfolio'].includes(setupStep)) return redirect(res, '/dashboard/pro/onboarding?step=' + setupStep + '&success=' + encodeURIComponent(parsed.searchParams.get('success') || 'Saved.'));
+  return redirect(res, target + (target.includes('?') ? '&' : '?') + 'success=' + encodeURIComponent('Saved.'));
+}
+
 module.exports = function (router) {
   router.get('/dashboard/pro', async (ctx) => {
     const profile = requirePro(ctx); if (!profile) return;
+    if (!profile.onboarding_completed && ctx.query.setup !== 'saved') return redirect(ctx.res, '/dashboard/pro/onboarding?step=resume');
     const reviews = db.prepare('SELECT rating FROM reviews WHERE pro_id = ?').all(profile.id);
     const dashboardCategories = db.prepare('SELECT category FROM pro_categories WHERE pro_id = ? ORDER BY category').all(profile.id).map((row) => row.category);
     const dashboardCategoryLabel = dashboardCategories.length ? dashboardCategories.map(slugCategory).join(' · ') : 'Professional';
@@ -497,8 +517,11 @@ module.exports = function (router) {
 
   router.post('/dashboard/pro/categories', async (ctx) => {
     const profile = requirePro(ctx); if (!profile) return;
+    const setupStep = String(ctx.body._setup_step || '');
+    const go = (res, destination) => setupRedirect(ctx, profile, ['categories'], destination);
+
     const selected = PROFILE_CATEGORIES.filter(([value]) => String(ctx.body[`category_${value}`] || '') === '1').map(([value]) => value);
-    if (!selected.length) return redirect(ctx.res, '/dashboard/pro/profile?error=' + encodeURIComponent('Select at least one service or specialty.'));
+    if (!selected.length) return go(ctx.res, '/dashboard/pro/profile?error=' + encodeURIComponent('Select at least one service or specialty.'));
     try {
       db.exec('BEGIN IMMEDIATE');
       db.prepare('DELETE FROM pro_categories WHERE pro_id = ?').run(profile.id);
@@ -508,13 +531,19 @@ module.exports = function (router) {
     } catch (err) {
       try { db.exec('ROLLBACK'); } catch (_) {}
       console.error('Professional category update failed', err);
-      return redirect(ctx.res, '/dashboard/pro/profile?error=' + encodeURIComponent('We could not update your categories. Please try again.'));
+      return go(ctx.res, '/dashboard/pro/profile?error=' + encodeURIComponent('We could not update your categories. Please try again.'));
     }
-    redirect(ctx.res, '/dashboard/pro/profile?success=' + encodeURIComponent('Services and specialties updated.'));
+    go(ctx.res, '/dashboard/pro/profile?success=' + encodeURIComponent('Services and specialties updated.'));
   });
 
   router.post('/dashboard/pro/profile', async (ctx) => {
     const profile = requirePro(ctx); if (!profile) return;
+    const setupStep = String(ctx.body._setup_step || '');
+    const go = (res, destination) => setupRedirect(ctx, profile, ['basics', 'details', 'booking', 'license'], destination);
+
+    if (PROFILE_FIELDS[setupStep]) ctx.body = mergeSetupProfile(profile, ctx.body);
+    if (setupStep === 'details' && (!String(ctx.body.bio || '').trim() || String(ctx.body.years_experience ?? '').trim() === '' || !(Number(ctx.body.price_min) > 0 || Number(ctx.body.price_max) > 0))) return go(ctx.res, '/dashboard/pro/profile?error=' + encodeURIComponent('Add your bio, years of experience, and at least one price above $0.'));
+    if (setupStep === 'booking' && !String(ctx.body.booking_url || '').trim()) return go(ctx.res, '/dashboard/pro/profile?error=' + encodeURIComponent('Add the link customers use to book with you.'));
     const { business_name, professional_handle, booking_url, workplace_name, street_address, suite, city, state, zip_code, license_number, license_state, price_min, price_max, years_experience, bio } = ctx.body;
 
     const cleanBusinessName = clampText(business_name || profile.business_name, 120);
@@ -533,13 +562,13 @@ module.exports = function (router) {
     const maxPrice = finiteInteger(price_max || 0, 0, 100000);
     const years = finiteInteger(years_experience || 0, 0, 100);
 
-    if (!cleanBusinessName) return redirect(ctx.res, '/dashboard/pro/profile?error=' + encodeURIComponent('Professional name is required.'));
-    if (cleanHandle && !/^[A-Za-z0-9._-]{2,80}$/.test(cleanHandle)) return redirect(ctx.res, '/dashboard/pro/profile?error=' + encodeURIComponent('Handle can use letters, numbers, periods, underscores, and hyphens.'));
-    if (cleanBookingUrl === null) return redirect(ctx.res, '/dashboard/pro/profile?error=' + encodeURIComponent('Please enter a valid booking website, such as https://square.site/book/...'));
-    if (!cleanWorkplace || !cleanStreet || !cleanCity || !validUsState(cleanState) || !validZip(cleanZip)) return redirect(ctx.res, '/dashboard/pro/profile?error=' + encodeURIComponent('Please complete a valid workplace address.'));
-    if (cleanLicenseNumber && !validUsState(cleanLicenseState)) return redirect(ctx.res, '/dashboard/pro/profile?error=' + encodeURIComponent('Please enter a valid two-letter license state.'));
-    if (minPrice === null || maxPrice === null || years === null) return redirect(ctx.res, '/dashboard/pro/profile?error=' + encodeURIComponent('Please enter valid pricing and experience values.'));
-    if (minPrice > 0 && maxPrice > 0 && maxPrice < minPrice) return redirect(ctx.res, '/dashboard/pro/profile?error=' + encodeURIComponent('Top price must be at least the starting price.'));
+    if (!cleanBusinessName) return go(ctx.res, '/dashboard/pro/profile?error=' + encodeURIComponent('Professional name is required.'));
+    if (cleanHandle && !/^[A-Za-z0-9._-]{2,80}$/.test(cleanHandle)) return go(ctx.res, '/dashboard/pro/profile?error=' + encodeURIComponent('Handle can use letters, numbers, periods, underscores, and hyphens.'));
+    if (cleanBookingUrl === null) return go(ctx.res, '/dashboard/pro/profile?error=' + encodeURIComponent('Please enter a valid booking website, such as https://square.site/book/...'));
+    if (!cleanWorkplace || !cleanStreet || !cleanCity || !validUsState(cleanState) || !validZip(cleanZip)) return go(ctx.res, '/dashboard/pro/profile?error=' + encodeURIComponent('Please complete a valid workplace address.'));
+    if (cleanLicenseNumber && !validUsState(cleanLicenseState)) return go(ctx.res, '/dashboard/pro/profile?error=' + encodeURIComponent('Please enter a valid two-letter license state.'));
+    if (minPrice === null || maxPrice === null || years === null) return go(ctx.res, '/dashboard/pro/profile?error=' + encodeURIComponent('Please enter valid pricing and experience values.'));
+    if (minPrice > 0 && maxPrice > 0 && maxPrice < minPrice) return go(ctx.res, '/dashboard/pro/profile?error=' + encodeURIComponent('Top price must be at least the starting price.'));
 
     const addressChanged =
       cleanWorkplace !== String(profile.workplace_name || '') ||
@@ -583,18 +612,21 @@ module.exports = function (router) {
     const message = latitude != null && longitude != null
       ? 'Profile and workplace location updated.'
       : 'Profile updated, but we could not map that address yet. Check the address and save again.';
-    redirect(ctx.res, '/dashboard/pro/profile?success=' + encodeURIComponent(message));
+    go(ctx.res, '/dashboard/pro/profile?success=' + encodeURIComponent(message));
   });
 
   router.post('/dashboard/pro/services', async (ctx) => {
     const profile = requirePro(ctx); if (!profile) return;
+    const setupStep = String(ctx.body._setup_step || '');
+    const go = (res, destination) => setupRedirect(ctx, profile, ['services'], destination);
+
     const name = clampText(ctx.body.name, 120);
     const price = finiteInteger(ctx.body.price, 0, 100000);
     const durationRaw = String(ctx.body.duration_minutes == null ? '' : ctx.body.duration_minutes).trim();
     const duration = finiteInteger(durationRaw || '30', 5, 1440);
-    if (!name || price === null || duration === null) return redirect(ctx.res, '/dashboard/pro/profile?error=' + encodeURIComponent('Enter a valid service name, price, and duration.'));
+    if (!name || price === null || duration === null) return go(ctx.res, '/dashboard/pro/profile?error=' + encodeURIComponent('Enter a valid service name, price, and duration.'));
     db.prepare('INSERT INTO services (pro_id, name, price, duration_minutes) VALUES (?, ?, ?, ?)').run(profile.id, name, price, duration);
-    redirect(ctx.res, '/dashboard/pro/profile?success=' + encodeURIComponent('Service added.'));
+    go(ctx.res, '/dashboard/pro/profile?success=' + encodeURIComponent('Service added.'));
   });
 
   router.post('/dashboard/pro/services/:id', async (ctx) => {
@@ -631,17 +663,20 @@ module.exports = function (router) {
 
   router.post('/dashboard/pro/portfolio', async (ctx) => {
     const profile = requirePro(ctx); if (!profile) return;
+    const setupStep = String(ctx.body._setup_step || '');
+    const go = (res, destination) => setupRedirect(ctx, profile, ['portfolio'], destination);
+
     const count = db.prepare('SELECT COUNT(*) AS count FROM portfolio_items WHERE pro_id = ?').get(profile.id).count;
-    if (count >= 50) return redirect(ctx.res, '/dashboard/pro/portfolio?error=' + encodeURIComponent('Portfolio limit reached. Remove a photo before adding another.'));
+    if (count >= 50) return go(ctx.res, '/dashboard/pro/portfolio?error=' + encodeURIComponent('Portfolio limit reached. Remove a photo before adding another.'));
 
     const caption = clampText(ctx.body.caption, 200);
     const image = ctx.files && ctx.files.image;
-    if (!caption) return redirect(ctx.res, '/dashboard/pro/portfolio?error=' + encodeURIComponent('Add a short caption for your photo.'));
-    if (!image || !image.data || !image.data.length) return redirect(ctx.res, '/dashboard/pro/portfolio?error=' + encodeURIComponent('Choose a photo to upload.'));
+    if (!caption) return go(ctx.res, '/dashboard/pro/portfolio?error=' + encodeURIComponent('Add a short caption for your photo.'));
+    if (!image || !image.data || !image.data.length) return go(ctx.res, '/dashboard/pro/portfolio?error=' + encodeURIComponent('Choose a photo to upload.'));
     const allowedTypes = new Map([['image/jpeg', '.jpg'], ['image/png', '.png'], ['image/webp', '.webp'], ['image/gif', '.gif'], ['image/heic', '.heic'], ['image/heif', '.heif']]);
     const ext = allowedTypes.get(String(image.contentType || '').toLowerCase());
-    if (!ext || !imageLooksValid(image.data, String(image.contentType || '').toLowerCase())) return redirect(ctx.res, '/dashboard/pro/portfolio?error=' + encodeURIComponent('That file does not appear to be a supported image.'));
-    if (image.data.length > 3 * 1024 * 1024) return redirect(ctx.res, '/dashboard/pro/portfolio?error=' + encodeURIComponent('Photo must be 3 MB or smaller.'));
+    if (!ext || !imageLooksValid(image.data, String(image.contentType || '').toLowerCase())) return go(ctx.res, '/dashboard/pro/portfolio?error=' + encodeURIComponent('That file does not appear to be a supported image.'));
+    if (image.data.length > 3 * 1024 * 1024) return go(ctx.res, '/dashboard/pro/portfolio?error=' + encodeURIComponent('Photo must be 3 MB or smaller.'));
 
     const filename = `${Date.now()}-${crypto.randomBytes(6).toString('hex')}${ext}`;
     const accents = ['violet', 'gold', 'teal', 'rose', 'slate'];
@@ -654,9 +689,9 @@ module.exports = function (router) {
     } catch (err) {
       if (imageUrl) { try { await deletePortfolioObject(imageUrl); } catch (_) {} }
       console.error('Portfolio upload failed', { message: err && err.message, name: err && err.name, storageConfigured: Boolean(storageConfig()), keyType: storageConfig() && storageConfig().serviceKey.startsWith('sb_secret_') ? 'secret' : 'legacy', supabaseHost: storageConfig() ? new URL(storageConfig().baseUrl).host : null });
-      return redirect(ctx.res, '/dashboard/pro/portfolio?error=' + encodeURIComponent('We could not save that photo. Please try again.'));
+      return go(ctx.res, '/dashboard/pro/portfolio?error=' + encodeURIComponent('We could not save that photo. Please try again.'));
     }
-    redirect(ctx.res, '/dashboard/pro/portfolio?success=' + encodeURIComponent('Photo uploaded.'));
+    go(ctx.res, '/dashboard/pro/portfolio?success=' + encodeURIComponent('Photo uploaded.'));
   });
 
   router.post('/dashboard/pro/portfolio/:id/delete', async (ctx) => {
