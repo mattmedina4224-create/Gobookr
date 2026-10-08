@@ -8,7 +8,7 @@ module.exports=function(router,{enabled=()=>process.env.GOBOOKR_STAFF_PORTAL_ENA
  let store=injectedStore;
  function getStore(){if(!store){const {Pool}=require('pg');const {staffConnectionOptions}=require('../lib/staff-tls');store=createSupportStore(new Pool({...staffConnectionOptions(process.env.DATABASE_URL),max:2,connectionTimeoutMillis:5000,statement_timeout:5000}));}return store;}
  const actor=ctx=>({userId:Number(ctx.currentUser?.id),token:ctx.session?.token});
- function page(ctx,body,status=200){ctx.res.setHeader('Cache-Control','no-store');send(ctx.res,layout({title:'Support inbox',currentUser:ctx.currentUser,session:ctx.session,body}),status);}
+ function page(ctx,body,status=200){ctx.res.setHeader('Cache-Control','no-store');send(ctx.res,layout({title:'Support inbox',currentUser:ctx.currentUser,session:ctx.session,robots:'noindex,nofollow',body}),status);}
  function route(method,path,fn){router[method](path,async ctx=>{
   if(!enabled())return send(ctx.res,'<h1>404 — page not found</h1>',404);
   if(!ctx.currentUser||!ctx.session?.token)return redirect(ctx.res,'/login?next='+encodeURIComponent(path.startsWith('/owner')?'/owner/support':'/staff/support'));
