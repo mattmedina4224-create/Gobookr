@@ -159,7 +159,7 @@ test('legacy category formatter delegates to the canonical catalog', () => {
 
 test('site shell reflects the full marketplace and has share metadata', () => {
   const src = read('lib/layout.js');
-  assert.match(src, /Discover personal-service professionals and book directly/);
+  assert.match(src, /Discover personal service professionals and book directly/);
   assert.match(src, /property="og:title"/);
   assert.match(src, /property="og:description"/);
   assert.match(src, /name="twitter:card"/);
