@@ -29,7 +29,7 @@ module.exports=function(router,{enabled=()=>process.env.GOBOOKR_STAFF_PORTAL_ENA
   }
   function page(ctx,title,body) {
     ctx.res.setHeader('Cache-Control','no-store');
-    send(ctx.res,layout({title,currentUser:ctx.currentUser,session:ctx.session,flash:flashFromQuery(ctx.query||{}),body}));
+    send(ctx.res,layout({title,currentUser:ctx.currentUser,session:ctx.session,flash:flashFromQuery(ctx.query||{}),robots:'noindex,nofollow',body}));
   }
   function denied(ctx,error) {
     const expected=/access required|not found|unavailable|Invalid|already|existing|Confirm|changed|elevated/.test(error.message);
@@ -40,7 +40,7 @@ module.exports=function(router,{enabled=()=>process.env.GOBOOKR_STAFF_PORTAL_ENA
   function pageError(ctx,status,message) {
     const {escapeHtml}=require('../lib/util');
     ctx.res.setHeader('Cache-Control','no-store');
-    send(ctx.res,layout({title:'Employee portal',currentUser:ctx.currentUser,session:ctx.session,body:`<section class="section container"><h1>Employee portal</h1><p>${escapeHtml(message)}</p><a href="/owner/staff">Back to team</a></section>`}),status);
+    send(ctx.res,layout({title:'Employee portal',currentUser:ctx.currentUser,session:ctx.session,robots:'noindex,nofollow',body:`<section class="section container"><h1>Employee portal</h1><p>${escapeHtml(message)}</p><a href="/owner/staff">Back to team</a></section>`}),status);
   }
   const route=(method,path,fn)=>router[method](path,async ctx=>{if(!available(ctx))return;try{await fn(ctx,getStore());}catch(error){denied(ctx,error);}});
   route('get','/owner',async(ctx,s)=>{await s.list(actor(ctx));page(ctx,'GoBookr owner',views.overview());});
@@ -66,6 +66,7 @@ module.exports=function(router,{enabled=()=>process.env.GOBOOKR_STAFF_PORTAL_ENA
     await s.update(actor(ctx),Number(ctx.params.id),Number(ctx.body.version),ctx.params.section,{...ctx.body,permissions:grants(ctx.body)});
     redirect(ctx.res,'/owner/staff/'+Number(ctx.params.id));
   });
+  route('get','/owner/guides',async(ctx,s)=>{await s.list(actor(ctx));page(ctx,'Owner guide',views.ownerGuides());});
   route('get','/owner/payroll',async(ctx,s)=>{await s.list(actor(ctx));page(ctx,'Payroll setup',views.payroll());});
   route('get','/owner/work',async(ctx,s)=>page(ctx,'Assigned work',views.ownerWork(await s.list(actor(ctx)),await s.workList(actor(ctx),true),ctx.session.csrf_token)));
   route('post','/owner/work',async(ctx,s)=>{
@@ -74,7 +75,7 @@ module.exports=function(router,{enabled=()=>process.env.GOBOOKR_STAFF_PORTAL_ENA
   });
   route('get','/staff',async(ctx,s)=>page(ctx,'My work',views.dashboard(await s.self(actor(ctx)),await s.workList(actor(ctx)))));
   route('get','/staff/profile',async(ctx,s)=>page(ctx,'My employee profile',views.employee(await s.self(actor(ctx)),{readOnly:true})));
-  route('get','/staff/guides',async(ctx,s)=>{await s.self(actor(ctx));page(ctx,'Working at GoBookr',views.guides());});
+  route('get','/staff/guides',async(ctx,s)=>{const member=await s.self(actor(ctx));page(ctx,'Working at GoBookr',views.guides(member));});
   for(const isOwner of [false,true]) {
     const base=isOwner?'/owner/work':'/staff/work';
     route('get',base+'/:id',async(ctx,s)=>page(ctx,'Task',views.workDetail(await s.workGet(actor(ctx),Number(ctx.params.id),isOwner),ctx.session.csrf_token,isOwner)));
