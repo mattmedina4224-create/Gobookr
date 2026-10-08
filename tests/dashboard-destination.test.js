@@ -1,0 +1,21 @@
+'use strict';
+const test=require('node:test');
+const assert=require('node:assert/strict');
+const fs=require('node:fs');
+const vm=require('node:vm');
+test('dashboard routing uses fresh grants and a valid session, never email',()=>{
+  const source=fs.readFileSync(require.resolve('../lib/dashboard-destination'),'utf8');
+  let calls=0,kind=null,fail=false;
+  const db={prepare(sql){assert.match(sql,/WITH portal_access/);assert.match(sql,/expires_at>CURRENT_TIMESTAMP/);assert.match(sql,/status='active'/);return {get(...args){calls++;assert.deepEqual(args,[2,'session',2,'session']);if(fail)throw Error('offline');return kind?{kind}:undefined;}};}};
+  const sandbox={require:()=>db,module:{exports:{}},process:{env:{GOBOOKR_STAFF_PORTAL_ENABLED:'true'}},console:{error(){}}};
+  vm.runInNewContext(source,sandbox);
+  const route=sandbox.module.exports.dashboardDestination;
+  const user={id:2,role:'customer',email:'owner@example.com'},session={token:'session'};
+  kind='owner';assert.equal(route(user,session),'/owner');
+  kind='employee';assert.equal(route(user,session),'/staff');
+  kind=null;assert.equal(route(user,session),'/dashboard/customer');
+  assert.equal(route({...user,role:'pro'},session),'/dashboard/pro');
+  const before=calls;assert.equal(route(user,null),'/dashboard/customer');assert.equal(calls,before);
+  sandbox.process.env.GOBOOKR_STAFF_PORTAL_ENABLED='false';assert.equal(route(user,session),'/dashboard/customer');assert.equal(calls,before);
+  sandbox.process.env.GOBOOKR_STAFF_PORTAL_ENABLED='true';fail=true;assert.equal(route(user,session),'/dashboard/customer');
+});

@@ -1,6 +1,7 @@
 'use strict';
 
 const crypto = require('node:crypto');
+const { dashboardDestination } = require('../lib/dashboard-destination');
 const db = require('../db');
 const { layout } = require('../lib/layout');
 const { redirect, send, flashFromQuery } = require('../lib/http');
@@ -39,10 +40,10 @@ function selectedCategories(body) {
 function passwordField({ minlength = '', name = 'password', label = 'Password' } = {}) {
   const min = minlength ? ` minlength="${minlength}"` : '';
   const id = escapeHtml(name);
-  return `<div class="field"><label for="${id}">${escapeHtml(label)}</label><div style="position:relative;"><input id="${id}" type="password" name="${id}"${min} required style="padding-right:48px;"/><button type="button" class="password-toggle" aria-label="Show password" aria-pressed="false" onclick="const input=this.previousElementSibling; const showing=input.type==='text'; input.type=showing?'password':'text'; this.setAttribute('aria-label',showing?'Show password':'Hide password'); this.setAttribute('aria-pressed',String(!showing)); this.querySelector('.eye-open').style.display=showing?'block':'none'; this.querySelector('.eye-off').style.display=showing?'none':'block';" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);border:0;background:transparent;padding:6px;cursor:pointer;color:var(--muted);display:flex;align-items:center;justify-content:center;">
+  return `<div class="field"><label for="${id}">${escapeHtml(label)}</label><div style="position:relative;"><input id="${id}" type="password" name="${id}"${min} required style="padding-right:48px;"/><button type="button" class="password-toggle" aria-label="Show password" aria-pressed="false" data-password-target="${id}" aria-controls="${id}" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);border:0;background:transparent;padding:10px;width:44px;height:44px;z-index:2;touch-action:manipulation;cursor:pointer;color:var(--ink-soft);display:flex;align-items:center;justify-content:center;">
     <svg class="eye-open" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>
     <svg class="eye-off" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:none;"><path d="M3 3l18 18"/><path d="M10.6 10.6a2 2 0 002.8 2.8"/><path d="M9.9 4.2A10.8 10.8 0 0112 4c6.5 0 10 8 10 8a18 18 0 01-2.1 3.2"/><path d="M6.6 6.6C3.6 8.5 2 12 2 12s3.5 8 10 8a9.7 9.7 0 005.4-1.6"/></svg>
-  </button></div></div>`;
+  </button></div></div><script src="/password-toggle.js" defer></script>`;
 }
 
 function resetTokenHash(token) {
@@ -61,7 +62,7 @@ module.exports = function (router) {
     const claim = hasClaim ? requireClaimProfile(ctx, ctx.query.claim) : null;
     if (hasClaim && !claim) return;
     if (claim && ctx.currentUser) return redirect(ctx.res, `/pro/${claim.id}/claim`);
-    if (ctx.currentUser) return redirect(ctx.res, ctx.currentUser.role === 'pro' ? '/dashboard/pro' : '/dashboard/customer');
+    if (ctx.currentUser) return redirect(ctx.res, dashboardDestination(ctx.currentUser, ctx.session));
     const next = ctx.query.next || '';
     const body = `<section class="section container" style="max-width:560px;"><div class="panel"><h1>Log in</h1><p class="muted">Welcome back to GoBookr.</p><form method="POST" action="/login">${claim ? `<input type="hidden" name="claim" value="${claim.id}"/>` : ''}<input type="hidden" name="next" value="${escapeHtml(next)}"/><div class="field"><label>Email</label><input type="email" name="email" autocomplete="email" required/></div>${passwordField()}<div style="display:flex;justify-content:flex-end;margin:-4px 0 16px;"><a href="/forgot-password">Forgot password?</a></div><button class="btn block" type="submit">Log in</button></form>${claim ? `<p><a href="/signup?claim=${claim.id}">Create an account to claim this profile</a></p>` : ''}</div></section>`;
     send(ctx.res, layout({ title: 'Log in', currentUser: null, session: null, flash: flashFromQuery(ctx.query), body }));
@@ -77,11 +78,11 @@ module.exports = function (router) {
     const token = createSession(user.id); setSessionCookie(ctx.res, token);
     if (claim) return redirect(ctx.res, `/pro/${claim.id}/claim`);
     if (next && next.startsWith('/') && !next.startsWith('//')) return redirect(ctx.res, next);
-    redirect(ctx.res, user.role === 'pro' ? '/dashboard/pro' : '/dashboard/customer');
+    redirect(ctx.res, dashboardDestination(user, {token}));
   });
 
   router.get('/forgot-password', async (ctx) => {
-    if (ctx.currentUser) return redirect(ctx.res, ctx.currentUser.role === 'pro' ? '/dashboard/pro' : '/dashboard/customer');
+    if (ctx.currentUser) return redirect(ctx.res, dashboardDestination(ctx.currentUser, ctx.session));
     const body = `<section class="section container" style="max-width:560px;"><div class="panel"><h1>Reset your password</h1><p class="muted">Enter the email address on your GoBookr account. If an account exists, we'll send password reset instructions.</p><form method="POST" action="/forgot-password"><div class="field"><label for="reset_email">Email</label><input id="reset_email" type="email" name="email" autocomplete="email" required/></div><button class="btn block" type="submit">Send reset instructions</button></form><p class="helptext" style="margin-top:16px;"><a href="/login">Back to log in</a></p></div></section>`;
     send(ctx.res, layout({ title: 'Forgot password', currentUser: null, session: null, flash: flashFromQuery(ctx.query), body }));
   });
@@ -103,7 +104,7 @@ module.exports = function (router) {
   });
 
   router.get('/reset-password', async (ctx) => {
-    if (ctx.currentUser) return redirect(ctx.res, ctx.currentUser.role === 'pro' ? '/dashboard/pro' : '/dashboard/customer');
+    if (ctx.currentUser) return redirect(ctx.res, dashboardDestination(ctx.currentUser, ctx.session));
     const token = String(ctx.query.token || '');
     const record = token ? db.prepare("SELECT id FROM password_reset_tokens WHERE token_hash = ? AND used_at IS NULL AND expires_at > datetime('now')").get(resetTokenHash(token)) : null;
     if (!record) return redirect(ctx.res, '/forgot-password?error=' + encodeURIComponent('That password reset link is invalid or has expired. Please request a new one.'));

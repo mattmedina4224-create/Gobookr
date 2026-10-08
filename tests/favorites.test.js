@@ -13,6 +13,7 @@ function load(file, dependencies) {
     console: { log() {}, error() {} }, __dirname: path.dirname(path.join(root, file)),
     require(id) {
       if (Object.hasOwn(dependencies, id)) return dependencies[id];
+      if (id === '../lib/dashboard-destination') return load('lib/dashboard-destination.js', { '../db': dependencies['../db'] });
       if (id.startsWith('node:')) return require(id);
       throw new Error(`Unexpected dependency ${id}`);
     },

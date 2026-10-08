@@ -3,10 +3,12 @@ const test=require('node:test');
 const assert=require('node:assert/strict');
 const fs=require('node:fs');
 const path=require('node:path');
-
-test('logged-out navigation labels the business entry point For Businesses',()=>{
-  const layout=fs.readFileSync(path.join(__dirname,'..','lib','layout.js'),'utf8');
-  const home=fs.readFileSync(path.join(__dirname,'..','routes','home.js'),'utf8');
-  assert.match(layout, /href="\/business-account">For Businesses<\/a>/);
-  assert.match(home, /href="\/business-account">For Businesses<\/a>/);
+const {layout}=require('../lib/layout');
+test('shared logged-out navigation exposes For Businesses',()=>{
+ const html=layout({title:'Test',body:'',currentUser:null});
+ const mobile=html.split('<details class="mobile-navigation">')[1].split('</details>')[0];
+ assert.ok(mobile.includes('href="/business-account">For Businesses</a>'));
+ const home=fs.readFileSync(path.join(__dirname,'../routes/home.js'),'utf8');
+ assert.ok(home.includes('layout('));
+ assert.ok(!home.includes('home-mobile-menu'));
 });
