@@ -40,7 +40,10 @@ module.exports=function(router,{enabled=()=>process.env.GOBOOKR_STAFF_PORTAL_ENA
   function pageError(ctx,status,message) {
     const {escapeHtml}=require('../lib/util');
     ctx.res.setHeader('Cache-Control','no-store');
-    send(ctx.res,layout({title:'Employee portal',currentUser:ctx.currentUser,session:ctx.session,robots:'noindex,nofollow',body:`<section class="section container"><h1>Employee portal</h1><p>${escapeHtml(message)}</p><a href="/owner/staff">Back to team</a></section>`}),status);
+    const employeeRequest=String(ctx.req?.url||'').split('?')[0].startsWith('/staff');
+    const back=employeeRequest?'/staff':'/owner/staff';
+    const backLabel=employeeRequest?'Back to my work':'Back to team';
+    send(ctx.res,layout({title:'Employee portal',currentUser:ctx.currentUser,session:ctx.session,robots:'noindex,nofollow',body:`<section class="section container"><h1>Employee portal</h1><p>${escapeHtml(message)}</p><a href="${back}">${backLabel}</a></section>`}),status);
   }
   const route=(method,path,fn)=>router[method](path,async ctx=>{if(!available(ctx))return;try{await fn(ctx,getStore());}catch(error){denied(ctx,error);}});
   route('get','/owner',async(ctx,s)=>{await s.list(actor(ctx));page(ctx,'GoBookr owner',views.overview());});
