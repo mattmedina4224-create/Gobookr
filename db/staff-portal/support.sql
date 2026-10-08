@@ -6,13 +6,16 @@ CREATE TABLE IF NOT EXISTS staff_ops.support_tickets (
  owner_id BIGINT NOT NULL REFERENCES staff_ops.owners(user_id),
  provider_thread_key TEXT NOT NULL CHECK(length(provider_thread_key) BETWEEN 1 AND 512),
  subject TEXT NOT NULL CHECK(length(subject)<=200),
- status TEXT NOT NULL DEFAULT 'open' CHECK(status IN ('open','resolved')),
+ status TEXT NOT NULL DEFAULT 'open' CHECK(status IN ('open','in_progress','resolved')),
  assignee_id BIGINT REFERENCES staff_ops.members(id),
  version INTEGER NOT NULL DEFAULT 1 CHECK(version>0),
  created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
  updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
  UNIQUE(owner_id,provider_thread_key)
 );
+-- Upgrade existing preview installations without rewriting ticket data.
+ALTER TABLE staff_ops.support_tickets DROP CONSTRAINT IF EXISTS support_tickets_status_check;
+ALTER TABLE staff_ops.support_tickets ADD CONSTRAINT support_tickets_status_check CHECK(status IN ('open','in_progress','resolved'));
 CREATE INDEX IF NOT EXISTS support_owner_queue ON staff_ops.support_tickets(owner_id,updated_at DESC,id DESC);
 CREATE INDEX IF NOT EXISTS support_assignee_queue ON staff_ops.support_tickets(assignee_id,updated_at DESC,id DESC);
 CREATE TABLE IF NOT EXISTS staff_ops.support_messages (

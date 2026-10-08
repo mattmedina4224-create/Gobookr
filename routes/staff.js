@@ -19,6 +19,8 @@ module.exports=function(router,{enabled=()=>process.env.GOBOOKR_STAFF_PORTAL_ENA
   require('./support')(router,{enabled,staffStore:getStore});
   const actor=ctx=>({userId:Number(ctx.currentUser?.id),token:ctx.session?.token});
   function available(ctx) {
+    ctx.res.setHeader('Cache-Control','no-store');
+    ctx.res.setHeader('X-Robots-Tag','noindex, nofollow');
     if(!enabled()){send(ctx.res,'<h1>404 — page not found</h1>',404);return false;}
     if(!ctx.currentUser || !ctx.session?.token){
       const requested=String(ctx.req?.url||'').split('?')[0];
@@ -46,7 +48,7 @@ module.exports=function(router,{enabled=()=>process.env.GOBOOKR_STAFF_PORTAL_ENA
     send(ctx.res,layout({title:'Employee portal',currentUser:ctx.currentUser,session:ctx.session,robots:'noindex,nofollow',body:`<section class="section container"><h1>Employee portal</h1><p>${escapeHtml(message)}</p><a href="${back}">${backLabel}</a></section>`}),status);
   }
   const route=(method,path,fn)=>router[method](path,async ctx=>{if(!available(ctx))return;try{await fn(ctx,getStore());}catch(error){denied(ctx,error);}});
-  route('get','/owner',async(ctx,s)=>{await s.list(actor(ctx));page(ctx,'GoBookr owner',views.overview());});
+  route('get','/owner',async(ctx,s)=>{page(ctx,'GoBookr owner',views.overview(await s.workSummary(actor(ctx))));});
   route('get','/owner/staff',async(ctx,s)=>page(ctx,'GoBookr team',views.roster(await s.list(actor(ctx)))));
   route('get','/owner/staff/new',async(ctx,s)=>{await s.list(actor(ctx));page(ctx,'Add employee',views.form({csrf:ctx.session.csrf_token}));});
   route('get','/owner/staff/design',async(ctx,s)=>{
@@ -71,7 +73,7 @@ module.exports=function(router,{enabled=()=>process.env.GOBOOKR_STAFF_PORTAL_ENA
   });
   route('get','/owner/guides',async(ctx,s)=>{await s.list(actor(ctx));page(ctx,'Owner guide',views.ownerGuides());});
   route('get','/owner/payroll',async(ctx,s)=>{await s.list(actor(ctx));page(ctx,'Payroll setup',views.payroll());});
-  route('get','/owner/work',async(ctx,s)=>page(ctx,'Assigned work',views.ownerWork(await s.list(actor(ctx)),await s.workList(actor(ctx),true),ctx.session.csrf_token)));
+  route('get','/owner/work',async(ctx,s)=>page(ctx,'Assigned work',views.ownerWork(await s.list(actor(ctx)),await s.workList(actor(ctx),true),ctx.session.csrf_token,await s.workSummary(actor(ctx)))));
   route('post','/owner/work',async(ctx,s)=>{
     if(!csrf(ctx))return pageError(ctx,403,'Form expired. Reload before trying again.');
     const w=await s.workAdd(actor(ctx),ctx.body);redirect(ctx.res,'/owner/work/'+w.id);

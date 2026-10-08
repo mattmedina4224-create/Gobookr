@@ -6,9 +6,10 @@ This preview foundation does not connect to Microsoft 365, ingest mail, send ema
 
 ## Current behavior
 
-- Owners see their organization's latest 100 tickets, with All/Open/Assigned/Resolved filters. Owners assign tickets only to active employees with support.read and may reopen or resolve tickets.
+- Owners see their organization's latest 100 tickets, with All/New/In progress/Assigned/Resolved filters. Owners assign tickets only to active employees with support.read and may set New, In progress or Resolved, including reopening tickets. New retains the stored `open` value.
 - Employees see only tickets assigned to them, with fresh membership and session checks on every request. Revocation immediately removes access. Customers, other organizations, and unassigned staff cannot read a ticket.
 - support.read permits assigned-ticket viewing and marking as read. support.reply adds support.read and permits saving a personal reply draft. Sending is unavailable. Drafts are private to their author; owner/team shared drafts are not implemented.
+- Save confirmations distinguish marking read, updating assignment/status and saving an unsent draft. Empty filtered queues explain that All restores the accessible ticket list.
 - Explicit Mark as read uses a CSRF-protected POST; opening a GET does not write data. Read state is per user and tracks the latest message ID. Unread indicators update when a later message arrives.
 - Thread detail is bounded to 50 latest messages and 50 activity records. Lists and transcript are not full mailbox history or push notifications.
 - All message bodies are escaped plain text. HTML, remote images, active links, and attachments are not rendered. Sender is labeled unverified. This prevents active email content in the dashboard; it does not guarantee phishing detection.
@@ -28,3 +29,5 @@ Before enabling real mail, review Microsoft 365 least-privilege OAuth scopes, em
 `GOBOOKR_PGLITE_MODULE=<module> node --test tests/support-inbox.test.js tests/staff-portal.test.js tests/staff-work.test.js tests/support-email-view.test.js tests/staff-permissions.test.js`
 
 Tests cover scope/assignment, revocation, stale sessions and edits, read/reply separation, unread state, audit rollback, browser-client database denial, CSRF and safe rendering. Synthetic fixtures exist only in the isolated in-memory test database. Live mobile/desktop signed-in QA and Microsoft 365 delivery tests remain required before production rollout.
+
+Re-run the updated status constraint from `support.sql` in preview before deploying this increment. The change accepts `in_progress` without rewriting any existing tickets. Production remains unchanged.

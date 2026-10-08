@@ -117,7 +117,7 @@ test('admin guard uses fresh staff grants and rejects read-only write attempts a
 test('portal routes are dormant by default, require owner access and reject forged forms',async()=>{
   const source=fs.readFileSync(path.join(__dirname,'../routes/staff.js'),'utf8');
   const module={exports:{}};const routes=new Map();let mutations=0,reads=0;
-  const fakeStore={async list(){reads++;return[];},async add(){mutations++;return{id:7};},async get(){throw new Error('Owner access required');}};
+  const fakeStore={async list(){reads++;return[];},async workSummary(){reads++;return {total:0,open:0,blocked:0,in_progress:0,done:0};},async add(){mutations++;return{id:7};},async get(){throw new Error('Owner access required');}};
   vm.runInNewContext(source,{module,process:{env:{}},require(id){
     if(id==='../lib/layout')return{layout:({body})=>body};
     if(id==='../lib/http')return{send(res,body,status=200){res.status=status;res.body=body;},redirect(res,url){res.status=302;res.url=url;},flashFromQuery(){return null;}};

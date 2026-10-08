@@ -6,7 +6,7 @@ Updated 2026-10-08. Applies to PR141 preview; signed-in mobile/desktop acceptanc
 
 Sign in with your owner account. Open Owner → Team → Add employee. The employee must already have a GoBookr account. Enter that account's email, name and job title; choose only necessary permissions, confirm the identity, then Save. Saving does not send an invitation or create a new login.
 
-Use Owner → Assigned work to assign tasks. Employees see their own work in My work. Revoking employee access removes operational access; it does not delete their personal GoBookr account.
+Use Owner → Assigned work to assign tasks. The Owner overview and Assigned work show totals for open, blocked, in-progress and completed assignments across the entire team history. Open includes blocked and in-progress tasks; the list below shows only the latest 200. Employees see their own work in My work. Revoking employee access removes operational access; it does not delete their personal GoBookr account.
 
 ## Permission reference
 
@@ -21,7 +21,7 @@ Use Owner → Assigned work to assign tasks. Employees see their own work in My 
 | Read support | Read assigned support tickets and their messages |
 | Draft support replies | Save private reply drafts on assigned tickets; includes reading |
 
-Owner assigns tickets. Employees cannot browse other employees' assigned tickets. Reply drafts are not sent to customers. Do not grant every permission by default.
+The owner assigns tickets and selects New, In progress or Resolved. New is stored as `open` for compatibility. Use inbox filters to focus the queue and choose All when a filter has no results. Employees cannot browse other employees' assigned tickets. Reply drafts are not sent to customers. Saving shows “Draft saved. No email was sent.” Read and status changes also show confirmation. To reopen a resolved ticket, the owner selects New or In progress and saves. Do not grant every permission by default.
 
 ## Daily workflow
 
@@ -41,3 +41,14 @@ Microsoft 365 is not connected. New support emails currently remain in the mailb
 - **Can I run payroll?** No. Payroll provider setup and processing are not connected.
 - **What if access fails?** Ask the owner to check the account email, active status and permissions. Do not share your password.
 
+
+## Troubleshooting and escalation
+
+- **Form expired:** reload the page to get a fresh form and try again. Do not reuse a saved form from a previous login.
+- **Changed; reload before editing:** another update won the version check. Reload, review the current assignment or draft, and apply only the changes still needed.
+- **Employee needs active support read access:** check the employee's Access tab before assigning a ticket. Revoked employees cannot read tickets or update work.
+- **Blank inbox:** check the filter and assignment. Microsoft 365 delivery is still pending; dashboard records do not prove inbound delivery.
+- **Blocked assignment:** mark it Blocked and leave a short internal note describing what you need. The owner can see blocked totals and inspect the task history.
+- **Suspected account compromise:** stop work, notify the owner through a known contact method, and have the owner revoke employee access. Account session invalidation, password recovery and provider incident response are separate actions; revoking operational access does not delete the personal account.
+
+Do not include passwords, verification codes, bank details or identity documents in tasks or notes. Send uncertain account ownership, licenses and billing requests to the owner.

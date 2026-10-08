@@ -46,5 +46,5 @@ test('support routes reject anonymous, disabled and forged requests before invok
  module.exports(router,{store:s,staffStore:()=>({})});let c=ctx();await handlers.get('get /owner/support')(c);assert.equal(c.res.status,404);
  module.exports(router,{enabled:()=>true,store:s,staffStore:()=>({})});c=ctx();c.currentUser=null;await handlers.get('get /staff/support')(c);assert.equal(c.res.url,'/login?next=%2Fstaff%2Fsupport');
  for(const url of ['/owner/support/:id/read','/owner/support/:id/manage','/owner/support/:id/draft','/staff/support/:id/read','/staff/support/:id/draft']){c=ctx();await handlers.get('post '+url)(c);assert.equal(c.res.status,403);}
- assert.equal(calls,0);c=ctx();c.body._csrf='csrf';await handlers.get('post /owner/support/:id/read')(c);assert.equal(calls,1);assert.equal(c.res.url,'/owner/support/1');assert.equal(handlers.has('post /staff/support/:id/manage'),false);
+ assert.equal(calls,0);c=ctx();c.body._csrf='csrf';await handlers.get('post /owner/support/:id/read')(c);assert.equal(calls,1);assert.equal(c.res.url,'/owner/support/1?saved=read');assert.equal(handlers.has('post /staff/support/:id/manage'),false);
 });
