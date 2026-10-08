@@ -2,7 +2,12 @@ User-agent: *
 Allow: /
 Disallow: /dashboard/
 Disallow: /admin
+Disallow: /owner
+Disallow: /staff
 Disallow: /login
 Disallow: /signup
+Disallow: /forgot-password
+Disallow: /reset-password
 
 Sitemap: https://gobookr.com/sitemap.xml
+
