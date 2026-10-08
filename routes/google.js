@@ -3,6 +3,7 @@
 const db = require('../db');
 const { createSession, setSessionCookie } = require('../lib/auth');
 const { redirect } = require('../lib/http');
+const { dashboardDestination } = require('../lib/dashboard-destination');
 
 async function verifyGoogleCredential(credential) {
   const clientId = String(process.env.GOOGLE_CLIENT_ID || '').trim();
@@ -73,6 +74,7 @@ module.exports = function (router) {
     const token = createSession(user.id);
     setSessionCookie(ctx.res, token);
     if (next) return redirect(ctx.res, next);
-    return redirect(ctx.res, user.role === 'pro' ? '/dashboard/pro' : '/dashboard/customer');
+    return redirect(ctx.res, dashboardDestination(user, { token }));
   });
 };
+
