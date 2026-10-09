@@ -32,6 +32,14 @@ function harness(db) {
  return {team,calls,subscription,request,setFailure:v=>failure=v};
 }
 function initialize() {const db=database();db.exec(schema);db.exec(fs.readFileSync(path.join(__dirname,'../db/migrations/20261009064029_business_sponsored_professionals.sql'),'utf8'));db.exec(fs.readFileSync(path.join(__dirname,'../db/migrations/20261009065235_personal_checkout_sponsorship_fencing.sql'),'utf8'));return db;}
+test('preview team billing permits CLI sandbox keys and rejects live or publishable keys',()=>{
+ const filename=path.join(__dirname,'../lib/stripe.js'),local=createRequire(filename);
+ for(const [key,expected] of [['sk_test_fixture',true],['rk_test_fixture',true],['rkcs_test_fixture',true],['sk_live_fixture',false],['rk_live_fixture',false],['pk_test_fixture',false]]) {
+  const module={exports:{}};
+  vm.runInNewContext(fs.readFileSync(filename,'utf8'),{module,exports:module.exports,require:local,process:{env:{VERCEL_ENV:'preview',STRIPE_SECRET_KEY:key,STRIPE_PRICE_ID:'price_fixture',STRIPE_WEBHOOK_SECRET:'whsec_fixture',APP_URL:'https://preview.example'}}});
+  assert.equal(module.exports.businessTeamBillingConfigured(),expected,key);
+ }
+});
 test('business teams require ownership, explicit price consent, matching account and a claimed pro',async()=>{
  const db=initialize();try {
  const h=harness(db);
