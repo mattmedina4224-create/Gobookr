@@ -20,6 +20,7 @@ Business accounts remain complimentary. Claimed business owners invite professio
 ## Deployment
 
 Migration: db/migrations/20261009064029_business_sponsored_professionals.sql
+Also apply db/migrations/20261009065235_personal_checkout_sponsorship_fencing.sql. Personal checkout retries reuse a persisted key, and the reservation outlasts Stripe's checkout expiry to prevent a pending personal checkout from overlapping sponsorship.
 
 Apply the migration before setting BUSINESS_TEAMS_ENABLED=1. The feature is disabled by default, preserving deployments that do not have the schema yet.
 

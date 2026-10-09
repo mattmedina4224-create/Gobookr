@@ -63,12 +63,13 @@ module.exports = function (router) {
     }
 
     try {
-      require('../lib/business-team').reservePersonalCheckout(profile.id);
+      const checkoutKey=require('../lib/business-team').reservePersonalCheckout(profile.id);
       const checkoutSession = await createCheckoutSession({
         proId: profile.id,
         email: ctx.currentUser.email,
         trialEndsAt: subscription.status === 'trialing' ? subscription.trial_ends_at : null,
         embedded: embeddedCheckoutConfigured(),
+        idempotencyKey: checkoutKey,
       });
 
       if (!embeddedCheckoutConfigured() && checkoutSession && checkoutSession.url) return redirect(ctx.res, checkoutSession.url);

@@ -30,7 +30,7 @@ function harness(db) {
  async function request(method,p,userId,body={}) {const user=userId?db.prepare('SELECT * FROM users WHERE id=?').get(userId):null;const res={writeHead(status,headers){this.status=status;this.headers=headers;},end(body){this.body=body;}};await routes[method+' '+p]({currentUser:user,session:{csrf_token:'csrf'},res,body,query:{},params:{}});return res;}
  return {team,calls,subscription,request,setFailure:v=>failure=v};
 }
-function initialize() {const db=database();db.exec(schema);db.exec(fs.readFileSync(path.join(__dirname,'../db/migrations/20261009064029_business_sponsored_professionals.sql'),'utf8'));return db;}
+function initialize() {const db=database();db.exec(schema);db.exec(fs.readFileSync(path.join(__dirname,'../db/migrations/20261009064029_business_sponsored_professionals.sql'),'utf8'));db.exec(fs.readFileSync(path.join(__dirname,'../db/migrations/20261009065235_personal_checkout_sponsorship_fencing.sql'),'utf8'));return db;}
 test('business teams require ownership, explicit price consent, matching account and a claimed pro',async()=>{
  const db=initialize();try {
  const h=harness(db);
@@ -72,7 +72,7 @@ test('failed billing retries reuse the same key and preserve membership until co
 });
 test('personal checkout, paid personal plans, expired invites and second businesses cannot overlap sponsorship',async()=>{
  const db=initialize();try {const h=harness(db),pro=db.prepare('SELECT * FROM users WHERE id=2').get();
- h.team.ensurePlan(10);h.team.invite(10,'pro@example.com');h.team.reservePersonalCheckout(12);
+ h.team.ensurePlan(10);h.team.invite(10,'pro@example.com');const checkoutKey=h.team.reservePersonalCheckout(12);assert.equal(h.team.reservePersonalCheckout(12),checkoutKey);
  assert.throws(()=>h.team.accept(pro,1),/expired|no longer/);
  db.exec("UPDATE subscriptions SET personal_checkout_until=NULL,stripe_subscription_id='sub_personal',status='active' WHERE pro_id=12");
  assert.throws(()=>h.team.accept(pro,1),/individual subscription/);

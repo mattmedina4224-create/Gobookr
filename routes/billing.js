@@ -139,8 +139,8 @@ module.exports = function (router) {
     if (!stripeConfigured()) return redirect(ctx.res, '/dashboard/pro/billing?error=' + encodeURIComponent('Stripe billing is not configured yet.'));
     if (subscription.stripe_customer_id && subscription.stripe_subscription_id) return redirect(ctx.res, '/dashboard/pro/billing?error=' + encodeURIComponent('Billing is already connected. Use Manage payment & subscription.'));
     try {
-      require('../lib/business-team').reservePersonalCheckout(profile.id);
-      const session = await createCheckoutSession({ proId: profile.id, email: ctx.currentUser.email, trialEndsAt: subscription.status === 'trialing' ? subscription.trial_ends_at : null });
+      const checkoutKey=require('../lib/business-team').reservePersonalCheckout(profile.id);
+      const session = await createCheckoutSession({ proId: profile.id, email: ctx.currentUser.email, trialEndsAt: subscription.status === 'trialing' ? subscription.trial_ends_at : null, idempotencyKey:checkoutKey });
       if (!session || !session.url) throw new Error('Stripe did not return a checkout URL.');
       redirect(ctx.res, session.url);
     } catch (err) {
