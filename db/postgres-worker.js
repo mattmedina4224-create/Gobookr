@@ -128,6 +128,8 @@ function serializeError(err) {
 }
 
 function isCacheableRead(op, sql) {
+  // Consent and billing state must be current across concurrent Vercel instances.
+  if (/\bbusiness_team_(members|plans)\b/i.test(sql)) return false;
   return (op === 'get' || op === 'all') && /^\s*SELECT\b/i.test(sql);
 }
 

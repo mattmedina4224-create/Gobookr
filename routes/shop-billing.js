@@ -13,6 +13,7 @@ function shop(ctx) {
 module.exports = function(router) {
   router.get('/dashboard/shop/billing', async ctx => {
     const s = shop(ctx); if (!s) return;
+    if(require('../lib/business-team').enabled())return redirect(ctx.res,'/dashboard/shop/team');
     const sub = db.prepare('SELECT * FROM shop_subscriptions WHERE shop_id=?').get(s.id);
     const connected = Boolean(sub && sub.provider_customer_id && sub.provider_subscription_id);
     const legacy = connected ? `<div class="panel"><h3>Existing subscription</h3><p>You have a previous Stripe subscription. Review or cancel it in Stripe.</p><form method="POST" action="/dashboard/shop/billing/portal"><input type="hidden" name="_csrf" value="${escapeHtml(ctx.session.csrf_token)}"><button class="btn secondary">Manage existing subscription</button></form></div>` : '';
