@@ -81,6 +81,12 @@ function findSubscriptionForStripeObject(object) {
 module.exports = function (router) {
   router.get('/dashboard/pro/billing', async (ctx) => {
     const profile = requirePro(ctx); if (!profile) return;
+    const businessTeam=require('../lib/business-team');
+    const membership=businessTeam.membership(profile.id);
+    if(membership) {
+      const covered=businessTeam.coverage([Number(profile.id)]).length>0;
+      return send(ctx.res,layout({title:'Business-sponsored membership',currentUser:ctx.currentUser,session:ctx.session,body:`<section class="section container"><div class="panel"><span class="badge">Business team</span><h1>${covered?'Your business has you covered':'Your team membership'}</h1><p>${escapeHtml(membership.business_name)} ${covered?'covers your GoBookr Professional membership.':'has not activated your sponsored membership yet.'}</p><p>You keep ownership of your profile and booking link. Contact your business owner about billing, or leave the team to manage your own membership.</p><a class="btn" href="/dashboard/pro/team">Manage business team</a></div></section>`}));
+    }
     const subscription = db.prepare('SELECT * FROM subscriptions WHERE pro_id = ?').get(profile.id);
     if (!subscription) return send(ctx.res, '<h1>Subscription record missing</h1>', 500);
 
@@ -127,12 +133,14 @@ module.exports = function (router) {
 
   router.post('/dashboard/pro/billing/checkout', async (ctx) => {
     const profile = requirePro(ctx); if (!profile) return;
+    if(require('../lib/business-team').membership(profile.id)) return redirect(ctx.res,'/dashboard/pro/team?message='+encodeURIComponent('Leave your business team before starting an individual subscription.'));
     const subscription = db.prepare('SELECT * FROM subscriptions WHERE pro_id = ?').get(profile.id);
     if (!subscription) return redirect(ctx.res, '/dashboard/pro/billing?error=' + encodeURIComponent('Subscription record missing.'));
     if (!stripeConfigured()) return redirect(ctx.res, '/dashboard/pro/billing?error=' + encodeURIComponent('Stripe billing is not configured yet.'));
     if (subscription.stripe_customer_id && subscription.stripe_subscription_id) return redirect(ctx.res, '/dashboard/pro/billing?error=' + encodeURIComponent('Billing is already connected. Use Manage payment & subscription.'));
     try {
-      const session = await createCheckoutSession({ proId: profile.id, email: ctx.currentUser.email, trialEndsAt: subscription.status === 'trialing' ? subscription.trial_ends_at : null });
+      const checkoutKey=require('../lib/business-team').reservePersonalCheckout(profile.id);
+      const session = await createCheckoutSession({ proId: profile.id, email: ctx.currentUser.email, trialEndsAt: subscription.status === 'trialing' ? subscription.trial_ends_at : null, idempotencyKey:checkoutKey });
       if (!session || !session.url) throw new Error('Stripe did not return a checkout URL.');
       redirect(ctx.res, session.url);
     } catch (err) {
@@ -176,6 +184,8 @@ module.exports = function (router) {
         const status = normalizedSubscriptionStatus(subscription.status);
         const item = subscription.items && subscription.items.data && subscription.items.data[0];
         const periodEnd = unixToSqlite(subscription.current_period_end || (item && item.current_period_end));
+        const businessTeam=require('../lib/business-team');
+        if(businessTeam.enabled() && businessTeam.sync(subscription)) return json(ctx.res,200,{received:true});
         const shopLocal = findShopSubscriptionForStripeObject(subscription);
         if (shopLocal) db.prepare(`UPDATE shop_subscriptions SET status = ?, provider_customer_id = ?, provider_subscription_id = ?, current_period_end = ?, updated_at = CURRENT_TIMESTAMP WHERE id = ?`)
           .run(status, String(subscription.customer || shopLocal.provider_customer_id || ''), subscription.id, periodEnd, shopLocal.id);
