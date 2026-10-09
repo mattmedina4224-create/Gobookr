@@ -21,6 +21,7 @@ module.exports = function (router) {
   router.get('/dashboard/shop', async (ctx) => {
     const shop = ownedShop(ctx); if (!shop) return;
     const body = `<section class="section container" style="max-width:900px;"><div class="section-head"><div><h1>${escapeHtml(shop.name)}</h1><p class="muted">Manage your independent GoBookr business page.</p></div><a class="btn secondary" href="/shop/${shop.id}">View public page</a></div>
+    ${process.env.BUSINESS_TEAMS_ENABLED==='1'?'<div class="panel"><h2>Your business team</h2><p>Invite professionals by their GoBookr email and cover their $20/month memberships with one business bill.</p><a class="btn" href="/dashboard/shop/team">Manage team &amp; billing</a></div>':''}
     <div class="panel"><h3>Business details</h3><form method="POST" action="/dashboard/shop"><input type="hidden" name="_csrf" value="${escapeHtml(ctx.session?.csrf_token || '')}">
     <div class="field"><label>Business name</label><input name="name" maxlength="160" required value="${escapeHtml(shop.name)}"></div>
     <div class="field"><label>Description</label><textarea name="description" rows="5" maxlength="3000">${escapeHtml(shop.description || '')}</textarea></div>

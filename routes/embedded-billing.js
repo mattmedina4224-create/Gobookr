@@ -49,6 +49,7 @@ module.exports = function (router) {
   router.post('/dashboard/pro/billing/checkout', async (ctx) => {
     const profile = requirePro(ctx);
     if (!profile) return;
+    if(require('../lib/business-team').membership(profile.id)) return redirect(ctx.res,'/dashboard/pro/team?message='+encodeURIComponent('Your business team manages sponsorship. Leave the team before starting an individual subscription.'));
 
     const subscription = db.prepare('SELECT * FROM subscriptions WHERE pro_id = ?').get(profile.id);
     if (!subscription) {
@@ -62,6 +63,7 @@ module.exports = function (router) {
     }
 
     try {
+      require('../lib/business-team').reservePersonalCheckout(profile.id);
       const checkoutSession = await createCheckoutSession({
         proId: profile.id,
         email: ctx.currentUser.email,

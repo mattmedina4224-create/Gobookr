@@ -12,7 +12,7 @@ test('owned profiles require completed onboarding before public discovery', () =
   assert.match(subscription, /if \(!profile\.onboarding_completed\) return false/);
   assert.match(subscription, /importedListing/);
   assert.match(listings, /if \(!pro\.onboarding_completed\) return null/);
-  assert.match(listings, /if \(!subscription \|\| !isPubliclyVisibleSubscription\(subscription\)\) return null/);
+  assert.match(listings, /!coveredPros\.has\(proId\) && \(!subscription \|\| !isPubliclyVisibleSubscription\(subscription\)\)/);
   assert.match(listings, /importedListing/);
 });
 
