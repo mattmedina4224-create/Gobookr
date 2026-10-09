@@ -27,7 +27,8 @@ function harness(db) {
  const team=load('lib/business-team.js',{'../db':db,'./business-team-stripe':stripe});
  const routes={},router={get:(p,f)=>routes['GET '+p]=f,post:(p,f)=>routes['POST '+p]=f};
  load('routes/business-team.js',{'../db':db,'../lib/business-team':team,'../lib/layout':{layout:x=>(x.flash?.message||'')+x.body},'../lib/stripe':{businessTeamBillingConfigured:()=>true,createPortalSession:async()=>({url:'https://billing.stripe.com/mock'})}})(router);
- async function request(method,p,userId,body={}) {const user=userId?db.prepare('SELECT * FROM users WHERE id=?').get(userId):null;const res={writeHead(status,headers){this.status=status;this.headers=headers;},end(body){this.body=body;}};await routes[method+' '+p]({currentUser:user,session:{csrf_token:'csrf'},res,body,query:{},params:{}});return res;}
+ load('routes/shop-dashboard.js',{'../db':db,'../lib/layout':{layout:x=>x.body}})(router);
+ async function request(method,p,userId,body={},query={}) {const user=userId?db.prepare('SELECT * FROM users WHERE id=?').get(userId):null;const res={writeHead(status,headers){this.status=status;this.headers=headers;},end(body){this.body=body;}};await routes[method+' '+p]({currentUser:user,session:{csrf_token:'csrf'},res,body,query,params:{}});return res;}
  return {team,calls,subscription,request,setFailure:v=>failure=v};
 }
 function initialize() {const db=database();db.exec(schema);db.exec(fs.readFileSync(path.join(__dirname,'../db/migrations/20261009064029_business_sponsored_professionals.sql'),'utf8'));db.exec(fs.readFileSync(path.join(__dirname,'../db/migrations/20261009065235_personal_checkout_sponsorship_fencing.sql'),'utf8'));return db;}
@@ -111,5 +112,28 @@ test('sponsored visibility reaches discovery hydration and requires completed on
  const listing=load('lib/pro-listing-data.js',{'../db':db,'./subscription':sub,'./business-team':h.team});
  const profiles=db.prepare('SELECT * FROM pro_profiles WHERE id=12').all();assert.equal(listing.hydratePros(profiles).length,1);assert.equal(sub.isProPubliclyVisible(12),true);
  db.exec('UPDATE pro_profiles SET onboarding_completed=0 WHERE id=12');assert.equal(sub.isProPubliclyVisible(12),false);assert.equal(listing.hydratePros(db.prepare('SELECT * FROM pro_profiles WHERE id=12').all()).length,0);
+ }finally{await db.close();}
+});
+
+test('business setup saves each step without erasing other fields and directs owners to their team',async()=>{
+ const db=initialize();try {
+ db.exec("ALTER TABLE shops ADD city TEXT, ADD state TEXT, ADD street_address TEXT, ADD suite TEXT, ADD zip_code TEXT, ADD phone TEXT, ADD booking_url TEXT, ADD logo_url TEXT, ADD cover_url TEXT, ADD description TEXT, ADD updated_at TIMESTAMPTZ;UPDATE shops SET city='Denver',state='CO',description='Original description',booking_url='https://example.com/book' WHERE id=10;");
+ const h=harness(db);
+ assert.match((await h.request('GET','/dashboard/shop',1,{}, {setup:'basics'})).body,/STEP 1 OF 3/);
+ const basics=await h.request('POST','/dashboard/shop',1,{setup_step:'basics',name:'Fixture Business',city:'littleton',state:'co',street_address:'123 Test Street',zip_code:'80120'});
+ assert.match(basics.headers.Location,/setup=profile/);
+ let shop=db.prepare('SELECT * FROM shops WHERE id=10').get();assert.equal(shop.city,'Littleton');assert.equal(shop.description,'Original description');assert.equal(shop.booking_url,'https://example.com/book');
+ const bad=await h.request('POST','/dashboard/shop',1,{setup_step:'profile',description:'Updated',booking_url:'javascript:alert(1)'});assert.equal(bad.status,422);assert.match(bad.body,/Updated/);assert.equal(db.prepare('SELECT description FROM shops WHERE id=10').get().description,'Original description');
+ const profile=await h.request('POST','/dashboard/shop',1,{setup_step:'profile',description:'Updated',booking_url:'https://example.com/new'});
+ assert.match(profile.headers.Location,/team\?setup=team/);shop=db.prepare('SELECT * FROM shops WHERE id=10').get();assert.equal(shop.street_address,'123 Test Street');assert.equal(shop.zip_code,'80120');assert.equal(shop.description,'Updated');
+ assert.match((await h.request('GET','/dashboard/shop/team',1,{}, {setup:'team'})).body,/Finish business setup/);
+ }finally{await db.close();}
+});
+test('removal review is owner scoped, shows next bill, and cannot mutate membership on GET',async()=>{
+ const db=initialize();try {const h=harness(db);h.team.invite(10,'pro@example.com');h.team.accept(db.prepare('SELECT * FROM users WHERE id=2').get(),1);await h.team.activate(10,'owner@example.com');h.team.sync(h.subscription());
+ const denied=await h.request('GET','/dashboard/shop/team/remove',3,{}, {member_id:'1'});assert.equal(denied.status,404);
+ const review=await h.request('GET','/dashboard/shop/team/remove',1,{}, {member_id:'1'});assert.match(review.body,/New renewal: \$0\/month/);assert.match(review.body,/Confirm removal/);assert.match(review.body,/name="_csrf"/);
+ assert.equal(db.prepare('SELECT status FROM business_team_members WHERE id=1').get().status,'accepted');assert.equal(h.calls.length,1);
+ await h.request('POST','/dashboard/shop/team/remove',1,{member_id:'1'});assert.equal(db.prepare('SELECT status FROM business_team_members WHERE id=1').get().status,'removed');
  }finally{await db.close();}
 });

@@ -195,12 +195,12 @@ module.exports = function (router) {
 
     if (signupType === 'storefront') {
       businessName = String(ctx.body.shop_name || '').trim();
-      city = String(ctx.body.city || '').trim().toLowerCase().replace(/\\b\\w/g, (letter) => letter.toUpperCase());
+      city = String(ctx.body.city || '').trim().toLowerCase().replace(/\b\w/g, (letter) => letter.toUpperCase());
       state = String(ctx.body.state || '').trim().toUpperCase();
       street = String(ctx.body.street_address || '').trim();
       suite = String(ctx.body.suite || '').trim();
       zip = String(ctx.body.zip_code || '').trim();
-      if (!businessName || !street || !city || !/^[A-Z]{2}$/.test(state) || !/^\\d{5}(?:-\\d{4})?$/.test(zip)) return redirect(ctx.res, "/signup?role=storefront&error=" + encodeURIComponent("Please complete a valid storefront address."));
+      if (!businessName || !street || !city || !/^[A-Z]{2}$/.test(state) || !/^\d{5}(?:-\d{4})?$/.test(zip)) return redirect(ctx.res, "/signup?role=storefront&error=" + encodeURIComponent("Please complete a valid storefront address."));
     }
 
     let userId;
@@ -230,7 +230,7 @@ module.exports = function (router) {
 
     const token = createSession(userId);
     setSessionCookie(ctx.res, token);
-    redirect(ctx.res, claim ? `/pro/${claim.id}/claim` : role === 'pro' ? '/dashboard/pro/onboarding' : signupType === 'storefront' ? '/dashboard/shop/billing' : '/dashboard/customer');
+    redirect(ctx.res, claim ? `/pro/${claim.id}/claim` : role === 'pro' ? '/dashboard/pro/onboarding' : signupType === 'storefront' ? (process.env.BUSINESS_TEAMS_ENABLED==='1'?'/dashboard/shop?setup=basics':'/dashboard/shop/billing') : '/dashboard/customer');
   });
 
   router.post('/logout', async (ctx) => {

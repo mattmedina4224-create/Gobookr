@@ -29,7 +29,7 @@ function load(file, dependencies, globals = {}) {
 function app(options = {}) {
   const state = {
     profiles: [{ id: 42, user_id: null, claim_status: 'unclaimed', business_name: 'Example <Salon>', city: 'Denver', state: 'CO' }],
-    admins: new Set(), users: [], claims: [], subscriptions: [], categories: [], writes: [], sessions: new Map(),
+    admins: new Set(), shops: [], users: [], claims: [], subscriptions: [], categories: [], writes: [], sessions: new Map(),
   };
   const db = {
     exec(sql) { state.writes.push(sql); },
@@ -54,6 +54,8 @@ function app(options = {}) {
             state.users.push(user);
             return { changes: 1, lastInsertRowid: user.id };
           }
+          if (sql.startsWith('INSERT INTO shops')) { state.shops.push(args); return {changes:1,lastInsertRowid:10}; }
+          if (sql.startsWith('INSERT INTO shop_subscriptions')) return {changes:1};
           if (sql.startsWith('INSERT INTO pro_profiles')) {
             const profile = { id: 43, user_id: args[0], business_name: args[1] };
             state.profiles.push(profile);
@@ -91,6 +93,7 @@ function app(options = {}) {
   const common = { '../db': db, '../lib/http': httpHelpers, '../lib/util': require('../lib/util'), '../lib/layout': require('../lib/layout'), '../lib/pro-categories': require('../lib/pro-categories') };
   common['../lib/claims'] = load('lib/claims.js', { '../db': db, './http': httpHelpers });
   const authRoute = load('routes/auth.js', { ...common, '../lib/auth': auth, './onboarding': () => {} }, {
+    process: {env: {BUSINESS_TEAMS_ENABLED:options.businessTeams?'1':''}},
     fetch: async () => { if (options.claimOnly) throw new Error('Claim signup must not geocode'); return { ok: true, json: async () => [] }; },
   });
   const claimRoute = load('routes/claim.js', common);
@@ -309,4 +312,11 @@ test('password and verified Google login preserve explicitly provisioned privile
 test('already claimed profiles fail closed on the claim page', () => {
   const source = fs.readFileSync(path.join(__dirname, '..', 'routes', 'claim.js'), 'utf8');
   assert.match(source, /if \(pro\.user_id \|\| pro\.claim_status === 'claimed'\) return send\(ctx\.res, '<h1>This profile has already been claimed\.<\/h1>', 409\);/);
+});
+
+test('business signup accepts real ZIP codes, normalizes city, and starts guided setup',async()=>{
+ const a=app({businessTeams:true});
+ const form={name:'Test owner',email:'business@example.test',password:'password123',legal_agreement:'1',role:'storefront',shop_name:'Test business',street_address:'123 Test Street',city:'littleton',state:'co',zip_code:'80120'};
+ const res=await a.request('POST','/signup',form);assert.equal(res.headers.Location,'/dashboard/shop?setup=basics');assert.equal(a.state.shops.length,1);assert.equal(a.state.shops[0][2],'Littleton');assert.equal(a.state.shops[0][6],'80120');
+ const invalid=app({businessTeams:true});await invalid.request('POST','/signup',{...form,zip_code:'bad'});assert.equal(invalid.state.shops.length,0);assert.equal(invalid.state.users.length,0);
 });
