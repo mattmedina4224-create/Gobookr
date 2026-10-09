@@ -245,3 +245,40 @@
   .market-service { margin-top:6px; }
   .market-meta { margin-top:8px; }
 }
+
+/* Bring public discovery into the shared professional workspace style. */
+.home-shell .home-hero h1 { color:#0b1f3a; }
+.home-shell .home-eyebrow,.home-shell .home-section-kicker { color:#526174; letter-spacing:.12em; font-size:.72rem; }
+.home-shell .home-search-card { border-radius:18px; border-color:#e4e9f0; box-shadow:0 8px 30px rgba(11,31,58,.045); padding:18px; }
+.home-shell .home-search-mode { border-radius:10px; background:#f5f8fc; }
+.home-shell .home-search-mode a { border-radius:8px; }
+.home-shell .home-pro-claim-entry { border-radius:16px; background:#f5f8fc; border-color:#e4e9f0; }
+.home-shell .home-pro-placeholder { background:#eef2f7; color:#0b1f3a; }
+.home-shell .home-pro-card { border-radius:16px; border-color:#e4e9f0; box-shadow:0 2px 8px rgba(11,31,58,.025); }
+.home-shell .home-pro-info { padding:18px; }
+.home-shell .home-pro-info h3 { color:#0b1f3a; }
+.home-shell .home-trust-icon { background:#edf7f1; color:#267245; border-radius:10px; }
+.home-shell .home-openings-cta { border-radius:14px; border-color:#dce9e1; background:#f5faf7; }
+.home-shell .home-pills a { border-radius:9px; border-color:#e4e9f0; }
+.search-layout .filters { border-radius:16px; box-shadow:0 8px 30px rgba(11,31,58,.035); }
+.search-layout .pro-card { border-radius:16px; box-shadow:0 2px 8px rgba(11,31,58,.025); }
+.search-layout .pro-card h3 { color:#0b1f3a; }
+.search-layout .pro-card-footer { border-top-color:#e9edf3; }
+.profile-page .profile-head { border-radius:20px; border-color:#e4e9f0; box-shadow:0 8px 30px rgba(11,31,58,.045); }
+.profile-page .panel { border-radius:18px; }
+.profile-page .profile-head h1 { color:#0b1f3a; letter-spacing:-.03em; }
+.profile-page .profile-categories .badge { border-radius:7px; }
+.profile-page .service-row { padding:14px 0; }
+.profile-page .booking-unavailable { border-radius:12px; background:#f5f8fc; }
+@media(max-width:600px) {
+  .home-shell .home-search-card { padding:14px; }
+  .profile-page .profile-head { padding:22px; }
+  .home-shell .home-search-mode a { font-size:.78rem; padding:9px 10px; }
+}
+
+.market-pro-card { border-radius:16px; border-color:#e4e9f0; box-shadow:0 2px 8px rgba(11,31,58,.025); }
+.market-avatar-fallback { background:#0b1f3a; color:#fff; border-radius:14px; }
+.market-name-row h3 { color:#0b1f3a; font-weight:700; }
+.market-status { border-radius:6px; background:#edf3ff; color:#294a71; }
+.market-verified { background:#edf7f1; border-radius:6px; padding:3px 6px; }
+.avatar[class*="accent-"] { background:#eef2f7; color:#0b1f3a; }

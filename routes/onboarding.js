@@ -55,80 +55,30 @@ function onboardingState(profile) {
   return { basicsDone, detailsDone, servicesDone, photosDone, licenseDone, gpsDone, bookingDone, socialDone, requiredDone, progress: Math.round((coreDoneCount / requiredSteps.length) * 100) };
 }
 
-function stepRow(done, title, detail, href, action) {
-  return `
-    <div style="display:flex; align-items:flex-start; gap:12px; padding:14px 0; border-bottom:1px solid var(--paper-line);">
-      <div style="min-width:48px;height:28px;border-radius:999px;display:flex;align-items:center;justify-content:center;flex:0 0 auto;font-size:12px;font-weight:800;background:${done ? 'var(--ok-soft)' : 'var(--paper-soft)'};color:${done ? 'var(--ok)' : 'var(--ink-faint)'};border:1px solid ${done ? 'var(--ok)' : 'var(--paper-line)'};">${done ? 'Done' : 'Open'}</div>
-      <div style="flex:1;min-width:0;">
-        <div style="font-weight:800;">${escapeHtml(title)}</div>
-        <div class="muted" style="margin-top:2px;">${escapeHtml(detail)}</div>
-      </div>
-      ${href ? `<a class="btn secondary small" href="${href}">${escapeHtml(action || (done ? 'Edit' : 'Add'))}</a>` : ''}
-    </div>`;
+function renderSetupPage(ctx, profile, error, requestedStep, selected) {
+  const { STEPS } = require('../lib/pro-setup');
+  const state = onboardingState(profile);
+  let categories = db.prepare('SELECT category FROM pro_categories WHERE pro_id = ?').all(profile.id).map(row => row.category);
+  if (selected) categories = Object.keys(selected).filter(key => selected[key]);
+  const services = db.prepare('SELECT * FROM services WHERE pro_id = ? ORDER BY id').all(profile.id);
+  const photos = db.prepare("SELECT * FROM portfolio_items WHERE pro_id = ? AND image_url IS NOT NULL AND image_url != '' ORDER BY id DESC").all(profile.id);
+  const checks = [state.basicsDone, state.detailsDone, categories.length > 0, state.servicesDone, state.photosDone, state.bookingDone];
+  const resume = STEPS[checks.findIndex(done => !done)] || 'review';
+  const candidate = requestedStep || ctx.query.step;
+  const step = candidate === 'resume' ? resume : STEPS.includes(candidate) ? candidate : 'basics';
+  const body = require('../lib/pro-setup-view').renderSetup({
+    profile, step, resume, state, categories, services, photos, error,
+    values: error ? ctx.body : null,
+    csrf: ctx.session.csrf_token,
+    storageReady: Boolean(process.env.SUPABASE_URL && process.env.SUPABASE_SERVICE_ROLE_KEY),
+  });
+  send(ctx.res, layout({ title: 'Professional setup', currentUser: ctx.currentUser, session: ctx.session, flash: error ? null : flashFromQuery(ctx.query), body }), error ? 422 : 200);
 }
 
 module.exports = function (router) {
   router.get('/dashboard/pro/onboarding', async (ctx) => {
     const profile = requirePro(ctx); if (!profile) return;
-    const state = onboardingState(profile);
-    const { basicsDone, detailsDone, servicesDone, photosDone, licenseDone, gpsDone, bookingDone, socialDone, requiredDone, progress } = state;
-    const finishHelp = requiredDone
-      ? '<p class="helptext" style="margin:8px 0 0;text-align:right;">Your core profile is ready. Optional license, GPS, and social details can still be added later.</p>'
-      : '<p class="helptext" style="margin:8px 0 0;text-align:right;">Finish the required profile, pricing, services, portfolio, and booking-link steps first.</p>';
-
-    const body = `
-      <section class="section container" style="max-width:920px;">
-        <div style="margin-bottom:24px;">
-          <span class="badge category">Professional setup</span>
-          <h1 style="margin-top:10px;">Build your GoBookr profile</h1>
-          <p>Complete the steps below so customers can quickly understand who you are, what you offer, where to find you, and how to book with you.</p>
-          <div style="display:flex;align-items:center;gap:12px;margin-top:16px;">
-            <div style="height:10px;background:var(--paper-line);border-radius:999px;overflow:hidden;flex:1;">
-              <div style="height:100%;width:${progress}%;background:var(--brand);border-radius:999px;"></div>
-            </div>
-            <strong>${progress}%</strong>
-          </div>
-        </div>
-
-        <div class="panel">
-          <h3>Profile checklist</h3>
-          <p class="muted">Complete the five core steps to get your profile ready for customers. License, GPS, and social links are optional enhancements.</p>
-          ${stepRow(basicsDone, 'Business basics', 'Business name, workplace address, city and state.', '/dashboard/pro/profile', basicsDone ? 'Edit' : 'Complete')}
-          ${stepRow(detailsDone, 'About & pricing', 'Add your bio, experience and typical pricing.', '/dashboard/pro/profile', detailsDone ? 'Edit' : 'Add details')}
-          ${stepRow(servicesDone, 'Services', 'List at least one service customers can book.', '/dashboard/pro/profile', servicesDone ? 'Edit' : 'Add service')}
-          ${stepRow(photosDone, 'Portfolio', 'Show customers examples of your work.', '/dashboard/pro/portfolio', photosDone ? 'Manage' : 'Add photos')}
-          ${stepRow(bookingDone, 'Booking link', 'Connect Square, Booksy, Vagaro, Fresha, GlossGenius, or another scheduling page.', '/dashboard/pro/profile', bookingDone ? 'Update' : 'Add link')}
-          ${stepRow(licenseDone, 'License information', 'Add your professional license details if your service requires them.', '/dashboard/pro/profile', licenseDone ? 'Edit' : 'Add license')}
-          ${stepRow(gpsDone, 'Business GPS location', 'Set your business location so customers can see how many miles away you are.', '/dashboard/pro/profile', gpsDone ? 'Update' : 'Set location')}
-          ${stepRow(socialDone, 'Social links', 'Optional links help customers see more of your work.', '#social-links', socialDone ? 'Update' : 'Add links')}
-        </div>
-
-        <div class="panel" id="social-links">
-          <h3>Social links</h3>
-          <p class="muted">Optional, but helpful. These links appear on your public profile so customers can see more of your work.</p>
-          <form method="POST" action="/dashboard/pro/onboarding/socials">
-            <input type="hidden" name="_csrf" value="${escapeHtml(ctx.session.csrf_token)}" />
-            <div class="field"><label for="instagram_url">Instagram</label><input id="instagram_url" name="instagram_url" maxlength="2048" value="${escapeHtml(profile.instagram_url || '')}" placeholder="instagram.com/yourname" /></div>
-            <div class="field"><label for="tiktok_url">TikTok</label><input id="tiktok_url" name="tiktok_url" maxlength="2048" value="${escapeHtml(profile.tiktok_url || '')}" placeholder="tiktok.com/@yourname" /></div>
-            <div class="field"><label for="facebook_url">Facebook</label><input id="facebook_url" name="facebook_url" maxlength="2048" value="${escapeHtml(profile.facebook_url || '')}" placeholder="facebook.com/yourpage" /></div>
-            <div class="field"><label for="website_url">Website</label><input id="website_url" name="website_url" maxlength="2048" value="${escapeHtml(profile.website_url || '')}" placeholder="yourwebsite.com" /></div>
-            <button class="btn" type="submit">Save social links</button>
-          </form>
-        </div>
-
-        <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:flex-start;">
-          <a class="btn secondary" href="/pro/${profile.id}">Preview public profile</a>
-          <div>
-            <form method="POST" action="/dashboard/pro/onboarding/finish">
-              <input type="hidden" name="_csrf" value="${escapeHtml(ctx.session.csrf_token)}" />
-              <button class="btn" type="submit"${requiredDone ? '' : ' disabled aria-disabled="true"'}>Finish setup</button>
-            </form>
-            ${finishHelp}
-          </div>
-        </div>
-      </section>`;
-
-    send(ctx.res, layout({ title: 'Professional setup', currentUser: ctx.currentUser, session: ctx.session, flash: flashFromQuery(ctx.query), body }));
+    renderSetupPage(ctx, profile);
   });
 
   router.post('/dashboard/pro/onboarding/socials', async (ctx) => {
@@ -138,19 +88,23 @@ module.exports = function (router) {
     const facebook = normalizeUrl(ctx.body.facebook_url, ['facebook.com']);
     const website = normalizeUrl(ctx.body.website_url);
     if ([instagram, tiktok, facebook, website].some((value) => value === null)) {
-      return redirect(ctx.res, '/dashboard/pro/onboarding?error=' + encodeURIComponent('One of those links is not valid. Use the correct Instagram, TikTok, Facebook, or website address.'));
+      return renderSetupPage(ctx, { ...profile, instagram_url: ctx.body.instagram_url, tiktok_url: ctx.body.tiktok_url, facebook_url: ctx.body.facebook_url, website_url: ctx.body.website_url }, 'One of those links is not valid. Use the correct Instagram, TikTok, Facebook, or website address.', 'extras');
     }
     db.prepare('UPDATE pro_profiles SET instagram_url = ?, tiktok_url = ?, facebook_url = ?, website_url = ? WHERE id = ?')
       .run(instagram, tiktok, facebook, website, profile.id);
-    redirect(ctx.res, '/dashboard/pro/onboarding?success=' + encodeURIComponent('Social links saved.'));
+    redirect(ctx.res, ctx.body._setup_exit === '1' ? '/dashboard/pro?setup=saved' : '/dashboard/pro/onboarding?step=review&success=' + encodeURIComponent('Social links saved.'));
   });
 
   router.post('/dashboard/pro/onboarding/finish', async (ctx) => {
     const profile = requirePro(ctx); if (!profile) return;
     if (!onboardingState(profile).requiredDone) {
-      return redirect(ctx.res, '/dashboard/pro/onboarding?error=' + encodeURIComponent('Complete your core profile, pricing, services, portfolio, and booking link before finishing setup.'));
+      return redirect(ctx.res, '/dashboard/pro/onboarding?step=review&error=' + encodeURIComponent('Complete your core profile, pricing, services, portfolio, and booking link before finishing setup.'));
     }
+    const categories = db.prepare('SELECT category FROM pro_categories WHERE pro_id = ?').all(profile.id);
+    if (!categories.length) return redirect(ctx.res, '/dashboard/pro/onboarding?step=categories&error=' + encodeURIComponent('Choose at least one specialty.'));
     db.prepare('UPDATE pro_profiles SET onboarding_completed = 1 WHERE id = ?').run(profile.id);
     redirect(ctx.res, `/dashboard/pro?success=${encodeURIComponent('Your GoBookr profile is ready for customers.')}&setup=complete`);
   });
 };
+
+module.exports.renderSetupPage = renderSetupPage;

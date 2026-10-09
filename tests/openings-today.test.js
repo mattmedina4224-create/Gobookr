@@ -78,11 +78,11 @@ test('Story Maker includes opening-time UX', () => {
 
 
 test('pro dashboard makes live availability obvious and closable', () => {
-  const src = read('routes/pro.js');
+  const src = read('routes/pro.js') + read('lib/pro-dashboard-view.js');
   const css = read('public/styles.css');
-  assert.match(src, /Your openings are live today/);
+  assert.match(src, /Openings posted today/);
   assert.match(src, /liveOpenings\.available_slots/);
-  assert.match(src, /View customer page/);
+  assert.match(src, /View openings/);
   assert.match(css, /\.live-opening-banner/);
 });
 
@@ -182,8 +182,8 @@ test('live opening controls stay usable on mobile', () => {
 
 
 test('live opening dashboard control center keeps the main actions together', () => {
-  const src = read('routes/pro.js');
-  assert.match(src, /View customer page/);
+  const src = read('routes/pro.js') + read('lib/pro-dashboard-view.js');
+  assert.match(src, /View openings/);
   assert.match(src, /Share Story/);
   assert.match(src, />Mark filled</);
   assert.match(src, /\/pro\/\$\{profile\.id\}\/opening/);

@@ -10,6 +10,9 @@ const { send, redirect, flashFromQuery } = require('../lib/http');
 const { escapeHtml, money, slugCategory, avgRating } = require('../lib/util');
 
 
+const { dashboardNav, renderDashboard } = require('../lib/pro-dashboard-view');
+const { mergeSetupProfile, setupDestination, PROFILE_FIELDS } = require('../lib/pro-setup');
+const { renderSetupPage } = require('./onboarding');
 const { PROFESSIONAL_CATEGORIES } = require('../lib/pro-categories');
 const PROFILE_CATEGORIES = PROFESSIONAL_CATEGORIES.map((item) => [item.value, item.label]);
 
@@ -160,7 +163,7 @@ function dashNav(active) {
     { key: 'analytics', href: '/dashboard/pro/analytics', label: 'Analytics' },
     { key: 'billing', href: '/dashboard/pro/billing', label: 'Billing' },
   ];
-  return `<nav class="dash-nav">${items.map((i) => `<a href="${i.href}" class="${i.key === active ? 'active' : ''}">${i.label}</a>`).join('')}</nav>`;
+  return dashboardNav(active, items);
 }
 
 function portfolioTile(item, i, gradientFor) {
@@ -169,9 +172,27 @@ function portfolioTile(item, i, gradientFor) {
   return `<div class="portfolio-item" style="${background} overflow:hidden;">${visual}</div>`;
 }
 
+
+function setupRedirect(ctx, profile, allowed, destination) {
+  const setupStep = String(ctx.body._setup_step || '');
+  const res = ctx.res;
+  const parsed = new URL(destination, 'https://gobookr.invalid');
+  const error = parsed.searchParams.get('error');
+  const target = allowed.includes(setupStep) ? setupDestination(setupStep, ctx.body._setup_exit, error) : null;
+  if (!target) return redirect(res, destination);
+  if (error) {
+    const draft = mergeSetupProfile(profile, ctx.body);
+    const selected = setupStep === 'categories' ? Object.fromEntries(PROFILE_CATEGORIES.map(([key]) => [key, ctx.body['category_' + key] === '1'])) : null;
+    return renderSetupPage(ctx, { ...profile, ...Object.fromEntries((PROFILE_FIELDS[setupStep] || []).map(field => [field, draft[field]])) }, error, setupStep === 'license' ? 'extras' : setupStep, selected);
+  }
+  if (ctx.body._setup_add_more === '1' && ['services', 'portfolio'].includes(setupStep)) return redirect(res, '/dashboard/pro/onboarding?step=' + setupStep + '&success=' + encodeURIComponent(parsed.searchParams.get('success') || 'Saved.'));
+  return redirect(res, target + (target.includes('?') ? '&' : '?') + 'success=' + encodeURIComponent('Saved.'));
+}
+
 module.exports = function (router) {
   router.get('/dashboard/pro', async (ctx) => {
     const profile = requirePro(ctx); if (!profile) return;
+    if (!profile.onboarding_completed && ctx.query.setup !== 'saved') return redirect(ctx.res, '/dashboard/pro/onboarding?step=resume');
     const reviews = db.prepare('SELECT rating FROM reviews WHERE pro_id = ?').all(profile.id);
     const dashboardCategories = db.prepare('SELECT category FROM pro_categories WHERE pro_id = ? ORDER BY category').all(profile.id).map((row) => row.category);
     const dashboardCategoryLabel = dashboardCategories.length ? dashboardCategories.map(slugCategory).join(' · ') : 'Professional';
@@ -224,13 +245,14 @@ module.exports = function (router) {
     else if (!hasServices) nextAction = { title: 'Add your services', text: 'Show customers what you offer before they click through to book.', href: '/dashboard/pro/profile', cta: 'Add services' };
     else if (!hasPortfolio) nextAction = { title: 'Show customers your work', text: 'Add a portfolio photo so customers can see your style before booking.', href: '/dashboard/pro/portfolio', cta: 'Add portfolio photo' };
     else if (liveOpenings) nextAction = { title: 'Your openings are live', text: 'Customers can see today’s posted times on GoBookr. Share the Story to put those openings in front of your followers too.', href: '/dashboard/pro/marketing?campaign=openings-today', cta: 'Share today’s openings' };
-    else if (views > 0 && clicks === 0) nextAction = { title: 'Turn profile views into bookings', text: 'Customers are finding you. Share a Book With Me Story to give them another reason to return and book.', href: '/dashboard/pro/marketing?campaign=book-with-me', cta: 'Create a Book With Me Story' };
-    const setupComplete = bookingReady && hasServices && hasPortfolio;
-    const setupPanel = setupComplete
-      ? '<div class="panel"><h3>Your profile is ready to work for you</h3><p class="muted">Your booking link, services, and portfolio are connected. Keep your work fresh and use Marketing when you want more eyes on your profile.</p><a class="btn secondary" href="/dashboard/pro/marketing">Open Marketing Center</a></div>'
-      : '<div class="panel"><h3>Finish setting up your GoBookr profile</h3><p class="muted">A complete profile gives customers the information they need to choose you and book.</p><a class="btn secondary" href="/dashboard/pro/onboarding">Continue setup</a></div>';
-    const setupCompleteBanner = ctx.query.setup === 'complete' ? `<div class="panel" style="border:1px solid #cbd8ee;background:#f5f8ff;"><p class="muted" style="margin:0 0 6px;font-weight:800;">YOU’RE READY</p><h2 style="margin:0 0 8px;">Your GoBookr profile is ready for customers.</h2><p class="muted">See exactly what customers see, then use Marketing when you want to promote an opening.</p><a class="btn" href="/pro/${profile.id}">View my public profile</a><a class="btn ghost" href="/dashboard/pro/marketing">Open Marketing Center</a></div>` : '';
-    const body = `<section class="section container"><div class="dash-layout">${dashNav('overview')}<div>${setupCompleteBanner}<p class="muted" style="margin-bottom:6px;">PRO DASHBOARD</p><h1>Welcome back, ${escapeHtml(ctx.currentUser.name.split(' ')[0])}</h1><p class="muted">See how customers are finding and engaging with your business, then take the next action to help fill your schedule.</p>${liveOpenings ? `<div class="live-opening-banner"><div><strong>🟢 Your openings are live today</strong><span>${Array.isArray(liveOpenings.available_slots) ? liveOpenings.available_slots.map((slot) => escapeHtml(slot)).join(" · ") : ""}</span></div><div><a class="btn small" href="/pro/${profile.id}/opening">View customer page</a><a class="btn secondary small" href="/dashboard/pro/marketing?campaign=openings-today">Share Story</a><form method="POST" action="/dashboard/pro/marketing/campaigns/${liveOpenings.id}/unpublish-openings"><input type="hidden" name="_csrf" value="${escapeHtml(ctx.session.csrf_token)}" /><button class="btn ghost small" type="submit">Mark filled</button></form></div></div>` : ""}<div class="panel" style="padding:14px 16px;margin:16px 0;"><strong>Customer interest · last 30 days</strong><p class="muted" style="margin:4px 0 0;">${escapeHtml(interestSummary)}</p></div><div class="panel" style="padding:14px 16px;margin:16px 0;"><div style="display:flex;justify-content:space-between;gap:12px;align-items:flex-start;flex-wrap:wrap;"><div><strong>Marketing pulse</strong><p class="muted" style="margin:4px 0 0;">${escapeHtml(marketingPulseText)}</p></div><a class="btn secondary small" href="/dashboard/pro/marketing">Open Marketing Center</a></div><div class="stat-cards" style="margin-top:12px;"><div class="stat-card"><div class="num">${Number(marketingPulse.live_openings || 0)}</div><div class="label">Live openings</div></div><div class="stat-card"><div class="num">${Number(marketingPulse.scheduled_campaigns || 0)}</div><div class="label">Scheduled</div></div><div class="stat-card"><div class="num">${campaignViews}</div><div class="label">Campaign views · 30 days</div></div><div class="stat-card"><div class="num">${campaignClicks}</div><div class="label">Campaign booking clicks · 30 days</div></div></div></div><div class="stat-cards"><div class="stat-card"><div class="num">${views}</div><div class="label">Profile views · 30 days</div></div><div class="stat-card"><div class="num">${clicks}</div><div class="label">Booking clicks · 30 days</div></div><div class="stat-card"><div class="num">${saves}</div><div class="label">Saves · current</div></div><div class="stat-card"><div class="num">${avgRating(reviews) ?? '—'}</div><div class="label">Average rating</div></div></div><div class="panel" style="border:1px solid #d7dfec;"><p class="muted" style="margin-bottom:6px;">NEXT BEST ACTION</p><h3>${escapeHtml(nextAction.title)}</h3><p class="muted">${escapeHtml(nextAction.text)}</p><a class="btn" href="${nextAction.href}">${escapeHtml(nextAction.cta)}</a><a class="btn ghost" href="/dashboard/pro/analytics">View analytics</a></div>${setupPanel}<div class="panel"><h3>Your public profile</h3><p>${escapeHtml(profile.business_name)} · ${escapeHtml(dashboardCategoryLabel)} · ${escapeHtml(profile.city)}, ${escapeHtml(profile.state)}</p><a class="btn secondary" href="/pro/${profile.id}">View public profile</a><a class="btn ghost" href="/dashboard/pro/profile">Edit details</a></div><div class="panel"><h3>Online booking</h3>${bookingReady ? '<p>Your Book Appointment button is connected to your scheduling site.</p><a class="btn secondary" href="/dashboard/pro/profile">Update booking link</a>' : '<p class="muted">Add your Square, Booksy, Vagaro, Fresha, GlossGenius, or other scheduling link so customers can book directly from your GoBookr profile.</p><a class="btn" href="/dashboard/pro/profile">Add booking link</a>'}</div></div></div></section>`;
+    else if (views > 0 && clicks === 0) nextAction = { title: 'Help customers choose you', text: 'Review your services, pricing and portfolio so customers know what to expect before they visit your schedule.', href: '/dashboard/pro/profile', cta: 'Review your profile' };
+    const body = renderDashboard({
+      profile, name: ctx.currentUser.name, categoryLabel: dashboardCategoryLabel,
+      bookingReady, hasServices, hasPortfolio, reviews, views, clicks, saves,
+      interestSummary, nextAction, marketingPulse, marketingPulseText,
+      campaignViews, campaignClicks, liveOpenings, csrf: ctx.session.csrf_token,
+      setupCompleted: ctx.query.setup === 'complete',
+    }, dashNav('overview'));
     send(ctx.res, layout({ title: 'Pro dashboard', currentUser: ctx.currentUser, session: ctx.session, flash: flashFromQuery(ctx.query), body }));
   });
 
@@ -483,11 +505,11 @@ module.exports = function (router) {
     <div class="profile-details-divider"><h3>Services &amp; specialties</h3><p class="muted">Choose every category customers should be able to find you under. For example: Hairstylist + Makeup Artist + Weddings.</p></div><div class="profile-category-grid">${categoryOptions}</div><button class="btn secondary profile-category-save" type="submit" form="profile-categories-form">Save categories</button><div class="profile-details-divider"><h3>Booking &amp; workplace</h3><p class="muted">Where customers book you and where you work.</p></div>
     <div class="field"><label for="booking_url">Booking / scheduling link</label><input id="booking_url" name="booking_url" type="url" value="${escapeHtml(profile.booking_url || '')}" maxlength="2048" placeholder="https://square.site/book/..." /><div class="helptext">Paste the link customers use to book with you on Square, Booksy, Vagaro, Fresha, GlossGenius, or another scheduling system.</div></div>
     <div style="margin:26px 0 12px; padding-top:20px; border-top:1px solid var(--paper-line);"><h3 style="margin-bottom:4px;">Where do you work?</h3><p class="muted" style="margin:0;">Keep this current so customers get accurate distance results.</p></div>
-    <div class="field"><label for="workplace_name">Business / workplace name</label><input id="workplace_name" name="workplace_name" value="${escapeHtml(profile.workplace_name || '')}" maxlength="160" placeholder="e.g. Novo Barbers" required /></div>
-    <div class="field"><label for="street_address">Street address</label><input id="street_address" name="street_address" value="${escapeHtml(profile.street_address || '')}" maxlength="200" placeholder="e.g. 399 Perry St" autocomplete="street-address" required /></div>
-    <div class="field"><label for="suite">Suite / Unit <span class="muted">(optional)</span></label><input id="suite" name="suite" value="${escapeHtml(profile.suite || '')}" maxlength="80" placeholder="e.g. #100" /></div>
-    <div class="field-row"><div class="field"><label for="city">City</label><input id="city" name="city" value="${escapeHtml(profile.city)}" maxlength="100" autocomplete="address-level2" required /></div><div class="field"><label for="state">State</label><input id="state" name="state" value="${escapeHtml(profile.state)}" maxlength="2" pattern="[A-Za-z]{2}" autocomplete="address-level1" required /></div></div>
-    <div class="field"><label for="zip_code">ZIP code</label><input id="zip_code" name="zip_code" value="${escapeHtml(profile.zip_code || '')}" inputmode="numeric" autocomplete="postal-code" maxlength="10" pattern="[0-9]{5}(-[0-9]{4})?" required /></div>
+    <div class="field"><label for="workplace_name">Business / workplace name</label><input id="workplace_name" name="workplace_name" value="${escapeHtml(profile.workplace_name || '')}" maxlength="160" placeholder="Business or workplace name" required /></div>
+    <div class="field"><label for="street_address">Street address</label><input id="street_address" name="street_address" value="${escapeHtml(profile.street_address || '')}" maxlength="200" placeholder="Street address" autocomplete="street-address" required /></div>
+    <div class="field"><label for="suite">Suite / Unit <span class="muted">(optional)</span></label><input id="suite" name="suite" value="${escapeHtml(profile.suite || '')}" maxlength="80" placeholder="Suite or unit (optional)" /></div>
+    <div class="field-row"><div class="field"><label for="city">City</label><input id="city" name="city" placeholder="City" value="${escapeHtml(profile.city)}" maxlength="100" autocomplete="address-level2" required /></div><div class="field"><label for="state">State</label><input id="state" name="state" placeholder="State abbreviation" value="${escapeHtml(profile.state)}" maxlength="2" pattern="[A-Za-z]{2}" autocomplete="address-level1" required /></div></div>
+    <div class="field"><label for="zip_code">ZIP code</label><input id="zip_code" name="zip_code" placeholder="ZIP code" value="${escapeHtml(profile.zip_code || '')}" inputmode="numeric" autocomplete="postal-code" maxlength="10" pattern="[0-9]{5}(-[0-9]{4})?" required /></div>
     <div class="helptext" style="margin-top:-6px; margin-bottom:18px;">${locationStatus}</div>
     <div class="field"><label for="license_number">License #</label><input id="license_number" name="license_number" value="${escapeHtml(profile.license_number || '')}" maxlength="100" placeholder="e.g. BAR.1234567" /></div><div class="field"><label for="license_state">License state</label><input id="license_state" name="license_state" value="${escapeHtml(profile.license_state || profile.state || '')}" maxlength="2" pattern="[A-Za-z]{2}" placeholder="CO" /></div><p class="helptext">Use this range as a quick profile summary. Your individual service prices are managed below.</p><div class="field-row"><div class="field"><label for="price_min">Starting price ($)</label><input id="price_min" type="number" name="price_min" value="${profile.price_min}" min="0" max="100000" /></div><div class="field"><label for="price_max">Top price ($)</label><input id="price_max" type="number" name="price_max" value="${profile.price_max}" min="0" max="100000" /></div></div><div class="field"><label for="years_experience">Years of experience</label><input id="years_experience" type="number" name="years_experience" value="${profile.years_experience}" min="0" max="100" /></div><button class="btn profile-save-btn" type="submit">Save profile</button></form></div><div class="panel"><h3>Services</h3><p class="muted">Keep these current—customers use your services, prices, and timing to decide whether to book.</p>${services.map((s) => `<div class="service-row" style="align-items:flex-start;"><form method="POST" action="/dashboard/pro/services/${s.id}" style="flex:1;"><input type="hidden" name="_csrf" value="${escapeHtml(ctx.session.csrf_token)}" /><div class="field-row"><div class="field"><label>Service name</label><input name="name" maxlength="120" value="${escapeHtml(s.name)}" required /></div><div class="field"><label>Price ($)</label><input type="number" name="price" min="0" max="100000" value="${Number(s.price)}" required /></div></div><div class="field"><label>Duration (minutes)</label><input type="number" name="duration_minutes" min="5" max="1440" value="${Number(s.duration_minutes)}" required /></div><button class="btn secondary small" type="submit">Save service</button></form><form method="POST" action="/dashboard/pro/services/${s.id}/delete"><input type="hidden" name="_csrf" value="${escapeHtml(ctx.session.csrf_token)}" /><button class="btn ghost small" type="submit">Remove</button></form></div>`).join('') || '<div class="empty-state" style="padding:18px;"><h3 style="margin-top:0;">Add your first service</h3><p class="muted">A clear service name, price, and duration helps customers know exactly what they can book.</p></div>'}<form method="POST" action="/dashboard/pro/services" style="margin-top:16px; border-top:1px solid var(--paper-line); padding-top:16px;"><input type="hidden" name="_csrf" value="${escapeHtml(ctx.session.csrf_token)}" /><div class="field-row"><div class="field"><label for="name">Service name</label><input id="name" name="name" maxlength="120" placeholder="e.g. Skin fade" required /></div><div class="field"><label for="price">Price ($)</label><input id="price" type="number" name="price" min="0" max="100000" required /></div></div><div class="field"><label for="duration_minutes">Duration (minutes)</label><input id="duration_minutes" type="number" name="duration_minutes" value="30" min="5" max="1440" /></div><button class="btn secondary" type="submit">Add service</button></form></div></div></div></section>`;
     send(ctx.res, layout({ title: 'Edit profile', currentUser: ctx.currentUser, session: ctx.session, flash: flashFromQuery(ctx.query), body }));
@@ -495,8 +517,11 @@ module.exports = function (router) {
 
   router.post('/dashboard/pro/categories', async (ctx) => {
     const profile = requirePro(ctx); if (!profile) return;
+    const setupStep = String(ctx.body._setup_step || '');
+    const go = (res, destination) => setupRedirect(ctx, profile, ['categories'], destination);
+
     const selected = PROFILE_CATEGORIES.filter(([value]) => String(ctx.body[`category_${value}`] || '') === '1').map(([value]) => value);
-    if (!selected.length) return redirect(ctx.res, '/dashboard/pro/profile?error=' + encodeURIComponent('Select at least one service or specialty.'));
+    if (!selected.length) return go(ctx.res, '/dashboard/pro/profile?error=' + encodeURIComponent('Select at least one service or specialty.'));
     try {
       db.exec('BEGIN IMMEDIATE');
       db.prepare('DELETE FROM pro_categories WHERE pro_id = ?').run(profile.id);
@@ -506,13 +531,19 @@ module.exports = function (router) {
     } catch (err) {
       try { db.exec('ROLLBACK'); } catch (_) {}
       console.error('Professional category update failed', err);
-      return redirect(ctx.res, '/dashboard/pro/profile?error=' + encodeURIComponent('We could not update your categories. Please try again.'));
+      return go(ctx.res, '/dashboard/pro/profile?error=' + encodeURIComponent('We could not update your categories. Please try again.'));
     }
-    redirect(ctx.res, '/dashboard/pro/profile?success=' + encodeURIComponent('Services and specialties updated.'));
+    go(ctx.res, '/dashboard/pro/profile?success=' + encodeURIComponent('Services and specialties updated.'));
   });
 
   router.post('/dashboard/pro/profile', async (ctx) => {
     const profile = requirePro(ctx); if (!profile) return;
+    const setupStep = String(ctx.body._setup_step || '');
+    const go = (res, destination) => setupRedirect(ctx, profile, ['basics', 'details', 'booking', 'license'], destination);
+
+    if (PROFILE_FIELDS[setupStep]) ctx.body = mergeSetupProfile(profile, ctx.body);
+    if (setupStep === 'details' && (!String(ctx.body.bio || '').trim() || String(ctx.body.years_experience ?? '').trim() === '' || !(Number(ctx.body.price_min) > 0 || Number(ctx.body.price_max) > 0))) return go(ctx.res, '/dashboard/pro/profile?error=' + encodeURIComponent('Add your bio, years of experience, and at least one price above $0.'));
+    if (setupStep === 'booking' && !String(ctx.body.booking_url || '').trim()) return go(ctx.res, '/dashboard/pro/profile?error=' + encodeURIComponent('Add the link customers use to book with you.'));
     const { business_name, professional_handle, booking_url, workplace_name, street_address, suite, city, state, zip_code, license_number, license_state, price_min, price_max, years_experience, bio } = ctx.body;
 
     const cleanBusinessName = clampText(business_name || profile.business_name, 120);
@@ -531,13 +562,13 @@ module.exports = function (router) {
     const maxPrice = finiteInteger(price_max || 0, 0, 100000);
     const years = finiteInteger(years_experience || 0, 0, 100);
 
-    if (!cleanBusinessName) return redirect(ctx.res, '/dashboard/pro/profile?error=' + encodeURIComponent('Professional name is required.'));
-    if (cleanHandle && !/^[A-Za-z0-9._-]{2,80}$/.test(cleanHandle)) return redirect(ctx.res, '/dashboard/pro/profile?error=' + encodeURIComponent('Handle can use letters, numbers, periods, underscores, and hyphens.'));
-    if (cleanBookingUrl === null) return redirect(ctx.res, '/dashboard/pro/profile?error=' + encodeURIComponent('Please enter a valid booking website, such as https://square.site/book/...'));
-    if (!cleanWorkplace || !cleanStreet || !cleanCity || !validUsState(cleanState) || !validZip(cleanZip)) return redirect(ctx.res, '/dashboard/pro/profile?error=' + encodeURIComponent('Please complete a valid workplace address.'));
-    if (cleanLicenseNumber && !validUsState(cleanLicenseState)) return redirect(ctx.res, '/dashboard/pro/profile?error=' + encodeURIComponent('Please enter a valid two-letter license state.'));
-    if (minPrice === null || maxPrice === null || years === null) return redirect(ctx.res, '/dashboard/pro/profile?error=' + encodeURIComponent('Please enter valid pricing and experience values.'));
-    if (minPrice > 0 && maxPrice > 0 && maxPrice < minPrice) return redirect(ctx.res, '/dashboard/pro/profile?error=' + encodeURIComponent('Top price must be at least the starting price.'));
+    if (!cleanBusinessName) return go(ctx.res, '/dashboard/pro/profile?error=' + encodeURIComponent('Professional name is required.'));
+    if (cleanHandle && !/^[A-Za-z0-9._-]{2,80}$/.test(cleanHandle)) return go(ctx.res, '/dashboard/pro/profile?error=' + encodeURIComponent('Handle can use letters, numbers, periods, underscores, and hyphens.'));
+    if (cleanBookingUrl === null) return go(ctx.res, '/dashboard/pro/profile?error=' + encodeURIComponent('Please enter a valid booking website, such as https://square.site/book/...'));
+    if (!cleanWorkplace || !cleanStreet || !cleanCity || !validUsState(cleanState) || !validZip(cleanZip)) return go(ctx.res, '/dashboard/pro/profile?error=' + encodeURIComponent('Please complete a valid workplace address.'));
+    if (cleanLicenseNumber && !validUsState(cleanLicenseState)) return go(ctx.res, '/dashboard/pro/profile?error=' + encodeURIComponent('Please enter a valid two-letter license state.'));
+    if (minPrice === null || maxPrice === null || years === null) return go(ctx.res, '/dashboard/pro/profile?error=' + encodeURIComponent('Please enter valid pricing and experience values.'));
+    if (minPrice > 0 && maxPrice > 0 && maxPrice < minPrice) return go(ctx.res, '/dashboard/pro/profile?error=' + encodeURIComponent('Top price must be at least the starting price.'));
 
     const addressChanged =
       cleanWorkplace !== String(profile.workplace_name || '') ||
@@ -581,18 +612,21 @@ module.exports = function (router) {
     const message = latitude != null && longitude != null
       ? 'Profile and workplace location updated.'
       : 'Profile updated, but we could not map that address yet. Check the address and save again.';
-    redirect(ctx.res, '/dashboard/pro/profile?success=' + encodeURIComponent(message));
+    go(ctx.res, '/dashboard/pro/profile?success=' + encodeURIComponent(message));
   });
 
   router.post('/dashboard/pro/services', async (ctx) => {
     const profile = requirePro(ctx); if (!profile) return;
+    const setupStep = String(ctx.body._setup_step || '');
+    const go = (res, destination) => setupRedirect(ctx, profile, ['services'], destination);
+
     const name = clampText(ctx.body.name, 120);
     const price = finiteInteger(ctx.body.price, 0, 100000);
     const durationRaw = String(ctx.body.duration_minutes == null ? '' : ctx.body.duration_minutes).trim();
     const duration = finiteInteger(durationRaw || '30', 5, 1440);
-    if (!name || price === null || duration === null) return redirect(ctx.res, '/dashboard/pro/profile?error=' + encodeURIComponent('Enter a valid service name, price, and duration.'));
+    if (!name || price === null || duration === null) return go(ctx.res, '/dashboard/pro/profile?error=' + encodeURIComponent('Enter a valid service name, price, and duration.'));
     db.prepare('INSERT INTO services (pro_id, name, price, duration_minutes) VALUES (?, ?, ?, ?)').run(profile.id, name, price, duration);
-    redirect(ctx.res, '/dashboard/pro/profile?success=' + encodeURIComponent('Service added.'));
+    go(ctx.res, '/dashboard/pro/profile?success=' + encodeURIComponent('Service added.'));
   });
 
   router.post('/dashboard/pro/services/:id', async (ctx) => {
@@ -629,17 +663,20 @@ module.exports = function (router) {
 
   router.post('/dashboard/pro/portfolio', async (ctx) => {
     const profile = requirePro(ctx); if (!profile) return;
+    const setupStep = String(ctx.body._setup_step || '');
+    const go = (res, destination) => setupRedirect(ctx, profile, ['portfolio'], destination);
+
     const count = db.prepare('SELECT COUNT(*) AS count FROM portfolio_items WHERE pro_id = ?').get(profile.id).count;
-    if (count >= 50) return redirect(ctx.res, '/dashboard/pro/portfolio?error=' + encodeURIComponent('Portfolio limit reached. Remove a photo before adding another.'));
+    if (count >= 50) return go(ctx.res, '/dashboard/pro/portfolio?error=' + encodeURIComponent('Portfolio limit reached. Remove a photo before adding another.'));
 
     const caption = clampText(ctx.body.caption, 200);
     const image = ctx.files && ctx.files.image;
-    if (!caption) return redirect(ctx.res, '/dashboard/pro/portfolio?error=' + encodeURIComponent('Add a short caption for your photo.'));
-    if (!image || !image.data || !image.data.length) return redirect(ctx.res, '/dashboard/pro/portfolio?error=' + encodeURIComponent('Choose a photo to upload.'));
+    if (!caption) return go(ctx.res, '/dashboard/pro/portfolio?error=' + encodeURIComponent('Add a short caption for your photo.'));
+    if (!image || !image.data || !image.data.length) return go(ctx.res, '/dashboard/pro/portfolio?error=' + encodeURIComponent('Choose a photo to upload.'));
     const allowedTypes = new Map([['image/jpeg', '.jpg'], ['image/png', '.png'], ['image/webp', '.webp'], ['image/gif', '.gif'], ['image/heic', '.heic'], ['image/heif', '.heif']]);
     const ext = allowedTypes.get(String(image.contentType || '').toLowerCase());
-    if (!ext || !imageLooksValid(image.data, String(image.contentType || '').toLowerCase())) return redirect(ctx.res, '/dashboard/pro/portfolio?error=' + encodeURIComponent('That file does not appear to be a supported image.'));
-    if (image.data.length > 3 * 1024 * 1024) return redirect(ctx.res, '/dashboard/pro/portfolio?error=' + encodeURIComponent('Photo must be 3 MB or smaller.'));
+    if (!ext || !imageLooksValid(image.data, String(image.contentType || '').toLowerCase())) return go(ctx.res, '/dashboard/pro/portfolio?error=' + encodeURIComponent('That file does not appear to be a supported image.'));
+    if (image.data.length > 3 * 1024 * 1024) return go(ctx.res, '/dashboard/pro/portfolio?error=' + encodeURIComponent('Photo must be 3 MB or smaller.'));
 
     const filename = `${Date.now()}-${crypto.randomBytes(6).toString('hex')}${ext}`;
     const accents = ['violet', 'gold', 'teal', 'rose', 'slate'];
@@ -652,9 +689,9 @@ module.exports = function (router) {
     } catch (err) {
       if (imageUrl) { try { await deletePortfolioObject(imageUrl); } catch (_) {} }
       console.error('Portfolio upload failed', { message: err && err.message, name: err && err.name, storageConfigured: Boolean(storageConfig()), keyType: storageConfig() && storageConfig().serviceKey.startsWith('sb_secret_') ? 'secret' : 'legacy', supabaseHost: storageConfig() ? new URL(storageConfig().baseUrl).host : null });
-      return redirect(ctx.res, '/dashboard/pro/portfolio?error=' + encodeURIComponent('We could not save that photo. Please try again.'));
+      return go(ctx.res, '/dashboard/pro/portfolio?error=' + encodeURIComponent('We could not save that photo. Please try again.'));
     }
-    redirect(ctx.res, '/dashboard/pro/portfolio?success=' + encodeURIComponent('Photo uploaded.'));
+    go(ctx.res, '/dashboard/pro/portfolio?success=' + encodeURIComponent('Photo uploaded.'));
   });
 
   router.post('/dashboard/pro/portfolio/:id/delete', async (ctx) => {
