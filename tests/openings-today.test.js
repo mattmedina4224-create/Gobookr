@@ -25,10 +25,10 @@ test('customers have a same-day openings discovery page', () => {
   assert.match(src, /confirm the time on the professional's booking page/);
 });
 
-test('Openings Today is linked globally and responsive', () => {
+test('Openings Today is absent from global menus while its page stays responsive', () => {
   const layout = read('lib/layout.js');
   const css = read('public/styles.css');
-  assert.match(layout, /href="\/openings">Openings Today/);
+  assert.doesNotMatch(layout, /href="\/openings"/);
   assert.match(css, /\.openings-grid/);
   assert.match(css, /@media\(max-width:760px\)\{\.openings-grid\{grid-template-columns:1fr\}/);
 });
