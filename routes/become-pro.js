@@ -36,6 +36,7 @@ module.exports = function (router) {
   router.post('/become-pro', async (ctx) => {
     if (!ctx.currentUser) return redirect(ctx.res, '/login?next=' + encodeURIComponent('/become-pro'));
     if (ctx.currentUser.role === 'pro') return redirect(ctx.res, '/dashboard/pro/onboarding');
+    if (ctx.currentUser.role !== 'customer') return send(ctx.res, 'This account cannot create a professional profile.', 403);
     const selectedCategory = String(ctx.body.category || '').trim();
     if (!CATEGORY_VALUES.has(selectedCategory)) return redirect(ctx.res, '/become-pro?error=' + encodeURIComponent('Choose the service that best describes your work.'));
 

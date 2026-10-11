@@ -13,7 +13,7 @@ test('finishing professional setup is server guarded and hands off to the live p
   assert.match(onboarding, /SET onboarding_completed = 1/);
   assert.match(onboarding, /setup=complete/);
   assert.match(pro, /ctx\.query\.setup === 'complete'/);
-  assert.match(pro, /Your GoBookr profile setup is complete/);
+  assert.match(pro, /Your profile setup is complete/);
   assert.match(pro, /View my profile/);
   assert.match(pro, /Open Marketing Center/);
 });
