@@ -39,6 +39,7 @@ function app(options = {}) {
           if (sql.startsWith('WITH admin_access')) return state.admins.has(args[0]) && state.sessions.has(args[1]) ? { user_id: args[0] } : undefined;
           if (sql.includes('FROM users WHERE google_sub = ?')) return state.users.find(u => u.google_sub === args[0]);
           if (sql.includes('FROM users WHERE id = ?')) return state.users.find(u => u.id === args[0]);
+          if (sql.includes('FROM pro_profiles WHERE user_id = ?')) return state.profiles.find(p => p.user_id === args[0]);
           if (sql.includes('FROM pro_profiles WHERE id = ?')) return state.profiles.find(p => p.id === args[0]);
           if (sql.includes('FROM profile_claims')) return state.claims.find(c => c.pro_id === args[0] && c.claimant_user_id === args[1] && c.status === 'pending');
           if (sql.includes('FROM users WHERE email = ?')) return state.users.find(u => u.email === args[0]);
@@ -56,7 +57,9 @@ function app(options = {}) {
           }
           if (sql.startsWith('INSERT INTO shops')) { state.shops.push(args); return {changes:1,lastInsertRowid:10}; }
           if (sql.startsWith('INSERT INTO shop_subscriptions')) return {changes:1};
+          if (sql.startsWith("UPDATE users SET role='pro'")) { state.users.find(u=>u.id===args[0]).role='pro'; return {changes:1}; }
           if (sql.startsWith('INSERT INTO pro_profiles')) {
+            if (sql.includes('ON CONFLICT') && state.profiles.some(p=>p.user_id===args[0])) return {changes:0};
             const profile = { id: 43, user_id: args[0], business_name: args[1] };
             state.profiles.push(profile);
             return { changes: 1, lastInsertRowid: profile.id };
@@ -92,7 +95,7 @@ function app(options = {}) {
   auth.getSessionUser = req => state.sessions.get(String(req.headers.cookie || '').split('=')[1]) || null;
   const common = { '../db': db, '../lib/http': httpHelpers, '../lib/util': require('../lib/util'), '../lib/layout': require('../lib/layout'), '../lib/pro-categories': require('../lib/pro-categories') };
   common['../lib/claims'] = load('lib/claims.js', { '../db': db, './http': httpHelpers });
-  const authRoute = load('routes/auth.js', { ...common, '../lib/auth': auth, './onboarding': () => {} }, {
+  const authRoute = load('routes/auth.js', { ...common, '../lib/auth': auth, './onboarding': () => {}, './pro-entry': load('routes/pro-entry.js', common) }, {
     process: {env: {BUSINESS_TEAMS_ENABLED:options.businessTeams?'1':''}},
     fetch: async () => { if (options.claimOnly) throw new Error('Claim signup must not geocode'); return { ok: true, json: async () => [] }; },
   });
@@ -319,4 +322,24 @@ test('business signup accepts real ZIP codes, normalizes city, and starts guided
  const form={name:'Test owner',email:'business@example.test',password:'password123',legal_agreement:'1',role:'storefront',shop_name:'Test business',street_address:'123 Test Street',city:'littleton',state:'co',zip_code:'80120'};
  const res=await a.request('POST','/signup',form);assert.equal(res.headers.Location,'/dashboard/shop?setup=basics');assert.equal(a.state.shops.length,1);assert.equal(a.state.shops[0][2],'Littleton');assert.equal(a.state.shops[0][6],'80120');
  const invalid=app({businessTeams:true});await invalid.request('POST','/signup',{...form,zip_code:'bad'});assert.equal(invalid.state.shops.length,0);assert.equal(invalid.state.users.length,0);
+});
+
+
+test('short professional signup creates a private draft and trial without business fields', async () => {
+ const a=app(); const response=await a.request('POST','/signup',{name:'New professional',email:'newpro@example.test',password:'password123',role:'pro',legal_agreement:'1'});
+ assert.equal(response.headers.Location,'/dashboard/pro/onboarding'); assert.equal(a.state.users[0].role,'pro'); assert.equal(a.state.profiles[1].business_name,''); assert.equal(a.state.categories.length,0); assert.equal(a.state.subscriptions.length,1);
+ const page=await app().request('GET','/signup?role=pro'); assert.match(page.body,/Create account &amp; continue/); assert.doesNotMatch(page.body,/name="street_address"/); assert.match(page.body,/private draft/);
+});
+test('existing customers can start professional setup only through a CSRF protected action', async () => {
+ const a=app(); const {user,token}=a.addUser();
+ assert.equal((await a.request('POST','/join/create',{},token)).status,403);
+ assert.equal(user.role,'customer');
+ const response=await a.request('POST','/join/create',{_csrf:'test-csrf'},token);
+ assert.equal(response.headers.Location,'/dashboard/pro/onboarding?step=basics'); assert.equal(user.role,'pro'); assert.equal(a.state.profiles.filter(p=>p.user_id===user.id).length,1);
+ await a.request('POST','/join/create',{_csrf:'test-csrf'},token); assert.equal(a.state.profiles.filter(p=>p.user_id===user.id).length,1);
+});
+test('professional entry preserves accounts and does not claim listings automatically',async()=>{
+ const a=app(); const page=await a.request('GET','/join'); assert.match(page.body,/Find my profile/); assert.match(page.body,/Create a new profile/); assert.equal(a.state.writes.length,0);
+ const {user,token}=a.addUser(); const existing=await a.request('GET','/signup?role=pro',{},token); assert.equal(existing.headers.Location,'/join');
+ const duplicate=await a.request('POST','/signup',{name:'Existing',email:user.email,password:'password123',role:'pro',legal_agreement:'1'}); assert.match(duplicate.headers.Location,/next=%2Fjoin/); assert.equal(user.role,'customer');
 });

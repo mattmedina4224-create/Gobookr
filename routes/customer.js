@@ -40,6 +40,7 @@ module.exports = function (router) {
     const body = `
     <section class="section container customer-dashboard">
       <div class="customer-dashboard-hero"><div><p class="muted customer-eyebrow">YOUR GOBOOKR</p><h1>Find your next professional</h1><p class="muted">Discover someone new or jump back to a professional you already trust.</p></div><a class="btn customer-browse-btn" href="/search">Find a professional</a></div>
+      <section class="panel" style="margin:24px 0;"><h2>Offer services yourself?</h2><p>Become a professional using this account. Find an existing profile or build a new one, then follow guided setup.</p><a class="btn secondary" href="/join">Become a professional</a></section>
       ${claimStatus}
       <section aria-labelledby="favorites-heading" class="customer-favorites-section">
         <h2 id="favorites-heading">Favorites</h2>

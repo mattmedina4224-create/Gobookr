@@ -22,7 +22,7 @@ test('new professionals can select makeup and weddings alongside their main prof
   assert.ok(catalog.PROFESSIONAL_CATEGORY_VALUES.has('makeup_artist'));
   assert.ok(catalog.PROFESSIONAL_CATEGORY_VALUES.has('wedding_services'));
   assert.match(src, /PROFESSIONAL_CATEGORIES: PRO_CATEGORIES/);
-  assert.match(src, /Hairstylist \+ Makeup Artist \+ Weddings/);
+  assert.match(read('lib/pro-setup-view.js'), /PROFESSIONAL_CATEGORIES\.map/);
   assert.match(src, /for \(const category of categories\) addCategory\.run\(proId, category\)/);
 });
 

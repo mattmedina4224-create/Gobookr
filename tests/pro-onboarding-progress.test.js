@@ -14,8 +14,8 @@ test('professional onboarding progress measures only core launch steps', () => {
 
 test('optional enhancements are explained separately from core setup', () => {
   const source = fs.readFileSync(path.join(__dirname, '..', 'lib', 'pro-setup-view.js'), 'utf8');
-  assert.match(source, /five core steps to get your profile ready for customers/);
-  assert.match(source, /License, GPS, and social links are optional enhancements/);
+  assert.match(source, /Complete the essentials above before publishing/);
+  assert.match(source, /Optional details can be added later/);
 });
 
 

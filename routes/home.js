@@ -301,7 +301,7 @@ module.exports = function (router) {
           <button class="home-claim-button" type="submit">Find &amp; claim my profile</button>
         </form>
         <div class="home-pro-entry-actions">
-          <a class="home-create-profile" href="/signup?role=pro">Create a new profile — 30 days free</a>
+          <a class="home-create-profile" href="/join">Create a new profile — 30 days free</a>
           <span class="muted">$20/month after your free trial. Cancel anytime.</span>
         </div>
       </div>
