@@ -72,7 +72,7 @@ test('Story Maker includes opening-time UX', () => {
   const css = read('public/styles.css');
   assert.match(src, /class="quick-slot"/);
   assert.match(src, /id="marketing-story-slots"/);
-  assert.match(src, /storySlotsText\.join/);
+  assert.match(fs.readFileSync(path.join(__dirname, '..', 'public', 'story-sharing.js'), 'utf8'), /slots\.slice\(0, 3\)/);
   assert.match(css, /\.quick-slot-row/);
 });
 
