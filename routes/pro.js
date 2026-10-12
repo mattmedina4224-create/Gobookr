@@ -162,6 +162,7 @@ function dashNav(active) {
     { key: 'portfolio', href: '/dashboard/pro/portfolio', label: 'Portfolio' },
     { key: 'updates', href: '/dashboard/pro/updates', label: 'Updates' },
     { key: 'marketing', href: '/dashboard/pro/marketing', label: 'Marketing' },
+    { key: 'social', href: '/dashboard/pro/social', label: 'Social connections' },
     { key: 'analytics', href: '/dashboard/pro/analytics', label: 'Analytics' },
     { key: 'billing', href: '/dashboard/pro/billing', label: 'Billing' },
   ];
