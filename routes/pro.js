@@ -159,6 +159,7 @@ function dashNav(active) {
     { key: 'onboarding', href: '/dashboard/pro/onboarding', label: 'Get started' },
     { key: 'profile', href: '/dashboard/pro/profile', label: 'Profile & services' },
     { key: 'portfolio', href: '/dashboard/pro/portfolio', label: 'Portfolio' },
+    { key: 'updates', href: '/dashboard/pro/updates', label: 'Updates' },
     { key: 'marketing', href: '/dashboard/pro/marketing', label: 'Marketing' },
     { key: 'analytics', href: '/dashboard/pro/analytics', label: 'Analytics' },
     { key: 'billing', href: '/dashboard/pro/billing', label: 'Billing' },

@@ -23,6 +23,7 @@ require('./routes/google')(router);
 require('./routes/pro')(router);
 require('./routes/onboarding')(router);
 require('./routes/customer')(router);
+require('./routes/following')(router);
 require('./routes/admin')(router);
 require('./routes/legal')(router);
 require('./routes/claim')(router);
