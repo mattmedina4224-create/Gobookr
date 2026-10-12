@@ -30,6 +30,7 @@ require('./routes/claim')(router);
 require('./routes/embedded-billing')(router);
 require('./routes/billing')(router);
 require('./routes/square')(router);
+require('./routes/meta-connect')(router);
 require('./routes/shops')(router);
 require('./routes/shop-dashboard')(router);
 require('./routes/shop-billing')(router);
