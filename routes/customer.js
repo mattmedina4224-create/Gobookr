@@ -42,6 +42,7 @@ module.exports = function (router) {
       <div class="customer-dashboard-hero"><div><p class="muted customer-eyebrow">YOUR GOBOOKR</p><h1>Find your next professional</h1><p class="muted">Discover someone new or jump back to a professional you already trust.</p></div><a class="btn customer-browse-btn" href="/search">Find a professional</a></div>
       <section class="panel" style="margin:24px 0;"><h2>Offer services yourself?</h2><p>Become a professional using this account. Find an existing profile or build a new one, then follow guided setup.</p><a class="btn secondary" href="/join">Become a professional</a></section>
       ${claimStatus}
+      <section class="panel" style="margin:24px 0;"><h2>Keep up with your professionals</h2><p>Follow professionals to see their latest work and updates. Favorites stay separate for quick access.</p><a class="btn secondary" href="/following">Open your Following feed</a></section>
       <section aria-labelledby="favorites-heading" class="customer-favorites-section">
         <h2 id="favorites-heading">Favorites</h2>
         <p class="muted">Your saved professionals, ready when you are. Favorites are private; professionals only see their total Saves.</p>
