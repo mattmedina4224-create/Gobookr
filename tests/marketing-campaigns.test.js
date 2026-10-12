@@ -68,7 +68,7 @@ test('marketing sharing falls back when Clipboard API is unavailable', () => {
   assert.match(source, /const copyText=async\(text\)=>/);
   assert.match(source, /document\.execCommand\('copy'\)/);
   assert.match(source, /copyText\(url\)/);
-  assert.match(source, /Post copy and link copied\./);
+  assert.match(source, /window.GoBookrStories.share\(\)/);
 });
 
 
@@ -109,7 +109,7 @@ test('empty campaign queue gives pros a clear next action', () => {
 
 test('marketing share failures use accessible inline feedback', () => {
  const source=fs.readFileSync(path.join(__dirname,'..','routes','pro.js'),'utf8');
- assert.match(source,/setShareStatus\('Sharing is not available right now\.'\)/);
+ assert.match(fs.readFileSync(path.join(__dirname,'..','public','story-sharing.js'),'utf8'), /Sharing could not open/);
  assert.match(source,/setShareStatus\('Copy is not available right now\.'\)/);
  assert.doesNotMatch(source,/alert\('Sharing is not available right now\.'\)/);
  assert.doesNotMatch(source,/alert\('Copy is not available right now\.'\)/);
@@ -136,6 +136,6 @@ test('Marketing Center prevents duplicate async share actions', () => {
   assert.match(source, /button\.setAttribute\('aria-busy','true'\)/);
   assert.match(source, /button\.disabled=false/);
   assert.match(source, /withBusy\(saveStory/);
-  assert.match(source, /withBusy\(share/);
+  assert.match(fs.readFileSync(path.join(__dirname,'..','public','story-sharing.js'),'utf8'), /if \(sharing\) return/);
   assert.match(source, /withBusy\(copyLink/);
 });
