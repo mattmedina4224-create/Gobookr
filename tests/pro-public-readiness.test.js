@@ -43,7 +43,9 @@ test('sitemap filters shops and discovery pages to public-ready inventory', () =
 
 test('search only returns public-ready professionals', () => {
   const source = fs.readFileSync(path.join(__dirname, '..', 'routes', 'public.js'), 'utf8');
-  const search = source.slice(source.indexOf("router.get('/search'"), source.indexOf("router.post('/dashboard/pro/location'"));
+  const route = source.slice(source.indexOf("router.get('/search'"), source.indexOf("router.post('/dashboard/pro/location'"));
+  assert.match(route, /publicSearchSql\(\)/);
+  const search = fs.readFileSync(path.join(__dirname, '..', 'lib', 'specialty-search.js'), 'utf8');
   assert.match(search, /pro_profiles\.claim_status IN \('unclaimed','claim_pending'\)/);
   assert.match(search, /COALESCE\(pro_profiles\.source_url,''\) <> ''/);
   assert.match(search, /pro_profiles\.onboarding_completed=1/);

@@ -41,7 +41,7 @@ test('empty results broaden to the next supported radius without dropping filter
   const source = fs.readFileSync(path.join(__dirname, '..', 'routes', 'public.js'), 'utf8');
   assert.match(source, /const broadenDistance = radius !== null && radius < 19 \? \[1,2,3,4,5,7,9,11,13,15,17,19\]\.find/);
   assert.match(source, /filterLink\(\{ radius: broadenDistance \}\)/);
-  assert.match(source, /const merged = \{ type: resultType === 'all' \? '' : resultType, category, city, q, radius:/);
+  assert.match(source, /const merged = \{ type: resultType === 'all' \? '' : resultType, category, specialty: specialty \? specialty\.id : '', city, q, radius:/);
 });
 
 test('business and professional radius searches share the same geographic bounds', () => {

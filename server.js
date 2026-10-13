@@ -17,6 +17,7 @@ installSquareDashboardCard(layoutModule);
 
 const router = new Router();
 require('./routes/public')(router);
+require('./routes/specialty-finder')(router);
 require('./routes/auth')(router);
 require('./routes/become-pro')(router);
 require('./routes/google')(router);
