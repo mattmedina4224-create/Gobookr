@@ -9,6 +9,7 @@ const { escapeHtml, money, slugCategory, avgRating, stars } = require('../lib/ut
 const { isProPubliclyVisible } = require('../lib/subscription');
 const businessTeam = require('../lib/business-team');
 const { hydratePros } = require('../lib/pro-listing-data');
+const specialtySearch = require('../lib/specialty-search');
 const { parseRadius, resolveSearchCenter, filterByRadius, filterBusinessesByRadius } = require('../lib/geo-search');
 const { PROFESSIONAL_CATEGORIES, PROFESSIONAL_CATEGORY_VALUES, categoryPlural } = require('../lib/pro-categories');
 
@@ -66,6 +67,7 @@ function proCard(pro, ctx, savedIds) {
         <div class="market-trust-row">${verified}${claim}</div>
         ${ratingHtml}
         ${specialtyHtml}
+        ${pro.matchReason ? `<div class="market-match-reason">${escapeHtml(pro.matchReason)}</div>` : ''}
         ${serviceNames ? `<div class="market-service">${serviceNames}</div>` : ''}
         <div class="market-meta"><span class="market-price">From ${startingPrice}</span>${distanceHtml}${pro.city ? `<span class="market-place">${escapeHtml(pro.city)}, ${escapeHtml(pro.state)}</span>` : ''}</div>
       </div>
@@ -92,6 +94,12 @@ function socialLinks(pro) {
 }
 
 module.exports = function (router) {
+  router.get('/specialties', async (ctx) => {
+    const catalog = require('../lib/service-catalog');
+    const groups = PROFESSIONAL_CATEGORIES.map(category => `<section class="panel"><h2>${escapeHtml(category.plural)}</h2><div class="category-pills">${catalog.entries.filter(entry => entry.category === category.value).map(entry => `<a href="/search?type=professionals&q=${encodeURIComponent(entry.label)}">${escapeHtml(entry.label)}</a>`).join('')}</div></section>`).join('');
+    const body = `<section class="section container"><h1>Explore services &amp; specialties</h1><p>${catalog.entries.length} profession-specific entries. This growing discovery catalog includes services, techniques, and styles—not a promise that any particular pro offers them. Search results are based on each pro’s actual profile.</p><p>Don’t see your specialty? <a href="/#find">Search any term</a>—we also check bios and About Me text.</p>${groups}<section class="panel"><h2>Catalog notes</h2><p>Curated starter vocabulary, not an exhaustive inventory. Researched October 13, 2026 using public service menus and style guides, with editorial additions and search aliases. Confirm services and any required credentials directly with the professional.</p><a href="/service-catalog.json">Download catalog JSON</a></section></section>`;
+    send(ctx.res, layout({title:'Explore services & specialties',currentUser:ctx.currentUser,session:ctx.session,body}));
+  });
   router.get('/', async (ctx) => {
     const featured = hydratePros(db.prepare('SELECT * FROM pro_profiles ORDER BY id DESC LIMIT 20').all()).sort((a, b) => (b.rating || 0) - (a.rating || 0)).slice(0, 6);
     const savedIds = favoriteIds(ctx, featured);
@@ -172,12 +180,20 @@ module.exports = function (router) {
     if(businessTeam.enabled()) sql=sql.replace("search_sub.status='active'",`EXISTS(SELECT 1 FROM (${businessTeam.coverageSql}) sponsored WHERE sponsored.pro_id=pro_profiles.id) OR search_sub.status='active'`);
     if (category) { sql += ' AND EXISTS (SELECT 1 FROM pro_categories pc WHERE pc.pro_id = pro_profiles.id AND pc.category = ?)'; args.push(category); }
     if (city && !hasRadiusCenter) { sql += " AND (city LIKE ? ESCAPE '\\' OR state LIKE ? ESCAPE '\\' OR zip_code LIKE ? ESCAPE '\\')"; const value = likeValue(city); args.push(value, value, value); }
-    if (q) { const cleanQ = q.replace(/^@+/, ''); sql += " AND (business_name LIKE ? ESCAPE '\\' OR professional_handle LIKE ? ESCAPE '\\' OR bio LIKE ? ESCAPE '\\' OR workplace_name LIKE ? ESCAPE '\\' OR EXISTS (SELECT 1 FROM services qs WHERE qs.pro_id = pro_profiles.id AND qs.name LIKE ? ESCAPE '\\') OR EXISTS (SELECT 1 FROM pro_categories qc WHERE qc.pro_id = pro_profiles.id AND REPLACE(qc.category, '_', ' ') LIKE ? ESCAPE '\\'))"; const value = likeValue(cleanQ); args.push(value, value, value, value, value, value); }
+    const textSearch = q ? specialtySearch.buildSearch(q) : null;
+    if (textSearch) { sql += ' AND ' + textSearch.where; args.push(...textSearch.args); }
     if (radiusBounds) { sql += ' AND latitude BETWEEN ? AND ? AND longitude BETWEEN ? AND ?'; args.push(radiusBounds.minLat, radiusBounds.maxLat, radiusBounds.minLon, radiusBounds.maxLon); }
-    sql += ' ORDER BY id DESC LIMIT 200';
+    if (textSearch) {
+      const serviceMatch = specialtySearch.predicate('matched.name', textSearch.variants);
+      sql = sql.replace('SELECT pro_profiles.*', `SELECT pro_profiles.*, (SELECT matched.name FROM services matched WHERE matched.pro_id = pro_profiles.id AND ${serviceMatch.sql} ORDER BY matched.id LIMIT 1) AS matched_service, (${textSearch.order}) AS search_score`);
+      args.unshift(...serviceMatch.args, ...textSearch.orderArgs);
+      sql += ' ORDER BY search_score DESC, id DESC LIMIT 200';
+    } else sql += ' ORDER BY id DESC LIMIT 200';
     let results = hydratePros(db.prepare(sql).all(...args));
     const radiusResult = await filterByRadius(results, radiusLat, radiusLon, radius);
     results = radiusResult.profiles;
+    if (textSearch) results.sort((a,b) => Number(b.search_score) - Number(a.search_score) || (a.distanceMiles ?? Infinity) - (b.distanceMiles ?? Infinity) || b.id - a.id);
+    if (q) results = results.map(pro => ({ ...pro, matchReason: specialtySearch.explain(pro,q) }));
     if (resultType === 'businesses') results = [];
     let businessSql = 'SELECT * FROM shops WHERE 1=1'; const businessArgs = [];
     if (city && !hasRadiusCenter) { businessSql += " AND (city LIKE ? OR state LIKE ? OR zip_code LIKE ?)"; const value = likeValue(city); businessArgs.push(value, value, value); }

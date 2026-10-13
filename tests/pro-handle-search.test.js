@@ -1,1 +1,3 @@
-'use strict';const test=require('node:test');const assert=require('node:assert/strict');const fs=require('node:fs');const path=require('node:path');test('marketplace search matches professional handles with or without @',()=>{const src=fs.readFileSync(path.join(__dirname,'..','routes','public.js'),'utf8');assert.match(src,/const cleanQ = q\.replace\(\/\^@\+\//);assert.match(src,/professional_handle LIKE \?/);assert.match(src,/args\.push\(value, value, value\)/);assert.match(src,/Name, @handle, or business/);});
+'use strict';
+const test=require('node:test');const assert=require('node:assert/strict');const {buildSearch,variants}=require('../lib/specialty-search');
+test('handles match with or without @',()=>{assert.deepEqual(variants('@fine_ink'),variants('fine_ink'));assert.match(buildSearch('@fine_ink').where,/pro_profiles.professional_handle/);});
