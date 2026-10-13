@@ -1,0 +1,11 @@
+.specialty-search-launch{display:inline-block;margin:16px 0 4px;color:#2563eb;font-weight:600;text-underline-offset:4px}
+#specialty-search{box-sizing:border-box;width:calc(100% - 32px);max-width:480px;max-height:calc(100dvh - 32px);overflow:auto;padding:32px 24px;border:1px solid #e2e8f0;border-radius:18px;background:white;color:#0b1f3a}
+#specialty-search::backdrop{background:rgb(11 31 58 / 35%)}
+#specialty-search h2{font-size:1.5rem;line-height:1.3;margin:12px 0}
+#specialty-search p{color:#526174;line-height:1.5}
+#specialty-search form{display:grid;gap:12px;margin-top:20px}
+#specialty-search input{box-sizing:border-box;width:100%;min-height:48px;padding:12px;border:1px solid #cbd5e1;border-radius:8px;font:inherit;font-size:16px}
+#specialty-search label{font-weight:600}
+#specialty-search .btn{margin-top:8px;min-height:48px}
+.specialty-search-close{position:absolute;right:12px;top:8px;width:44px;height:44px;background:transparent;border:0;font-size:28px;color:#526174;cursor:pointer}
+#specialty-search :focus-visible,.specialty-search-launch:focus-visible{outline:2px solid #2563eb;outline-offset:3px}
