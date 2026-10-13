@@ -1,0 +1,10 @@
+.home-photo-section{padding:38px 0 10px;background:#fff}
+.home-photo-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.home-photo-card{display:block;min-width:0;overflow:hidden;border-radius:16px;background:#fff;border:1px solid #e5e7eb;text-decoration:none;color:#0b1f3a;transition:border-color .15s}
+.home-photo-card:hover{border-color:#a7b6c7}
+.home-photo-card:focus-visible{outline:3px solid #2563eb;outline-offset:4px}
+.home-photo-card img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;background:#f5f5f2}
+.home-photo-card>span{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:16px 18px;font-size:1rem}
+.home-photo-card strong{font-weight:600}
+.home-photo-card>span>span{color:#64748b}
+@media(max-width:680px){.home-photo-section{padding:30px 0 0}.home-photo-section .container{padding:0 18px}.home-photo-grid{display:flex;gap:12px;overflow-x:auto;padding:4px 0 10px;scroll-snap-type:x proximity}.home-photo-card{flex:0 0 70%;scroll-snap-align:start;border-radius:14px}.home-photo-card>span{padding:13px 14px;font-size:.93rem}.home-photo-section .home-section-head{align-items:flex-start}.home-photo-section .home-see-all{white-space:nowrap;font-size:.8rem;padding-top:8px}}
