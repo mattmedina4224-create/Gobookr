@@ -97,3 +97,32 @@ test('finder recognizes concrete aliases without treating every haircut as a raz
   assert.equal(catalog.recognize('fade').length,0);assert.equal(catalog.recognize('notbalayage').length,0);
   assert.equal(catalog.recognize('balayage and curly hair').length,2);
 });
+
+test('finder dialog runs specialty → location → results and ignores closed-dialog responses', async () => {
+  class Element {
+    constructor(tag='div'){this.tag=tag;this.children=[];this.events={};this.hidden=false;this.value='';this.disabled=false;this.textContent='';}
+    append(...children){this.children.push(...children);}
+    replaceChildren(...children){this.children=children;}
+    addEventListener(name,fn){this.events[name]=fn;}
+    focus(){this.focused=true;}
+    querySelector(key){return this.lookup[key];}
+    showModal(){this.open=true;}
+    close(){this.open=false;this.events.close();}
+    click(){return this.events.click?.({preventDefault(){}})||this.onclick?.();}
+  }
+  const dialog=new Element(),launch=new Element('a'),form=new Element('form'),input=new Element('input'),label=new Element('label'),button=new Element('button');
+  const conversation=new Element(),suggestions=new Element(),results=new Element(),reset=new Element('button'),close=new Element('button');
+  form.lookup={input,label,button};dialog.lookup={'.finder-form':form,'.finder-conversation':conversation,'.finder-suggestions':suggestions,'.finder-results':results,'.finder-reset':reset,'.finder-close':close};
+  let resolveFetch,requested;
+  const document={getElementById:()=>dialog,querySelector:()=>launch,createElement:tag=>new Element(tag)};
+  vm.runInNewContext(fs.readFileSync(path.join(root,'public/specialty-finder.js'),'utf8'),{document,window:{GoBookrSpecialties:require('../public/specialty-catalog')},URLSearchParams,AbortController,fetch:(url)=>{requested=url;return new Promise(resolve=>resolveFetch=resolve);}});
+  const submit=()=>form.events.submit({preventDefault(){}});const settle=()=>new Promise(resolve=>setImmediate(resolve));
+  launch.click();assert.equal(dialog.open,true);assert.equal(input.focused,true);assert.equal(suggestions.children.length,3);
+  input.value='black and grey realism';submit();assert.equal(label.textContent,'City or ZIP code');assert.equal(suggestions.children.length,0);
+  input.value='Denver';submit();assert.match(requested,/specialty=black-gray-realism&city=Denver/);assert.equal(button.disabled,true);
+  resolveFetch({ok:true,json:async()=>({results:[{id:10,name:'<script>unsafe</script>',city:'Denver',state:'CO',photo:'https://example.test/photo.jpg'}]})});await settle();
+  assert.equal(form.hidden,true);assert.equal(results.children[0].href,'/pro/10');assert.equal(results.children[0].children[1].children[0].textContent,'<script>unsafe</script>');assert.match(results.children[1].href,/specialty=black-gray-realism/);
+  reset.click();input.value='balayage and curly hair';submit();assert.equal(suggestions.children.length,2);suggestions.children[0].click();input.value='80202';submit();close.click();
+  resolveFetch({ok:true,json:async()=>({results:[{id:99,name:'stale'}]})});await settle();assert.equal(results.children.length,0);assert.equal(launch.focused,true);
+  launch.click();assert.equal(label.textContent,'Service or specialty');input.value='unknown specialty';submit();assert.ok(conversation.children.at(-1).textContent.includes('exact specialty option'));
+});
