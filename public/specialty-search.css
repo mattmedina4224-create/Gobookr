@@ -5,8 +5,8 @@
 .specialty-chat-header{display:flex;align-items:center;gap:10px;padding:18px 20px 14px;border-bottom:1px solid #edf0f3;font-weight:650;font-size:.95rem}
 .specialty-chat-avatar{display:grid;place-items:center;width:32px;height:32px;border-radius:10px;background:#0b1f3a;color:#fff;font-size:1rem;font-weight:700}
 .specialty-chat-subtitle{display:block;margin-top:2px;font-size:.7rem;font-weight:400;color:#64748b}
-.specialty-search-close{margin-left:auto;display:grid;place-items:center;width:36px;height:36px;border:0;border-radius:50%;background:transparent;color:#526174;font:inherit;font-size:26px;line-height:1;cursor:pointer}
-.specialty-search-close:hover{background:#f1f5f9}
+.specialty-search-close{margin-left:auto;display:grid;place-items:center;width:36px;height:36px;border:0;border-radius:0;background:transparent;color:#526174;font:inherit;font-size:20px;line-height:1;cursor:pointer;box-shadow:none}
+.specialty-search-close:hover{background:transparent;color:#0b1f3a}
 .specialty-chat-body{padding:20px}
 #specialty-search h2{margin:0 0 12px;font-size:1.35rem;line-height:1.25;font-weight:650;letter-spacing:-.03em}
 #specialty-search p{margin:0;color:#526174;font-size:.88rem;line-height:1.55}
@@ -17,6 +17,7 @@
 #specialty-search .btn{display:flex;justify-content:space-between;align-items:center;min-height:46px;margin-top:6px;padding:12px 14px;background:#0b1f3a;color:#fff;border:0;border-radius:10px;box-shadow:none;font-size:.86rem;font-weight:600}
 #specialty-search .specialty-chat-note{font-size:.72rem;line-height:1.45;color:#64748b;margin-top:14px}
 #specialty-search :focus-visible,.specialty-search-launch:focus-visible{outline:2px solid #2563eb;outline-offset:3px}
+#specialty-search .specialty-search-close:focus-visible{outline:none;box-shadow:inset 0 -2px #2563eb}
 @media(max-width:480px){.specialty-search-launch{right:16px;bottom:calc(18px + env(safe-area-inset-bottom));width:54px;height:54px}#specialty-search{right:16px;bottom:calc(86px + env(safe-area-inset-bottom));width:340px;border-radius:20px;max-height:calc(100dvh - 110px - env(safe-area-inset-bottom))}.specialty-chat-body{padding:18px}.specialty-chat-header{padding:14px 18px 12px}}
 .specialty-suggestions{display:grid;gap:2px;border:1px solid #e2e8f0;border-radius:10px;padding:4px;background:#fff;max-height:224px;overflow:auto}
 .specialty-suggestions[hidden]{display:none}
