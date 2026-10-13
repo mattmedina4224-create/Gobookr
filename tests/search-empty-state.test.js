@@ -10,7 +10,7 @@ test('zero-result marketplace searches preserve intent and offer progressive rec
   assert.match(src, /broadenDistance/);
   assert.match(src, /Search within \$\{broadenDistance\} miles/);
   assert.match(src, /Browse all services/);
-  assert.match(src, /Clear name or business/);
+  assert.doesNotMatch(src, /Clear name or business/);
   assert.match(src, /Keep your search and broaden one thing at a time/);
   assert.match(src, /filterLink\(\{ radius: broadenDistance \}\)/);
 });
