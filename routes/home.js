@@ -323,6 +323,17 @@ module.exports = function (router) {
     </div>
   </section>
 
+  <link rel="stylesheet" href="/home-category-photos.css">
+  <section class="home-photo-section" aria-labelledby="home-photo-title">
+    <div class="container">
+      <div class="home-section-head"><div><p class="home-section-kicker">A little inspiration</p><h2 id="home-photo-title">Find your style.</h2></div><a class="home-see-all" href="/specialties">All specialties →</a></div>
+      <div class="home-photo-grid">
+        <a class="home-photo-card" href="/search?type=professionals&amp;category=stylist"><img src="/images/category-hair-v1.webp" width="720" height="720" alt="Hair styling in a bright salon" loading="lazy" decoding="async"><span><strong>Hairstylists</strong><span aria-hidden="true">↗</span></span></a>
+        <a class="home-photo-card" href="/search?type=professionals&amp;category=nail_technician"><img src="/images/category-nails-v1.webp" width="720" height="720" alt="A blush manicure being carefully painted" loading="lazy" decoding="async"><span><strong>Nail artists</strong><span aria-hidden="true">↗</span></span></a>
+        <a class="home-photo-card" href="/search?type=professionals&amp;category=tattoo_artist"><img src="/images/category-tattoos-v1.webp" width="720" height="720" alt="Fine-line botanical tattoo artistry" loading="lazy" decoding="async"><span><strong>Tattoo artists</strong><span aria-hidden="true">↗</span></span></a>
+      </div>
+    </div>
+  </section>
   <section class="home-section">
     <div class="container">
       <div class="home-section-head"><div><p class="home-section-kicker">Discover local talent</p><h2>Professionals worth knowing</h2></div><a class="home-see-all" href="/#find">Search pros →</a></div>
