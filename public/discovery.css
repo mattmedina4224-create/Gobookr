@@ -282,3 +282,4 @@
 .market-status { border-radius:6px; background:#edf3ff; color:#294a71; }
 .market-verified { background:#edf7f1; border-radius:6px; padding:3px 6px; }
 .avatar[class*="accent-"] { background:#eef2f7; color:#0b1f3a; }
+.market-match-reason{margin:8px 0;padding:8px 10px;border-radius:8px;background:#f0f5fa;color:#334155;font-size:.77rem;line-height:1.45;overflow-wrap:anywhere}

@@ -1,8 +1,3 @@
 'use strict';
-const test=require('node:test');const assert=require('node:assert/strict');const fs=require('node:fs');const path=require('node:path');
-const src=fs.readFileSync(path.join(__dirname,'..','routes','public.js'),'utf8');
-test('free-text professional search includes structured services and categories',()=>{
-  assert.match(src,/EXISTS \(SELECT 1 FROM services qs WHERE qs\.pro_id = pro_profiles\.id AND qs\.name LIKE \?/);
-  assert.match(src,/EXISTS \(SELECT 1 FROM pro_categories qc WHERE qc\.pro_id = pro_profiles\.id AND REPLACE\(qc\.category, '_', ' '\) LIKE \?/);
-  assert.match(src,/args\.push\(value, value, value, value, value, value\)/);
-});
+const test=require('node:test');const assert=require('node:assert/strict');const {buildSearch}=require('../lib/specialty-search');
+test('search includes services, categories and bio in parameterized SQL',()=>{const s=buildSearch('scar camouflage');assert.match(s.where,/FROM services qs/);assert.match(s.where,/FROM pro_categories qc/);assert.match(s.where,/pro_profiles.bio/);assert.equal((s.where.match(/\?/g)||[]).length,s.args.length);assert.equal((s.order.match(/\?/g)||[]).length,s.orderArgs.length);});
