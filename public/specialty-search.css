@@ -18,3 +18,8 @@
 #specialty-search .specialty-chat-note{font-size:.72rem;line-height:1.45;color:#64748b;margin-top:14px}
 #specialty-search :focus-visible,.specialty-search-launch:focus-visible{outline:2px solid #2563eb;outline-offset:3px}
 @media(max-width:480px){.specialty-search-launch{right:16px;bottom:calc(18px + env(safe-area-inset-bottom));width:54px;height:54px}#specialty-search{right:16px;bottom:calc(86px + env(safe-area-inset-bottom));width:340px;border-radius:20px;max-height:calc(100dvh - 110px - env(safe-area-inset-bottom))}.specialty-chat-body{padding:18px}.specialty-chat-header{padding:14px 18px 12px}}
+.specialty-suggestions{display:grid;gap:2px;border:1px solid #e2e8f0;border-radius:10px;padding:4px;background:#fff;max-height:224px;overflow:auto}
+.specialty-suggestions[hidden]{display:none}
+#specialty-search .specialty-suggestions button{display:block;width:100%;min-height:40px;border:0;background:transparent;text-align:left;border-radius:6px;padding:9px 10px;color:#334155;font:inherit;font-size:.82rem;line-height:1.35;cursor:pointer}
+#specialty-search .specialty-suggestions button:hover,#specialty-search .specialty-suggestions button[aria-selected="true"]{background:#eff6ff;color:#1d4ed8}
+.specialty-suggestions-status{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
