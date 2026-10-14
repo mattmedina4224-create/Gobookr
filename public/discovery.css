@@ -182,7 +182,7 @@
 .results-actions .result-type-tabs { margin:0; height:48px; }
 .results-actions .result-type-tabs a { display:flex; align-items:center; justify-content:center; }
 .distance-control span { display:block; margin:0 0 4px; color:var(--ink-faint); font-size:.68rem; font-weight:750; }
-.distance-control select { height:48px; min-height:48px; border:1px solid var(--paper-line); border-radius:14px; background:#fff; padding:0 28px 0 10px; color:var(--ink); font-family:inherit; font-size:.88rem; font-weight:700; }
+.distance-control select { appearance:none; -webkit-appearance:none; height:48px; min-height:48px; border:1px solid var(--paper-line); border-radius:14px; background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23526174' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") no-repeat right 10px center; padding:0 30px 0 10px; color:var(--ink); font-family:inherit; font-size:.88rem; font-weight:700; }
 .results-shell .pro-grid { gap:18px; }
 
 @media (max-width:760px) {
