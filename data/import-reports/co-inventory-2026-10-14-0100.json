@@ -1,0 +1,148 @@
+{
+  "batch": "co-inventory-2026-10-14-0100",
+  "checked_at": "2026-10-14T07:06:39.473616Z",
+  "project": "jbhgeoedwvfxjteyuxum",
+  "execution": "Approved source verification; existing importer-style dry run against current production; atomic profile/category inserts through authenticated Supabase connector.",
+  "dry_run": {
+    "input": 18,
+    "would_insert": 18,
+    "duplicates": 0,
+    "rejected": 0,
+    "invalid_booking_urls": 0,
+    "unapproved_source_urls": 0
+  },
+  "summary": {
+    "inserted": 18,
+    "categories_added": 18,
+    "colorado_total": 543,
+    "colorado_sourced": 542,
+    "colorado_unclaimed": 542,
+    "colorado_with_booking": 357,
+    "remaining_to_5000": 4458,
+    "accounts_created": 0
+  },
+  "inserted": [
+    {
+      "id": 550,
+      "name": "Calvin Propst",
+      "category": "barber",
+      "city": "Pueblo"
+    },
+    {
+      "id": 551,
+      "name": "Rachel Leyba",
+      "category": "barber",
+      "city": "Pueblo"
+    },
+    {
+      "id": 552,
+      "name": "Cassandra Montgomery",
+      "category": "eyelash_technician",
+      "city": "Greeley"
+    },
+    {
+      "id": 553,
+      "name": "Brenda Escobedo",
+      "category": "barber",
+      "city": "Greeley"
+    },
+    {
+      "id": 554,
+      "name": "Noraliz Rivera",
+      "category": "massage_therapist",
+      "city": "Colorado Springs"
+    },
+    {
+      "id": 555,
+      "name": "Katherine Angell",
+      "category": "stylist",
+      "city": "Greeley"
+    },
+    {
+      "id": 556,
+      "name": "Adriana Vázquez Rodríguez",
+      "category": "massage_therapist",
+      "city": "Colorado Springs"
+    },
+    {
+      "id": 557,
+      "name": "Dominic Gallegos",
+      "category": "barber",
+      "city": "Pueblo"
+    },
+    {
+      "id": 558,
+      "name": "Eloy Vargas",
+      "category": "barber",
+      "city": "Greeley"
+    },
+    {
+      "id": 559,
+      "name": "Sam Angelino",
+      "category": "massage_therapist",
+      "city": "Colorado Springs"
+    },
+    {
+      "id": 560,
+      "name": "Ulyana",
+      "category": "eyebrow_technician",
+      "city": "Centennial"
+    },
+    {
+      "id": 561,
+      "name": "Stephanie Morales",
+      "category": "massage_therapist",
+      "city": "Colorado Springs"
+    },
+    {
+      "id": 562,
+      "name": "Jonathan Lopez",
+      "category": "barber",
+      "city": "Greeley"
+    },
+    {
+      "id": 563,
+      "name": "Isaiah Valdez",
+      "category": "barber",
+      "city": "Pueblo"
+    },
+    {
+      "id": 564,
+      "name": "Katrina McCrummen",
+      "category": "massage_therapist",
+      "city": "Colorado Springs"
+    },
+    {
+      "id": 565,
+      "name": "Nichole Maestas",
+      "category": "stylist",
+      "city": "Pueblo"
+    },
+    {
+      "id": 566,
+      "name": "Ashley Sikes",
+      "category": "barber",
+      "city": "Pueblo"
+    },
+    {
+      "id": 567,
+      "name": "Kris Troup",
+      "category": "waxing_specialist",
+      "city": "Centennial"
+    }
+  ],
+  "verification": {
+    "all_user_ids_null": true,
+    "all_unclaimed": true,
+    "all_booking_urls_present": true,
+    "all_provenance_present": true,
+    "all_category_links_present": true,
+    "blank_authored_bios": true,
+    "blank_profile_photos": true,
+    "repeat_import_would_insert": 0
+  },
+  "notes": [
+    "Calvin Propst's Booksy page exposed a malformed free-form street address; only the verified city and ZIP were imported rather than guessing a corrected street.",
+    "No reviews, ratings, credentials, photos, authored bios, contact details, or social accounts were copied."
+  ]
+}
