@@ -1,0 +1,53 @@
+{
+  "batch": "co-batch-2026-10-14-1200",
+  "checked_at": "2026-10-14T18:03:51.402403Z",
+  "production_project": "jbhgeoedwvfxjteyuxum",
+  "source_screening": {
+    "source": "Vagaro",
+    "candidates_reviewed": 21,
+    "production_duplicates_excluded": 0,
+    "selected_for_dry_run": 21
+  },
+  "validation": {
+    "submitted": 21,
+    "invalid": 0,
+    "production_duplicates": 0,
+    "batch_duplicates": 0,
+    "eligible": 21
+  },
+  "import": {
+    "inserted_profiles": 21,
+    "inserted_categories": 21,
+    "id_range": [
+      823,
+      843
+    ],
+    "rejected": 0
+  },
+  "category_counts": {
+    "massage_therapist": 21
+  },
+  "city_counts": {
+    "Colorado Springs": 19,
+    "Westminster": 2
+  },
+  "verification": {
+    "batch_rows": 21,
+    "ownership_unclaimed_user_null": 21,
+    "provenance_and_booking_complete": 21,
+    "category_links_complete": 21
+  },
+  "production_after": {
+    "colorado_total": 795,
+    "colorado_sourced": 794,
+    "colorado_unclaimed": 794,
+    "colorado_with_booking": 609,
+    "remaining_to_5000": 4206
+  },
+  "notes": [
+    "Current public Vagaro directory, listing, and service pages supported identity or professional brand, Colorado city, massage services, and booking access.",
+    "No authored bios, reviews, ratings, credentials, photos, or portfolio media were copied.",
+    "Production deduplication used exact source URL and normalized name plus city.",
+    "Imported rows retain user_id=NULL and claim_status='unclaimed'."
+  ]
+}
