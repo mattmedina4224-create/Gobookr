@@ -1,0 +1,68 @@
+{
+  "batch": "co-batch-2026-10-14-0400.json",
+  "checked_at": "2026-10-14T10:03:13.825368Z",
+  "production_project": "jbhgeoedwvfxjteyuxum",
+  "source_platforms": [
+    "GlossGenius"
+  ],
+  "cities": [
+    "Arvada",
+    "Denver",
+    "Longmont",
+    "Loveland"
+  ],
+  "screening": {
+    "researched_candidates": 29,
+    "non_bookable_team_members_excluded": 3,
+    "duplicates_excluded": 0
+  },
+  "validation": {
+    "input_count": 26,
+    "would_insert": 26,
+    "duplicates": 0,
+    "rejected": 0,
+    "approved_source_hosts": 26,
+    "valid_booking_urls": 26
+  },
+  "import": {
+    "inserted": 26,
+    "ids": {
+      "first": 636,
+      "last": 661
+    },
+    "categories_added": 26,
+    "duplicates": 0,
+    "rejected": 0
+  },
+  "category_counts": {
+    "stylist": 13,
+    "massage_therapist": 7,
+    "nail_technician": 3,
+    "waxing_specialist": 3
+  },
+  "city_counts": {
+    "Longmont": 10,
+    "Loveland": 7,
+    "Arvada": 6,
+    "Denver": 3
+  },
+  "verification": {
+    "batch_rows": 26,
+    "user_id_null_and_unclaimed": 26,
+    "provenance_complete": 26,
+    "category_rows": 26,
+    "booking_urls_present": 26
+  },
+  "production_after": {
+    "colorado_total": 615,
+    "colorado_sourced": 614,
+    "colorado_unclaimed": 614,
+    "colorado_with_booking": 615,
+    "remaining_to_5000": 4386
+  },
+  "notes": [
+    "Only factual public listing fields were imported; no bios, reviews, credentials, photos, ratings, or user accounts were created.",
+    "Three displayed team members without a current Book action were excluded.",
+    "The first insert attempt failed on the production street_address NOT NULL constraint and was atomically rolled back; the successful import used the importer normalization of empty strings for unavailable public addresses."
+  ]
+}
