@@ -1,0 +1,67 @@
+{
+  "batch": "co-batch-2026-10-14-0600.json",
+  "checked_at": "2026-10-14T12:05:58.903618Z",
+  "production_project": "jbhgeoedwvfxjteyuxum",
+  "source_platforms": [
+    "GlossGenius"
+  ],
+  "cities": [
+    "Centennial",
+    "Colorado Springs",
+    "Denver",
+    "Westminster"
+  ],
+  "screening": {
+    "researched_candidates": 32,
+    "generic_business_entries_excluded": 1,
+    "non_bookable_team_members_excluded": 2,
+    "duplicates_excluded": 0
+  },
+  "validation": {
+    "input_count": 29,
+    "would_insert": 29,
+    "duplicates": 0,
+    "rejected": 0,
+    "approved_source_hosts": 29,
+    "valid_booking_urls": 29
+  },
+  "import": {
+    "inserted": 29,
+    "ids": {
+      "first": 688,
+      "last": 716
+    },
+    "categories_added": 29,
+    "duplicates": 0,
+    "rejected": 0
+  },
+  "category_counts": {
+    "stylist": 21,
+    "nail_technician": 8
+  },
+  "city_counts": {
+    "Colorado Springs": 13,
+    "Denver": 8,
+    "Centennial": 6,
+    "Westminster": 2
+  },
+  "verification": {
+    "batch_rows": 29,
+    "user_id_null_and_unclaimed": 29,
+    "provenance_complete": 29,
+    "category_rows": 29,
+    "booking_urls_present": 29
+  },
+  "production_after": {
+    "colorado_total": 670,
+    "colorado_sourced": 669,
+    "colorado_unclaimed": 669,
+    "colorado_with_nonempty_booking_url": 484,
+    "remaining_to_5000": 4331
+  },
+  "notes": [
+    "Only factual public listing fields were imported; no bios, reviews, credentials, photos, ratings, or user accounts were created.",
+    "Two displayed team entries without a current booking action and one generic business entry were excluded.",
+    "The booking-link inventory metric uses non-empty booking_url values; earlier reports counted non-null empty-string defaults as present."
+  ]
+}
