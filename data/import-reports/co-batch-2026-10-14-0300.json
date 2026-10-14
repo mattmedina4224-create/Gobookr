@@ -1,0 +1,69 @@
+{
+  "batch": "co-batch-2026-10-14-0300.json",
+  "checked_at": "2026-10-14T08:58:10.636858Z",
+  "production_project": "jbhgeoedwvfxjteyuxum",
+  "source_platforms": [
+    "Booksy",
+    "GlossGenius"
+  ],
+  "cities": [
+    "Aurora",
+    "Colorado Springs",
+    "Fort Collins",
+    "Fountain",
+    "Grand Junction",
+    "Greeley",
+    "Lakewood",
+    "Pueblo"
+  ],
+  "screening": {
+    "researched_candidates": 29,
+    "duplicates_excluded": 4,
+    "conflicting_location_pages_excluded": 1
+  },
+  "validation": {
+    "input_count": 24,
+    "would_insert": 24,
+    "duplicates": 0,
+    "rejected": 0,
+    "approved_source_hosts": 24,
+    "valid_booking_urls": 24
+  },
+  "import": {
+    "inserted": 24,
+    "ids": {
+      "first": 611,
+      "last": 634
+    },
+    "categories_added": 24,
+    "duplicates": 0,
+    "rejected": 0
+  },
+  "category_counts": {
+    "stylist": 7,
+    "nail_technician": 7,
+    "massage_therapist": 3,
+    "waxing_specialist": 2,
+    "tattoo_artist": 2,
+    "barber": 2,
+    "eyelash_technician": 1
+  },
+  "verification": {
+    "batch_rows": 24,
+    "user_id_null_and_unclaimed": 24,
+    "provenance_complete": 24,
+    "category_rows": 24,
+    "booking_urls_present": 24
+  },
+  "production_after": {
+    "colorado_total": 589,
+    "colorado_sourced": 588,
+    "colorado_unclaimed": 588,
+    "colorado_with_booking": 403,
+    "remaining_to_5000": 4412
+  },
+  "notes": [
+    "Only factual public listing fields were imported; no bios, reviews, credentials, photos, ratings, or user accounts were created.",
+    "One tattoo page was excluded because current search and cached page content disagreed on its state/location."
+  ]
+}
