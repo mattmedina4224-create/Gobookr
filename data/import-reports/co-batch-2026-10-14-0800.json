@@ -1,0 +1,68 @@
+{
+  "batch": "co-batch-2026-10-14-0800.json",
+  "checked_at": "2026-10-14T14:05:29.105150Z",
+  "production_project": "jbhgeoedwvfxjteyuxum",
+  "source_platforms": [
+    "GlossGenius"
+  ],
+  "cities": [
+    "Aurora",
+    "Boulder",
+    "Greeley",
+    "Littleton"
+  ],
+  "screening": {
+    "researched_candidates": 32,
+    "existing_duplicates_excluded": 3,
+    "non_bookable_team_members_excluded": 8
+  },
+  "validation": {
+    "input_count": 21,
+    "would_insert": 21,
+    "duplicates": 0,
+    "rejected": 0,
+    "approved_source_hosts": 21,
+    "valid_booking_urls": 21
+  },
+  "import": {
+    "inserted": 21,
+    "ids": {
+      "first": 736,
+      "last": 756
+    },
+    "categories_added": 21,
+    "duplicates": 0,
+    "rejected": 0
+  },
+  "category_counts": {
+    "stylist": 13,
+    "massage_therapist": 3,
+    "barber": 2,
+    "nail_technician": 2,
+    "eyelash_technician": 1
+  },
+  "city_counts": {
+    "Greeley": 8,
+    "Aurora": 6,
+    "Boulder": 4,
+    "Littleton": 3
+  },
+  "verification": {
+    "batch_rows": 21,
+    "user_id_null_and_unclaimed": 21,
+    "provenance_complete": 21,
+    "category_rows": 21,
+    "booking_urls_present": 21
+  },
+  "production_after": {
+    "colorado_total": 710,
+    "colorado_sourced": 709,
+    "colorado_unclaimed": 709,
+    "colorado_with_nonempty_booking_url": 524,
+    "remaining_to_5000": 4291
+  },
+  "notes": [
+    "Only factual public listing fields were imported; no bios, reviews, credentials, photos, ratings, or user accounts were created.",
+    "Three matching production profiles and eight displayed team members without current booking actions were excluded before validation."
+  ]
+}
