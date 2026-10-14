@@ -1,0 +1,243 @@
+{
+  "batch": "co-square-booksy-2026-10-14-1657",
+  "environment": {
+    "supabase_project_ref": "jbhgeoedwvfxjteyuxum",
+    "target": "production"
+  },
+  "source_checked_at": "2026-10-14T23:02:13.084169Z",
+  "workflow": {
+    "discovery_candidates_screened": 50,
+    "discovery_duplicates_excluded": 29,
+    "discovery_ambiguous_or_unusable_excluded": 1,
+    "importer_dry_run": {
+      "candidates": 20,
+      "eligible": 20,
+      "duplicates": 0,
+      "invalid": 0
+    },
+    "imported": 20,
+    "post_import_valid": 20
+  },
+  "production_after": {
+    "colorado_total": 913,
+    "colorado_sourced": 912,
+    "colorado_with_booking": 727,
+    "colorado_unclaimed": 912,
+    "remaining_to_5000": 4088
+  },
+  "sources": {
+    "Square Appointments": 15,
+    "Booksy": 5
+  },
+  "cities": [
+    "Aurora",
+    "Colorado Springs",
+    "Fort Collins",
+    "Grand Junction",
+    "Greeley",
+    "Longmont",
+    "Pueblo"
+  ],
+  "categories": {
+    "barber": 7,
+    "colorist": 4,
+    "eyelash_technician": 4,
+    "waxing_specialist": 2,
+    "eyebrow_technician": 1,
+    "stylist": 1,
+    "nail_technician": 1
+  },
+  "guarantees": {
+    "user_id_null": 20,
+    "claim_status_unclaimed": 20,
+    "source_url_present": 20,
+    "source_name_present": 20,
+    "source_checked_at_present": 20,
+    "booking_url_present": 20,
+    "category_join_present": 20
+  },
+  "imported_ids": [
+    952,
+    953,
+    954,
+    955,
+    956,
+    957,
+    958,
+    959,
+    960,
+    961,
+    962,
+    963,
+    964,
+    965,
+    966,
+    967,
+    968,
+    969,
+    970,
+    971
+  ],
+  "profiles": [
+    {
+      "id": 952,
+      "name": "Paulina Ramirez",
+      "city": "Aurora",
+      "category": "eyelash_technician",
+      "source": "Booksy",
+      "source_url": "https://booksy.com/en-us/1840758_pauli-beauty-lash_brows-lashes_134779_aurora"
+    },
+    {
+      "id": 953,
+      "name": "Susana Gallardo",
+      "city": "Aurora",
+      "category": "eyebrow_technician",
+      "source": "Square Appointments",
+      "source_url": "https://square.site/book/VE8AXQCHQF25V/styles-by-susy-aurora-co"
+    },
+    {
+      "id": 954,
+      "name": "Ashley Mccollum",
+      "city": "Colorado Springs",
+      "category": "eyelash_technician",
+      "source": "Square Appointments",
+      "source_url": "https://square.site/book/4R5GSBRFMZQ1G/the-lash-cottage-colorado-springs-co"
+    },
+    {
+      "id": 955,
+      "name": "HAIR BEAUTY BECKY",
+      "city": "Colorado Springs",
+      "category": "colorist",
+      "source": "Square Appointments",
+      "source_url": "https://square.site/book/8G1BZXHAAYXKT/hair-beauty-becky-colorado-springs-co"
+    },
+    {
+      "id": 956,
+      "name": "Lisa Mower",
+      "city": "Colorado Springs",
+      "category": "colorist",
+      "source": "Square Appointments",
+      "source_url": "https://square.site/book/L8GY2D6CTJB3Z/lisa-mower-hair-now719-colorado-springs-co"
+    },
+    {
+      "id": 957,
+      "name": "Lynn Hernandez",
+      "city": "Colorado Springs",
+      "category": "eyelash_technician",
+      "source": "Square Appointments",
+      "source_url": "https://square.site/book/FJRN5S1N02GFV/truly-lash-and-brow-colorado-springs-co"
+    },
+    {
+      "id": 958,
+      "name": "Shayla",
+      "city": "Colorado Springs",
+      "category": "stylist",
+      "source": "Booksy",
+      "source_url": "https://booksy.com/en-us/1242729_shaylas-laboratory_braids-locs_14977_colorado-springs"
+    },
+    {
+      "id": 959,
+      "name": "Alize",
+      "city": "Fort Collins",
+      "category": "barber",
+      "source": "Square Appointments",
+      "source_url": "https://square.site/book/CZ52T1Q7NQBPC/scissors-sinners-barbershop-fort-collins-co"
+    },
+    {
+      "id": 960,
+      "name": "CJ",
+      "city": "Fort Collins",
+      "category": "barber",
+      "source": "Square Appointments",
+      "source_url": "https://square.site/book/CZ52T1Q7NQBPC/scissors-sinners-barbershop-fort-collins-co"
+    },
+    {
+      "id": 961,
+      "name": "Mariah",
+      "city": "Fort Collins",
+      "category": "barber",
+      "source": "Square Appointments",
+      "source_url": "https://square.site/book/CZ52T1Q7NQBPC/scissors-sinners-barbershop-fort-collins-co"
+    },
+    {
+      "id": 962,
+      "name": "Rachel",
+      "city": "Fort Collins",
+      "category": "barber",
+      "source": "Square Appointments",
+      "source_url": "https://square.site/book/CZ52T1Q7NQBPC/scissors-sinners-barbershop-fort-collins-co"
+    },
+    {
+      "id": 963,
+      "name": "Tabby",
+      "city": "Fort Collins",
+      "category": "barber",
+      "source": "Square Appointments",
+      "source_url": "https://square.site/book/CZ52T1Q7NQBPC/scissors-sinners-barbershop-fort-collins-co"
+    },
+    {
+      "id": 964,
+      "name": "Tree",
+      "city": "Fort Collins",
+      "category": "barber",
+      "source": "Square Appointments",
+      "source_url": "https://square.site/book/CZ52T1Q7NQBPC/scissors-sinners-barbershop-fort-collins-co"
+    },
+    {
+      "id": 965,
+      "name": "Amanda Morrow",
+      "city": "Grand Junction",
+      "category": "waxing_specialist",
+      "source": "Square Appointments",
+      "source_url": "https://square.site/book/1DCEPEPVKAJE8/silk-beauty-boutique-grand-junction-co"
+    },
+    {
+      "id": 966,
+      "name": "Elle Keplinger",
+      "city": "Greeley",
+      "category": "colorist",
+      "source": "Square Appointments",
+      "source_url": "https://square.site/book/5M7YCPZQ7Z353/ek-salon-greeley-co"
+    },
+    {
+      "id": 967,
+      "name": "Brandon Gurrola",
+      "city": "Longmont",
+      "category": "barber",
+      "source": "Booksy",
+      "source_url": "https://booksy.com/en-us/1133679_brandon-blendz_hair-salon_134760_longmont"
+    },
+    {
+      "id": 968,
+      "name": "Destinie Trujillo",
+      "city": "Pueblo",
+      "category": "colorist",
+      "source": "Booksy",
+      "source_url": "https://booksy.com/en-us/867136_destlynn-beauty_hair-salon_15180_pueblo"
+    },
+    {
+      "id": 969,
+      "name": "Intellitec College",
+      "city": "Pueblo",
+      "category": "nail_technician",
+      "source": "Booksy",
+      "source_url": "https://booksy.com/en-us/454866_intellitec-college_nail-salon_15180_pueblo"
+    },
+    {
+      "id": 970,
+      "name": "Rochelle Sanchez",
+      "city": "Pueblo",
+      "category": "eyelash_technician",
+      "source": "Square Appointments",
+      "source_url": "https://square.site/book/8YJ0MK3S4VK0N/lashes-by-rochelle-pueblo-co"
+    },
+    {
+      "id": 971,
+      "name": "Shannon Sturtevant",
+      "city": "Pueblo",
+      "category": "waxing_specialist",
+      "source": "Square Appointments",
+      "source_url": "https://square.site/book/LF4QH52VSQVEB/skincare-by-shannon-llc-pueblo-co"
+    }
+  ]
+}
