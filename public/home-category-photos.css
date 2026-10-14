@@ -4,6 +4,7 @@
 .home-photo-card:hover{border-color:#a7b6c7}
 .home-photo-card:focus-visible{outline:3px solid #2563eb;outline-offset:4px}
 .home-photo-card img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;background:#f5f5f2}
+.home-photo-card img.home-photo-nails-stock{object-position:50% 35%}
 .home-photo-card>span{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:16px 18px;font-size:1rem}
 .home-photo-card strong{font-weight:600}
 .home-photo-card>span>span{color:#64748b}
