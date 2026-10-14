@@ -1,0 +1,60 @@
+{
+  "batch": "co-batch-2026-10-14-1000",
+  "checked_at": "2026-10-14T15:58:50.031271Z",
+  "production_project": "jbhgeoedwvfxjteyuxum",
+  "source_screening": {
+    "source": "Booksy",
+    "candidates_reviewed": 50,
+    "production_duplicates_excluded": 29,
+    "selected_for_dry_run": 21
+  },
+  "validation": {
+    "submitted": 21,
+    "invalid": 0,
+    "production_duplicates": 0,
+    "batch_duplicates": 0,
+    "eligible": 21
+  },
+  "import": {
+    "inserted_profiles": 21,
+    "inserted_categories": 21,
+    "id_range": [
+      783,
+      803
+    ],
+    "rejected": 0
+  },
+  "category_counts": {
+    "nail_technician": 18,
+    "eyelash_technician": 2,
+    "waxing_specialist": 1
+  },
+  "city_counts": {
+    "Aurora": 4,
+    "Broomfield": 1,
+    "Colorado Springs": 1,
+    "Denver": 5,
+    "Fort Collins": 1,
+    "Greeley": 2,
+    "Thornton": 4,
+    "Westminster": 3
+  },
+  "verification": {
+    "batch_rows": 21,
+    "ownership_unclaimed_user_null": 21,
+    "provenance_and_booking_complete": 21,
+    "category_links_complete": 21
+  },
+  "production_after": {
+    "colorado_total": 755,
+    "colorado_sourced": 754,
+    "colorado_unclaimed": 754,
+    "colorado_with_booking": 569,
+    "remaining_to_5000": 4246
+  },
+  "notes": [
+    "Current public Booksy pages supported identity or professional brand, Colorado city, service category, and booking access.",
+    "No authored bios, reviews, ratings, credentials, photos, or portfolio media were copied.",
+    "Production deduplication used exact source URL and normalized name plus city."
+  ]
+}
