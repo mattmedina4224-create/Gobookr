@@ -1,0 +1,329 @@
+{
+  "batch_id": "co-booksy-square-2026-10-14-1602",
+  "imported_at": "2026-10-14T22:02:31.34811Z",
+  "environment": {
+    "supabase_project_id": "jbhgeoedwvfxjteyuxum",
+    "target": "production"
+  },
+  "sources": [
+    "Booksy",
+    "Square Appointments"
+  ],
+  "workflow": {
+    "validation": "passed",
+    "discovery_screening": {
+      "duplicates_excluded": 14,
+      "unavailable_or_deleted_pages_excluded": 4
+    },
+    "dry_run": {
+      "candidates": 20,
+      "eligible": 20,
+      "duplicates": 0,
+      "rejections": 0
+    },
+    "imported": 20,
+    "post_verify": "passed"
+  },
+  "counts_before": {
+    "colorado_total": 873,
+    "colorado_sourced": 872,
+    "colorado_unclaimed": 872,
+    "colorado_with_booking": 687
+  },
+  "counts_after": {
+    "colorado_total": 893,
+    "colorado_sourced": 892,
+    "colorado_unclaimed": 892,
+    "colorado_with_booking": 707,
+    "remaining_to_5000": 4108
+  },
+  "categories": {
+    "tattoo_artist": 11,
+    "barber": 8,
+    "massage_therapist": 1
+  },
+  "cities": [
+    "Aurora",
+    "Boulder",
+    "Colorado Springs",
+    "Denver",
+    "Fort Collins",
+    "Lakewood",
+    "Longmont",
+    "Pueblo"
+  ],
+  "safeguards": {
+    "user_id_null": 20,
+    "claim_status_unclaimed": 20,
+    "source_name_present": 20,
+    "source_url_present": 20,
+    "source_checked_at_present": 20,
+    "booking_url_present": 20,
+    "category_linked": 20,
+    "fabricated_fields": 0,
+    "copied_bios": 0,
+    "portfolio_media": 0
+  },
+  "profiles": [
+    {
+      "business_name": "Rosa Leal",
+      "category": "tattoo_artist",
+      "city": "Fort Collins",
+      "state": "CO",
+      "workplace_name": "Reckless Ink Tattoo Co",
+      "booking_url": "https://square.site/book/LPFADKJGS33CA/reckless-ink-tattoo-co-fort-collins-co",
+      "source_url": "https://square.site/book/LPFADKJGS33CA/reckless-ink-tattoo-co-fort-collins-co",
+      "source_name": "Square Appointments",
+      "source_checked_at": "2026-10-14T22:02:31.34811Z",
+      "user_id": null,
+      "claim_status": "unclaimed"
+    },
+    {
+      "business_name": "Joseph Funck",
+      "category": "tattoo_artist",
+      "city": "Colorado Springs",
+      "state": "CO",
+      "workplace_name": "Ethereal Tattoo Body Art",
+      "booking_url": "https://square.site/book/GCS1G0SCWAGBV/ethereal-tattoo-body-art-colorado-springs-co",
+      "source_url": "https://square.site/book/GCS1G0SCWAGBV/ethereal-tattoo-body-art-colorado-springs-co",
+      "source_name": "Square Appointments",
+      "source_checked_at": "2026-10-14T22:02:31.34811Z",
+      "user_id": null,
+      "claim_status": "unclaimed"
+    },
+    {
+      "business_name": "Tyler Jostes",
+      "category": "tattoo_artist",
+      "city": "Fort Collins",
+      "state": "CO",
+      "workplace_name": "La Rosa Tattoo Co.",
+      "booking_url": "https://square.site/book/FD8V4DHHSHGYE/tyler-jostes-at-la-rosa-tattoo-co-fort-collins-co",
+      "source_url": "https://square.site/book/FD8V4DHHSHGYE/tyler-jostes-at-la-rosa-tattoo-co-fort-collins-co",
+      "source_name": "Square Appointments",
+      "source_checked_at": "2026-10-14T22:02:31.34811Z",
+      "user_id": null,
+      "claim_status": "unclaimed"
+    },
+    {
+      "business_name": "Eric Hayes",
+      "category": "tattoo_artist",
+      "city": "Colorado Springs",
+      "state": "CO",
+      "workplace_name": "Still Gold Tattoo",
+      "booking_url": "https://square.site/book/YT0E7220F13EH/art-of-eric-hayes-colorado-springs-co",
+      "source_url": "https://square.site/book/YT0E7220F13EH/art-of-eric-hayes-colorado-springs-co",
+      "source_name": "Square Appointments",
+      "source_checked_at": "2026-10-14T22:02:31.34811Z",
+      "user_id": null,
+      "claim_status": "unclaimed"
+    },
+    {
+      "business_name": "Jami Kauffman",
+      "category": "tattoo_artist",
+      "city": "Boulder",
+      "state": "CO",
+      "workplace_name": "Healing Ink",
+      "booking_url": "https://square.site/book/GQDMTNR9XJWH9/healing-ink-boulder-co",
+      "source_url": "https://square.site/book/GQDMTNR9XJWH9/healing-ink-boulder-co",
+      "source_name": "Square Appointments",
+      "source_checked_at": "2026-10-14T22:02:31.34811Z",
+      "user_id": null,
+      "claim_status": "unclaimed"
+    },
+    {
+      "business_name": "Tiffany Corsentino",
+      "category": "tattoo_artist",
+      "city": "Pueblo",
+      "state": "CO",
+      "workplace_name": "Hue 32",
+      "booking_url": "https://square.site/book/FDS256PNZX453/hue-32-pueblo-co",
+      "source_url": "https://square.site/book/FDS256PNZX453/hue-32-pueblo-co",
+      "source_name": "Square Appointments",
+      "source_checked_at": "2026-10-14T22:02:31.34811Z",
+      "user_id": null,
+      "claim_status": "unclaimed"
+    },
+    {
+      "business_name": "Gabriel Fuerzas",
+      "category": "tattoo_artist",
+      "city": "Lakewood",
+      "state": "CO",
+      "workplace_name": "Zenji Tattoo Shop",
+      "booking_url": "https://booksy.com/en-us/1726832_gabriel-fuerzas-ink_tattoo-shop_134761_denver",
+      "source_url": "https://booksy.com/en-us/1726832_gabriel-fuerzas-ink_tattoo-shop_134761_denver",
+      "source_name": "Booksy",
+      "source_checked_at": "2026-10-14T22:02:31.34811Z",
+      "user_id": null,
+      "claim_status": "unclaimed"
+    },
+    {
+      "business_name": "Marlene Ibarra",
+      "category": "tattoo_artist",
+      "city": "Denver",
+      "state": "CO",
+      "workplace_name": "marzon3arth",
+      "booking_url": "https://booksy.com/en-us/1809567_marzon3arth_tattoo-shop_134761_denver",
+      "source_url": "https://booksy.com/en-us/1809567_marzon3arth_tattoo-shop_134761_denver",
+      "source_name": "Booksy",
+      "source_checked_at": "2026-10-14T22:02:31.34811Z",
+      "user_id": null,
+      "claim_status": "unclaimed"
+    },
+    {
+      "business_name": "Jeffrey Oelklaus",
+      "category": "tattoo_artist",
+      "city": "Colorado Springs",
+      "state": "CO",
+      "workplace_name": "Bearded Lady Custom Tattoo Company LLC",
+      "booking_url": "https://booksy.com/en-us/3687_bearded-lady-custom-tattoo-company-llc_other_14977_colorado-springs",
+      "source_url": "https://booksy.com/en-us/3687_bearded-lady-custom-tattoo-company-llc_other_14977_colorado-springs",
+      "source_name": "Booksy",
+      "source_checked_at": "2026-10-14T22:02:31.34811Z",
+      "user_id": null,
+      "claim_status": "unclaimed"
+    },
+    {
+      "business_name": "Lyndon Lapp",
+      "category": "tattoo_artist",
+      "city": "Colorado Springs",
+      "state": "CO",
+      "workplace_name": "Lyndon Lapp Tattoos",
+      "booking_url": "https://booksy.com/en-us/514144_lyndon-lapp-tattoos_tattoo-shop_14977_colorado-springs",
+      "source_url": "https://booksy.com/en-us/514144_lyndon-lapp-tattoos_tattoo-shop_14977_colorado-springs",
+      "source_name": "Booksy",
+      "source_checked_at": "2026-10-14T22:02:31.34811Z",
+      "user_id": null,
+      "claim_status": "unclaimed"
+    },
+    {
+      "business_name": "Freakys Tattoos",
+      "category": "tattoo_artist",
+      "city": "Colorado Springs",
+      "state": "CO",
+      "workplace_name": "Freakys Tattoos",
+      "booking_url": "https://booksy.com/en-us/253162_freakys-tattoos_tattoo-shop_14977_colorado-springs",
+      "source_url": "https://booksy.com/en-us/253162_freakys-tattoos_tattoo-shop_14977_colorado-springs",
+      "source_name": "Booksy",
+      "source_checked_at": "2026-10-14T22:02:31.34811Z",
+      "user_id": null,
+      "claim_status": "unclaimed"
+    },
+    {
+      "business_name": "Kevin Diaz",
+      "category": "barber",
+      "city": "Aurora",
+      "state": "CO",
+      "workplace_name": "Kevin Díaz Barber",
+      "booking_url": "https://booksy.com/en-us/1455675_kevin-diaz-barber_barber-shop_134779_aurora",
+      "source_url": "https://booksy.com/en-us/1455675_kevin-diaz-barber_barber-shop_134779_aurora",
+      "source_name": "Booksy",
+      "source_checked_at": "2026-10-14T22:02:31.34811Z",
+      "user_id": null,
+      "claim_status": "unclaimed"
+    },
+    {
+      "business_name": "Swift Kuts",
+      "category": "barber",
+      "city": "Pueblo",
+      "state": "CO",
+      "workplace_name": "Swift Kuts",
+      "booking_url": "https://booksy.com/en-us/1434927_swift-kuts_barber-shop_15180_pueblo",
+      "source_url": "https://booksy.com/en-us/1434927_swift-kuts_barber-shop_15180_pueblo",
+      "source_name": "Booksy",
+      "source_checked_at": "2026-10-14T22:02:31.34811Z",
+      "user_id": null,
+      "claim_status": "unclaimed"
+    },
+    {
+      "business_name": "Royalty Cuts",
+      "category": "barber",
+      "city": "Pueblo",
+      "state": "CO",
+      "workplace_name": "Royalty Cuts",
+      "booking_url": "https://booksy.com/en-us/617703_royalty-cuts_barber-shop_15180_pueblo",
+      "source_url": "https://booksy.com/en-us/617703_royalty-cuts_barber-shop_15180_pueblo",
+      "source_name": "Booksy",
+      "source_checked_at": "2026-10-14T22:02:31.34811Z",
+      "user_id": null,
+      "claim_status": "unclaimed"
+    },
+    {
+      "business_name": "Xavier",
+      "category": "barber",
+      "city": "Aurora",
+      "state": "CO",
+      "workplace_name": "Treadi.cutz",
+      "booking_url": "https://booksy.com/en-us/1544538_treadi-cutz_barber-shop_134779_aurora",
+      "source_url": "https://booksy.com/en-us/1544538_treadi-cutz_barber-shop_134779_aurora",
+      "source_name": "Booksy",
+      "source_checked_at": "2026-10-14T22:02:31.34811Z",
+      "user_id": null,
+      "claim_status": "unclaimed"
+    },
+    {
+      "business_name": "Yaaziel",
+      "category": "barber",
+      "city": "Aurora",
+      "state": "CO",
+      "workplace_name": "Yqcutz",
+      "booking_url": "https://booksy.com/en-us/958291_yqcutz_barber-shop_134779_aurora",
+      "source_url": "https://booksy.com/en-us/958291_yqcutz_barber-shop_134779_aurora",
+      "source_name": "Booksy",
+      "source_checked_at": "2026-10-14T22:02:31.34811Z",
+      "user_id": null,
+      "claim_status": "unclaimed"
+    },
+    {
+      "business_name": "Odie B. McClendon Jr.",
+      "category": "barber",
+      "city": "Aurora",
+      "state": "CO",
+      "workplace_name": "McClendon's Hairshack",
+      "booking_url": "https://booksy.com/en-us/855617_mcclendons-hairshack_barber-shop_134779_aurora",
+      "source_url": "https://booksy.com/en-us/855617_mcclendons-hairshack_barber-shop_134779_aurora",
+      "source_name": "Booksy",
+      "source_checked_at": "2026-10-14T22:02:31.34811Z",
+      "user_id": null,
+      "claim_status": "unclaimed"
+    },
+    {
+      "business_name": "Devin",
+      "category": "barber",
+      "city": "Aurora",
+      "state": "CO",
+      "workplace_name": "devincutzzz",
+      "booking_url": "https://booksy.com/en-us/1308622_devincutzzz_barber-shop_134779_aurora",
+      "source_url": "https://booksy.com/en-us/1308622_devincutzzz_barber-shop_134779_aurora",
+      "source_name": "Booksy",
+      "source_checked_at": "2026-10-14T22:02:31.34811Z",
+      "user_id": null,
+      "claim_status": "unclaimed"
+    },
+    {
+      "business_name": "Adrian",
+      "category": "barber",
+      "city": "Aurora",
+      "state": "CO",
+      "workplace_name": "JRFADEZZ",
+      "booking_url": "https://booksy.com/en-us/1585905_jrfadezz_barber-shop_134779_aurora",
+      "source_url": "https://booksy.com/en-us/1585905_jrfadezz_barber-shop_134779_aurora",
+      "source_name": "Booksy",
+      "source_checked_at": "2026-10-14T22:02:31.34811Z",
+      "user_id": null,
+      "claim_status": "unclaimed"
+    },
+    {
+      "business_name": "Kristianne Koons",
+      "category": "massage_therapist",
+      "city": "Longmont",
+      "state": "CO",
+      "workplace_name": "Glamour by Kristi",
+      "booking_url": "https://square.site/book/8DT21NPH7K938/glamour-by-kristi-longmont-co",
+      "source_url": "https://square.site/book/8DT21NPH7K938/glamour-by-kristi-longmont-co",
+      "source_name": "Square Appointments",
+      "source_checked_at": "2026-10-14T22:02:31.34811Z",
+      "user_id": null,
+      "claim_status": "unclaimed"
+    }
+  ]
+}
