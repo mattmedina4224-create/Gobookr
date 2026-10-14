@@ -1,0 +1,73 @@
+{
+  "batch": "co-batch-2026-10-14-0500.json",
+  "checked_at": "2026-10-14T11:00:56.249328Z",
+  "production_project": "jbhgeoedwvfxjteyuxum",
+  "source_platforms": [
+    "GlossGenius"
+  ],
+  "cities": [
+    "Broomfield",
+    "Castle Rock",
+    "Grand Junction",
+    "Pueblo",
+    "Thornton"
+  ],
+  "screening": {
+    "researched_candidates": 31,
+    "test_or_generic_roles_excluded": 2,
+    "non_bookable_team_members_excluded": 2,
+    "ambiguous_display_name_excluded": 1,
+    "duplicates_excluded": 0
+  },
+  "validation": {
+    "input_count": 26,
+    "would_insert": 26,
+    "duplicates": 0,
+    "rejected": 0,
+    "approved_source_hosts": 26,
+    "valid_booking_urls": 26
+  },
+  "import": {
+    "inserted": 26,
+    "ids": {
+      "first": 662,
+      "last": 687
+    },
+    "categories_added": 26,
+    "duplicates": 0,
+    "rejected": 0
+  },
+  "category_counts": {
+    "nail_technician": 13,
+    "stylist": 7,
+    "massage_therapist": 3,
+    "eyelash_technician": 1,
+    "eyebrow_technician": 1,
+    "waxing_specialist": 1
+  },
+  "city_counts": {
+    "Grand Junction": 15,
+    "Thornton": 5,
+    "Castle Rock": 3,
+    "Pueblo": 2,
+    "Broomfield": 1
+  },
+  "verification": {
+    "batch_rows": 26,
+    "user_id_null_and_unclaimed": 26,
+    "provenance_complete": 26,
+    "category_rows": 26,
+    "booking_urls_present": 26
+  },
+  "production_after": {
+    "colorado_total": 641,
+    "colorado_sourced": 640,
+    "colorado_unclaimed": 640,
+    "colorado_with_booking": 641,
+    "remaining_to_5000": 4360
+  },
+  "notes": [
+    "Only factual public listing fields were imported; no bios, reviews, credentials, photos, ratings, or user accounts were created.",
+    "A displayed test account, a generic role, two team entries without a current booking action, and one ambiguous single-name entry were excluded."
+  ]
+}
