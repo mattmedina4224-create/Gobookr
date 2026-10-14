@@ -18,10 +18,12 @@ test('search defaults to five miles and preserves every supported customer choic
   for (const value of supported) assert.equal(resolve(String(value)), value);
 });
 
-test('distance and result type controls share the same height on desktop and mobile', () => {
+test('distance and result type controls share one box and matching white selections', () => {
   const css = fs.readFileSync(path.join(__dirname, '..', 'public', 'discovery.css'), 'utf8');
-  assert.match(css, /\.results-actions \.result-type-tabs \{[^}]*height:48px;/);
-  assert.match(css, /\.distance-control select \{[^}]*height:48px; min-height:48px;/);
+  assert.match(css, /\.results-actions \{[^}]*height:48px;[^}]*border:1px solid var\(--paper-line\);[^}]*background:var\(--paper-soft\);/);
+  assert.match(css, /\.results-actions \.result-type-tabs \{[^}]*height:38px;[^}]*border:0;[^}]*background:transparent;/);
+  assert.match(css, /\.distance-control select \{[^}]*height:38px; min-height:38px;[^}]*border:0; border-radius:10px; background:#fff[^}]*box-shadow:0 1px 4px rgba\(11,31,58,.09\);/);
+  assert.match(css, /\.distance-control span \{[^}]*clip-path:inset\(50%\);/);
   assert.doesNotMatch(css, /\.distance-control select \{[^}]*min-height:40px;/);
 });
 
