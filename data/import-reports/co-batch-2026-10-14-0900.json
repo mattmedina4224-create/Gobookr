@@ -1,0 +1,59 @@
+{
+  "batch": "co-batch-2026-10-14-0900",
+  "checked_at": "2026-10-14T15:08:04.822373Z",
+  "production_project": "jbhgeoedwvfxjteyuxum",
+  "source_screening": {
+    "source": "Booksy",
+    "candidates_reviewed": 40,
+    "production_duplicates_excluded": 14,
+    "scope_exclusions": 2,
+    "selected_for_dry_run": 24
+  },
+  "validation": {
+    "submitted": 24,
+    "invalid": 0,
+    "production_duplicates": 0,
+    "batch_duplicates": 0,
+    "eligible": 24
+  },
+  "import": {
+    "inserted_profiles": 24,
+    "inserted_categories": 24,
+    "id_range": [
+      759,
+      782
+    ],
+    "rejected": 0
+  },
+  "category_counts": {
+    "barber": 21,
+    "stylist": 3
+  },
+  "city_counts": {
+    "Boulder": 4,
+    "Fort Collins": 2,
+    "Grand Junction": 3,
+    "Lakewood": 5,
+    "Longmont": 4,
+    "Pueblo": 1,
+    "Westminster": 5
+  },
+  "verification": {
+    "batch_rows": 24,
+    "ownership_unclaimed_user_null": 24,
+    "provenance_and_booking_complete": 24,
+    "category_links_complete": 24
+  },
+  "production_after": {
+    "colorado_total": 734,
+    "colorado_sourced": 733,
+    "colorado_unclaimed": 733,
+    "colorado_with_booking": 548,
+    "remaining_to_5000": 4267
+  },
+  "notes": [
+    "All imported profiles were verified from current public Booksy pages.",
+    "No authored bios, reviews, ratings, photos, credentials, or portfolio media were copied.",
+    "The import used production deduplication by source URL and normalized name plus city."
+  ]
+}
