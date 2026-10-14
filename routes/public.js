@@ -172,7 +172,7 @@ module.exports = function (router) {
   router.get('/search', async (ctx) => {
     const requestedCategory = queryText(ctx.query.category, 40); const category = CATEGORY_VALUES.has(requestedCategory) ? requestedCategory : '';
     const city = queryText(ctx.query.city, 100); const q = queryText(ctx.query.q, 100); const requestedType = queryText(ctx.query.type, 20); const resultType = RESULT_TYPES.has(requestedType) ? requestedType : 'all';
-    const radius = parseRadius(ctx.query.radius); const latText = queryText(ctx.query.lat, 30); const lonText = queryText(ctx.query.lon, 30); const lat = Number(latText); const lon = Number(lonText); const hasGps = latText !== '' && lonText !== '' && Number.isFinite(lat) && lat >= -90 && lat <= 90 && Number.isFinite(lon) && lon >= -180 && lon <= 180 && radius !== null;
+    const radius = parseRadius(ctx.query.radius) ?? 5; const latText = queryText(ctx.query.lat, 30); const lonText = queryText(ctx.query.lon, 30); const lat = Number(latText); const lon = Number(lonText); const hasGps = latText !== '' && lonText !== '' && Number.isFinite(lat) && lat >= -90 && lat <= 90 && Number.isFinite(lon) && lon >= -180 && lon <= 180 && radius !== null;
     const manualCenter = !hasGps && city && radius ? resolveSearchCenter(city) : null;
     const radiusBounds = hasGps || manualCenter ? require('../lib/geo-search').boundingBox(hasGps ? lat : manualCenter.latitude, hasGps ? lon : manualCenter.longitude, radius) : null;
     const radiusLat = hasGps ? lat : (manualCenter ? manualCenter.latitude : null); const radiusLon = hasGps ? lon : (manualCenter ? manualCenter.longitude : null); const hasRadiusCenter = hasGps || Boolean(manualCenter);

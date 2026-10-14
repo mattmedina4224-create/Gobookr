@@ -4,6 +4,26 @@ const test = require('node:test');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
+const vm = require('node:vm');
+
+test('search defaults to five miles and preserves every supported customer choice', () => {
+  const source = fs.readFileSync(path.join(__dirname, '..', 'routes', 'public.js'), 'utf8');
+  const expression = source.match(/const radius = (.*?); const latText/)[1];
+  const supported = [1,2,3,4,5,7,9,11,13,15,17,19];
+  const resolve = (value) => vm.runInNewContext(expression, {
+    ctx: { query: { radius: value } },
+    parseRadius: (input) => supported.includes(Number(input)) ? Number(input) : null,
+  });
+  for (const value of [undefined, null, '', 'invalid', '99']) assert.equal(resolve(value), 5);
+  for (const value of supported) assert.equal(resolve(String(value)), value);
+});
+
+test('distance and result type controls share the same height on desktop and mobile', () => {
+  const css = fs.readFileSync(path.join(__dirname, '..', 'public', 'discovery.css'), 'utf8');
+  assert.match(css, /\.results-actions \.result-type-tabs \{[^}]*height:48px;/);
+  assert.match(css, /\.distance-control select \{[^}]*height:48px; min-height:48px;/);
+  assert.doesNotMatch(css, /\.distance-control select \{[^}]*min-height:40px;/);
+});
 
 test('search results distance control uses supported radius values', () => {
   const source = fs.readFileSync(path.join(__dirname, '..', 'routes', 'public.js'), 'utf8');
