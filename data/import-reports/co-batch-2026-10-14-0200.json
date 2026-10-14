@@ -1,0 +1,59 @@
+{
+  "batch": "co-batch-2026-10-14-0200.json",
+  "checked_at": "2026-10-14T08:07:54.409982Z",
+  "production_project": "jbhgeoedwvfxjteyuxum",
+  "source_platforms": [
+    "Booksy",
+    "GlossGenius"
+  ],
+  "cities": [
+    "Bayfield",
+    "Brighton",
+    "Byers",
+    "Colorado Springs",
+    "Grand Junction"
+  ],
+  "validation": {
+    "input_count": 22,
+    "would_insert": 22,
+    "duplicates": 0,
+    "rejected": 0,
+    "approved_source_hosts": 22,
+    "valid_booking_urls": 22
+  },
+  "import": {
+    "inserted": 22,
+    "ids": {
+      "first": 589,
+      "last": 610
+    },
+    "categories_added": 22,
+    "duplicates": 0,
+    "rejected": 0
+  },
+  "category_counts": {
+    "stylist": 2,
+    "nail_technician": 6,
+    "massage_therapist": 4,
+    "waxing_specialist": 2,
+    "eyelash_technician": 8
+  },
+  "verification": {
+    "batch_rows": 22,
+    "user_id_null_and_unclaimed": 22,
+    "provenance_complete": 22,
+    "category_rows": 22,
+    "booking_urls_present": 22
+  },
+  "production_after": {
+    "colorado_total": 565,
+    "colorado_sourced": 564,
+    "colorado_unclaimed": 564,
+    "colorado_with_booking": 379,
+    "remaining_to_5000": 4436
+  },
+  "notes": [
+    "Only factual public listing fields were imported; no bios, reviews, credentials, photos, ratings, or user accounts were created.",
+    "A transaction-level category constraint preflight exposed wedding_services as unavailable in pro_profiles.category. The failed transaction rolled back completely; Bailey Wyatt was assigned the independently source-supported eyelash_technician category before the successful batch."
+  ]
+}
