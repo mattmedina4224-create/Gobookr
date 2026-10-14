@@ -1,0 +1,59 @@
+{
+  "batch": "co-batch-2026-10-14-1300",
+  "checked_at": "2026-10-14T19:01:43.807716Z",
+  "production_project": "jbhgeoedwvfxjteyuxum",
+  "source_screening": {
+    "source": "Vagaro",
+    "candidates_reviewed": 21,
+    "production_duplicates_excluded": 0,
+    "selected_for_dry_run": 21
+  },
+  "validation": {
+    "submitted": 21,
+    "invalid": 0,
+    "production_duplicates": 0,
+    "batch_duplicates": 0,
+    "eligible": 21
+  },
+  "import": {
+    "inserted_profiles": 21,
+    "inserted_categories": 21,
+    "id_range": [
+      854,
+      874
+    ],
+    "rejected": 0
+  },
+  "category_counts": {
+    "eyebrow_technician": 14,
+    "eyelash_technician": 2,
+    "stylist": 2,
+    "waxing_specialist": 3
+  },
+  "city_counts": {
+    "Broomfield": 2,
+    "Denver": 18,
+    "Erie": 1
+  },
+  "verification": {
+    "batch_rows": 21,
+    "ownership_unclaimed_user_null": 21,
+    "provenance_and_booking_complete": 21,
+    "category_links_complete": 21
+  },
+  "production_after": {
+    "colorado_total": 816,
+    "colorado_sourced": 815,
+    "colorado_unclaimed": 815,
+    "colorado_with_booking": 630,
+    "remaining_to_5000": 4185
+  },
+  "notes": [
+    "Current public Vagaro directory and booking pages supported professional or business identity, Colorado city, selected category, and booking access.",
+    "No authored bios, reviews, ratings, credentials, photos, or portfolio media were copied.",
+    "Production deduplication used exact source URL and normalized name plus city.",
+    "Imported rows retain user_id=NULL and claim_status='unclaimed'.",
+    "An initial transaction using the repository-documented makeup_artist category was rejected and rolled back because the current production category constraint does not yet accept makeup_artist.",
+    "Listings were retained only where the same source page explicitly supported an existing production category such as brows, lashes, waxing, or hair; no unsupported category was forced."
+  ]
+}
