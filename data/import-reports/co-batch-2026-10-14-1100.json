@@ -1,0 +1,57 @@
+{
+  "batch": "co-batch-2026-10-14-1100",
+  "checked_at": "2026-10-14T17:07:20.953603Z",
+  "production_project": "jbhgeoedwvfxjteyuxum",
+  "source_screening": {
+    "source": "Vagaro",
+    "candidates_reviewed": 19,
+    "production_duplicates_excluded": 0,
+    "selected_for_dry_run": 19
+  },
+  "validation": {
+    "submitted": 19,
+    "invalid": 0,
+    "production_duplicates": 0,
+    "batch_duplicates": 0,
+    "eligible": 19
+  },
+  "import": {
+    "inserted_profiles": 19,
+    "inserted_categories": 19,
+    "id_range": [
+      804,
+      822
+    ],
+    "rejected": 0
+  },
+  "category_counts": {
+    "massage_therapist": 1,
+    "nail_technician": 13,
+    "stylist": 5
+  },
+  "city_counts": {
+    "Denver": 11,
+    "Edgewater": 1,
+    "Lakewood": 4,
+    "Wheat Ridge": 3
+  },
+  "verification": {
+    "batch_rows": 19,
+    "ownership_unclaimed_user_null": 19,
+    "provenance_and_booking_complete": 19,
+    "category_links_complete": 19
+  },
+  "production_after": {
+    "colorado_total": 774,
+    "colorado_sourced": 773,
+    "colorado_unclaimed": 773,
+    "colorado_with_booking": 588,
+    "remaining_to_5000": 4227
+  },
+  "notes": [
+    "Current public Vagaro listing and booking pages supported professional or business identity, Colorado city, service category, and booking access.",
+    "No authored bios, reviews, ratings, credentials, photos, or portfolio media were copied.",
+    "Production deduplication used exact source URL and normalized name plus city.",
+    "Imported rows retain user_id=NULL and claim_status='unclaimed'."
+  ]
+}
