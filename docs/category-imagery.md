@@ -2,13 +2,13 @@
 
 The barber and hairstylist category images remain AI-generated. Nails, tattoos, lashes/brows, and massage use real licensed stock photography with distinct people and settings. These category images are never attached to named pros, fabricated reviews, or profile portfolios. Real profile photos continue to come from existing uploads.
 
-The two current generated images are 720 × 720 WebP assets. Stock images are proportionately resized to fit within 720 × 720 and encoded as WebP. CSS fits each image into the existing card crop; the portrait manicure uses a higher focal position to keep both the technician and hands visible. Images lazy-load below the hero and reserve layout space.
+The two current generated images are 720 × 720 WebP assets. Stock images are proportionately resized to fit within 720 × 720 and encoded as WebP. CSS fits each image into the existing card crop. The current manicure photo is a close-up of red nails being painted. Images lazy-load below the hero and reserve layout space.
 
 ## Saved assets
 
 - `public/images/category-barber-v1.webp`
 - `public/images/category-hair-v1.webp`
-- `public/images/category-nails-stock-v1.webp`
+- `public/images/category-nails-stock-v2.webp`
 - `public/images/category-tattoos-stock-v1.webp`
 - `public/images/category-lashes-stock-v1.webp`
 - `public/images/category-massage-stock-v1.webp` (current; original generated v1 retained for comparison)
@@ -17,7 +17,7 @@ The two current generated images are 720 × 720 WebP assets. Stock images are pr
 
 Pexels license reviewed October 13, 2026 at https://www.pexels.com/license/ . It permits website use and modification; no attribution is required, and no endorsement is implied. Photographer credit and original source are retained below. These are photographic images published in 2020–2021, resized/encoded without AI alteration:
 
-- Nails: Leeloo The First, photo 4677856, published June 17, 2020. https://www.pexels.com/photo/focused-woman-doing-manicure-to-client-4677856/
+- Nails v2 (current): Gabriel Puyén, photo 6135696, published December 9, 2020. https://www.pexels.com/photo/a-person-applying-nail-polish-on-a-fingernail-6135696/ . Previous Leeloo The First photo 4677856 retained for comparison.
 - Lashes/brows: Antoni Shkraba, photo 5177995, published August 23, 2020. https://www.pexels.com/photo/woman-in-black-and-white-striped-shirt-getting-an-eyebrow-threading-5177995/
 - Tattoos: Pavel Danilyuk, photo 6593456, published January 25, 2021. https://www.pexels.com/photo/tattoo-artist-tattooing-a-client-6593456/
 - Massage: Andrea Piacquadio, photo 3764568. https://www.pexels.com/photo/selective-focus-photo-of-woman-getting-a-massage-3764568/
