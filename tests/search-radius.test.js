@@ -25,6 +25,8 @@ test('distance and result type controls share one box and matching white selecti
   assert.match(css, /\.results-actions \.result-type-tabs \{ display:contents; \}/);
   assert.match(css, /\.results-actions \.result-type-tabs a \{[^}]*height:38px;/);
   assert.match(css, /\.distance-control \{[^}]*display:flex; align-items:center; height:38px;/);
+  assert.match(css, /\.distance-control \{[^}]*margin:0;/);
+  assert.match(css, /\.distance-control select \{[^}]*padding:0 18px; text-align:center; text-align-last:center;/);
   assert.match(css, /\.distance-control select \{[^}]*height:38px; min-height:38px;[^}]*border:0; border-radius:10px; background:#fff[^}]*box-shadow:0 1px 4px rgba\(11,31,58,.09\);/);
   assert.match(css, /\.distance-control span \{[^}]*clip-path:inset\(50%\);/);
   assert.doesNotMatch(css, /\.distance-control select \{[^}]*min-height:40px;/);
