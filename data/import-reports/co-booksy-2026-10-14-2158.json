@@ -1,0 +1,164 @@
+{
+  "run_date": "2026-10-14",
+  "production_project": "jbhgeoedwvfxjteyuxum",
+  "source_name": "Booksy",
+  "source_checked_at": "2026-10-15T04:01:02.841154Z",
+  "workflow": {
+    "candidate_count": 24,
+    "duplicate_count": 8,
+    "rejected_count": 0,
+    "eligible_count": 16,
+    "imported_count": 16,
+    "imported_id_range": [
+      1071,
+      1086
+    ],
+    "import_mode": "atomic insert with production deduplication",
+    "post_import_audit_passed": true
+  },
+  "duplicate_names": [
+    "Jasmine D",
+    "Gabbrielle Lespade",
+    "Angie Avila",
+    "Nicole Houtz",
+    "Cassandra Montgomery",
+    "Nicole Noffsinger",
+    "Monica Reed",
+    "Julia"
+  ],
+  "imported": [
+    {
+      "id": 1071,
+      "name": "HairbyMak",
+      "category": "barber",
+      "city": "Castle Rock",
+      "source_url": "https://booksy.com/en-us/875203_beauty-the-fade_barber-shop_14949_castle-rock"
+    },
+    {
+      "id": 1072,
+      "name": "Claudia",
+      "category": "eyelash_technician",
+      "city": "Colorado Springs",
+      "source_url": "https://booksy.com/en-us/614612_lashes-by-claudia_brows-lashes_14977_colorado-springs"
+    },
+    {
+      "id": 1073,
+      "name": "Devin Johnson",
+      "category": "barber",
+      "city": "Colorado Springs",
+      "source_url": "https://booksy.com/en-us/842004_devin-j-fades_barber-shop_14977_colorado-springs"
+    },
+    {
+      "id": 1074,
+      "name": "Domanick Campbell",
+      "category": "barber",
+      "city": "Colorado Springs",
+      "source_url": "https://booksy.com/en-us/1595373_dom-the-barber_barber-shop_14977_colorado-springs"
+    },
+    {
+      "id": 1075,
+      "name": "E L V Barber",
+      "category": "barber",
+      "city": "Colorado Springs",
+      "source_url": "https://booksy.com/en-us/775366_e-l-v-barber_barber-shop_14977_colorado-springs"
+    },
+    {
+      "id": 1076,
+      "name": "Jamie Quilter",
+      "category": "barber",
+      "city": "Colorado Springs",
+      "source_url": "https://booksy.com/en-us/1175722_jaycooks_barber-shop_14977_colorado-springs"
+    },
+    {
+      "id": 1077,
+      "name": "Jaqueline Baez",
+      "category": "eyelash_technician",
+      "city": "Colorado Springs",
+      "source_url": "https://booksy.com/en-us/1404999_crazybeautiful-ink-lashes_brows-lashes_14977_colorado-springs"
+    },
+    {
+      "id": 1078,
+      "name": "Mr Bando",
+      "category": "barber",
+      "city": "Colorado Springs",
+      "source_url": "https://booksy.com/en-us/312586_bando-cutz-llc_barber-shop_14977_colorado-springs"
+    },
+    {
+      "id": 1079,
+      "name": "Quenten Heard",
+      "category": "barber",
+      "city": "Colorado Springs",
+      "source_url": "https://booksy.com/en-us/6821_quenten-heard_barber-shop_14977_colorado-springs"
+    },
+    {
+      "id": 1080,
+      "name": "Tiffany Abeyta",
+      "category": "barber",
+      "city": "Colorado Springs",
+      "source_url": "https://booksy.com/en-us/4109_tiffany-tapers-living-proof-barbershop_barber-shop_14977_colorado-springs"
+    },
+    {
+      "id": 1081,
+      "name": "William J Munoz",
+      "category": "barber",
+      "city": "Colorado Springs",
+      "source_url": "https://booksy.com/en-us/1066647_william-barber-pr_barber-shop_14977_colorado-springs"
+    },
+    {
+      "id": 1082,
+      "name": "Adamaris Garcia",
+      "category": "nail_technician",
+      "city": "Greeley",
+      "source_url": "https://booksy.com/en-us/1386586_la-belleza-bar_nail-salon_15238_greeley"
+    },
+    {
+      "id": 1083,
+      "name": "Laura Castillo",
+      "category": "nail_technician",
+      "city": "Greeley",
+      "source_url": "https://booksy.com/en-us/1419545_emilee-nails_nail-salon_15238_greeley"
+    },
+    {
+      "id": 1084,
+      "name": "Bevin Powers",
+      "category": "eyelash_technician",
+      "city": "Loveland",
+      "source_url": "https://booksy.com/en-us/1246222_live-learn-lash-academy_brows-lashes_15073_loveland"
+    },
+    {
+      "id": 1085,
+      "name": "Fabiola Palacios",
+      "category": "nail_technician",
+      "city": "Loveland",
+      "source_url": "https://booksy.com/en-us/1406172_my-nails_nail-salon_15073_loveland"
+    },
+    {
+      "id": 1086,
+      "name": "Krystal Valero",
+      "category": "nail_technician",
+      "city": "Loveland",
+      "source_url": "https://booksy.com/en-us/527698_divine-nails-of-noco-llc_nail-salon_15073_loveland"
+    }
+  ],
+  "category_counts": {
+    "barber": 9,
+    "nail_technician": 4,
+    "eyelash_technician": 3
+  },
+  "cities": [
+    "Castle Rock",
+    "Colorado Springs",
+    "Greeley",
+    "Loveland"
+  ],
+  "post_import": {
+    "colorado_total": 1028,
+    "colorado_sourced": 1027,
+    "colorado_with_booking": 1028,
+    "colorado_unclaimed": 1027,
+    "remaining_to_5000_sourced": 3973,
+    "imported_safe_state": 16,
+    "imported_source_complete": 16,
+    "imported_category_rows": 16
+  }
+}
