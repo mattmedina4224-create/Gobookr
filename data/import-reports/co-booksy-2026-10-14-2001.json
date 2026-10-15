@@ -1,0 +1,97 @@
+{
+  "batch_id": "co-booksy-2026-10-14-2001",
+  "production_project": "jbhgeoedwvfxjteyuxum",
+  "source_name": "Booksy",
+  "source_checked_at": "2026-10-15T02:05:34Z",
+  "source_screening": {
+    "accepted_candidates": 29,
+    "rejected_before_dry_run": 6,
+    "reasons": {
+      "deleted_pages": 2,
+      "location_conflict": 1,
+      "no_verified_individual_identity": 3
+    }
+  },
+  "dry_run": {
+    "candidates": 29,
+    "eligible": 25,
+    "duplicates": 4,
+    "invalid": 0,
+    "duplicate_names": [
+      "Catalina Báez",
+      "Dana Muñoz",
+      "Maria Whitfield",
+      "Ryan Crawford"
+    ]
+  },
+  "import": {
+    "inserted": 25,
+    "id_min": 1027,
+    "id_max": 1051,
+    "category_rows": 25,
+    "user_id_null": 25,
+    "claim_status_unclaimed": 25,
+    "booking_and_provenance_valid": 25
+  },
+  "categories": {
+    "barber": 6,
+    "stylist": 8,
+    "colorist": 1,
+    "waxing_specialist": 4,
+    "eyebrow_technician": 3,
+    "eyelash_technician": 3
+  },
+  "cities": [
+    "Aurora",
+    "Colorado Springs",
+    "Commerce City",
+    "Denver",
+    "Fort Collins",
+    "Grand Junction",
+    "Lafayette",
+    "Thornton"
+  ],
+  "imported_names": [
+    "Gabbrielle Lespade",
+    "Jasmine D",
+    "katiria7",
+    "Mehak Ahuja",
+    "Domonique Pedroza",
+    "Namdev Palalay Singh",
+    "Angele",
+    "Lara Bercu",
+    "Gabriela Cardenas",
+    "Dalayah",
+    "Pamela Saviñón",
+    "Julia",
+    "Amanda",
+    "Jessica Bowman",
+    "Jessica Holveck Asbury",
+    "Lynda Nelms",
+    "Whitney",
+    "Hannah",
+    "David Vigil",
+    "Matty P",
+    "Chris Bejarano",
+    "Abe Guzman",
+    "Manny Ramirez",
+    "Johnny Gaucin",
+    "Jade V"
+  ],
+  "production_after": {
+    "colorado_total": 993,
+    "colorado_sourced": 992,
+    "colorado_with_booking": 807,
+    "colorado_unclaimed": 992,
+    "remaining_to_5000_sourced": 4008
+  },
+  "validation": [
+    "current public Booksy booking page",
+    "named individual staff identity",
+    "Colorado city supported by source",
+    "supported GoBookr category",
+    "booking_url equals source_url",
+    "normalized name+city/source dedup against production",
+    "atomic insert with matching pro_categories row"
+  ]
+}
