@@ -1,0 +1,189 @@
+{
+  "run_date": "2026-10-14",
+  "production_project": "jbhgeoedwvfxjteyuxum",
+  "source_name": "Booksy",
+  "source_checked_at": "2026-10-15T03:06:20.275217Z",
+  "workflow": {
+    "candidate_count": 31,
+    "duplicate_count": 12,
+    "rejected_count": 0,
+    "eligible_count": 19,
+    "imported_count": 19,
+    "imported_id_range": [
+      1052,
+      1070
+    ],
+    "import_mode": "atomic insert with production deduplication",
+    "post_import_audit_passed": true
+  },
+  "duplicate_names": [
+    "Ami",
+    "Sebastian Mancini",
+    "Becky Puckett",
+    "Ian Corona",
+    "Jennifer Eriksen",
+    "Benjamin Gifford",
+    "Mercedes Behrens",
+    "Isaiah Valdez",
+    "Katherine Angell",
+    "Destinie Trujillo",
+    "Erin McCarthy",
+    "Eloy Vargas"
+  ],
+  "imported": [
+    {
+      "id": 1052,
+      "name": "Anna M",
+      "category": "barber",
+      "city": "Fort Collins",
+      "source_url": "https://booksy.com/en-us/1418647_monie-cut-by-anna-sola-salons_barber-shop_15069_fort-collins"
+    },
+    {
+      "id": 1053,
+      "name": "Emily Franklin",
+      "category": "stylist",
+      "city": "Fort Collins",
+      "source_url": "https://booksy.com/en-us/158102_hair-by-emily-at-josefinas_hair-salon_15069_fort-collins"
+    },
+    {
+      "id": 1054,
+      "name": "Moises Juarez",
+      "category": "barber",
+      "city": "Fort Collins",
+      "source_url": "https://booksy.com/en-us/1150737_moisesj-haircuts_barber-shop_15069_fort-collins"
+    },
+    {
+      "id": 1055,
+      "name": "Whitney Greenlaw",
+      "category": "stylist",
+      "city": "Fort Collins",
+      "source_url": "https://booksy.com/en-us/716073_parlor-4502_hair-salon_15069_fort-collins"
+    },
+    {
+      "id": 1056,
+      "name": "Greg Nehmer",
+      "category": "barber",
+      "city": "Grand Junction",
+      "source_url": "https://booksy.com/en-us/28561_gentleman-s-quality-barber-company_barber-shop_15106_grand-junction"
+    },
+    {
+      "id": 1057,
+      "name": "Leo Gallegos",
+      "category": "barber",
+      "city": "Grand Junction",
+      "source_url": "https://booksy.com/en-us/28561_gentleman-s-quality-barber-company_barber-shop_15106_grand-junction"
+    },
+    {
+      "id": 1058,
+      "name": "David Roman",
+      "category": "barber",
+      "city": "Greeley",
+      "source_url": "https://booksy.com/en-us/830314_dre-barberr_barber-shop_15238_greeley"
+    },
+    {
+      "id": 1059,
+      "name": "Domingo Salazar",
+      "category": "barber",
+      "city": "Greeley",
+      "source_url": "https://booksy.com/en-us/1531857_dfreshfadez_home-services_15238_greeley"
+    },
+    {
+      "id": 1060,
+      "name": "Hector Carrillo",
+      "category": "barber",
+      "city": "Greeley",
+      "source_url": "https://booksy.com/en-us/834827_hektic-barber_barber-shop_15238_greeley"
+    },
+    {
+      "id": 1061,
+      "name": "Javi Mendoza",
+      "category": "barber",
+      "city": "Greeley",
+      "source_url": "https://booksy.com/en-us/1655108_mendoza-blendz10_barber-shop_15238_greeley"
+    },
+    {
+      "id": 1062,
+      "name": "Jordan White",
+      "category": "barber",
+      "city": "Greeley",
+      "source_url": "https://booksy.com/en-us/989743_american-edge-barbershop_barber-shop_15238_greeley"
+    },
+    {
+      "id": 1063,
+      "name": "Junior Cervantes",
+      "category": "barber",
+      "city": "Greeley",
+      "source_url": "https://booksy.com/en-us/1632622_jr-thebarber_barber-shop_15238_greeley"
+    },
+    {
+      "id": 1064,
+      "name": "Victor Jpon",
+      "category": "barber",
+      "city": "Greeley",
+      "source_url": "https://booksy.com/en-us/1504346_victoria-s-barbershop-spa_barber-shop_15238_greeley"
+    },
+    {
+      "id": 1065,
+      "name": "Bobby Jay",
+      "category": "barber",
+      "city": "Pueblo",
+      "source_url": "https://booksy.com/en-us/622131_bobby-jay-the-barber_barber-shop_15180_pueblo"
+    },
+    {
+      "id": 1066,
+      "name": "Edmond Roybal",
+      "category": "barber",
+      "city": "Pueblo",
+      "source_url": "https://booksy.com/en-us/1115503_kingdom-cuts_barber-shop_15180_pueblo"
+    },
+    {
+      "id": 1067,
+      "name": "Francisco",
+      "category": "barber",
+      "city": "Pueblo",
+      "source_url": "https://booksy.com/en-us/1233034_ciscos-barbering-styling_barber-shop_15180_pueblo"
+    },
+    {
+      "id": 1068,
+      "name": "Isaac Perez",
+      "category": "barber",
+      "city": "Pueblo",
+      "source_url": "https://booksy.com/en-us/621535_isaac-perez_barber-shop_15180_pueblo"
+    },
+    {
+      "id": 1069,
+      "name": "Matt Trujillo",
+      "category": "barber",
+      "city": "Pueblo",
+      "source_url": "https://booksy.com/en-us/617145_matt-tee-kingskid_barber-shop_15180_pueblo"
+    },
+    {
+      "id": 1070,
+      "name": "Swift",
+      "category": "barber",
+      "city": "Pueblo",
+      "source_url": "https://booksy.com/en-us/1434927_swift-kuts_barber-shop_15180_pueblo"
+    }
+  ],
+  "category_counts": {
+    "barber": 17,
+    "stylist": 2
+  },
+  "cities": [
+    "Fort Collins",
+    "Grand Junction",
+    "Greeley",
+    "Pueblo"
+  ],
+  "post_import": {
+    "colorado_total": 1012,
+    "colorado_sourced": 1011,
+    "colorado_with_booking": 1012,
+    "colorado_unclaimed": 1011,
+    "remaining_to_5000_sourced": 3989,
+    "imported_safe_state": 19,
+    "imported_source_complete": 19,
+    "imported_category_rows": 19
+  },
+  "pull_request": 192
+}
