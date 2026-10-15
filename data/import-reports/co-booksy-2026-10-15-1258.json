@@ -1,0 +1,113 @@
+{
+  "batch_id": "co-booksy-2026-10-15-1258",
+  "imported_at": "2026-10-15T18:58:18Z",
+  "production_project": "jbhgeoedwvfxjteyuxum",
+  "source_name": "Booksy",
+  "approved_source": true,
+  "imported_count": 7,
+  "duplicate_rejections": 7,
+  "duplicate_names": [
+    "Bevin Powers",
+    "Dana Muñoz",
+    "Domonique Pedroza",
+    "Fabiola Palacios",
+    "Krystal Valero",
+    "Mehak Ahuja",
+    "Phalla Lam"
+  ],
+  "other_rejections": 16,
+  "rejection_reasons": {
+    "deleted_source_page": 5,
+    "invitation_only_or_inactive_booking": 6,
+    "incomplete_professional_identity": 4,
+    "source_page_error_unverifiable": 1
+  },
+  "production_before": 1270,
+  "production_after": 1277,
+  "target": 5000,
+  "remaining": 3723,
+  "cities": {
+    "Brighton": 1,
+    "Colorado Springs": 2,
+    "Commerce City": 1,
+    "Denver": 1,
+    "Northglenn": 1,
+    "Westminster": 1
+  },
+  "categories": {
+    "colorist": 1,
+    "eyelash_technician": 3,
+    "stylist": 1,
+    "tattoo_artist": 1,
+    "waxing_specialist": 1
+  },
+  "safeguards": {
+    "dry_run_name_city_and_source_url_dedup": true,
+    "batch_distinct_name_city": 11,
+    "user_id_null": 7,
+    "claim_status_unclaimed": 7,
+    "provenance_complete": 7,
+    "approved_booksy_booking_urls": 7,
+    "pro_categories_present": 7
+  },
+  "production_ids": [
+    1330,
+    1331,
+    1332,
+    1333,
+    1334,
+    1335,
+    1336
+  ],
+  "sources": [
+    {
+      "id": 1330,
+      "name": "Brianna Guerrero",
+      "city": "Brighton",
+      "category": "eyelash_technician",
+      "source_url": "https://booksy.com/en-us/1244085_bris-lash-studio_brows-lashes_14857_brighton"
+    },
+    {
+      "id": 1331,
+      "name": "Mary O'Brien",
+      "city": "Colorado Springs",
+      "category": "waxing_specialist",
+      "source_url": "https://booksy.com/en-us/637104_skin-from-within_health-fitness_14977_colorado-springs"
+    },
+    {
+      "id": 1332,
+      "name": "William Dalton Frizzell",
+      "city": "Colorado Springs",
+      "category": "tattoo_artist",
+      "source_url": "https://booksy.com/en-us/277805_dalton-frizzell_other_14977_colorado-springs"
+    },
+    {
+      "id": 1333,
+      "name": "Zion Parah",
+      "city": "Commerce City",
+      "category": "eyelash_technician",
+      "source_url": "https://booksy.com/en-us/1241608_studio-104_brows-lashes_14858_commerce-city"
+    },
+    {
+      "id": 1334,
+      "name": "Shellie Martinez",
+      "city": "Denver",
+      "category": "stylist",
+      "source_url": "https://booksy.com/en-us/1706228_shelliedidit-llc_braids-locs_134761_denver"
+    },
+    {
+      "id": 1335,
+      "name": "Diana Hernández",
+      "city": "Northglenn",
+      "category": "colorist",
+      "source_url": "https://booksy.com/en-us/798404_diana-hernandez_hair-salon_134761_denver"
+    },
+    {
+      "id": 1336,
+      "name": "Gina Andrada",
+      "city": "Westminster",
+      "category": "eyelash_technician",
+      "source_url": "https://booksy.com/en-us/1176572_layers-skin-care-by-gia_skin-care_14866_westminster"
+    }
+  ]
+}
