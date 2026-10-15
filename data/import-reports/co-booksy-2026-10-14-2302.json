@@ -1,0 +1,293 @@
+{
+  "batch_id": "co-booksy-2026-10-14-2302",
+  "production_project": "jbhgeoedwvfxjteyuxum",
+  "source_checked_at": "2026-10-15T05:02:51Z",
+  "source_name": "Booksy",
+  "workflow": {
+    "validation": "passed",
+    "dry_run": {
+      "candidates": 25,
+      "eligible": 18,
+      "duplicates": 7,
+      "rejections": 0
+    },
+    "import": {
+      "inserted": 18,
+      "min_id": 1087,
+      "max_id": 1104
+    },
+    "post_audit": {
+      "batch_rows": 18,
+      "category_links": 18,
+      "source_ok": 18,
+      "ownership_ok": 18
+    }
+  },
+  "production_after": {
+    "colorado_total": 1046,
+    "colorado_sourced": 1045,
+    "colorado_with_booking": 1046,
+    "colorado_unclaimed": 1045,
+    "remaining_to_5000": 3955
+  },
+  "imported_by_category": {
+    "barber": 17,
+    "massage_therapist": 1
+  },
+  "imported_by_city": {
+    "Boulder": 1,
+    "Broomfield": 1,
+    "Highlands Ranch": 1,
+    "Lakewood": 5,
+    "Longmont": 10
+  },
+  "imported": [
+    {
+      "business_name": "Bryan De Santiago",
+      "category": "barber",
+      "city": "Boulder",
+      "state": "CO",
+      "workplace_name": "iago.blendz",
+      "booking_url": "https://booksy.com/en-us/1142180_iago-blendz_barber-shop_14891_boulder",
+      "source_url": "https://booksy.com/en-us/1142180_iago-blendz_barber-shop_14891_boulder",
+      "source_name": "Booksy",
+      "source_checked_at": "2026-10-15T05:02:51Z",
+      "user_id": null,
+      "claim_status": "unclaimed"
+    },
+    {
+      "business_name": "Alyssa Vipond",
+      "category": "massage_therapist",
+      "city": "Broomfield",
+      "state": "CO",
+      "workplace_name": "Colorado Core Massage @Active Lab",
+      "booking_url": "https://booksy.com/en-us/688631_colorado-core-massage-active-lab_massage_14903_broomfield",
+      "source_url": "https://booksy.com/en-us/688631_colorado-core-massage-active-lab_massage_14903_broomfield",
+      "source_name": "Booksy",
+      "source_checked_at": "2026-10-15T05:02:51Z",
+      "user_id": null,
+      "claim_status": "unclaimed"
+    },
+    {
+      "business_name": "Christian Erickson",
+      "category": "barber",
+      "city": "Highlands Ranch",
+      "state": "CO",
+      "workplace_name": "Rixxons Barbershop",
+      "booking_url": "https://booksy.com/en-us/1730213_rixxons-barbershop_barber-shop_14876_littleton",
+      "source_url": "https://booksy.com/en-us/1730213_rixxons-barbershop_barber-shop_14876_littleton",
+      "source_name": "Booksy",
+      "source_checked_at": "2026-10-15T05:02:51Z",
+      "user_id": null,
+      "claim_status": "unclaimed"
+    },
+    {
+      "business_name": "Angel Ramirez",
+      "category": "barber",
+      "city": "Lakewood",
+      "state": "CO",
+      "workplace_name": "Angel Cutzz",
+      "booking_url": "https://booksy.com/en-us/1161519_angel-cutzz_barber-shop_134761_denver",
+      "source_url": "https://booksy.com/en-us/1161519_angel-cutzz_barber-shop_134761_denver",
+      "source_name": "Booksy",
+      "source_checked_at": "2026-10-15T05:02:51Z",
+      "user_id": null,
+      "claim_status": "unclaimed"
+    },
+    {
+      "business_name": "DojoCo",
+      "category": "barber",
+      "city": "Lakewood",
+      "state": "CO",
+      "workplace_name": "DojoCoBarber",
+      "booking_url": "https://booksy.com/en-us/623391_dojocobarber_barber-shop_134761_denver",
+      "source_url": "https://booksy.com/en-us/623391_dojocobarber_barber-shop_134761_denver",
+      "source_name": "Booksy",
+      "source_checked_at": "2026-10-15T05:02:51Z",
+      "user_id": null,
+      "claim_status": "unclaimed"
+    },
+    {
+      "business_name": "Henry",
+      "category": "barber",
+      "city": "Lakewood",
+      "state": "CO",
+      "workplace_name": "Cuts By Henni",
+      "booking_url": "https://booksy.com/en-us/1323509_cuts-by-henni_barber-shop_134761_denver",
+      "source_url": "https://booksy.com/en-us/1323509_cuts-by-henni_barber-shop_134761_denver",
+      "source_name": "Booksy",
+      "source_checked_at": "2026-10-15T05:02:51Z",
+      "user_id": null,
+      "claim_status": "unclaimed"
+    },
+    {
+      "business_name": "Mark Martinez",
+      "category": "barber",
+      "city": "Lakewood",
+      "state": "CO",
+      "workplace_name": "Markblends Barbershop 10",
+      "booking_url": "https://booksy.com/en-us/711707_markblends-barbershop-10_barber-shop_134761_denver",
+      "source_url": "https://booksy.com/en-us/711707_markblends-barbershop-10_barber-shop_134761_denver",
+      "source_name": "Booksy",
+      "source_checked_at": "2026-10-15T05:02:51Z",
+      "user_id": null,
+      "claim_status": "unclaimed"
+    },
+    {
+      "business_name": "Nick Naranjo",
+      "category": "barber",
+      "city": "Lakewood",
+      "state": "CO",
+      "workplace_name": "Nick Did It",
+      "booking_url": "https://booksy.com/en-us/88546_nick-did-it_barber-shop_134761_denver",
+      "source_url": "https://booksy.com/en-us/88546_nick-did-it_barber-shop_134761_denver",
+      "source_name": "Booksy",
+      "source_checked_at": "2026-10-15T05:02:51Z",
+      "user_id": null,
+      "claim_status": "unclaimed"
+    },
+    {
+      "business_name": "Brian Segovia",
+      "category": "barber",
+      "city": "Longmont",
+      "state": "CO",
+      "workplace_name": "Bs Blends",
+      "booking_url": "https://booksy.com/en-us/903617_bs-blends_barber-shop_134760_longmont",
+      "source_url": "https://booksy.com/en-us/903617_bs-blends_barber-shop_134760_longmont",
+      "source_name": "Booksy",
+      "source_checked_at": "2026-10-15T05:02:51Z",
+      "user_id": null,
+      "claim_status": "unclaimed"
+    },
+    {
+      "business_name": "Cristian Simental",
+      "category": "barber",
+      "city": "Longmont",
+      "state": "CO",
+      "workplace_name": "Barber Cristian Simental",
+      "booking_url": "https://booksy.com/en-us/1518073_barber-cristian-simental_barber-shop_134760_longmont",
+      "source_url": "https://booksy.com/en-us/1518073_barber-cristian-simental_barber-shop_134760_longmont",
+      "source_name": "Booksy",
+      "source_checked_at": "2026-10-15T05:02:51Z",
+      "user_id": null,
+      "claim_status": "unclaimed"
+    },
+    {
+      "business_name": "Edger Gomez",
+      "category": "barber",
+      "city": "Longmont",
+      "state": "CO",
+      "workplace_name": "GgBlendz | Edger Gomez",
+      "booking_url": "https://booksy.com/en-us/1714467_ggblendz-edger-gomez_barber-shop_134760_longmont",
+      "source_url": "https://booksy.com/en-us/1714467_ggblendz-edger-gomez_barber-shop_134760_longmont",
+      "source_name": "Booksy",
+      "source_checked_at": "2026-10-15T05:02:51Z",
+      "user_id": null,
+      "claim_status": "unclaimed"
+    },
+    {
+      "business_name": "Estefany Simental",
+      "category": "barber",
+      "city": "Longmont",
+      "state": "CO",
+      "workplace_name": "Estefany The Barber",
+      "booking_url": "https://booksy.com/en-us/1531255_estefany-the-barber_barber-shop_134760_longmont",
+      "source_url": "https://booksy.com/en-us/1531255_estefany-the-barber_barber-shop_134760_longmont",
+      "source_name": "Booksy",
+      "source_checked_at": "2026-10-15T05:02:51Z",
+      "user_id": null,
+      "claim_status": "unclaimed"
+    },
+    {
+      "business_name": "Exon",
+      "category": "barber",
+      "city": "Longmont",
+      "state": "CO",
+      "workplace_name": "FADED DEPT BARBERSHOP",
+      "booking_url": "https://booksy.com/en-us/1472793_faded-dept-barbershop_barber-shop_134760_longmont",
+      "source_url": "https://booksy.com/en-us/1472793_faded-dept-barbershop_barber-shop_134760_longmont",
+      "source_name": "Booksy",
+      "source_checked_at": "2026-10-15T05:02:51Z",
+      "user_id": null,
+      "claim_status": "unclaimed"
+    },
+    {
+      "business_name": "Frost Herrera",
+      "category": "barber",
+      "city": "Longmont",
+      "state": "CO",
+      "workplace_name": "FADED DEPT BARBERSHOP",
+      "booking_url": "https://booksy.com/en-us/1472793_faded-dept-barbershop_barber-shop_134760_longmont",
+      "source_url": "https://booksy.com/en-us/1472793_faded-dept-barbershop_barber-shop_134760_longmont",
+      "source_name": "Booksy",
+      "source_checked_at": "2026-10-15T05:02:51Z",
+      "user_id": null,
+      "claim_status": "unclaimed"
+    },
+    {
+      "business_name": "Hernan Garcia",
+      "category": "barber",
+      "city": "Longmont",
+      "state": "CO",
+      "workplace_name": "Hernan@OneUp",
+      "booking_url": "https://booksy.com/en-us/1648748_hernan-oneup_barber-shop_134760_longmont",
+      "source_url": "https://booksy.com/en-us/1648748_hernan-oneup_barber-shop_134760_longmont",
+      "source_name": "Booksy",
+      "source_checked_at": "2026-10-15T05:02:51Z",
+      "user_id": null,
+      "claim_status": "unclaimed"
+    },
+    {
+      "business_name": "J Collazo",
+      "category": "barber",
+      "city": "Longmont",
+      "state": "CO",
+      "workplace_name": "FADED DEPT BARBERSHOP",
+      "booking_url": "https://booksy.com/en-us/1472793_faded-dept-barbershop_barber-shop_134760_longmont",
+      "source_url": "https://booksy.com/en-us/1472793_faded-dept-barbershop_barber-shop_134760_longmont",
+      "source_name": "Booksy",
+      "source_checked_at": "2026-10-15T05:02:51Z",
+      "user_id": null,
+      "claim_status": "unclaimed"
+    },
+    {
+      "business_name": "Jakobi Angel",
+      "category": "barber",
+      "city": "Longmont",
+      "state": "CO",
+      "workplace_name": "FADED DEPT BARBERSHOP",
+      "booking_url": "https://booksy.com/en-us/1472793_faded-dept-barbershop_barber-shop_134760_longmont",
+      "source_url": "https://booksy.com/en-us/1472793_faded-dept-barbershop_barber-shop_134760_longmont",
+      "source_name": "Booksy",
+      "source_checked_at": "2026-10-15T05:02:51Z",
+      "user_id": null,
+      "claim_status": "unclaimed"
+    },
+    {
+      "business_name": "Jorge Villegas",
+      "category": "barber",
+      "city": "Longmont",
+      "state": "CO",
+      "workplace_name": "George Fades",
+      "booking_url": "https://booksy.com/en-us/462173_george-fades_barber-shop_134760_longmont",
+      "source_url": "https://booksy.com/en-us/462173_george-fades_barber-shop_134760_longmont",
+      "source_name": "Booksy",
+      "source_checked_at": "2026-10-15T05:02:51Z",
+      "user_id": null,
+      "claim_status": "unclaimed"
+    }
+  ],
+  "duplicates": [
+    "Aubrey Trujillo",
+    "Chris Breezy",
+    "Franky Reveles",
+    "Jacob Gomez",
+    "Jeremy Asbury",
+    "Jessica Holveck Asbury",
+    "Tracey Jacobs LCMT"
+  ],
+  "notes": [
+    "No authored bios, photos, review text, ratings, or credentials were imported.",
+    "The first insert attempt failed before execution because its result aggregation referenced an unavailable column; the corrected transaction inserted the eligible set once."
+  ]
+}
