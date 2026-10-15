@@ -1,0 +1,202 @@
+{
+  "batch_id": "co-squire-vagaro-2026-10-15-1402",
+  "imported_at": "2026-10-15T20:02:05Z",
+  "production_project": "jbhgeoedwvfxjteyuxum",
+  "approved_sources": [
+    "SQUIRE",
+    "Vagaro"
+  ],
+  "imported_count": 16,
+  "source_counts": {
+    "SQUIRE": 13,
+    "Vagaro": 3
+  },
+  "duplicate_rejections": 2,
+  "duplicate_names": [
+    "Amie Spice",
+    "Ariana Castaneda"
+  ],
+  "other_rejections": 2,
+  "rejection_reasons": {
+    "source_url_410_gone": 2
+  },
+  "rejected_names": [
+    "Josiah Wilson",
+    "Tyler Gaunt"
+  ],
+  "production_before": 1277,
+  "production_after": 1293,
+  "target": 5000,
+  "remaining": 3707,
+  "cities": {
+    "Aurora": 2,
+    "Boulder": 4,
+    "Denver": 2,
+    "Fort Collins": 2,
+    "Greeley": 1,
+    "Lakewood": 5
+  },
+  "categories": {
+    "barber": 13,
+    "colorist": 1,
+    "eyebrow_technician": 1,
+    "stylist": 1
+  },
+  "safeguards": {
+    "dry_run_name_city_and_source_url_dedup": true,
+    "batch_distinct_name_city": 20,
+    "user_id_null": 16,
+    "claim_status_unclaimed": 16,
+    "provenance_complete": 16,
+    "approved_booking_urls": 16,
+    "pro_categories_present": 16
+  },
+  "production_ids": [
+    1337,
+    1338,
+    1339,
+    1340,
+    1341,
+    1342,
+    1343,
+    1344,
+    1345,
+    1346,
+    1347,
+    1348,
+    1349,
+    1350,
+    1351,
+    1352
+  ],
+  "sources": [
+    {
+      "id": 1337,
+      "name": "Gabriel Delgado Sanchez",
+      "city": "Aurora",
+      "category": "barber",
+      "source_name": "SQUIRE",
+      "source_url": "https://getsquire.com/discover/barbershop/prestige-barbershop-and-hair-salon-aurora/barber/gabriel-delgado-sanchez"
+    },
+    {
+      "id": 1338,
+      "name": "Naytre Aladdin",
+      "city": "Aurora",
+      "category": "barber",
+      "source_name": "SQUIRE",
+      "source_url": "https://getsquire.com/discover/barbershop/alchemy-sharp-cutz-aurora/barber/naytre-aladdin"
+    },
+    {
+      "id": 1339,
+      "name": "Courtney Elyse",
+      "city": "Boulder",
+      "category": "barber",
+      "source_name": "SQUIRE",
+      "source_url": "https://getsquire.com/discover/barbershop/northside-barbers-boulder/barber/courtney-elyse"
+    },
+    {
+      "id": 1340,
+      "name": "David Boggs",
+      "city": "Boulder",
+      "category": "barber",
+      "source_name": "SQUIRE",
+      "source_url": "https://getsquire.com/discover/barbershop/northside-barbers-boulder/barber/david-boggs"
+    },
+    {
+      "id": 1341,
+      "name": "Isaiah Hernandez",
+      "city": "Boulder",
+      "category": "barber",
+      "source_name": "SQUIRE",
+      "source_url": "https://getsquire.com/discover/barbershop/northside-barbers-boulder/barber/isaiah-hernandez"
+    },
+    {
+      "id": 1342,
+      "name": "Josh Honstien",
+      "city": "Boulder",
+      "category": "barber",
+      "source_name": "SQUIRE",
+      "source_url": "https://getsquire.com/discover/barbershop/northside-barbers-boulder/barber/josh-honstien"
+    },
+    {
+      "id": 1343,
+      "name": "Jana Duey",
+      "city": "Denver",
+      "category": "colorist",
+      "source_name": "Vagaro",
+      "source_url": "https://www.vagaro.com/hairpeople"
+    },
+    {
+      "id": 1344,
+      "name": "Yvonne Renee",
+      "city": "Denver",
+      "category": "stylist",
+      "source_name": "Vagaro",
+      "source_url": "https://www.vagaro.com/hairpeople"
+    },
+    {
+      "id": 1345,
+      "name": "Isaak Moreno",
+      "city": "Fort Collins",
+      "category": "barber",
+      "source_name": "SQUIRE",
+      "source_url": "https://getsquire.com/discover/barbershop/noco-stellar-barbers-fort-collins/barber/isaak-moreno-2"
+    },
+    {
+      "id": 1346,
+      "name": "Mitch Weber",
+      "city": "Fort Collins",
+      "category": "barber",
+      "source_name": "SQUIRE",
+      "source_url": "https://getsquire.com/discover/barbershop/campus-west-lucky-27-barbershop-fort-collins/barber/mitch-weber-1"
+    },
+    {
+      "id": 1347,
+      "name": "Alicia Gallegos",
+      "city": "Greeley",
+      "category": "eyebrow_technician",
+      "source_name": "Vagaro",
+      "source_url": "https://www.vagaro.com/heavenlybarebeauty"
+    },
+    {
+      "id": 1348,
+      "name": "Beto Palos",
+      "city": "Lakewood",
+      "category": "barber",
+      "source_name": "SQUIRE",
+      "source_url": "https://getsquire.com/discover/barbershop/trend-blendz-barbershop-lakewood/barber/beto-palos"
+    },
+    {
+      "id": 1349,
+      "name": "Jen Himes",
+      "city": "Lakewood",
+      "category": "barber",
+      "source_name": "SQUIRE",
+      "source_url": "https://getsquire.com/discover/barbershop/fifty2eighty-cosmic-cuts-barbershop-lakewood/barber/jen-himes-1"
+    },
+    {
+      "id": 1350,
+      "name": "Melody Cook",
+      "city": "Lakewood",
+      "category": "barber",
+      "source_name": "SQUIRE",
+      "source_url": "https://getsquire.com/discover/barbershop/the-urban-hideout-lakewood/barber/melody-cook"
+    },
+    {
+      "id": 1351,
+      "name": "Phee Avery",
+      "city": "Lakewood",
+      "category": "barber",
+      "source_name": "SQUIRE",
+      "source_url": "https://getsquire.com/discover/barbershop/the-urban-hideout-lakewood/barber/phee-avery"
+    },
+    {
+      "id": 1352,
+      "name": "Roy Tubinez",
+      "city": "Lakewood",
+      "category": "barber",
+      "source_name": "SQUIRE",
+      "source_url": "https://getsquire.com/discover/barbershop/fifty2eighty-cosmic-cuts-barbershop-lakewood/barber/roy-tubinez"
+    }
+  ]
+}
