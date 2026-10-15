@@ -1,0 +1,193 @@
+{
+  "batch_id": "co-glossgenius-2026-10-15-1655",
+  "imported_at": "2026-10-15T22:55:24Z",
+  "production_project": "jbhgeoedwvfxjteyuxum",
+  "approved_sources": [
+    "GlossGenius"
+  ],
+  "imported_count": 14,
+  "source_counts": {
+    "GlossGenius": 14
+  },
+  "duplicate_rejections": 6,
+  "duplicate_names": [
+    "Cass Hess",
+    "Chloe Romero",
+    "Katt Boswell",
+    "Ellise Scutti",
+    "Rebecca Gallegos",
+    "Shealynn Pittman"
+  ],
+  "other_rejections": 1,
+  "rejected_candidates": [
+    {
+      "name": "Ciara Kerr",
+      "reason": "Team source URL already present on existing production profiles"
+    }
+  ],
+  "production_before": 1319,
+  "production_after": 1333,
+  "target": 5000,
+  "remaining": 3667,
+  "cities": {
+    "Colorado Springs": 5,
+    "Grand Junction": 2,
+    "Durango": 2,
+    "Breckenridge": 1,
+    "Fort Collins": 1,
+    "Longmont": 1,
+    "Pueblo": 1,
+    "Windsor": 1
+  },
+  "categories": {
+    "eyelash_technician": 5,
+    "nail_technician": 3,
+    "colorist": 4,
+    "stylist": 1,
+    "waxing_specialist": 1
+  },
+  "safeguards": {
+    "dry_run_candidate_count": 14,
+    "dry_run_eligible_count": 14,
+    "production_duplicates": 0,
+    "id_collisions": 0,
+    "unique_identity_city": 14,
+    "unique_source_urls": 14,
+    "post_import_batch_count": 14,
+    "user_id_null": 14,
+    "claim_status_unclaimed": 14,
+    "complete_provenance": 14,
+    "approved_booking_urls": 14,
+    "category_mappings": 14
+  },
+  "production_ids": [
+    1379,
+    1380,
+    1381,
+    1382,
+    1383,
+    1384,
+    1385,
+    1386,
+    1387,
+    1388,
+    1389,
+    1390,
+    1391,
+    1392
+  ],
+  "profiles": [
+    {
+      "id": 1379,
+      "name": "Kaitlynn Martin",
+      "city": "Breckenridge",
+      "category": "nail_technician",
+      "workplace": "KaitlynNails303",
+      "source_url": "https://kaitlynnmartin.glossgenius.com/about"
+    },
+    {
+      "id": 1380,
+      "name": "Amber Wieland",
+      "city": "Colorado Springs",
+      "category": "eyelash_technician",
+      "workplace": "Lash Love By Amber Wieland",
+      "source_url": "https://lashloveamberwieland.glossgenius.com/about"
+    },
+    {
+      "id": 1381,
+      "name": "Jasmine Lee",
+      "city": "Colorado Springs",
+      "category": "nail_technician",
+      "workplace": "Jasmine Lee",
+      "source_url": "https://museumofnails3.glossgenius.com/about"
+    },
+    {
+      "id": 1382,
+      "name": "Kylie Hoekstra",
+      "city": "Colorado Springs",
+      "category": "eyelash_technician",
+      "workplace": "LaShae Aesthetics",
+      "source_url": "https://kylielashae.glossgenius.com/about"
+    },
+    {
+      "id": 1383,
+      "name": "Shae Boone",
+      "city": "Colorado Springs",
+      "category": "eyelash_technician",
+      "workplace": "Shae Boone",
+      "source_url": "https://shaeelizabethh.glossgenius.com/about"
+    },
+    {
+      "id": 1384,
+      "name": "Sydney Black",
+      "city": "Colorado Springs",
+      "category": "eyelash_technician",
+      "workplace": "Sydney Black Esthetics",
+      "source_url": "https://sydneyblackesthetics.glossgenius.com/about"
+    },
+    {
+      "id": 1385,
+      "name": "Aislan Richardson",
+      "city": "Durango",
+      "category": "stylist",
+      "workplace": "Lizzie's Beauty Shop",
+      "source_url": "https://lizziesbeautyshop.glossgenius.com/team"
+    },
+    {
+      "id": 1386,
+      "name": "Natalie Hamer",
+      "city": "Durango",
+      "category": "colorist",
+      "workplace": "Beautique Hair Lounge",
+      "source_url": "https://beautiquehairlounge.glossgenius.com/about"
+    },
+    {
+      "id": 1387,
+      "name": "Natalie Nelson",
+      "city": "Fort Collins",
+      "category": "eyelash_technician",
+      "workplace": "Sol Esthetics & Lash Co",
+      "source_url": "https://selc.glossgenius.com/about"
+    },
+    {
+      "id": 1388,
+      "name": "Marina Flores",
+      "city": "Grand Junction",
+      "category": "nail_technician",
+      "workplace": "Nails By Marina",
+      "source_url": "https://marinaflores.glossgenius.com/about"
+    },
+    {
+      "id": 1389,
+      "name": "Sylvia Gonzalez",
+      "city": "Grand Junction",
+      "category": "colorist",
+      "workplace": "StylesbySylv",
+      "source_url": "https://sylviagonzalez.glossgenius.com/about"
+    },
+    {
+      "id": 1390,
+      "name": "Sarah Bickle",
+      "city": "Longmont",
+      "category": "colorist",
+      "workplace": "Sarah's Hair Studio",
+      "source_url": "https://sarahbickle.glossgenius.com/about"
+    },
+    {
+      "id": 1391,
+      "name": "Natasha Vigil",
+      "city": "Pueblo",
+      "category": "waxing_specialist",
+      "workplace": "Glow Essence",
+      "source_url": "https://myglowessence.glossgenius.com/about"
+    },
+    {
+      "id": 1392,
+      "name": "Allie Hudson",
+      "city": "Windsor",
+      "category": "colorist",
+      "workplace": "Beauty By Allie LLC",
+      "source_url": "https://alliehudson.glossgenius.com/about"
+    }
+  ]
+}
