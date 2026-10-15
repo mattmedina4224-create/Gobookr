@@ -1,0 +1,135 @@
+{
+  "run_date": "2026-10-15",
+  "production_project": "jbhgeoedwvfxjteyuxum",
+  "source_checked_at": "2026-10-15T10:59:57Z",
+  "source_name": "Booksy",
+  "imported_count": 11,
+  "rejected_as_duplicate_or_existing": 42,
+  "imported_profile_ids": [
+    1229,
+    1230,
+    1231,
+    1232,
+    1233,
+    1234,
+    1235,
+    1236,
+    1237,
+    1238,
+    1239
+  ],
+  "cities": {
+    "Boulder": 3,
+    "Castle Rock": 1,
+    "Colorado Springs": 4,
+    "Grand Junction": 2,
+    "Lafayette": 1
+  },
+  "categories": {
+    "stylist": 7,
+    "massage_therapist": 1,
+    "barber": 3
+  },
+  "production_counts_after": {
+    "total_profiles": 1182,
+    "sourced_colorado_profiles": 1180,
+    "remaining_to_5000": 3820
+  },
+  "validation": {
+    "user_id_null": 11,
+    "claim_status_unclaimed": 11,
+    "source_complete": 11,
+    "category_mapped": 11,
+    "sourced_inventory_invariant_violations": 0
+  },
+  "profiles": [
+    {
+      "id": 1229,
+      "name": "Gladys",
+      "category": "stylist",
+      "city": "Boulder",
+      "workplace_name": "Jj's Hair Design",
+      "source_url": "https://booksy.com/en-us/742921_jjs-hair-design_hair-salon_14891_boulder"
+    },
+    {
+      "id": 1230,
+      "name": "Nina",
+      "category": "stylist",
+      "city": "Boulder",
+      "workplace_name": "Jj's Hair Design",
+      "source_url": "https://booksy.com/en-us/742921_jjs-hair-design_hair-salon_14891_boulder"
+    },
+    {
+      "id": 1231,
+      "name": "Tanya",
+      "category": "stylist",
+      "city": "Boulder",
+      "workplace_name": "Jj's Hair Design",
+      "source_url": "https://booksy.com/en-us/742921_jjs-hair-design_hair-salon_14891_boulder"
+    },
+    {
+      "id": 1232,
+      "name": "Mischa Bradford",
+      "category": "massage_therapist",
+      "city": "Castle Rock",
+      "workplace_name": "Mischa Bradford RMT LLC",
+      "source_url": "https://booksy.com/en-us/634267_mischa-bradford-rmt-llc_massage_14949_castle-rock"
+    },
+    {
+      "id": 1233,
+      "name": "Annamarie Miller",
+      "category": "stylist",
+      "city": "Colorado Springs",
+      "workplace_name": "Eternal Salon",
+      "source_url": "https://booksy.com/en-us/160634_eternal-salon_hair-salon_14977_colorado-springs"
+    },
+    {
+      "id": 1234,
+      "name": "Caleb Elmore",
+      "category": "stylist",
+      "city": "Colorado Springs",
+      "workplace_name": "Caleb Elmore",
+      "source_url": "https://booksy.com/en-us/504518_caleb-elmore_hair-salon_14977_colorado-springs"
+    },
+    {
+      "id": 1235,
+      "name": "DeLois DeGraffe",
+      "category": "stylist",
+      "city": "Colorado Springs",
+      "workplace_name": "Hair Addicts Salon",
+      "source_url": "https://booksy.com/en-us/188078_hair-addicts-salon_hair-salon_14977_colorado-springs"
+    },
+    {
+      "id": 1236,
+      "name": "Reta Hill",
+      "category": "stylist",
+      "city": "Colorado Springs",
+      "workplace_name": "Adorn Salon",
+      "source_url": "https://booksy.com/en-us/631929_hair-by-reta-adorn-salon_hair-salon_14977_colorado-springs"
+    },
+    {
+      "id": 1237,
+      "name": "Marcus Carothers",
+      "category": "barber",
+      "city": "Grand Junction",
+      "workplace_name": "Gentleman's Quality Barber Company",
+      "source_url": "https://booksy.com/en-us/28561_gentleman-s-quality-barber-company_barber-shop_15106_grand-junction"
+    },
+    {
+      "id": 1238,
+      "name": "Steven Valdez",
+      "category": "barber",
+      "city": "Grand Junction",
+      "workplace_name": "Gentleman's Quality Barber Company",
+      "source_url": "https://booksy.com/en-us/28561_gentleman-s-quality-barber-company_barber-shop_15106_grand-junction"
+    },
+    {
+      "id": 1239,
+      "name": "Paul Hernandez",
+      "category": "barber",
+      "city": "Lafayette",
+      "workplace_name": "Guapo Blendz",
+      "source_url": "https://booksy.com/en-us/1016825_guapo-blendz_barber-shop_14895_lafayette"
+    }
+  ]
+}
