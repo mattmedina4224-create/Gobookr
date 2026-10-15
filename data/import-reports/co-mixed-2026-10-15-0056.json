@@ -1,0 +1,301 @@
+{
+  "batch_id": "co-mixed-2026-10-15-0056",
+  "production_project": "jbhgeoedwvfxjteyuxum",
+  "source_checked_at": "2026-10-15T06:56:54Z",
+  "workflow": {
+    "validation": "passed",
+    "dry_run": {
+      "candidates": 26,
+      "eligible": 18,
+      "duplicates": 8,
+      "rejections": 0
+    },
+    "import": {
+      "inserted": 18,
+      "min_id": 1142,
+      "max_id": 1159
+    },
+    "post_audit": {
+      "batch_rows": 18,
+      "source_ok": 18,
+      "ownership_ok": 18,
+      "category_links": 18
+    }
+  },
+  "production_after": {
+    "colorado_total": 1101,
+    "colorado_sourced": 1100,
+    "colorado_with_booking": 1101,
+    "colorado_unclaimed": 1100,
+    "remaining_to_5000": 3900
+  },
+  "sources": {
+    "Booksy": 15,
+    "Square Appointments": 3
+  },
+  "imported_by_category": {
+    "barber": 11,
+    "massage_therapist": 3,
+    "waxing_specialist": 2,
+    "nail_technician": 1,
+    "eyelash_technician": 1
+  },
+  "imported_by_city": {
+    "Aurora": 7,
+    "Denver": 7,
+    "Edgewater": 1,
+    "Glendale": 1,
+    "Lakewood": 1,
+    "Thornton": 1
+  },
+  "imported": [
+    {
+      "business_name": "Albert Villanueva",
+      "category": "barber",
+      "city": "Denver",
+      "state": "CO",
+      "workplace_name": "AndresTheBarber",
+      "booking_url": "https://booksy.com/en-us/1224665_andresthebarber_barber-shop_134761_denver",
+      "source_url": "https://booksy.com/en-us/1224665_andresthebarber_barber-shop_134761_denver",
+      "source_name": "Booksy",
+      "source_checked_at": "2026-10-15T06:56:54Z",
+      "user_id": null,
+      "claim_status": "unclaimed"
+    },
+    {
+      "business_name": "Alex Blendz",
+      "category": "barber",
+      "city": "Denver",
+      "state": "CO",
+      "workplace_name": "Alex Blendz",
+      "booking_url": "https://booksy.com/en-us/621821_alex-blendz_barber-shop_134761_denver",
+      "source_url": "https://booksy.com/en-us/621821_alex-blendz_barber-shop_134761_denver",
+      "source_name": "Booksy",
+      "source_checked_at": "2026-10-15T06:56:54Z",
+      "user_id": null,
+      "claim_status": "unclaimed"
+    },
+    {
+      "business_name": "Alex Zamora",
+      "category": "barber",
+      "city": "Aurora",
+      "state": "CO",
+      "workplace_name": "AZcutz",
+      "booking_url": "https://booksy.com/en-us/1395265_azcutz_barber-shop_134779_aurora",
+      "source_url": "https://booksy.com/en-us/1395265_azcutz_barber-shop_134779_aurora",
+      "source_name": "Booksy",
+      "source_checked_at": "2026-10-15T06:56:54Z",
+      "user_id": null,
+      "claim_status": "unclaimed"
+    },
+    {
+      "business_name": "Alexx Chavez",
+      "category": "barber",
+      "city": "Aurora",
+      "state": "CO",
+      "workplace_name": "ChavezBlendz",
+      "booking_url": "https://booksy.com/en-us/602764_chavezblendz_barber-shop_134779_aurora",
+      "source_url": "https://booksy.com/en-us/602764_chavezblendz_barber-shop_134779_aurora",
+      "source_name": "Booksy",
+      "source_checked_at": "2026-10-15T06:56:54Z",
+      "user_id": null,
+      "claim_status": "unclaimed"
+    },
+    {
+      "business_name": "Ashley Pearce",
+      "category": "massage_therapist",
+      "city": "Denver",
+      "state": "CO",
+      "workplace_name": "Ashley Pearce Massage",
+      "booking_url": "https://square.site/book/3C2J3SM08E7JE/ashley-pearce-massage-denver-co",
+      "source_url": "https://square.site/book/3C2J3SM08E7JE/ashley-pearce-massage-denver-co",
+      "source_name": "Square Appointments",
+      "source_checked_at": "2026-10-15T06:56:54Z",
+      "user_id": null,
+      "claim_status": "unclaimed"
+    },
+    {
+      "business_name": "Benito Navarrete",
+      "category": "barber",
+      "city": "Aurora",
+      "state": "CO",
+      "workplace_name": "Beni The Barber",
+      "booking_url": "https://booksy.com/en-us/1127278_beni-the-barber_barber-shop_134779_aurora",
+      "source_url": "https://booksy.com/en-us/1127278_beni-the-barber_barber-shop_134779_aurora",
+      "source_name": "Booksy",
+      "source_checked_at": "2026-10-15T06:56:54Z",
+      "user_id": null,
+      "claim_status": "unclaimed"
+    },
+    {
+      "business_name": "Domanic Guzman",
+      "category": "massage_therapist",
+      "city": "Denver",
+      "state": "CO",
+      "workplace_name": "Domanic Guzman LMT, LLC",
+      "booking_url": "https://booksy.com/en-us/713993_domanic-guzman-lmt-llc_massage_134761_denver",
+      "source_url": "https://booksy.com/en-us/713993_domanic-guzman-lmt-llc_massage_134761_denver",
+      "source_name": "Booksy",
+      "source_checked_at": "2026-10-15T06:56:54Z",
+      "user_id": null,
+      "claim_status": "unclaimed"
+    },
+    {
+      "business_name": "Ebony Sanchez",
+      "category": "waxing_specialist",
+      "city": "Lakewood",
+      "state": "CO",
+      "workplace_name": "Studio 86 Wax",
+      "booking_url": "https://booksy.com/en-us/918630_studio-86-wax_hair-removal_134761_denver",
+      "source_url": "https://booksy.com/en-us/918630_studio-86-wax_hair-removal_134761_denver",
+      "source_name": "Booksy",
+      "source_checked_at": "2026-10-15T06:56:54Z",
+      "user_id": null,
+      "claim_status": "unclaimed"
+    },
+    {
+      "business_name": "Ivy",
+      "category": "nail_technician",
+      "city": "Aurora",
+      "state": "CO",
+      "workplace_name": "Star Forever Nails",
+      "booking_url": "https://booksy.com/en-us/709194_star-forever-nails_nail-salon_134779_aurora",
+      "source_url": "https://booksy.com/en-us/709194_star-forever-nails_nail-salon_134779_aurora",
+      "source_name": "Booksy",
+      "source_checked_at": "2026-10-15T06:56:54Z",
+      "user_id": null,
+      "claim_status": "unclaimed"
+    },
+    {
+      "business_name": "Kelsey Marie",
+      "category": "massage_therapist",
+      "city": "Glendale",
+      "state": "CO",
+      "workplace_name": "Kelsey Marie Massage Therapy",
+      "booking_url": "https://square.site/book/3DD6BJ1KS1GNG/kelsey-marie-massage-therapy-glendale-co",
+      "source_url": "https://square.site/book/3DD6BJ1KS1GNG/kelsey-marie-massage-therapy-glendale-co",
+      "source_name": "Square Appointments",
+      "source_checked_at": "2026-10-15T06:56:54Z",
+      "user_id": null,
+      "claim_status": "unclaimed"
+    },
+    {
+      "business_name": "Kevin Castelan",
+      "category": "barber",
+      "city": "Aurora",
+      "state": "CO",
+      "workplace_name": "Kevin Barber",
+      "booking_url": "https://booksy.com/en-us/987440_kevin-barber_barber-shop_134779_aurora",
+      "source_url": "https://booksy.com/en-us/987440_kevin-barber_barber-shop_134779_aurora",
+      "source_name": "Booksy",
+      "source_checked_at": "2026-10-15T06:56:54Z",
+      "user_id": null,
+      "claim_status": "unclaimed"
+    },
+    {
+      "business_name": "Kevin Moss",
+      "category": "barber",
+      "city": "Aurora",
+      "state": "CO",
+      "workplace_name": "KutsWKev (Kevin)",
+      "booking_url": "https://booksy.com/en-us/904813_kutswkev-kevin_barber-shop_134779_aurora",
+      "source_url": "https://booksy.com/en-us/904813_kutswkev-kevin_barber-shop_134779_aurora",
+      "source_name": "Booksy",
+      "source_checked_at": "2026-10-15T06:56:54Z",
+      "user_id": null,
+      "claim_status": "unclaimed"
+    },
+    {
+      "business_name": "Marco",
+      "category": "barber",
+      "city": "Denver",
+      "state": "CO",
+      "workplace_name": "Marco Barber",
+      "booking_url": "https://booksy.com/en-us/1506422_marco-barber_barber-shop_134761_denver",
+      "source_url": "https://booksy.com/en-us/1506422_marco-barber_barber-shop_134761_denver",
+      "source_name": "Booksy",
+      "source_checked_at": "2026-10-15T06:56:54Z",
+      "user_id": null,
+      "claim_status": "unclaimed"
+    },
+    {
+      "business_name": "Max Gurrola",
+      "category": "barber",
+      "city": "Aurora",
+      "state": "CO",
+      "workplace_name": "Stay Sharp Barbershop",
+      "booking_url": "https://booksy.com/en-us/119088_stay-sharp-barbershop_barber-shop_134779_aurora",
+      "source_url": "https://booksy.com/en-us/119088_stay-sharp-barbershop_barber-shop_134779_aurora",
+      "source_name": "Booksy",
+      "source_checked_at": "2026-10-15T06:56:54Z",
+      "user_id": null,
+      "claim_status": "unclaimed"
+    },
+    {
+      "business_name": "Nailin Gutierrez",
+      "category": "eyelash_technician",
+      "city": "Thornton",
+      "state": "CO",
+      "workplace_name": "lashesNai",
+      "booking_url": "https://booksy.com/en-us/1864696_lashesnai_brows-lashes_134761_denver",
+      "source_url": "https://booksy.com/en-us/1864696_lashesnai_brows-lashes_134761_denver",
+      "source_name": "Booksy",
+      "source_checked_at": "2026-10-15T06:56:54Z",
+      "user_id": null,
+      "claim_status": "unclaimed"
+    },
+    {
+      "business_name": "Sebastian Ontiveros",
+      "category": "barber",
+      "city": "Denver",
+      "state": "CO",
+      "workplace_name": "Sebas Blends",
+      "booking_url": "https://booksy.com/en-us/910340_sebas-blends_barber-shop_134761_denver",
+      "source_url": "https://booksy.com/en-us/910340_sebas-blends_barber-shop_134761_denver",
+      "source_name": "Booksy",
+      "source_checked_at": "2026-10-15T06:56:54Z",
+      "user_id": null,
+      "claim_status": "unclaimed"
+    },
+    {
+      "business_name": "Selina",
+      "category": "waxing_specialist",
+      "city": "Denver",
+      "state": "CO",
+      "workplace_name": "The Skin Societe By Selina",
+      "booking_url": "https://square.site/book/DTCPTDWFABD6W/the-skin-societe-by-selina-denver-co",
+      "source_url": "https://square.site/book/DTCPTDWFABD6W/the-skin-societe-by-selina-denver-co",
+      "source_name": "Square Appointments",
+      "source_checked_at": "2026-10-15T06:56:54Z",
+      "user_id": null,
+      "claim_status": "unclaimed"
+    },
+    {
+      "business_name": "Tyler Esker",
+      "category": "barber",
+      "city": "Edgewater",
+      "state": "CO",
+      "workplace_name": "Barber Therapy",
+      "booking_url": "https://booksy.com/en-us/806240_barber-therapy_barber-shop_134761_denver",
+      "source_url": "https://booksy.com/en-us/806240_barber-therapy_barber-shop_134761_denver",
+      "source_name": "Booksy",
+      "source_checked_at": "2026-10-15T06:56:54Z",
+      "user_id": null,
+      "claim_status": "unclaimed"
+    }
+  ],
+  "duplicates": [
+    "Alex LaMonte",
+    "Emily",
+    "Eric Hayes",
+    "Jess",
+    "Marius Coste",
+    "Monica Reed",
+    "Nicole Noffsinger",
+    "Stephanie"
+  ],
+  "notes": [
+    "No authored bios, reviews, ratings, credentials, photos, or portfolio media were imported.",
+    "Only public factual identity, location, category, workplace, booking URL, and provenance fields were stored."
+  ]
+}
