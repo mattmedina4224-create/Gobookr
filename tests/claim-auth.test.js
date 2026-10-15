@@ -339,7 +339,7 @@ test('existing customers can start professional setup only through a CSRF protec
  await a.request('POST','/join/create',{_csrf:'test-csrf'},token); assert.equal(a.state.profiles.filter(p=>p.user_id===user.id).length,1);
 });
 test('professional entry preserves accounts and does not claim listings automatically',async()=>{
- const a=app(); const page=await a.request('GET','/join'); assert.match(page.body,/Find my profile/); assert.match(page.body,/Create a new profile/); assert.equal(a.state.writes.length,0);
+ const a=app(); const page=await a.request('GET','/join/individual'); assert.match(page.body,/Find my profile/); assert.match(page.body,/Create a new profile/); assert.equal(a.state.writes.length,0);
  const {user,token}=a.addUser(); const existing=await a.request('GET','/signup?role=pro',{},token); assert.equal(existing.headers.Location,'/join');
  const duplicate=await a.request('POST','/signup',{name:'Existing',email:user.email,password:'password123',role:'pro',legal_agreement:'1'}); assert.match(duplicate.headers.Location,/next=%2Fjoin/); assert.equal(user.role,'customer');
 });
