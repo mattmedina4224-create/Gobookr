@@ -103,6 +103,7 @@ module.exports = function (router) {
     const categories = db.prepare('SELECT category FROM pro_categories WHERE pro_id = ?').all(profile.id);
     if (!categories.length) return redirect(ctx.res, '/dashboard/pro/onboarding?step=categories&error=' + encodeURIComponent('Choose at least one specialty.'));
     db.prepare('UPDATE pro_profiles SET onboarding_completed = 1 WHERE id = ?').run(profile.id);
+    if (await require('./pro-email-confirmation').afterPublish(ctx)) return;
     redirect(ctx.res, `/dashboard/pro?success=${encodeURIComponent('Your GoBookr profile is ready for customers.')}&setup=complete`);
   });
 };

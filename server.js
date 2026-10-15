@@ -22,6 +22,7 @@ require('./routes/become-pro')(router);
 require('./routes/google')(router);
 require('./routes/pro')(router);
 require('./routes/onboarding')(router);
+require('./routes/pro-email-confirmation')(router);
 require('./routes/customer')(router);
 require('./routes/following')(router);
 require('./routes/admin')(router);

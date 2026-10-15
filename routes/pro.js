@@ -255,6 +255,7 @@ module.exports = function (router) {
       interestSummary, nextAction, marketingPulse, marketingPulseText,
       campaignViews, campaignClicks, liveOpenings, csrf: ctx.session.csrf_token,
       setupCompleted: ctx.query.setup === 'complete',
+      emailConfirmation: require('../lib/email-confirmation').dashboardConfirmation(profile, ctx.currentUser),
     }, dashNav('overview'));
     send(ctx.res, layout({ title: 'Pro dashboard', currentUser: ctx.currentUser, session: ctx.session, flash: flashFromQuery(ctx.query), body }));
   });
