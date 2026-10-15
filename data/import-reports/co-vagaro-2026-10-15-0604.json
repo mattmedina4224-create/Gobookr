@@ -1,0 +1,71 @@
+{
+  "batch_id": "co-vagaro-2026-10-15-0604",
+  "imported_at": "2026-10-15T12:04:46Z",
+  "production_project": "jbhgeoedwvfxjteyuxum",
+  "source_name": "Vagaro",
+  "approved_source": true,
+  "imported_count": 20,
+  "duplicate_rejections": 0,
+  "other_rejections": 1,
+  "rejection_notes": [
+    "Katrina Orion excluded because acupuncture is not a supported GoBookr category."
+  ],
+  "production_before": 1180,
+  "production_after": 1200,
+  "target": 5000,
+  "remaining": 3800,
+  "cities": {
+    "Colorado Springs": 12,
+    "Fort Collins": 1,
+    "Pueblo": 7
+  },
+  "categories": {
+    "nail_technician": 12,
+    "massage_therapist": 4,
+    "waxing_specialist": 2,
+    "colorist": 1,
+    "stylist": 1
+  },
+  "safeguards": {
+    "dry_run_name_city_dedup": true,
+    "batch_distinct_name_city": 20,
+    "user_id_null": 20,
+    "claim_status_unclaimed": 20,
+    "provenance_complete": 20,
+    "booking_urls_present": 20,
+    "pro_categories_present": 20
+  },
+  "production_ids": [
+    1240,
+    1241,
+    1242,
+    1243,
+    1244,
+    1245,
+    1246,
+    1247,
+    1248,
+    1249,
+    1250,
+    1251,
+    1252,
+    1253,
+    1254,
+    1255,
+    1256,
+    1257,
+    1258,
+    1259
+  ],
+  "sources": [
+    "https://www.vagaro.com/thenailsstudio",
+    "https://www.vagaro.com/thenailaddict",
+    "https://www.vagaro.com/lmlyfxl",
+    "https://www.vagaro.com/laceyattheskinboutiqueco",
+    "https://www.vagaro.com/nudeskincarestudio",
+    "https://www.vagaro.com/fullbodywellness",
+    "https://www.vagaro.com/nicolegautatdetailssalon",
+    "https://www.vagaro.com/boss1",
+    "https://www.vagaro.com/familymassageandskincarellc"
+  ]
+}
