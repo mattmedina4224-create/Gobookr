@@ -55,7 +55,7 @@ test('category search uses membership rows so one professional can match every s
 test('category search does not duplicate cards for multi-specialty professionals', () => {
   const source = fs.readFileSync(path.join(__dirname, '..', 'routes', 'public.js'), 'utf8');
   assert.match(source, /EXISTS \(SELECT 1 FROM pro_categories pc WHERE pc\.pro_id = pro_profiles\.id AND pc\.category = \?\)/);
-  assert.match(source, /let results = hydratePros\(db\.prepare\(sql\)\.all\(\.\.\.args\)\)/);
+  assert.match(source, /const hydrated = hydratePros\(\[\.\.\.primaryPros, \.\.\.cityOnlyPros\]\)/);
 });
 
 test('home search offers the same supported radius sequence as results', () => {

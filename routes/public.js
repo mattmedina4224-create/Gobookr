@@ -10,7 +10,7 @@ const { isProPubliclyVisible } = require('../lib/subscription');
 const businessTeam = require('../lib/business-team');
 const { hydratePros } = require('../lib/pro-listing-data');
 const specialtySearch = require('../lib/specialty-search');
-const { parseRadius, resolveSearchCenter, filterByRadius, filterBusinessesByRadius } = require('../lib/geo-search');
+const { parseRadius, resolveSearchCenter, cityOnlyFilter, filterByRadius, filterBusinessesByRadius } = require('../lib/geo-search');
 const { PROFESSIONAL_CATEGORIES, PROFESSIONAL_CATEGORY_VALUES, categoryPlural } = require('../lib/pro-categories');
 
 const CATEGORIES = [{ value: '', label: 'All services' }, ...PROFESSIONAL_CATEGORIES.map((item) => ({ value: item.value, label: item.plural }))];
@@ -47,7 +47,7 @@ function proCard(pro, ctx, savedIds) {
   const specialtyHtml = specialtyLabels ? `<div class="market-specialties" aria-label="Specialties">${specialtyLabels}${extraSpecialties}</div>` : '';
   const hasLocation = pro.latitude !== null && pro.latitude !== '' && pro.longitude !== null && pro.longitude !== '' && Number.isFinite(Number(pro.latitude)) && Number.isFinite(Number(pro.longitude));
   const locationAttrs = hasLocation ? ` data-lat="${Number(pro.latitude)}" data-lon="${Number(pro.longitude)}"` : '';
-  const distanceHtml = Number.isFinite(Number(pro.distanceMiles)) ? `<span class="market-distance">${Number(pro.distanceMiles).toFixed(1)} mi away</span>` : '';
+  const distanceHtml = pro.cityOnly ? '<span class="market-distance">Distance unavailable</span>' : typeof pro.distanceMiles === 'number' && Number.isFinite(pro.distanceMiles) ? `<span class="market-distance">${pro.distanceMiles.toFixed(1)} mi away</span>` : '';
   const workplaceHtml = pro.workplace_name ? `<div class="market-workplace">${escapeHtml(pro.workplace_name)}</div>` : '';
   const photoHtml = pro.profile_photo_url
     ? `<img class="market-avatar-img" src="${escapeHtml(pro.profile_photo_url)}" alt="${escapeHtml(pro.business_name)} profile photo" loading="lazy" />`
@@ -79,7 +79,7 @@ function businessCard(shop) {
   const location = [shop.city, shop.state].filter(Boolean).join(', ');
   const status = shop.claim_status === 'unclaimed' ? '<span class="badge" style="background:#eef4ff;color:#0b1f3a;border:1px solid #c8d8f2;">Unclaimed business</span>' : '';
   const action = shop.claim_status === 'unclaimed' ? 'View & claim business →' : 'View business →';
-  const distanceHtml = Number.isFinite(Number(shop.distanceMiles)) ? '<span class="distance-away">' + Number(shop.distanceMiles).toFixed(1) + ' miles away</span>' : '';
+  const distanceHtml = shop.cityOnly ? '<span class="distance-away">Distance unavailable</span>' : typeof shop.distanceMiles === 'number' && Number.isFinite(shop.distanceMiles) ? '<span class="distance-away">' + shop.distanceMiles.toFixed(1) + ' miles away</span>' : '';
   return '<a class="pro-card business-card" href="/shop/' + shop.id + '"><div class="pro-card-body"><div class="pro-card-top">' +
     (shop.logo_url ? '<img src="' + escapeHtml(shop.logo_url) + '" alt="" style="width:52px;height:52px;border-radius:14px;object-fit:cover;border:1px solid var(--paper-line);"/>' : '<div class="avatar accent-slate">B</div>') +
     '<div class="pro-card-main"><div style="margin-bottom:5px;"><span class="badge category">Business</span></div><h3>' + escapeHtml(shop.name) + '</h3><div class="pro-location">' + escapeHtml(location) + (distanceHtml ? ' <span aria-hidden="true">·</span> ' + distanceHtml : '') + '</div></div></div>' +
@@ -176,45 +176,67 @@ module.exports = function (router) {
     const manualCenter = !hasGps && city && radius ? resolveSearchCenter(city) : null;
     const radiusBounds = hasGps || manualCenter ? require('../lib/geo-search').boundingBox(hasGps ? lat : manualCenter.latitude, hasGps ? lon : manualCenter.longitude, radius) : null;
     const radiusLat = hasGps ? lat : (manualCenter ? manualCenter.latitude : null); const radiusLon = hasGps ? lon : (manualCenter ? manualCenter.longitude : null); const hasRadiusCenter = hasGps || Boolean(manualCenter);
+    const cityOnly = !hasGps ? cityOnlyFilter(manualCenter) : null;
     let sql = "SELECT pro_profiles.* FROM pro_profiles LEFT JOIN subscriptions search_sub ON search_sub.pro_id=pro_profiles.id WHERE ((pro_profiles.user_id IS NULL AND pro_profiles.claim_status IN ('unclaimed','claim_pending') AND COALESCE(pro_profiles.business_name,'') <> '' AND COALESCE(pro_profiles.city,'') <> '' AND COALESCE(pro_profiles.state,'') <> '' AND COALESCE(pro_profiles.source_url,'') <> '' AND COALESCE(pro_profiles.source_name,'') <> '') OR (pro_profiles.user_id IS NOT NULL AND pro_profiles.onboarding_completed=1 AND (search_sub.status='active' OR (search_sub.status='trialing' AND search_sub.trial_ends_at > CURRENT_TIMESTAMP) OR (search_sub.status IN ('past_due','unpaid') AND search_sub.past_due_since IS NOT NULL AND search_sub.past_due_since > CURRENT_TIMESTAMP - INTERVAL '7 days'))))"; const args = [];
     if(businessTeam.enabled()) sql=sql.replace("search_sub.status='active'",`EXISTS(SELECT 1 FROM (${businessTeam.coverageSql}) sponsored WHERE sponsored.pro_id=pro_profiles.id) OR search_sub.status='active'`);
     if (category) { sql += ' AND EXISTS (SELECT 1 FROM pro_categories pc WHERE pc.pro_id = pro_profiles.id AND pc.category = ?)'; args.push(category); }
     if (city && !hasRadiusCenter) { sql += " AND (city LIKE ? ESCAPE '\\' OR state LIKE ? ESCAPE '\\' OR zip_code LIKE ? ESCAPE '\\')"; const value = likeValue(city); args.push(value, value, value); }
     const textSearch = q ? specialtySearch.buildSearch(q) : null;
     if (textSearch) { sql += ' AND ' + textSearch.where; args.push(...textSearch.args); }
+    const cityOnlyProSql = cityOnly ? sql + ' AND ' + cityOnly.sql : '';
+    const cityOnlyProArgs = cityOnly ? [...args, ...cityOnly.args] : [];
     if (radiusBounds) { sql += ' AND latitude BETWEEN ? AND ? AND longitude BETWEEN ? AND ?'; args.push(radiusBounds.minLat, radiusBounds.maxLat, radiusBounds.minLon, radiusBounds.maxLon); }
-    if (textSearch) {
-      const serviceMatch = specialtySearch.predicate('matched.name', textSearch.variants);
-      sql = sql.replace('SELECT pro_profiles.*', `SELECT pro_profiles.*, (SELECT matched.name FROM services matched WHERE matched.pro_id = pro_profiles.id AND ${serviceMatch.sql} ORDER BY matched.id LIMIT 1) AS matched_service, (${textSearch.order}) AS search_score`);
-      args.unshift(...serviceMatch.args, ...textSearch.orderArgs);
-      sql += ' ORDER BY search_score DESC, id DESC LIMIT 200';
-    } else sql += ' ORDER BY id DESC LIMIT 200';
-    let results = hydratePros(db.prepare(sql).all(...args));
+    const findPros = (query, params, limit) => {
+      if (textSearch) {
+        const serviceMatch = specialtySearch.predicate('matched.name', textSearch.variants);
+        query = query.replace('SELECT pro_profiles.*', `SELECT pro_profiles.*, (SELECT matched.name FROM services matched WHERE matched.pro_id = pro_profiles.id AND ${serviceMatch.sql} ORDER BY matched.id LIMIT 1) AS matched_service, (${textSearch.order}) AS search_score`);
+        params = [...serviceMatch.args, ...textSearch.orderArgs, ...params];
+      }
+      return db.prepare(query + (textSearch ? ' ORDER BY search_score DESC, id DESC' : ' ORDER BY id DESC') + ' LIMIT ' + limit).all(...params);
+    };
+    // Two bounded selects, one bulk hydration: city-only rows never displace radius matches.
+    const primaryPros = resultType === 'businesses' ? [] : findPros(sql, args, 200);
+    const cityOnlyPros = cityOnly && resultType !== 'businesses' ? findPros(cityOnlyProSql, cityOnlyProArgs, 50).map(pro => ({ ...pro, cityOnly: true })) : [];
+    const hydrated = hydratePros([...primaryPros, ...cityOnlyPros]);
+    let results = hydrated.filter(pro => !pro.cityOnly);
+    let cityOnlyResults = hydrated.filter(pro => pro.cityOnly);
     const radiusResult = await filterByRadius(results, radiusLat, radiusLon, radius);
     results = radiusResult.profiles;
     if (textSearch) results.sort((a,b) => Number(b.search_score) - Number(a.search_score) || (a.distanceMiles ?? Infinity) - (b.distanceMiles ?? Infinity) || b.id - a.id);
     if (q) results = results.map(pro => ({ ...pro, matchReason: specialtySearch.explain(pro,q) }));
+    if (q) cityOnlyResults = cityOnlyResults.map(pro => ({ ...pro, matchReason: specialtySearch.explain(pro,q) }));
     if (resultType === 'businesses') results = [];
     let businessSql = 'SELECT * FROM shops WHERE 1=1'; const businessArgs = [];
     if (city && !hasRadiusCenter) { businessSql += " AND (city LIKE ? OR state LIKE ? OR zip_code LIKE ?)"; const value = likeValue(city); businessArgs.push(value, value, value); }
     if (q) { businessSql += " AND name LIKE ?"; businessArgs.push(likeValue(q)); }
+    const cityOnlyBusinessSql = cityOnly ? businessSql + ' AND ' + cityOnly.sql + ' ORDER BY id DESC LIMIT 50' : '';
+    const cityOnlyBusinessArgs = cityOnly ? [...businessArgs, ...cityOnly.args] : [];
     if (radiusBounds) { businessSql += ' AND latitude BETWEEN ? AND ? AND longitude BETWEEN ? AND ?'; businessArgs.push(radiusBounds.minLat, radiusBounds.maxLat, radiusBounds.minLon, radiusBounds.maxLon); }
     businessSql += ' ORDER BY id DESC LIMIT 100';
     let businesses = [];
-    try { businesses = db.prepare(businessSql).all(...businessArgs); } catch (err) { console.error('Business search unavailable', err); }
+    let cityOnlyBusinesses = [];
+    try {
+      if (!category && resultType !== 'professionals') {
+        businesses = db.prepare(businessSql).all(...businessArgs);
+        if (cityOnly) cityOnlyBusinesses = db.prepare(cityOnlyBusinessSql).all(...cityOnlyBusinessArgs).map(shop => ({ ...shop, cityOnly: true }));
+      }
+    } catch (err) { console.error('Business search unavailable', err); }
     if (hasRadiusCenter && businesses.length) { const businessRadiusResult = await filterBusinessesByRadius(businesses, radiusLat, radiusLon, radius); businesses = businessRadiusResult.businesses; }
     if (category || resultType === 'professionals') businesses = [];
     const totalResults = results.length + businesses.length;
     const filterLink = (overrides) => { const merged = { type: resultType === 'all' ? '' : resultType, category, city, q, radius: radius || '', lat: hasGps ? lat : '', lon: hasGps ? lon : '', ...overrides }; const qs = new URLSearchParams(Object.entries(merged).filter(([, v]) => v !== '' && v !== null && v !== undefined)); return `/search?${qs.toString()}`; };
     const centerLabel = hasGps ? 'your location' : (manualCenter ? manualCenter.label : city);
-    const savedIds = favoriteIds(ctx, results);
+    const savedIds = favoriteIds(ctx, [...results, ...cityOnlyResults]);
+    const cityOnlyCount = cityOnlyResults.length + cityOnlyBusinesses.length;
+    const cityOnlyHtml = cityOnlyCount ? `<section class="city-only-results" aria-labelledby="city-only-heading"><h2 id="city-only-heading">Also listed in ${escapeHtml(cityOnly.label)}</h2><p class="search-location-note">${cityOnlyCount} city/ZIP-only match${cityOnlyCount === 1 ? '' : 'es'} shown. Exact locations are not available yet, so these listings may be outside your ${radius}-mile radius.</p><div class="pro-grid">${cityOnlyResults.map(pro => proCard(pro, ctx, savedIds)).join('')}${cityOnlyBusinesses.map(businessCard).join('')}</div></section>` : '';
+    const locationNote = !hasRadiusCenter && city ? '<p class="search-location-note">Showing location-text matches. We could not determine a map center, so the distance filter has not been applied. Try a ZIP code or include the state.</p>' : hasRadiusCenter && !hasGps ? `<p class="search-location-note">Distances are measured from the center of ${escapeHtml(centerLabel)}.</p>` : '';
     const broadenDistance = radius !== null && radius < 19 ? [1,2,3,4,5,7,9,11,13,15,17,19].find((m) => m > radius) : null;
     const emptySearchActions = [
       broadenDistance ? `<a class="btn" href="${filterLink({ radius: broadenDistance })}">Search within ${broadenDistance} miles</a>` : '',
       category ? `<a class="btn secondary" href="${filterLink({ category: '' })}">Browse all services</a>` : '',
       `<a class="btn ghost" href="/#find">Start a new search</a>`,
     ].filter(Boolean).join('');
-    const body = `<section class="section container search-results-page"><div class="results-toolbar"><div><a class="back-search" href="/#find">‹ Change search</a><h1>${resultType === 'businesses' ? 'Businesses' : resultType === 'professionals' ? 'Professionals' : 'Results'}${city ? ' near ' + escapeHtml(city) : ''}</h1><p>${totalResults} result${totalResults === 1 ? '' : 's'}${hasRadiusCenter ? ' · within ' + radius + ' miles of ' + escapeHtml(centerLabel) : ''}</p></div><div class="results-actions"><div class="result-type-tabs">${[['all','All'],['professionals','Pros'],['businesses','Businesses']].map(([value,label]) => '<a href="' + filterLink({ type: value === 'all' ? '' : value }) + '" class="' + (resultType === value ? 'active' : '') + '">' + label + '</a>').join('')}</div><label class="distance-control"><span>Distance</span><select onchange="window.location.href=this.value">${[1,2,3,4,5,7,9,11,13,15,17,19].map((m) => '<option value="' + filterLink({ radius:m }) + '"' + (radius === m ? ' selected' : '') + '>' + m + ' mi</option>').join('')}</select></label></div></div>${totalResults ? `<div class="pro-grid">${results.map(pro => proCard(pro, ctx, savedIds)).join('')}${businesses.map(businessCard).join('')}</div>` : `<div class="empty-state"><h3>No exact matches yet</h3><p>Keep your search and broaden one thing at a time. GoBookr will keep the rest of your filters in place.</p><div class="empty-search-actions">${emptySearchActions}</div></div>`}</section>`;
+    const body = `<section class="section container search-results-page"><div class="results-toolbar"><div><a class="back-search" href="/#find">‹ Change search</a><h1>${resultType === 'businesses' ? 'Businesses' : resultType === 'professionals' ? 'Professionals' : 'Results'}${city ? ' near ' + escapeHtml(city) : ''}</h1><p>${totalResults} result${totalResults === 1 ? '' : 's'}${hasRadiusCenter ? ' · within ' + radius + ' miles of ' + escapeHtml(centerLabel) : ''}</p></div><div class="results-actions"><div class="result-type-tabs">${[['all','All'],['professionals','Pros'],['businesses','Businesses']].map(([value,label]) => '<a href="' + filterLink({ type: value === 'all' ? '' : value }) + '" class="' + (resultType === value ? 'active' : '') + '">' + label + '</a>').join('')}</div><label class="distance-control"><span>Distance</span><select onchange="window.location.href=this.value">${[1,2,3,4,5,7,9,11,13,15,17,19].map((m) => '<option value="' + filterLink({ radius:m }) + '"' + (radius === m ? ' selected' : '') + '>' + m + ' mi</option>').join('')}</select></label></div></div>${locationNote}${totalResults ? `<div class="pro-grid">${results.map(pro => proCard(pro, ctx, savedIds)).join('')}${businesses.map(businessCard).join('')}</div>` : cityOnlyCount ? `<p class="search-location-note">No distance-confirmed matches within ${radius} miles yet. City/ZIP-only listings are shown below.</p>` : `<div class="empty-state"><h3>No exact matches yet</h3><p>Keep your search and broaden one thing at a time. GoBookr will keep the rest of your filters in place.</p><div class="empty-search-actions">${emptySearchActions}</div></div>`}${cityOnlyHtml}</section>`;
     const searchTitle = category ? `${slugCategory(category)} near ${city || 'you'}` : `Personal-service professionals${city ? ' near ' + city : ''}`;
     send(ctx.res, layout({ title: searchTitle, description: `Find ${category ? slugCategory(category).toLowerCase() : 'personal-service professionals'}${city ? ' in ' + city : ''}. Compare profiles, work, reviews, and booking options on GoBookr.`, canonical: 'https://gobookr.com/search' + (category || city ? '?' + new URLSearchParams(Object.entries({ category, city }).filter(([,v])=>v)).toString() : ''), robots: q || hasGps ? 'noindex,follow' : 'index,follow', currentUser: ctx.currentUser, session: ctx.session, flash: flashFromQuery(ctx.query), body }));
   });
