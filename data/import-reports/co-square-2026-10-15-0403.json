@@ -1,0 +1,189 @@
+{
+  "run_id": "co-square-2026-10-15-0403",
+  "environment": "production",
+  "project_id": "jbhgeoedwvfxjteyuxum",
+  "source_checked_at": "2026-10-15T10:03:49Z",
+  "baseline": {
+    "total_profiles": 1151,
+    "sourced_colorado_profiles": 1149
+  },
+  "validation": {
+    "candidate_rows_dry_run": 28,
+    "production_duplicates": 8,
+    "source_rejections": 0,
+    "eligible_rows": 20
+  },
+  "import": {
+    "submitted": 20,
+    "inserted": 20,
+    "category_rows_inserted": 20,
+    "id_range": [
+      1209,
+      1228
+    ],
+    "user_id_null": 20,
+    "claim_status_unclaimed": 20,
+    "source_complete": 20
+  },
+  "sources": {
+    "Square Appointments": 20
+  },
+  "cities": {
+    "Aurora": 1,
+    "Castle Rock": 2,
+    "Centennial": 1,
+    "Colorado Springs": 1,
+    "Commerce City": 1,
+    "Denver": 1,
+    "Fort Collins": 1,
+    "Fountain": 1,
+    "Frisco": 1,
+    "Highlands Ranch": 1,
+    "Lafayette": 1,
+    "Lakewood": 1,
+    "Littleton": 1,
+    "Lone Tree": 2,
+    "Longmont": 1,
+    "Loveland": 1,
+    "Pueblo": 2
+  },
+  "categories": {
+    "colorist": 7,
+    "eyebrow_technician": 2,
+    "eyelash_technician": 1,
+    "massage_therapist": 3,
+    "nail_technician": 4,
+    "stylist": 2,
+    "waxing_specialist": 1
+  },
+  "imported": [
+    [
+      1209,
+      "Nallely",
+      "nail_technician",
+      "Aurora"
+    ],
+    [
+      1210,
+      "Brittany Walker",
+      "eyebrow_technician",
+      "Castle Rock"
+    ],
+    [
+      1211,
+      "Chanalynn Matthews",
+      "stylist",
+      "Castle Rock"
+    ],
+    [
+      1212,
+      "Megan",
+      "eyebrow_technician",
+      "Centennial"
+    ],
+    [
+      1213,
+      "Melinda Baez",
+      "massage_therapist",
+      "Colorado Springs"
+    ],
+    [
+      1214,
+      "Monique Saiz",
+      "eyelash_technician",
+      "Commerce City"
+    ],
+    [
+      1215,
+      "Katt Bilyeu",
+      "massage_therapist",
+      "Denver"
+    ],
+    [
+      1216,
+      "Jodi Shannon",
+      "colorist",
+      "Fort Collins"
+    ],
+    [
+      1217,
+      "Laura Grace",
+      "nail_technician",
+      "Fountain"
+    ],
+    [
+      1218,
+      "Julie",
+      "nail_technician",
+      "Frisco"
+    ],
+    [
+      1219,
+      "Angela Chiecuto",
+      "colorist",
+      "Highlands Ranch"
+    ],
+    [
+      1220,
+      "Ashley Hood",
+      "colorist",
+      "Lafayette"
+    ],
+    [
+      1221,
+      "Alexis",
+      "nail_technician",
+      "Lakewood"
+    ],
+    [
+      1222,
+      "Meghan",
+      "colorist",
+      "Littleton"
+    ],
+    [
+      1223,
+      "Robyn Kemp",
+      "colorist",
+      "Lone Tree"
+    ],
+    [
+      1224,
+      "Stephanie Gallegos",
+      "colorist",
+      "Lone Tree"
+    ],
+    [
+      1225,
+      "Jules",
+      "stylist",
+      "Longmont"
+    ],
+    [
+      1226,
+      "Erin",
+      "massage_therapist",
+      "Loveland"
+    ],
+    [
+      1227,
+      "Bailei",
+      "colorist",
+      "Pueblo"
+    ],
+    [
+      1228,
+      "Melissa",
+      "waxing_specialist",
+      "Pueblo"
+    ]
+  ],
+  "post_audit": {
+    "total_profiles": 1171,
+    "sourced_colorado_profiles": 1169,
+    "remaining_to_5000": 3831,
+    "batch_rows": 20,
+    "batch_unclaimed": 20,
+    "batch_categories": 20
+  }
+}
