@@ -1,0 +1,164 @@
+{
+  "batch_id": "co-squire-2026-10-15-1558",
+  "imported_at": "2026-10-15T21:58:14Z",
+  "production_project": "jbhgeoedwvfxjteyuxum",
+  "approved_sources": [
+    "SQUIRE"
+  ],
+  "imported_count": 15,
+  "source_counts": {
+    "SQUIRE": 15
+  },
+  "duplicate_rejections": 0,
+  "duplicate_names": [],
+  "other_rejections": 0,
+  "rejection_reasons": {},
+  "rejected_names": [],
+  "production_before": 1304,
+  "production_after": 1319,
+  "target": 5000,
+  "remaining": 3681,
+  "cities": {
+    "Fort Collins": 11,
+    "Loveland": 4
+  },
+  "categories": {
+    "barber": 15
+  },
+  "safeguards": {
+    "dry_run_candidate_count": 15,
+    "dry_run_eligible_count": 15,
+    "id_collisions": 0,
+    "unique_identity_city": 15,
+    "unique_urls": 15,
+    "user_id_null": 15,
+    "claim_status_unclaimed": 15,
+    "complete_provenance": 15,
+    "approved_booking_urls": 15,
+    "category_mappings": 15
+  },
+  "production_ids": [
+    1364,
+    1365,
+    1366,
+    1367,
+    1368,
+    1369,
+    1370,
+    1371,
+    1372,
+    1373,
+    1374,
+    1375,
+    1376,
+    1377,
+    1378
+  ],
+  "sources": [
+    {
+      "id": 1364,
+      "name": "James Holland",
+      "city": "Loveland",
+      "workplace": "XAAK's Barbershop",
+      "url": "https://getsquire.com/discover/barbershop/xaaks-barbershop-loveland/barber/james-holland"
+    },
+    {
+      "id": 1365,
+      "name": "Kellin Hicks",
+      "city": "Loveland",
+      "workplace": "XAAK's Barbershop",
+      "url": "https://getsquire.com/discover/barbershop/xaaks-barbershop-loveland/barber/kellin-hicks"
+    },
+    {
+      "id": 1366,
+      "name": "Joshua Pettie",
+      "city": "Loveland",
+      "workplace": "XAAK's Barbershop",
+      "url": "https://getsquire.com/discover/barbershop/xaaks-barbershop-loveland/barber/joshua-pettie"
+    },
+    {
+      "id": 1367,
+      "name": "Zeke Gallardo",
+      "city": "Loveland",
+      "workplace": "XAAK's Barbershop",
+      "url": "https://getsquire.com/discover/barbershop/xaaks-barbershop-loveland/barber/zeke-gallardo-4"
+    },
+    {
+      "id": 1368,
+      "name": "Patrick Cardona",
+      "city": "Fort Collins",
+      "workplace": "RICKYBs Barbershop",
+      "url": "https://getsquire.com/discover/barbershop/rickybs-barbershop-fort-collins/barber/patrick-9"
+    },
+    {
+      "id": 1369,
+      "name": "Aidan Mckee",
+      "city": "Fort Collins",
+      "workplace": "RICKYBs Barbershop",
+      "url": "https://getsquire.com/discover/barbershop/rickybs-barbershop-fort-collins/barber/aidan-mckee-7"
+    },
+    {
+      "id": 1370,
+      "name": "Gustavo Avila",
+      "city": "Fort Collins",
+      "workplace": "Avila's - Fort Collins Harmony",
+      "url": "https://getsquire.com/discover/barbershop/avilas-fort-collins-harmony-fort-collins/barber/gustavo-avila-2"
+    },
+    {
+      "id": 1371,
+      "name": "Miguel Lopez",
+      "city": "Fort Collins",
+      "workplace": "Avila's - Fort Collins Harmony",
+      "url": "https://getsquire.com/discover/barbershop/avilas-fort-collins-harmony-fort-collins/barber/miguel-lopez-4"
+    },
+    {
+      "id": 1372,
+      "name": "Armando Arregui",
+      "city": "Fort Collins",
+      "workplace": "Avila's - Fort Collins Shields",
+      "url": "https://getsquire.com/discover/barbershop/avilas-fort-collins-shields-fort-collins/barber/armando-arregui"
+    },
+    {
+      "id": 1373,
+      "name": "Dafne Perea",
+      "city": "Fort Collins",
+      "workplace": "Avila's - Fort Collins Shields",
+      "url": "https://getsquire.com/discover/barbershop/avilas-fort-collins-shields-fort-collins/barber/dafne-perea"
+    },
+    {
+      "id": 1374,
+      "name": "Kari Avila",
+      "city": "Fort Collins",
+      "workplace": "Avila's - Fort Collins Shields",
+      "url": "https://getsquire.com/discover/barbershop/avilas-fort-collins-shields-fort-collins/barber/karina-avila-5"
+    },
+    {
+      "id": 1375,
+      "name": "Isuro Marrufo",
+      "city": "Fort Collins",
+      "workplace": "Avila's - Fort Collins Shields",
+      "url": "https://getsquire.com/discover/barbershop/avilas-fort-collins-shields-fort-collins/barber/isuro-marrufo-3"
+    },
+    {
+      "id": 1376,
+      "name": "Victor Xochitiotzi",
+      "city": "Fort Collins",
+      "workplace": "NoCO Stellar Barbers",
+      "url": "https://getsquire.com/discover/barbershop/noco-stellar-barbers-fort-collins/barber/victor-xochitiotzi"
+    },
+    {
+      "id": 1377,
+      "name": "Erik Sánchez",
+      "city": "Fort Collins",
+      "workplace": "NoCO Stellar Barbers",
+      "url": "https://getsquire.com/discover/barbershop/noco-stellar-barbers-fort-collins/barber/erik-3"
+    },
+    {
+      "id": 1378,
+      "name": "Isaac Arellano",
+      "city": "Fort Collins",
+      "workplace": "NoCO Stellar Barbers",
+      "url": "https://getsquire.com/discover/barbershop/noco-stellar-barbers-fort-collins/barber/isaac-arellano"
+    }
+  ]
+}
