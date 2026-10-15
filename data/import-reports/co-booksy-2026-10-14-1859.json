@@ -1,0 +1,79 @@
+{
+  "batch_id": "co-booksy-2026-10-14-1859",
+  "production_project": "jbhgeoedwvfxjteyuxum",
+  "source_name": "Booksy",
+  "source_checked_at": "2026-10-15T01:03:27Z",
+  "dry_run": {
+    "candidates": 24,
+    "eligible": 22,
+    "duplicates": 2,
+    "invalid": 0,
+    "duplicate_names": [
+      "Nichole Maestas",
+      "Rena Redwine"
+    ]
+  },
+  "import": {
+    "inserted": 22,
+    "id_min": 1005,
+    "id_max": 1026,
+    "category_rows": 22,
+    "user_id_null": 22,
+    "claim_status_unclaimed": 22,
+    "booking_and_provenance_valid": 22
+  },
+  "categories": {
+    "nail_technician": 16,
+    "stylist": 3,
+    "massage_therapist": 3
+  },
+  "cities": [
+    "Aurora",
+    "Boulder",
+    "Dacono",
+    "Denver",
+    "Lafayette",
+    "Louisville",
+    "Pueblo"
+  ],
+  "imported_names": [
+    "Rosa Ayala",
+    "Sofia",
+    "Rosana",
+    "Gaby",
+    "Kimyatta Dudley",
+    "Jerlingvanessa Picado",
+    "Stephanie",
+    "Evelin Valles",
+    "Clara Chávez",
+    "Serena",
+    "Kira Scadlock",
+    "Lilly Tran",
+    "Sofia Luna",
+    "Maria",
+    "Emily",
+    "Coral Robles Rubio",
+    "Gloria Webb",
+    "Mariah",
+    "Erin McCarthy",
+    "Tracey Jacobs LCMT",
+    "Susan Schmidt",
+    "Jeremy Asbury"
+  ],
+  "production_after": {
+    "colorado_total": 968,
+    "colorado_sourced": 967,
+    "colorado_with_booking": 782,
+    "colorado_unclaimed": 967,
+    "remaining_to_5000_sourced": 4033
+  },
+  "validation": [
+    "public Booksy source page current and reachable",
+    "individual staff identity visible on source page",
+    "Colorado city verified",
+    "supported GoBookr category",
+    "booking_url equals source_url",
+    "normalized name+city/source dedup against production",
+    "atomic insert with matching pro_categories row"
+  ]
+}
