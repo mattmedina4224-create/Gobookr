@@ -1,17 +1,23 @@
 'use strict';
 const { layout } = require('../lib/layout');
-const { send } = require('../lib/http');
+const { send, redirect } = require('../lib/http');
 
 module.exports = function (router) {
-  router.get('/business-account', async (ctx) => {
+  // Retain old links while keeping one canonical professional/business entry point.
+  router.get('/business-account', async (ctx) => redirect(ctx.res, '/join'));
+  router.get('/join', async (ctx) => {
+    // Existing homepage claim-search links must keep working without an extra choice.
+    const q = String(ctx.query.q || '').trim().slice(0,100);
+    const city = String(ctx.query.city || '').trim().slice(0,100);
+    if (q || city) return redirect(ctx.res, '/join/individual?' + new URLSearchParams(Object.entries({ q, city }).filter(([,value]) => value)).toString());
     const body = `
       <section class="section container" style="max-width:760px;">
         <div style="margin-bottom:22px;"><a href="/" style="text-decoration:none;">‹ &nbsp;Back</a></div>
-        <h1 style="font-size:clamp(34px,6vw,52px);line-height:1.02;margin-bottom:10px;">Choose your GoBookr account</h1>
-        <p class="muted" style="font-size:18px;margin-bottom:28px;">How will you use GoBookr?</p>
+        <h1 style="font-size:clamp(34px,6vw,52px);line-height:1.02;margin-bottom:10px;">Join as a professional</h1>
+        <p class="muted" style="font-size:18px;margin-bottom:28px;">Are you joining as an individual or a business?</p>
 
         <div style="display:grid;gap:16px;">
-          <a class="panel" href="/signup?role=pro" style="padding:24px;text-decoration:none;color:inherit;display:flex;align-items:center;gap:18px;">
+          <a class="panel" href="/join/individual" style="padding:24px;text-decoration:none;color:inherit;display:flex;align-items:center;gap:18px;">
             <div style="width:48px;display:flex;align-items:center;justify-content:center;color:#111827;">
               <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                 <circle cx="12" cy="8" r="3.2" stroke="currentColor" stroke-width="1.8"/>
@@ -19,7 +25,7 @@ module.exports = function (router) {
               </svg>
             </div>
             <div style="flex:1;">
-              <h2 style="margin:0 0 6px;">Individual</h2>
+              <h2 style="margin:0 0 6px;">Individual professional</h2>
               <p class="muted" style="margin:0 0 8px;">For independent professionals offering services directly to clients.</p>
               <strong style="font-size:20px;">30 days free, then $20/month</strong>
             </div>
@@ -49,6 +55,6 @@ module.exports = function (router) {
           <a class="btn secondary" href="/login" style="min-width:180px;">Log in</a>
         </div>
       </section>`;
-    send(ctx.res, layout({ title: 'Business Account', currentUser: ctx.currentUser, session: ctx.session, body }));
+    send(ctx.res, layout({ title: 'Join as a professional', currentUser: ctx.currentUser, session: ctx.session, body }));
   });
 };

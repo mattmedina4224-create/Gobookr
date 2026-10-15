@@ -37,15 +37,30 @@ test('professional entry searches only unclaimed sourced listings and creates on
     vm.runInNewContext(fs.readFileSync(filename, 'utf8'), { module, exports: module.exports, console, require: name => name === '../db' ? db : name === '../lib/layout' ? { layout: m => m.body } : local(name) });
     const routes = new Map();
     module.exports({ get: (p, f) => routes.set('GET ' + p, f), post: (p, f) => routes.set('POST ' + p, f) });
+    const chooser = {exports:{}};
+    vm.runInNewContext(fs.readFileSync(path.join(__dirname,'../routes/business-account.js'),'utf8'), { module:chooser,URLSearchParams,require:name=>name==='../lib/layout'?{layout:m=>m.body}:local(name) });
+    chooser.exports({ get:(p,f)=>routes.set('GET '+p,f) });
     async function request(method, pathname, userId, params = {}) {
       const res = { writeHead(status, headers) { this.status = status; this.headers = headers; }, end(body) { this.body = body; } };
       await routes.get(method + ' ' + pathname)({ res, query: params, body: {}, session: { csrf_token: 'csrf' }, currentUser: userId ? db.prepare('SELECT * FROM users WHERE id=?').get(userId) : null });
       return res;
     }
-    const results = await request('GET', '/join', null, { q: 'Test', city: 'Denver' });
+    const choice = await request('GET','/join',null);
+    assert.match(choice.body,/Are you joining as an individual or a business\?/);
+    assert.match(choice.body,/href="\/join\/individual"/);
+    assert.match(choice.body,/href="\/signup\?role=storefront"/);
+    assert.match(choice.body,/30 days free, then \$20\/month/);
+    assert.match(choice.body,/Complimentary/);
+    assert.doesNotMatch(choice.body,/Find my profile/);
+    assert.equal((await request('GET','/business-account',null)).headers.Location,'/join');
+    const legacySearch=await request('GET','/join',null,{q:'Test',city:'Denver'});
+    assert.equal(legacySearch.headers.Location,'/join/individual?q=Test&city=Denver');
+    const results = await request('GET', '/join/individual', null, { q: 'Test', city: 'Denver' });
     assert.match(results.body, /Test &lt;Studio&gt;/);
     assert.doesNotMatch(results.body, /Test pending|Test unsourced/);
     assert.match(results.body, /\/pro\/1\/claim/);
+    assert.match(results.body, /action="\/join\/individual"/);
+    assert.match(results.body, /\/login\?next=%2Fjoin%2Findividual/);
     await request('GET', '/join', 1);
     assert.equal(db.prepare('SELECT COUNT(*) AS count FROM subscriptions').get().count, 0);
     await request('POST', '/join/create', 1);
@@ -64,7 +79,7 @@ test('professional entry searches only unclaimed sourced listings and creates on
     // A mid-conversion failure must leave the customer account unchanged.
     db.exec('DROP TABLE subscriptions;');
     const failed = await request('POST', '/join/create', 2);
-    assert.match(failed.headers.Location, /\/join\?error=/);
+    assert.match(failed.headers.Location, /\/join\/individual\?error=/);
     assert.equal(db.prepare('SELECT role FROM users WHERE id=2').get().role, 'customer');
     assert.equal(db.prepare('SELECT COUNT(*) AS count FROM pro_profiles WHERE user_id=2').get().count, 0);
   } finally {
