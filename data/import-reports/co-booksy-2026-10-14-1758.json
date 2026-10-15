@@ -1,0 +1,262 @@
+{
+  "batch": "co-booksy-2026-10-14-1758",
+  "environment": {
+    "supabase_project_ref": "jbhgeoedwvfxjteyuxum",
+    "target": "production"
+  },
+  "source_checked_at": "2026-10-15T00:01:29.211239Z",
+  "source": "Booksy",
+  "workflow": {
+    "approved_source_pages_reviewed": 37,
+    "deleted_or_stale_pages_excluded": 3,
+    "production_duplicates_excluded": 1,
+    "importer_dry_run": {
+      "candidates": 34,
+      "eligible": 33,
+      "duplicates": 1,
+      "invalid": 0
+    },
+    "imported": 33,
+    "post_import_valid": 33
+  },
+  "production_after": {
+    "colorado_total": 946,
+    "colorado_sourced": 945,
+    "colorado_with_booking": 760,
+    "colorado_unclaimed": 945,
+    "remaining_to_5000": 4055
+  },
+  "cities": [
+    "Arvada",
+    "Aurora",
+    "Centennial",
+    "Colorado Springs",
+    "Denver",
+    "Fountain",
+    "Highlands Ranch",
+    "Lakewood",
+    "Littleton",
+    "Wheat Ridge"
+  ],
+  "categories": {
+    "nail_technician": 11,
+    "stylist": 8,
+    "colorist": 8,
+    "eyelash_technician": 4,
+    "eyebrow_technician": 2
+  },
+  "guarantees": {
+    "user_id_null": 33,
+    "claim_status_unclaimed": 33,
+    "source_url_present": 33,
+    "source_name_present": 33,
+    "source_checked_at_present": 33,
+    "booking_url_present": 33,
+    "category_join_present": 33
+  },
+  "duplicate_excluded": {
+    "name": "Luis Munoz",
+    "city": "Colorado Springs",
+    "source_url": "https://booksy.com/en-us/1002494_just-the-tips-by-luis_nail-salon_14977_colorado-springs"
+  },
+  "imported_profiles": [
+    [
+      972,
+      "Allanna Porter",
+      "stylist",
+      "Arvada"
+    ],
+    [
+      973,
+      "Desaray",
+      "eyelash_technician",
+      "Aurora"
+    ],
+    [
+      974,
+      "Heidi",
+      "eyelash_technician",
+      "Aurora"
+    ],
+    [
+      975,
+      "Lash Out Colorado",
+      "eyelash_technician",
+      "Aurora"
+    ],
+    [
+      976,
+      "United Nails & Eyelash LLC",
+      "nail_technician",
+      "Centennial"
+    ],
+    [
+      977,
+      "Alex LaMonte",
+      "stylist",
+      "Colorado Springs"
+    ],
+    [
+      978,
+      "Angie Avila",
+      "nail_technician",
+      "Colorado Springs"
+    ],
+    [
+      979,
+      "Bloom & Beyond",
+      "nail_technician",
+      "Colorado Springs"
+    ],
+    [
+      980,
+      "Briana Franklin",
+      "nail_technician",
+      "Colorado Springs"
+    ],
+    [
+      981,
+      "Destinee",
+      "nail_technician",
+      "Colorado Springs"
+    ],
+    [
+      982,
+      "Jesy Roman",
+      "nail_technician",
+      "Colorado Springs"
+    ],
+    [
+      983,
+      "Maria Whitfield",
+      "colorist",
+      "Colorado Springs"
+    ],
+    [
+      984,
+      "McKylaa",
+      "nail_technician",
+      "Colorado Springs"
+    ],
+    [
+      985,
+      "Monica Reed",
+      "nail_technician",
+      "Colorado Springs"
+    ],
+    [
+      986,
+      "Nicole Noffsinger",
+      "colorist",
+      "Colorado Springs"
+    ],
+    [
+      987,
+      "Premiernailspa",
+      "nail_technician",
+      "Colorado Springs"
+    ],
+    [
+      988,
+      "Ana Inzaurralde",
+      "colorist",
+      "Denver"
+    ],
+    [
+      989,
+      "Daniela",
+      "stylist",
+      "Denver"
+    ],
+    [
+      990,
+      "Dave Fonseca",
+      "colorist",
+      "Denver"
+    ],
+    [
+      991,
+      "Kindred Conversations",
+      "eyelash_technician",
+      "Denver"
+    ],
+    [
+      992,
+      "Shay Aguilar",
+      "colorist",
+      "Denver"
+    ],
+    [
+      993,
+      "Sophia Eva",
+      "stylist",
+      "Denver"
+    ],
+    [
+      994,
+      "Toni Alarid",
+      "stylist",
+      "Denver"
+    ],
+    [
+      995,
+      "Annabelle",
+      "nail_technician",
+      "Fountain"
+    ],
+    [
+      996,
+      "Delilah Maya Villa",
+      "nail_technician",
+      "Fountain"
+    ],
+    [
+      997,
+      "Aubrey Trujillo",
+      "eyebrow_technician",
+      "Highlands Ranch"
+    ],
+    [
+      998,
+      "Sara Browns",
+      "eyebrow_technician",
+      "Highlands Ranch"
+    ],
+    [
+      999,
+      "Andrés Huiquichi",
+      "colorist",
+      "Lakewood"
+    ],
+    [
+      1000,
+      "Fatou Bamba",
+      "stylist",
+      "Lakewood"
+    ],
+    [
+      1001,
+      "Brandi Bradford",
+      "stylist",
+      "Littleton"
+    ],
+    [
+      1002,
+      "Carly Arnold",
+      "colorist",
+      "Littleton"
+    ],
+    [
+      1003,
+      "Megan",
+      "stylist",
+      "Littleton"
+    ],
+    [
+      1004,
+      "Heather Elliott",
+      "colorist",
+      "Wheat Ridge"
+    ]
+  ]
+}
