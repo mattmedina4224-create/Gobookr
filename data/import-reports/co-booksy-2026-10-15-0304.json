@@ -1,0 +1,220 @@
+{
+  "run_id": "co-booksy-2026-10-15-0304",
+  "environment": "production",
+  "project_id": "jbhgeoedwvfxjteyuxum",
+  "source_checked_at": "2026-10-15T09:04:05Z",
+  "baseline": {
+    "total_profiles": 1124,
+    "sourced_colorado_profiles": 1122
+  },
+  "validation": {
+    "candidate_rows_dry_run": 44,
+    "production_duplicates": 17,
+    "source_rejections": 0,
+    "eligible_rows": 27
+  },
+  "import": {
+    "submitted": 27,
+    "inserted": 27,
+    "category_rows_inserted": 27,
+    "id_range": [
+      1182,
+      1208
+    ],
+    "user_id_null": 27,
+    "claim_status_unclaimed": 27,
+    "source_complete": 27
+  },
+  "sources": {
+    "Booksy": 27
+  },
+  "cities": {
+    "Arvada": 4,
+    "Aurora": 2,
+    "Basalt": 1,
+    "Brighton": 5,
+    "Colorado Springs": 5,
+    "Conifer": 1,
+    "Denver": 1,
+    "Longmont": 1,
+    "Westminster": 7
+  },
+  "categories": {
+    "barber": 23,
+    "massage_therapist": 2,
+    "nail_technician": 1,
+    "stylist": 1
+  },
+  "imported": [
+    [
+      1182,
+      "Amanda Vigil",
+      "barber",
+      "Arvada"
+    ],
+    [
+      1183,
+      "DeVaughn Dixon",
+      "barber",
+      "Arvada"
+    ],
+    [
+      1184,
+      "Issy Lujan",
+      "barber",
+      "Arvada"
+    ],
+    [
+      1185,
+      "Superdave Thebarber",
+      "barber",
+      "Arvada"
+    ],
+    [
+      1186,
+      "Emilio Dorado Jr",
+      "barber",
+      "Aurora"
+    ],
+    [
+      1187,
+      "Hannah Kim",
+      "massage_therapist",
+      "Aurora"
+    ],
+    [
+      1188,
+      "Kira Prochaska",
+      "nail_technician",
+      "Basalt"
+    ],
+    [
+      1189,
+      "Isaac Gonzales",
+      "barber",
+      "Brighton"
+    ],
+    [
+      1190,
+      "Jose Ramon Baena Arango",
+      "barber",
+      "Brighton"
+    ],
+    [
+      1191,
+      "Jose Rios",
+      "barber",
+      "Brighton"
+    ],
+    [
+      1192,
+      "Lupe Zavala",
+      "barber",
+      "Brighton"
+    ],
+    [
+      1193,
+      "Noah The Barber",
+      "barber",
+      "Brighton"
+    ],
+    [
+      1194,
+      "Daren",
+      "barber",
+      "Colorado Springs"
+    ],
+    [
+      1195,
+      "Donte Singletary",
+      "barber",
+      "Colorado Springs"
+    ],
+    [
+      1196,
+      "Salinda Avalos",
+      "barber",
+      "Colorado Springs"
+    ],
+    [
+      1197,
+      "SkubaBri",
+      "barber",
+      "Colorado Springs"
+    ],
+    [
+      1198,
+      "Steven Olivarez",
+      "barber",
+      "Colorado Springs"
+    ],
+    [
+      1199,
+      "Robert Wheaton",
+      "massage_therapist",
+      "Conifer"
+    ],
+    [
+      1200,
+      "Kayley AUE",
+      "stylist",
+      "Denver"
+    ],
+    [
+      1201,
+      "Jose Miguel",
+      "barber",
+      "Longmont"
+    ],
+    [
+      1202,
+      "Erick",
+      "barber",
+      "Westminster"
+    ],
+    [
+      1203,
+      "Fredy Garcia",
+      "barber",
+      "Westminster"
+    ],
+    [
+      1204,
+      "Isaac Ceballos",
+      "barber",
+      "Westminster"
+    ],
+    [
+      1205,
+      "Javi Ruiz",
+      "barber",
+      "Westminster"
+    ],
+    [
+      1206,
+      "Josiah Gomez",
+      "barber",
+      "Westminster"
+    ],
+    [
+      1207,
+      "Mariano Soto",
+      "barber",
+      "Westminster"
+    ],
+    [
+      1208,
+      "Mario Rodriguez",
+      "barber",
+      "Westminster"
+    ]
+  ],
+  "post_audit": {
+    "total_profiles": 1151,
+    "sourced_colorado_profiles": 1149,
+    "remaining_to_5000": 3851,
+    "batch_rows": 27,
+    "batch_unclaimed": 27,
+    "batch_categories": 27
+  }
+}
