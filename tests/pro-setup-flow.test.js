@@ -93,3 +93,24 @@ test('an upload with no caption saves once and advances onboarding instead of re
  assert.match(more.headers.Location,/step=portfolio/);
  assert.equal(a.photos.length,2);
 });
+
+test('booking accepts a bare domain on mobile and saves a normalized link before advancing',async()=>{
+ const a=app();
+ const page=await a.request('GET','/dashboard/pro/onboarding',{}, {step:'booking'});
+ assert.match(page.html,/<input[^>]*name="booking_url"[^>]*type="text" inputmode="url"/);
+ assert.match(page.html,/autocapitalize="none" spellcheck="false"/);
+ assert.doesNotMatch(page.html,/<input[^>]*name="booking_url"[^>]*type="url"/);
+ const response=await a.request('POST','/dashboard/pro/profile',{_setup_step:'booking',booking_url:' novobarbers.com '});
+ assert.match(response.headers.Location,/step=extras/);
+ assert.equal(a.profile.booking_url,'https://novobarbers.com/');
+ const saved=a.profile.booking_url;
+ for(const value of ['', 'not a valid link', 'javascript:alert(1)', 'ftp://example.com']) {
+  const invalid=await a.request('POST','/dashboard/pro/profile',{_setup_step:'booking',booking_url:value});
+  assert.equal(invalid.status,422);
+  assert.match(invalid.html,/Booking \/ scheduling link/);
+  assert.equal(a.profile.booking_url,saved);
+ }
+ const exit=await a.request('POST','/dashboard/pro/profile',{_setup_step:'booking',booking_url:'https://example.com/book?a=1',_setup_exit:'1'});
+ assert.match(exit.headers.Location,/setup=saved/);
+ assert.equal(a.profile.booking_url,'https://example.com/book?a=1');
+});
