@@ -1,0 +1,62 @@
+{
+  "batch_id": "co-squire-2026-10-15-0804",
+  "imported_at": "2026-10-15T14:04:45Z",
+  "production_project": "jbhgeoedwvfxjteyuxum",
+  "source_name": "SQUIRE",
+  "approved_source": true,
+  "imported_count": 22,
+  "duplicate_rejections": 0,
+  "duplicate_names": [],
+  "other_rejections": 0,
+  "production_before": 1213,
+  "production_after": 1235,
+  "target": 5000,
+  "remaining": 3765,
+  "cities": {
+    "Colorado Springs": 9,
+    "Denver": 5,
+    "Pueblo": 8
+  },
+  "categories": {
+    "barber": 22
+  },
+  "safeguards": {
+    "dry_run_name_city_and_source_url_dedup": true,
+    "batch_distinct_name_city": 22,
+    "user_id_null": 22,
+    "claim_status_unclaimed": 22,
+    "provenance_complete": 22,
+    "approved_squire_booking_urls": 22,
+    "pro_categories_present": 22
+  },
+  "production_ids": [
+    1273,
+    1274,
+    1275,
+    1276,
+    1277,
+    1278,
+    1279,
+    1280,
+    1281,
+    1282,
+    1283,
+    1284,
+    1285,
+    1286,
+    1287,
+    1288,
+    1289,
+    1290,
+    1291,
+    1292,
+    1293,
+    1294
+  ],
+  "sources": [
+    "https://getsquire.com/discover/barbershop/one-stop-shop-barber-shop-colorado-springs",
+    "https://getsquire.com/discover/barbershop/dapper-barbershop-occ-old-colorado-city-colorado-springs",
+    "https://getsquire.com/discover/barbershop/steel-city-barber-lounge-pueblo",
+    "https://getsquire.com/discover/barbershop/barba-denver-denver"
+  ]
+}
