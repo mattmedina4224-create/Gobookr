@@ -1,0 +1,190 @@
+{
+  "run_id": "co-mixed-2026-10-15-0159",
+  "environment": "production",
+  "project_id": "jbhgeoedwvfxjteyuxum",
+  "source_checked_at": "2026-10-15T07:59:47Z",
+  "baseline": {
+    "total_profiles": 1101,
+    "sourced_colorado_profiles": 1100
+  },
+  "validation": {
+    "candidate_rows_dry_run": 49,
+    "production_duplicates": 27,
+    "source_rejections": 2,
+    "eligible_rows": 22
+  },
+  "import": {
+    "submitted": 22,
+    "inserted": 22,
+    "category_rows_inserted": 22,
+    "id_range": [
+      1160,
+      1181
+    ],
+    "user_id_null": 22,
+    "claim_status_unclaimed": 22,
+    "source_complete": 22
+  },
+  "sources": {
+    "Booksy": 20,
+    "Square Appointments": 2
+  },
+  "cities": {
+    "Castle Rock": 3,
+    "Centennial": 6,
+    "Fort Collins": 4,
+    "Grand Junction": 1,
+    "Greeley": 2,
+    "Loveland": 2,
+    "Pueblo": 1,
+    "Thornton": 3
+  },
+  "categories": {
+    "barber": 14,
+    "colorist": 3,
+    "eyebrow_technician": 1,
+    "stylist": 4
+  },
+  "imported": [
+    [
+      1160,
+      "Alberto",
+      "barber",
+      "Castle Rock"
+    ],
+    [
+      1161,
+      "Shawna Cagle",
+      "stylist",
+      "Castle Rock"
+    ],
+    [
+      1162,
+      "Zay Dargan",
+      "barber",
+      "Castle Rock"
+    ],
+    [
+      1163,
+      "Briana Macias",
+      "barber",
+      "Centennial"
+    ],
+    [
+      1164,
+      "Hilary Hinds",
+      "stylist",
+      "Centennial"
+    ],
+    [
+      1165,
+      "Julian Mendez",
+      "barber",
+      "Centennial"
+    ],
+    [
+      1166,
+      "Justin Palmer",
+      "barber",
+      "Centennial"
+    ],
+    [
+      1167,
+      "Kayleigh Burket",
+      "colorist",
+      "Centennial"
+    ],
+    [
+      1168,
+      "Megan Woodard",
+      "barber",
+      "Centennial"
+    ],
+    [
+      1169,
+      "Carissa Rae",
+      "colorist",
+      "Fort Collins"
+    ],
+    [
+      1170,
+      "Corbin Lee",
+      "barber",
+      "Fort Collins"
+    ],
+    [
+      1171,
+      "Mark Tanwin Cottle",
+      "stylist",
+      "Fort Collins"
+    ],
+    [
+      1172,
+      "Sarah Jayne",
+      "colorist",
+      "Fort Collins"
+    ],
+    [
+      1173,
+      "Andy Sweet",
+      "barber",
+      "Grand Junction"
+    ],
+    [
+      1174,
+      "Amber",
+      "eyebrow_technician",
+      "Greeley"
+    ],
+    [
+      1175,
+      "Daphney Paulinyce",
+      "stylist",
+      "Greeley"
+    ],
+    [
+      1176,
+      "Daisy Hernandez",
+      "barber",
+      "Loveland"
+    ],
+    [
+      1177,
+      "Jay Samson",
+      "barber",
+      "Loveland"
+    ],
+    [
+      1178,
+      "JayDaBarber",
+      "barber",
+      "Pueblo"
+    ],
+    [
+      1179,
+      "Alexis Rubio",
+      "barber",
+      "Thornton"
+    ],
+    [
+      1180,
+      "Emiliano Marroquin",
+      "barber",
+      "Thornton"
+    ],
+    [
+      1181,
+      "Gio Cardona",
+      "barber",
+      "Thornton"
+    ]
+  ],
+  "post_audit": {
+    "total_profiles": 1124,
+    "sourced_colorado_profiles": 1122,
+    "remaining_to_5000": 3878,
+    "batch_rows": 22,
+    "batch_unclaimed": 22,
+    "batch_categories": 22
+  }
+}
