@@ -1,0 +1,79 @@
+{
+  "batch_id": "co-square-2026-10-15-2300",
+  "imported_at": "2026-10-16T05:00:00Z",
+  "production_project": "jbhgeoedwvfxjteyuxum",
+  "approved_sources": [
+    "Square Appointments"
+  ],
+  "input_count": 25,
+  "imported_count": 14,
+  "duplicate_rejections": 11,
+  "duplicate_candidates": [
+    "Lynn Hernandez",
+    "Melinda Baez",
+    "Amanda Morrow",
+    "Arianna Ferguson",
+    "Danielle Miranda",
+    "Jalyssa Ramos",
+    "Shae Buniger",
+    "Elle Keplinger",
+    "Natalie Polston",
+    "Rochelle Sanchez",
+    "Tiffany Corsentino"
+  ],
+  "validation_rejections": 0,
+  "validation_rejection_details": [],
+  "production_before": 1414,
+  "production_after": 1428,
+  "target": 5000,
+  "remaining": 3572,
+  "production_ids": [
+    1474,
+    1475,
+    1476,
+    1477,
+    1478,
+    1479,
+    1480,
+    1481,
+    1482,
+    1483,
+    1484,
+    1485,
+    1486,
+    1487
+  ],
+  "cities": {
+    "Colorado Springs": 4,
+    "Durango": 1,
+    "Grand Junction": 3,
+    "Lakewood": 1,
+    "Longmont": 1,
+    "Pueblo": 4
+  },
+  "categories": {
+    "barber": 3,
+    "colorist": 6,
+    "eyelash_technician": 4,
+    "massage_therapist": 1
+  },
+  "dry_run": {
+    "candidate_count": 14,
+    "production_duplicate_matches": 0,
+    "unique_source_urls": 13,
+    "shared_team_source_rows": 2,
+    "within_batch_identity_duplicates": 0,
+    "missing_or_invalid_required": 0,
+    "unsupported_categories": 0,
+    "unapproved_hosts": 0
+  },
+  "post_import_audit": {
+    "batch_count": 14,
+    "user_id_null": 14,
+    "claim_status_unclaimed": 14,
+    "complete_provenance": 14,
+    "approved_booking_urls": 14,
+    "category_mappings": 14,
+    "duplicate_identity_rows": 0
+  }
+}
