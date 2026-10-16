@@ -1,0 +1,94 @@
+{
+  "batch_id": "co-underrepresented-2026-10-15-1900",
+  "imported_at": "2026-10-16T01:00:00Z",
+  "production_project": "jbhgeoedwvfxjteyuxum",
+  "approved_sources": [
+    "GlossGenius",
+    "Booksy"
+  ],
+  "input_count": 33,
+  "imported_count": 15,
+  "duplicate_rejections": 17,
+  "duplicate_candidates": [
+    "Anna Lansdon",
+    "Artis Garcia",
+    "Gabriel Fuerzas",
+    "Jeffrey Keith Oelklaus",
+    "Lyndon J. Lapp",
+    "Sabrina Yvonne",
+    "Vanessa Aguirre",
+    "William Dalton Frizzell",
+    "Ashley Sikes",
+    "Dana Munoz",
+    "Destiny Levya",
+    "Jennifer Eriksen",
+    "Jesy Roman",
+    "Luis Munoz",
+    "Nichole Maestas",
+    "Jasmine Lee",
+    "Kaitlynn Martin"
+  ],
+  "validation_rejections": 1,
+  "validation_rejection_details": [
+    {
+      "name": "Maria Fuentes",
+      "reason": "Makeup-only profile had no exact supported GoBookr category; not coerced into an inaccurate category."
+    }
+  ],
+  "production_before": 1348,
+  "production_after": 1363,
+  "target": 5000,
+  "remaining": 3637,
+  "production_ids": [
+    1408,
+    1409,
+    1410,
+    1411,
+    1412,
+    1413,
+    1414,
+    1415,
+    1416,
+    1417,
+    1418,
+    1419,
+    1420,
+    1421,
+    1422
+  ],
+  "cities": {
+    "Colorado Springs": 8,
+    "Denver": 2,
+    "Evergreen": 1,
+    "Greenwood Village": 1,
+    "La Junta": 1,
+    "Trinidad": 1,
+    "Westminster": 1
+  },
+  "categories": {
+    "colorist": 1,
+    "eyebrow_technician": 4,
+    "eyelash_technician": 1,
+    "nail_technician": 3,
+    "stylist": 5,
+    "tattoo_artist": 1
+  },
+  "dry_run": {
+    "candidate_count": 15,
+    "production_duplicate_matches": 0,
+    "unique_source_urls": 15,
+    "within_batch_name_duplicates": 0,
+    "within_batch_source_duplicates": 0,
+    "missing_or_invalid_required": 0,
+    "unsupported_categories": 0,
+    "unapproved_hosts": 0
+  },
+  "post_import_audit": {
+    "batch_count": 15,
+    "user_id_null": 15,
+    "claim_status_unclaimed": 15,
+    "complete_provenance": 15,
+    "approved_booking_urls": 15,
+    "category_mappings": 15
+  }
+}
