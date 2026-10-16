@@ -1,0 +1,272 @@
+{
+  "batch": "co-northern-specialists-2026-10-16-0600",
+  "production_project": "jbhgeoedwvfxjteyuxum",
+  "imported_at": "2026-10-16T12:00:00Z",
+  "source_policy": "Approved public booking platform; factual fields only; no copied bios or media.",
+  "profiles": [
+    {
+      "pro_id": 1552,
+      "business_name": "Angie McKenzie",
+      "city": "Loveland",
+      "state": "CO",
+      "workplace_name": "Top Knot Salon + Extensions",
+      "category": "stylist",
+      "categories": [
+        "stylist",
+        "colorist"
+      ],
+      "source_url": "https://topknotsalon.glossgenius.com/team",
+      "source_name": "GlossGenius",
+      "source_checked_at": "2026-10-16T12:00:00Z",
+      "booking_url": "https://topknotsalon.glossgenius.com/team",
+      "user_id": null,
+      "claim_status": "unclaimed"
+    },
+    {
+      "pro_id": 1553,
+      "business_name": "Brooke Engelking",
+      "city": "Loveland",
+      "state": "CO",
+      "workplace_name": "Top Knot Salon + Extensions",
+      "category": "colorist",
+      "categories": [
+        "colorist",
+        "stylist"
+      ],
+      "source_url": "https://topknotsalon.glossgenius.com/team",
+      "source_name": "GlossGenius",
+      "source_checked_at": "2026-10-16T12:00:00Z",
+      "booking_url": "https://topknotsalon.glossgenius.com/team",
+      "user_id": null,
+      "claim_status": "unclaimed"
+    },
+    {
+      "pro_id": 1554,
+      "business_name": "Cassondra Nesby",
+      "city": "Fort Collins",
+      "state": "CO",
+      "workplace_name": "Très Beaux",
+      "category": "nail_technician",
+      "categories": [
+        "nail_technician"
+      ],
+      "source_url": "https://tresbeaux.glossgenius.com/team",
+      "source_name": "GlossGenius",
+      "source_checked_at": "2026-10-16T12:00:00Z",
+      "booking_url": "https://tresbeaux.glossgenius.com/team",
+      "user_id": null,
+      "claim_status": "unclaimed"
+    },
+    {
+      "pro_id": 1555,
+      "business_name": "Elizabeth Stegall",
+      "city": "Loveland",
+      "state": "CO",
+      "workplace_name": "Top Knot Salon + Extensions",
+      "category": "stylist",
+      "categories": [
+        "stylist",
+        "colorist"
+      ],
+      "source_url": "https://topknotsalon.glossgenius.com/team",
+      "source_name": "GlossGenius",
+      "source_checked_at": "2026-10-16T12:00:00Z",
+      "booking_url": "https://topknotsalon.glossgenius.com/team",
+      "user_id": null,
+      "claim_status": "unclaimed"
+    },
+    {
+      "pro_id": 1556,
+      "business_name": "Jessica Charkey",
+      "city": "Longmont",
+      "state": "CO",
+      "workplace_name": "Rewind Med Spa",
+      "category": "eyebrow_technician",
+      "categories": [
+        "eyebrow_technician"
+      ],
+      "source_url": "https://rewind.glossgenius.com/team",
+      "source_name": "GlossGenius",
+      "source_checked_at": "2026-10-16T12:00:00Z",
+      "booking_url": "https://rewind.glossgenius.com/team",
+      "user_id": null,
+      "claim_status": "unclaimed"
+    },
+    {
+      "pro_id": 1557,
+      "business_name": "Jill Guinn",
+      "city": "Longmont",
+      "state": "CO",
+      "workplace_name": "Rewind Med Spa",
+      "category": "waxing_specialist",
+      "categories": [
+        "waxing_specialist"
+      ],
+      "source_url": "https://rewind.glossgenius.com/team",
+      "source_name": "GlossGenius",
+      "source_checked_at": "2026-10-16T12:00:00Z",
+      "booking_url": "https://rewind.glossgenius.com/team",
+      "user_id": null,
+      "claim_status": "unclaimed"
+    },
+    {
+      "pro_id": 1558,
+      "business_name": "June Thomas",
+      "city": "Aurora",
+      "state": "CO",
+      "workplace_name": "Beyond The Beauty",
+      "category": "stylist",
+      "categories": [
+        "stylist"
+      ],
+      "source_url": "https://beyondthebeautyls.glossgenius.com/about",
+      "source_name": "GlossGenius",
+      "source_checked_at": "2026-10-16T12:00:00Z",
+      "booking_url": "https://beyondthebeautyls.glossgenius.com/about",
+      "user_id": null,
+      "claim_status": "unclaimed"
+    },
+    {
+      "pro_id": 1559,
+      "business_name": "Kathy Antunez",
+      "city": "Fort Collins",
+      "state": "CO",
+      "workplace_name": "Très Beaux",
+      "category": "nail_technician",
+      "categories": [
+        "nail_technician"
+      ],
+      "source_url": "https://tresbeaux.glossgenius.com/team",
+      "source_name": "GlossGenius",
+      "source_checked_at": "2026-10-16T12:00:00Z",
+      "booking_url": "https://tresbeaux.glossgenius.com/team",
+      "user_id": null,
+      "claim_status": "unclaimed"
+    },
+    {
+      "pro_id": 1560,
+      "business_name": "Leslie Baray",
+      "city": "Fort Collins",
+      "state": "CO",
+      "workplace_name": "Eyekonic Aesthetics",
+      "category": "eyelash_technician",
+      "categories": [
+        "eyelash_technician",
+        "eyebrow_technician",
+        "waxing_specialist"
+      ],
+      "source_url": "https://eyekonicaesthetics.glossgenius.com/team",
+      "source_name": "GlossGenius",
+      "source_checked_at": "2026-10-16T12:00:00Z",
+      "booking_url": "https://eyekonicaesthetics.glossgenius.com/team",
+      "user_id": null,
+      "claim_status": "unclaimed"
+    },
+    {
+      "pro_id": 1561,
+      "business_name": "Maddy Blair",
+      "city": "Loveland",
+      "state": "CO",
+      "workplace_name": "Top Knot Salon + Extensions",
+      "category": "colorist",
+      "categories": [
+        "colorist",
+        "stylist"
+      ],
+      "source_url": "https://topknotsalon.glossgenius.com/team",
+      "source_name": "GlossGenius",
+      "source_checked_at": "2026-10-16T12:00:00Z",
+      "booking_url": "https://topknotsalon.glossgenius.com/team",
+      "user_id": null,
+      "claim_status": "unclaimed"
+    },
+    {
+      "pro_id": 1562,
+      "business_name": "Malayia Flowers",
+      "city": "Aurora",
+      "state": "CO",
+      "workplace_name": "Beyond The Beauty",
+      "category": "stylist",
+      "categories": [
+        "stylist"
+      ],
+      "source_url": "https://beyondthebeautyls.glossgenius.com/about",
+      "source_name": "GlossGenius",
+      "source_checked_at": "2026-10-16T12:00:00Z",
+      "booking_url": "https://beyondthebeautyls.glossgenius.com/about",
+      "user_id": null,
+      "claim_status": "unclaimed"
+    },
+    {
+      "pro_id": 1563,
+      "business_name": "Roubi Alassani",
+      "city": "Aurora",
+      "state": "CO",
+      "workplace_name": "Roubi Alassani",
+      "category": "stylist",
+      "categories": [
+        "stylist"
+      ],
+      "source_url": "https://roubishairstudio.glossgenius.com/about",
+      "source_name": "GlossGenius",
+      "source_checked_at": "2026-10-16T12:00:00Z",
+      "booking_url": "https://roubishairstudio.glossgenius.com/about",
+      "user_id": null,
+      "claim_status": "unclaimed"
+    },
+    {
+      "pro_id": 1564,
+      "business_name": "Vennesa Trujillo",
+      "city": "Loveland",
+      "state": "CO",
+      "workplace_name": "Top Knot Salon + Extensions",
+      "category": "stylist",
+      "categories": [
+        "stylist",
+        "colorist"
+      ],
+      "source_url": "https://topknotsalon.glossgenius.com/team",
+      "source_name": "GlossGenius",
+      "source_checked_at": "2026-10-16T12:00:00Z",
+      "booking_url": "https://topknotsalon.glossgenius.com/team",
+      "user_id": null,
+      "claim_status": "unclaimed"
+    },
+    {
+      "pro_id": 1565,
+      "business_name": "Whitley Ward",
+      "city": "Longmont",
+      "state": "CO",
+      "workplace_name": "Neon Blonde Salon",
+      "category": "colorist",
+      "categories": [
+        "colorist",
+        "stylist"
+      ],
+      "source_url": "https://neonblondesalon.glossgenius.com/team",
+      "source_name": "GlossGenius",
+      "source_checked_at": "2026-10-16T12:00:00Z",
+      "booking_url": "https://neonblondesalon.glossgenius.com/team",
+      "user_id": null,
+      "claim_status": "unclaimed"
+    },
+    {
+      "pro_id": 1566,
+      "business_name": "Yesenia Arce",
+      "city": "Aurora",
+      "state": "CO",
+      "workplace_name": "Blessed Lashes",
+      "category": "eyelash_technician",
+      "categories": [
+        "eyelash_technician",
+        "eyebrow_technician"
+      ],
+      "source_url": "https://blessedlashess.glossgenius.com/team",
+      "source_name": "GlossGenius",
+      "source_checked_at": "2026-10-16T12:00:00Z",
+      "booking_url": "https://blessedlashess.glossgenius.com/team",
+      "user_id": null,
+      "claim_status": "unclaimed"
+    }
+  ]
+}
