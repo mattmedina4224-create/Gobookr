@@ -1,0 +1,124 @@
+{
+  "batch": "co-specialties-2026-10-16-0400",
+  "state": "CO",
+  "source_checked_at": "2026-10-16T09:00:00Z",
+  "dry_run": {
+    "input_count": 26,
+    "imported_count": 10,
+    "duplicate_rejections": 14,
+    "validation_rejections": 2,
+    "production_duplicates_after_screening": 0,
+    "within_batch_duplicates": 0,
+    "unique_source_urls": 8
+  },
+  "production_import": {
+    "project_id": "jbhgeoedwvfxjteyuxum",
+    "sourced_profiles_before": 1464,
+    "imported_count": 10,
+    "inserted_ids": {
+      "first": 1524,
+      "last": 1533
+    },
+    "sourced_profiles_after": 1474,
+    "total_colorado_profiles_after": 1476,
+    "remaining_to_5000": 3526
+  },
+  "duplicates": [
+    {
+      "name": "Adam Perez",
+      "existing_pro_id": 1456
+    },
+    {
+      "name": "Adrienne Hope",
+      "existing_pro_id": 1394
+    },
+    {
+      "name": "Ashley Mccollum",
+      "existing_pro_id": 954
+    },
+    {
+      "name": "Briana Fagan",
+      "existing_pro_id": 724
+    },
+    {
+      "name": "Briana Wilmott",
+      "existing_pro_id": 605
+    },
+    {
+      "name": "Christine Cannon",
+      "existing_pro_id": 719
+    },
+    {
+      "name": "Kaitlin Roark",
+      "existing_pro_id": 1323
+    },
+    {
+      "name": "Lynn Hernandez",
+      "existing_pro_id": 957
+    },
+    {
+      "name": "Olena Arutiunian",
+      "existing_pro_id": 689
+    },
+    {
+      "name": "Stacey Welch",
+      "existing_pro_id": 1455
+    },
+    {
+      "name": "Agnieszka Holer",
+      "existing_pro_id": 912
+    },
+    {
+      "name": "Charles Hall",
+      "existing_pro_id": 916
+    },
+    {
+      "name": "Carissa Rasmussen",
+      "existing_pro_id": 1471
+    },
+    {
+      "name": "Leah Urrutia",
+      "existing_pro_id": 1520
+    }
+  ],
+  "exclusions": [
+    {
+      "name": "Alishia Otero",
+      "reason": "retrieved public page did not expose enough service-and-location evidence together"
+    },
+    {
+      "name": "Jennifer Loya",
+      "reason": "public page presented multiple cities without a definitive individual Colorado location"
+    }
+  ],
+  "coverage": {
+    "cities": {
+      "Aurora": 3,
+      "Denver": 1,
+      "Englewood": 2,
+      "Fort Collins": 1,
+      "Grand Junction": 2,
+      "Pueblo": 1
+    },
+    "categories": {
+      "colorist": 3,
+      "eyelash_technician": 4,
+      "massage_therapist": 1,
+      "nail_technician": 1,
+      "stylist": 1
+    },
+    "sources": {
+      "GlossGenius": 2,
+      "Square Appointments": 8
+    }
+  },
+  "post_import_audit": {
+    "imported_rows": 10,
+    "user_id_null_and_unclaimed": 10,
+    "complete_matching_provenance": 10,
+    "matching_category_links": 10,
+    "shared_team_source_url_groups": 2,
+    "duplicate_name_city_groups": 0,
+    "max_profile_id": 1533
+  }
+}
