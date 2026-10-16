@@ -1,7 +1,7 @@
 [
   {
     "name": "Lauren Clouse",
-    "category": "Eyebrow Technician",
+    "category": "eyebrow_technician",
     "categories": [
       "eyebrow_technician",
       "eyelash_technician",
@@ -19,7 +19,7 @@
   },
   {
     "name": "Ashley Allen",
-    "category": "Eyebrow Technician",
+    "category": "eyebrow_technician",
     "categories": [
       "eyebrow_technician",
       "eyelash_technician",
@@ -38,7 +38,7 @@
   },
   {
     "name": "Jamie Kirby",
-    "category": "Eyebrow Technician",
+    "category": "eyebrow_technician",
     "categories": [
       "eyebrow_technician"
     ],
@@ -55,7 +55,7 @@
   },
   {
     "name": "Chrysta Calonder",
-    "category": "Massage Therapist",
+    "category": "massage_therapist",
     "categories": [
       "massage_therapist"
     ],
@@ -72,7 +72,7 @@
   },
   {
     "name": "Tess Gallegos",
-    "category": "Massage Therapist",
+    "category": "massage_therapist",
     "categories": [
       "massage_therapist"
     ],
@@ -88,7 +88,7 @@
   },
   {
     "name": "Bri Williams",
-    "category": "Massage Therapist",
+    "category": "massage_therapist",
     "categories": [
       "massage_therapist",
       "eyebrow_technician",
@@ -107,7 +107,7 @@
   },
   {
     "name": "Corinne Andrews",
-    "category": "Waxing Specialist",
+    "category": "waxing_specialist",
     "categories": [
       "waxing_specialist",
       "eyebrow_technician",
@@ -125,7 +125,7 @@
   },
   {
     "name": "Litzy Lopez",
-    "category": "Eyebrow Technician",
+    "category": "eyebrow_technician",
     "categories": [
       "eyebrow_technician"
     ],
@@ -142,7 +142,7 @@
   },
   {
     "name": "Bella Zandi",
-    "category": "Eyebrow Technician",
+    "category": "eyebrow_technician",
     "categories": [
       "eyebrow_technician",
       "eyelash_technician",
@@ -161,7 +161,7 @@
   },
   {
     "name": "Jessica Flores",
-    "category": "Eyelash Technician",
+    "category": "eyelash_technician",
     "categories": [
       "eyelash_technician"
     ],
@@ -177,7 +177,7 @@
   },
   {
     "name": "Lena Ve",
-    "category": "Eyelash Technician",
+    "category": "eyelash_technician",
     "categories": [
       "eyelash_technician",
       "eyebrow_technician",
