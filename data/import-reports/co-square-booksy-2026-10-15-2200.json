@@ -1,0 +1,84 @@
+{
+  "batch_id": "co-square-booksy-2026-10-15-2200",
+  "imported_at": "2026-10-16T04:00:00Z",
+  "production_project": "jbhgeoedwvfxjteyuxum",
+  "approved_sources": [
+    "Square Appointments",
+    "Booksy"
+  ],
+  "input_count": 27,
+  "imported_count": 14,
+  "duplicate_rejections": 13,
+  "duplicate_candidates": [
+    "Jessica Brever",
+    "Grace Martin",
+    "Chanalynn Matthews",
+    "Tobi Blakeman",
+    "Ashley Hood",
+    "Robyn Kemp",
+    "Lisa Mower",
+    "Kendra Behrens",
+    "Candice Lee",
+    "Calvin Propst",
+    "Steven Valdez",
+    "Chema Romero",
+    "Jodi Shannon"
+  ],
+  "validation_rejections": 0,
+  "validation_rejection_details": [],
+  "production_before": 1400,
+  "production_after": 1414,
+  "target": 5000,
+  "remaining": 3586,
+  "production_ids": [
+    1460,
+    1461,
+    1462,
+    1463,
+    1464,
+    1465,
+    1466,
+    1467,
+    1468,
+    1469,
+    1470,
+    1471,
+    1472,
+    1473
+  ],
+  "cities": {
+    "Aurora": 3,
+    "Boulder": 1,
+    "Colorado Springs": 2,
+    "Denver": 3,
+    "Fort Collins": 2,
+    "Frederick": 1,
+    "Grand Junction": 2
+  },
+  "categories": {
+    "barber": 4,
+    "colorist": 5,
+    "eyelash_technician": 2,
+    "nail_technician": 2,
+    "stylist": 1
+  },
+  "dry_run": {
+    "candidate_count": 14,
+    "production_duplicate_matches": 0,
+    "unique_source_urls": 14,
+    "shared_team_source_rows": 0,
+    "within_batch_identity_duplicates": 0,
+    "missing_or_invalid_required": 0,
+    "unsupported_categories": 0,
+    "unapproved_hosts": 0
+  },
+  "post_import_audit": {
+    "batch_count": 14,
+    "user_id_null": 14,
+    "claim_status_unclaimed": 14,
+    "complete_provenance": 14,
+    "approved_booking_urls": 14,
+    "category_mappings": 14,
+    "duplicate_identity_rows": 0
+  }
+}
