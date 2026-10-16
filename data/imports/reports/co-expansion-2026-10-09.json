@@ -1,0 +1,191 @@
+{
+  "batch": "co-expansion-2026-10-09",
+  "checked_at": "2026-10-09T06:26:07.623Z",
+  "project": "jbhgeoedwvfxjteyuxum",
+  "execution": "Existing importer validation against production snapshot; transactional inserts through authenticated SQL connector.",
+  "summary": {
+    "inserted": 24,
+    "categories_added": 24,
+    "total_profiles": 525,
+    "unclaimed_profiles": 524,
+    "accounts_created": 0,
+    "rejected": 0
+  },
+  "inserted": [
+    {
+      "id": 525,
+      "name": "Judit Hillman",
+      "city": "Colorado Springs",
+      "category": "stylist",
+      "source_url": "https://hairdesignbyjudit.glossgenius.com/contact"
+    },
+    {
+      "id": 526,
+      "name": "Rachel Petersen",
+      "city": "Colorado Springs",
+      "category": "stylist",
+      "source_url": "https://rachelstyleshair.glossgenius.com/contact"
+    },
+    {
+      "id": 527,
+      "name": "Chelsea Bower",
+      "city": "Colorado Springs",
+      "category": "stylist",
+      "source_url": "https://hairfixation.glossgenius.com/about"
+    },
+    {
+      "id": 528,
+      "name": "Clarissa Rene",
+      "city": "Colorado Springs",
+      "category": "stylist",
+      "source_url": "https://clarissarenehair.glossgenius.com/about"
+    },
+    {
+      "id": 529,
+      "name": "Camilla Jacobson",
+      "city": "Grand Junction",
+      "category": "stylist",
+      "source_url": "https://camillajacobson.glossgenius.com/contact"
+    },
+    {
+      "id": 530,
+      "name": "Celeste Gallegos",
+      "city": "Grand Junction",
+      "category": "stylist",
+      "source_url": "https://salonsolstudios.glossgenius.com/about"
+    },
+    {
+      "id": 531,
+      "name": "Rylee Carew",
+      "city": "Grand Junction",
+      "category": "stylist",
+      "source_url": "https://ashandhoneysalon970.glossgenius.com/team"
+    },
+    {
+      "id": 532,
+      "name": "Rebecca Lawson",
+      "city": "Grand Junction",
+      "category": "stylist",
+      "source_url": "https://ashandhoneysalon970.glossgenius.com/team"
+    },
+    {
+      "id": 533,
+      "name": "Colton Mahoney",
+      "city": "Grand Junction",
+      "category": "stylist",
+      "source_url": "https://ashandhoneysalon970.glossgenius.com/team"
+    },
+    {
+      "id": 534,
+      "name": "Madeleine Linder",
+      "city": "Grand Junction",
+      "category": "stylist",
+      "source_url": "https://ashandhoneysalon970.glossgenius.com/team"
+    },
+    {
+      "id": 535,
+      "name": "Shaley Feistner",
+      "city": "Grand Junction",
+      "category": "stylist",
+      "source_url": "https://ashandhoneysalon970.glossgenius.com/team"
+    },
+    {
+      "id": 536,
+      "name": "Kayla McCracken",
+      "city": "Grand Junction",
+      "category": "nail_technician",
+      "source_url": "https://ashandhoneysalon970.glossgenius.com/team"
+    },
+    {
+      "id": 537,
+      "name": "Azilynn Stauffer-Love",
+      "city": "Grand Junction",
+      "category": "massage_therapist",
+      "source_url": "https://lotustherapeutics.glossgenius.com/contact"
+    },
+    {
+      "id": 538,
+      "name": "Shayde",
+      "city": "Grand Junction",
+      "category": "eyelash_technician",
+      "source_url": "https://seventhheaven.glossgenius.com/about"
+    },
+    {
+      "id": 539,
+      "name": "Jamie Hodge",
+      "city": "Longmont",
+      "category": "stylist",
+      "source_url": "https://jamiehodge.glossgenius.com/about"
+    },
+    {
+      "id": 540,
+      "name": "Alice G",
+      "city": "Longmont",
+      "category": "nail_technician",
+      "source_url": "https://corpseclaws.glossgenius.com/contact"
+    },
+    {
+      "id": 541,
+      "name": "Say Petty",
+      "city": "Colorado Springs",
+      "category": "barber",
+      "source_url": "https://styleemporium.glossgenius.com/team"
+    },
+    {
+      "id": 542,
+      "name": "Jose Banda",
+      "city": "Longmont",
+      "category": "barber",
+      "source_url": "https://booksy.com/en-us/1583254_the-neighborhood-barber-longmont_barber-shop_134760_longmont"
+    },
+    {
+      "id": 543,
+      "name": "Jacob Gomez",
+      "city": "Longmont",
+      "category": "barber",
+      "source_url": "https://booksy.com/en-us/1796732_jacob-one-up-barbers_barber-shop_134760_longmont"
+    },
+    {
+      "id": 544,
+      "name": "Diego Garcia",
+      "city": "Longmont",
+      "category": "barber",
+      "source_url": "https://booksy.com/en-us/1783182_diego-one-up-barbers_barber-shop_134760_longmont"
+    },
+    {
+      "id": 545,
+      "name": "Tomas Lopez",
+      "city": "Longmont",
+      "category": "barber",
+      "source_url": "https://booksy.com/en-us/1474103_get-fresh-lab_barber-shop_134760_longmont"
+    },
+    {
+      "id": 546,
+      "name": "Chris Breezy",
+      "city": "Longmont",
+      "category": "barber",
+      "source_url": "https://booksy.com/en-us/1448994_breezy-the-barber_barber-shop_134760_longmont"
+    },
+    {
+      "id": 547,
+      "name": "Christopher Saucedo",
+      "city": "Fort Collins",
+      "category": "barber",
+      "source_url": "https://booksy.com/en-us/1662508_chris-the-barber_barber-shop_15069_fort-collins"
+    },
+    {
+      "id": 548,
+      "name": "Sebastian Mancini",
+      "city": "Fort Collins",
+      "category": "barber",
+      "source_url": "https://booksy.com/en-us/1695552_the-real-barber_barber-shop_15069_fort-collins"
+    }
+  ],
+  "verification": {
+    "all_unclaimed": true,
+    "all_user_ids_null": true,
+    "all_booking_urls_present": true,
+    "all_provenance_present": true,
+    "targeted_tests_passed": 20
+  }
+}
