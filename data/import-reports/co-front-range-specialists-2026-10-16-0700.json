@@ -1,0 +1,58 @@
+{
+  "batch": "co-front-range-specialists-2026-10-16-0700",
+  "production_project": "jbhgeoedwvfxjteyuxum",
+  "source_checked_at": "2026-10-16T13:00:00Z",
+  "status": "imported_and_verified",
+  "candidates_reviewed": 27,
+  "imported": 17,
+  "production_duplicates_rejected": 10,
+  "validation_rejections": 0,
+  "source_platforms": [
+    "GlossGenius"
+  ],
+  "cities": [
+    "Castle Rock",
+    "Centennial",
+    "Lakewood",
+    "Littleton",
+    "Westminster"
+  ],
+  "categories": [
+    "stylist",
+    "colorist",
+    "waxing_specialist"
+  ],
+  "source_urls": [
+    "https://calicosalon.glossgenius.com/team",
+    "https://wildmesaholistics.glossgenius.com/team",
+    "https://kbhair.glossgenius.com/team",
+    "https://hairtopia.glossgenius.com/team",
+    "https://jesscain.glossgenius.com/team",
+    "https://fireflyhairco.glossgenius.com/team"
+  ],
+  "dry_run": {
+    "candidate_count": 17,
+    "production_duplicates": 0,
+    "within_batch_duplicates": 0,
+    "unique_source_urls": 6,
+    "invalid_categories": 0,
+    "starting_max_id": 1566,
+    "starting_sourced_colorado": 1507
+  },
+  "production_audit": {
+    "id_range": [
+      1567,
+      1583
+    ],
+    "batch_rows": 17,
+    "category_links": 29,
+    "total_colorado": 1526,
+    "sourced_colorado": 1524,
+    "sourced_safe_colorado": 1524,
+    "max_id": 1583,
+    "remaining_to_5000": 3476,
+    "user_id_null": 17,
+    "claim_status_unclaimed": 17,
+    "booking_url_matches_source_url": 17
+  }
+}
