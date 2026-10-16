@@ -1,0 +1,68 @@
+{
+  "batch": "co-specialties-2026-10-16-0200",
+  "state": "CO",
+  "source_checked_at": "2026-10-16T08:00:00Z",
+  "dry_run": {
+    "input_count": 13,
+    "imported_count": 11,
+    "duplicate_rejections": 2,
+    "validation_rejections": 0,
+    "production_duplicates_after_screening": 0,
+    "within_batch_duplicates": 0,
+    "unique_source_urls": 11
+  },
+  "production_import": {
+    "project_id": "jbhgeoedwvfxjteyuxum",
+    "sourced_profiles_before": 1453,
+    "imported_count": 11,
+    "inserted_ids": {
+      "first": 1513,
+      "last": 1523
+    },
+    "sourced_profiles_after": 1464,
+    "total_colorado_profiles_after": 1466,
+    "remaining_to_5000": 3536
+  },
+  "duplicates": [
+    {
+      "name": "Brittany Walker",
+      "existing_pro_id": 1210
+    },
+    {
+      "name": "Charles Hall",
+      "existing_pro_id": 916
+    }
+  ],
+  "coverage": {
+    "cities": {
+      "Boulder": 2,
+      "Brighton": 1,
+      "Centennial": 1,
+      "Colorado Springs": 2,
+      "Denver": 1,
+      "Fort Collins": 1,
+      "Loveland": 1,
+      "Milliken": 1,
+      "Pueblo": 1
+    },
+    "categories": {
+      "eyebrow_technician": 1,
+      "eyelash_technician": 3,
+      "massage_therapist": 7
+    },
+    "sources": {
+      "Booksy": 1,
+      "GlossGenius": 4,
+      "Square Appointments": 6
+    }
+  },
+  "post_import_audit": {
+    "imported_rows": 11,
+    "user_id_null_and_unclaimed": 11,
+    "complete_matching_provenance": 11,
+    "matching_category_links": 11,
+    "duplicate_source_url_groups": 0,
+    "duplicate_name_city_groups": 0,
+    "max_profile_id": 1523
+  }
+}
