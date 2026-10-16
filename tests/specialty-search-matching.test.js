@@ -7,10 +7,10 @@ function query(q) {
   const s=buildSearch(q);const m=predicate('matched.name',s.variants);
   return {sql:`SELECT pro_profiles.*, (SELECT matched.name FROM services matched WHERE matched.pro_id=pro_profiles.id AND ${m.sql} ORDER BY matched.id LIMIT 1) AS matched_service, (${s.order}) AS search_score FROM pro_profiles WHERE ${s.where} ORDER BY search_score DESC, id DESC LIMIT 200`,args:[...m.args,...s.orderArgs,...s.args]};
 }
-const schema='CREATE TABLE pro_profiles(id INTEGER, business_name TEXT, professional_handle TEXT, workplace_name TEXT, bio TEXT); CREATE TABLE services(id INTEGER, pro_id INTEGER, name TEXT); CREATE TABLE pro_categories(pro_id INTEGER, category TEXT);';
+const schema='CREATE TABLE pro_profiles(id INTEGER, business_name TEXT, professional_handle TEXT, workplace_name TEXT, bio TEXT, license_verified INTEGER DEFAULT 0, profile_photo_url TEXT DEFAULT \'\', booking_url TEXT DEFAULT \'\'); CREATE TABLE services(id INTEGER, pro_id INTEGER, name TEXT); CREATE TABLE pro_categories(pro_id INTEGER, category TEXT);';
 test('SQL matches spelling, punctuation, aliases and all important words; ranks real services first',()=>{
   const db=new DatabaseSync(':memory:');db.exec(schema);
-  const add=db.prepare('INSERT INTO pro_profiles VALUES (?, ?, ?, ?, ?)');
+  const add=db.prepare('INSERT INTO pro_profiles(id,business_name,professional_handle,workplace_name,bio) VALUES (?, ?, ?, ?, ?)');
   add.run(1,'Artist One','fine_ink','','I specialize in black and grey realism and fine-line tattoos.');
   add.run(2,'Artist Two','','','Realism tattoos in color.');
   add.run(3,'Service specialist','','','');db.prepare('INSERT INTO services VALUES (?, ?, ?)').run(1,3,'Black & gray realism tattoo');
@@ -38,7 +38,7 @@ test('catalog covers every category and leaves free text open',()=>{
 });
 test('ranking query runs on Postgres with correct parameter order',async()=>{
   const {PGlite}=require('@electric-sql/pglite');const db=new PGlite();await db.exec(schema);
-  await db.exec("INSERT INTO pro_profiles VALUES (1,'Artist','','','Black and grey realism'),(2,'Service pro','','',''); INSERT INTO services VALUES (1,2,'Black & gray realism');");
+  await db.exec("INSERT INTO pro_profiles(id,business_name,professional_handle,workplace_name,bio) VALUES (1,'Artist','','','Black and grey realism'),(2,'Service pro','','',''); INSERT INTO services VALUES (1,2,'Black & gray realism');");
   const s=query('black gray realism');let i=0;const rows=(await db.query(s.sql.replace(/\?/g,()=>'$'+(++i)),s.args)).rows;
   assert.deepEqual(rows.map(r=>r.id),[2,1]);await db.close();
 });
