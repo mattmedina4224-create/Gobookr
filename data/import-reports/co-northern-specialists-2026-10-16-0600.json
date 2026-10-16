@@ -1,0 +1,73 @@
+{
+  "batch": "co-northern-specialists-2026-10-16-0600",
+  "checked_at": "2026-10-16T12:00:00Z",
+  "production_project": "jbhgeoedwvfxjteyuxum",
+  "dry_run": {
+    "candidate_count": 15,
+    "production_duplicates": 0,
+    "within_batch_duplicates": 0,
+    "unique_source_urls": 8,
+    "invalid_categories": 0,
+    "starting_max_profile_id": 1551,
+    "starting_sourced_colorado_profiles": 1492
+  },
+  "imported": {
+    "profiles_added": 15,
+    "profile_id_range": [
+      1552,
+      1566
+    ],
+    "category_links_added": 24,
+    "user_id_null": 15,
+    "claim_status_unclaimed": 15,
+    "provenance_complete": 15
+  },
+  "discovery_rejections": {
+    "duplicates": 7,
+    "duplicate_names": [
+      "Alex Hoihjelle",
+      "Carli Burough",
+      "Dylan Bernard",
+      "Kelsee Boyd",
+      "Nelly Spinas",
+      "Diana Noble",
+      "Kenia Baray"
+    ],
+    "invalid_or_ambiguous": 0
+  },
+  "production_audit": {
+    "colorado_profiles_total": 1509,
+    "sourced_colorado_profiles": 1507,
+    "sourced_safe_unclaimed": 1507,
+    "max_profile_id": 1566,
+    "remaining_to_5000": 3493
+  },
+  "coverage": {
+    "source_names": [
+      "GlossGenius"
+    ],
+    "cities": [
+      "Aurora",
+      "Fort Collins",
+      "Longmont",
+      "Loveland"
+    ],
+    "categories": [
+      "stylist",
+      "colorist",
+      "nail_technician",
+      "eyelash_technician",
+      "eyebrow_technician",
+      "waxing_specialist"
+    ]
+  },
+  "blockers": [
+    "Production category validation still rejects makeup_artist; no schema change was attempted."
+  ],
+  "verification": [
+    "Public booking/team pages showed full professional names, Colorado city, booking path, and applicable services.",
+    "No authored bios, reviews, ratings, credentials, photos, or portfolio media were copied.",
+    "Guarded transaction rechecked production max ID and name/city duplicates before insertion.",
+    "Post-import audit confirmed all 15 records are sourced, unclaimed, and have user_id NULL."
+  ]
+}
