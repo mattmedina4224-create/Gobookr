@@ -1,0 +1,104 @@
+{
+  "batch": "co-specialties-2026-10-16-0100",
+  "state": "CO",
+  "source_checked_at": "2026-10-16T07:00:00Z",
+  "dry_run": {
+    "input_count": 23,
+    "imported_count": 11,
+    "duplicate_rejections": 12,
+    "validation_rejections": 0,
+    "production_duplicates_after_screening": 0,
+    "within_batch_duplicates": 0,
+    "unique_source_urls": 11
+  },
+  "production_import": {
+    "project_id": "jbhgeoedwvfxjteyuxum",
+    "sourced_profiles_before": 1442,
+    "imported_count": 11,
+    "inserted_ids": {
+      "first": 1502,
+      "last": 1512
+    },
+    "sourced_profiles_after": 1453,
+    "total_colorado_profiles_after": 1455,
+    "remaining_to_5000": 3547
+  },
+  "duplicates": [
+    {
+      "name": "Anna Lansdon",
+      "existing_pro_id": 23
+    },
+    {
+      "name": "Weezythewiz",
+      "existing_pro_id": 37
+    },
+    {
+      "name": "Artis Garcia",
+      "existing_pro_id": 627
+    },
+    {
+      "name": "Monique Quintana",
+      "existing_pro_id": 786
+    },
+    {
+      "name": "Monica Barajas",
+      "existing_pro_id": 904
+    },
+    {
+      "name": "Jami Kauffman",
+      "existing_pro_id": 938
+    },
+    {
+      "name": "Joseph Funck",
+      "existing_pro_id": 942
+    },
+    {
+      "name": "Rosa Leal",
+      "existing_pro_id": 945
+    },
+    {
+      "name": "Tyler Jostes",
+      "existing_pro_id": 946
+    },
+    {
+      "name": "Gabriel Fuerzas",
+      "existing_pro_id": 947
+    },
+    {
+      "name": "Lara Bercu",
+      "existing_pro_id": 1039
+    },
+    {
+      "name": "Celeste Calderon",
+      "existing_pro_id": 1402
+    }
+  ],
+  "coverage": {
+    "cities": {
+      "Arvada": 1,
+      "Colorado Springs": 3,
+      "Denver": 3,
+      "Fort Collins": 1,
+      "Grand Junction": 1,
+      "Parker": 1,
+      "Wheat Ridge": 1
+    },
+    "categories": {
+      "tattoo_artist": 7,
+      "waxing_specialist": 4
+    },
+    "sources": {
+      "Square Appointments": 7,
+      "GlossGenius": 3,
+      "Vagaro": 1
+    }
+  },
+  "post_import_audit": {
+    "imported_rows": 11,
+    "user_id_null_and_unclaimed": 11,
+    "complete_matching_provenance": 11,
+    "matching_category_links": 11,
+    "duplicate_source_url_groups": 0,
+    "max_profile_id": 1512
+  }
+}
