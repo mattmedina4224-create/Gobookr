@@ -1,0 +1,98 @@
+{
+  "batch_id": "co-glossgenius-teams-2026-10-15-2100",
+  "imported_at": "2026-10-16T03:00:00Z",
+  "production_project": "jbhgeoedwvfxjteyuxum",
+  "approved_sources": [
+    "GlossGenius"
+  ],
+  "input_count": 44,
+  "imported_count": 19,
+  "duplicate_rejections": 17,
+  "duplicate_candidates": [
+    "Cass Hess",
+    "Chloe Romero",
+    "Katt Boswell",
+    "Christine Cannon",
+    "Say Petty",
+    "Deona Hurd",
+    "Abby Gardner",
+    "Dixie Stewart",
+    "Gabriella Standiford",
+    "Kaila Leilani",
+    "Kayla McCracken",
+    "Rebecca Lawson",
+    "Rylee Carew",
+    "Shaley Feistner",
+    "Heather Montes",
+    "Joslin Turner",
+    "Raylee Wells"
+  ],
+  "validation_rejections": 8,
+  "validation_rejection_details": [
+    {
+      "reason": "Current team page listed the person but did not attribute a specific supported GoBookr category; excluded rather than inferring.",
+      "count": 8
+    }
+  ],
+  "production_before": 1381,
+  "production_after": 1400,
+  "target": 5000,
+  "remaining": 3600,
+  "production_ids": [
+    1441,
+    1442,
+    1443,
+    1444,
+    1445,
+    1446,
+    1447,
+    1448,
+    1449,
+    1450,
+    1451,
+    1452,
+    1453,
+    1454,
+    1455,
+    1456,
+    1457,
+    1458,
+    1459
+  ],
+  "cities": {
+    "Ault": 2,
+    "Denver": 2,
+    "Grand Junction": 2,
+    "Lakewood": 3,
+    "Pueblo": 4,
+    "Windsor": 6
+  },
+  "categories": {
+    "barber": 5,
+    "colorist": 3,
+    "eyebrow_technician": 1,
+    "eyelash_technician": 3,
+    "nail_technician": 3,
+    "stylist": 3,
+    "waxing_specialist": 1
+  },
+  "dry_run": {
+    "candidate_count": 19,
+    "production_duplicate_matches": 0,
+    "unique_source_urls": 8,
+    "shared_team_source_rows": 11,
+    "within_batch_identity_duplicates": 0,
+    "missing_or_invalid_required": 0,
+    "unsupported_categories": 0,
+    "unapproved_hosts": 0
+  },
+  "post_import_audit": {
+    "batch_count": 19,
+    "user_id_null": 19,
+    "claim_status_unclaimed": 19,
+    "complete_provenance": 19,
+    "approved_booking_urls": 19,
+    "category_mappings": 19,
+    "duplicate_identity_rows": 0
+  }
+}
