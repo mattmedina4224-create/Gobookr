@@ -1,0 +1,77 @@
+{
+  "batch_id": "co-glossgenius-wellness-2026-10-15-1800",
+  "imported_at": "2026-10-16T00:03:06Z",
+  "production_project": "jbhgeoedwvfxjteyuxum",
+  "approved_sources": [
+    "GlossGenius"
+  ],
+  "input_count": 16,
+  "imported_count": 15,
+  "duplicate_rejections": 1,
+  "duplicate_candidates": [
+    {
+      "name": "Alyssa Harwood",
+      "existing_profile_ids": [
+        604
+      ],
+      "source_url_also_used_by_profile_ids": [
+        605
+      ]
+    }
+  ],
+  "validation_rejections": 0,
+  "production_before": 1333,
+  "production_after": 1348,
+  "target": 5000,
+  "remaining": 3652,
+  "production_ids": [
+    1393,
+    1394,
+    1395,
+    1396,
+    1397,
+    1398,
+    1399,
+    1400,
+    1401,
+    1402,
+    1403,
+    1404,
+    1405,
+    1406,
+    1407
+  ],
+  "cities": {
+    "Denver": 4,
+    "Colorado Springs": 4,
+    "Timnath": 1,
+    "Englewood": 1,
+    "Lone Tree": 1,
+    "Greeley": 1,
+    "Loveland": 1,
+    "Littleton": 1,
+    "Fort Collins": 1
+  },
+  "categories": {
+    "massage_therapist": 6,
+    "eyebrow_technician": 4,
+    "waxing_specialist": 3,
+    "eyelash_technician": 2
+  },
+  "dry_run": {
+    "candidate_count": 15,
+    "production_duplicate_matches": 0,
+    "unique_source_urls": 15,
+    "within_batch_duplicate_rows": 0,
+    "missing_or_invalid_required": 0,
+    "unapproved_hosts": 0
+  },
+  "post_import_audit": {
+    "batch_count": 15,
+    "user_id_null": 15,
+    "claim_status_unclaimed": 15,
+    "complete_provenance": 15,
+    "approved_booking_urls": 15,
+    "category_mappings": 15
+  }
+}
