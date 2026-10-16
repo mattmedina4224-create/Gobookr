@@ -1,0 +1,57 @@
+{
+  "batch": "co-specialists-2026-10-16-0800",
+  "production_project": "jbhgeoedwvfxjteyuxum",
+  "source_checked_at": "2026-10-16T14:00:00Z",
+  "status": "imported_and_verified",
+  "candidates_reviewed": 50,
+  "imported": 13,
+  "production_duplicates_rejected": 22,
+  "incomplete_or_ambiguous_rejections": 15,
+  "validation_rejections": 0,
+  "source_platforms": {
+    "Square Appointments": 7,
+    "GlossGenius": 6
+  },
+  "cities": {
+    "Canon City": 3,
+    "Brighton": 2,
+    "Fort Collins": 2,
+    "Colorado Springs": 2,
+    "Highlands Ranch": 1,
+    "Longmont": 1,
+    "Denver": 1,
+    "Pueblo": 1
+  },
+  "primary_categories": {
+    "eyelash_technician": 5,
+    "eyebrow_technician": 3,
+    "massage_therapist": 3,
+    "nail_technician": 1,
+    "waxing_specialist": 1
+  },
+  "dry_run": {
+    "candidate_count": 13,
+    "production_duplicates": 0,
+    "within_batch_duplicates": 0,
+    "unique_source_urls": 10,
+    "invalid_categories": 0,
+    "starting_max_id": 1583,
+    "starting_sourced_colorado": 1524
+  },
+  "production_audit": {
+    "id_range": [
+      1584,
+      1596
+    ],
+    "batch_rows": 13,
+    "category_links": 24,
+    "total_colorado": 1539,
+    "sourced_colorado": 1537,
+    "sourced_safe_colorado": 1537,
+    "max_id": 1596,
+    "remaining_to_5000": 3463,
+    "user_id_null": 13,
+    "claim_status_unclaimed": 13,
+    "booking_url_matches_source_url": 13
+  }
+}
