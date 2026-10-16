@@ -1,0 +1,194 @@
+[
+  {
+    "name": "Lauren Clouse",
+    "category": "eyebrow_technician",
+    "categories": [
+      "eyebrow_technician",
+      "eyelash_technician",
+      "waxing_specialist"
+    ],
+    "workplace_name": "Lauren Denver Beauty",
+    "city": "Wheat Ridge",
+    "state": "CO",
+    "street_address": "7825 W 38th Ave",
+    "zip_code": "80033",
+    "booking_url": "https://laurenclouse.glossgenius.com/team",
+    "source_url": "https://laurenclouse.glossgenius.com/team",
+    "source_name": "GlossGenius",
+    "source_checked_at": "2026-10-16T17:00:00Z"
+  },
+  {
+    "name": "Ashley Allen",
+    "category": "eyebrow_technician",
+    "categories": [
+      "eyebrow_technician",
+      "eyelash_technician",
+      "waxing_specialist"
+    ],
+    "workplace_name": "The High Arch Society",
+    "city": "Denver",
+    "state": "CO",
+    "street_address": "1330 N Logan St",
+    "suite": "Ste 203",
+    "zip_code": "80203",
+    "booking_url": "https://higharchsociety.glossgenius.com/team",
+    "source_url": "https://higharchsociety.glossgenius.com/team",
+    "source_name": "GlossGenius",
+    "source_checked_at": "2026-10-16T17:00:00Z"
+  },
+  {
+    "name": "Jamie Kirby",
+    "category": "eyebrow_technician",
+    "categories": [
+      "eyebrow_technician"
+    ],
+    "workplace_name": "The High Arch Society",
+    "city": "Denver",
+    "state": "CO",
+    "street_address": "1330 N Logan St",
+    "suite": "Ste 203",
+    "zip_code": "80203",
+    "booking_url": "https://higharchsociety.glossgenius.com/team",
+    "source_url": "https://higharchsociety.glossgenius.com/team",
+    "source_name": "GlossGenius",
+    "source_checked_at": "2026-10-16T17:00:00Z"
+  },
+  {
+    "name": "Chrysta Calonder",
+    "category": "massage_therapist",
+    "categories": [
+      "massage_therapist"
+    ],
+    "workplace_name": "Intuitive Bliss Massage & Wellness",
+    "city": "Littleton",
+    "state": "CO",
+    "street_address": "5575 S Sycamore St",
+    "suite": "Suite 314",
+    "zip_code": "80120",
+    "booking_url": "https://intuitivebliss.glossgenius.com/about",
+    "source_url": "https://intuitivebliss.glossgenius.com/about",
+    "source_name": "GlossGenius",
+    "source_checked_at": "2026-10-16T17:00:00Z"
+  },
+  {
+    "name": "Tess Gallegos",
+    "category": "massage_therapist",
+    "categories": [
+      "massage_therapist"
+    ],
+    "workplace_name": "Holistica Skincare & Massage",
+    "city": "Denver",
+    "state": "CO",
+    "street_address": "1002 Saint Paul Street",
+    "zip_code": "80206",
+    "booking_url": "https://holisticadenver.glossgenius.com/about",
+    "source_url": "https://holisticadenver.glossgenius.com/about",
+    "source_name": "GlossGenius",
+    "source_checked_at": "2026-10-16T17:00:00Z"
+  },
+  {
+    "name": "Bri Williams",
+    "category": "massage_therapist",
+    "categories": [
+      "massage_therapist",
+      "eyebrow_technician",
+      "waxing_specialist"
+    ],
+    "workplace_name": "Radiant Skin Care & Massage",
+    "city": "Loveland",
+    "state": "CO",
+    "street_address": "441 E 4th Street",
+    "suite": "#103",
+    "zip_code": "80537",
+    "booking_url": "https://briwilliams.glossgenius.com/about",
+    "source_url": "https://briwilliams.glossgenius.com/about",
+    "source_name": "GlossGenius",
+    "source_checked_at": "2026-10-16T17:00:00Z"
+  },
+  {
+    "name": "Corinne Andrews",
+    "category": "waxing_specialist",
+    "categories": [
+      "waxing_specialist",
+      "eyebrow_technician",
+      "eyelash_technician"
+    ],
+    "workplace_name": "Skin Alchemy",
+    "city": "Ouray",
+    "state": "CO",
+    "street_address": "450 Main Street",
+    "zip_code": "81427",
+    "booking_url": "https://skinalchemyouray.glossgenius.com/team",
+    "source_url": "https://skinalchemyouray.glossgenius.com/team",
+    "source_name": "GlossGenius",
+    "source_checked_at": "2026-10-16T17:00:00Z"
+  },
+  {
+    "name": "Litzy Lopez",
+    "category": "eyebrow_technician",
+    "categories": [
+      "eyebrow_technician"
+    ],
+    "workplace_name": "The Brow Glow",
+    "city": "Denver",
+    "state": "CO",
+    "street_address": "8821 E Hampden Ave",
+    "suite": "Suite 124",
+    "zip_code": "80231",
+    "booking_url": "https://thebrowglow.glossgenius.com/team",
+    "source_url": "https://thebrowglow.glossgenius.com/team",
+    "source_name": "GlossGenius",
+    "source_checked_at": "2026-10-16T17:00:00Z"
+  },
+  {
+    "name": "Bella Zandi",
+    "category": "eyebrow_technician",
+    "categories": [
+      "eyebrow_technician",
+      "eyelash_technician",
+      "waxing_specialist"
+    ],
+    "workplace_name": "The Brow Place",
+    "city": "Denver",
+    "state": "CO",
+    "street_address": "2949 Federal Blvd",
+    "suite": "Suite 218 B",
+    "zip_code": "80211",
+    "booking_url": "https://thebrowplacedenver.glossgenius.com/about",
+    "source_url": "https://thebrowplacedenver.glossgenius.com/about",
+    "source_name": "GlossGenius",
+    "source_checked_at": "2026-10-16T17:00:00Z"
+  },
+  {
+    "name": "Jessica Flores",
+    "category": "eyelash_technician",
+    "categories": [
+      "eyelash_technician"
+    ],
+    "workplace_name": "jess.icasbeautybar",
+    "city": "Aurora",
+    "state": "CO",
+    "street_address": "25086 E Bayaud Pl",
+    "zip_code": "80018",
+    "booking_url": "https://jessicafloresss.glossgenius.com/about",
+    "source_url": "https://jessicafloresss.glossgenius.com/about",
+    "source_name": "GlossGenius",
+    "source_checked_at": "2026-10-16T17:00:00Z"
+  },
+  {
+    "name": "Lena Ve",
+    "category": "eyelash_technician",
+    "categories": [
+      "eyelash_technician",
+      "eyebrow_technician",
+      "waxing_specialist"
+    ],
+    "workplace_name": "LenaVe Lovely Luxuries LLC",
+    "city": "Aurora",
+    "state": "CO",
+    "booking_url": "https://lenavelovelyluxuriesllc.glossgenius.com/team",
+    "source_url": "https://lenavelovelyluxuriesllc.glossgenius.com/team",
+    "source_name": "GlossGenius",
+    "source_checked_at": "2026-10-16T17:00:00Z"
+  }
+]

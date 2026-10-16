@@ -1,0 +1,51 @@
+{
+  "batch": "co-specialists-2026-10-16-1100",
+  "status": "prepared_not_imported",
+  "source_checked_at": "2026-10-16T17:00:00Z",
+  "production_project": "jbhgeoedwvfxjteyuxum",
+  "production_before": {
+    "total_colorado": 1539,
+    "sourced_colorado": 1537,
+    "safe_sourced_colorado": 1537,
+    "max_profile_id": 1596
+  },
+  "screening": {
+    "prepared_candidates": 11,
+    "production_duplicates": 0,
+    "within_batch_duplicate_groups": 0,
+    "invalid_categories": 0,
+    "excluded_existing_duplicates": 12,
+    "excluded_ambiguous_or_incomplete": 9
+  },
+  "coverage": {
+    "sources": {
+      "GlossGenius": 11
+    },
+    "cities": {
+      "Denver": 5,
+      "Aurora": 2,
+      "Wheat Ridge": 1,
+      "Littleton": 1,
+      "Loveland": 1,
+      "Ouray": 1
+    },
+    "primary_categories": {
+      "eyebrow_technician": 5,
+      "massage_therapist": 3,
+      "eyelash_technician": 2,
+      "waxing_specialist": 1
+    },
+    "category_links_prepared": 21
+  },
+  "import": {
+    "attempted": true,
+    "profiles_added": 0,
+    "category_links_added": 0,
+    "blocker": "Supabase execute_sql rejected all DML requests with INVALID_ARGUMENT before PostgreSQL returned an error. Read-only production queries and the importer dry run remained operational. Three write shapes were attempted: a guarded transaction, a guarded INSERT...SELECT, and a minimal three-row INSERT."
+  },
+  "notes": [
+    "Candidates are prepared and source-verified but must not be counted as production inventory.",
+    "No schema, auth, billing, DNS, UI, or destructive database changes were made.",
+    "The existing makeup_artist production constraint mismatch remains unresolved."
+  ]
+}
