@@ -1,0 +1,80 @@
+{
+  "batch_id": "co-glossgenius-teams-2026-10-15-2000",
+  "imported_at": "2026-10-16T02:00:00Z",
+  "production_project": "jbhgeoedwvfxjteyuxum",
+  "approved_sources": [
+    "GlossGenius"
+  ],
+  "input_count": 29,
+  "imported_count": 18,
+  "duplicate_rejections": 11,
+  "duplicate_candidates": [
+    "Bailey Wyatt",
+    "Caroline Pucci",
+    "Ellise Scutti",
+    "Kimberly Carpenter",
+    "Kimmy Richardson",
+    "Mary Bowman",
+    "Rebecca Gallegos",
+    "Shealynn Pittman",
+    "Jaileen Luna",
+    "Liz Ochoa",
+    "Patty Edgar"
+  ],
+  "validation_rejections": 0,
+  "validation_rejection_details": [],
+  "production_before": 1363,
+  "production_after": 1381,
+  "target": 5000,
+  "remaining": 3619,
+  "production_ids": [
+    1423,
+    1424,
+    1425,
+    1426,
+    1427,
+    1428,
+    1429,
+    1430,
+    1431,
+    1432,
+    1433,
+    1434,
+    1435,
+    1436,
+    1437,
+    1438,
+    1439,
+    1440
+  ],
+  "cities": {
+    "Denver": 2,
+    "Durango": 9,
+    "Grand Junction": 7
+  },
+  "categories": {
+    "colorist": 5,
+    "eyelash_technician": 1,
+    "nail_technician": 9,
+    "stylist": 3
+  },
+  "dry_run": {
+    "candidate_count": 18,
+    "production_duplicate_matches": 0,
+    "unique_source_urls": 7,
+    "shared_team_source_rows": 11,
+    "within_batch_identity_duplicates": 0,
+    "missing_or_invalid_required": 0,
+    "unsupported_categories": 0,
+    "unapproved_hosts": 0
+  },
+  "post_import_audit": {
+    "batch_count": 18,
+    "user_id_null": 18,
+    "claim_status_unclaimed": 18,
+    "complete_provenance": 18,
+    "approved_booking_urls": 18,
+    "category_mappings": 18,
+    "duplicate_identity_rows": 0
+  }
+}
