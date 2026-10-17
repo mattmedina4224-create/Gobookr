@@ -1,7 +1,7 @@
 {
   "batch": "co-specialists-2026-10-16-1100",
-  "status": "prepared_not_imported",
-  "source_checked_at": "2026-10-16T17:00:00Z",
+  "status": "imported_and_verified",
+  "source_checked_at": "2026-10-17T20:58:00Z",
   "production_project": "jbhgeoedwvfxjteyuxum",
   "production_before": {
     "total_colorado": 1539,
@@ -35,16 +35,30 @@
       "eyelash_technician": 2,
       "waxing_specialist": 1
     },
-    "category_links_prepared": 21
+    "category_links_added": 23
   },
   "import": {
     "attempted": true,
-    "profiles_added": 0,
-    "category_links_added": 0,
-    "blocker": "Supabase execute_sql rejected all DML requests with INVALID_ARGUMENT before PostgreSQL returned an error. Read-only production queries and the importer dry run remained operational. Three write shapes were attempted: a guarded transaction, a guarded INSERT...SELECT, and a minimal three-row INSERT."
+    "profiles_added": 11,
+    "category_links_added": 23,
+    "production_ids": "1597-1607"
+  },
+  "production_after": {
+    "total_colorado": 1550,
+    "sourced_colorado": 1548,
+    "safe_sourced_colorado": 1548,
+    "max_profile_id": 1607,
+    "remaining_to_5000": 3452
+  },
+  "audit": {
+    "user_id_null": 11,
+    "claim_status_unclaimed": 11,
+    "provenance_complete": 11,
+    "booking_url_matches_source_url": 11,
+    "identity_duplicate_groups": 0
   },
   "notes": [
-    "Candidates are prepared and source-verified but must not be counted as production inventory.",
+    "All 11 profiles and 23 category links were inserted atomically after normalizing optional text fields to the production importer's empty-string convention.",
     "No schema, auth, billing, DNS, UI, or destructive database changes were made.",
     "The existing makeup_artist production constraint mismatch remains unresolved."
   ]
