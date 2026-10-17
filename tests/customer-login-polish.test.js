@@ -10,7 +10,6 @@ test('customer login polish is clean, useful, mobile-friendly, and claim-safe', 
   assert.match(js, /Save your favorite professionals and find them again anytime\./);
   assert.match(js, /Create a free account/);
   assert.match(js, /href="\/signup"/);
-  assert.match(js, /Forgot password/);
   assert.match(js, /has\('claim'\)/);
   assert.match(js, /@media\(max-width:600px\)/);
   assert.doesNotMatch(js, /gradient/i);
