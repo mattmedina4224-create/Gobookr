@@ -60,6 +60,7 @@
   let prepared = null, objectUrl = null;
   let previewNeedsUpdate = false;
   const status = message => { for (const id of ['story-ready-status','marketing-share-status']) { const el = document.getElementById(id); if (el) el.textContent = message; } };
+  const shareButtons = () => ['story-share-ready','story-share-ready-bottom','marketing-share'].map(id=>document.getElementById(id)).filter(Boolean);
   function inputs() {
     return { image: document.querySelector('#marketing-story-preview img'), title: root.dataset.title, label: root.dataset.label,
       message: document.getElementById('copy')?.value || '', style: root.dataset.style,
@@ -69,7 +70,7 @@
     prepared = null;
     if (objectUrl) { URL.revokeObjectURL(objectUrl); objectUrl = null; }
     const ready = document.getElementById('story-ready-preview'); if (ready) ready.hidden = true;
-    const button = document.getElementById('story-share-ready'); if (button) button.disabled = true;
+    shareButtons().forEach(button => button.disabled = true);
     status('Content changed. Prepare your Story again before sharing.');
   }
   async function prepare() {
@@ -78,15 +79,14 @@
     const data = inputs();
     if (!data.message.trim()) throw new Error('message');
     const blob = await render(data);
-    // If the editor changed during rendering, don't expose a stale Story.
     if (previewNeedsUpdate || data.message !== inputs().message || data.slots.join('\n') !== inputs().slots.join('\n')) throw new Error('changed');
     if (objectUrl) URL.revokeObjectURL(objectUrl);
     objectUrl = URL.createObjectURL(blob); prepared = blob;
     document.getElementById('story-ready-image').src = objectUrl;
     document.getElementById('story-download').href = objectUrl;
     document.getElementById('story-ready-preview').hidden = false;
-    document.getElementById('story-share-ready').disabled = false;
-    status('Story ready. Save it or share the prepared image, then finish posting in your social app.' + (data.slots.length > 3 ? ' The image includes your first three opening times; customers can view all posted times on GoBookr.' : ''));
+    shareButtons().forEach(button => button.disabled = false);
+    status('Story ready. Tap Share to socials on your phone, choose the app, then add your copied GoBookr link.' + (data.slots.length > 3 ? ' The image includes your first three opening times; customers can view all posted times on GoBookr.' : ''));
     return blob;
   }
   async function copyText(text) {
@@ -102,29 +102,29 @@
   async function share() {
     if (sharing) return;
     if (!prepared) { status('Choose Prepare Story first.'); document.getElementById('story-prepare')?.focus(); return; }
-    const file = new File([prepared], 'gobookr-story.png', { type: 'image/png' });
-    if (!navigator.share || !navigator.canShare?.({ files: [file] })) { status('File sharing is unavailable here. Choose Save prepared image, then upload it in your social app.'); return; }
+    const file = new File([prepared], 'gobookr-openings-story.png', { type: 'image/png' });
+    if (!navigator.share || !navigator.canShare?.({ files: [file] })) { status('Direct sharing is unavailable here. Choose Save image, then upload it in Instagram, Facebook, or Snapchat.'); return; }
     sharing = true;
-    const buttons = ['story-share-ready','marketing-share'].map(id=>document.getElementById(id)).filter(Boolean);
+    const buttons = shareButtons();
     buttons.forEach(button=>{button.disabled = true;button.setAttribute('aria-busy','true');});
-    try { await navigator.share({ files: [file], title: root.dataset.title }); status('Image shared to your chosen app. Finish posting there; GoBookr cannot confirm publication.'); }
-    catch (err) { status(err?.name === 'AbortError' ? 'Sharing cancelled. Your prepared image is still ready.' : 'Sharing could not open. Save the prepared image and upload it in your social app.'); }
-    finally { sharing = false;buttons.forEach(button=>{button.disabled = button.id === 'story-share-ready' && !prepared;button.removeAttribute('aria-busy');}); }
+    try { await navigator.share({ files: [file], title: root.dataset.title, text: 'Openings available — book through GoBookr.' }); status('Shared to your chosen app. Add your GoBookr link there and finish posting.'); }
+    catch (err) { status(err?.name === 'AbortError' ? 'Sharing cancelled. Your prepared image is still ready.' : 'Sharing could not open. Save the image and upload it in your social app.'); }
+    finally { sharing = false;buttons.forEach(button=>{button.disabled = !prepared;button.removeAttribute('aria-busy');}); }
   }
   window.GoBookrStories = { render, wrapText, prepare, share };
   if (!root) return;
   const prepareButton = document.getElementById('story-prepare');
   prepareButton.addEventListener('click', async () => { prepareButton.disabled = true; prepareButton.setAttribute('aria-busy','true'); try { await prepare(); } catch(err) { status(messageFor(err)); } finally { prepareButton.disabled = false; prepareButton.removeAttribute('aria-busy'); } });
-  document.getElementById('story-share-ready').addEventListener('click', share);
+  for (const id of ['story-share-ready','story-share-ready-bottom']) document.getElementById(id)?.addEventListener('click', share);
   for (const id of ['copy', 'available_slots']) document.getElementById(id)?.addEventListener('input', invalidate);
   for (const id of ['photo', 'style']) document.getElementById(id)?.addEventListener('change', () => { previewNeedsUpdate = true; invalidate(); status('Choose Update preview to apply your photo or style, then prepare the Story.'); });
-  for (const [id, value, success] of [['story-copy-caption', ()=>inputs().message, 'Message copied. Paste it in the social app if needed.'], ['story-copy-url', ()=>root.dataset.url, 'Booking link copied. Add it using your social app’s link tool.']]) {
-    document.getElementById(id).addEventListener('click', async ()=> { try { await copyText(value()); status(success); } catch (_) { status('Could not copy. Select the message or tracked link in the editor and copy it manually.'); } });
+  for (const [id, value, success] of [['story-copy-caption', ()=>inputs().message, 'Message copied. Paste it in the social app if needed.'], ['story-copy-url', ()=>root.dataset.url, 'GoBookr link copied. Add it with your social app’s link tool.']]) {
+    document.getElementById(id)?.addEventListener('click', async ()=> { try { await copyText(value()); status(success); } catch (_) { status('Could not copy. Select the message or tracked link in the editor and copy it manually.'); } });
   }
   const steps = {
-    instagram: ['Prepare your Story, then save or share the image.', 'Open Instagram on your phone, create a Story, and choose the image.', 'Add a Link sticker with your copied booking link, then publish.'],
-    facebook: ['Prepare your Story, then save or share the image.', 'Open Facebook on your phone. Switch to the profile or Page you want, create a Story, and choose the image.', 'Use a link option if your account offers it. Otherwise share the booking link in a separate post. Review and publish.'],
-    snapchat: ['Prepare your Story, then save or share the image.', 'Open Snapchat on your phone. Choose the saved image from your camera roll.', 'Attach your copied booking link with Snapchat’s link tool, choose the Story destination you want, and publish.'],
+    instagram: ['Prepare your Story with the button below.', 'Tap Share to socials and choose Instagram.', 'Add a Link sticker with your copied GoBookr link, then publish to your Story.'],
+    facebook: ['Prepare your Story with the button below.', 'Tap Share to socials and choose Facebook.', 'Choose Story, add your GoBookr link if Facebook offers the link tool, then publish.'],
+    snapchat: ['Prepare your Story with the button below.', 'Tap Share to socials and choose Snapchat.', 'Attach your copied GoBookr link with Snapchat’s link tool, choose your Story, and publish.'],
   };
   root.querySelectorAll('[data-story-platform]').forEach(button => button.addEventListener('click', ()=> {
     const platform = button.dataset.storyPlatform;

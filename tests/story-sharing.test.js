@@ -15,7 +15,7 @@ function harness(options = {}) {
   },props); }
   const platforms=['instagram','facebook','snapchat'].map(value=>element({dataset:{storyPlatform:value}}));
   const root=element({dataset:{title:'Test <Studio>',label:'Show My Work',url:'https://gobookr.com/pro/1?source=marketing-show-my-work',style:'classic'},querySelectorAll:()=>platforms});
-  const ids=Object.fromEntries(['story-sharing','copy','available_slots','story-ready-status','marketing-share-status','story-ready-preview','story-ready-image','story-download','story-prepare','story-share-ready','marketing-share','story-copy-caption','story-copy-url','story-sharing-steps'].map(id=>[id,element({id})]));
+  const ids=Object.fromEntries(['story-sharing','copy','available_slots','story-ready-status','marketing-share-status','story-ready-preview','story-ready-image','story-download','story-prepare','story-share-ready','story-share-ready-bottom','marketing-share','story-copy-caption','story-copy-url','story-sharing-steps'].map(id=>[id,element({id})]));
   ids['story-sharing']=root;ids.copy.value='Fresh work. Book with me!';ids.available_slots.value='';
   const context={fillRect(){},drawImage(){},createLinearGradient(){return {addColorStop(){}};},measureText(t){return {width:Array.from(t).length*20};},fillText(t,x,y){text.push({t,x,y});}};
   let shares=0,release;const urls=[];
@@ -30,27 +30,30 @@ test('text-only Story prepares a PNG and preserves a long caption without silent
   assert.equal(h.ids['story-ready-image'].src,'blob:test');assert.equal(h.ids['story-ready-preview'].hidden,false);
   assert.equal(h.text.filter(row=>/^x+$/.test(row.t)).map(row=>row.t).join('').length,500);
   assert.ok(h.text.filter(row=>/^x+$/.test(row.t)).every(row=>row.y<=1650));
+  assert.equal(h.ids['story-share-ready-bottom'].disabled,false);
 });
 test('sharing requires preparation, runs once per gesture, and handles cancellation without claiming publication',async()=>{
   const h=harness({cancel:true});await h.api.share();assert.equal(h.shares(),0);
   await h.api.prepare();const first=h.api.share();await h.api.share();assert.equal(h.shares(),1);
   h.release();await first;assert.match(h.ids['story-ready-status'].textContent,/cancelled/);
-  assert.equal(h.ids['story-share-ready'].disabled,false);
+  assert.equal(h.ids['story-share-ready'].disabled,false);assert.equal(h.ids['story-share-ready-bottom'].disabled,false);
 });
-test('changed copy invalidates the prepared image and unsupported file sharing offers a save fallback',async()=>{
+test('changed copy invalidates every prepared share action and unsupported file sharing offers a save fallback',async()=>{
   const h=harness({fileSharing:false});await h.api.prepare();await h.api.share();assert.equal(h.shares(),0);
-  assert.match(h.ids['story-ready-status'].textContent,/Save prepared image/);
+  assert.match(h.ids['story-ready-status'].textContent,/Save image/);
   h.ids.copy.value='Changed';h.ids.copy.listeners.input();assert.equal(h.ids['story-ready-preview'].hidden,true);
-  assert.equal(h.ids['story-share-ready'].disabled,true);await h.api.share();assert.equal(h.shares(),0);
+  assert.equal(h.ids['story-share-ready'].disabled,true);assert.equal(h.ids['story-share-ready-bottom'].disabled,true);await h.api.share();assert.equal(h.shares(),0);
 });
-test('platform guides and copied booking link match the selected destination',async()=>{
+test('platform guides and copied GoBookr link match the selected destination',async()=>{
   const h=harness();h.platforms[2].listeners.click();assert.equal(h.platforms[2]['aria-pressed'],'true');
   assert.match(h.ids['story-sharing-steps'].children[1].textContent,/Snapchat/);
   await h.ids['story-copy-url'].listeners.click();assert.equal(h.urls[0],'https://gobookr.com/pro/1?source=marketing-show-my-work');
+  assert.match(h.ids['story-ready-status'].textContent,/GoBookr link copied/);
 });
-test('export security failures are reported, and panel attributes escape user content',async()=>{
+test('share panel makes the phone-first social action obvious and escapes user content',async()=>{
   const h=harness({tainted:true});await assert.rejects(h.api.prepare(),/photo/);
   const html=storySharingPanel({title:'"<script>',label:'Test',url:'https://gobookr.com/pro/1',style:'classic'});
+  assert.match(html,/Turn these openings into a Story/);assert.match(html,/Share to socials/);assert.match(html,/1080 × 1920/);
   assert.match(html,/&quot;&lt;script&gt;/);assert.doesNotMatch(html,/data-title=""<script>/);
 });
 
