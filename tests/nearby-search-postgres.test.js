@@ -48,7 +48,8 @@ CREATE TABLE pro_profiles (
  business_name TEXT, city TEXT, state TEXT, zip_code TEXT, latitude DOUBLE PRECISION, longitude DOUBLE PRECISION,
  source_url TEXT DEFAULT 'https://booksy.com/test', source_name TEXT DEFAULT 'Booksy',
  onboarding_completed INTEGER DEFAULT 0, professional_handle TEXT, workplace_name TEXT, bio TEXT,
- category TEXT DEFAULT 'barber', accent TEXT DEFAULT 'slate', initials TEXT DEFAULT 'T'
+ category TEXT DEFAULT 'barber', accent TEXT DEFAULT 'slate', initials TEXT DEFAULT 'T',
+ license_verified INTEGER DEFAULT 0, profile_photo_url TEXT DEFAULT '', booking_url TEXT DEFAULT ''
 );
 CREATE TABLE subscriptions (pro_id INTEGER, status TEXT, trial_ends_at TIMESTAMPTZ, past_due_since TIMESTAMPTZ);
 CREATE TABLE pro_categories (pro_id INTEGER, category TEXT);
