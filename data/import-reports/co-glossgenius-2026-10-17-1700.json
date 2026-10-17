@@ -1,0 +1,44 @@
+{
+  "batch_id": "co-glossgenius-2026-10-17-1700",
+  "production_project": "jbhgeoedwvfxjteyuxum",
+  "source_name": "GlossGenius",
+  "source_checked_at": "2026-10-17T22:00:00Z",
+  "status": "prepared_not_imported",
+  "candidates_prepared": 9,
+  "production_duplicate_matches_in_original_prepared_manifest": 2,
+  "duplicate_names_removed": [
+    "Natalie Nelson",
+    "Sara Harris"
+  ],
+  "discovery_candidates_filtered_as_existing_production_profiles": 33,
+  "discovery_candidates_rejected_for_stale_or_ambiguous_current_source": 3,
+  "cities": [
+    "Colorado Springs",
+    "Grand Junction"
+  ],
+  "category_mappings": [
+    "waxing_specialist",
+    "eyebrow_technician",
+    "eyelash_technician"
+  ],
+  "safeguards": {
+    "user_id": null,
+    "claim_status": "unclaimed",
+    "authored_bios_copied": false,
+    "photos_copied": false,
+    "reviews_copied": false
+  },
+  "production_snapshot": {
+    "total_colorado_profiles": 1550,
+    "verified_sourced_colorado_profiles": 1548,
+    "remaining_to_5000": 3452,
+    "max_profile_id": 1607
+  },
+  "blocker": "Prepared only. Production import is pending green checks and merge of this inventory PR.",
+  "source_evidence": [
+    "https://dawngumban1.glossgenius.com/team",
+    "https://vanityaesthetics.glossgenius.com/team",
+    "https://vanityaesthetics.glossgenius.com/services",
+    "https://elevatedaestheticsskinco.glossgenius.com/team"
+  ]
+}
