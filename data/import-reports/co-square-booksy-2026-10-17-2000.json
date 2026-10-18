@@ -39,8 +39,7 @@
     "eyelash_technician",
     "eyebrow_technician",
     "waxing_specialist",
-    "massage_therapist",
-    "wedding_services"
+    "massage_therapist"
   ],
   "safeguards": {
     "user_id": null,
@@ -55,7 +54,7 @@
     "remaining_to_5000": 3443,
     "max_profile_id": 1616
   },
-  "blocker": "Prepared only. Production import follows green checks and merge of this inventory PR.",
+  "blocker": "No active import blocker. Production rejects wedding_services in pro_categories; that unsupported mapping was removed before the import retry.",
   "source_evidence": [
     "https://booksy.com/en-us/1867136_faded-by-matt_barber-shop_15106_grand-junction",
     "https://booksy.com/en-us/1886621_galindathebarber_barber-shop_15106_grand-junction",
@@ -68,5 +67,8 @@
     "https://square.site/book/SG9MKNW1HMT15/loni-a-stylist-boulder-co",
     "https://square.site/book/6ZTT4GD9GNXS1/sasha-s-skincare-studio-beauty-and-self-care-boulder-co",
     "https://square.site/book/3ZFCQBN2KN1KN/utopia-wellness-hygiene-co"
+  ],
+  "production_constraint_rejections": [
+    "wedding_services"
   ]
 }
