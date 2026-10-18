@@ -1,0 +1,172 @@
+[
+  {
+    "name": "Trinnie Lefevre",
+    "category": "eyelash_technician",
+    "categories": [
+      "eyelash_technician",
+      "eyebrow_technician",
+      "waxing_specialist"
+    ],
+    "workplace_name": "TL Aesthetics",
+    "city": "Lakewood",
+    "state": "CO",
+    "street_address": "780 Kipling St",
+    "zip_code": "80215",
+    "booking_url": "https://tla.glossgenius.com/team",
+    "source_url": "https://tla.glossgenius.com/team",
+    "source_name": "GlossGenius",
+    "source_checked_at": "2026-10-18T03:59:00Z"
+  },
+  {
+    "name": "Rebecca Ferjani",
+    "category": "stylist",
+    "categories": [
+      "stylist",
+      "colorist"
+    ],
+    "workplace_name": "Tanglz&Co",
+    "city": "Lakewood",
+    "state": "CO",
+    "street_address": "3333 S Wadsworth Blvd",
+    "suite": "A103",
+    "zip_code": "80227",
+    "booking_url": "https://tanglzandco.glossgenius.com/team",
+    "source_url": "https://tanglzandco.glossgenius.com/team",
+    "source_name": "GlossGenius",
+    "source_checked_at": "2026-10-18T03:59:00Z"
+  },
+  {
+    "name": "Brooke Evans",
+    "category": "stylist",
+    "categories": [
+      "stylist",
+      "colorist"
+    ],
+    "workplace_name": "Tanglz&Co",
+    "city": "Lakewood",
+    "state": "CO",
+    "street_address": "3333 S Wadsworth Blvd",
+    "suite": "A103",
+    "zip_code": "80227",
+    "booking_url": "https://tanglzandco.glossgenius.com/team",
+    "source_url": "https://tanglzandco.glossgenius.com/team",
+    "source_name": "GlossGenius",
+    "source_checked_at": "2026-10-18T03:59:00Z"
+  },
+  {
+    "name": "Jenna Villalba",
+    "category": "stylist",
+    "categories": [
+      "stylist",
+      "colorist"
+    ],
+    "workplace_name": "Tanglz&Co",
+    "city": "Lakewood",
+    "state": "CO",
+    "street_address": "3333 S Wadsworth Blvd",
+    "suite": "A103",
+    "zip_code": "80227",
+    "booking_url": "https://tanglzandco.glossgenius.com/team",
+    "source_url": "https://tanglzandco.glossgenius.com/team",
+    "source_name": "GlossGenius",
+    "source_checked_at": "2026-10-18T03:59:00Z"
+  },
+  {
+    "name": "Nicole Vanderlinden",
+    "category": "massage_therapist",
+    "categories": [
+      "massage_therapist"
+    ],
+    "workplace_name": "THE RETREAT",
+    "city": "Westminster",
+    "state": "CO",
+    "booking_url": "https://theretreatwestminster.glossgenius.com/team",
+    "source_url": "https://theretreatwestminster.glossgenius.com/team",
+    "source_name": "GlossGenius",
+    "source_checked_at": "2026-10-18T03:59:00Z"
+  },
+  {
+    "name": "Reagan Chauff",
+    "category": "massage_therapist",
+    "categories": [
+      "massage_therapist"
+    ],
+    "workplace_name": "THE RETREAT",
+    "city": "Westminster",
+    "state": "CO",
+    "booking_url": "https://theretreatwestminster.glossgenius.com/team",
+    "source_url": "https://theretreatwestminster.glossgenius.com/team",
+    "source_name": "GlossGenius",
+    "source_checked_at": "2026-10-18T03:59:00Z"
+  },
+  {
+    "name": "Kennedy Travis",
+    "category": "eyelash_technician",
+    "categories": [
+      "eyelash_technician"
+    ],
+    "workplace_name": "Kennedy Travis",
+    "city": "Parker",
+    "state": "CO",
+    "street_address": "11197 Sweet Cicely Ln",
+    "zip_code": "80134",
+    "booking_url": "https://kennedytravis.glossgenius.com/",
+    "source_url": "https://kennedytravis.glossgenius.com/",
+    "source_name": "GlossGenius",
+    "source_checked_at": "2026-10-18T03:59:00Z"
+  },
+  {
+    "name": "Melissa Tittarelli",
+    "category": "colorist",
+    "categories": [
+      "colorist",
+      "stylist"
+    ],
+    "workplace_name": "Hair by Melissa Tittarelli",
+    "city": "Golden",
+    "state": "CO",
+    "street_address": "980 Simms St",
+    "suite": "H",
+    "zip_code": "80401",
+    "booking_url": "https://melissatittarelli.glossgenius.com/",
+    "source_url": "https://melissatittarelli.glossgenius.com/",
+    "source_name": "GlossGenius",
+    "source_checked_at": "2026-10-18T03:59:00Z"
+  },
+  {
+    "name": "Amethyst McDowell",
+    "category": "colorist",
+    "categories": [
+      "colorist",
+      "stylist"
+    ],
+    "workplace_name": "The Lounge",
+    "city": "Englewood",
+    "state": "CO",
+    "street_address": "200 W Belleview Ave",
+    "suite": "Building 120, Suite 101",
+    "zip_code": "80110",
+    "booking_url": "https://theloungeenglewood.glossgenius.com/team",
+    "source_url": "https://theloungeenglewood.glossgenius.com/team",
+    "source_name": "GlossGenius",
+    "source_checked_at": "2026-10-18T03:59:00Z"
+  },
+  {
+    "name": "Lizzie Donahue",
+    "category": "colorist",
+    "categories": [
+      "colorist",
+      "stylist"
+    ],
+    "workplace_name": "The Lounge",
+    "city": "Englewood",
+    "state": "CO",
+    "street_address": "200 W Belleview Ave",
+    "suite": "Building 120, Suite 101",
+    "zip_code": "80110",
+    "booking_url": "https://theloungeenglewood.glossgenius.com/team",
+    "source_url": "https://theloungeenglewood.glossgenius.com/team",
+    "source_name": "GlossGenius",
+    "source_checked_at": "2026-10-18T03:59:00Z"
+  }
+]
