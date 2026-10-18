@@ -1,0 +1,55 @@
+{
+  "batch_id": "co-glossgenius-2026-10-17-2159",
+  "production_project": "jbhgeoedwvfxjteyuxum",
+  "source_name": "GlossGenius",
+  "source_checked_at": "2026-10-18T03:59:00Z",
+  "status": "validated_pending_import",
+  "candidates_prepared": 10,
+  "production_duplicate_matches_in_discovery": 12,
+  "discovery_candidates_rejected_for_stale_ambiguous_or_unsupported_source": 7,
+  "cities": [
+    "Englewood",
+    "Golden",
+    "Lakewood",
+    "Parker",
+    "Westminster"
+  ],
+  "category_mappings": [
+    "colorist",
+    "eyebrow_technician",
+    "eyelash_technician",
+    "massage_therapist",
+    "stylist",
+    "waxing_specialist"
+  ],
+  "safeguards": {
+    "user_id": null,
+    "claim_status": "unclaimed",
+    "authored_bios_copied": false,
+    "photos_copied": false,
+    "reviews_copied": false
+  },
+  "production_snapshot_before": {
+    "total_colorado_profiles": 1583,
+    "verified_sourced_colorado_profiles": 1581,
+    "remaining_to_5000": 3419,
+    "max_profile_id": 1651
+  },
+  "production_snapshot_after": null,
+  "blocker": null,
+  "source_evidence": [
+    "https://tla.glossgenius.com/team",
+    "https://tanglzandco.glossgenius.com/team",
+    "https://theretreatwestminster.glossgenius.com/team",
+    "https://kennedytravis.glossgenius.com/",
+    "https://melissatittarelli.glossgenius.com/",
+    "https://theloungeenglewood.glossgenius.com/team"
+  ],
+  "dry_run": {
+    "input": 10,
+    "would_insert": 10,
+    "duplicates": 0,
+    "rejected": 0
+  },
+  "import": null
+}
