@@ -3,7 +3,7 @@
   "production_project": "jbhgeoedwvfxjteyuxum",
   "source_name": "GlossGenius",
   "source_checked_at": "2026-10-18T02:55:22Z",
-  "status": "prepared_pending_import",
+  "status": "imported",
   "candidates_prepared": 13,
   "production_duplicate_matches_in_discovery": 17,
   "discovery_candidates_rejected_for_stale_or_ambiguous_current_source": 19,
@@ -27,11 +27,17 @@
     "photos_copied": false,
     "reviews_copied": false
   },
-  "production_snapshot": {
+  "production_snapshot_before": {
     "total_colorado_profiles": 1570,
     "verified_sourced_colorado_profiles": 1568,
     "remaining_to_5000": 3432,
     "max_profile_id": 1638
+  },
+  "production_snapshot_after": {
+    "total_colorado_profiles": 1583,
+    "verified_sourced_colorado_profiles": 1581,
+    "remaining_to_5000": 3419,
+    "max_profile_id": 1651
   },
   "blocker": null,
   "source_evidence": [
@@ -48,5 +54,47 @@
     "would_insert": 13,
     "duplicates": 0,
     "rejected": 0
+  },
+  "import": {
+    "attempted": 13,
+    "inserted": 13,
+    "duplicates": 0,
+    "rejected": 0,
+    "category_links_added": 27,
+    "missing_booking_links": 0,
+    "inserted_profile_ids": [
+      1639,
+      1640,
+      1641,
+      1642,
+      1643,
+      1644,
+      1645,
+      1646,
+      1647,
+      1648,
+      1649,
+      1650,
+      1651
+    ],
+    "inserted_names": [
+      "Erika Benavente",
+      "Saige Hussong",
+      "Kaylin Casto",
+      "Makenna Pope",
+      "Tiffany Siess",
+      "Ashley Anstead",
+      "Elizabeth Valenzuela",
+      "Grayson Collard",
+      "India Wright",
+      "Jackie Boyce",
+      "Kawii Sutherlin",
+      "Kira Messier",
+      "Shelby Koehl"
+    ],
+    "audit": {
+      "batch_safeguards_ok": 13,
+      "batch_category_links": 27
+    }
   }
 }
