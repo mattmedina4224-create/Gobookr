@@ -1,0 +1,52 @@
+{
+  "batch_id": "co-booksy-southern-western-2026-10-18-0404",
+  "production_project": "jbhgeoedwvfxjteyuxum",
+  "source_name": "Booksy",
+  "source_checked_at": "2026-10-18T10:04:48Z",
+  "status": "validated_pending_import",
+  "candidates_prepared": 6,
+  "production_duplicate_matches_in_discovery": 17,
+  "discovery_candidates_rejected_for_stale_ambiguous_or_unsupported_source": 0,
+  "cities": [
+    "Alamosa",
+    "Aurora",
+    "Center",
+    "Monte Vista"
+  ],
+  "category_mappings": [
+    "barber",
+    "colorist",
+    "eyebrow_technician",
+    "stylist"
+  ],
+  "safeguards": {
+    "user_id": null,
+    "claim_status": "unclaimed",
+    "authored_bios_copied": false,
+    "photos_copied": false,
+    "reviews_copied": false
+  },
+  "production_snapshot_before": {
+    "total_colorado_profiles": 1600,
+    "verified_sourced_colorado_profiles": 1598,
+    "remaining_to_5000": 3402,
+    "max_profile_id": 1672
+  },
+  "production_snapshot_after": null,
+  "blocker": null,
+  "source_evidence": [
+    "https://booksy.com/en-us/1606250_hair-by-rita_hair-salon_134779_aurora",
+    "https://booksy.com/en-us/177182_edgar-bs-cuts_barber-shop_15186_monte-vista",
+    "https://booksy.com/en-us/395060_stretchs-barbershop_barber-shop_15186_monte-vista",
+    "https://booksy.com/en-us/1764931_bn-elijah_barber-shop_15186_monte-vista",
+    "https://booksy.com/en-us/1837905_marcos-haircuts_barber-shop_15195_center",
+    "https://booksy.com/en-us/1880800_kdeuce-blendz_barber-shop_14867_alamosa"
+  ],
+  "dry_run": {
+    "input": 6,
+    "would_insert": 6,
+    "duplicates": 0,
+    "rejected": 0
+  },
+  "import": null
+}
