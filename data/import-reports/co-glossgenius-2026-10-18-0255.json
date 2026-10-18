@@ -3,9 +3,9 @@
   "production_project": "jbhgeoedwvfxjteyuxum",
   "source_name": "GlossGenius",
   "source_checked_at": "2026-10-18T08:55:37Z",
-  "status": "validated_pending_import",
-  "candidates_prepared": 12,
-  "production_duplicate_matches_in_discovery": 3,
+  "status": "imported",
+  "candidates_prepared": 7,
+  "production_duplicate_matches_in_discovery": 8,
   "discovery_candidates_rejected_for_stale_ambiguous_or_unsupported_source": 8,
   "cities": [
     "Arvada",
@@ -34,7 +34,12 @@
     "remaining_to_5000": 3409,
     "max_profile_id": 1665
   },
-  "production_snapshot_after": null,
+  "production_snapshot_after": {
+    "total_colorado_profiles": 1600,
+    "verified_sourced_colorado_profiles": 1598,
+    "remaining_to_5000": 3402,
+    "max_profile_id": 1672
+  },
   "blocker": null,
   "source_evidence": [
     "https://puredermalcare.glossgenius.com/team",
@@ -48,9 +53,45 @@
   ],
   "dry_run": {
     "input": 12,
-    "would_insert": 12,
-    "duplicates": 0,
+    "would_insert": 7,
+    "duplicates": 5,
     "rejected": 0
   },
-  "import": null
+  "import": {
+    "attempted": 12,
+    "inserted": 7,
+    "duplicates": 5,
+    "rejected": 0,
+    "category_links_added": 18,
+    "missing_booking_links": 0,
+    "inserted_profile_ids": [
+      1666,
+      1667,
+      1668,
+      1669,
+      1670,
+      1671,
+      1672
+    ],
+    "inserted_names": [
+      "Dafne Borrego",
+      "Sydney Mittlestadt",
+      "Tasha Herrera",
+      "Damaris Borrego",
+      "Annette Kotsay Osen",
+      "Alyzah Read",
+      "Olivia Kotsay Beard"
+    ],
+    "duplicate_names": [
+      "Danielle Howard",
+      "Katie Roy",
+      "Lynette Kotsay Beard",
+      "Nate Weng",
+      "Molly San"
+    ],
+    "audit": {
+      "batch_safeguards_ok": 7,
+      "batch_category_links": 18
+    }
+  }
 }
