@@ -3,7 +3,7 @@
   "production_project": "jbhgeoedwvfxjteyuxum",
   "source_name": "Booksy",
   "source_checked_at": "2026-10-18T10:04:48Z",
-  "status": "validated_pending_import",
+  "status": "imported",
   "candidates_prepared": 6,
   "production_duplicate_matches_in_discovery": 17,
   "discovery_candidates_rejected_for_stale_ambiguous_or_unsupported_source": 0,
@@ -32,7 +32,12 @@
     "remaining_to_5000": 3402,
     "max_profile_id": 1672
   },
-  "production_snapshot_after": null,
+  "production_snapshot_after": {
+    "total_colorado_profiles": 1606,
+    "verified_sourced_colorado_profiles": 1604,
+    "remaining_to_5000": 3396,
+    "max_profile_id": 1678
+  },
   "blocker": null,
   "source_evidence": [
     "https://booksy.com/en-us/1606250_hair-by-rita_hair-salon_134779_aurora",
@@ -48,5 +53,33 @@
     "duplicates": 0,
     "rejected": 0
   },
-  "import": null
+  "import": {
+    "attempted": 6,
+    "inserted": 6,
+    "duplicates": 0,
+    "rejected": 0,
+    "category_links_added": 8,
+    "missing_booking_links": 0,
+    "inserted_profile_ids": [
+      1673,
+      1674,
+      1675,
+      1676,
+      1677,
+      1678
+    ],
+    "inserted_names": [
+      "Edgar Borunda",
+      "Eli Baumgardner",
+      "Horacio Naranjo",
+      "Kidus Begashaw",
+      "Marcos Hernandez",
+      "Rita Gerdemann"
+    ],
+    "duplicate_names": [],
+    "audit": {
+      "batch_safeguards_ok": 6,
+      "batch_category_links": 8
+    }
+  }
 }
