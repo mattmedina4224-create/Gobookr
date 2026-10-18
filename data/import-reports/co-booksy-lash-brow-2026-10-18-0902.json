@@ -1,0 +1,42 @@
+{
+  "batch_id": "co-booksy-lash-brow-2026-10-18-0902",
+  "production_project": "jbhgeoedwvfxjteyuxum",
+  "source_name": "Booksy",
+  "source_checked_at": "2026-10-18T15:02:58Z",
+  "status": "validated_pending_import",
+  "candidates_prepared": 5,
+  "production_duplicate_matches_in_discovery": 14,
+  "discovery_candidates_rejected_for_stale_ambiguous_unsupported_or_wrong_state_source": 4,
+  "cities": ["Aurora", "Denver", "Northglenn", "Westminster"],
+  "category_mappings": ["eyebrow_technician", "eyelash_technician", "nail_technician", "waxing_specialist"],
+  "safeguards": {
+    "user_id": null,
+    "claim_status": "unclaimed",
+    "authored_bios_copied": false,
+    "photos_copied": false,
+    "reviews_copied": false
+  },
+  "production_snapshot_before": {
+    "total_colorado_profiles": 1624,
+    "verified_sourced_colorado_profiles": 1622,
+    "remaining_to_5000": 3378,
+    "max_profile_id": 1696
+  },
+  "production_snapshot_after": null,
+  "blocker": null,
+  "source_evidence": [
+    "https://booksy.com/en-us/1691711_studiomargaretmartinez_nail-salon_134779_aurora",
+    "https://booksy.com/en-us/1846549_lashroom-by-michelle_brows-lashes_14866_westminster",
+    "https://booksy.com/en-us/1849304_winkzbyj_brows-lashes_134761_denver",
+    "https://booksy.com/en-us/1212715_caristudioo_brows-lashes_134779_aurora",
+    "https://booksy.com/en-us/1826909_her-gold-minks-luxury-lash-extensions_brows-lashes_134761_denver"
+  ],
+  "dry_run": {
+    "input": 5,
+    "would_insert": 5,
+    "duplicates": 0,
+    "rejected": 0,
+    "category_links": 13
+  },
+  "import": null
+}
