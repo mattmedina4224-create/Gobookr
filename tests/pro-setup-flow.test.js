@@ -20,7 +20,6 @@ function app({storageReady=false}={}) {
       else if(sql.startsWith('UPDATE pro_profiles SET onboarding_completed')) profile.onboarding_completed=1;
       return {changes:1}; }
   }; } };
-  const http = require('../lib/http');
   const routes = new Map(); const router={get:(url,handler)=>routes.set('GET '+url,handler),post:(url,handler)=>routes.set('POST '+url,handler)};
   const load = (file, dependencies={}) => {const module={exports:{}};vm.runInNewContext(fs.readFileSync(path.join(__dirname,'..',file),'utf8'),{module,exports:module.exports,URL,Buffer,console,process:{env:storageReady?{SUPABASE_URL:'https://fixture.supabase.co',SUPABASE_SERVICE_ROLE_KEY:'test-only'}:{}},fetch:async()=>({ok:true,status:200}),AbortController,setTimeout,clearTimeout,require(id){if(id==='../db')return db;if(id==='../lib/layout')return {layout:({body})=>body};if(id==='../lib/favorites')return {currentSaves:()=>0};if(dependencies[id])return dependencies[id];if(id.startsWith('node:'))return require(id);return require(path.resolve(path.dirname(path.join(__dirname,'..',file)),id));}});return module.exports;};
   const onboarding=load('routes/onboarding.js');onboarding(router);load('routes/pro.js',{'./onboarding':onboarding})(router);
@@ -41,7 +40,7 @@ test('validation errors keep entries visible and stay on the current step',async
  const service=await a.request('POST','/dashboard/pro/services',{_setup_step:'services',name:'Keep my service',price:'bad',duration_minutes:'30'});assert.equal(service.status,422);assert.match(service.html,/Keep my service/);
 });
 test('missing photo storage offers a clear next step but never completes setup',async()=>{
- const a=app();const page=await a.request('GET','/dashboard/pro/onboarding',{}, {step:'portfolio'});assert.match(page.html,/temporarily unavailable/);assert.match(page.html,/Continue for now/);assert.doesNotMatch(page.html,/type="file"/);
+ const a=app();const page=await a.request('GET','/dashboard/pro/onboarding',{}, {step:'portfolio'});assert.match(page.html,/temporarily unavailable/);assert.match(page.html,/saved information is safe/i);assert.match(page.html,/Continue for now/);assert.doesNotMatch(page.html,/type="file"/);
  const finish=await a.request('POST','/dashboard/pro/onboarding/finish');assert.match(finish.headers.Location,/step=review&error=/);assert.equal(a.profile.onboarding_completed,0);
  a.services.push({id:1,name:'Test',price:30,duration_minutes:30});a.photos.push({image_url:'https://example.com/photo.jpg',caption:'Test'});const completed=await a.request('POST','/dashboard/pro/onboarding/finish');assert.match(completed.headers.Location,/setup=complete/);assert.equal(a.profile.onboarding_completed,1);
 });
@@ -54,63 +53,27 @@ test('step routing never accepts an external destination and saved values are es
  assert.equal(setupDestination('https://evil.example',null,false),null);const profile={bio:'Saved',id:1};assert.equal(mergeSetupProfile(profile,{_setup_step:'booking',bio:'Overwrite',booking_url:'https://example.com'}).bio,'Saved');
  const html=renderSetup({profile:{business_name:'<script>alert(1)</script>'},step:'basics',csrf:'csrf',state:{},categories:[],services:[],photos:[],resume:'basics'});assert.doesNotMatch(html,/<script>/);assert.match(html,/&lt;script&gt;/);
 });
-
+test('validation draft is used for the about textarea as well as normal inputs',()=>{
+ const html=renderSetup({profile:{bio:'Saved bio'},values:{bio:'Unsaved draft bio'},step:'details',csrf:'csrf',state:{},categories:[],services:[],photos:[],resume:'details'});
+ assert.match(html,/>Unsaved draft bio<\/textarea>/);assert.doesNotMatch(html,/>Saved bio<\/textarea>/);
+});
+test('onboarding exposes an eight-step progress navigator and clear save/resume language',()=>{
+ const html=renderSetup({profile:{},step:'basics',csrf:'csrf',state:{},categories:[],services:[],photos:[],resume:'basics'});
+ assert.match(html,/class="setup-step-nav"/);assert.match(html,/aria-current="step"/);assert.match(html,/Saved after every step/);assert.equal((html.match(/<li class="(?:is-current|is-past)?"/g)||[]).length,8);
+});
 test('saved onboarding photos do not ask for another upload or a required caption',()=>{
  const common={profile:{id:1},step:'portfolio',csrf:'csrf',state:{},categories:[],services:[],resume:'portfolio',storageReady:true};
  const html=renderSetup({...common,photos:[{image_url:'https://example.test/photo.jpg',caption:'Saved caption'}]});
- assert.match(html,/1 photo saved/);
- assert.match(html,/Saved caption/);
- assert.match(html,/<details class="setup-add"><summary>Add another photo \(optional\)<\/summary>/);
- assert.match(html,/Continue to booking link/);
- assert.match(html,/Caption \(optional\)/);
- assert.doesNotMatch(html,/<input[^>]*name="caption"[^>]*required/);
- assert.doesNotMatch(html,/A portfolio photo is required before/);
- const first=renderSetup({...common,photos:[]});
- assert.match(first,/Save &amp; continue/);
- assert.match(first,/A portfolio photo is required before/);
- const retry=renderSetup({...common,error:'Upload failed',photos:[{image_url:'https://example.test/photo.jpg'}]});
- assert.match(retry,/<details class="setup-add" open>/);
+ assert.match(html,/1 photo saved/);assert.match(html,/Saved caption/);assert.match(html,/<details class="setup-add"><summary>Add another photo \(optional\)<\/summary>/);assert.match(html,/Continue to booking link/);assert.match(html,/Caption \(optional\)/);assert.match(html,/photo library or Files/);assert.doesNotMatch(html,/<input[^>]*name="caption"[^>]*required/);assert.doesNotMatch(html,/A portfolio photo is required before/);
+ const first=renderSetup({...common,photos:[]});assert.match(first,/Save &amp; continue/);assert.match(first,/A portfolio photo is required before/);
+ const retry=renderSetup({...common,error:'Upload failed',photos:[{image_url:'https://example.test/photo.jpg'}]});assert.match(retry,/<details class="setup-add" open>/);
 });
-
 test('portfolio manager separates the saved photo from the collapsed additional-photo form',async()=>{
- const a=app();a.photos.push({id:1,image_url:'https://example.test/photo.jpg',caption:'Cool'});
- const page=await a.request('GET','/dashboard/pro/portfolio');
- assert.match(page.html,/Your saved photos/);
- assert.match(page.html,/No need to upload it again/);
- assert.match(page.html,/Cool/);
- assert.match(page.html,/<details class="setup-add"><summary>Add another photo \(optional\)<\/summary>/);
- assert.match(page.html,/Continue setup/);
- assert.doesNotMatch(page.html,/<input[^>]*name="caption"[^>]*required/);
+ const a=app();a.photos.push({id:1,image_url:'https://example.test/photo.jpg',caption:'Cool'});const page=await a.request('GET','/dashboard/pro/portfolio');assert.match(page.html,/Your saved photos/);assert.match(page.html,/No need to upload it again/);assert.match(page.html,/Cool/);assert.match(page.html,/<details class="setup-add"><summary>Add another photo \(optional\)<\/summary>/);assert.match(page.html,/Continue setup/);assert.doesNotMatch(page.html,/<input[^>]*name="caption"[^>]*required/);
 });
-
 test('an upload with no caption saves once and advances onboarding instead of restarting portfolio',async()=>{
- const a=app({storageReady:true});
- const image={filename:'fixture.png',contentType:'image/png',data:Buffer.from([0x89,0x50,0x4e,0x47,0x0d,0x0a,0x1a,0x0a,0,0,0,0])};
- const response=await a.request('POST','/dashboard/pro/portfolio',{_setup_step:'portfolio',caption:''},{},{id:7,role:'pro'},{image});
- assert.match(response.headers.Location,/step=booking/);
- assert.equal(a.photos.length,1);assert.equal(a.photos[0].caption,'');
- const more=await a.request('POST','/dashboard/pro/portfolio',{_setup_step:'portfolio',_setup_add_more:'1',caption:'Another photo'},{},{id:7,role:'pro'},{image});
- assert.match(more.headers.Location,/step=portfolio/);
- assert.equal(a.photos.length,2);
+ const a=app({storageReady:true});const image={filename:'fixture.png',contentType:'image/png',data:Buffer.from([0x89,0x50,0x4e,0x47,0x0d,0x0a,0x1a,0x0a,0,0,0,0])};const response=await a.request('POST','/dashboard/pro/portfolio',{_setup_step:'portfolio',caption:''},{},{id:7,role:'pro'},{image});assert.match(response.headers.Location,/step=booking/);assert.equal(a.photos.length,1);assert.equal(a.photos[0].caption,'');const more=await a.request('POST','/dashboard/pro/portfolio',{_setup_step:'portfolio',_setup_add_more:'1',caption:'Another photo'},{},{id:7,role:'pro'},{image});assert.match(more.headers.Location,/step=portfolio/);assert.equal(a.photos.length,2);
 });
-
 test('booking accepts a bare domain on mobile and saves a normalized link before advancing',async()=>{
- const a=app();
- const page=await a.request('GET','/dashboard/pro/onboarding',{}, {step:'booking'});
- assert.match(page.html,/<input[^>]*name="booking_url"[^>]*type="text" inputmode="url"/);
- assert.match(page.html,/autocapitalize="none" spellcheck="false"/);
- assert.doesNotMatch(page.html,/<input[^>]*name="booking_url"[^>]*type="url"/);
- const response=await a.request('POST','/dashboard/pro/profile',{_setup_step:'booking',booking_url:' novobarbers.com '});
- assert.match(response.headers.Location,/step=extras/);
- assert.equal(a.profile.booking_url,'https://novobarbers.com/');
- const saved=a.profile.booking_url;
- for(const value of ['', 'not a valid link', 'javascript:alert(1)', 'ftp://example.com']) {
-  const invalid=await a.request('POST','/dashboard/pro/profile',{_setup_step:'booking',booking_url:value});
-  assert.equal(invalid.status,422);
-  assert.match(invalid.html,/Booking \/ scheduling link/);
-  assert.equal(a.profile.booking_url,saved);
- }
- const exit=await a.request('POST','/dashboard/pro/profile',{_setup_step:'booking',booking_url:'https://example.com/book?a=1',_setup_exit:'1'});
- assert.match(exit.headers.Location,/setup=saved/);
- assert.equal(a.profile.booking_url,'https://example.com/book?a=1');
+ const a=app();const page=await a.request('GET','/dashboard/pro/onboarding',{}, {step:'booking'});assert.match(page.html,/<input[^>]*name="booking_url"[^>]*type="text" inputmode="url"/);assert.match(page.html,/autocapitalize="none" spellcheck="false"/);assert.doesNotMatch(page.html,/<input[^>]*name="booking_url"[^>]*type="url"/);const response=await a.request('POST','/dashboard/pro/profile',{_setup_step:'booking',booking_url:' novobarbers.com '});assert.match(response.headers.Location,/step=extras/);assert.equal(a.profile.booking_url,'https://novobarbers.com/');const saved=a.profile.booking_url;for(const value of ['', 'not a valid link', 'javascript:alert(1)', 'ftp://example.com']) {const invalid=await a.request('POST','/dashboard/pro/profile',{_setup_step:'booking',booking_url:value});assert.equal(invalid.status,422);assert.match(invalid.html,/Booking \/ scheduling link/);assert.equal(a.profile.booking_url,saved);}const exit=await a.request('POST','/dashboard/pro/profile',{_setup_step:'booking',booking_url:'https://example.com/book?a=1',_setup_exit:'1'});assert.match(exit.headers.Location,/setup=saved/);assert.equal(a.profile.booking_url,'https://example.com/book?a=1');
 });
