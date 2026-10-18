@@ -80,10 +80,13 @@
     "workplace_name": "THE RETREAT",
     "city": "Westminster",
     "state": "CO",
-    "booking_url": "https://theretreatwestminster.glossgenius.com/team",
-    "source_url": "https://theretreatwestminster.glossgenius.com/team",
+    "booking_url": "https://findtheretreat.glossgenius.com/team",
+    "source_url": "https://findtheretreat.glossgenius.com/team",
     "source_name": "GlossGenius",
-    "source_checked_at": "2026-10-18T03:59:00Z"
+    "source_checked_at": "2026-10-18T03:59:00Z",
+    "street_address": "5191 W 112th Ave",
+    "suite": "Suite 124",
+    "zip_code": "80031"
   },
   {
     "name": "Reagan Chauff",
@@ -94,10 +97,13 @@
     "workplace_name": "THE RETREAT",
     "city": "Westminster",
     "state": "CO",
-    "booking_url": "https://theretreatwestminster.glossgenius.com/team",
-    "source_url": "https://theretreatwestminster.glossgenius.com/team",
+    "booking_url": "https://findtheretreat.glossgenius.com/team",
+    "source_url": "https://findtheretreat.glossgenius.com/team",
     "source_name": "GlossGenius",
-    "source_checked_at": "2026-10-18T03:59:00Z"
+    "source_checked_at": "2026-10-18T03:59:00Z",
+    "street_address": "5191 W 112th Ave",
+    "suite": "Suite 124",
+    "zip_code": "80031"
   },
   {
     "name": "Kennedy Travis",
