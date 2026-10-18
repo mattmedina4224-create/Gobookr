@@ -3,7 +3,7 @@
   "production_project": "jbhgeoedwvfxjteyuxum",
   "source_name": "Booksy",
   "source_checked_at": "2026-10-18T11:01:28Z",
-  "status": "validated_pending_import",
+  "status": "imported",
   "candidates_prepared": 11,
   "production_duplicate_matches_in_discovery": 0,
   "discovery_candidates_rejected_for_stale_ambiguous_or_unsupported_source": 5,
@@ -33,7 +33,12 @@
     "remaining_to_5000": 3396,
     "max_profile_id": 1678
   },
-  "production_snapshot_after": null,
+  "production_snapshot_after": {
+    "total_colorado_profiles": 1617,
+    "verified_sourced_colorado_profiles": 1615,
+    "remaining_to_5000": 3385,
+    "max_profile_id": 1689
+  },
   "blocker": null,
   "source_evidence": [
     "https://booksy.com/en-us/950424_aaronblndzz_barber-shop_14998_glenwood-springs",
@@ -54,5 +59,45 @@
     "duplicates": 0,
     "rejected": 0
   },
-  "import": null
+  "import": {
+    "attempted": 11,
+    "inserted": 11,
+    "duplicates": 0,
+    "rejected": 0,
+    "category_links_added": 14,
+    "missing_booking_links": 0,
+    "inserted_profile_ids": [
+      1679,
+      1680,
+      1681,
+      1682,
+      1683,
+      1684,
+      1685,
+      1686,
+      1687,
+      1688,
+      1689
+    ],
+    "inserted_names": [
+      "Aaron Varela",
+      "Aiden Ochoa",
+      "Alexis Vela",
+      "Brian Zarate",
+      "Chelsa Joy",
+      "Eduardo Salvidres",
+      "Edwin Monzon",
+      "Emiliano Galindo",
+      "Giovanni Medrano",
+      "Tony Donato",
+      "Vince Garcia"
+    ],
+    "duplicate_names": [],
+    "audit": {
+      "batch_safeguards_ok": 11,
+      "batch_category_links": 14,
+      "duplicate_identity_groups": 0,
+      "duplicate_booking_url_groups": 0
+    }
+  }
 }
