@@ -3,7 +3,7 @@
   "production_project": "jbhgeoedwvfxjteyuxum",
   "source_name": "GlossGenius",
   "source_checked_at": "2026-10-18T03:59:00Z",
-  "status": "validated_pending_import",
+  "status": "imported",
   "candidates_prepared": 10,
   "production_duplicate_matches_in_discovery": 12,
   "discovery_candidates_rejected_for_stale_ambiguous_or_unsupported_source": 7,
@@ -35,7 +35,12 @@
     "remaining_to_5000": 3419,
     "max_profile_id": 1651
   },
-  "production_snapshot_after": null,
+  "production_snapshot_after": {
+    "total_colorado_profiles": 1593,
+    "verified_sourced_colorado_profiles": 1591,
+    "remaining_to_5000": 3409,
+    "max_profile_id": 1665
+  },
   "blocker": null,
   "source_evidence": [
     "https://tla.glossgenius.com/team",
@@ -52,5 +57,40 @@
     "duplicates": 0,
     "rejected": 0
   },
-  "import": null
+  "import": {
+    "attempted": 10,
+    "inserted": 10,
+    "duplicates": 0,
+    "rejected": 0,
+    "category_links_added": 18,
+    "missing_booking_links": 0,
+    "inserted_profile_ids": [
+      1656,
+      1657,
+      1658,
+      1659,
+      1660,
+      1661,
+      1662,
+      1663,
+      1664,
+      1665
+    ],
+    "inserted_names": [
+      "Jenna Villalba",
+      "Melissa Tittarelli",
+      "Lizzie Donahue",
+      "Nicole Vanderlinden",
+      "Kennedy Travis",
+      "Rebecca Ferjani",
+      "Trinnie Lefevre",
+      "Brooke Evans",
+      "Reagan Chauff",
+      "Amethyst McDowell"
+    ],
+    "audit": {
+      "batch_safeguards_ok": 10,
+      "batch_category_links": 18
+    }
+  }
 }
