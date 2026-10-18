@@ -1,0 +1,56 @@
+{
+  "batch_id": "co-glossgenius-2026-10-18-0255",
+  "production_project": "jbhgeoedwvfxjteyuxum",
+  "source_name": "GlossGenius",
+  "source_checked_at": "2026-10-18T08:55:37Z",
+  "status": "validated_pending_import",
+  "candidates_prepared": 12,
+  "production_duplicate_matches_in_discovery": 3,
+  "discovery_candidates_rejected_for_stale_ambiguous_or_unsupported_source": 8,
+  "cities": [
+    "Arvada",
+    "Boulder",
+    "Northglenn",
+    "Thornton"
+  ],
+  "category_mappings": [
+    "colorist",
+    "eyebrow_technician",
+    "eyelash_technician",
+    "nail_technician",
+    "stylist",
+    "waxing_specialist"
+  ],
+  "safeguards": {
+    "user_id": null,
+    "claim_status": "unclaimed",
+    "authored_bios_copied": false,
+    "photos_copied": false,
+    "reviews_copied": false
+  },
+  "production_snapshot_before": {
+    "total_colorado_profiles": 1593,
+    "verified_sourced_colorado_profiles": 1591,
+    "remaining_to_5000": 3409,
+    "max_profile_id": 1665
+  },
+  "production_snapshot_after": null,
+  "blocker": null,
+  "source_evidence": [
+    "https://puredermalcare.glossgenius.com/team",
+    "https://puredermalcare.glossgenius.com/services",
+    "https://darkhorsesalons.glossgenius.com/team",
+    "https://darkhorsesalons.glossgenius.com/services",
+    "https://hairday.glossgenius.com/team",
+    "https://hairday.glossgenius.com/services",
+    "https://silkskinbar.glossgenius.com/about",
+    "https://luminailbar.glossgenius.com/team"
+  ],
+  "dry_run": {
+    "input": 12,
+    "would_insert": 12,
+    "duplicates": 0,
+    "rejected": 0
+  },
+  "import": null
+}
