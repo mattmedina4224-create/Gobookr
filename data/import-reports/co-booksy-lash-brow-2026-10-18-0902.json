@@ -2,13 +2,20 @@
   "batch_id": "co-booksy-lash-brow-2026-10-18-0902",
   "production_project": "jbhgeoedwvfxjteyuxum",
   "source_name": "Booksy",
-  "source_checked_at": "2026-10-18T15:02:58Z",
+  "source_checked_at": "2026-10-18T15:59:52Z",
   "status": "blocked_before_import",
-  "candidates_prepared": 5,
+  "candidates_prepared": 6,
   "profiles_imported": 0,
   "production_duplicate_matches_in_discovery": 14,
   "discovery_candidates_rejected_for_stale_ambiguous_unsupported_or_wrong_state_source": 4,
-  "cities": ["Aurora", "Denver", "Northglenn", "Westminster"],
+  "additional_discovery": {
+    "checked_at": "2026-10-18T15:59:52Z",
+    "new_candidates_prepared": 1,
+    "production_duplicate_matches": 38,
+    "stale_nonbookable_or_ambiguous_rejections": 8,
+    "note": "Mazzy Beauty was the only additional identity and source combination without a production match. Hannah Elliott was excluded because the exact Lincoln Street Barber Shop Booksy source is already represented by production profile 116."
+  },
+  "cities": ["Aurora", "Denver", "Fort Collins", "Northglenn", "Westminster"],
   "category_mappings": ["eyebrow_technician", "eyelash_technician", "nail_technician", "waxing_specialist"],
   "safeguards": {
     "user_id": null,
@@ -29,20 +36,21 @@
     "remaining_to_5000": 3378,
     "max_profile_id": 1696
   },
-  "blocker": "Production Supabase validation reads succeeded, but the connector rejected every non-no-op INSERT into public.pro_profiles with INVALID_ARGUMENT. A final readback confirmed zero rows from this batch were inserted.",
+  "blocker": "Production Supabase validation reads succeeded, but the connector rejected every non-no-op INSERT into public.pro_profiles with INVALID_ARGUMENT. A later retry returned the same error; readback confirmed zero rows from this batch were inserted.",
   "source_evidence": [
     "https://booksy.com/en-us/1691711_studiomargaretmartinez_nail-salon_134779_aurora",
     "https://booksy.com/en-us/1846549_lashroom-by-michelle_brows-lashes_14866_westminster",
     "https://booksy.com/en-us/1849304_winkzbyj_brows-lashes_134761_denver",
     "https://booksy.com/en-us/1212715_caristudioo_brows-lashes_134779_aurora",
-    "https://booksy.com/en-us/1826909_her-gold-minks-luxury-lash-extensions_brows-lashes_134761_denver"
+    "https://booksy.com/en-us/1826909_her-gold-minks-luxury-lash-extensions_brows-lashes_134761_denver",
+    "https://booksy.com/en-us/1127137_mazzy-beauty_brows-lashes_15069_fort-collins"
   ],
   "dry_run": {
-    "input": 5,
-    "would_insert": 5,
+    "input": 6,
+    "would_insert": 6,
     "duplicates": 0,
     "rejected": 0,
-    "category_links": 13
+    "category_links": 14
   },
   "import": {
     "profiles_inserted": 0,
