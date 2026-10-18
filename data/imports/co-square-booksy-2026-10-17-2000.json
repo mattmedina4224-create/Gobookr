@@ -1,0 +1,192 @@
+[
+  {
+    "name": "Matthew Mascarenaz",
+    "category": "barber",
+    "categories": [
+      "barber"
+    ],
+    "workplace_name": "Faded By Matt",
+    "city": "Grand Junction",
+    "state": "CO",
+    "street_address": "541 N 1st St",
+    "zip_code": "81501",
+    "booking_url": "https://booksy.com/en-us/1867136_faded-by-matt_barber-shop_15106_grand-junction",
+    "source_url": "https://booksy.com/en-us/1867136_faded-by-matt_barber-shop_15106_grand-junction",
+    "source_name": "Booksy",
+    "source_checked_at": "2026-10-18T02:15:00Z"
+  },
+  {
+    "name": "Yiovanni Soto",
+    "category": "barber",
+    "categories": [
+      "barber"
+    ],
+    "workplace_name": "Galindathebarber",
+    "city": "Grand Junction",
+    "state": "CO",
+    "street_address": "581 Fairfield Ct",
+    "zip_code": "81504",
+    "booking_url": "https://booksy.com/en-us/1886621_galindathebarber_barber-shop_15106_grand-junction",
+    "source_url": "https://booksy.com/en-us/1886621_galindathebarber_barber-shop_15106_grand-junction",
+    "source_name": "Booksy",
+    "source_checked_at": "2026-10-18T02:15:00Z"
+  },
+  {
+    "name": "Shannon Minor",
+    "category": "massage_therapist",
+    "categories": [
+      "massage_therapist"
+    ],
+    "workplace_name": "Shannon Minor",
+    "city": "Bayfield",
+    "state": "CO",
+    "zip_code": "81122",
+    "booking_url": "https://square.site/book/00RBYQT08KGR6/shannon-minor-bayfield-co",
+    "source_url": "https://square.site/book/00RBYQT08KGR6/shannon-minor-bayfield-co",
+    "source_name": "Square Appointments",
+    "source_checked_at": "2026-10-18T02:15:00Z"
+  },
+  {
+    "name": "Krystal Wilson",
+    "category": "barber",
+    "categories": [
+      "barber",
+      "stylist",
+      "colorist",
+      "waxing_specialist"
+    ],
+    "workplace_name": "Klassic Kutz",
+    "city": "Colorado Springs",
+    "state": "CO",
+    "street_address": "939 N Academy Blvd",
+    "zip_code": "80909",
+    "booking_url": "https://square.site/book/CAXH5NV9Z1RMA/klassic-kutz-colorado-springs-co",
+    "source_url": "https://square.site/book/CAXH5NV9Z1RMA/klassic-kutz-colorado-springs-co",
+    "source_name": "Square Appointments",
+    "source_checked_at": "2026-10-18T02:15:00Z"
+  },
+  {
+    "name": "Kelley Ghorashi",
+    "category": "massage_therapist",
+    "categories": [
+      "massage_therapist"
+    ],
+    "workplace_name": "Tranquil Bodywork Therapies LLC",
+    "city": "Colorado Springs",
+    "state": "CO",
+    "street_address": "7710 N Union Blvd",
+    "suite": "Suite 100G",
+    "zip_code": "80920",
+    "booking_url": "https://square.site/book/2AYRYPCDBV029/tranquil-bodywork-therapies-llc-co-spgs-co",
+    "source_url": "https://square.site/book/2AYRYPCDBV029/tranquil-bodywork-therapies-llc-co-spgs-co",
+    "source_name": "Square Appointments",
+    "source_checked_at": "2026-10-18T02:15:00Z"
+  },
+  {
+    "name": "Shannon McDonald",
+    "category": "colorist",
+    "categories": [
+      "colorist",
+      "stylist",
+      "wedding_services"
+    ],
+    "workplace_name": "Shannon @ Monets Salon",
+    "city": "Steamboat Springs",
+    "state": "CO",
+    "street_address": "1120 S Lincoln Ave",
+    "suite": "Suite C2",
+    "zip_code": "80487",
+    "booking_url": "https://square.site/book/XFME0952N0G99/shannon-monets-salon-steamboat-springs-co",
+    "source_url": "https://square.site/book/XFME0952N0G99/shannon-monets-salon-steamboat-springs-co",
+    "source_name": "Square Appointments",
+    "source_checked_at": "2026-10-18T02:15:00Z"
+  },
+  {
+    "name": "Beth Hammond",
+    "category": "colorist",
+    "categories": [
+      "colorist",
+      "stylist",
+      "waxing_specialist",
+      "eyebrow_technician"
+    ],
+    "workplace_name": "Beth Hammond @ Blade",
+    "city": "Steamboat Springs",
+    "state": "CO",
+    "booking_url": "https://square.site/book/ZGQ9E1V2S53YR/beth-hammond-blade-steamboat-springs-co",
+    "source_url": "https://square.site/book/ZGQ9E1V2S53YR/beth-hammond-blade-steamboat-springs-co",
+    "source_name": "Square Appointments",
+    "source_checked_at": "2026-10-18T02:15:00Z"
+  },
+  {
+    "name": "Gretchen Baumgartner",
+    "category": "eyelash_technician",
+    "categories": [
+      "eyelash_technician",
+      "eyebrow_technician",
+      "waxing_specialist"
+    ],
+    "workplace_name": "Steamboat Lash and Skincare",
+    "city": "Steamboat Springs",
+    "state": "CO",
+    "street_address": "414 Oak St",
+    "zip_code": "80487",
+    "booking_url": "https://square.site/book/L2WNHY1B0N9G2/steamboat-lash-and-skincare-steamboat-springs-co",
+    "source_url": "https://square.site/book/L2WNHY1B0N9G2/steamboat-lash-and-skincare-steamboat-springs-co",
+    "source_name": "Square Appointments",
+    "source_checked_at": "2026-10-18T02:15:00Z"
+  },
+  {
+    "name": "Yolanda Agostinelli",
+    "category": "colorist",
+    "categories": [
+      "colorist",
+      "stylist"
+    ],
+    "workplace_name": "Loni A Stylist",
+    "city": "Boulder",
+    "state": "CO",
+    "street_address": "2660 Canyon Blvd",
+    "zip_code": "80302",
+    "booking_url": "https://square.site/book/SG9MKNW1HMT15/loni-a-stylist-boulder-co",
+    "source_url": "https://square.site/book/SG9MKNW1HMT15/loni-a-stylist-boulder-co",
+    "source_name": "Square Appointments",
+    "source_checked_at": "2026-10-18T02:15:00Z"
+  },
+  {
+    "name": "Sasha Milhous",
+    "category": "waxing_specialist",
+    "categories": [
+      "waxing_specialist",
+      "eyebrow_technician",
+      "eyelash_technician",
+      "massage_therapist"
+    ],
+    "workplace_name": "Sasha's Skincare Studio",
+    "city": "Boulder",
+    "state": "CO",
+    "street_address": "255 Canyon Blvd",
+    "suite": "Suite 200",
+    "zip_code": "80302",
+    "booking_url": "https://square.site/book/6ZTT4GD9GNXS1/sasha-s-skincare-studio-beauty-and-self-care-boulder-co",
+    "source_url": "https://square.site/book/6ZTT4GD9GNXS1/sasha-s-skincare-studio-beauty-and-self-care-boulder-co",
+    "source_name": "Square Appointments",
+    "source_checked_at": "2026-10-18T02:15:00Z"
+  },
+  {
+    "name": "Temple Hay",
+    "category": "massage_therapist",
+    "categories": [
+      "massage_therapist"
+    ],
+    "workplace_name": "Utopia Wellness",
+    "city": "Hygiene",
+    "state": "CO",
+    "street_address": "11747 N 75th Street",
+    "zip_code": "80503",
+    "booking_url": "https://square.site/book/3ZFCQBN2KN1KN/utopia-wellness-hygiene-co",
+    "source_url": "https://square.site/book/3ZFCQBN2KN1KN/utopia-wellness-hygiene-co",
+    "source_name": "Square Appointments",
+    "source_checked_at": "2026-10-18T02:15:00Z"
+  }
+]
