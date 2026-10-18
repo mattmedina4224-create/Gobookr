@@ -1,0 +1,101 @@
+[
+  {
+    "name": "Rita Gerdemann",
+    "category": "stylist",
+    "categories": [
+      "stylist",
+      "colorist",
+      "eyebrow_technician"
+    ],
+    "workplace_name": "Hair by Rita",
+    "city": "Aurora",
+    "state": "CO",
+    "street_address": "5550 S Parker Rd",
+    "suite": "Suite B, Suite 1",
+    "zip_code": "80015",
+    "booking_url": "https://booksy.com/en-us/1606250_hair-by-rita_hair-salon_134779_aurora",
+    "source_url": "https://booksy.com/en-us/1606250_hair-by-rita_hair-salon_134779_aurora",
+    "source_name": "Booksy",
+    "source_checked_at": "2026-10-18T10:04:48Z"
+  },
+  {
+    "name": "Edgar Borunda",
+    "category": "barber",
+    "categories": [
+      "barber"
+    ],
+    "workplace_name": "Edgar B's Cuts",
+    "city": "Monte Vista",
+    "state": "CO",
+    "street_address": "219 Jefferson St",
+    "zip_code": "81144",
+    "booking_url": "https://booksy.com/en-us/177182_edgar-bs-cuts_barber-shop_15186_monte-vista",
+    "source_url": "https://booksy.com/en-us/177182_edgar-bs-cuts_barber-shop_15186_monte-vista",
+    "source_name": "Booksy",
+    "source_checked_at": "2026-10-18T10:04:48Z"
+  },
+  {
+    "name": "Horacio Naranjo",
+    "category": "barber",
+    "categories": [
+      "barber"
+    ],
+    "workplace_name": "Stretchs Barbershop",
+    "city": "Monte Vista",
+    "state": "CO",
+    "street_address": "39 Washington St",
+    "zip_code": "81144",
+    "booking_url": "https://booksy.com/en-us/395060_stretchs-barbershop_barber-shop_15186_monte-vista",
+    "source_url": "https://booksy.com/en-us/395060_stretchs-barbershop_barber-shop_15186_monte-vista",
+    "source_name": "Booksy",
+    "source_checked_at": "2026-10-18T10:04:48Z"
+  },
+  {
+    "name": "Eli Baumgardner",
+    "category": "barber",
+    "categories": [
+      "barber"
+    ],
+    "workplace_name": "BN.Elijah",
+    "city": "Monte Vista",
+    "state": "CO",
+    "street_address": "33 Batterson St",
+    "zip_code": "81144",
+    "booking_url": "https://booksy.com/en-us/1764931_bn-elijah_barber-shop_15186_monte-vista",
+    "source_url": "https://booksy.com/en-us/1764931_bn-elijah_barber-shop_15186_monte-vista",
+    "source_name": "Booksy",
+    "source_checked_at": "2026-10-18T10:04:48Z"
+  },
+  {
+    "name": "Marcos Hernandez",
+    "category": "barber",
+    "categories": [
+      "barber"
+    ],
+    "workplace_name": "Marcos.haircuts",
+    "city": "Center",
+    "state": "CO",
+    "street_address": "611 E 5th St",
+    "zip_code": "81125",
+    "booking_url": "https://booksy.com/en-us/1837905_marcos-haircuts_barber-shop_15195_center",
+    "source_url": "https://booksy.com/en-us/1837905_marcos-haircuts_barber-shop_15195_center",
+    "source_name": "Booksy",
+    "source_checked_at": "2026-10-18T10:04:48Z"
+  },
+  {
+    "name": "Kidus Begashaw",
+    "category": "barber",
+    "categories": [
+      "barber"
+    ],
+    "workplace_name": "KDeuce Blendz",
+    "city": "Alamosa",
+    "state": "CO",
+    "street_address": "1905 Sunset Dr",
+    "zip_code": "81101",
+    "booking_url": "https://booksy.com/en-us/1880800_kdeuce-blendz_barber-shop_14867_alamosa",
+    "source_url": "https://booksy.com/en-us/1880800_kdeuce-blendz_barber-shop_14867_alamosa",
+    "source_name": "Booksy",
+    "source_checked_at": "2026-10-18T10:04:48Z"
+  }
+]
