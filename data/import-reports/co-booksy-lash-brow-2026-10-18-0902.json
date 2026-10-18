@@ -3,8 +3,9 @@
   "production_project": "jbhgeoedwvfxjteyuxum",
   "source_name": "Booksy",
   "source_checked_at": "2026-10-18T15:02:58Z",
-  "status": "validated_pending_import",
+  "status": "blocked_before_import",
   "candidates_prepared": 5,
+  "profiles_imported": 0,
   "production_duplicate_matches_in_discovery": 14,
   "discovery_candidates_rejected_for_stale_ambiguous_unsupported_or_wrong_state_source": 4,
   "cities": ["Aurora", "Denver", "Northglenn", "Westminster"],
@@ -22,8 +23,13 @@
     "remaining_to_5000": 3378,
     "max_profile_id": 1696
   },
-  "production_snapshot_after": null,
-  "blocker": null,
+  "production_snapshot_after": {
+    "total_colorado_profiles": 1624,
+    "verified_sourced_colorado_profiles": 1622,
+    "remaining_to_5000": 3378,
+    "max_profile_id": 1696
+  },
+  "blocker": "Production Supabase validation reads succeeded, but the connector rejected every non-no-op INSERT into public.pro_profiles with INVALID_ARGUMENT. A final readback confirmed zero rows from this batch were inserted.",
   "source_evidence": [
     "https://booksy.com/en-us/1691711_studiomargaretmartinez_nail-salon_134779_aurora",
     "https://booksy.com/en-us/1846549_lashroom-by-michelle_brows-lashes_14866_westminster",
@@ -38,5 +44,11 @@
     "rejected": 0,
     "category_links": 13
   },
-  "import": null
+  "import": {
+    "profiles_inserted": 0,
+    "duplicates": 0,
+    "rejected": 0,
+    "category_links_inserted": 0,
+    "final_batch_rows_verified": 0
+  }
 }
