@@ -70,5 +70,20 @@
     "source_url": "https://booksy.com/en-us/1826909_her-gold-minks-luxury-lash-extensions_brows-lashes_134761_denver",
     "source_name": "Booksy",
     "source_checked_at": "2026-10-18T15:02:58Z"
+  },
+  {
+    "name": "Mazzy",
+    "category": "eyelash_technician",
+    "categories": ["eyelash_technician"],
+    "workplace_name": "Mazzy Beauty",
+    "city": "Fort Collins",
+    "state": "CO",
+    "street_address": "3726 S Timberline Rd",
+    "suite": "Suite 102",
+    "zip_code": "80525",
+    "booking_url": "https://booksy.com/en-us/1127137_mazzy-beauty_brows-lashes_15069_fort-collins",
+    "source_url": "https://booksy.com/en-us/1127137_mazzy-beauty_brows-lashes_15069_fort-collins",
+    "source_name": "Booksy",
+    "source_checked_at": "2026-10-18T15:59:52Z"
   }
 ]
