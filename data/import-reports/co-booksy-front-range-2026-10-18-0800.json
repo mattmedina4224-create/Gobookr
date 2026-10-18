@@ -4,11 +4,11 @@
   "source_name": "Booksy",
   "source_checked_at": "2026-10-18T14:00:05Z",
   "status": "validated_pending_import",
-  "candidates_prepared": 6,
-  "production_duplicate_matches_in_discovery": 6,
-  "discovery_candidates_rejected_for_stale_ambiguous_unsupported_or_wrong_state_source": 11,
-  "cities": ["Colorado Springs", "Lakewood", "Wheat Ridge"],
-  "category_mappings": ["barber", "colorist", "stylist", "tattoo_artist"],
+  "candidates_prepared": 7,
+  "production_duplicate_matches_in_discovery": 8,
+  "discovery_candidates_rejected_for_stale_ambiguous_unsupported_or_wrong_state_source": 12,
+  "cities": ["Colorado Springs", "Lakewood"],
+  "category_mappings": ["barber", "colorist", "stylist"],
   "safeguards": {
     "user_id": null,
     "claim_status": "unclaimed",
@@ -25,19 +25,20 @@
   "production_snapshot_after": null,
   "blocker": null,
   "source_evidence": [
-    "https://booksy.com/en-us/640858_anna-lansdon_tattoo-shop_15045_wheat-ridge",
-    "https://booksy.com/en-us/1280968_weezythewiz_tattoo-shop_134761_denver",
     "https://booksy.com/en-us/966093_zaytaperz_barber-shop_134761_denver",
     "https://booksy.com/en-us/1794856_keith-tuller_barber-shop_14977_colorado-springs",
     "https://booksy.com/en-us/1540028_emma-frye_barber-shop_14977_colorado-springs",
-    "https://booksy.com/en-us/1039484_dametooblurry_barber-shop_14977_colorado-springs"
+    "https://booksy.com/en-us/1039484_dametooblurry_barber-shop_14977_colorado-springs",
+    "https://booksy.com/en-us/529628_white-mike_barber-shop_14977_colorado-springs",
+    "https://booksy.com/en-us/787320_a1-wayz_barber-shop_14977_colorado-springs",
+    "https://booksy.com/en-us/925045_jeremy-the-boxing-barber-katch-a-fade_barber-shop_14977_colorado-springs"
   ],
   "dry_run": {
-    "input": 6,
-    "would_insert": 6,
+    "input": 7,
+    "would_insert": 7,
     "duplicates": 0,
     "rejected": 0,
-    "category_links": 8
+    "category_links": 9
   },
   "import": null
 }
