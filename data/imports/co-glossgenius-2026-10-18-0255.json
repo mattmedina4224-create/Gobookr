@@ -16,54 +16,6 @@
     "source_checked_at": "2026-10-18T08:55:37Z"
   },
   {
-    "name": "Danielle Howard",
-    "category": "waxing_specialist",
-    "categories": [
-      "waxing_specialist",
-      "eyebrow_technician",
-      "eyelash_technician"
-    ],
-    "workplace_name": "Pure Dermal Care",
-    "city": "Arvada",
-    "state": "CO",
-    "booking_url": "https://puredermalcare.glossgenius.com/team",
-    "source_url": "https://puredermalcare.glossgenius.com/team",
-    "source_name": "GlossGenius",
-    "source_checked_at": "2026-10-18T08:55:37Z"
-  },
-  {
-    "name": "Katie Roy",
-    "category": "waxing_specialist",
-    "categories": [
-      "waxing_specialist",
-      "eyebrow_technician",
-      "eyelash_technician"
-    ],
-    "workplace_name": "Pure Dermal Care",
-    "city": "Arvada",
-    "state": "CO",
-    "booking_url": "https://puredermalcare.glossgenius.com/team",
-    "source_url": "https://puredermalcare.glossgenius.com/team",
-    "source_name": "GlossGenius",
-    "source_checked_at": "2026-10-18T08:55:37Z"
-  },
-  {
-    "name": "Lynette Kotsay Beard",
-    "category": "waxing_specialist",
-    "categories": [
-      "waxing_specialist",
-      "eyebrow_technician",
-      "eyelash_technician"
-    ],
-    "workplace_name": "Pure Dermal Care",
-    "city": "Arvada",
-    "state": "CO",
-    "booking_url": "https://puredermalcare.glossgenius.com/team",
-    "source_url": "https://puredermalcare.glossgenius.com/team",
-    "source_name": "GlossGenius",
-    "source_checked_at": "2026-10-18T08:55:37Z"
-  },
-  {
     "name": "Olivia Kotsay Beard",
     "category": "waxing_specialist",
     "categories": [
@@ -81,24 +33,6 @@
   },
   {
     "name": "Alyzah Read",
-    "category": "colorist",
-    "categories": [
-      "colorist",
-      "stylist"
-    ],
-    "workplace_name": "Dark Horse Salons",
-    "city": "Boulder",
-    "state": "CO",
-    "street_address": "2660 Canyon Blvd",
-    "suite": "A-16",
-    "zip_code": "80302",
-    "booking_url": "https://darkhorsesalons.glossgenius.com/team",
-    "source_url": "https://darkhorsesalons.glossgenius.com/team",
-    "source_name": "GlossGenius",
-    "source_checked_at": "2026-10-18T08:55:37Z"
-  },
-  {
-    "name": "Nate Weng",
     "category": "colorist",
     "categories": [
       "colorist",
@@ -180,23 +114,6 @@
     "zip_code": "80234",
     "booking_url": "https://silkskinbar.glossgenius.com/about",
     "source_url": "https://silkskinbar.glossgenius.com/about",
-    "source_name": "GlossGenius",
-    "source_checked_at": "2026-10-18T08:55:37Z"
-  },
-  {
-    "name": "Molly San",
-    "category": "nail_technician",
-    "categories": [
-      "nail_technician"
-    ],
-    "workplace_name": "Lumi Nail Bar",
-    "city": "Thornton",
-    "state": "CO",
-    "street_address": "13758 Grant St",
-    "suite": "Studio 117",
-    "zip_code": "80023",
-    "booking_url": "https://luminailbar.glossgenius.com/team",
-    "source_url": "https://luminailbar.glossgenius.com/team",
     "source_name": "GlossGenius",
     "source_checked_at": "2026-10-18T08:55:37Z"
   }
