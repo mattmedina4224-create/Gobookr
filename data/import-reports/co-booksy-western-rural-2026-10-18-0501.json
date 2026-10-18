@@ -1,0 +1,58 @@
+{
+  "batch_id": "co-booksy-western-rural-2026-10-18-0501",
+  "production_project": "jbhgeoedwvfxjteyuxum",
+  "source_name": "Booksy",
+  "source_checked_at": "2026-10-18T11:01:28Z",
+  "status": "validated_pending_import",
+  "candidates_prepared": 11,
+  "production_duplicate_matches_in_discovery": 0,
+  "discovery_candidates_rejected_for_stale_ambiguous_or_unsupported_source": 5,
+  "cities": [
+    "Fort Morgan",
+    "Glenwood Springs",
+    "Gypsum",
+    "Trinidad"
+  ],
+  "category_mappings": [
+    "barber",
+    "colorist",
+    "eyebrow_technician",
+    "stylist",
+    "waxing_specialist"
+  ],
+  "safeguards": {
+    "user_id": null,
+    "claim_status": "unclaimed",
+    "authored_bios_copied": false,
+    "photos_copied": false,
+    "reviews_copied": false
+  },
+  "production_snapshot_before": {
+    "total_colorado_profiles": 1606,
+    "verified_sourced_colorado_profiles": 1604,
+    "remaining_to_5000": 3396,
+    "max_profile_id": 1678
+  },
+  "production_snapshot_after": null,
+  "blocker": null,
+  "source_evidence": [
+    "https://booksy.com/en-us/950424_aaronblndzz_barber-shop_14998_glenwood-springs",
+    "https://booksy.com/en-us/1671651_giovis-blndz_barber-shop_14998_glenwood-springs",
+    "https://booksy.com/en-us/1265624_egblendz_barber-shop_14998_glenwood-springs",
+    "https://booksy.com/en-us/1171893_mrblendzz_barber-shop_14998_glenwood-springs",
+    "https://booksy.com/en-us/1488295_realife-view-details_barber-shop_14998_glenwood-springs",
+    "https://booksy.com/en-us/1737720_8a-blendz_barber-shop_14998_glenwood-springs",
+    "https://booksy.com/en-us/1676056_aircutz_barber-shop_15136_fort-morgan",
+    "https://booksy.com/en-us/738753_studio-joy-salon_hair-salon_15085_trinidad",
+    "https://booksy.com/en-us/90920_wise-guys-grooming-lounge_barber-shop_15085_trinidad",
+    "https://booksy.com/en-us/1399002_edwinblendzz_barber-shop_14998_glenwood-springs",
+    "https://booksy.com/en-us/1373261_eduardo-salvidres-barber_barber-shop_14963_gypsum"
+  ],
+  "dry_run": {
+    "input": 11,
+    "would_insert": 11,
+    "duplicates": 0,
+    "rejected": 0
+  },
+  "import": null
+}
