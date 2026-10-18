@@ -3,7 +3,7 @@
   "production_project": "jbhgeoedwvfxjteyuxum",
   "source_name": "Booksy",
   "source_checked_at": "2026-10-18T14:00:05Z",
-  "status": "validated_pending_import",
+  "status": "imported",
   "candidates_prepared": 7,
   "production_duplicate_matches_in_discovery": 8,
   "discovery_candidates_rejected_for_stale_ambiguous_unsupported_or_wrong_state_source": 12,
@@ -22,7 +22,12 @@
     "remaining_to_5000": 3385,
     "max_profile_id": 1689
   },
-  "production_snapshot_after": null,
+  "production_snapshot_after": {
+    "total_colorado_profiles": 1624,
+    "verified_sourced_colorado_profiles": 1622,
+    "remaining_to_5000": 3378,
+    "max_profile_id": 1696
+  },
   "blocker": null,
   "source_evidence": [
     "https://booksy.com/en-us/966093_zaytaperz_barber-shop_134761_denver",
@@ -40,5 +45,14 @@
     "rejected": 0,
     "category_links": 9
   },
-  "import": null
+  "import": {
+    "profiles_inserted": 7,
+    "profile_ids": [1690, 1691, 1692, 1693, 1694, 1695, 1696],
+    "duplicates": 0,
+    "rejected": 0,
+    "category_links_inserted": 9,
+    "safeguard_rows_verified": 7,
+    "introduced_duplicate_source_groups": 0,
+    "introduced_duplicate_identity_groups": 0
+  }
 }
