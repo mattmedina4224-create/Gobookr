@@ -2,8 +2,14 @@
   "batch_id": "co-square-booksy-2026-10-17-2000",
   "production_project": "jbhgeoedwvfxjteyuxum",
   "source_checked_at": "2026-10-18T02:15:00Z",
-  "status": "prepared_not_imported",
+  "status": "imported",
   "candidates_prepared": 11,
+  "profiles_imported": 11,
+  "category_rows_imported": 24,
+  "production_ids": {
+    "first": 1628,
+    "last": 1638
+  },
   "source_counts": {
     "Square Appointments": 9,
     "Booksy": 2
@@ -48,13 +54,46 @@
     "photos_copied": false,
     "reviews_copied": false
   },
-  "production_snapshot": {
+  "production_snapshot_before": {
     "total_colorado_profiles": 1559,
     "verified_sourced_colorado_profiles": 1557,
     "remaining_to_5000": 3443,
     "max_profile_id": 1616
   },
-  "blocker": "No active import blocker. Production rejects wedding_services in pro_categories; that unsupported mapping was removed before the import retry.",
+  "production_snapshot_after": {
+    "total_colorado_profiles": 1570,
+    "verified_sourced_colorado_profiles": 1568,
+    "remaining_to_5000": 3432,
+    "max_profile_id": 1638
+  },
+  "production_audit": {
+    "imported_profiles_present": 11,
+    "user_id_null": 11,
+    "claim_status_unclaimed": 11,
+    "complete_booking_and_provenance": 11,
+    "category_rows": 24,
+    "duplicate_booking_url_groups": 0,
+    "duplicate_normalized_name_city_groups": 0
+  },
+  "import_attempts": {
+    "successful_imports": 1,
+    "transaction_rollbacks_before_success": 1,
+    "rollback_reason": "Production pro_categories constraint rejected wedding_services.",
+    "partial_rows_from_failed_attempt": 0,
+    "unused_profile_sequence_ids_due_to_rolled_back_nextval": [
+      1617,
+      1618,
+      1619,
+      1620,
+      1621,
+      1622,
+      1623,
+      1624,
+      1625,
+      1626,
+      1627
+    ]
+  },
   "source_evidence": [
     "https://booksy.com/en-us/1867136_faded-by-matt_barber-shop_15106_grand-junction",
     "https://booksy.com/en-us/1886621_galindathebarber_barber-shop_15106_grand-junction",
@@ -70,5 +109,6 @@
   ],
   "production_constraint_rejections": [
     "wedding_services"
-  ]
+  ],
+  "blocker": "No active batch blocker. Production category constraints exclude wedding_services and makeup_artist; unsupported mappings are omitted without changing the schema."
 }
