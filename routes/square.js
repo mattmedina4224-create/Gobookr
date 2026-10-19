@@ -23,6 +23,8 @@ function safeHttpsUrl(value) {
 }
 
 module.exports = function (router) {
+  require('./availability-demo')(router);
+
   router.get('/dashboard/pro/square/connect', async (ctx) => {
     const profile = requirePro(ctx); if (!profile) return;
     if (!square.configured()) {
