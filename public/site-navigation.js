@@ -22,6 +22,48 @@
     mobile.addEventListener('change', () => setOpen(false));
   }
 
+  // Customer-facing professional profile V3. This progressively enhances the
+  // existing server-rendered profile, so booking, claims, reviews and SEO still
+  // work even if JavaScript is unavailable.
+  if (/^\/pro\/\d+$/.test(window.location.pathname)) {
+    const page = document.querySelector('.profile-page');
+    const grid = page && page.querySelector('.tabs-grid');
+    if (page && grid) {
+      page.classList.add('profile-v3');
+      const css = document.createElement('link');
+      css.rel = 'stylesheet'; css.href = '/profile-v3.css'; document.head.appendChild(css);
+      const main = grid.querySelector('main');
+      const aside = grid.querySelector('aside');
+      const panels = [...grid.querySelectorAll('.panel')];
+      const findPanel = (label) => panels.find((panel) => (panel.querySelector('h2')?.textContent || '').trim().toLowerCase().startsWith(label));
+      const about = findPanel('about');
+      const portfolio = findPanel('portfolio');
+      const reviews = findPanel('reviews');
+      const services = findPanel('services');
+      const social = [...panels].find((panel) => (panel.querySelector('h3')?.textContent || '').trim() === 'Around the web');
+      const updates = main && main.querySelector('section[aria-labelledby="profile-updates"]');
+      const opening = page.querySelector('.profile-opening-banner');
+      const booking = page.querySelector('.profile-book-btn, .profile-mobile-actions .btn[href^="/book/"]');
+      const panes = {};
+      const content = document.createElement('div'); content.className = 'profile-v3-content';
+      ['overview','services','availability','reviews','photos'].forEach((name) => { const pane = document.createElement('section'); pane.className = 'profile-v3-pane' + (name === 'overview' ? ' active' : ''); pane.dataset.pane = name; panes[name] = pane; content.appendChild(pane); });
+      [updates, about, social].filter(Boolean).forEach((node) => panes.overview.appendChild(node));
+      if (services) panes.services.appendChild(services);
+      if (reviews) panes.reviews.appendChild(reviews);
+      if (portfolio) panes.photos.appendChild(portfolio);
+      const availabilityCard = document.createElement('div'); availabilityCard.className = 'profile-v3-card';
+      availabilityCard.innerHTML = '<h2>Availability</h2>' + (opening ? '<p class="profile-v3-note">These openings were posted by the professional today. Confirm the final time when booking.</p>' : '<p>Ready to book? View this professional’s current schedule on their connected booking page.</p>') + (booking ? '<a class="btn block" href="' + booking.getAttribute('href') + '">View availability &amp; book →</a>' : '<div class="booking-unavailable"><strong>Online booking not connected yet</strong><p class="muted">Check back soon.</p></div>');
+      if (opening) panes.availability.appendChild(opening);
+      panes.availability.appendChild(availabilityCard);
+      const tabs = document.createElement('nav'); tabs.className = 'profile-v3-tabs'; tabs.setAttribute('aria-label','Profile sections');
+      const labels = {overview:'Overview',services:'Services',availability:'Availability',reviews:'Reviews',photos:'Photos'};
+      Object.keys(labels).forEach((name) => { const b = document.createElement('button'); b.type='button'; b.className='profile-v3-tab' + (name==='overview'?' active':''); b.dataset.tab=name; b.textContent=labels[name]; b.setAttribute('aria-selected',String(name==='overview')); tabs.appendChild(b); });
+      grid.replaceWith(content); page.insertBefore(tabs, content);
+      tabs.addEventListener('click', (event) => { const b=event.target.closest('[data-tab]'); if(!b)return; const name=b.dataset.tab; tabs.querySelectorAll('.profile-v3-tab').forEach(x=>{x.classList.toggle('active',x===b);x.setAttribute('aria-selected',String(x===b));}); Object.entries(panes).forEach(([key,pane])=>pane.classList.toggle('active',key===name)); });
+      if (booking) { const sticky=document.createElement('div'); sticky.className='profile-v3-sticky-book'; sticky.innerHTML='<a class="btn" href="'+booking.getAttribute('href')+'">Book Appointment</a>'; page.appendChild(sticky); }
+    }
+  }
+
   // Keep claim/pro authentication behavior untouched. The plain /login entry is
   // the customer-facing sign-in experience, so give it a focused discovery UI.
   if (window.location.pathname !== '/login' || new URLSearchParams(window.location.search).has('claim')) return;
