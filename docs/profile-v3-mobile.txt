@@ -1,0 +1,1 @@
+Mobile uses horizontally scrollable pill tabs and a fixed bottom booking CTA when a booking link exists.
