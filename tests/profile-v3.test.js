@@ -1,0 +1,13 @@
+'use strict';
+const fs = require('fs');
+const path = require('path');
+const assert = require('assert');
+const js = fs.readFileSync(path.join(__dirname, '..', 'public', 'site-navigation.js'), 'utf8');
+const css = fs.readFileSync(path.join(__dirname, '..', 'public', 'profile-v3.css'), 'utf8');
+assert(js.includes("/^\\/pro\\/\\d+$/.test(window.location.pathname)"), 'V3 must only enhance public numeric pro profiles');
+for (const tab of ['overview','services','availability','reviews','photos']) assert(js.includes("'" + tab + "'"), 'missing ' + tab + ' tab');
+assert(js.includes('View availability &amp; book'), 'availability must preserve booking handoff');
+assert(js.includes('progressively enhances'), 'profile must retain server-rendered fallback');
+assert(css.includes('--pv3-navy:#0b2945'), 'V3 must use GoBookr navy');
+assert(css.includes('.profile-v3-sticky-book'), 'mobile booking CTA missing');
+console.log('profile-v3 contract ok');

@@ -1,0 +1,1 @@
+Live provider availability is not claimed until a provider API is connected. Existing pro-posted openings remain clearly labeled.
