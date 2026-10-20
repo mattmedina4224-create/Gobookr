@@ -8,6 +8,7 @@ assert(js.includes("/^\\/pro\\/\\d+$/.test(window.location.pathname)"), 'V3 must
 for (const tab of ['overview','services','availability','reviews','photos']) assert(js.includes("'" + tab + "'"), 'missing ' + tab + ' tab');
 assert(js.includes('View availability &amp; book'), 'availability must preserve booking handoff');
 assert(js.includes('progressively enhances'), 'profile must retain server-rendered fallback');
-assert(css.includes('--pv3-navy:#0b2945'), 'V3 must use GoBookr navy');
+assert(css.includes('--pv3-brand:#4f7d9b'), 'V3 must use approved GoBookr dusty blue');
+assert(css.includes('--pv3-green:#16844a'), 'V3 must reserve green for trust and availability states');
 assert(css.includes('.profile-v3-sticky-book'), 'mobile booking CTA missing');
 console.log('profile-v3 contract ok');
