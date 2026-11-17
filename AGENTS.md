@@ -95,10 +95,12 @@ The intended ownership flow is:
 - Preserve the existing Stripe billing flow unless the task explicitly calls for changing it.
 
 ## UI and brand guardrails
-- Brand colors: navy `#0B1F3A`, white, bright blue `#2563EB`.
-- Visual direction: clean, modern, approachable, with typography similar in feel to ChatGPT rather than an industrial/dark aesthetic.
+- Design system: `public/gobookr-ui.css` is the single source of truth for color, type, spacing and components. It loads last on every page. Add new UI with its tokens and components instead of hard-coded colors or one-off inline styles.
+- Brand palette (2026 redesign): Midnight `#101828` (text, dark sections), Cloud `#F8FAFC` (light background), Iris `#6558F5` (buttons, links, active states only), Mint `#18B6A4` (sparing: verified/open-now signals), Silver `#E9EAF2` (borders, subtle surfaces), white (cards). Use the `--gb-*` variables, not hex values.
+- Typography: Inter (UI/body) and Inter Display (headlines), self-hosted in `public/fonts/` (OFL). Sentence-case labels; no tracked ALL-CAPS eyebrows.
+- Visual direction: premium, minimal, editorial technology marketplace. Most real profiles have no photos or reviews, so every card and profile must look finished without them.
 - Existing approved homepage and mobile header should be preserved unless the task explicitly requests a redesign.
-- The approved logo/favicon concept is a navy square with a white calendar grid, one bright-blue date square, and GoBookr branding.
+- The approved logo/favicon concept is a Midnight square with a white calendar grid and one Iris date square (`public/gobookr-mark-2026.svg`), with the GoBookr wordmark.
 - Keep the favicon consistent across pages.
 - Mobile usability matters; do not treat mobile as an afterthought.
 - Avoid unrelated visual changes while fixing backend/performance issues.
