@@ -29,7 +29,7 @@
     }
     const canvas = document.createElement('canvas'); canvas.width = 1080; canvas.height = 1920;
     const c = canvas.getContext('2d'); if (!c) throw new Error('canvas');
-    c.fillStyle = '#0b1f3a'; c.fillRect(0, 0, 1080, 1920);
+    c.fillStyle = '#101828'; c.fillRect(0, 0, 1080, 1920);
     if (image) {
       const scale = Math.max(1080 / image.naturalWidth, 1920 / image.naturalHeight);
       const w = image.naturalWidth * scale, h = image.naturalHeight * scale;
@@ -52,7 +52,7 @@
     for (const line of lines) { c.fillText(line, 70, y); y += font + 12; }
     c.font = '700 28px sans-serif';
     slots.slice(0, 3).forEach((line, i) => c.fillText(String(line), 70, 1660 + i * 36, 940));
-    c.fillStyle = '#fff'; c.fillRect(70, 1780, 420, 72); c.fillStyle = '#0b1f3a'; c.font = '700 32px sans-serif'; c.fillText('Book on GoBookr', 95, 1826);
+    c.fillStyle = '#fff'; c.fillRect(70, 1780, 420, 72); c.fillStyle = '#101828'; c.font = '700 32px sans-serif'; c.fillText('Book on GoBookr', 95, 1826);
     return new Promise((resolve, reject) => { try { canvas.toBlob(blob => blob ? resolve(blob) : reject(new Error('render')), 'image/png'); } catch (_) { reject(new Error('photo')); } });
   }
 

@@ -4,23 +4,57 @@ const db = require('../db');
 const { favoriteIds, favoriteControl } = require('../lib/favorites');
 const { layout } = require('../lib/layout');
 const { send, flashFromQuery } = require('../lib/http');
-const { escapeHtml, slugCategory, stars } = require('../lib/util');
+const { escapeHtml, slugCategory } = require('../lib/util');
 const { hydratePros } = require('../lib/pro-listing-data');
 const { PROFESSIONAL_CATEGORIES } = require('../lib/pro-categories');
 
-const CATEGORIES = [{ value: '', label: 'All services' }, ...PROFESSIONAL_CATEGORIES.map((item) => ({ value: item.value, label: item.plural }))];
+const ICON = {
+  search: '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="6.5" stroke="currentColor" stroke-width="2"/><path d="m20 20-4.2-4.2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>',
+  check: '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 12.5 4.2 4.2L19 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+  arrow: '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14m-5-5 5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+  star: '<svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.8-5.2 2.8 1-5.8-4.3-4.1 5.9-.9z"/></svg>',
+};
+
+// Photo categories for the "Browse by service" rail. Remaining categories are chips below.
+const CATALOG_VALUES = new Set(PROFESSIONAL_CATEGORIES.map((item) => item.value));
+const PHOTO_CATEGORIES = [
+  { value: 'barber', label: 'Barbers', sub: 'Fades, cuts, beards', img: '/images/category-barber-v1.webp', alt: 'A barber finishing a clean fade haircut' },
+  { value: 'stylist', label: 'Hairstylists', sub: 'Cuts, color, styling', img: '/images/category-hair-v1.webp', alt: 'Hair styling in a bright salon' },
+  { value: 'nail_technician', label: 'Nails', sub: 'Manicures, nail art', img: '/images/category-nails-stock-v2.webp', alt: 'Close-up of glossy red nails during a professional manicure' },
+  { value: 'eyelash_technician', label: 'Lashes & brows', sub: 'Extensions, lifts, shaping', img: '/images/category-lashes-stock-v1.webp', alt: "A beauty professional grooming a client's brows" },
+  { value: 'tattoo_artist', label: 'Tattoo artists', sub: 'Fine line to full sleeves', img: '/images/category-tattoos-stock-v1.webp', alt: 'A tattoo artist working with blue gloves' },
+  { value: 'massage_therapist', label: 'Massage', sub: 'Deep tissue, relaxation', img: '/images/category-massage-stock-v1.webp', alt: 'A professional providing a neck and shoulder massage in a spa' },
+].filter((item) => CATALOG_VALUES.has(item.value)); // only link categories the canonical catalog supports
+
+const POPULAR_SPECIALTIES = ['Skin fade', 'Balayage', 'Russian manicure', 'Lash extensions', 'Brow lamination', 'Silk press', 'Deep tissue massage', 'Fine-line tattoo', 'Bridal makeup', 'Beard trim'];
+
+function initials(name) {
+  return String(name || '').trim().split(/\s+/).filter(Boolean).slice(0, 2).map((part) => part[0].toUpperCase()).join('') || 'G';
+}
 
 function homeCard(pro, ctx, savedIds) {
-  const photo = pro.coverPhoto
-    ? `<img class="home-pro-photo" src="${escapeHtml(pro.coverPhoto.image_url)}" alt="${escapeHtml(pro.coverPhoto.caption || pro.business_name)}" loading="lazy" />`
-    : `<div class="home-pro-photo home-pro-placeholder">${escapeHtml((pro.business_name || 'G').slice(0, 1).toUpperCase())}</div>`;
-  const rating = pro.rating != null
-    ? `<span class="home-pro-rating">${stars(pro.rating)} <b>${pro.rating}</b> <span>(${pro.reviewCount})</span></span>`
-    : `<span class="home-pro-new">New on GoBookr</span>`;
+  const photoUrl = pro.profile_photo_url || (pro.coverPhoto && pro.coverPhoto.image_url) || '';
+  const photo = photoUrl
+    ? `<img src="${escapeHtml(photoUrl)}" alt="${escapeHtml(pro.business_name)}" loading="lazy" decoding="async" />`
+    : `<span aria-hidden="true">${escapeHtml(initials(pro.business_name))}</span>`;
   const categories = (pro.categories || []).slice(0, 3).map(slugCategory);
-  const specialtyLine = categories.length ? categories.join(' · ') : 'Professional';
-  const extraSpecialties = (pro.categories || []).length > 3 ? ` +${pro.categories.length - 3}` : '';
-  return `<div class="favorite-card home-favorite-card"><a class="home-pro-card" href="/pro/${pro.id}">${photo}<div class="home-pro-info"><h3>${escapeHtml(pro.business_name)}</h3><p class="home-pro-specialties">${escapeHtml(specialtyLine + extraSpecialties)}</p><p class="home-pro-location">${escapeHtml(pro.city)}, ${escapeHtml(pro.state)}</p>${rating}</div></a>${favoriteControl(pro, ctx, savedIds.has(Number(pro.id)))}</div>`;
+  const extraSpecialties = (pro.categories || []).length > 3 ? `<span>+${pro.categories.length - 3}</span>` : '';
+  const tags = categories.length ? categories.map((label) => `<span>${escapeHtml(label)}</span>`).join('') + extraSpecialties : '<span>Professional</span>';
+  const rating = pro.rating != null
+    ? `<span class="gb-rating"><span class="gb-star">${ICON.star}</span>${pro.rating} <span class="muted">(${pro.reviewCount})</span></span>`
+    : `<span class="gb-new">New on GoBookr</span>`;
+  const place = [pro.city, pro.state].filter(Boolean).join(', ');
+  const sub = pro.workplace_name && pro.workplace_name !== pro.business_name ? pro.workplace_name : place;
+  return `<div class="favorite-card gb-pro-card-wrap"><a class="gb-pro-card" href="/pro/${pro.id}"><div class="gb-pro-media${photoUrl ? '' : ' gb-monogram'}">${photo}</div><div class="gb-pro-body"><h3>${escapeHtml(pro.business_name)}</h3><p class="gb-pro-sub">${escapeHtml(sub || 'GoBookr professional')}</p><div class="gb-pro-tags">${tags}</div><div class="gb-pro-foot">${rating}${place && sub !== place ? `<span>${escapeHtml(place)}</span>` : ''}</div></div></a>${favoriteControl(pro, ctx, savedIds.has(Number(pro.id)))}</div>`;
+}
+
+function businessCard(shop) {
+  const place = [shop.city, shop.state].filter(Boolean).join(', ');
+  return `<a class="gb-biz-card" href="/shop/${shop.id}"><span class="gb-monogram" aria-hidden="true">${escapeHtml(initials(shop.name))}</span><h3>${escapeHtml(shop.name)}</h3><p>${escapeHtml(place)}</p></a>`;
+}
+
+function safeAll(sql, ...args) {
+  try { return db.prepare(sql).all(...args); } catch (err) { console.error('Homepage section unavailable', err && err.message); return []; }
 }
 
 module.exports = function (router) {
@@ -31,291 +65,72 @@ module.exports = function (router) {
     )
       .sort((a, b) => (b.rating || 0) - (a.rating || 0))
       .slice(0, 6);
+    const businesses = safeAll('SELECT id, name, city, state FROM shops ORDER BY id DESC LIMIT 4');
+    const cities = safeAll("SELECT city, state, COUNT(*) AS total FROM pro_profiles WHERE city <> '' GROUP BY city, state ORDER BY total DESC, city ASC LIMIT 10");
 
     const savedIds = favoriteIds(ctx, featured);
     const body = `
-<style>
-  .home-shell { background:#fff; color:#11131c; }
-  .home-hero {
-    background:var(--paper);
-    border-bottom:1px solid #edf0f6;
-    padding:64px 0 48px;
-  }
-  .home-eyebrow {
-    margin:0 0 20px;
-    color:var(--ink-soft);
-    font-size:.8rem;
-    font-weight:700;
-    letter-spacing:.18em;
-    text-transform:uppercase;
-  }
-  .home-hero h1 {
-    max-width:720px;
-    margin:0 0 22px;
-    font-size:clamp(2.5rem,5vw,3.75rem);
-    line-height:1.08;
-    letter-spacing:-.035em;
-    color:#11131c;
-  }
-  .home-hero .lede {
-    max-width:620px;
-    margin:0;
-    color:#50586a;
-    font-size:1.08rem;
-    line-height:1.58;
-  }
-
-  .home-search-card {
-    max-width:850px;
-    margin-top:34px;
-    padding:16px;
-    border:1px solid var(--paper-line);
-    border-radius:12px;
-    background:var(--paper);
-    box-shadow:var(--shadow-sm);
-  }
-  .home-search-mode { display:flex; gap:8px; margin:0 0 14px; padding:4px; width:max-content; max-width:100%; border-radius:999px; background:#f3f5f8; }
-  .home-search-mode a { padding:9px 16px; border-radius:999px; color:#596174; font-size:.88rem; font-weight:700; }
-  .home-search-mode a.active { background:var(--paper); color:var(--brand); box-shadow:none; }
-  .home-pro-claim-entry { max-width:850px; margin-top:22px; padding:16px 18px; border:1px solid #e2e7f0; border-radius:18px; background:#f6f8fc; color:#4c566b; font-size:.9rem; line-height:1.4; }
-  .home-pro-claim-entry strong { color:#14264c; }
-  .home-claim-form { display:flex; gap:10px; margin-top:12px; }
-  .home-claim-input { flex:1; min-width:0; height:48px; padding:0 15px; border:1px solid #d9e0eb; border-radius:12px; background:#fff; color:#171b26; font:inherit; }
-  .home-claim-input:focus { outline:0; border-color:#9fbae9; box-shadow:0 0 0 3px rgba(78,126,214,.09); }
-  .home-claim-button { min-height:48px; padding:0 20px; border:0; border-radius:12px; background:#14264c; color:#fff; font-weight:700; white-space:nowrap; }
-  .home-pro-entry-actions { display:flex; align-items:center; gap:12px; margin-top:12px; flex-wrap:wrap; }
-  .home-create-profile { display:inline-flex; min-height:46px; align-items:center; justify-content:center; padding:0 18px; border:1px solid #b9c8e1; border-radius:12px; background:#fff; color:#14264c; font-weight:700; }
-  .home-create-profile:hover { background:#eef4ff; }
-  .home-search-card form {
-    display:grid;
-    grid-template-columns:1.15fr 1.2fr .9fr auto;
-    gap:0;
-    align-items:center;
-  }
-  .home-field {
-    min-height:58px;
-    display:flex;
-    align-items:center;
-    gap:12px;
-    padding:0 17px;
-    border:1px solid #dfe4ed;
-    border-radius:8px;
-    background:#fff;
-  }
-  .home-field svg { width:23px; height:23px; flex:0 0 23px; color:#11131c; }
-  .home-field select,
-  .home-field input {
-    width:100%;
-    min-width:0;
-    height:54px;
-    border:0 !important;
-    outline:0;
-    padding:0 !important;
-    background:transparent !important;
-    color:#171b26;
-    font:inherit;
-    box-shadow:none !important;
-  }
-  .home-field input::placeholder { color:var(--ink-faint); }
-  .home-field:focus-within {
-    border-color:#b7ccf7;
-    box-shadow:0 0 0 3px rgba(78,126,214,.09);
-  }
-  .home-search-card .btn {
-    min-height:58px;
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    gap:10px;
-    padding:0 30px;
-    border-radius:8px;
-    background:var(--brand);
-    color:#fff;
-    font-weight:700;
-    border:0;
-    box-shadow:none;
-    white-space:nowrap;
-  }
-  .home-search-card .btn:hover { transform:translateY(-1px); }
-
-  .home-trust-row {
-    max-width:850px;
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:0;
-    margin-top:22px;
-  }
-  .home-trust-item {
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:10px;
-    padding:4px 16px;
-    color:#34405b;
-    font-size:.89rem;
-    font-weight:700;
-  }
-  .home-trust-item + .home-trust-item { border-left:1px solid #e6eaf1; }
-  .home-trust-icon {
-    width:38px;
-    height:38px;
-    display:grid;
-    place-items:center;
-    border-radius:50%;
-    background:var(--paper-soft);
-    color:var(--ink-soft);
-  }
-  .home-trust-icon svg { width:21px; height:21px; }
-
-  .home-search-hint { max-width:980px; margin:10px 0 0; color:var(--ink-faint); font-size:.78rem; }\n\n  .home-pills { display:flex; flex-wrap:wrap; gap:10px; margin-top:24px; }
-  .home-pills a {
-    padding:8px 14px;
-    border:1px solid #e3e7ee;
-    border-radius:8px;
-    background:#fff;
-    color:#41495e;
-    font-size:.86rem;
-    font-weight:700;
-  }
-
-  .home-section { padding:52px 0 58px; background:#fff; }
-  .home-section-head { display:flex; align-items:center; justify-content:space-between; gap:16px; margin-bottom:20px; }
-  .home-section-kicker { margin:0 0 5px; color:var(--ink-faint); font-size:.75rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; }\n  .home-section-head h2 { margin:0; font-size:1.75rem; letter-spacing:-.03em; }
-  .home-see-all { color:#215ca6; font-weight:750; }
-  .home-pro-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; }
-  .home-pro-card { overflow:hidden; transition:transform .16s ease,box-shadow .16s ease; border:1px solid #e5e8ef; border-radius:12px; background:#fff; box-shadow:none; }
-  .home-pro-card:hover { transform:translateY(-2px); box-shadow:0 16px 34px -28px rgba(25,40,80,.5); }\n  .home-pro-photo { width:100%; aspect-ratio:1.45; object-fit:cover; background:#eef1f7; }
-  .home-pro-placeholder { display:flex; align-items:center; justify-content:center; color:var(--ink-soft); background:var(--paper-soft); font-size:2rem; font-weight:700; }
-  .home-pro-info { padding:15px; }
-  .home-pro-info h3 { margin:0 0 4px; font-size:1rem; }
-  .home-pro-info p { margin:0 0 8px; font-size:.86rem; }
-  .home-pro-rating { color:#d28a20; font-size:.84rem; }
-  .home-pro-rating b,.home-pro-rating span { color:#555b6e; }
-  .home-pro-new { color:var(--ink-faint); font-size:.84rem; }
-
-  .home-mobile-menu-button,.home-mobile-menu { display:none; }
-
-  @media (max-width:900px) {
-    .home-search-card form { grid-template-columns:1fr 1fr; }
-    .home-search-card .btn { grid-column:1 / -1; }
-  }
-
-  @media (max-width:720px) {
-    body { background:#fff; }
-    .site-header { position:static; }
-    .site-header .container {
-      height:68px !important;
-      min-height:68px !important;
-      padding:0 18px !important;
-      display:flex !important;
-      align-items:center !important;
-      justify-content:space-between !important;
-      flex-wrap:nowrap !important;
-      gap:12px !important;
-    }
-    .brand {
-      width:156px !important;
-      height:42px !important;
-      flex:0 0 156px !important;
-    }
-    .home-hero { padding:42px 0 38px; }
-    .home-hero .container { padding:0 18px; }
-    .home-eyebrow { margin-bottom:16px; font-size:.68rem; letter-spacing:.16em; }
-    .home-hero h1 { font-size:2.25rem; line-height:1.1; margin-bottom:16px; max-width:360px; }
-    .home-hero .lede { font-size:1rem; line-height:1.52; }
-
-    .home-search-card { margin-top:26px; padding:10px; border-radius:16px; box-shadow:none; }
-    .home-pro-claim-entry { margin-top:24px; padding:15px; border-radius:16px; }
-    .home-claim-form { display:grid; grid-template-columns:1fr; gap:9px; }
-    .home-claim-input,.home-claim-button { width:100%; }
-    .home-pro-entry-actions { display:grid; grid-template-columns:1fr; }
-    .home-create-profile { width:100%; }
-    .home-search-mode { width:100%; display:grid; grid-template-columns:1fr 1fr; margin-bottom:10px; }
-    .home-search-mode a { text-align:center; padding:10px 8px; font-size:.86rem; }
-    .home-search-card form { display:grid !important; grid-template-columns:1fr !important; gap:10px !important; }
-    .home-field { min-height:58px; padding:0 14px; border-radius:0; }\n    .home-field + .home-field { border-left:0; border-top:1px solid #e8ebf0; }
-    .home-field select,.home-field input { height:54px; font-size:.98rem; }
-    .home-search-card .btn { width:100%; min-height:52px; margin-top:4px; border-radius:11px; font-size:1rem; }\n    .home-search-hint { display:none; }
-
-    .home-trust-row { margin-top:20px; }
-    .home-trust-item { gap:8px; padding:4px 8px; font-size:.76rem; line-height:1.15; }
-    .home-trust-icon { width:34px; height:34px; flex:0 0 34px; }
-    .home-trust-icon svg { width:18px; height:18px; }
-
-    .home-pills { display:none; }
-    .home-section { padding:40px 0 46px; }
-    .home-section .container { padding:0 18px; }
-    .home-section-head { margin-bottom:16px; }
-    .home-section-head h2 { font-size:1.42rem; }
-    .home-see-all { font-size:.9rem; }
-    .home-pro-grid { display:flex; gap:12px; overflow-x:auto; padding-bottom:6px; scroll-snap-type:x proximity; }
-    .home-pro-card { min-width:76vw; scroll-snap-align:start; }
-  }
-
-  @media (max-width:390px) {
-    .brand { width:148px !important; flex-basis:148px !important; }
-    .home-hero h1 { font-size:2.125rem; }
-    .home-trust-item { font-size:.72rem; }
-  }
-</style>
-<div class="home-shell">
-  <section class="home-hero">
+<div class="gb-home home-shell">
+  <section class="gb-hero home-hero" aria-labelledby="home-title">
     <div class="container">
-      <p class="home-eyebrow">Real people. Real services. Near you.</p>
-      <h1>Find your next favorite beauty pro.</h1>
-      <p class="lede">Search local hairstylists, makeup artists, wedding specialists, barbers, and other beauty and wellness professionals—see their work and book with confidence.</p>
+      <div class="gb-hero-copy">
+        <h1 id="home-title">Find the pro you’ll keep going back to.</h1>
+        <p class="lede">Compare local hairstylists, makeup artists, wedding specialists, barbers, nail and lash artists, and more. See their work, then book on the scheduling site they already use.</p>
 
-      <div class="home-search-card" id="find">
-        <div class="home-search-mode" aria-label="What are you looking for?"><a class="active" href="/#find">Find a professional</a><a href="/search?type=businesses">Find a business</a></div>
-        <form method="GET" action="/search">
-          <label class="home-field">
-            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="4" width="6" height="6" rx="1" stroke="currentColor" stroke-width="2"/><rect x="14" y="4" width="6" height="6" rx="1" stroke="currentColor" stroke-width="2"/><rect x="4" y="14" width="6" height="6" rx="1" stroke="currentColor" stroke-width="2"/><rect x="14" y="14" width="6" height="6" rx="1" stroke="currentColor" stroke-width="2"/></svg>
-            <select name="category" aria-label="Service">${CATEGORIES.map((c) => `<option value="${c.value}">${c.label}</option>`).join('')}</select>
-          </label>
-          <label class="home-field">
-            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="10" r="2.4" stroke="currentColor" stroke-width="2"/></svg>
-            <input type="text" name="city" maxlength="100" placeholder="City or ZIP" aria-label="City or ZIP" />
-          </label>
-          <label class="home-field">
-            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="2"/><path d="M5 21c0-4 3-7 7-7s7 3 7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-            <input type="text" name="q" maxlength="100" placeholder="Service, specialty, or name" aria-label="Service, specialty, or professional name" />
-          </label>
-          <button class="btn" type="submit" aria-label="Search">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="m20 20-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-            <span>Search</span>
-          </button>
-        </form>
+        <div class="gb-search home-search-card" id="find">
+          <form class="gb-search-form" method="GET" action="/search" role="search">
+            <div class="gb-search-field">
+              <label for="home-q">What</label>
+              <input id="home-q" type="text" name="q" maxlength="100" placeholder="Service, specialty, or name" aria-label="Service, specialty, or professional name" autocomplete="off" />
+            </div>
+            <div class="gb-search-field">
+              <label for="home-city">Where</label>
+              <input id="home-city" type="text" name="city" maxlength="100" placeholder="City or ZIP" aria-label="City or ZIP" autocomplete="address-level2" />
+            </div>
+            <button class="btn gb-search-submit" type="submit">${ICON.search}<span>Search</span></button>
+          </form>
+        </div>
+        <p class="gb-search-hint home-search-hint">Try a service or specialty like <a href="/search?q=Russian%20manicure">Russian manicure</a>, <a href="/search?q=skin%20fade">skin fade</a>, or <a href="/search?q=balayage">balayage</a>, then add your location.</p>
+        <a class="home-openings-cta gb-openings" href="/openings"><span class="gb-live-dot" aria-hidden="true"></span><strong>Need something today?</strong><span>See appointments professionals just opened up</span></a>
+
+        <ul class="gb-hero-proof" aria-label="Why use GoBookr">
+          <li>${ICON.check}Real local professionals</li>
+          <li>${ICON.check}Book on their own scheduling site</li>
+          <li>${ICON.check}Free for customers</li>
+        </ul>
       </div>
 
-      <link rel="stylesheet" href="/specialty-search.css"><a class="specialty-search-launch" href="/search?type=professionals" data-specialty-open aria-label="Open specialty search" aria-controls="specialty-search" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.5 14L3 21l4.3-1.3A9 9 0 1 0 12 3Z" fill="currentColor"/><circle cx="8" cy="12" r="1" fill="white"/><circle cx="12" cy="12" r="1" fill="white"/><circle cx="16" cy="12" r="1" fill="white"/></svg></a><dialog id="specialty-search" aria-labelledby="specialty-search-title"><header class="specialty-chat-header"><span class="specialty-chat-avatar" aria-hidden="true">G</span><span>GoBookr<span class="specialty-chat-subtitle">Your specialty finder</span></span><button class="specialty-search-close" type="button" aria-label="Close specialty search">×</button></header><div class="specialty-chat-body"><h2 id="specialty-search-title">What specialty are you looking for?</h2><p>Tell us what you have in mind—razor fades, balayage, black and gray realism, or something else.</p><form method="GET" action="/search"><input type="hidden" name="type" value="professionals"><label class="specialty-input-label" for="specialty-query">Your specialty</label><input id="specialty-query" role="combobox" aria-autocomplete="list" aria-controls="specialty-suggestions" aria-expanded="false" autocomplete="off" name="q" type="search" maxlength="100" required placeholder="Type your specialty…"><div id="specialty-suggestions" class="specialty-suggestions" role="listbox" aria-label="Specialty suggestions" hidden></div><span id="specialty-suggestions-status" class="specialty-suggestions-status" role="status" aria-live="polite"></span><label class="specialty-input-label" for="specialty-city">City or ZIP</label><input id="specialty-city" name="city" maxlength="100" placeholder="Where are you looking?"><button class="btn" type="submit">Show matching pros <span aria-hidden="true">→</span></button></form><p class="specialty-chat-note">Find someone who specializes in your style.</p></div></dialog><script src="/specialty-search.js" defer></script><script src="/specialty-suggestions.js" defer></script><script src="/specialty-autocomplete.js" defer></script>
-      <p class="home-search-hint">Try a service or specialty like “Russian manicure,” “skin fade,” or “balayage,” then add your location.</p><a class="home-openings-cta" href="/openings"><strong>Need something today?</strong><span>See appointments professionals just opened up →</span></a>\n      <div class="home-trust-row" aria-label="Why use GoBookr">
-        <div class="home-trust-item"><span class="home-trust-icon"><svg viewBox="0 0 24 24" fill="none"><path d="m12 3 7 3v5c0 4.4-2.8 8.2-7 10-4.2-1.8-7-5.6-7-10V6l7-3Z" stroke="currentColor" stroke-width="2"/><path d="m9 12 2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Verified professionals</span></div>
-        <div class="home-trust-item"><span class="home-trust-icon"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="5" width="16" height="15" rx="2" stroke="currentColor" stroke-width="2"/><path d="M8 3v4M16 3v4M4 10h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><span>Easy booking</span></div>
-        <div class="home-trust-item"><span class="home-trust-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="10" r="2.3" stroke="currentColor" stroke-width="2"/></svg></span><span>Local results</span></div>
-      </div>
-
-      <div class="home-pro-claim-entry">
-        <strong>Are you a professional?</strong> Already listed? Find and claim your profile. Not on GoBookr yet? Create a new profile from scratch.
-        <form class="home-claim-form" method="GET" action="/search">
-          <input type="hidden" name="type" value="professionals" />
-          <input class="home-claim-input" type="search" name="q" maxlength="100" placeholder="Search your name or business" aria-label="Search your professional profile" />
-          <button class="home-claim-button" type="submit">Find &amp; claim my profile</button>
-        </form>
-        <div class="home-pro-entry-actions">
-          <a class="home-create-profile" href="/join">Create a new profile — 30 days free</a>
-          <span class="muted">$20/month after your free trial. Cancel anytime.</span>
+      <div class="gb-mosaic" aria-hidden="true">
+        <div class="gb-mosaic-weekdays"><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span></div>
+        <div class="gb-mosaic-grid">
+          <div class="gb-mosaic-cell m-a"><img src="/images/category-barber-v1.webp" alt="" width="720" height="720" fetchpriority="high" decoding="async" /><span class="gb-mosaic-label">Barbers</span></div>
+          <div class="gb-mosaic-cell is-day m-b">2</div>
+          <div class="gb-mosaic-cell m-c"><img src="/images/category-nails-stock-v2.webp" alt="" width="720" height="480" decoding="async" /><span class="gb-mosaic-label">Nails</span></div>
+          <div class="gb-mosaic-cell is-booked m-d"><span class="gb-day">9</span><div><strong>Skin fade</strong><span class="gb-booked-time">Booked, 2:30 PM</span></div></div>
+          <div class="gb-mosaic-cell is-day m-e">10</div>
+          <div class="gb-mosaic-cell m-f"><img src="/images/category-lashes-stock-v1.webp" alt="" width="720" height="720" decoding="async" /><span class="gb-mosaic-label">Brows</span></div>
+          <div class="gb-mosaic-cell m-g"><img src="/images/category-hair-v1.webp" alt="" width="720" height="720" decoding="async" /><span class="gb-mosaic-label">Color</span></div>
+          <div class="gb-mosaic-cell is-day m-h">17</div>
+          <div class="gb-mosaic-cell is-day m-i">22</div>
+          <div class="gb-mosaic-cell m-j"><img src="/images/category-massage-stock-v1.webp" alt="" width="720" height="480" decoding="async" /><span class="gb-mosaic-label">Massage</span></div>
+          <div class="gb-mosaic-cell m-k"><img src="/images/category-tattoos-stock-v1.webp" alt="" width="720" height="481" decoding="async" /><span class="gb-mosaic-label">Tattoo</span></div>
         </div>
       </div>
+    </div>
+  </section>
 
-      <div class="home-pills">
-        <a href="/search?category=barber">Barbers</a>
-        <a href="/search?category=stylist">Hairstylists</a>
+  <link rel="stylesheet" href="/specialty-search.css"><a class="specialty-search-launch" href="/search?type=professionals" data-specialty-open aria-label="Open specialty search" aria-controls="specialty-search" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.5 14L3 21l4.3-1.3A9 9 0 1 0 12 3Z" fill="currentColor"/><circle cx="8" cy="12" r="1" fill="white"/><circle cx="12" cy="12" r="1" fill="white"/><circle cx="16" cy="12" r="1" fill="white"/></svg></a><dialog id="specialty-search" aria-labelledby="specialty-search-title"><header class="specialty-chat-header"><span class="specialty-chat-avatar" aria-hidden="true">G</span><span>GoBookr<span class="specialty-chat-subtitle">Your specialty finder</span></span><button class="specialty-search-close" type="button" aria-label="Close specialty search">×</button></header><div class="specialty-chat-body"><h2 id="specialty-search-title">What specialty are you looking for?</h2><p>Tell us what you have in mind—razor fades, balayage, black and gray realism, or something else.</p><form method="GET" action="/search"><input type="hidden" name="type" value="professionals"><label class="specialty-input-label" for="specialty-query">Your specialty</label><input id="specialty-query" role="combobox" aria-autocomplete="list" aria-controls="specialty-suggestions" aria-expanded="false" autocomplete="off" name="q" type="search" maxlength="100" required placeholder="Type your specialty…"><div id="specialty-suggestions" class="specialty-suggestions" role="listbox" aria-label="Specialty suggestions" hidden></div><span id="specialty-suggestions-status" class="specialty-suggestions-status" role="status" aria-live="polite"></span><label class="specialty-input-label" for="specialty-city">City or ZIP</label><input id="specialty-city" name="city" maxlength="100" placeholder="Where are you looking?"><button class="btn" type="submit">Show matching pros <span aria-hidden="true">→</span></button></form><p class="specialty-chat-note">Find someone who specializes in your style.</p></div></dialog><script src="/specialty-search.js" defer></script><script src="/specialty-suggestions.js" defer></script><script src="/specialty-autocomplete.js" defer></script>
+
+  <section class="gb-section" aria-labelledby="home-cats-title">
+    <div class="container">
+      <div class="gb-section-head"><div><h2 id="home-cats-title">Browse by service</h2><p>Start with what you need. Every result is a real, local professional.</p></div><a class="gb-link" href="/specialties">All services &amp; specialties ${ICON.arrow}</a></div>
+      <div class="gb-cat-rail">
+        ${PHOTO_CATEGORIES.map((c) => `<a class="gb-cat home-photo-card" href="/search?type=professionals&amp;category=${c.value}"><img src="${c.img}" width="720" height="720" alt="${escapeHtml(c.alt)}" loading="lazy" decoding="async" /><span class="gb-cat-name">${escapeHtml(c.label)}<span class="gb-cat-sub">${escapeHtml(c.sub)}</span></span></a>`).join('')}
+      </div>
+      <div class="gb-cat-more home-pills gb-chips" aria-label="More services">
         <a href="/search?category=colorist">Colorists</a>
-        <a href="/search?category=nail_technician">Nail Technicians</a>
-        <a href="/search?category=eyelash_technician">Eyelash Technicians</a>
         <a href="/search?category=eyebrow_technician">Eyebrow Technicians</a>
         <a href="/search?category=waxing_specialist">Waxing Specialists</a>
-        <a href="/search?category=tattoo_artist">Tattoo Artists</a>
         <a href="/search?category=massage_therapist">Massage Therapists</a>
         <a href="/search?category=makeup_artist">Makeup Artists</a>
         <a href="/search?category=wedding_services">Weddings</a>
@@ -323,24 +138,71 @@ module.exports = function (router) {
     </div>
   </section>
 
-  <link rel="stylesheet" href="/home-category-photos.css">
-  <section class="home-photo-section" aria-labelledby="home-photo-title">
+  <section class="gb-section is-tinted" aria-labelledby="home-pros-title">
     <div class="container">
-      <div class="home-section-head"><div><p class="home-section-kicker">A little inspiration</p><h2 id="home-photo-title">Find your style.</h2></div><a class="home-see-all" href="/specialties">All specialties →</a></div>
-      <div class="home-photo-grid">
-        <a class="home-photo-card" href="/search?type=professionals&amp;category=barber"><img src="/images/category-barber-v1.webp" width="720" height="720" alt="A barber finishing a clean fade haircut" loading="lazy" decoding="async"><span><strong>Barbers</strong><span aria-hidden="true">↗</span></span></a>
-        <a class="home-photo-card" href="/search?type=professionals&amp;category=stylist"><img src="/images/category-hair-v1.webp" width="720" height="720" alt="Hair styling in a bright salon" loading="lazy" decoding="async"><span><strong>Hairstylists</strong><span aria-hidden="true">↗</span></span></a>
-        <a class="home-photo-card" href="/search?type=professionals&amp;category=nail_technician"><img src="/images/category-nails-stock-v2.webp" width="720" height="480" alt="Close-up of glossy red nails during a professional manicure" loading="lazy" decoding="async"><span><strong>Nail artists</strong><span aria-hidden="true">↗</span></span></a>
-        <a class="home-photo-card" href="/search?type=professionals&amp;category=tattoo_artist"><img src="/images/category-tattoos-stock-v1.webp" width="720" height="481" alt="A tattoo artist in a denim jacket working with blue gloves" loading="lazy" decoding="async"><span><strong>Tattoo artists</strong><span aria-hidden="true">↗</span></span></a>
-        <div class="home-photo-card home-photo-dual"><a href="/search?type=professionals&amp;category=eyebrow_technician" aria-label="Find brow professionals"><img src="/images/category-lashes-stock-v1.webp" width="720" height="720" alt="A beauty professional grooming a client's brows" loading="lazy" decoding="async"></a><span><strong><a href="/search?type=professionals&amp;category=eyelash_technician">Lashes</a><span aria-hidden="true"> · </span><a href="/search?type=professionals&amp;category=eyebrow_technician">Brows</a></strong><span aria-hidden="true">↗</span></span></div>
-        <a class="home-photo-card" href="/search?type=professionals&amp;category=massage_therapist"><img src="/images/category-massage-stock-v1.webp" width="720" height="480" alt="A professional providing a neck and shoulder massage in a spa" loading="lazy" decoding="async"><span><strong>Massage therapists</strong><span aria-hidden="true">↗</span></span></a>
-      </div>
+      <div class="gb-section-head"><div><h2 id="home-pros-title">Professionals worth knowing</h2><p>Recently added to GoBookr. Open a profile to see services, location, and where to book.</p></div><a class="gb-link" href="/search?type=professionals">Browse all professionals ${ICON.arrow}</a></div>
+      <div class="gb-pro-grid">${featured.map((pro) => homeCard(pro, ctx, savedIds)).join('') || '<div class="empty-state"><h3>No professionals listed yet</h3><p>Check back soon, or search a nearby city.</p></div>'}</div>
     </div>
   </section>
-  <section class="home-section">
+
+  ${businesses.length ? `<section class="gb-section" aria-labelledby="home-biz-title">
     <div class="container">
-      <div class="home-section-head"><div><p class="home-section-kicker">Discover local talent</p><h2>Professionals worth knowing</h2></div><a class="home-see-all" href="/#find">Search pros →</a></div>
-      <div class="home-pro-grid">${featured.map(pro => homeCard(pro, ctx, savedIds)).join('') || '<p class="muted">No professionals listed yet.</p>'}</div>
+      <div class="gb-section-head"><div><h2 id="home-biz-title">Shops and studios</h2><p>See who works where, then pick the professional who fits.</p></div><a class="gb-link" href="/search?type=businesses">Find a business ${ICON.arrow}</a></div>
+      <div class="gb-biz-grid">${businesses.map(businessCard).join('')}</div>
+    </div>
+  </section>` : ''}
+
+  <section class="gb-section${businesses.length ? ' is-tinted' : ''}" aria-label="Popular specialties and cities">
+    <div class="container gb-split">
+      <div>
+        <h2>Popular specialties</h2>
+        <div class="gb-chips">${POPULAR_SPECIALTIES.map((term) => `<a href="/search?q=${encodeURIComponent(term)}">${escapeHtml(term)}</a>`).join('')}</div>
+      </div>
+      ${cities.length ? `<div>
+        <h2>Explore by city</h2>
+        <ul class="gb-city-list">${cities.map((row) => `<li><a href="/search?city=${encodeURIComponent(row.city)}">${escapeHtml(row.city)}, ${escapeHtml(row.state)}<span>${Number(row.total)} ${Number(row.total) === 1 ? 'pro' : 'pros'}</span></a></li>`).join('')}</ul>
+      </div>` : ''}
+    </div>
+  </section>
+
+  <section class="gb-section" aria-labelledby="home-how-title">
+    <div class="container">
+      <div class="gb-section-head"><div><h2 id="home-how-title">How booking works</h2></div></div>
+      <ol class="gb-steps">
+        <li><h3>Search by service and city</h3><p>Look for a service, a specialty like balayage, or a professional by name.</p></li>
+        <li><h3>Compare profiles</h3><p>Check where they work, what they offer, and whether their license is verified.</p></li>
+        <li><h3>Book on their site</h3><p>Booking opens the scheduling page the professional already uses, like Booksy or Vagaro.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="gb-section" aria-labelledby="home-pro-title" style="padding-top:0">
+    <div class="container">
+      <div class="gb-pro-band home-pro-claim-entry">
+        <div>
+          <h2 id="home-pro-title">Get found by clients searching near you.</h2>
+          <p>Already listed? Find and claim your profile. Not on GoBookr yet? Create a new profile from scratch.</p>
+          <ul>
+            <li>${ICON.check}Keep your profile accurate and up to date</li>
+            <li>${ICON.check}Send clients to the booking site you already use</li>
+            <li>${ICON.check}Post same-day openings when you have time to fill</li>
+          </ul>
+        </div>
+        <div class="gb-claim-card">
+          <strong>Are you a professional?</strong>
+          <p>Search your name or business to see if you’re already on GoBookr.</p>
+          <form class="home-claim-form" method="GET" action="/search" data-no-radius>
+            <input type="hidden" name="type" value="professionals" />
+            <input class="home-claim-input" type="search" name="q" maxlength="100" placeholder="Search your name or business" aria-label="Search your professional profile" />
+            <button class="home-claim-button btn gb-dark" type="submit">Find &amp; claim my profile</button>
+          </form>
+          <div class="gb-claim-divider">or</div>
+          <div class="home-pro-entry-actions">
+            <a class="home-create-profile btn secondary gb-lg" href="/join">Create a new profile — 30 days free</a>
+            <span class="muted gb-fine">$20/month after your free trial. Cancel anytime.</span>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 </div>

@@ -37,6 +37,7 @@
       const panels = [...grid.querySelectorAll('.panel')];
       const findPanel = (label) => panels.find((panel) => (panel.querySelector('h2')?.textContent || '').trim().toLowerCase().startsWith(label));
       const about = findPanel('about');
+      const glance = page.querySelector('.profile-glance');
       const portfolio = findPanel('portfolio');
       const reviews = findPanel('reviews');
       const services = findPanel('services');
@@ -47,7 +48,7 @@
       const panes = {};
       const content = document.createElement('div'); content.className = 'profile-v3-content';
       ['overview','services','availability','reviews','photos'].forEach((name) => { const pane = document.createElement('section'); pane.className = 'profile-v3-pane' + (name === 'overview' ? ' active' : ''); pane.dataset.pane = name; panes[name] = pane; content.appendChild(pane); });
-      [updates, about, social].filter(Boolean).forEach((node) => panes.overview.appendChild(node));
+      [updates, about, glance, social].filter(Boolean).forEach((node) => panes.overview.appendChild(node));
       if (services) panes.services.appendChild(services);
       if (reviews) panes.reviews.appendChild(reviews);
       if (portfolio) panes.photos.appendChild(portfolio);
@@ -104,7 +105,7 @@
     .customer-login-card .btn.block{min-height:50px;border-radius:10px;font-size:1rem}
     .customer-login-card form+*{margin-top:0}
     .customer-login-signup{border-top:1px solid #e5e7eb;margin-top:26px;padding-top:22px;text-align:center;color:#64748b;font-size:.92rem}
-    .customer-login-signup a{color:#2563eb;font-weight:750;margin-left:3px}
+    .customer-login-signup a{color:var(--gb-iris);font-weight:750;margin-left:3px}
     .customer-login-signup a:hover{text-decoration:underline}
     @media(max-width:600px){.customer-login-page{padding:32px 18px 52px!important}.customer-login-card{padding:28px 22px 24px;border-radius:16px}.customer-login-card h1{font-size:1.72rem}}
   `;

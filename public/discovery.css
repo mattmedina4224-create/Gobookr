@@ -19,14 +19,14 @@
 /* Search results */
 .search-layout { align-items:start; }
 .search-layout .filters { border:1px solid var(--paper-line); border-radius:12px; background:#fff; padding:20px; box-shadow:0 10px 30px -28px rgba(11,31,58,.35); }
-.search-layout .filters h4 { color:#111b35; font-size:.9rem; letter-spacing:-.01em; }
+.search-layout .filters h4 { color:var(--gb-midnight); font-size:.9rem; letter-spacing:-.01em; }
 .search-layout .filters input,
 .search-layout .filters select { min-height:46px; border-radius:12px; border-color:#dfe4ec; background:#fff; }
 .search-layout .filters .btn { border-radius:12px; min-height:44px; }
 .search-layout .checks a { display:block; padding:7px 0; }
 .search-layout .pro-grid { gap:16px; }
 .empty-state { border:1px solid var(--paper-line); border-radius:12px; background:#fff; padding:44px 28px; text-align:center; }
-.empty-state h3 { margin:0 0 8px; color:#111b35; }
+.empty-state h3 { margin:0 0 8px; color:var(--gb-midnight); }
 .empty-state p { max-width:460px; margin:0 auto 18px; color:var(--ink-soft); }
 
 /* The homepage already gets a clickable GPS pin from the shared layout helper.
@@ -165,14 +165,14 @@
 .market-search { display:grid; grid-template-columns:minmax(0,1.45fr) minmax(220px,.8fr) auto; max-width:940px; padding:8px; background:#fff; border:1px solid #dfe4ec; border-radius:12px; box-shadow:var(--shadow-sm); }
 .market-field { min-width:0; padding:8px 16px; }
 .market-field + .market-field { border-left:1px solid var(--paper-line); }
-.market-field span { display:block; margin-bottom:3px; color:#111b35; font-size:.75rem; font-weight:800; }
+.market-field span { display:block; margin-bottom:3px; color:var(--gb-midnight); font-size:.75rem; font-weight:800; }
 .market-field input { width:100%; height:28px; padding:0; border:0; outline:0; background:transparent; color:var(--ink); font-size:1rem; box-shadow:none; }
 .market-search-btn { min-width:112px; border-radius:12px; }
 .discovery-content { padding-top:42px; }
 .browse-heading { margin-bottom:18px; }
-.browse-heading h2,.results-toolbar h2 { margin:0; color:#111b35; font-size:1.55rem; letter-spacing:-.025em; }
+.browse-heading h2,.results-toolbar h2 { margin:0; color:var(--gb-midnight); font-size:1.55rem; letter-spacing:-.025em; }
 .service-tiles { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; }
-.service-tile { display:flex; align-items:center; justify-content:space-between; min-height:72px; padding:0 20px; border:1px solid var(--paper-line); border-radius:14px; background:#fff; color:#111b35; font-weight:750; transition:border-color .15s ease,box-shadow .15s ease,transform .15s ease; }
+.service-tile { display:flex; align-items:center; justify-content:space-between; min-height:72px; padding:0 20px; border:1px solid var(--paper-line); border-radius:14px; background:#fff; color:var(--gb-midnight); font-weight:750; transition:border-color .15s ease,box-shadow .15s ease,transform .15s ease; }
 .service-tile:hover { transform:translateY(-1px); border-color:#cdd5e2; box-shadow:0 10px 25px -22px rgba(11,31,58,.45); }
 .service-tile span:last-child { color:var(--ink-faint); font-size:1.35rem; }
 .results-toolbar { display:flex; justify-content:space-between; align-items:end; gap:24px; margin-bottom:24px; }
@@ -232,7 +232,7 @@
 .market-new { margin-top:7px; color:var(--ink-faint); font-size:.82rem; font-weight:650; }
 .market-service { margin-top:7px; color:var(--ink-soft); font-size:.84rem; line-height:1.35; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
 .market-meta { display:flex; align-items:center; flex-wrap:wrap; gap:6px 10px; margin-top:9px; font-size:.79rem; }
-.market-price { color:#111b35; font-weight:800; }
+.market-price { color:var(--gb-midnight); font-weight:800; }
 .market-distance { color:var(--brand); font-weight:750; }
 .market-place { color:var(--ink-faint); }
 .market-chevron { align-self:center; color:#a0a8b5; font-size:1.55rem; line-height:1; }
@@ -250,26 +250,26 @@
 }
 
 /* Bring public discovery into the shared professional workspace style. */
-.home-shell .home-hero h1 { color:#0b1f3a; }
+.home-shell .home-hero h1 { color:var(--gb-midnight); }
 .home-shell .home-eyebrow,.home-shell .home-section-kicker { color:#526174; letter-spacing:.12em; font-size:.72rem; }
 .home-shell .home-search-card { border-radius:18px; border-color:#e4e9f0; box-shadow:0 8px 30px rgba(11,31,58,.045); padding:18px; }
 .home-shell .home-search-mode { border-radius:10px; background:#f5f8fc; }
 .home-shell .home-search-mode a { border-radius:8px; }
 .home-shell .home-pro-claim-entry { border-radius:16px; background:#f5f8fc; border-color:#e4e9f0; }
-.home-shell .home-pro-placeholder { background:#eef2f7; color:#0b1f3a; }
+.home-shell .home-pro-placeholder { background:#eef2f7; color:var(--gb-midnight); }
 .home-shell .home-pro-card { border-radius:16px; border-color:#e4e9f0; box-shadow:0 2px 8px rgba(11,31,58,.025); }
 .home-shell .home-pro-info { padding:18px; }
-.home-shell .home-pro-info h3 { color:#0b1f3a; }
+.home-shell .home-pro-info h3 { color:var(--gb-midnight); }
 .home-shell .home-trust-icon { background:#edf7f1; color:#267245; border-radius:10px; }
 .home-shell .home-openings-cta { border-radius:14px; border-color:#dce9e1; background:#f5faf7; }
 .home-shell .home-pills a { border-radius:9px; border-color:#e4e9f0; }
 .search-layout .filters { border-radius:16px; box-shadow:0 8px 30px rgba(11,31,58,.035); }
 .search-layout .pro-card { border-radius:16px; box-shadow:0 2px 8px rgba(11,31,58,.025); }
-.search-layout .pro-card h3 { color:#0b1f3a; }
+.search-layout .pro-card h3 { color:var(--gb-midnight); }
 .search-layout .pro-card-footer { border-top-color:#e9edf3; }
 .profile-page .profile-head { border-radius:20px; border-color:#e4e9f0; box-shadow:0 8px 30px rgba(11,31,58,.045); }
 .profile-page .panel { border-radius:18px; }
-.profile-page .profile-head h1 { color:#0b1f3a; letter-spacing:-.03em; }
+.profile-page .profile-head h1 { color:var(--gb-midnight); letter-spacing:-.03em; }
 .profile-page .profile-categories .badge { border-radius:7px; }
 .profile-page .service-row { padding:14px 0; }
 .profile-page .booking-unavailable { border-radius:12px; background:#f5f8fc; }
@@ -280,9 +280,9 @@
 }
 
 .market-pro-card { border-radius:16px; border-color:#e4e9f0; box-shadow:0 2px 8px rgba(11,31,58,.025); }
-.market-avatar-fallback { background:#0b1f3a; color:#fff; border-radius:14px; }
-.market-name-row h3 { color:#0b1f3a; font-weight:700; }
+.market-avatar-fallback { background:var(--gb-midnight); color:#fff; border-radius:14px; }
+.market-name-row h3 { color:var(--gb-midnight); font-weight:700; }
 .market-status { border-radius:6px; background:#edf3ff; color:#294a71; }
 .market-verified { background:#edf7f1; border-radius:6px; padding:3px 6px; }
-.avatar[class*="accent-"] { background:#eef2f7; color:#0b1f3a; }
+.avatar[class*="accent-"] { background:#eef2f7; color:var(--gb-midnight); }
 .market-match-reason{margin:8px 0;padding:8px 10px;border-radius:8px;background:#f0f5fa;color:#334155;font-size:.77rem;line-height:1.45;overflow-wrap:anywhere}
