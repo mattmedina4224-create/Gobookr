@@ -70,6 +70,9 @@ module.exports = function (router) {
 
     const savedIds = favoriteIds(ctx, featured);
     const body = `
+<link rel="stylesheet" href="/home-specialty-autocomplete.css">
+<script src="/specialty-suggestions.js" defer></script>
+<script src="/home-specialty-autocomplete.js" defer></script>
 <div class="gb-home home-shell">
   <section class="gb-hero home-hero" aria-labelledby="home-title">
     <div class="container">
@@ -79,9 +82,11 @@ module.exports = function (router) {
 
         <div class="gb-search home-search-card" id="find">
           <form class="gb-search-form" method="GET" action="/search" role="search">
-            <div class="gb-search-field">
+            <div class="gb-search-field gb-search-field--suggestions">
               <label for="home-q">What</label>
-              <input id="home-q" type="text" name="q" maxlength="100" placeholder="Service, specialty, or name" aria-label="Service, specialty, or professional name" autocomplete="off" />
+              <input id="home-q" type="text" name="q" maxlength="100" placeholder="Service, specialty, or name" aria-label="Service, specialty, or professional name" role="combobox" aria-autocomplete="list" aria-controls="home-specialty-suggestions" aria-expanded="false" autocomplete="off" />
+              <div id="home-specialty-suggestions" class="home-specialty-suggestions" role="listbox" aria-label="Matching service and specialty keywords" hidden></div>
+              <span id="home-specialty-status" class="home-specialty-status" role="status" aria-live="polite"></span>
             </div>
             <div class="gb-search-field">
               <label for="home-city">Where</label>
