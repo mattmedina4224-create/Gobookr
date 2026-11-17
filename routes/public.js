@@ -32,7 +32,7 @@ function categoriesForPro(proId) {
 function categoryBadges(categories) { return (categories || []).map((category) => `<span class="badge category">${escapeHtml(slugCategory(category))}</span>`).join(' '); }
 function verifiedBadge() { return `<span class="verified-badge" title="License verified by GoBookr" aria-label="License verified by GoBookr"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.2 2.1 3-.4.9 2.9 2.7 1.4-.9 2.9 1.3 2.7-2.4 1.8-.1 3-3 .5-2 2.3-2.7-1.3-2.7 1.3-2-2.3-3-.5-.1-3-2.4-1.8 1.3-2.7-.9-2.9 2.7-1.4.9-2.9 3 .4L12 2.5z"/><path d="M8.4 12.1l2.2 2.2 5-5" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>`; }
 function claimBadge(pro) {
-  if (pro.claim_status === 'unclaimed') return `<span class="badge" style="background:#eef4ff;color:#0b1f3a;border:1px solid #c8d8f2;">Unclaimed profile</span>`;
+  if (pro.claim_status === 'unclaimed') return `<span class="badge" style="background:var(--gb-iris-wash);color:var(--gb-midnight);border:1px solid var(--gb-iris-line);">Unclaimed profile</span>`;
   if (pro.claim_status === 'claim_pending') return `<span class="badge" style="background:#f7f7f7;color:#555;border:1px solid #ddd;">Claim pending</span>`;
   return '';
 }
@@ -92,7 +92,7 @@ function proCard(pro, ctx, savedIds) {
 }
 function businessCard(shop) {
   const location = [shop.city, shop.state].filter(Boolean).join(', ');
-  const status = shop.claim_status === 'unclaimed' ? '<span class="badge" style="background:#eef4ff;color:#0b1f3a;border:1px solid #c8d8f2;">Unclaimed business</span>' : '';
+  const status = shop.claim_status === 'unclaimed' ? '<span class="badge" style="background:var(--gb-iris-wash);color:var(--gb-midnight);border:1px solid var(--gb-iris-line);">Unclaimed business</span>' : '';
   const action = shop.claim_status === 'unclaimed' ? 'View & claim business →' : 'View business →';
   const distanceHtml = shop.cityOnly ? '<span class="distance-away">Distance unavailable</span>' : typeof shop.distanceMiles === 'number' && Number.isFinite(shop.distanceMiles) ? '<span class="distance-away">' + shop.distanceMiles.toFixed(1) + ' miles away</span>' : '';
   return '<a class="pro-card business-card" href="/shop/' + shop.id + '"><div class="pro-card-body"><div class="pro-card-top">' +

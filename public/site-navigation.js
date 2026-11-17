@@ -105,7 +105,7 @@
     .customer-login-card .btn.block{min-height:50px;border-radius:10px;font-size:1rem}
     .customer-login-card form+*{margin-top:0}
     .customer-login-signup{border-top:1px solid #e5e7eb;margin-top:26px;padding-top:22px;text-align:center;color:#64748b;font-size:.92rem}
-    .customer-login-signup a{color:#2563eb;font-weight:750;margin-left:3px}
+    .customer-login-signup a{color:var(--gb-iris);font-weight:750;margin-left:3px}
     .customer-login-signup a:hover{text-decoration:underline}
     @media(max-width:600px){.customer-login-page{padding:32px 18px 52px!important}.customer-login-card{padding:28px 22px 24px;border-radius:16px}.customer-login-card h1{font-size:1.72rem}}
   `;

@@ -158,6 +158,8 @@ input:focus, select:focus, textarea:focus { outline: none; }
 .section-head { align-items: end; margin-bottom: var(--gb-6); }
 .section-head h2 { font-size: var(--gb-h2); margin: 0; }
 main#main-content { min-height: 60vh; }
+/* One page gutter everywhere (older stylesheets zeroed it on some mobile pages). The profile header is full-bleed on mobile by design. */
+.section.container:not(.profile-page):not(.profile-v3) { padding-left: clamp(18px, 4vw, 32px) !important; padding-right: clamp(18px, 4vw, 32px) !important; }
 
 /* 4. Components ------------------------------------------------------------ */
 
@@ -377,7 +379,8 @@ td { border-bottom: 1px solid var(--gb-line); padding: 12px; vertical-align: top
 .site-header .nav-links .btn, .site-header .nav-links a.btn { background: var(--gb-midnight); color: #fff; margin-left: 6px; padding: 0 16px; box-shadow: none; }
 .site-header .nav-links .btn:hover { background: #1D2939; color: #fff; }
 .gb-nav-user { display: inline-flex; align-items: center; gap: 8px; padding: 0 6px 0 10px; font-size: var(--gb-text-sm); }
-.gb-nav-user .muted { padding: 0 !important; color: var(--gb-ink-2); }
+.gb-nav-user .muted { padding: 0 !important; color: var(--gb-ink-2); white-space: nowrap; }
+@media (min-width: 861px) { .gb-nav-user .muted { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); } .gb-nav-user { padding: 0 4px; } }
 .gb-avatar-dot { width: 28px; height: 28px; border-radius: 50%; display: grid; place-items: center; background: var(--gb-iris-wash); color: var(--gb-iris-ink); font-size: .6875rem; font-weight: 700; letter-spacing: .02em; }
 .mobile-menu-toggle { display: none; }
 
@@ -766,6 +769,7 @@ td { border-bottom: 1px solid var(--gb-line); padding: 12px; vertical-align: top
   .results-actions { width: 100% !important; margin-top: 14px; }
   .results-actions .result-type-tabs { flex: 1 1 auto; display: grid !important; grid-template-columns: repeat(3, 1fr); }
   .results-actions .result-type-tabs a { justify-content: center; padding: 0 6px !important; }
+  .results-actions { display: grid !important; grid-template-columns: minmax(0, 1fr) auto; }
 }
 
 /* Professional profile (server markup + V3 tabs from site-navigation.js) */
@@ -860,6 +864,17 @@ td { border-bottom: 1px solid var(--gb-line); padding: 12px; vertical-align: top
 .customer-login-eyebrow { text-transform: none !important; letter-spacing: 0 !important; font-size: var(--gb-text-sm) !important; font-weight: 600 !important; color: var(--gb-iris-ink) !important; }
 .customer-login-card .btn.block { min-height: 50px !important; border-radius: var(--gb-r-md) !important; }
 .customer-login-signup a { color: var(--gb-iris-ink) !important; }
+
+/* Small labels: sentence case, no tracking (replaces older ALL-CAPS eyebrows) */
+.eyebrow, .pro-eyebrow, .pro-main .pro-eyebrow, .customer-eyebrow, .email-confirmation-eyebrow, .team-kicker, .home-section-kicker, .pro-nav-label, .filters h4, .status-pill {
+  text-transform: none !important; letter-spacing: 0 !important;
+  font-family: var(--gb-font) !important; font-size: .8125rem !important; font-weight: 600 !important;
+}
+.eyebrow, .pro-eyebrow, .pro-main .pro-eyebrow, .customer-eyebrow, .email-confirmation-eyebrow, .team-kicker, .home-section-kicker { color: var(--gb-iris-ink) !important; }
+.pro-nav-label { color: var(--gb-ink-3) !important; }
+
+/* Profile editor: identity photo stays a fixed-size circle with or without an image */
+.pro-identity-photo > img, .pro-identity-photo .avatar { width: 112px !important; height: 112px !important; border-radius: 50% !important; object-fit: cover; flex: 0 0 112px; box-shadow: 0 0 0 1px var(--gb-line); }
 
 /* Generic narrow form pages (login, signup, claim, reset) */
 .section.container[style*="max-width"] > .panel:only-child,
