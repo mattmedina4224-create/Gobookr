@@ -2,7 +2,7 @@
 
 (() => {
   // Keep one GoBookr brand icon everywhere: browser tabs and the site header.
-  const brandHref = '/gobookr-brand-20260912.svg?v=brand-20260912-1';
+  const brandHref = '/gobookr-mark-2026.svg?v=iris-1';
   document.querySelectorAll('link[rel*="icon"]').forEach((link) => link.remove());
 
   const icon = document.createElement('link');
@@ -20,7 +20,8 @@
 
   const brand = document.querySelector('.site-header .brand');
   if (brand) {
-    const oldMark = brand.querySelector('.mark, .brand-mark');
+    // Only legacy text marks need replacing; the current layout already renders the image mark.
+    const oldMark = brand.querySelector('.mark');
     if (oldMark) {
       const logo = document.createElement('img');
       logo.src = brandHref;
@@ -223,6 +224,8 @@
   }
 
   document.querySelectorAll('form[action="/search"]').forEach((form) => {
+    // Name-only lookups (e.g. "find & claim my profile") opt out of distance controls.
+    if (form.hasAttribute('data-no-radius')) return;
     form.classList.add('gobookr-radius-search');
     let radius = form.querySelector('select[name="radius"]');
     if (!radius) {
@@ -231,7 +234,12 @@
       radius.setAttribute('aria-label', 'Search radius');
       radius.innerHTML = allowed.map((value) => `<option value="${value}">${value} mile${value === '1' ? '' : 's'}</option>`).join('');
       const q = form.querySelector('input[name="q"]');
-      if (q) form.insertBefore(radius, q); else form.appendChild(radius);
+      const city = form.querySelector('input[name="city"]');
+      const cityField = city && city.closest('.gb-search-field');
+      // Fields may be nested in labels or wrappers, so insert relative to the actual parent.
+      if (cityField) cityField.appendChild(radius);
+      else if (q && q.parentNode) q.parentNode.insertBefore(radius, q);
+      else form.appendChild(radius);
     }
     radius.classList.add('gobookr-radius-select');
     if (allowed.includes(requestedRadius)) radius.value = requestedRadius;
