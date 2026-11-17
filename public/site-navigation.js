@@ -37,6 +37,7 @@
       const panels = [...grid.querySelectorAll('.panel')];
       const findPanel = (label) => panels.find((panel) => (panel.querySelector('h2')?.textContent || '').trim().toLowerCase().startsWith(label));
       const about = findPanel('about');
+      const glance = page.querySelector('.profile-glance');
       const portfolio = findPanel('portfolio');
       const reviews = findPanel('reviews');
       const services = findPanel('services');
@@ -47,7 +48,7 @@
       const panes = {};
       const content = document.createElement('div'); content.className = 'profile-v3-content';
       ['overview','services','availability','reviews','photos'].forEach((name) => { const pane = document.createElement('section'); pane.className = 'profile-v3-pane' + (name === 'overview' ? ' active' : ''); pane.dataset.pane = name; panes[name] = pane; content.appendChild(pane); });
-      [updates, about, social].filter(Boolean).forEach((node) => panes.overview.appendChild(node));
+      [updates, about, glance, social].filter(Boolean).forEach((node) => panes.overview.appendChild(node));
       if (services) panes.services.appendChild(services);
       if (reviews) panes.reviews.appendChild(reviews);
       if (portfolio) panes.photos.appendChild(portfolio);
