@@ -1,0 +1,39 @@
+name: MY SALON Suite public sitemap audit
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/audit-mysalon-suite.js'
+      - '.github/workflows/mysalon-suite-audit.yml'
+  schedule:
+    - cron: '17 10 * * 1'
+
+permissions:
+  contents: read
+
+jobs:
+  inventory:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check out GoBookr
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Run source-backed member URL inventory
+        run: node scripts/audit-mysalon-suite.js --output=tmp/mysalon-suite
+      - name: Summarize inventory
+        if: success()
+        run: |
+          node -e "const d=require('./tmp/mysalon-suite/mysalonsuite-national-inventory.json');console.log('Verified public member URLs:',d.distinct_professional_urls,'from',d.sitemap_count,'sitemaps. Profiles not classified or imported.');"
+      - name: Upload inventory snapshot
+        uses: actions/upload-artifact@v4
+        if: success()
+        with:
+          name: mysalonsuite-professionals-inventory
+          path: tmp/mysalon-suite/
+          retention-days: 30
