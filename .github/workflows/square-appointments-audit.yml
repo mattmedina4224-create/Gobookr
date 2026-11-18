@@ -9,6 +9,7 @@ on:
       - '.github/workflows/square-appointments-audit.yml'
       - 'data/source-audits/square-appointments-az-seeds.json'
       - 'data/source-audits/square-appointments-national-pilot-seeds.json'
+      - 'data/source-audits/square-appointments-wave2-seeds.json'
   schedule:
     - cron: '23 11 * * 2'
 
@@ -34,6 +35,10 @@ jobs:
         id: national
         continue-on-error: true
         run: node scripts/audit-square-appointments.js data/source-audits/square-appointments-national-pilot-seeds.json --output=tmp/square-national-pilot-audit.json
+      - name: Audit nationwide discovery wave 2
+        id: wave2
+        continue-on-error: true
+        run: node scripts/audit-square-appointments.js data/source-audits/square-appointments-wave2-seeds.json --output=tmp/square-national-wave2-audit.json
       - name: Summarize source audit
         if: always()
         run: |
@@ -43,6 +48,9 @@ jobs:
           if [ -f tmp/square-national-pilot-audit.json ]; then
             node -e "const a=require('./tmp/square-national-pilot-audit.json');console.log('Square additional states:',a.pages_loaded,'pages,',a.staff_records,'staff,',a.errors.length,'page errors. All data require review.');"
           fi
+          if [ -f tmp/square-national-wave2-audit.json ]; then
+            node -e "const a=require('./tmp/square-national-wave2-audit.json');console.log('Square wave 2:',a.pages_loaded,'pages,',a.staff_records,'staff,',a.errors.length,'page errors. All records require verification before publishing.');"
+          fi
       - name: Upload evidence for review
         if: always()
         uses: actions/upload-artifact@v4
@@ -51,5 +59,6 @@ jobs:
           path: |
             tmp/square-az-audit.json
             tmp/square-national-pilot-audit.json
+            tmp/square-national-wave2-audit.json
           if-no-files-found: warn
           retention-days: 30
