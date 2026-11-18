@@ -13,6 +13,7 @@ on:
       - 'data/source-audits/square-appointments-co-existing-seeds.json'
       - 'data/source-audits/square-appointments-wave3-seeds.json'
       - 'data/source-audits/square-appointments-wave4-seeds.json'
+      - 'data/source-audits/square-appointments-wave5-seeds.json'
   schedule:
     - cron: '23 11 * * 2'
 
@@ -54,6 +55,10 @@ jobs:
         id: wave4
         continue-on-error: true
         run: node scripts/audit-square-appointments.js data/source-audits/square-appointments-wave4-seeds.json --output=tmp/square-national-wave4-audit.json
+      - name: Audit Square wave 5 (CA, TX, IN, MN, MD)
+        id: wave5
+        continue-on-error: true
+        run: node scripts/audit-square-appointments.js data/source-audits/square-appointments-wave5-seeds.json --output=tmp/square-national-wave5-audit.json
       - name: Summarize source audit
         if: always()
         run: |
@@ -75,6 +80,9 @@ jobs:
           if [ -f tmp/square-national-wave4-audit.json ]; then
             node -e "const a=require('./tmp/square-national-wave4-audit.json');console.log('Square wave 4:',a.pages_loaded,'pages,',a.staff_records,'staff,',a.errors.length,'page errors.');"
           fi
+          if [ -f tmp/square-national-wave5-audit.json ]; then
+            node -e "const a=require('./tmp/square-national-wave5-audit.json');console.log('Square wave 5:',a.pages_loaded,'pages,',a.staff_records,'staff,',a.errors.length,'page errors.');"
+          fi
       - name: Upload evidence for review
         if: always()
         uses: actions/upload-artifact@v4
@@ -87,5 +95,6 @@ jobs:
             tmp/square-colorado-existing-audit.json
             tmp/square-national-wave3-audit.json
             tmp/square-national-wave4-audit.json
+            tmp/square-national-wave5-audit.json
           if-no-files-found: warn
           retention-days: 30
