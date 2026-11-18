@@ -136,6 +136,9 @@ module.exports = function (router) {
         <a href="/search?category=colorist">Colorists</a>
         <a href="/search?category=eyebrow_technician">Eyebrow Technicians</a>
         <a href="/search?category=waxing_specialist">Waxing Specialists</a>
+        <a href="/search?category=esthetician">Estheticians</a>
+        <a href="/search?category=permanent_makeup_artist">Permanent Makeup</a>
+        <a href="/search?category=threading_specialist">Threading Specialists</a>
         <a href="/search?category=massage_therapist">Massage Therapists</a>
         <a href="/search?category=makeup_artist">Makeup Artists</a>
         <a href="/search?category=wedding_services">Weddings</a>
