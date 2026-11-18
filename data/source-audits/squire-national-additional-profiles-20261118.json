@@ -1,0 +1,79 @@
+[
+  {
+    "id": 16699,
+    "business_name": "Lee Diamond",
+    "workplace_name": "The Concierge Grooming Parlor",
+    "city": "Sunnyside",
+    "state": "NY",
+    "street_address": "47-08 39th Place",
+    "zip_code": "11104",
+    "booking_url": "https://getsquire.com/discover/barbershop/the-concierge-grooming-parlor-sunnyside/barber/lee-diamond",
+    "source_name": "SQUIRE"
+  },
+  {
+    "id": 16700,
+    "business_name": "Orlando (lapiz) Fernandez",
+    "workplace_name": "Fernandeznycbarbershop",
+    "city": "Queens",
+    "state": "NY",
+    "street_address": "4315 Greenpoint Avenue",
+    "zip_code": "11104",
+    "booking_url": "https://getsquire.com/discover/barbershop/fernandeznycbarbershop-queens/barber/orlando-lapiz-fernandez",
+    "source_name": "SQUIRE"
+  },
+  {
+    "id": 16701,
+    "business_name": "Soren Roi",
+    "workplace_name": "Soren Roi",
+    "city": "New York",
+    "state": "NY",
+    "street_address": "75 East Broadway",
+    "zip_code": "10002",
+    "booking_url": "https://getsquire.com/discover/barbershop/b-t-a-studios-new-york/barber/soren-roi",
+    "source_name": "SQUIRE"
+  },
+  {
+    "id": 16702,
+    "business_name": "Rayy Barber",
+    "workplace_name": "Rayy Barber",
+    "city": "Flushing",
+    "state": "NY",
+    "street_address": "60-36 56th Ave",
+    "zip_code": "11378",
+    "booking_url": "https://getsquire.com/discover/barbershop/lost-studio-flushing/barber/rayy-barber",
+    "source_name": "SQUIRE"
+  },
+  {
+    "id": 16703,
+    "business_name": "Dame Hernandez",
+    "workplace_name": "Headliners | West Loop",
+    "city": "Chicago",
+    "state": "IL",
+    "street_address": "838 W Grand Ave",
+    "zip_code": "60642",
+    "booking_url": "https://getsquire.com/discover/barbershop/headliners-or-west-loop-chicago/barber/dame-hernandez-1",
+    "source_name": "SQUIRE"
+  },
+  {
+    "id": 16704,
+    "business_name": "Juan Flores",
+    "workplace_name": "Headliners | West Loop",
+    "city": "Chicago",
+    "state": "IL",
+    "street_address": "838 W Grand Ave",
+    "zip_code": "60642",
+    "booking_url": "https://getsquire.com/discover/barbershop/headliners-or-west-loop-chicago/barber/juan-flores-8",
+    "source_name": "SQUIRE"
+  },
+  {
+    "id": 16705,
+    "business_name": "Ernesto Santillan",
+    "workplace_name": "Headliners | West Loop",
+    "city": "Chicago",
+    "state": "IL",
+    "street_address": "838 W Grand Ave",
+    "zip_code": "60642",
+    "booking_url": "https://getsquire.com/discover/barbershop/headliners-or-west-loop-chicago/barber/ernesto-santillan",
+    "source_name": "SQUIRE"
+  }
+]
