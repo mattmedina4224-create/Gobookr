@@ -82,6 +82,12 @@ function parseProfile(card, html) {
     categories.add('permanent_makeup_artist');
   }
   if (/hair and makeup/i.test(visible)) categories.add('makeup_artist');
+  if (categories.has('stylist') && /custom color|blonding|balayage|color correction|all over color|hair color|highlights/i.test(visible)) {
+    categories.add('colorist');
+  }
+  if (categories.has('stylist') && /men[’']s grooming services/i.test(visible) && /beard service/i.test(visible)) {
+    categories.add('barber');
+  }
   const links = [];
   const a = /<a\b[^>]*href="([^"]+)"[^>]*>([\s\S]*?)<\/a>/gi;
   let m;
