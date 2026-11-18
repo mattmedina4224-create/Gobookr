@@ -9,7 +9,6 @@
 // This script never creates pro_profiles, accounts, categories, or fake booking links.
 const fs=require('node:fs');
 const path=require('node:path');
-const {Client}=require('pg');
 const SOURCE_RE=/^https:\/\/www\.mysalonsuite\.com\/members\/([a-zA-Z0-9-]+)\/$/;
 
 function validate(source){
@@ -44,6 +43,7 @@ async function run(file,{apply=false,connectClient=null}={}){
   if(!apply) return {source_rows:entries.length,mode:'dry_run',public_profiles_created:0};
   const url=process.env.DATABASE_URL;
   if(!connectClient && !url) throw new Error('DATABASE_URL required to apply');
+  const {Client}=connectClient?{Client:null}:require('pg');
   const client=connectClient||new Client({
     connectionString:url,
     ssl:externalSsl(url)?{rejectUnauthorized:false}:false,
