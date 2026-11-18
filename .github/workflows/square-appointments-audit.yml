@@ -1,0 +1,45 @@
+name: Square Appointments public source audit
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/audit-square-appointments.js'
+      - '.github/workflows/square-appointments-audit.yml'
+      - 'data/source-audits/square-appointments-az-seeds.json'
+  schedule:
+    - cron: '23 11 * * 2'
+
+permissions:
+  contents: read
+
+jobs:
+  arizona-source-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check out GoBookr
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Audit Arizona Square booking pages
+        id: audit
+        continue-on-error: true
+        run: node scripts/audit-square-appointments.js data/source-audits/square-appointments-az-seeds.json --output=tmp/square-az-audit.json
+      - name: Summarize source audit
+        if: always()
+        run: |
+          if [ -f tmp/square-az-audit.json ]; then
+            node -e "const a=require('./tmp/square-az-audit.json');console.log('Square Arizona sources:',a.pages_loaded,'pages,',a.staff_records,'staff,',a.errors.length,'page errors. This is source inventory only, not an import.');"
+          fi
+      - name: Upload evidence for review
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: square-appointments-arizona-source-audit
+          path: tmp/square-az-audit.json
+          if-no-files-found: warn
+          retention-days: 30
