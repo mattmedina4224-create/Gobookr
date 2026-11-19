@@ -131,6 +131,41 @@
       "state": "TX",
       "enabled": false,
       "url": "https://prettyhairboutique.glossgenius.com/team"
+    },
+    {
+      "id": "salonsbyjc-denver-observatory-user-search",
+      "provider": "salonsbyjc",
+      "type": "filtered_directory",
+      "city": "Denver",
+      "state": "CO",
+      "enabled": true,
+      "url": "https://salonsbyjc.com/search/?geodir_search=1&stype=gd_place&spost_category%EF%BF%BD%EF%BF%BD=&sopen_now=&s=+&snear=&sgeo_lat=&sgeo_lon=&neighbourhood=colorado-denver-observatory-park&utm_source=salonsbyjc.com&utm_medium=organic"
+    },
+    {
+      "id": "salonsbyjc-denver-observatory-pros",
+      "provider": "salonsbyjc",
+      "type": "location_professionals",
+      "city": "Denver",
+      "state": "CO",
+      "enabled": true,
+      "url": "https://salonsbyjc.com/salons/united-states/colorado/denver/colorado-denver-observatory-park/"
+    },
+    {
+      "id": "salonsbyjc-denver-pros",
+      "provider": "salonsbyjc",
+      "type": "regional_professionals",
+      "city": "Denver",
+      "state": "CO",
+      "enabled": true,
+      "url": "https://salonsbyjc.com/salons/united-states/colorado/denver/"
+    },
+    {
+      "id": "salonsbyjc-colorado-locations",
+      "provider": "salonsbyjc",
+      "type": "state_locations",
+      "state": "CO",
+      "enabled": true,
+      "url": "https://salonsbyjc.com/location/united-states/colorado/"
     }
   ]
 }
