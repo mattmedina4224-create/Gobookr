@@ -1,0 +1,33 @@
+{
+  "source_url": "https://phenixsalonsuites.com/locations/co-kipling-littleton/",
+  "discovery_url": "https://phenixsalonsuites.com/book-a-service/?_proximity_providers=39.595193333333334%2C-105.04483638333335%2C25%2C4%2520S%2520MacLean%2520Dr%252C%2520Littleton%252C%2520CO%252080123%252C%2520USA",
+  "notes": [
+    "Proximity URL encodes 25 mile radius around Littleton; dynamic filtered results inaccessible; directly consulted publicly indexed Phenix Littleton Jefferson Marketplace location directory.",
+    "Excluded Carly Arnold (already exists #1002), Josette DeRitis (Wellness service alone insufficient to assert massage category), Dale Zagiba (chiropractor unsupported), SureFire CPR (training business unsupported), Cindy Avery (manager), Dawn Morris (medical aesthetics not enough information to assign supported category).",
+    "Source lists a placeholder phone '1' for sydney pinzenscham, so phone omitted.",
+    "No booking links fabricated; contact-first unclaimed profiles only.",
+    "All source contacts are publicly listed for the independent businesses, not leasing contacts."
+  ],
+  "project": "GoBookr",
+  "location": "Jefferson Marketplace, 8174 S Kipling Way, Littleton, CO 80127",
+  "date": "2026-11-19",
+  "production_project_id": "jbhgeoedwvfxjteyuxum",
+  "new_profiles": 29,
+  "ids": {
+    "range": "17003–17032",
+    "excluded_id": 17004
+  },
+  "business_phones": 28,
+  "business_emails": 29,
+  "unclaimed": 29,
+  "valid_categories": 29,
+  "booking_urls": 0,
+  "metro_inventory": {
+    "starting": 1278,
+    "ending": 1307,
+    "target": 5000,
+    "remaining": 3693
+  },
+  "phenix_co_profiles": 148,
+  "limitations": "Not a crawl of all 25-mile search results; only one validated neighboring location source."
+}
