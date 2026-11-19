@@ -1,0 +1,101 @@
+{
+  "batch_id": "tx-glossgenius-dallas-2026-11-18",
+  "production_project": "jbhgeoedwvfxjteyuxum",
+  "status": "imported_and_db_verified",
+  "starting_inventory": 423,
+  "inserted": 6,
+  "post_import_total": 429,
+  "booking_link_type": "GlossGenius shop/team booking page; not individual deep link",
+  "professionals": [
+    {
+      "name": "Adriana Bohmier",
+      "category": "stylist",
+      "workplace_name": "Ritual Space",
+      "street_address": "1005 W Jefferson Blvd",
+      "suite": "Suite 402E",
+      "zip_code": "75208",
+      "booking_url": "https://ritualspace.glossgenius.com/team",
+      "source_url": "https://ritualspace.glossgenius.com/team",
+      "source_name": "GlossGenius",
+      "city": "Dallas",
+      "state": "TX",
+      "production_pro_id": 16842
+    },
+    {
+      "name": "Cara Chambers",
+      "category": "colorist",
+      "workplace_name": "Ritual Space",
+      "street_address": "1005 W Jefferson Blvd",
+      "suite": "Suite 402E",
+      "zip_code": "75208",
+      "booking_url": "https://ritualspace.glossgenius.com/team",
+      "source_url": "https://ritualspace.glossgenius.com/team",
+      "source_name": "GlossGenius",
+      "city": "Dallas",
+      "state": "TX",
+      "production_pro_id": 16843
+    },
+    {
+      "name": "Allyssa Rea",
+      "category": "colorist",
+      "workplace_name": "Ritual Space",
+      "street_address": "1005 W Jefferson Blvd",
+      "suite": "Suite 402E",
+      "zip_code": "75208",
+      "booking_url": "https://ritualspace.glossgenius.com/team",
+      "source_url": "https://ritualspace.glossgenius.com/team",
+      "source_name": "GlossGenius",
+      "city": "Dallas",
+      "state": "TX",
+      "production_pro_id": 16844
+    },
+    {
+      "name": "Myrphy Peterson",
+      "category": "stylist",
+      "workplace_name": "Ritual Space",
+      "street_address": "1005 W Jefferson Blvd",
+      "suite": "Suite 402E",
+      "zip_code": "75208",
+      "booking_url": "https://ritualspace.glossgenius.com/team",
+      "source_url": "https://ritualspace.glossgenius.com/team",
+      "source_name": "GlossGenius",
+      "city": "Dallas",
+      "state": "TX",
+      "production_pro_id": 16845
+    },
+    {
+      "name": "Amanda Claxton",
+      "category": "stylist",
+      "workplace_name": "Ritual Space",
+      "street_address": "1005 W Jefferson Blvd",
+      "suite": "Suite 402E",
+      "zip_code": "75208",
+      "booking_url": "https://ritualspace.glossgenius.com/team",
+      "source_url": "https://ritualspace.glossgenius.com/team",
+      "source_name": "GlossGenius",
+      "city": "Dallas",
+      "state": "TX",
+      "production_pro_id": 16846
+    },
+    {
+      "name": "Kelisha Rose",
+      "category": "stylist",
+      "workplace_name": "Pretty Hair Boutique",
+      "street_address": "1430 Dragon St",
+      "suite": "Suite 1",
+      "zip_code": "75207",
+      "booking_url": "https://prettyhairboutique.glossgenius.com/team",
+      "source_url": "https://prettyhairboutique.glossgenius.com/team",
+      "source_name": "GlossGenius",
+      "city": "Dallas",
+      "state": "TX",
+      "production_pro_id": 16847
+    }
+  ],
+  "notes": [
+    "Only factual, public first-party team listing names and salon addresses saved.",
+    "All six profiles unclaimed with NULL user ID and a pro_categories mapping.",
+    "No invented licensing, reviews, photos, or appointment availability.",
+    "Live external individual booking slot selection not tested."
+  ]
+}
