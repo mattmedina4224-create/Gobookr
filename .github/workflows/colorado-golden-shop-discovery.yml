@@ -1,0 +1,40 @@
+name: Colorado Golden List — statewide shop website discovery
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '19 14 * * 1'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/crawl-colorado-golden-shops.js'
+      - '.github/workflows/colorado-golden-shop-discovery.yml'
+permissions:
+  contents: read
+jobs:
+  colorado-shops:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify scanner syntax
+        run: node --check scripts/crawl-colorado-golden-shops.js
+      - name: Fetch DORA shop licenses and OSM storefront websites
+        run: node scripts/crawl-colorado-golden-shops.js
+      - name: Publish discovery report summary
+        if: success()
+        run: |
+          node -e "const r=require('./tmp/colorado-golden-shop-report.json');console.log(JSON.stringify({licensed_shop_records:r.licensed_active_candidates,open_mapped_places:r.mapped_beauty_places,unique_shop_candidates:r.total_candidates,candidates_with_website:r.with_websites,errors:r.errors},null,2))"
+      - name: Upload statewide audit artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: colorado-golden-shop-discovery
+          path: |
+            tmp/colorado-golden-shop-candidates.csv
+            tmp/colorado-golden-shop-candidates.json
+            tmp/colorado-golden-shop-report.json
+          retention-days: 30
+          if-no-files-found: warn
