@@ -64,7 +64,7 @@ const FIELDS = {
   type: ['License Type', 'Credential Type', 'license_type', 'licenseType', 'License Subtype', 'Type'],
   status: ['License Status', 'Status', 'license_status', 'licenseStatusDescription', 'License Status Description'],
   name: ['Business Name', 'business_name', 'DBA Name', 'Doing Business As', 'Entity Name', 'entityName', 'Facility Name', 'Licensee Name', 'Name', 'Full Name', 'Licensee', 'Organization Name'],
-  street: ['Business Address Line1', 'business_address_line1', 'Business Address', 'Business Street', 'Address', 'Street Address', 'Street', 'Address Line 1', 'addressLine1', 'Address 1'],
+  street: ['Business Address Line1', 'business_address_line1', 'Business Address 1', 'business_address_1', 'Business Street Address', 'business_street_address', 'Business Address', 'Business Street', 'Address', 'Street Address', 'Street', 'Address Line 1', 'addressLine1', 'Address 1'],
   city: ['Business City', 'business_city', 'City', 'Address City', 'mailCity'],
   cityStateZip: ['Business City State Zip', 'business_city_state_zip', 'City State Zip'],
   zip: ['Business Zip', 'business_zip', 'Zip', 'Zip Code', 'ZIP', 'Postal Code', 'mailZipCode', 'zipcode'],
@@ -84,6 +84,11 @@ async function licenses(st, src) {
     return '';
   };
   const F = Object.fromEntries(Object.entries(FIELDS).map(([k, a]) => [k, field(a)]));
+  // Portals name address columns inconsistently (NY: business_address_1 style); fall back to the first business
+  // street/address column that is not a second line, city, state or ZIP.
+  const fallback = (re, not) => cols.find((x) => re.test(x.name + ' ' + x.field) && !not.test(x.name + ' ' + x.field))?.field || '';
+  if (!F.street) F.street = fallback(/(business|location|physical|site).*(addr|street)|^(addr|street)/i, /city|state|zip|postal|line ?2|_2\b|address 2|mail/i);
+  if (!F.county) F.county = fallback(/county/i, /code|fips/i);
   if (!F.type) F.type = cols.find((x) => /licen|credential/i.test(x.name + x.field) && /type/i.test(x.name + x.field))?.field || '';
   if (!F.type || !F.name) throw Error(st.code + ' license dataset lacks a type or name column; columns: ' + cols.map((c) => c.field).join(','));
 
