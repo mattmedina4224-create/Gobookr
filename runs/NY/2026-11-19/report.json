@@ -1,0 +1,93 @@
+{
+ "state": "NY",
+ "state_name": "New York",
+ "wave": 2,
+ "created_at": "2026-11-19T22:59:04.934Z",
+ "staging_only": true,
+ "sources": [
+  {
+   "name": "New York DOS Appearance Enhancement & Barber Business License",
+   "url": "https://data.ny.gov/d/y3u4-jbgh",
+   "status": "processed",
+   "records": 27521
+  },
+  {
+   "name": "OpenStreetMap (Overpass)",
+   "url": "https://overpass-api.de/api/interpreter",
+   "status": "processed",
+   "records": 6797,
+   "parts_ok": 4,
+   "parts_total": 4
+  },
+  {
+   "name": "U.S. Census Geocoder (place containing map point)",
+   "url": "https://geocoding.geo.census.gov/",
+   "status": "processed",
+   "records": 3850
+  }
+ ],
+ "license_records_scanned": 27539,
+ "licensed_active_candidates": 27521,
+ "license_dropped": {
+  "inactive": 0,
+  "expired": 0,
+  "out_of_state": 10,
+  "no_name_or_city": 8
+ },
+ "license_fields": {
+  "type": "license_type",
+  "status": "",
+  "name": "business_name",
+  "street": "",
+  "city": "business_city",
+  "cityStateZip": "",
+  "zip": "business_zip",
+  "state": "business_state",
+  "county": "",
+  "number": "license_number",
+  "expires": "license_expiration_date"
+ },
+ "license_shop_types": [
+  "DOSAEBUSINESS",
+  "DOSBARSHOPOWNER"
+ ],
+ "license_type_counts": [
+  {
+   "license_type": "DOSAEBUSINESS",
+   "n": "23142"
+  },
+  {
+   "license_type": "DOSBARSHOPOWNER",
+   "n": "4397"
+  }
+ ],
+ "license_type_lookup": [],
+ "census_city_lookup": {
+  "attempted": 4000,
+  "filled": 3850,
+  "failed": 0
+ },
+ "mapped_beauty_places": 6797,
+ "overpass_endpoint": "https://overpass-api.de/api/interpreter",
+ "total_candidates": 32751,
+ "with_websites": 1377,
+ "category_counts": {
+  "shop_category_review": 8819,
+  "skincare": 736,
+  "hair": 10857,
+  "lashes": 508,
+  "nails": 6222,
+  "barber": 3654,
+  "spray_tanning": 96,
+  "brows": 336,
+  "massage": 462,
+  "waxing": 451,
+  "salon_suites": 37,
+  "makeup": 270,
+  "tattoo": 297,
+  "permanent_makeup": 6
+ },
+ "errors": [],
+ "note": "A license record or map listing alone does not prove a business is open. The importer publishes only rows that meet its rules; the rest are held.",
+ "attribution": "OpenStreetMap data © OpenStreetMap contributors (ODbL, https://www.openstreetmap.org/copyright). Licensing data from the listed state open-data portals."
+}
