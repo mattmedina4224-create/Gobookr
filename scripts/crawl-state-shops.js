@@ -87,16 +87,27 @@ async function licenses(st, src) {
   if (!F.type) F.type = cols.find((x) => /licen|credential/i.test(x.name + x.field) && /type/i.test(x.name + x.field))?.field || '';
   if (!F.type || !F.name) throw Error(st.code + ' license dataset lacks a type or name column; columns: ' + cols.map((c) => c.field).join(','));
 
-  const typeRows = await json(API + '/resource/' + src.dataset + '.json?' + new URLSearchParams({ $select: F.type + ', count(*) AS n', $group: F.type, $limit: '5000' }));
-  const values = new Set(typeRows.map((t) => t[F.type]).filter(Boolean));
-  const described = [];
-  if (src.typeLookup) {
-    let lookup = []; try { lookup = await json(API + '/resource/' + src.typeLookup + '.json?$limit=5000'); } catch (_) {}
-    for (const row of lookup) { const text = Object.values(row).map(String).join(' '); const code = Object.values(row).map(String).find((v) => values.has(v)); if (code) described.push({ code, text }); }
-  }
   const isShop = (t) => src.typeInclude.test(t) && (!src.typeRequire || src.typeRequire.test(t)) && !src.typeExclude.test(t);
-  const shopTypes = [...new Set([...described.filter((d) => isShop(d.text)).map((d) => d.code), ...[...values].filter(isShop)])];
-  if (!shopTypes.length) throw Error(st.code + ' no shop/salon license types among: ' + [...values].slice(0, 300).join(' | '));
+  // Some portals store the license type as a short code (CO "REG", CT "COS"). Try the detected type column
+  // first, then the dataset's lookup table, then every other credential/type/description column, and use the
+  // first column whose values actually name shop or salon licenses.
+  const typeCandidates = [F.type, ...cols.filter((c) => c.field !== F.type && /type|credential|licen|profession|desc|category|class/i.test(c.name + ' ' + c.field)).map((c) => c.field)];
+  let typeRows = []; let values = new Set(); let described = []; let shopTypes = []; const tried = [];
+  for (const candidate of typeCandidates.slice(0, 8)) {
+    let rowsForField;
+    try { rowsForField = await json(API + '/resource/' + src.dataset + '.json?' + new URLSearchParams({ $select: candidate + ', count(*) AS n', $group: candidate, $limit: '5000' })); }
+    catch (e) { tried.push(candidate + ' (error)'); continue; }
+    const vals = new Set(rowsForField.map((t) => t[candidate]).filter(Boolean));
+    const desc = [];
+    if (src.typeLookup && candidate === F.type) {
+      let lookup = []; try { lookup = await json(API + '/resource/' + src.typeLookup + '.json?$limit=5000'); } catch (_) {}
+      for (const row of lookup) { const text = Object.values(row).map(String).join(' '); const code = Object.values(row).map(String).find((v) => vals.has(v)); if (code) desc.push({ code, text }); }
+    }
+    const picked = [...new Set([...desc.filter((d) => isShop(d.text)).map((d) => d.code), ...[...vals].filter(isShop)])];
+    tried.push(candidate + ' (' + vals.size + ' values, ' + picked.length + ' shop types)');
+    if (picked.length) { F.type = candidate; typeRows = rowsForField; values = vals; described = desc; shopTypes = picked; break; }
+  }
+  if (!shopTypes.length) throw Error(st.code + ' no shop/salon license types; tried ' + tried.join(', ') + '; columns: ' + cols.map((c) => c.name + '=' + c.field).join(', ').slice(0, 1500));
 
   const inList = shopTypes.map((t) => "'" + t.replace(/'/g, "''") + "'").join(',');
   const today = new Date().toISOString().slice(0, 10);
@@ -213,6 +224,28 @@ function merge(a, b) {
   return records;
 }
 
+// Map places often lack addr:city. The Census Geocoder returns the incorporated place or census-designated
+// place whose boundary contains the point (and its county); we use that only when the point is inside one.
+// Points outside every place keep a blank city and stay held for review.
+async function censusPlaces(rows, limit = 4000) {
+  const todo = rows.filter((r) => !r.city && Number.isFinite(r.latitude) && Number.isFinite(r.longitude)).slice(0, limit);
+  let filled = 0; let failed = 0; let i = 0;
+  await Promise.all(Array.from({ length: 4 }, async () => {
+    while (i < todo.length) {
+      const r = todo[i++];
+      try {
+        const u = 'https://geocoding.geo.census.gov/geocoder/geographies/coordinates?' + new URLSearchParams({ x: String(r.longitude), y: String(r.latitude), benchmark: 'Public_AR_Current', vintage: 'Current_Current', layers: 'all', format: 'json' });
+        const g = (await json(u, { timeout: 30000, attempts: 2 })).result?.geographies || {};
+        const place = (g['Incorporated Places'] || [])[0] || (g['Census Designated Places'] || [])[0];
+        const county = (g.Counties || [])[0];
+        if (county && !r.county) r.county = county.BASENAME || county.NAME || '';
+        if (place && (place.BASENAME || place.NAME)) { r.city = place.BASENAME || String(place.NAME).replace(/\s+(city|town|village|CDP|borough)$/i, ''); r.city_source = 'census_place_containing_point'; filled++; }
+      } catch (_) { failed++; }
+    }
+  }));
+  return { attempted: todo.length, filled, failed };
+}
+
 function csv(rows) {
   const fields = ['name', 'category', 'city', 'county', 'state', 'street_address', 'zip_code', 'website_url', 'phone', 'website_status', 'source_name', 'source_url', 'external_id', 'license_type', 'license_number', 'licensing_status', 'license_expires', 'latitude', 'longitude'];
   const q = (x) => '"' + String(x ?? '').replace(/"/g, '""') + '"';
@@ -236,12 +269,14 @@ async function main() {
   }
   if (!lic.rows.length && !map.rows.length) throw Error(st.code + ': every source failed: ' + errors.join('; '));
   const rows = merge(lic.rows, map.rows);
+  let census = { attempted: 0, filled: 0, failed: 0 };
+  if (!flag('skip-census')) { census = await censusPlaces(rows); sources.push({ name: 'U.S. Census Geocoder (place containing map point)', url: 'https://geocoding.geo.census.gov/', status: census.attempted && census.failed === census.attempted ? 'failed' : 'processed', records: census.filled }); }
   const categories = rows.reduce((m, x) => ((m[x.category] = (m[x.category] || 0) + 1), m), {});
   const report = {
     state: st.code, state_name: st.name, wave: st.wave, created_at: new Date().toISOString(), staging_only: true, sources,
     license_records_scanned: lic.total, licensed_active_candidates: lic.rows.length, license_dropped: lic.dropped || null,
     license_fields: lic.fields || null, license_shop_types: lic.shopTypes || [], license_type_counts: lic.typeCounts || [], license_type_lookup: lic.typeLookup || [],
-    mapped_beauty_places: map.rows.length, overpass_endpoint: map.endpoint, total_candidates: rows.length,
+    census_city_lookup: census, mapped_beauty_places: map.rows.length, overpass_endpoint: map.endpoint, total_candidates: rows.length,
     with_websites: rows.filter((x) => x.website_url).length, category_counts: categories, errors,
     note: 'A license record or map listing alone does not prove a business is open. The importer publishes only rows that meet its rules; the rest are held.',
     attribution: 'OpenStreetMap data © OpenStreetMap contributors (ODbL, https://www.openstreetmap.org/copyright). Licensing data from the listed state open-data portals.',
@@ -254,4 +289,4 @@ async function main() {
 }
 
 if (require.main === module) main().catch((e) => { console.error(e); process.exitCode = 1; });
-module.exports = { kind, merge, website, phone, overpassQuery };
+module.exports = { censusPlaces, kind, merge, website, phone, overpassQuery };
