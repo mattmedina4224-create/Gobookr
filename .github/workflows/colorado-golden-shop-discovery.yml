@@ -9,11 +9,11 @@ on:
       - 'scripts/crawl-colorado-golden-shops.js'
       - '.github/workflows/colorado-golden-shop-discovery.yml'
 permissions:
-  contents: read
+  contents: write # only to commit discovery results to the data/colorado-shop-discovery branch
 jobs:
   colorado-shops:
     runs-on: ubuntu-latest
-    timeout-minutes: 40
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -23,10 +23,28 @@ jobs:
         run: node --check scripts/crawl-colorado-golden-shops.js
       - name: Fetch DORA shop licenses and OSM storefront websites
         run: node scripts/crawl-colorado-golden-shops.js
+      - name: Check candidate and existing shop websites
+        if: success()
+        run: node scripts/check-shop-websites.js tmp/colorado-golden-shop-candidates.json data/business-inventories/colorado-shops-with-websites-85-20261119.csv --out=tmp/colorado-golden-shop-website-checks.json
+      - name: Dry-run shop import against the committed shop export
+        if: success()
+        run: node scripts/import-colorado-shops.js tmp/colorado-golden-shop-candidates.json --existing=data/business-inventories/colorado-shops-existing.json --websites=tmp/colorado-golden-shop-website-checks.json --out=tmp/colorado-import
       - name: Publish discovery report summary
         if: success()
         run: |
           node -e "const r=require('./tmp/colorado-golden-shop-report.json');console.log(JSON.stringify({licensed_shop_records:r.licensed_active_candidates,open_mapped_places:r.mapped_beauty_places,unique_shop_candidates:r.total_candidates,candidates_with_website:r.with_websites,errors:r.errors},null,2))"
+      - name: Save results to the data/colorado-shop-discovery branch
+        if: success()
+        run: |
+          set -e
+          mkdir -p /tmp/out && cp tmp/colorado-golden-shop-* /tmp/out/ && mkdir -p /tmp/out/import && cp tmp/colorado-import/summary.json tmp/colorado-import/review.json tmp/colorado-import/publish.json /tmp/out/import/
+          git config user.name "gobookr-discovery-bot"
+          git config user.email "discovery-bot@users.noreply.github.com"
+          git fetch origin data/colorado-shop-discovery || true
+          if git rev-parse --verify -q origin/data/colorado-shop-discovery; then git checkout -B data/colorado-shop-discovery origin/data/colorado-shop-discovery; else git checkout --orphan data/colorado-shop-discovery && git rm -rfq . ; fi
+          mkdir -p runs/latest runs/$(date -u +%Y-%m-%d)
+          cp -r /tmp/out/* runs/latest/ && cp /tmp/out/colorado-golden-shop-report.json runs/$(date -u +%Y-%m-%d)/
+          git add runs && git commit -qm "Colorado shop discovery $(date -u +%Y-%m-%dT%H:%MZ) run ${{ github.run_id }}" && git push origin data/colorado-shop-discovery
       - name: Upload statewide audit artifacts
         if: always()
         uses: actions/upload-artifact@v4

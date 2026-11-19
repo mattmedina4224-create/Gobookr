@@ -13,6 +13,7 @@ const { hydratePros } = require('../lib/pro-listing-data');
 const specialtySearch = require('../lib/specialty-search');
 const { parseRadius, resolveSearchCenter, cityOnlyFilter, filterByRadius, filterBusinessesByRadius } = require('../lib/geo-search');
 const { PROFESSIONAL_CATEGORIES, PROFESSIONAL_CATEGORY_VALUES, categoryPlural } = require('../lib/pro-categories');
+const { shopCategoryLabel } = require('../lib/shop-categories');
 
 const CATEGORIES = [{ value: '', label: 'All services' }, ...PROFESSIONAL_CATEGORIES.map((item) => ({ value: item.value, label: item.plural }))];
 const CATEGORY_VALUES = new Set(['', ...PROFESSIONAL_CATEGORY_VALUES]);
@@ -90,6 +91,20 @@ function proCard(pro, ctx, savedIds) {
     </div>
   </a>${claimAction}${favoriteControl(pro, ctx, savedIds.has(Number(pro.id)))}</div>`;
 }
+// One query for all listed shops (no per-shop lookups). Missing table on older databases leaves cards unchanged.
+function attachShopCategories(shops) {
+  const ids = [...new Set(shops.map((shop) => Number(shop.id)).filter(Number.isInteger))];
+  if (!ids.length) return;
+  try {
+    const rows = db.prepare(`SELECT shop_id, category FROM shop_categories WHERE shop_id IN (${ids.map(() => '?').join(',')}) ORDER BY category`).all(...ids);
+    const byShop = new Map();
+    for (const row of rows) { const key = Number(row.shop_id); if (!byShop.has(key)) byShop.set(key, []); byShop.get(key).push(row.category); }
+    for (const shop of shops) shop.categories = byShop.get(Number(shop.id)) || [];
+  } catch (_) { /* shop_categories not migrated */ }
+}
+function shopCategoryLabels(shop) {
+  return (shop.categories || []).map(shopCategoryLabel).filter(Boolean);
+}
 function businessCard(shop) {
   const location = [shop.city, shop.state].filter(Boolean).join(', ');
   const status = shop.claim_status === 'unclaimed' ? '<span class="badge" style="background:var(--gb-iris-wash);color:var(--gb-midnight);border:1px solid var(--gb-iris-line);">Unclaimed business</span>' : '';
@@ -99,7 +114,7 @@ function businessCard(shop) {
     (shop.logo_url ? '<img src="' + escapeHtml(shop.logo_url) + '" alt="" style="width:52px;height:52px;border-radius:14px;object-fit:cover;border:1px solid var(--paper-line);"/>' : '<div class="avatar accent-slate">B</div>') +
     '<div class="pro-card-main"><div style="margin-bottom:5px;"><span class="badge category">Business</span></div><h3>' + escapeHtml(shop.name) + '</h3><div class="pro-location">' + escapeHtml(location) + (distanceHtml ? ' <span aria-hidden="true">·</span> ' + distanceHtml : '') + '</div></div></div>' +
     (status ? '<div style="margin:8px 0;">' + status + '</div>' : '') +
-    '<div class="services-line">' + escapeHtml((shop.description || 'Local service business').slice(0, 140)) + '</div><div class="pro-card-footer"><span></span><span class="view-profile">' + action + '</span></div></div></a>';
+    '<div class="services-line">' + escapeHtml((shop.description || shopCategoryLabels(shop).join(' · ') || 'Local service business').slice(0, 140)) + '</div><div class="pro-card-footer"><span></span><span class="view-profile">' + action + '</span></div></div></a>';
 }
 
 function socialLinks(pro) {
@@ -231,13 +246,24 @@ module.exports = function (router) {
     let businesses = [];
     let cityOnlyBusinesses = [];
     try {
-      if (!category && resultType !== 'professionals') {
-        businesses = db.prepare(businessSql).all(...businessArgs);
-        if (cityOnly) cityOnlyBusinesses = db.prepare(cityOnlyBusinessSql).all(...cityOnlyBusinessArgs).map(shop => ({ ...shop, cityOnly: true }));
+      if (resultType !== 'professionals') {
+        // Category searches include shops tagged with that category in shop_categories; closed shops are hidden.
+        // Older databases without these columns/tables fall back to the plain shop query (or no shops for a category).
+        const shopFilter = (sql) => sql.replace('SELECT * FROM shops WHERE 1=1', "SELECT * FROM shops WHERE COALESCE(operational_status,'uncertain') <> 'closed'" + (category ? ' AND EXISTS (SELECT 1 FROM shop_categories sc WHERE sc.shop_id = shops.id AND sc.category = ?)' : ''));
+        const withCategory = (args) => category ? [category, ...args] : args;
+        try {
+          businesses = db.prepare(shopFilter(businessSql)).all(...withCategory(businessArgs));
+          if (cityOnly) cityOnlyBusinesses = db.prepare(shopFilter(cityOnlyBusinessSql)).all(...withCategory(cityOnlyBusinessArgs)).map(shop => ({ ...shop, cityOnly: true }));
+        } catch (err) {
+          if (category) throw err;
+          businesses = db.prepare(businessSql).all(...businessArgs);
+          if (cityOnly) cityOnlyBusinesses = db.prepare(cityOnlyBusinessSql).all(...cityOnlyBusinessArgs).map(shop => ({ ...shop, cityOnly: true }));
+        }
       }
     } catch (err) { console.error('Business search unavailable', err); }
     if (hasRadiusCenter && businesses.length) { const businessRadiusResult = await filterBusinessesByRadius(businesses, radiusLat, radiusLon, radius); businesses = businessRadiusResult.businesses; }
-    if (category || resultType === 'professionals') businesses = [];
+    if (resultType === 'professionals') businesses = [];
+    attachShopCategories([...businesses, ...cityOnlyBusinesses]);
     const totalResults = results.length + businesses.length;
     const filterLink = (overrides) => { const merged = { type: resultType === 'all' ? '' : resultType, category, city, q, radius: radius || '', lat: hasGps ? lat : '', lon: hasGps ? lon : '', ...overrides }; const qs = new URLSearchParams(Object.entries(merged).filter(([, v]) => v !== '' && v !== null && v !== undefined)); return `/search?${qs.toString()}`; };
     const centerLabel = hasGps ? 'your location' : (manualCenter ? manualCenter.label : city);
