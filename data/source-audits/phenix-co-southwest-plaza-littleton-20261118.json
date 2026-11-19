@@ -1,0 +1,416 @@
+{
+  "source_url": "https://phenixsalonsuites.com/locations/co-southwest-plaza-littleton/#professionals",
+  "source_name": "Phenix Salon Suites",
+  "location_name": "Southwest Plaza — Littleton",
+  "address": "8501 W. Bowles Avenue, Littleton, CO 80123",
+  "status": "DISCOVERED_PENDING_BOOKING_LINK_VERIFICATION",
+  "fetched_via": "Public search-indexed text; direct fetch returned 403. Not an authorized direct crawler fetch.",
+  "identified_professionals": 24,
+  "exact_name_matches_in_production": 0,
+  "visible_book_now_labels": 6,
+  "new_production_profiles": 0,
+  "reason": "Book Now destination URLs not exposed in text search; do not fabricate or route a booking action to generic rental page.",
+  "records": [
+    {
+      "name": "Ashley Denome",
+      "workplace_name": "Ashley Brooke",
+      "city": "Littleton",
+      "state": "CO",
+      "street_address": "8501 W Bowles Avenue",
+      "zip_code": "80123",
+      "suite": "101",
+      "categories": [
+        "stylist",
+        "eyebrow_technician",
+        "esthetician"
+      ],
+      "has_book_now": false,
+      "source_url": "https://phenixsalonsuites.com/locations/co-southwest-plaza-littleton/#professionals",
+      "booking_url": null,
+      "review_status": "missing_external_booking_link"
+    },
+    {
+      "name": "C. Michael Martinez",
+      "workplace_name": "C. Michael",
+      "city": "Littleton",
+      "state": "CO",
+      "street_address": "8501 W Bowles Avenue",
+      "zip_code": "80123",
+      "suite": "102",
+      "categories": [
+        "stylist"
+      ],
+      "has_book_now": false,
+      "source_url": "https://phenixsalonsuites.com/locations/co-southwest-plaza-littleton/#professionals",
+      "booking_url": null,
+      "review_status": "missing_external_booking_link"
+    },
+    {
+      "name": "Christy Reed",
+      "workplace_name": "The Skin Suite",
+      "city": "Littleton",
+      "state": "CO",
+      "street_address": "8501 W Bowles Avenue",
+      "zip_code": "80123",
+      "suite": "103",
+      "categories": [
+        "esthetician"
+      ],
+      "has_book_now": false,
+      "source_url": "https://phenixsalonsuites.com/locations/co-southwest-plaza-littleton/#professionals",
+      "booking_url": null,
+      "review_status": "missing_external_booking_link"
+    },
+    {
+      "name": "Michele Howard Mota",
+      "workplace_name": "Love is in the Hair",
+      "city": "Littleton",
+      "state": "CO",
+      "street_address": "8501 W Bowles Avenue",
+      "zip_code": "80123",
+      "suite": "104/105",
+      "categories": [
+        "stylist"
+      ],
+      "has_book_now": false,
+      "source_url": "https://phenixsalonsuites.com/locations/co-southwest-plaza-littleton/#professionals",
+      "booking_url": null,
+      "review_status": "missing_external_booking_link"
+    },
+    {
+      "name": "Mai Nguyen",
+      "workplace_name": "Nails By Mai",
+      "city": "Littleton",
+      "state": "CO",
+      "street_address": "8501 W Bowles Avenue",
+      "zip_code": "80123",
+      "suite": "104/105",
+      "categories": [
+        "nail_technician"
+      ],
+      "has_book_now": false,
+      "source_url": "https://phenixsalonsuites.com/locations/co-southwest-plaza-littleton/#professionals",
+      "booking_url": null,
+      "review_status": "missing_external_booking_link"
+    },
+    {
+      "name": "Mary Velasquez",
+      "workplace_name": "Shear Luxury Ltd",
+      "city": "Littleton",
+      "state": "CO",
+      "street_address": "8501 W Bowles Avenue",
+      "zip_code": "80123",
+      "suite": "108",
+      "categories": [
+        "stylist"
+      ],
+      "has_book_now": false,
+      "source_url": "https://phenixsalonsuites.com/locations/co-southwest-plaza-littleton/#professionals",
+      "booking_url": null,
+      "review_status": "missing_external_booking_link"
+    },
+    {
+      "name": "Pamela Flodeen",
+      "workplace_name": "Hair by Pamela",
+      "city": "Littleton",
+      "state": "CO",
+      "street_address": "8501 W Bowles Avenue",
+      "zip_code": "80123",
+      "suite": "109",
+      "categories": [
+        "barber"
+      ],
+      "has_book_now": false,
+      "source_url": "https://phenixsalonsuites.com/locations/co-southwest-plaza-littleton/#professionals",
+      "booking_url": null,
+      "review_status": "missing_external_booking_link"
+    },
+    {
+      "name": "Andria Hutchinson",
+      "workplace_name": "Glamour & Grace Hair Studio",
+      "city": "Littleton",
+      "state": "CO",
+      "street_address": "8501 W Bowles Avenue",
+      "zip_code": "80123",
+      "suite": "110",
+      "categories": [
+        "stylist",
+        "waxing_specialist",
+        "makeup_artist"
+      ],
+      "has_book_now": false,
+      "source_url": "https://phenixsalonsuites.com/locations/co-southwest-plaza-littleton/#professionals",
+      "booking_url": null,
+      "review_status": "missing_external_booking_link"
+    },
+    {
+      "name": "Maegan Gerber",
+      "workplace_name": "Wicked Pretty by Maegan",
+      "city": "Littleton",
+      "state": "CO",
+      "street_address": "8501 W Bowles Avenue",
+      "zip_code": "80123",
+      "suite": "111",
+      "categories": [
+        "stylist"
+      ],
+      "has_book_now": true,
+      "source_url": "https://phenixsalonsuites.com/locations/co-southwest-plaza-littleton/#professionals",
+      "booking_url": null,
+      "review_status": "resolve_outbound_book_now_target"
+    },
+    {
+      "name": "Ashayla Cummings",
+      "workplace_name": "Enchanted Glow Esthetics",
+      "city": "Littleton",
+      "state": "CO",
+      "street_address": "8501 W Bowles Avenue",
+      "zip_code": "80123",
+      "suite": "112",
+      "categories": [
+        "esthetician",
+        "nail_technician",
+        "waxing_specialist"
+      ],
+      "has_book_now": false,
+      "source_url": "https://phenixsalonsuites.com/locations/co-southwest-plaza-littleton/#professionals",
+      "booking_url": null,
+      "review_status": "missing_external_booking_link"
+    },
+    {
+      "name": "Angie Cummings",
+      "workplace_name": "Angie's Nails",
+      "city": "Littleton",
+      "state": "CO",
+      "street_address": "8501 W Bowles Avenue",
+      "zip_code": "80123",
+      "suite": "113/114",
+      "categories": [
+        "nail_technician"
+      ],
+      "has_book_now": false,
+      "source_url": "https://phenixsalonsuites.com/locations/co-southwest-plaza-littleton/#professionals",
+      "booking_url": null,
+      "review_status": "missing_external_booking_link"
+    },
+    {
+      "name": "Theresa Emmons",
+      "workplace_name": "Thierry's Nails",
+      "city": "Littleton",
+      "state": "CO",
+      "street_address": "8501 W Bowles Avenue",
+      "zip_code": "80123",
+      "suite": "113/114",
+      "categories": [
+        "nail_technician"
+      ],
+      "has_book_now": false,
+      "source_url": "https://phenixsalonsuites.com/locations/co-southwest-plaza-littleton/#professionals",
+      "booking_url": null,
+      "review_status": "missing_external_booking_link"
+    },
+    {
+      "name": "Sharae Scoggins",
+      "workplace_name": "Dame & Dapper LLC",
+      "city": "Littleton",
+      "state": "CO",
+      "street_address": "8501 W Bowles Avenue",
+      "zip_code": "80123",
+      "suite": "115",
+      "categories": [
+        "stylist"
+      ],
+      "has_book_now": true,
+      "source_url": "https://phenixsalonsuites.com/locations/co-southwest-plaza-littleton/#professionals",
+      "booking_url": null,
+      "review_status": "resolve_outbound_book_now_target"
+    },
+    {
+      "name": "Shawnte Longmire",
+      "workplace_name": "Shawnte Suite",
+      "city": "Littleton",
+      "state": "CO",
+      "street_address": "8501 W Bowles Avenue",
+      "zip_code": "80123",
+      "suite": "116",
+      "categories": [
+        "stylist"
+      ],
+      "has_book_now": false,
+      "source_url": "https://phenixsalonsuites.com/locations/co-southwest-plaza-littleton/#professionals",
+      "booking_url": null,
+      "review_status": "missing_external_booking_link"
+    },
+    {
+      "name": "Thuy Do",
+      "workplace_name": "Twee-D Nails",
+      "city": "Littleton",
+      "state": "CO",
+      "street_address": "8501 W Bowles Avenue",
+      "zip_code": "80123",
+      "suite": "117",
+      "categories": [
+        "nail_technician",
+        "waxing_specialist"
+      ],
+      "has_book_now": true,
+      "source_url": "https://phenixsalonsuites.com/locations/co-southwest-plaza-littleton/#professionals",
+      "booking_url": null,
+      "review_status": "resolve_outbound_book_now_target"
+    },
+    {
+      "name": "Danielle Palma",
+      "workplace_name": "Wiggle and giggle haircuts for kids",
+      "city": "Littleton",
+      "state": "CO",
+      "street_address": "8501 W Bowles Avenue",
+      "zip_code": "80123",
+      "suite": "119/121",
+      "categories": [
+        "stylist"
+      ],
+      "has_book_now": false,
+      "source_url": "https://phenixsalonsuites.com/locations/co-southwest-plaza-littleton/#professionals",
+      "booking_url": null,
+      "review_status": "missing_external_booking_link"
+    },
+    {
+      "name": "Hailey Nguyen",
+      "workplace_name": "HAILEY NAIL STUDIO",
+      "city": "Littleton",
+      "state": "CO",
+      "street_address": "8501 W Bowles Avenue",
+      "zip_code": "80123",
+      "suite": "124",
+      "categories": [
+        "nail_technician"
+      ],
+      "has_book_now": true,
+      "source_url": "https://phenixsalonsuites.com/locations/co-southwest-plaza-littleton/#professionals",
+      "booking_url": null,
+      "review_status": "resolve_outbound_book_now_target"
+    },
+    {
+      "name": "Tracy Shelton",
+      "workplace_name": "il Salone Verde",
+      "city": "Littleton",
+      "state": "CO",
+      "street_address": "8501 W Bowles Avenue",
+      "zip_code": "80123",
+      "suite": "125",
+      "categories": [
+        "stylist",
+        "eyebrow_technician"
+      ],
+      "has_book_now": false,
+      "source_url": "https://phenixsalonsuites.com/locations/co-southwest-plaza-littleton/#professionals",
+      "booking_url": null,
+      "review_status": "missing_external_booking_link"
+    },
+    {
+      "name": "Dina Day",
+      "workplace_name": "Dina Day Hair Extensions",
+      "city": "Littleton",
+      "state": "CO",
+      "street_address": "8501 W Bowles Avenue",
+      "zip_code": "80123",
+      "suite": "126",
+      "categories": [
+        "stylist",
+        "nail_technician"
+      ],
+      "has_book_now": true,
+      "source_url": "https://phenixsalonsuites.com/locations/co-southwest-plaza-littleton/#professionals",
+      "booking_url": null,
+      "review_status": "resolve_outbound_book_now_target"
+    },
+    {
+      "name": "Christy Dennison",
+      "workplace_name": "Lady Luck Beauty Parlor",
+      "city": "Littleton",
+      "state": "CO",
+      "street_address": "8501 W Bowles Avenue",
+      "zip_code": "80123",
+      "suite": "127",
+      "categories": [
+        "stylist",
+        "makeup_artist"
+      ],
+      "has_book_now": false,
+      "source_url": "https://phenixsalonsuites.com/locations/co-southwest-plaza-littleton/#professionals",
+      "booking_url": null,
+      "review_status": "missing_external_booking_link"
+    },
+    {
+      "name": "Kally Nguyen",
+      "workplace_name": "TruBrows Microblading Denver",
+      "city": "Littleton",
+      "state": "CO",
+      "street_address": "8501 W Bowles Avenue",
+      "zip_code": "80123",
+      "suite": "128",
+      "categories": [
+        "eyebrow_technician",
+        "eyelash_technician"
+      ],
+      "has_book_now": true,
+      "source_url": "https://phenixsalonsuites.com/locations/co-southwest-plaza-littleton/#professionals",
+      "booking_url": null,
+      "review_status": "resolve_outbound_book_now_target"
+    },
+    {
+      "name": "Gem Phan",
+      "workplace_name": "Polysh Nailcare Studio",
+      "city": "Littleton",
+      "state": "CO",
+      "street_address": "8501 W Bowles Avenue",
+      "zip_code": "80123",
+      "suite": "129",
+      "categories": [
+        "nail_technician"
+      ],
+      "has_book_now": false,
+      "source_url": "https://phenixsalonsuites.com/locations/co-southwest-plaza-littleton/#professionals",
+      "booking_url": null,
+      "review_status": "missing_external_booking_link"
+    },
+    {
+      "name": "Yesika Chavez",
+      "workplace_name": "Yesika Chavez",
+      "city": "Littleton",
+      "state": "CO",
+      "street_address": "8501 W Bowles Avenue",
+      "zip_code": "80123",
+      "suite": "131",
+      "categories": [
+        "stylist"
+      ],
+      "has_book_now": false,
+      "source_url": "https://phenixsalonsuites.com/locations/co-southwest-plaza-littleton/#professionals",
+      "booking_url": null,
+      "review_status": "missing_external_booking_link"
+    },
+    {
+      "name": "Nisha Poudel",
+      "workplace_name": "Eyebrow Threading by Nisha",
+      "city": "Littleton",
+      "state": "CO",
+      "street_address": "8501 W Bowles Avenue",
+      "zip_code": "80123",
+      "suite": "132",
+      "categories": [
+        "threading_specialist"
+      ],
+      "has_book_now": false,
+      "source_url": "https://phenixsalonsuites.com/locations/co-southwest-plaza-littleton/#professionals",
+      "booking_url": null,
+      "review_status": "missing_external_booking_link"
+    }
+  ],
+  "notes": [
+    "Exclude Sarah Olson (regional manager) from professional inventory.",
+    "The page provides names, suites, and service labels; public source does not itself confirm operational availability.",
+    "Before any insertion, verify first-party individual detail and original outward Book Now link, check duplicates across all source names, and retain source provenance.",
+    "Nearby Phenix location pages demonstrate the same directory structure. National crawler should use permitted fetch methods or authorized data access, not bypass 403."
+  ]
+}

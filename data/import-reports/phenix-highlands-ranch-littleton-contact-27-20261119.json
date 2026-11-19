@@ -1,0 +1,47 @@
+{
+  "source_url": "https://phenixsalonsuites.com/locations/highlands-ranch/",
+  "location_name": "CO | Littleton (Highlands Ranch)",
+  "address": "2030 County Line Road, Littleton, CO 80126",
+  "production_project": "jbhgeoedwvfxjteyuxum",
+  "import_date": "2026-11-19",
+  "source_access": "First-party text indexed in web search; direct fetch responded 403. Not an exhaustive nationwide crawl.",
+  "listed_directory_entries": 30,
+  "imported": 27,
+  "ids": "16976-17002",
+  "business_phones": 27,
+  "business_emails": 27,
+  "booking_urls_added": 0,
+  "unclaimed": 27,
+  "category_mappings": 27,
+  "held": [
+    {
+      "label": "Ambiance Salon",
+      "suite": "112–113",
+      "reason": "Business-only label, no named individual"
+    },
+    {
+      "label": "Shannon Miltenberger",
+      "suite": "103 B",
+      "reason": "No displayed service category"
+    },
+    {
+      "label": "Brandon Torres",
+      "suite": "122",
+      "reason": "No displayed service category"
+    }
+  ],
+  "denver_metro_scope": {
+    "baseline": 1251,
+    "current": 1278,
+    "target": 5000,
+    "remaining": 3722
+  },
+  "phenix_co_total": 119,
+  "notes": [
+    "Source says Littleton, not Highlands Ranch, so city stored as Littleton.",
+    "Blank booking URLs are empty strings to meet existing database NOT NULL constraint.",
+    "No fabricated scheduling links; professional can add their own after claim.",
+    "Exact-name duplicate check against existing CO production profiles found zero matches.",
+    "All listed contacts were public professional/business contacts on Phenix page."
+  ]
+}

@@ -61,6 +61,8 @@ for (const input of rows) {
     bookingUrl: clean(raw.booking_url),
     sourceUrl: clean(raw.source_url),
     sourceName: clean(raw.source_name),
+    contactPhone: clean(raw.contact_phone),
+    contactEmail: clean(raw.contact_email).toLowerCase(),
   };
 
   const reject = (reason) => {
@@ -75,7 +77,16 @@ for (const input of rows) {
   if (!/^[A-Z]{2}$/.test(row.state)) { reject('invalid_state'); continue; }
   if (row.zip && !/^\d{5}$/.test(row.zip)) { reject('invalid_zip'); continue; }
   if (expectedState && row.state !== expectedState) { reject('state_mismatch'); continue; }
-  if (!isApprovedBookingSource(row.sourceUrl)) { reject('unapproved_source_host'); continue; }
+  const phenixSource = /^https?:\/\/(?:[a-z0-9-]+\.)*(?:phenixsalonsuites\.com|phenixsalonaz\.com)(?:\/|$)/i.test(row.sourceUrl);
+  if (!isApprovedBookingSource(row.sourceUrl) && !phenixSource) { reject('unapproved_source_host'); continue; }\n  const phenixAdditionalHosts = ['ginasplatform.com', 'styleseat.com', 'as.me', 'heygoldie.com', 'noterro.com'];
+  const approvedPhenixBooking = isApprovedBookingSource(row.bookingUrl) || (() => {
+    try { const host = new URL(row.bookingUrl).hostname.toLowerCase(); return phenixAdditionalHosts.some(domain => host === domain || host.endsWith('.' + domain)); }
+    catch { return false; }
+  })();
+  if (phenixSource && row.bookingUrl && !approvedPhenixBooking) { reject('phenix_booking_url_unapproved_platform'); continue; }
+  if (phenixSource && !row.bookingUrl && !row.contactPhone && !row.contactEmail) { reject('phenix_missing_contact_and_booking'); continue; }
+  if (row.contactEmail && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(row.contactEmail)) { reject('invalid_public_business_email'); continue; }
+  if (row.contactPhone && row.contactPhone.replace(/\D/g, '').length < 10) { reject('invalid_public_business_phone'); continue; }
   if (row.bookingUrl && !isHttpUrl(row.bookingUrl)) { reject('invalid_booking_url'); continue; }
 
   const key = fingerprint(row);
@@ -115,10 +126,13 @@ for (const input of rows) {
   const legacyCategory = allowedLegacy.has(row.category) ? row.category : 'barber';
   const result = db.prepare(`INSERT INTO pro_profiles
     (user_id, business_name, category, bio, city, state, workplace_name, street_address, zip_code,
-     booking_url, initials, claim_status, source_url, source_name, source_checked_at)
-    VALUES (NULL, ?, ?, '', ?, ?, ?, ?, ?, ?, ?, 'unclaimed', ?, ?, CURRENT_TIMESTAMP)`)
+     booking_url, initials, claim_status, source_url, source_name, source_checked_at,
+     contact_phone, contact_email, contact_phone_source_url, contact_email_source_url, contact_checked_at)
+    VALUES (NULL, ?, ?, '', ?, ?, ?, ?, ?, ?, ?, 'unclaimed', ?, ?, CURRENT_TIMESTAMP, ?, ?, ?, ?, CURRENT_TIMESTAMP)`)
     .run(row.name, legacyCategory, row.city, row.state, row.workplace, row.address, row.zip,
-      row.bookingUrl, initials(row.name), row.sourceUrl, row.sourceName);
+      row.bookingUrl || '', initials(row.name), row.sourceUrl, row.sourceName,
+      row.contactPhone || null, row.contactEmail || null,
+      row.contactPhone ? row.sourceUrl : null, row.contactEmail ? row.sourceUrl : null);
 
   const proId = Number(result.lastInsertRowid);
   db.prepare('INSERT INTO pro_categories (pro_id, category) VALUES (?, ?)').run(proId, row.category);

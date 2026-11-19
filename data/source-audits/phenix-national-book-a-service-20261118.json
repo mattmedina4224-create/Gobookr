@@ -1,0 +1,22 @@
+{
+  "source_url": "https://phenixsalonsuites.com/book-a-service/",
+  "discovery": "National indexable Salon Directory with professionals from multiple states and locations",
+  "date": "2026-11-18",
+  "access": "Public search index text accessible; direct HTTP fetch from runtime returned 403. Do not bypass.",
+  "sample_size": 27,
+  "matched_same_name_anywhere": 1,
+  "matched_correct_location": 0,
+  "new_profiles_imported": 0,
+  "source_states_sample": [
+    "WI",
+    "TX"
+  ],
+  "important": "Book Now labels visible in text but target URLs not accessible or individually verified; this is a discovery audit only.",
+  "observations": [
+    "WI New Berlin Moorland Square includes several named barbers, stylists, nail techs and massage therapists.",
+    "TX Live Oak Gateway Shopping Center includes named skin, lash, hair and color professionals.",
+    "Global name match Stephanie Garcia exists in a different city/state and is NOT a valid duplicate.",
+    "Professional source page URL and actual outward booking URL must be captured through permitted HTML export/feed before any import."
+  ],
+  "pipeline": "Official authorized national listing/export -> parse professional cards -> validate location and services -> resolve individual Book Now destination -> verify supported booking provider/working redirect -> dedupe on name+location+workplace+source -> import unclaimed -> test GoBookr profile and booking link."
+}

@@ -1,0 +1,37 @@
+{
+  "date": "2026-11-19",
+  "source_url": "https://phenixsalonsuitesco.com/salon-owners/",
+  "source_location": "Phenix Salon Suites Edgewater Marketplace, 1931 Sheridan Blvd, Edgewater, CO 80214",
+  "production_project": "jbhgeoedwvfxjteyuxum",
+  "profiles_created": 41,
+  "created_ids": {
+    "first": 16935,
+    "last": 16975
+  },
+  "all_unclaimed": true,
+  "phones": 41,
+  "emails": 41,
+  "category_mappings": 41,
+  "booking_links": "none supplied; empty existing DB booking field; professionals can add their own on claim",
+  "existing_duplicate_skipped": [
+    "Tyler Esker (existing profile #1156)"
+  ],
+  "excluded": [
+    "Pinar Koksal tailoring business (out-of-scope specialty)",
+    "Second duplicate Christian Reveles directory card"
+  ],
+  "denver_metro_24_city_scope": {
+    "before": 1210,
+    "after": 1251,
+    "target": 5000,
+    "remaining": 3749
+  },
+  "notes": [
+    "Records sourced directly from public first-party Edgewater salon-owners page, not invented",
+    "Some source profiles offer booking links but these were not assigned without individually validating targets; directory remains source of contact details",
+    "Avoid using publicly sourced email for unsolicited promotional bulk messages",
+    "Production Phenix CO now 92 total: Edgewater 41, Denver 27, Littleton 24",
+    "Page has publicly listed business contacts; no private contact information generated"
+  ],
+  "github_branch": "feature/phenix-national-verified-import-20261118"
+}
