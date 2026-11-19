@@ -1,0 +1,51 @@
+{
+ "state": "CT",
+ "state_name": "Connecticut",
+ "wave": 8,
+ "created_at": "2026-11-19T22:09:44.142Z",
+ "staging_only": true,
+ "sources": [
+  {
+   "name": "Connecticut DCP State License (shop)",
+   "url": "https://data.ct.gov/d/ngch-56tr",
+   "status": "failed",
+   "error": "CT no shop/salon license types among: 1 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 2 | 20 | 21 | 22 | 23 | 25 | 26 | 27 | 28 | 29 | 3 | 30 | 31 | 32 | 33 | 35 | 36 | 37 | 38 | 39 | 40 | 41 | 42 | 43 | 44 | 45 | 46 | 47 | 48 | 49 | 5 | 50 | 51 | 53 | 54 | 58 | 59 | 63 | 64 | 65 | 66 | 67 | 68 | 69 | 7 | 70 | 71 | 72 | 73 | 78 | 8 | 83 | 9 | 90 | 91 | 96 | 97 | AAL | ACBR | ACCE | ACDS | ACE | ACER | ACFB | ACKE | ACME | ACO | ACPM | ACPP | ACRE | ACTL | ACTP | ACUN | AI | AIR | AJC | ALS"
+  },
+  {
+   "name": "OpenStreetMap (Overpass)",
+   "url": "https://overpass-api.de/api/interpreter",
+   "status": "processed",
+   "records": 1141
+  }
+ ],
+ "license_records_scanned": 0,
+ "licensed_active_candidates": 0,
+ "license_dropped": null,
+ "license_fields": null,
+ "license_shop_types": [],
+ "license_type_counts": [],
+ "license_type_lookup": [],
+ "mapped_beauty_places": 1141,
+ "overpass_endpoint": "https://overpass-api.de/api/interpreter",
+ "total_candidates": 1090,
+ "with_websites": 215,
+ "category_counts": {
+  "hair": 541,
+  "massage": 60,
+  "barber": 130,
+  "nails": 246,
+  "waxing": 17,
+  "spray_tanning": 17,
+  "tattoo": 43,
+  "skincare": 22,
+  "makeup": 3,
+  "brows": 3,
+  "lashes": 7,
+  "salon_suites": 1
+ },
+ "errors": [
+  "license: CT no shop/salon license types among: 1 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 2 | 20 | 21 | 22 | 23 | 25 | 26 | 27 | 28 | 29 | 3 | 30 | 31 | 32 | 33 | 35 | 36 | 37 | 38 | 39 | 40 | 41 | 42 | 43 | 44 | 45 | 46 | 47 | 48 | 49 | 5 | 50 | 51 | 53 | 54 | 58 | 59 | 63 | 64 | 65 | 66 | 67 | 68 | 69 | 7 | 70 | 71 | 72 | 73 | 78 | 8 | 83 | 9 | 90 | 91 | 96 | 97 | AAL | ACBR | ACCE | ACDS | ACE | ACER | ACFB | ACKE | ACME | ACO | ACPM | ACPP | ACRE | ACTL | ACTP | ACUN | AI | AIR | AJC | ALSA | AMC | AMHF | APL | APPR | APR | APRG | APSP | AQFP | AQS3 | AQSI | AQSO | AQSR | AQSS | AQSW | ARC | ARI | ART | ASC | ASF | AST | BA | BAK | BB | BC | BCF | BDLR | BIDC | BMFR | BMT | BO | C | CAM | CAMT | CAR | CASE | CASM | CBX | CCNH | CCRH | CDH | CFM | CFO | CGAL | CH | CHM | CHR | CHW | CKF | CLAB | CLC | CLCE | CLCM | COMB | COP | COS | CPAC | CPAL | CPAP | CRCS | CREM | CRNA | CRNO | CRNR | CRVL | CSL | CSM | CSP | CSS | CSV | CSW | CTB | CTBH | CTBO | CTCO | CTCU | CVH | DCCC | DCFA | DCFH | DCFS | DCGH | DEV | DGA | DGP | DLR | DMCR | DMFR | DSAP | DSCH | DSIP | DSLA | DSMA | DSMF | DSMI | DSPA | DUL | DWBT | DWCI | DWDO | DWPO | DWSO | ECD | ECM | EGD | EIT | ELC | ELV | ENGR | ENHB | ENND | ENNR | EPP | EQA | EQS | EST | ET | EXC | FBO | FBR | FCU | FCUO | FDR | FDW | FED | FH | FIDC | FILE | FME | FMNP | FP | FPFH | FPFR | FPSH | FR | FRC | FRP | FSBF | FSCP | FTR | FVG | FWBC | FWH | GC | GCTP | GH | GKE | GLZ | GOE | GRF | GSP | GSPA | GSPO | GSPT | HCA | HCE | HCL | HCM | HEMO | HEMP | HHC | HHHA | HIC | HIS | HOD | HOI | HOP | HSPC | HSTA | HSTO | HTG | HYP | ICOE | ICOT | IDE | ILS | IMP | INF | IPE | ITIC | JPC | L | LAB | LAC | LACT | LAP | LAR | LARC | LAT | LAU | LBA | LBB | LBD | LBF | LBP | LBR | LCA | LCB | LCC | LCK | LCL | LCM | LCN | LCO | LCR | LCS | LCT | LCW | LDF | LFB | LFC | LFG | LFM"
+ ],
+ "note": "A license record or map listing alone does not prove a business is open. The importer publishes only rows that meet its rules; the rest are held.",
+ "attribution": "OpenStreetMap data © OpenStreetMap contributors (ODbL, https://www.openstreetmap.org/copyright). Licensing data from the listed state open-data portals."
+}

@@ -1,0 +1,333 @@
+{
+ "state": "CT",
+ "census_places": 214,
+ "places_covered": 28,
+ "place_coverage_pct": 13.1,
+ "census_counties": 8,
+ "counties_covered": 8,
+ "counties_uncovered": [],
+ "communities_outside_census_places": [
+  {
+   "city": "Glastonbury",
+   "shops": 13
+  },
+  {
+   "city": "Fairfield",
+   "shops": 4
+  },
+  {
+   "city": "Southington",
+   "shops": 4
+  },
+  {
+   "city": "Southbury",
+   "shops": 3
+  },
+  {
+   "city": "South Windsor",
+   "shops": 3
+  },
+  {
+   "city": "Guilford",
+   "shops": 2
+  },
+  {
+   "city": "Westport",
+   "shops": 2
+  },
+  {
+   "city": "Hamden",
+   "shops": 2
+  },
+  {
+   "city": "Windsor",
+   "shops": 2
+  },
+  {
+   "city": "Vernon",
+   "shops": 2
+  },
+  {
+   "city": "Old Saybrook",
+   "shops": 2
+  },
+  {
+   "city": "Cromwell",
+   "shops": 2
+  },
+  {
+   "city": "Rocky Hill",
+   "shops": 2
+  },
+  {
+   "city": "Branford",
+   "shops": 2
+  },
+  {
+   "city": "Hebron",
+   "shops": 1
+  },
+  {
+   "city": "Coventry",
+   "shops": 1
+  },
+  {
+   "city": "Lisbon",
+   "shops": 1
+  },
+  {
+   "city": "Wallingford",
+   "shops": 1
+  },
+  {
+   "city": "Plainville",
+   "shops": 1
+  },
+  {
+   "city": "Berlin",
+   "shops": 1
+  },
+  {
+   "city": "Farmington",
+   "shops": 1
+  },
+  {
+   "city": "Darien",
+   "shops": 1
+  },
+  {
+   "city": "Woodbridge",
+   "shops": 1
+  },
+  {
+   "city": "Preston",
+   "shops": 1
+  },
+  {
+   "city": "Wilton",
+   "shops": 1
+  },
+  {
+   "city": "Simsbury",
+   "shops": 1
+  }
+ ],
+ "top_covered_places": [
+  {
+   "name": "Norwalk",
+   "shops": 5
+  },
+  {
+   "name": "Milford",
+   "shops": 5
+  },
+  {
+   "name": "Newington",
+   "shops": 4
+  },
+  {
+   "name": "Bridgeport",
+   "shops": 4
+  },
+  {
+   "name": "Storrs",
+   "shops": 4
+  },
+  {
+   "name": "New London",
+   "shops": 4
+  },
+  {
+   "name": "Willimantic",
+   "shops": 3
+  },
+  {
+   "name": "Plantsville",
+   "shops": 3
+  },
+  {
+   "name": "Greenwich",
+   "shops": 3
+  },
+  {
+   "name": "West Hartford",
+   "shops": 3
+  },
+  {
+   "name": "New Haven",
+   "shops": 2
+  },
+  {
+   "name": "Middletown",
+   "shops": 2
+  },
+  {
+   "name": "Norwich",
+   "shops": 2
+  },
+  {
+   "name": "Hartford",
+   "shops": 2
+  },
+  {
+   "name": "Wethersfield",
+   "shops": 2
+  },
+  {
+   "name": "Stamford",
+   "shops": 2
+  },
+  {
+   "name": "Manchester",
+   "shops": 1
+  },
+  {
+   "name": "Thomaston",
+   "shops": 1
+  },
+  {
+   "name": "Danbury",
+   "shops": 1
+  },
+  {
+   "name": "Brooklyn",
+   "shops": 1
+  },
+  {
+   "name": "Dayville",
+   "shops": 1
+  },
+  {
+   "name": "West Haven",
+   "shops": 1
+  },
+  {
+   "name": "Stafford Springs",
+   "shops": 1
+  },
+  {
+   "name": "North Haven",
+   "shops": 1
+  },
+  {
+   "name": "New Milford",
+   "shops": 1
+  },
+  {
+   "name": "Sharon",
+   "shops": 1
+  },
+  {
+   "name": "Ridgefield",
+   "shops": 1
+  },
+  {
+   "name": "Groton",
+   "shops": 1
+  }
+ ],
+ "uncovered_places_with_held_candidates": [
+  {
+   "name": "Shelton",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 9
+  },
+  {
+   "name": "Meriden",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 7
+  },
+  {
+   "name": "Danielson",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "East Hartford",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Bristol",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Colchester",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "East Hampton",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Putnam",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Torrington",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Bethel",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "East Haven",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Kensington",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Mansfield Center",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "New Britain",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Newtown",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Niantic",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Orange",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Portland",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Rockville",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Waterbury",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  }
+ ],
+ "uncovered_places_without_candidates": 166,
+ "source": "U.S. Census Bureau 2020 place-by-county and county code files"
+}
