@@ -53,6 +53,8 @@ function parseAddress(line) {
   const city = parts[parts.length - 3];
   const street = parts.slice(0, parts.length - 3).join(', ');
   if (!/^\d{5}$/.test(zip) || !US_STATES.has(state) || !city || !/\d/.test(street)) return null;
+  // Malformed lines repeat the city/state/ZIP inside the street part; reject rather than guess the street.
+  if (/united states|\b\d{5}\b/i.test(street.replace(/^\d+/, '')) || new RegExp(`\\b${state}\\b`).test(street)) return null;
   return { street, city: titleCity(city), state, zip };
 }
 
