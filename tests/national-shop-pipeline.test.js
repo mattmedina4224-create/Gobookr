@@ -71,3 +71,17 @@ test('coverage counts Census places and counties, and lists communities outside 
   assert.deepEqual(c.communities_outside_census_places, [{ city: 'Tijeras Canyon', shops: 1 }]);
   assert.deepEqual(c.uncovered_places_with_held_candidates.map((g) => g.name), ['Placitas']);
 });
+
+test('expansion dashboard requires an admin before any query runs', async () => {
+  const fs = require('node:fs'); const vm = require('node:vm'); const path = require('node:path');
+  const queries = []; const routes = {};
+  const deps = {
+    '../db': { prepare(q) { queries.push(q); return { all: () => [] }; } }, '../lib/layout': { layout: () => '' }, '../lib/http': { send() {} },
+    '../lib/util': require('../lib/util'), '../lib/admin': { requireAdmin: () => false }, '../lib/shop-states': require('../lib/shop-states'), '../lib/shop-categories': require('../lib/shop-categories'),
+  };
+  const mod = { exports: {} };
+  vm.runInNewContext(fs.readFileSync(path.join(__dirname, '../routes/admin-expansion.js'), 'utf8'), { module: mod, exports: mod.exports, require: (id) => { if (id in deps) return deps[id]; throw new Error('Unexpected dependency ' + id); } });
+  mod.exports({ get: (url, fn) => { routes[url] = fn; } });
+  await routes['/admin/shop-expansion']({ query: {}, res: {} });
+  assert.deepEqual(queries, []);
+});
