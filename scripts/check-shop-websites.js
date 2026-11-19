@@ -12,11 +12,12 @@ const UA = 'Mozilla/5.0 (compatible; GoBookrWebsiteCheck/1.0; +https://gobookr.c
 const args = process.argv.slice(2);
 const out = (args.find((a) => a.startsWith('--out=')) || '--out=tmp/colorado-shop-website-checks.json').slice(6);
 const inputs = args.filter((a) => !a.startsWith('--'));
+const concurrency = Math.min(16, Math.max(1, Number((args.find((a) => a.startsWith('--concurrency=')) || '--concurrency=4').slice(14)) || 4));
 
 function urlsFrom(file) {
   const text = fs.readFileSync(file, 'utf8');
   if (file.endsWith('.json')) return JSON.parse(text).flatMap((r) => [r.website_url, r.website_candidate]).filter(Boolean);
-  return [...text.matchAll(/https?:\/\/[^\s",]+/g)].map((m) => m[0]).filter((u) => !/openstreetmap\.org|data\.colorado\.gov/.test(u));
+  return [...text.matchAll(/https?:\/\/[^\s",]+/g)].map((m) => m[0]).filter((u) => !/openstreetmap\.org|data\.(colorado|texas|ny|ct)\.gov/.test(u));
 }
 function safe(u) { try { const x = new URL(u); return ['http:', 'https:'].includes(x.protocol) ? x.toString() : ''; } catch { return ''; } }
 
@@ -36,7 +37,7 @@ async function check(url) {
 (async () => {
   const urls = [...new Set(inputs.flatMap(urlsFrom).map(safe).filter(Boolean))];
   const results = {}; let i = 0;
-  await Promise.all(Array.from({ length: 4 }, async () => { while (i < urls.length) { const u = urls[i++]; results[u] = await check(u); } }));
+  await Promise.all(Array.from({ length: concurrency }, async () => { while (i < urls.length) { const u = urls[i++]; results[u] = await check(u); } }));
   fs.mkdirSync(path.dirname(out), { recursive: true });
   fs.writeFileSync(out, JSON.stringify(results, null, 1));
   const counts = Object.values(results).reduce((m, r) => ((m[r.status] = (m[r.status] || 0) + 1), m), {});

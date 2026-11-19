@@ -70,11 +70,11 @@ test('import publishes verified shops, holds uncertain ones, and dedupes', () =>
   const reasons = Object.fromEntries(r.review.map((x) => [x.name, x.reason]));
   assert.equal(reasons['Bee Smooth'], 'no_category_evidence_in_name');
   assert.equal(reasons['Empire Beauty School'], 'school_or_training_facility');
-  assert.equal(reasons['Old Nail Spa'], 'license_not_active');
-  assert.equal(reasons['Quiet Tattoo'], 'osm_website_not_confirmed_live');
+  assert.equal(reasons['Old Nail Spa'], 'license_not_confirmed_active');
+  assert.equal(reasons['Quiet Tattoo'], 'map_website_not_confirmed_live');
   assert.equal(reasons['Nowhere Nails'], 'missing_city');
   assert.deepEqual(r.skipped.map((x) => x.reason).sort(), ['duplicate_candidate', 'existing_shop']);
-  assert.deepEqual(r.enrich, [{ id: 33, zip_code: '80241', license_number: 'REG.7', website_url: '', categories: ['nail_technician'], source_external_id: 'dora:REG:7' }]);
+  assert.deepEqual(r.enrich, [{ id: 33, zip_code: '80241', license_number: 'REG.7', website_url: '', phone: '', categories: ['nail_technician'], source_external_id: 'dora:REG:7' }]);
 });
 
 test('generated SQL is unclaimed, ownerless and guarded against duplicates', () => {
