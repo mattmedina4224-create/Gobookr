@@ -14,6 +14,7 @@ on:
       - 'data/source-audits/square-appointments-wave3-seeds.json'
       - 'data/source-audits/square-appointments-wave4-seeds.json'
       - 'data/source-audits/square-appointments-wave5-seeds.json'
+      - 'data/source-audits/square-appointments-denver-metro-seeds-20261119.json'
   schedule:
     - cron: '23 11 * * 2'
 
@@ -59,9 +60,16 @@ jobs:
         id: wave5
         continue-on-error: true
         run: node scripts/audit-square-appointments.js data/source-audits/square-appointments-wave5-seeds.json --output=tmp/square-national-wave5-audit.json
+      - name: Audit Denver metro Square merchant rosters
+        id: denver
+        continue-on-error: true
+        run: node scripts/audit-square-appointments.js data/source-audits/square-appointments-denver-metro-seeds-20261119.json --output=tmp/square-denver-metro-audit.json
       - name: Summarize source audit
         if: always()
         run: |
+          if [ -f tmp/square-denver-metro-audit.json ]; then
+            node -e "const a=require('./tmp/square-denver-metro-audit.json');console.log('Denver metro Square:',a.pages_loaded,'pages,',a.staff_records,'staff,',a.errors.length,'errors; review required before production import.');"
+          fi
           if [ -f tmp/square-az-audit.json ]; then
             node -e "const a=require('./tmp/square-az-audit.json');console.log('Square Arizona sources:',a.pages_loaded,'pages,',a.staff_records,'staff,',a.errors.length,'page errors. This is source inventory only, not an import.');"
           fi
@@ -96,5 +104,6 @@ jobs:
             tmp/square-national-wave3-audit.json
             tmp/square-national-wave4-audit.json
             tmp/square-national-wave5-audit.json
+            tmp/square-denver-metro-audit.json
           if-no-files-found: warn
           retention-days: 30
