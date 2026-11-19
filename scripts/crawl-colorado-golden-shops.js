@@ -5,7 +5,12 @@ const fs=require('node:fs');
 const API='https://data.colorado.gov', ID='7s5z-vewr';
 const norm=x=>String(x||'').normalize('NFKD').toLowerCase().replace(/&/g,'and').replace(/[^a-z0-9]+/g,' ').trim();
 const val=(x,keys)=>{for(const k of keys){const p=Object.keys(x).find(z=>norm(z)===norm(k));if(p&&x[p]!=null)return String(x[p]).trim()}return ''};
-const map={type:['License Type','Credential Type','license_type'],status:['License Status','Status','license_status'],name:['Business Name','Licensee Name','Name','Full Name','Licensee'],street:['Address','Street Address','Street','Business Address','Address Line 1'],city:['City','Business City','Address City'],zip:['Zip','Zip Code','Postal Code'],number:['License Number','Credential Number','License No']};
+const map={type:['License Type','Credential Type','license_type','licenseType'],status:['License Status','Status','license_status','licenseStatusDescription','License Status Description'],
+ name:['Business Name','Entity Name','entityName','Licensee Name','Name','Full Name','Licensee','Organization Name'],
+ street:['Address','Street Address','Street','Business Address','Address Line 1','addressLine1','Mail Address Line 1'],city:['City','Business City','Address City','mailCity'],
+ zip:['Zip','Zip Code','Postal Code','mailZipCode','zipcode'],state:['State','mailState','Address State'],number:['License Number','Credential Number','License No','licenseNumber'],
+ expires:['License Expiration Date','Expiration Date','licenseExpirationDate']};
+const titleCase=x=>String(x||'').toLowerCase().replace(/\b([a-z])/g,m=>m.toUpperCase());
 const sleep=ms=>new Promise(r=>setTimeout(r,ms));
 async function json(url,options={}){
  for(let attempt=0;attempt<3;attempt++){
@@ -34,38 +39,52 @@ function kind(name,detail=''){
  return detail?'other_beauty':'shop_category_review';
 }
 function website(v){try{const u=new URL(v);if(!['http:','https:'].includes(u.protocol))return '';if(/(?:instagram|facebook|yelp|tiktok|twitter)\.com$/.test(u.hostname))return '';return u.toString()}catch{return ''}}
+// Socrata exposes both a display name ("License Type") and a field name ("licensetype"/"licenseType");
+// compare both with all separators removed so either spelling matches.
+const compact=x=>norm(x).replace(/ /g,'');
 async function dora(){
  const metadata=await json(API+'/api/views/'+ID+'.json');
  const cols=(metadata.columns||[]).map(c=>({name:c.name,field:c.fieldName}));
- const field=aliases=>cols.find(x=>aliases.some(a=>norm(a)===norm(x.name)||norm(a)===norm(x.field)))?.field;
- const licenseField=field(map.type),statusField=field(map.status);
- if(!licenseField)throw Error('DORA license type field unavailable');
+ const field=aliases=>cols.find(x=>aliases.some(a=>compact(a)===compact(x.name)||compact(a)===compact(x.field)))?.field
+  ||cols.find(x=>aliases.some(a=>compact(x.name+x.field).includes(compact(a))))?.field;
+ const licenseField=field(map.type)||cols.find(x=>/licen|credential/i.test(x.name+x.field)&&/type/i.test(x.name+x.field))?.field;
+ const statusField=field(map.status);
+ if(!licenseField)throw Error('DORA license type field unavailable; columns: '+cols.map(c=>c.field).join(','));
+ // Read the real license-type values instead of guessing their spelling, then keep business registrations
+ // for shops and salons (barber/cosmetology, salon suites) and massage businesses if DORA lists them.
+ const types=await json(API+'/resource/'+ID+'.json?'+new URLSearchParams({'$select':licenseField+', count(*) AS n','$group':licenseField,'$limit':'2000'}));
+ const shopTypes=types.map(t=>t[licenseField]).filter(t=>t&&/shop|salon|registration.*(barber|cosmet)|(barber|cosmet).*registration/i.test(t)&&!/school|instructor|apprentic/i.test(t));
+ if(!shopTypes.length)throw Error('DORA has no shop/salon license types; values seen: '+types.map(t=>t[licenseField]).slice(0,80).join(' | '));
  const rows=[];let total=0;
- for(let offset=0;offset<150000;offset+=5000){
+ const inList=shopTypes.map(t=>"'"+t.replace(/'/g,"''")+"'").join(',');
+ for(let offset=0;offset<300000;offset+=5000){
   const params=new URLSearchParams({'$limit':'5000','$offset':String(offset),'$order':':id',
-   '$where':'upper('+licenseField+') like '+ "'%SHOP REGISTRATION%'"});
+   '$where':licenseField+' in('+inList+')'});
   const batch=await json(API+'/resource/'+ID+'.json?'+params);
   total+=batch.length;
   for(const raw of batch){
-   const status=val(raw,[statusField,...map.status]);
+   const status=val(raw,[statusField,...map.status].filter(Boolean));
    if(status&&!/active|current|valid/i.test(status))continue;
+   const stateValue=val(raw,map.state);
+   if(stateValue&&!/^(co|colorado)$/i.test(stateValue))continue;
    const name=val(raw,map.name),city=val(raw,map.city);
    if(!name||!city)continue;
-   rows.push({name,city,state:'CO',street_address:val(raw,map.street),zip_code:val(raw,map.zip).match(/\b\d{5}\b/)?.[0]||'',
-    category:kind(name),license_number:val(raw,map.number),licensing_status:status||'unknown',
+   rows.push({name,city:titleCase(city),state:'CO',street_address:val(raw,map.street),zip_code:val(raw,map.zip).match(/\b\d{5}\b/)?.[0]||'',
+    category:kind(name),license_type:val(raw,[licenseField]),license_number:val(raw,map.number),licensing_status:status||'unknown',
+    license_expires:val(raw,map.expires),
     website_url:'',website_status:'missing',source_name:'Colorado DORA Shop Registration',
     source_url:'https://data.colorado.gov/Regulations/Professional-and-Occupational-Licenses-in-Colorado/'+ID});
   }
   if(batch.length<5000)break;
  }
- return {rows,total,cols};
+ return {rows,total,cols,shopTypes,typeCounts:types};
 }
 const OVERPASS='[out:json][timeout:180];area["name"="Colorado"]["admin_level"="4"]["boundary"="administrative"]->.a;('+
  'nwr["shop"~"^(hairdresser|beauty|tattoo|massage|cosmetics|nails)$"](area.a);'+
  'nwr["beauty"~"^(nails|tanning|eyelash|eyebrow|waxing|permanent_makeup)$"](area.a);'+
  'nwr["craft"="hairdresser"](area.a);nwr["healthcare"="massage_therapist"](area.a););out center tags;';
 async function osm(){
- const endpoints=['https://overpass.kumi.systems/api/interpreter','https://overpass.nchc.org.tw/api/interpreter'];
+ const endpoints=['https://overpass-api.de/api/interpreter','https://overpass.kumi.systems/api/interpreter','https://overpass.private.coffee/api/interpreter'];
  const errors=[];
  for(const ep of endpoints){
   try{
@@ -101,18 +120,19 @@ function merge(a,b){
   if(sites.length>1)x.website_status='conflicting_websites_review';
   if(!seen.has(key(x))){seen.add(key(x));records.push(x)}
  }
- for(const x of b){if(!x.website_url||(!x.city&&!x.zip_code&&!x.street_address)||seen.has(key(x)))continue;
+ // Keep mapped places without a website too (website stays blank for review); they still need an address or city.
+ for(const x of b){if((!x.city&&!x.zip_code&&!x.street_address)||seen.has(key(x)))continue;
   seen.add(key(x));records.push({...x,licensing_status:'not_checked'})}
  return records;
 }
 function csv(rows){
- const fields=['name','category','city','state','street_address','zip_code','website_url','website_status','source_name','source_url','license_number','licensing_status','website_source_url','latitude','longitude'];
+ const fields=['name','category','city','state','street_address','zip_code','website_url','website_status','source_name','source_url','license_type','license_number','licensing_status','license_expires','website_source_url','latitude','longitude'];
  const q=x=>'"'+String(x??'').replace(/"/g,'""')+'"';
  return [fields.map(q).join(','),...rows.map(r=>fields.map(k=>q(r[k])).join(','))].join('\n')+'\n';
 }
 (async()=>{
  const errors=[];let a={rows:[],total:0,cols:[]},b={rows:[],errors:[]};
- try{a=await dora()}catch(e){errors.push('DORA '+String(e.message||e))}
+ let a2;try{a2=await dora()}catch(e){errors.push('DORA '+String(e.message||e))}if(a2)a=a2;
  try{b=await osm()}catch(e){errors.push('OSM '+String(e.message||e))}
  if(!a.rows.length&&!b.rows.length)throw Error('Both sources unavailable: '+[...errors,...b.errors].join('; '));
  const rows=merge(a.rows,b.rows),categories={};
@@ -120,7 +140,7 @@ function csv(rows){
  const report={created_at:new Date().toISOString(),staging_only:true,licensed_shops_scanned:a.total,
  licensed_active_candidates:a.rows.length,mapped_beauty_places:b.rows.length,
  total_candidates:rows.length,with_websites:rows.filter(x=>x.website_url).length,
- category_counts:categories,errors:[...errors,...b.errors],source_fields:a.cols,overpass_endpoint:b.endpoint,
+ category_counts:categories,errors:[...errors,...b.errors],source_fields:a.cols,dora_shop_license_types:a.shopTypes||[],dora_license_type_counts:a.typeCounts||[],overpass_endpoint:b.endpoint,
  note:'License or OSM listing alone is not sufficient to assert current operation. Verify websites, physical location and category before publishing.',
  attribution:'OpenStreetMap data © OpenStreetMap contributors; ODbL applies https://www.openstreetmap.org/copyright'};
  fs.mkdirSync('tmp',{recursive:true});
