@@ -166,6 +166,42 @@
       "state": "CO",
       "enabled": true,
       "url": "https://salonsbyjc.com/location/united-states/colorado/"
+    },
+    {
+      "id": "salonsbyjc-denver-observatory-page2",
+      "provider": "salonsbyjc",
+      "type": "location_professionals",
+      "city": "Denver",
+      "state": "CO",
+      "enabled": true,
+      "url": "https://salonsbyjc.com/salons/united-states/colorado/denver/colorado-denver-observatory-park/page/2/"
+    },
+    {
+      "id": "salonsbyjc-denver-observatory-page3",
+      "provider": "salonsbyjc",
+      "type": "location_professionals",
+      "city": "Denver",
+      "state": "CO",
+      "enabled": true,
+      "url": "https://salonsbyjc.com/salons/united-states/colorado/denver/colorado-denver-observatory-park/page/3/"
+    },
+    {
+      "id": "salonsbyjc-denver-cherry-creek",
+      "provider": "salonsbyjc",
+      "type": "location_professionals",
+      "city": "Denver",
+      "state": "CO",
+      "enabled": true,
+      "url": "https://salonsbyjc.com/salons/united-states/colorado/denver/colorado-denver-cherry-creek-shopping-mall/"
+    },
+    {
+      "id": "salonsbyjc-greenwood-village",
+      "provider": "salonsbyjc",
+      "type": "location_professionals",
+      "city": "Greenwood Village",
+      "state": "CO",
+      "enabled": true,
+      "url": "https://salonsbyjc.com/salons/united-states/colorado/greenwood-village/"
     }
   ]
 }
