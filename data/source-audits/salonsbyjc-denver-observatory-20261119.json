@@ -1,0 +1,40 @@
+{
+  "audit_date": "2026-11-19",
+  "directory": "Salons by JC — Denver Observatory Park",
+  "location": "2130 S University Blvd, Denver, CO 80210, United States",
+  "user_supplied_url": "https://salonsbyjc.com/search/?geodir_search=1&stype=gd_place&spost_category%EF%BF%BD%EF%BF%BD=&sopen_now=&s=+&snear=&sgeo_lat=&sgeo_lon=&neighbourhood=colorado-denver-observatory-park&utm_source=salonsbyjc.com&utm_medium=organic",
+  "canonical_roster_page": "https://salonsbyjc.com/salons/united-states/colorado/denver/colorado-denver-observatory-park/",
+  "pagination": [
+    "https://salonsbyjc.com/salons/united-states/colorado/denver/colorado-denver-observatory-park/page/2/",
+    "https://salonsbyjc.com/salons/united-states/colorado/denver/colorado-denver-observatory-park/page/3/"
+  ],
+  "pages_examined": 3,
+  "roster_cards_found": 23,
+  "exact_name_matches_in_existing_goBookr_co": 2,
+  "existing_matches": [
+    {
+      "name": "Jessica Brever",
+      "id": 330,
+      "workplace": "Modern Sage Salon"
+    },
+    {
+      "name": "Allie Davis",
+      "id": 1308,
+      "workplace": "Golden Road Barbershop",
+      "note": "Different workplace from Salons by JC, requires location-move review, not automatic overwrite"
+    }
+  ],
+  "unmatched_or_ambiguous_cards": 21,
+  "new_profiles_imported": 0,
+  "additional_location_sources": [
+    "https://salonsbyjc.com/salons/united-states/colorado/denver/colorado-denver-cherry-creek-shopping-mall/",
+    "https://salonsbyjc.com/salons/united-states/colorado/greenwood-village/"
+  ],
+  "notes": [
+    "Source is publicly accessible via web and reveals professional first and last names, studio, suite, specialty and some third-party booking links.",
+    "No assumptions about availability, claimed status or business-contact email for roster-only cards.",
+    "Some listings show a shared studio with two professionals (Scissor Cult Bobby and Jessica); verify individual identities before creating profiles.",
+    "Full source scan is monitoring only; no automatic publishing or removal. The weekly scan does not extract all staff cards yet—needs dedicated Salons by JC adapter.",
+    "Do not copy biographies/portfolio photos or use general franchise leasing phone as professional phone."
+  ]
+}
