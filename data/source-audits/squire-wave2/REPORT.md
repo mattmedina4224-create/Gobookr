@@ -12,7 +12,7 @@ Status: **5,000 target not reached; 500 milestone not reached.** Production hold
 | Verified (passed validation) | 144 |
 | Imported to production (wave 2) | 136 (ids 16706–16841); 39 of them under the 5,000 brief |
 | Total production SQUIRE profiles | 389 |
-| Production SQUIRE rows with an individual `/barber/` booking URL | 255 distinct (the other 134 are older rows with shop-level links) |
+| Production SQUIRE rows with an individual `/barber/` booking URL | 255 distinct (the other 134 older rows have no booking URL at all) |
 | Duplicates rejected | 8 |
 | Unverifiable records rejected | 4 |
 | States with SQUIRE profiles | 19 |
