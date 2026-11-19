@@ -1,0 +1,1028 @@
+{
+ "source": "SQUIRE",
+ "exported_at": "2026-11-18",
+ "export_sql": "SELECT id, booking_url AS url FROM pro_profiles WHERE source_name='SQUIRE' AND COALESCE(booking_url,'')<>'' ORDER BY id",
+ "count": 255,
+ "links": [
+  {
+   "id": 1273,
+   "url": "https://getsquire.com/booking/book/dapper-barbershop-occ-old-colorado-city-colorado-springs/barber/bobby-nickel/services"
+  },
+  {
+   "id": 1274,
+   "url": "https://getsquire.com/booking/book/dapper-barbershop-occ-old-colorado-city-colorado-springs/barber/caden-ramirez/services"
+  },
+  {
+   "id": 1275,
+   "url": "https://getsquire.com/booking/book/dapper-barbershop-occ-old-colorado-city-colorado-springs/barber/desi-ann/services"
+  },
+  {
+   "id": 1276,
+   "url": "https://getsquire.com/booking/book/one-stop-shop-barber-shop-colorado-springs/barber/elli-downing/services"
+  },
+  {
+   "id": 1277,
+   "url": "https://getsquire.com/booking/book/dapper-barbershop-occ-old-colorado-city-colorado-springs/barber/ienn-chacon-1/services"
+  },
+  {
+   "id": 1278,
+   "url": "https://getsquire.com/booking/book/dapper-barbershop-occ-old-colorado-city-colorado-springs/barber/joe-castro-5/services"
+  },
+  {
+   "id": 1279,
+   "url": "https://getsquire.com/booking/book/one-stop-shop-barber-shop-colorado-springs/barber/kirsten-garner/services"
+  },
+  {
+   "id": 1280,
+   "url": "https://getsquire.com/booking/book/dapper-barbershop-occ-old-colorado-city-colorado-springs/barber/sergio-bonilla/services"
+  },
+  {
+   "id": 1281,
+   "url": "https://getsquire.com/booking/book/dapper-barbershop-occ-old-colorado-city-colorado-springs/barber/skyler-rosenthal/services"
+  },
+  {
+   "id": 1282,
+   "url": "https://getsquire.com/booking/book/barba-denver-denver/barber/eddie-diaz/services"
+  },
+  {
+   "id": 1283,
+   "url": "https://getsquire.com/booking/book/barba-denver-denver/barber/hannah-coop/services"
+  },
+  {
+   "id": 1284,
+   "url": "https://getsquire.com/booking/book/barba-denver-denver/barber/kat-lucero/services"
+  },
+  {
+   "id": 1285,
+   "url": "https://getsquire.com/booking/book/barba-denver-denver/barber/nini-aquiluz/services"
+  },
+  {
+   "id": 1286,
+   "url": "https://getsquire.com/booking/book/barba-denver-denver/barber/sammy-maestas-2/services"
+  },
+  {
+   "id": 1287,
+   "url": "https://getsquire.com/booking/book/steel-city-barber-lounge-pueblo/barber/barela-gabe/services"
+  },
+  {
+   "id": 1288,
+   "url": "https://getsquire.com/booking/book/steel-city-barber-lounge-pueblo/barber/gabriel-deherrera/services"
+  },
+  {
+   "id": 1289,
+   "url": "https://getsquire.com/booking/book/steel-city-barber-lounge-pueblo/barber/jeremy-valdez/services"
+  },
+  {
+   "id": 1290,
+   "url": "https://getsquire.com/booking/book/steel-city-barber-lounge-pueblo/barber/lisa-king/services"
+  },
+  {
+   "id": 1291,
+   "url": "https://getsquire.com/booking/book/steel-city-barber-lounge-pueblo/barber/matt-brooks/services"
+  },
+  {
+   "id": 1292,
+   "url": "https://getsquire.com/booking/book/steel-city-barber-lounge-pueblo/barber/noelle-solano/services"
+  },
+  {
+   "id": 1293,
+   "url": "https://getsquire.com/booking/book/steel-city-barber-lounge-pueblo/barber/raquel-luna/services"
+  },
+  {
+   "id": 1294,
+   "url": "https://getsquire.com/booking/book/steel-city-barber-lounge-pueblo/barber/sarah-carrillo/services"
+  },
+  {
+   "id": 1295,
+   "url": "https://getsquire.com/booking/book/elegance-barbershop-aurora/barber/david-fagoaga-1/services"
+  },
+  {
+   "id": 1296,
+   "url": "https://getsquire.com/booking/book/dapper-barbershop-north-colorado-springs/barber/allie-keenan/services"
+  },
+  {
+   "id": 1297,
+   "url": "https://getsquire.com/booking/book/dapper-barbershop-north-colorado-springs/barber/anna-pelletier-1/services"
+  },
+  {
+   "id": 1298,
+   "url": "https://getsquire.com/booking/book/dapper-barbershop-north-colorado-springs/barber/augustus-neary/services"
+  },
+  {
+   "id": 1299,
+   "url": "https://getsquire.com/booking/book/beards-and-fades-barbershop-colorado-springs-co-colorado-springs/barber/christopher-bard/services"
+  },
+  {
+   "id": 1300,
+   "url": "https://getsquire.com/booking/book/beards-and-fades-barbershop-colorado-springs-co-colorado-springs/barber/darius-smith/services"
+  },
+  {
+   "id": 1301,
+   "url": "https://getsquire.com/booking/book/dapper-barbershop-north-colorado-springs/barber/david-aikman/services"
+  },
+  {
+   "id": 1302,
+   "url": "https://getsquire.com/booking/book/beards-and-fades-barbershop-colorado-springs-co-colorado-springs/barber/derrick-murphy/services"
+  },
+  {
+   "id": 1303,
+   "url": "https://getsquire.com/booking/book/dapper-barbershop-north-colorado-springs/barber/lexie-chacon/services"
+  },
+  {
+   "id": 1304,
+   "url": "https://getsquire.com/booking/book/dapper-barbershop-north-colorado-springs/barber/markus-chacon/services"
+  },
+  {
+   "id": 1305,
+   "url": "https://getsquire.com/booking/book/dapper-barbershop-north-colorado-springs/barber/matty-snyder/services"
+  },
+  {
+   "id": 1306,
+   "url": "https://getsquire.com/booking/book/beards-and-fades-barbershop-colorado-springs-co-colorado-springs/barber/tim-cepahs/services"
+  },
+  {
+   "id": 1307,
+   "url": "https://getsquire.com/booking/book/barber-den-denver/barber/alan-nunez-2/services"
+  },
+  {
+   "id": 1308,
+   "url": "https://getsquire.com/booking/book/golden-road-barbershop-denver/barber/allie-davis/services"
+  },
+  {
+   "id": 1309,
+   "url": "https://getsquire.com/booking/book/the-barbery-denver/barber/amber-hagedorn/services"
+  },
+  {
+   "id": 1310,
+   "url": "https://getsquire.com/booking/book/the-barbery-denver/barber/ash-pickens/services"
+  },
+  {
+   "id": 1311,
+   "url": "https://getsquire.com/booking/book/native-barber-salon-denver/barber/catherine-bouliane/services"
+  },
+  {
+   "id": 1312,
+   "url": "https://getsquire.com/booking/book/native-barber-salon-denver/barber/chelsie-kiesel/services"
+  },
+  {
+   "id": 1313,
+   "url": "https://getsquire.com/booking/book/golden-road-barbershop-denver/barber/david-yorty-2/services"
+  },
+  {
+   "id": 1314,
+   "url": "https://getsquire.com/booking/book/native-barber-salon-denver/barber/dennis-schantz/services"
+  },
+  {
+   "id": 1315,
+   "url": "https://getsquire.com/booking/book/native-barber-salon-denver/barber/jay-esparza/services"
+  },
+  {
+   "id": 1316,
+   "url": "https://getsquire.com/booking/book/golden-road-barbershop-denver/barber/josh-beckner-1/services"
+  },
+  {
+   "id": 1317,
+   "url": "https://getsquire.com/booking/book/native-barber-salon-denver/barber/michael-webb-2/services"
+  },
+  {
+   "id": 1318,
+   "url": "https://getsquire.com/booking/book/barber-den-denver/barber/pablo-carrera-1/services"
+  },
+  {
+   "id": 1319,
+   "url": "https://getsquire.com/booking/book/native-barber-salon-denver/barber/tim-blackburn/services"
+  },
+  {
+   "id": 1320,
+   "url": "https://getsquire.com/booking/book/golden-road-barbershop-denver/barber/travis-young-2/services"
+  },
+  {
+   "id": 1321,
+   "url": "https://getsquire.com/booking/book/golden-road-barbershop-denver/barber/wil-zanni-1/services"
+  },
+  {
+   "id": 1337,
+   "url": "https://getsquire.com/discover/barbershop/prestige-barbershop-and-hair-salon-aurora/barber/gabriel-delgado-sanchez"
+  },
+  {
+   "id": 1338,
+   "url": "https://getsquire.com/discover/barbershop/alchemy-sharp-cutz-aurora/barber/naytre-aladdin"
+  },
+  {
+   "id": 1339,
+   "url": "https://getsquire.com/discover/barbershop/northside-barbers-boulder/barber/courtney-elyse"
+  },
+  {
+   "id": 1340,
+   "url": "https://getsquire.com/discover/barbershop/northside-barbers-boulder/barber/david-boggs"
+  },
+  {
+   "id": 1341,
+   "url": "https://getsquire.com/discover/barbershop/northside-barbers-boulder/barber/isaiah-hernandez"
+  },
+  {
+   "id": 1342,
+   "url": "https://getsquire.com/discover/barbershop/northside-barbers-boulder/barber/josh-honstien"
+  },
+  {
+   "id": 1345,
+   "url": "https://getsquire.com/discover/barbershop/noco-stellar-barbers-fort-collins/barber/isaak-moreno-2"
+  },
+  {
+   "id": 1346,
+   "url": "https://getsquire.com/discover/barbershop/campus-west-lucky-27-barbershop-fort-collins/barber/mitch-weber-1"
+  },
+  {
+   "id": 1348,
+   "url": "https://getsquire.com/discover/barbershop/trend-blendz-barbershop-lakewood/barber/beto-palos"
+  },
+  {
+   "id": 1349,
+   "url": "https://getsquire.com/discover/barbershop/fifty2eighty-cosmic-cuts-barbershop-lakewood/barber/jen-himes-1"
+  },
+  {
+   "id": 1350,
+   "url": "https://getsquire.com/discover/barbershop/the-urban-hideout-lakewood/barber/melody-cook"
+  },
+  {
+   "id": 1351,
+   "url": "https://getsquire.com/discover/barbershop/the-urban-hideout-lakewood/barber/phee-avery"
+  },
+  {
+   "id": 1352,
+   "url": "https://getsquire.com/discover/barbershop/fifty2eighty-cosmic-cuts-barbershop-lakewood/barber/roy-tubinez"
+  },
+  {
+   "id": 1353,
+   "url": "https://getsquire.com/discover/barbershop/fade-em-all-studio-westminster/barber/santiago-guerrero-2"
+  },
+  {
+   "id": 1354,
+   "url": "https://getsquire.com/discover/barbershop/brixton-barbers-centennial/barber/nick-zipeto"
+  },
+  {
+   "id": 1355,
+   "url": "https://getsquire.com/discover/barbershop/brixton-barbers-centennial/barber/ethan-hendrix"
+  },
+  {
+   "id": 1356,
+   "url": "https://getsquire.com/discover/barbershop/brixton-barbers-centennial/barber/meagan-chamberlain"
+  },
+  {
+   "id": 1357,
+   "url": "https://getsquire.com/discover/barbershop/brixton-barbers-centennial/barber/ezra-baker"
+  },
+  {
+   "id": 1358,
+   "url": "https://getsquire.com/discover/barbershop/brixton-barbers-centennial/barber/connor-stevens"
+  },
+  {
+   "id": 1359,
+   "url": "https://getsquire.com/discover/barbershop/brixton-barbers-centennial/barber/lucas-romero"
+  },
+  {
+   "id": 1360,
+   "url": "https://getsquire.com/discover/barbershop/prospect-trail-barbershop-denver/barber/debra-tygrett"
+  },
+  {
+   "id": 1361,
+   "url": "https://getsquire.com/discover/barbershop/prospect-trail-barbershop-denver/barber/jason-stevens-1"
+  },
+  {
+   "id": 1362,
+   "url": "https://getsquire.com/discover/barbershop/prospect-trail-barbershop-denver/barber/justin-miller"
+  },
+  {
+   "id": 1363,
+   "url": "https://getsquire.com/discover/barbershop/the-barber-linc-denver/barber/lincoln-lafrombois"
+  },
+  {
+   "id": 1364,
+   "url": "https://getsquire.com/discover/barbershop/xaaks-barbershop-loveland/barber/james-holland"
+  },
+  {
+   "id": 1365,
+   "url": "https://getsquire.com/discover/barbershop/xaaks-barbershop-loveland/barber/kellin-hicks"
+  },
+  {
+   "id": 1366,
+   "url": "https://getsquire.com/discover/barbershop/xaaks-barbershop-loveland/barber/joshua-pettie"
+  },
+  {
+   "id": 1367,
+   "url": "https://getsquire.com/discover/barbershop/xaaks-barbershop-loveland/barber/zeke-gallardo-4"
+  },
+  {
+   "id": 1368,
+   "url": "https://getsquire.com/discover/barbershop/rickybs-barbershop-fort-collins/barber/patrick-9"
+  },
+  {
+   "id": 1369,
+   "url": "https://getsquire.com/discover/barbershop/rickybs-barbershop-fort-collins/barber/aidan-mckee-7"
+  },
+  {
+   "id": 1370,
+   "url": "https://getsquire.com/discover/barbershop/avilas-fort-collins-harmony-fort-collins/barber/gustavo-avila-2"
+  },
+  {
+   "id": 1371,
+   "url": "https://getsquire.com/discover/barbershop/avilas-fort-collins-harmony-fort-collins/barber/miguel-lopez-4"
+  },
+  {
+   "id": 1372,
+   "url": "https://getsquire.com/discover/barbershop/avilas-fort-collins-shields-fort-collins/barber/armando-arregui"
+  },
+  {
+   "id": 1373,
+   "url": "https://getsquire.com/discover/barbershop/avilas-fort-collins-shields-fort-collins/barber/dafne-perea"
+  },
+  {
+   "id": 1374,
+   "url": "https://getsquire.com/discover/barbershop/avilas-fort-collins-shields-fort-collins/barber/karina-avila-5"
+  },
+  {
+   "id": 1375,
+   "url": "https://getsquire.com/discover/barbershop/avilas-fort-collins-shields-fort-collins/barber/isuro-marrufo-3"
+  },
+  {
+   "id": 1376,
+   "url": "https://getsquire.com/discover/barbershop/noco-stellar-barbers-fort-collins/barber/victor-xochitiotzi"
+  },
+  {
+   "id": 1377,
+   "url": "https://getsquire.com/discover/barbershop/noco-stellar-barbers-fort-collins/barber/erik-3"
+  },
+  {
+   "id": 1378,
+   "url": "https://getsquire.com/discover/barbershop/noco-stellar-barbers-fort-collins/barber/isaac-arellano"
+  },
+  {
+   "id": 16675,
+   "url": "https://getsquire.com/discover/barbershop/jays-barbershop-new-york-city/barber/jason-green"
+  },
+  {
+   "id": 16676,
+   "url": "https://getsquire.com/discover/barbershop/jays-barbershop-new-york-city/barber/timothy-smith"
+  },
+  {
+   "id": 16677,
+   "url": "https://getsquire.com/discover/barbershop/high-level-studio-long-island-city/barber/jay-979"
+  },
+  {
+   "id": 16678,
+   "url": "https://getsquire.com/discover/barbershop/high-level-studio-long-island-city/barber/shaddai-reyes"
+  },
+  {
+   "id": 16679,
+   "url": "https://getsquire.com/discover/barbershop/studio-592-inc-new-york/barber/rolin-sarabo"
+  },
+  {
+   "id": 16680,
+   "url": "https://getsquire.com/discover/barbershop/the-shop-atx-austin-5/barber/cam-johnson"
+  },
+  {
+   "id": 16681,
+   "url": "https://getsquire.com/discover/barbershop/the-shop-atx-austin-5/barber/david-hidalgo-2"
+  },
+  {
+   "id": 16682,
+   "url": "https://getsquire.com/discover/barbershop/the-shop-atx-austin-5/barber/aaron-alba-3"
+  },
+  {
+   "id": 16683,
+   "url": "https://getsquire.com/discover/barbershop/the-shop-atx-austin-5/barber/jovanny-padron"
+  },
+  {
+   "id": 16684,
+   "url": "https://getsquire.com/discover/barbershop/the-shop-atx-austin-5/barber/andres-castro-1"
+  },
+  {
+   "id": 16685,
+   "url": "https://getsquire.com/discover/barbershop/the-shop-atx-austin-5/barber/nate-bravo"
+  },
+  {
+   "id": 16686,
+   "url": "https://getsquire.com/discover/barbershop/the-shop-atx-austin-5/barber/tre-abeita-1"
+  },
+  {
+   "id": 16687,
+   "url": "https://getsquire.com/discover/barbershop/the-shop-atx-austin-5/barber/kori-neal"
+  },
+  {
+   "id": 16688,
+   "url": "https://getsquire.com/discover/barbershop/the-shop-atx-austin-5/barber/daniel-esparza-3"
+  },
+  {
+   "id": 16689,
+   "url": "https://getsquire.com/discover/barbershop/the-shop-atx-austin-5/barber/joaquin-ugarte-1"
+  },
+  {
+   "id": 16690,
+   "url": "https://getsquire.com/discover/barbershop/avenue-barbershop-austin-tx-austin/barber/erin-marcee"
+  },
+  {
+   "id": 16691,
+   "url": "https://getsquire.com/discover/barbershop/refined-barber-co-west-loop-chicago/barber/jose-colon"
+  },
+  {
+   "id": 16692,
+   "url": "https://getsquire.com/discover/barbershop/refined-barber-co-west-loop-chicago/barber/david-lara-19"
+  },
+  {
+   "id": 16693,
+   "url": "https://getsquire.com/discover/barbershop/refined-barber-co-west-loop-chicago/barber/jazmin-villa"
+  },
+  {
+   "id": 16694,
+   "url": "https://getsquire.com/discover/barbershop/refined-barber-co-west-loop-chicago/barber/chris-mcdonald-1"
+  },
+  {
+   "id": 16695,
+   "url": "https://getsquire.com/discover/barbershop/parabellum-creative-studio-chicago/barber/justin-young"
+  },
+  {
+   "id": 16696,
+   "url": "https://getsquire.com/discover/barbershop/parabellum-creative-studio-chicago/barber/julio-cesar-7"
+  },
+  {
+   "id": 16697,
+   "url": "https://getsquire.com/discover/barbershop/parabellum-creative-studio-chicago/barber/john-ocampo-2"
+  },
+  {
+   "id": 16698,
+   "url": "https://getsquire.com/discover/barbershop/parabellum-creative-studio-chicago/barber/nely-pineda"
+  },
+  {
+   "id": 16699,
+   "url": "https://getsquire.com/discover/barbershop/the-concierge-grooming-parlor-sunnyside/barber/lee-diamond"
+  },
+  {
+   "id": 16700,
+   "url": "https://getsquire.com/discover/barbershop/fernandeznycbarbershop-queens/barber/orlando-lapiz-fernandez"
+  },
+  {
+   "id": 16701,
+   "url": "https://getsquire.com/discover/barbershop/b-t-a-studios-new-york/barber/soren-roi"
+  },
+  {
+   "id": 16702,
+   "url": "https://getsquire.com/discover/barbershop/lost-studio-flushing/barber/rayy-barber"
+  },
+  {
+   "id": 16703,
+   "url": "https://getsquire.com/discover/barbershop/headliners-or-west-loop-chicago/barber/dame-hernandez-1"
+  },
+  {
+   "id": 16704,
+   "url": "https://getsquire.com/discover/barbershop/headliners-or-west-loop-chicago/barber/juan-flores-8"
+  },
+  {
+   "id": 16705,
+   "url": "https://getsquire.com/discover/barbershop/headliners-or-west-loop-chicago/barber/ernesto-santillan"
+  },
+  {
+   "id": 16706,
+   "url": "https://getsquire.com/discover/barbershop/fresh-cuts-barber-studio-miami/barber/david-sandoval-5"
+  },
+  {
+   "id": 16707,
+   "url": "https://getsquire.com/discover/barbershop/made-men-barbershop-phoenix/barber/serein-haddadin"
+  },
+  {
+   "id": 16708,
+   "url": "https://getsquire.com/discover/barbershop/barber-social-phoenix/barber/mike-yakutilov"
+  },
+  {
+   "id": 16709,
+   "url": "https://getsquire.com/discover/barbershop/classic-barbershop-los-angeles-1/barber/miguel-chavez-1"
+  },
+  {
+   "id": 16710,
+   "url": "https://getsquire.com/discover/barbershop/the-barber-cave-dallas/barber/charlo-fadez"
+  },
+  {
+   "id": 16711,
+   "url": "https://getsquire.com/discover/barbershop/made-men-barbershop-phoenix/barber/aj-byrd"
+  },
+  {
+   "id": 16712,
+   "url": "https://getsquire.com/discover/barbershop/circa-33-barbershop-los-angeles/barber/jenae-epson"
+  },
+  {
+   "id": 16713,
+   "url": "https://getsquire.com/discover/barbershop/smoke-and-mirrors-barbershop-miami/barber/josue-mora-1"
+  },
+  {
+   "id": 16714,
+   "url": "https://getsquire.com/discover/barbershop/made-men-barbershop-phoenix/barber/ben-yusupov"
+  },
+  {
+   "id": 16715,
+   "url": "https://getsquire.com/discover/barbershop/garretts-bespoke-barber-shop-marietta-ga-marietta/barber/garrett-crouchley-1"
+  },
+  {
+   "id": 16716,
+   "url": "https://getsquire.com/discover/barbershop/kinship-barber-lounge-port-richmond-philadelphia/barber/nate-phades"
+  },
+  {
+   "id": 16717,
+   "url": "https://getsquire.com/discover/barbershop/barber-social-phoenix/barber/roman-naumenko"
+  },
+  {
+   "id": 16718,
+   "url": "https://getsquire.com/discover/barbershop/jays-barbershop-and-shave-parlor-houston/barber/jasper-gonzales"
+  },
+  {
+   "id": 16719,
+   "url": "https://getsquire.com/discover/barbershop/barber-social-phoenix/barber/tania-alvarez"
+  },
+  {
+   "id": 16720,
+   "url": "https://getsquire.com/discover/barbershop/the-barber-shop-of-newnan-newnan/barber/joel-johnson-4"
+  },
+  {
+   "id": 16721,
+   "url": "https://getsquire.com/discover/barbershop/barber-social-phoenix/barber/alex-bautista-1"
+  },
+  {
+   "id": 16722,
+   "url": "https://getsquire.com/discover/barbershop/the-duke-barber-company-chestnut-hill-philadelphia/barber/william-brown-1"
+  },
+  {
+   "id": 16723,
+   "url": "https://getsquire.com/discover/barbershop/vegas-the-barber-atlanta/barber/vegas-the-barber"
+  },
+  {
+   "id": 16724,
+   "url": "https://getsquire.com/discover/barbershop/styles-barber-lounge-los-angeles-los-angeles/barber/danny-cruz-2"
+  },
+  {
+   "id": 16725,
+   "url": "https://getsquire.com/discover/barbershop/smokin-mirrors-barbershop-llc-houston/barber/lucas-best"
+  },
+  {
+   "id": 16726,
+   "url": "https://getsquire.com/discover/barbershop/hairitage-barbershop-philadelphia/barber/jordan-johnson"
+  },
+  {
+   "id": 16727,
+   "url": "https://getsquire.com/discover/barbershop/mustache-barbershop-miami/barber/sebastian-caicedo"
+  },
+  {
+   "id": 16728,
+   "url": "https://getsquire.com/discover/barbershop/bevans-grooming-texas-houston/barber/karim-bevans-2"
+  },
+  {
+   "id": 16729,
+   "url": "https://getsquire.com/discover/barbershop/kinship-barber-lounge-port-richmond-philadelphia/barber/mark-mooney"
+  },
+  {
+   "id": 16730,
+   "url": "https://getsquire.com/discover/barbershop/premier-barber-lounge-dallas/barber/michael-chanero-1"
+  },
+  {
+   "id": 16731,
+   "url": "https://getsquire.com/discover/barbershop/bespoke-barberpub-miami/barber/clara-henao-2"
+  },
+  {
+   "id": 16732,
+   "url": "https://getsquire.com/discover/barbershop/uptown-barbershop-original-phoenix/barber/john-sangas"
+  },
+  {
+   "id": 16733,
+   "url": "https://getsquire.com/discover/barbershop/classic-barbershop-los-angeles-1/barber/hector-godoy"
+  },
+  {
+   "id": 16734,
+   "url": "https://getsquire.com/discover/barbershop/jays-barbershop-and-shave-parlor-houston/barber/jay-leal"
+  },
+  {
+   "id": 16735,
+   "url": "https://getsquire.com/discover/barbershop/true-culture-barber-lounge-acworth/barber/quevo-stewart"
+  },
+  {
+   "id": 16736,
+   "url": "https://getsquire.com/discover/barbershop/taythebarber-atlanta/barber/taylor-thomas-1"
+  },
+  {
+   "id": 16737,
+   "url": "https://getsquire.com/discover/barbershop/faded-universe-barber-lounge-houston/barber/drew-nelson"
+  },
+  {
+   "id": 16738,
+   "url": "https://getsquire.com/discover/barbershop/barber-and-co-miami-miami/barber/krystal-rodriguez"
+  },
+  {
+   "id": 16739,
+   "url": "https://getsquire.com/discover/barbershop/smokin-mirrors-barbershop-llc-houston/barber/lex-griffith"
+  },
+  {
+   "id": 16740,
+   "url": "https://getsquire.com/discover/barbershop/premier-barber-lounge-dallas/barber/carlos-ruiz-8"
+  },
+  {
+   "id": 16741,
+   "url": "https://getsquire.com/discover/barbershop/barber-social-phoenix/barber/steven-santiago"
+  },
+  {
+   "id": 16742,
+   "url": "https://getsquire.com/discover/barbershop/cutters-lounge-barbershop-atlanta/barber/ajax-cuts"
+  },
+  {
+   "id": 16743,
+   "url": "https://getsquire.com/discover/barbershop/nativs-hair-studio-dallas/barber/haley-fire-2"
+  },
+  {
+   "id": 16744,
+   "url": "https://getsquire.com/discover/barbershop/the-groomsmith-atlanta/barber/tariq-nevar-6"
+  },
+  {
+   "id": 16745,
+   "url": "https://getsquire.com/discover/barbershop/chicago-2-barbershop-san-francisco/barber/kenneth-el-amin"
+  },
+  {
+   "id": 16746,
+   "url": "https://getsquire.com/discover/barbershop/skips-barbershop-south-boston-boston/barber/jamal-wiley"
+  },
+  {
+   "id": 16747,
+   "url": "https://getsquire.com/discover/barbershop/explicit-barbershop-san-diego/barber/sonny-koya"
+  },
+  {
+   "id": 16748,
+   "url": "https://getsquire.com/discover/barbershop/no-grease-premium-charlotte/barber/kam-ross-1"
+  },
+  {
+   "id": 16749,
+   "url": "https://getsquire.com/discover/barbershop/squire-barbershop-seattle/barber/david-squire"
+  },
+  {
+   "id": 16750,
+   "url": "https://getsquire.com/discover/barbershop/peoples-barber-polk-street-san-francisco/barber/justin-dohrmann-1"
+  },
+  {
+   "id": 16751,
+   "url": "https://getsquire.com/discover/barbershop/the-bottle-and-the-barber-seattle/barber/haiden-citrine"
+  },
+  {
+   "id": 16752,
+   "url": "https://getsquire.com/discover/barbershop/butchs-barber-shop-san-diego/barber/shannon-christenson"
+  },
+  {
+   "id": 16753,
+   "url": "https://getsquire.com/discover/barbershop/skips-barbershop-south-end-boston/barber/anthony-costa"
+  },
+  {
+   "id": 16754,
+   "url": "https://getsquire.com/discover/barbershop/the-bottle-and-the-barber-seattle/barber/cameron-dean"
+  },
+  {
+   "id": 16755,
+   "url": "https://getsquire.com/discover/barbershop/charlotte-barber-and-beard-charlotte/barber/terrance-josey"
+  },
+  {
+   "id": 16756,
+   "url": "https://getsquire.com/discover/barbershop/hillside-barber-san-diego/barber/kourtney-johnson"
+  },
+  {
+   "id": 16757,
+   "url": "https://getsquire.com/discover/barbershop/jp-kempt-barber-social-san-francisco/barber/kyle-farrand"
+  },
+  {
+   "id": 16758,
+   "url": "https://getsquire.com/discover/barbershop/squire-barbershop-seattle/barber/francisco-mireles"
+  },
+  {
+   "id": 16759,
+   "url": "https://getsquire.com/discover/barbershop/duverge-barbershop-boston/barber/luis-duverge-2"
+  },
+  {
+   "id": 16760,
+   "url": "https://getsquire.com/discover/barbershop/the-bottle-and-the-barber-seattle/barber/drew-learn-1"
+  },
+  {
+   "id": 16761,
+   "url": "https://getsquire.com/discover/barbershop/charlotte-barber-and-beard-charlotte/barber/sean-anderson"
+  },
+  {
+   "id": 16762,
+   "url": "https://getsquire.com/discover/barbershop/peoples-barber-polk-street-san-francisco/barber/jordan-richardson"
+  },
+  {
+   "id": 16763,
+   "url": "https://getsquire.com/discover/barbershop/hillside-barber-san-diego/barber/eno-walker"
+  },
+  {
+   "id": 16764,
+   "url": "https://getsquire.com/discover/barbershop/duverge-barbershop-boston/barber/bryan-lugo-2"
+  },
+  {
+   "id": 16765,
+   "url": "https://getsquire.com/discover/barbershop/forte-barbershop-san-diego/barber/kendrick-mcmillan-2"
+  },
+  {
+   "id": 16766,
+   "url": "https://getsquire.com/discover/barbershop/skips-barbershop-south-end-boston/barber/roberto-thegenus"
+  },
+  {
+   "id": 16767,
+   "url": "https://getsquire.com/discover/barbershop/no-grease-northlake-charlotte/barber/phil-barksdale-2"
+  },
+  {
+   "id": 16768,
+   "url": "https://getsquire.com/discover/barbershop/scissorhands-barbery-san-diego/barber/andy-alvarez-5"
+  },
+  {
+   "id": 16769,
+   "url": "https://getsquire.com/discover/barbershop/butchs-barber-shop-san-diego/barber/kado-morris"
+  },
+  {
+   "id": 16770,
+   "url": "https://getsquire.com/discover/barbershop/peoples-barber-polk-street-san-francisco/barber/chris-del-toro"
+  },
+  {
+   "id": 16771,
+   "url": "https://getsquire.com/discover/barbershop/bus-stop-barbershop-san-francisco/barber/tatiana-westfield-3"
+  },
+  {
+   "id": 16772,
+   "url": "https://getsquire.com/discover/barbershop/reunion-barbershop-austin/barber/katie-session-1"
+  },
+  {
+   "id": 16773,
+   "url": "https://getsquire.com/discover/barbershop/monarch-barbershop-austin/barber/anthony-ramirez-3"
+  },
+  {
+   "id": 16774,
+   "url": "https://getsquire.com/discover/barbershop/monarch-barbershop-austin/barber/jesse-crouse"
+  },
+  {
+   "id": 16775,
+   "url": "https://getsquire.com/discover/barbershop/the-barbershop-cuts-and-cocktails-las-vegas/barber/anthony-napolet"
+  },
+  {
+   "id": 16776,
+   "url": "https://getsquire.com/discover/barbershop/avenue-barbershop-austin-tx-austin/barber/jeremy-sheffield"
+  },
+  {
+   "id": 16777,
+   "url": "https://getsquire.com/discover/barbershop/monarch-barbershop-austin/barber/anais-mendoza"
+  },
+  {
+   "id": 16778,
+   "url": "https://getsquire.com/discover/barbershop/goodtimes-barbershop-las-vegas/barber/junny-herrera"
+  },
+  {
+   "id": 16779,
+   "url": "https://getsquire.com/discover/barbershop/reunion-barbershop-austin/barber/riley-hellyar-1"
+  },
+  {
+   "id": 16780,
+   "url": "https://getsquire.com/discover/barbershop/collins-and-co-barbershop-nashville/barber/rob-collins"
+  },
+  {
+   "id": 16781,
+   "url": "https://getsquire.com/discover/barbershop/barrelhouse-barber-llc-tampa/barber/abel-gonzalez-1"
+  },
+  {
+   "id": 16782,
+   "url": "https://getsquire.com/discover/barbershop/collins-and-co-barbershop-nashville/barber/kyle-hensley"
+  },
+  {
+   "id": 16783,
+   "url": "https://getsquire.com/discover/barbershop/kings-the-barber-studio-chicago/barber/john-garcia-1"
+  },
+  {
+   "id": 16784,
+   "url": "https://getsquire.com/discover/barbershop/bourbon-and-barber-nashville-nashville/barber/terra-goswick"
+  },
+  {
+   "id": 16785,
+   "url": "https://getsquire.com/discover/barbershop/the-jefferson-barbershop-denver/barber/ryan-vanegas-1"
+  },
+  {
+   "id": 16786,
+   "url": "https://getsquire.com/discover/barbershop/reunion-barbershop-austin/barber/adin-reardon"
+  },
+  {
+   "id": 16787,
+   "url": "https://getsquire.com/discover/barbershop/macdill-barber-main-tampa/barber/julien-mcfadden-1"
+  },
+  {
+   "id": 16788,
+   "url": "https://getsquire.com/discover/barbershop/macdill-barber-centcom-tampa/barber/kyle-stump-2"
+  },
+  {
+   "id": 16789,
+   "url": "https://getsquire.com/discover/barbershop/beard-and-blade-barber-co-austin/barber/fernando-sclater"
+  },
+  {
+   "id": 16790,
+   "url": "https://getsquire.com/discover/barbershop/monarch-barbershop-austin/barber/austin-ables"
+  },
+  {
+   "id": 16791,
+   "url": "https://getsquire.com/discover/barbershop/hawkins-barbershop-nashville/barber/michael-martin"
+  },
+  {
+   "id": 16792,
+   "url": "https://getsquire.com/discover/barbershop/collins-and-co-barbershop-nashville/barber/jessica-fleming"
+  },
+  {
+   "id": 16793,
+   "url": "https://getsquire.com/discover/barbershop/culture-nashville-nashville/barber/cullen-lejeune"
+  },
+  {
+   "id": 16794,
+   "url": "https://getsquire.com/discover/barbershop/collins-and-co-barbershop-nashville/barber/nathan-mckibbin"
+  },
+  {
+   "id": 16795,
+   "url": "https://getsquire.com/discover/barbershop/headliners-lakeview-chicago/barber/emir-martinez"
+  },
+  {
+   "id": 16796,
+   "url": "https://getsquire.com/discover/barbershop/macdill-barber-main-tampa/barber/jc-alvarado-1"
+  },
+  {
+   "id": 16797,
+   "url": "https://getsquire.com/discover/barbershop/texture-las-vegas/barber/kevin-simmons-1"
+  },
+  {
+   "id": 16798,
+   "url": "https://getsquire.com/discover/barbershop/macdill-barber-main-tampa/barber/ashlee-kirk-2"
+  },
+  {
+   "id": 16799,
+   "url": "https://getsquire.com/discover/barbershop/big-hit-barbershop-las-vegas-las-vegas/barber/adam-patino"
+  },
+  {
+   "id": 16800,
+   "url": "https://getsquire.com/discover/barbershop/collins-and-co-barbershop-nashville/barber/danny-burnette"
+  },
+  {
+   "id": 16801,
+   "url": "https://getsquire.com/discover/barbershop/the-barbershop-cuts-and-cocktails-las-vegas/barber/nick-karel"
+  },
+  {
+   "id": 16802,
+   "url": "https://getsquire.com/discover/barbershop/lakeshore-cuts-edgewater-chicago/barber/juan-saldana-2"
+  },
+  {
+   "id": 16803,
+   "url": "https://getsquire.com/discover/barbershop/mi-familia-barbering-portland/barber/joe-de-los-santos-1"
+  },
+  {
+   "id": 16804,
+   "url": "https://getsquire.com/discover/barbershop/persons-of-interest-carroll-gardens-brooklyn/barber/po-shu-huang-1"
+  },
+  {
+   "id": 16805,
+   "url": "https://getsquire.com/discover/barbershop/lyfe-stylz-salon-and-barbershop-brooklyn/barber/greg-brissett"
+  },
+  {
+   "id": 16806,
+   "url": "https://getsquire.com/discover/barbershop/gizmos-barber-parlor-baltimore/barber/jerry-lyle"
+  },
+  {
+   "id": 16807,
+   "url": "https://getsquire.com/discover/barbershop/the-cut-grooming-lounge-indianapolis/barber/india-muir"
+  },
+  {
+   "id": 16808,
+   "url": "https://getsquire.com/discover/barbershop/the-influential-grooming-lounge-portland/barber/tarrance-atkins"
+  },
+  {
+   "id": 16809,
+   "url": "https://getsquire.com/discover/barbershop/south-district-barber-co-san-antonio-san-antonio/barber/jonne-jasso"
+  },
+  {
+   "id": 16810,
+   "url": "https://getsquire.com/discover/barbershop/north-end-barber-company-portland/barber/josh-thompson"
+  },
+  {
+   "id": 16811,
+   "url": "https://getsquire.com/discover/barbershop/true-cuts-barbershop-temperance/barber/essa-elias"
+  },
+  {
+   "id": 16812,
+   "url": "https://getsquire.com/discover/barbershop/house-of-barbers-barbershop-san-antonio/barber/kareem-leggett"
+  },
+  {
+   "id": 16813,
+   "url": "https://getsquire.com/discover/barbershop/texas-blendz-barbershop-san-antonio/barber/branden-martinez"
+  },
+  {
+   "id": 16814,
+   "url": "https://getsquire.com/discover/barbershop/ace-of-fades-barber-lounge-minneapolis/barber/khi-johnson"
+  },
+  {
+   "id": 16815,
+   "url": "https://getsquire.com/discover/barbershop/sunny-side-barber-shop-sacramento-2/barber/jason-dean-1"
+  },
+  {
+   "id": 16816,
+   "url": "https://getsquire.com/discover/barbershop/texas-blendz-barbershop-san-antonio/barber/alyjha-clark"
+  },
+  {
+   "id": 16817,
+   "url": "https://getsquire.com/discover/barbershop/12-pell-new-york-3/barber/tim-hui-2"
+  },
+  {
+   "id": 16818,
+   "url": "https://getsquire.com/discover/barbershop/gizmos-barber-parlor-baltimore/barber/sam-pacoe"
+  },
+  {
+   "id": 16819,
+   "url": "https://getsquire.com/discover/barbershop/gizmos-barber-parlor-baltimore/barber/matthew-bendon"
+  },
+  {
+   "id": 16820,
+   "url": "https://getsquire.com/discover/barbershop/tapered-midtown-sacramento/barber/danyel-church-2"
+  },
+  {
+   "id": 16821,
+   "url": "https://getsquire.com/discover/barbershop/persons-of-interest-fort-greene-brooklyn/barber/matthew-wire"
+  },
+  {
+   "id": 16822,
+   "url": "https://getsquire.com/discover/barbershop/north-end-barber-company-portland/barber/jim-cramer"
+  },
+  {
+   "id": 16823,
+   "url": "https://getsquire.com/discover/barbershop/the-exclusive-way-san-antonio/barber/robert-ramirez-2"
+  },
+  {
+   "id": 16824,
+   "url": "https://getsquire.com/discover/barbershop/champions-barbershop-portland/barber/dee-clayton"
+  },
+  {
+   "id": 16825,
+   "url": "https://getsquire.com/discover/barbershop/persons-of-interest-carroll-gardens-brooklyn/barber/kathleen-giordano"
+  },
+  {
+   "id": 16826,
+   "url": "https://getsquire.com/discover/barbershop/north-end-barber-company-portland/barber/ryan-childers-4"
+  },
+  {
+   "id": 16827,
+   "url": "https://getsquire.com/discover/barbershop/persons-of-interest-fort-greene-brooklyn/barber/jason-bauers"
+  },
+  {
+   "id": 16828,
+   "url": "https://getsquire.com/discover/barbershop/south-district-barber-co-san-antonio-san-antonio/barber/edgar-rodriguez"
+  },
+  {
+   "id": 16829,
+   "url": "https://getsquire.com/discover/barbershop/champions-barbershop-portland/barber/brian-car"
+  },
+  {
+   "id": 16830,
+   "url": "https://getsquire.com/discover/barbershop/north-end-barber-company-portland/barber/cesar-garcia"
+  },
+  {
+   "id": 16831,
+   "url": "https://getsquire.com/discover/barbershop/barber-studio-ann-arbor-ann-arbor/barber/lindsey-dondzila"
+  },
+  {
+   "id": 16832,
+   "url": "https://getsquire.com/discover/barbershop/anthonys-barbershop-sacramento/barber/mikey-hanley"
+  },
+  {
+   "id": 16833,
+   "url": "https://getsquire.com/discover/barbershop/barber-blues-sacramento-sacramento/barber/gabriel-vera"
+  },
+  {
+   "id": 16834,
+   "url": "https://getsquire.com/discover/barbershop/gizmos-barber-parlor-baltimore/barber/sean-fierke-3"
+  },
+  {
+   "id": 16835,
+   "url": "https://getsquire.com/discover/barbershop/crafted-illusion-san-antonio-1/barber/avery-trueba"
+  },
+  {
+   "id": 16836,
+   "url": "https://getsquire.com/discover/barbershop/nomad-barber-shop-indy-greenwood/barber/troy-rivers-2"
+  },
+  {
+   "id": 16837,
+   "url": "https://getsquire.com/discover/barbershop/foxhole-barbershop-orlando/barber/clinton-simpson"
+  },
+  {
+   "id": 16838,
+   "url": "https://getsquire.com/discover/barbershop/north-end-barber-company-portland/barber/dash-blue"
+  },
+  {
+   "id": 16839,
+   "url": "https://getsquire.com/discover/barbershop/back-2-life-barbershop-sacramento/barber/ryan-stovall"
+  },
+  {
+   "id": 16840,
+   "url": "https://getsquire.com/discover/barbershop/ace-of-fades-barber-lounge-minneapolis/barber/jalen-allbritton"
+  },
+  {
+   "id": 16841,
+   "url": "https://getsquire.com/discover/barbershop/persons-of-interest-fort-greene-brooklyn/barber/trent-cotter"
+  }
+ ]
+}
