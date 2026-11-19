@@ -1,0 +1,60 @@
+{
+  "audit": "Sola Aspen Grove official public directory vs GoBookr",
+  "source_url": "https://www.solasalonstudios.com/locations/aspen-grove",
+  "booking_directory_url": "https://book.solasalonstudios.com/aspen-grove/location",
+  "location": "7301 S Santa Fe Dr Suite 630, Littleton, CO 80120",
+  "date": "2026-11-18",
+  "production_project": "jbhgeoedwvfxjteyuxum",
+  "production_sola_inventory": 14654,
+  "listed_names_or_businesses": 36,
+  "existing_matching_professional_names_in_goBookr": 29,
+  "unmatched_names_or_businesses": 7,
+  "imported": 0,
+  "reason": "Seven candidates require verified professional booking URLs and current evidence; directory is JS-rendered, source roster captured by public search indexing and may be stale.",
+  "missing_for_manual_validation": [
+    {
+      "name": "Delrey Tafoya",
+      "workplace": "Not confirmed",
+      "studio": "3"
+    },
+    {
+      "name": "AFP Aesthetics LLC",
+      "workplace": "Columbine Aesthetics",
+      "studio": "13",
+      "note": "business label, not independently verified individual"
+    },
+    {
+      "name": "Chelsea Hager",
+      "workplace": "HoneyBee Hair",
+      "studio": "23"
+    },
+    {
+      "name": "Dawn Seaton",
+      "workplace": "Dawn Desiree Studio",
+      "studio": "1"
+    },
+    {
+      "name": "Joy Konrad",
+      "workplace": "Salon Ethereal",
+      "studio": "30"
+    },
+    {
+      "name": "Spencer Carrado",
+      "workplace": "Sculpted MD",
+      "studio": "4"
+    },
+    {
+      "name": "Stephanie Romero",
+      "workplace": "Stefanie Paez",
+      "studio": "16",
+      "note": "name-workplace discrepancy requires review"
+    }
+  ],
+  "notes": [
+    "Do not infer individual booking URL by constructing slug.",
+    "Do not import business-only labels as named individuals.",
+    "29 existing name matches include one GlossGenius profile; all are still existing GoBookr profiles.",
+    "Aspen Grove public roster can be compared against existing GoBookr inventory but should not be treated as exhaustive or live without recheck.",
+    "Source domain book.solasalonstudios.com is powered by Vagaro."
+  ]
+}
