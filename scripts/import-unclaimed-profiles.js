@@ -75,7 +75,12 @@ for (const input of rows) {
   if (!/^[A-Z]{2}$/.test(row.state)) { reject('invalid_state'); continue; }
   if (row.zip && !/^\d{5}$/.test(row.zip)) { reject('invalid_zip'); continue; }
   if (expectedState && row.state !== expectedState) { reject('state_mismatch'); continue; }
-  const phenixSource = /^https?:\/\/(?:[a-z0-9-]+\.)*(?:phenixsalonsuites\.com|phenixsalonaz\.com)(?:\/|$)/i.test(row.sourceUrl);\n  if (!isApprovedBookingSource(row.sourceUrl) && !phenixSource) { reject('unapproved_source_host'); continue; }\n  if (phenixSource && (!row.bookingUrl || !isApprovedBookingSource(row.bookingUrl))) { reject('phenix_booking_url_requires_approved_platform'); continue; }
+  const phenixSource = /^https?:\/\/(?:[a-z0-9-]+\.)*(?:phenixsalonsuites\.com|phenixsalonaz\.com)(?:\/|$)/i.test(row.sourceUrl);\n  if (!isApprovedBookingSource(row.sourceUrl) && !phenixSource) { reject('unapproved_source_host'); continue; }\n  const phenixAdditionalHosts = ['ginasplatform.com', 'styleseat.com', 'as.me', 'heygoldie.com', 'noterro.com'];
+  const approvedPhenixBooking = isApprovedBookingSource(row.bookingUrl) || (() => {
+    try { const host = new URL(row.bookingUrl).hostname.toLowerCase(); return phenixAdditionalHosts.some(domain => host === domain || host.endsWith('.' + domain)); }
+    catch { return false; }
+  })();
+  if (phenixSource && (!row.bookingUrl || !approvedPhenixBooking)) { reject('phenix_booking_url_requires_approved_platform'); continue; }
   if (row.bookingUrl && !isHttpUrl(row.bookingUrl)) { reject('invalid_booking_url'); continue; }
 
   const key = fingerprint(row);
