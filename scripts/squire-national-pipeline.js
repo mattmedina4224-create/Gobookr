@@ -96,6 +96,8 @@ function validate(page) {
   const addr = parseAddress(page.address_line);
   if (!addr) return { reason: 'incomplete_address' };
   if (!clean(page.shop_name)) return { reason: 'missing_shop_name' };
+  // Some pages print the barber's own name where the shop name belongs; flag for review instead of storing it as the workplace.
+  if (identity(fold(page.shop_name)).startsWith(identity(fold(fullName)))) return { reason: 'shop_name_is_barber_name' };
   if (!Array.isArray(page.services) || !page.services.length) return { reason: 'no_services_listed' };
   return {
     row: {
