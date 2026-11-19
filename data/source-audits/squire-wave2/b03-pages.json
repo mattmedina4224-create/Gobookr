@@ -1,0 +1,626 @@
+[
+{
+"short_name": "Rob C.",
+"shop_name": "Collins & Co. Barbershop",
+"address_line": "2706 Clifton Ave, Nashville, TN, 37209",
+"footer_name": "Rob Collins at Collins & Co. Barbershop",
+"services": [
+"Haircut",
+"Solo Beard Trim",
+"Buzz Cut"
+],
+"status": "live",
+"url": "https://getsquire.com/discover/barbershop/collins-and-co-barbershop-nashville/barber/rob-collins",
+"metro": "nashville",
+"checked_at": "2026-11-18",
+"verified_by": "first-party page read"
+},
+{
+"short_name": "Kyle H.",
+"shop_name": "Collins & Co. Barbershop",
+"address_line": "2700 Clifton Ave, Nashville, TN, 37209",
+"footer_name": "Kyle Hensley at Collins & Co. Barbershop",
+"services": [
+"Haircut",
+"Solo Beard Trim",
+"Buzz Cut"
+],
+"status": "live",
+"url": "https://getsquire.com/discover/barbershop/collins-and-co-barbershop-nashville/barber/kyle-hensley",
+"metro": "nashville",
+"checked_at": "2026-11-18",
+"verified_by": "first-party page read"
+},
+{
+"short_name": "Danny B.",
+"shop_name": "Collins & Co. Barbershop",
+"address_line": "2706 Clifton Ave, Nashville, TN, 37209",
+"footer_name": "Danny Burnette at Collins & Co. Barbershop",
+"services": [
+"Haircut",
+"Solo Beard Trim",
+"Buzz Cut"
+],
+"status": "live",
+"url": "https://getsquire.com/discover/barbershop/collins-and-co-barbershop-nashville/barber/danny-burnette",
+"metro": "nashville",
+"checked_at": "2026-11-18",
+"verified_by": "first-party page read"
+},
+{
+"short_name": "Nathan M.",
+"shop_name": "Collins & Co. Barbershop",
+"address_line": "2700 Clifton Ave, Nashville, TN, 37209",
+"footer_name": "Nathan Mckibbin at Collins & Co. Barbershop",
+"services": [
+"Haircut",
+"Solo Beard Trim",
+"Buzz Cut"
+],
+"status": "live",
+"url": "https://getsquire.com/discover/barbershop/collins-and-co-barbershop-nashville/barber/nathan-mckibbin",
+"metro": "nashville",
+"checked_at": "2026-11-18",
+"verified_by": "first-party page read"
+},
+{
+"short_name": "Jessica F.",
+"shop_name": "Collins & Co. Barbershop",
+"address_line": "2706 Clifton Ave, Nashville, TN, 37209",
+"footer_name": "Jessica Fleming at Collins & Co. Barbershop",
+"services": [
+"Haircut",
+"Haircut & Beard Trim",
+"Buzz Cut"
+],
+"status": "live",
+"url": "https://getsquire.com/discover/barbershop/collins-and-co-barbershop-nashville/barber/jessica-fleming",
+"metro": "nashville",
+"checked_at": "2026-11-18",
+"verified_by": "first-party page read"
+},
+{
+"short_name": "Michael M.",
+"shop_name": "Michael Martin",
+"address_line": "2605 8th Ave South, Nashville, TN, 37204",
+"footer_name": "Michael Martin",
+"services": [
+"Haircut",
+"Skin fade Haircut",
+"Cleanup"
+],
+"status": "live",
+"url": "https://getsquire.com/discover/barbershop/hawkins-barbershop-nashville/barber/michael-martin",
+"metro": "nashville",
+"checked_at": "2026-11-18",
+"verified_by": "first-party page read"
+},
+{
+"short_name": "Cullen L.",
+"shop_name": "Culture Nashville",
+"address_line": "5202 Centennial Blvd., Nashville, TN, 37209",
+"footer_name": "Cullen Lejeune at Culture Nashville",
+"services": [
+"Beard Service",
+"Haircut (Not Skin Fade)",
+"Haircut (Skin Fade)"
+],
+"status": "live",
+"url": "https://getsquire.com/discover/barbershop/culture-nashville-nashville/barber/cullen-lejeune",
+"metro": "nashville",
+"checked_at": "2026-11-18",
+"verified_by": "first-party page read"
+},
+{
+"short_name": "Terra G.",
+"shop_name": "Bourbon and Barber Nashville",
+"address_line": "704 18th Ave S, Nashville, TN, 37203",
+"footer_name": "Terra Goswick at Bourbon and Barber Nashville",
+"services": [
+"Basic Clean Up (NOT A FULL HAIRCUT)",
+"High Class Facial Experience",
+"Eyebrow Wax"
+],
+"status": "live",
+"url": "https://getsquire.com/discover/barbershop/bourbon-and-barber-nashville-nashville/barber/terra-goswick",
+"metro": "nashville",
+"checked_at": "2026-11-18",
+"verified_by": "first-party page read"
+},
+{
+"short_name": "Allie D.",
+"shop_name": "Golden Road Barbershop",
+"address_line": "4405 W. Colfax Ave., Denver, CO, 80204",
+"footer_name": "Allie Davis",
+"services": [
+"Gentleman's Haircut",
+"Skin Fade",
+"Buzz"
+],
+"status": "live",
+"url": "https://getsquire.com/discover/barbershop/golden-road-barbershop-denver/barber/allie-davis",
+"metro": "denver",
+"checked_at": "2026-11-18",
+"verified_by": "first-party page read"
+},
+{
+"short_name": "Debra T.",
+"shop_name": "Prospect Trail Barbershop",
+"address_line": "3746 Tejon St, Denver, CO, 80211",
+"footer_name": "Debra Tygrett",
+"services": [
+"Skin Fade",
+"Buzz",
+"Beard Trim"
+],
+"status": "live",
+"url": "https://getsquire.com/discover/barbershop/prospect-trail-barbershop-denver/barber/debra-tygrett",
+"metro": "denver",
+"checked_at": "2026-11-18",
+"verified_by": "first-party page read"
+},
+{
+"short_name": "David Y.",
+"shop_name": "Prospect Trail Barbershop",
+"address_line": "3746 Tejon St, Denver, CO, 80211",
+"footer_name": "David Yorty",
+"services": [
+"Gentleman's Haircut",
+"Buzz",
+"Skin Fade"
+],
+"status": "live",
+"url": "https://getsquire.com/discover/barbershop/prospect-trail-barbershop-denver/barber/david-yorty",
+"metro": "denver",
+"checked_at": "2026-11-18",
+"verified_by": "first-party page read"
+},
+{
+"short_name": "Josh B.",
+"shop_name": "Golden Road Barbershop",
+"address_line": "4405 W. Colfax Ave., Denver, CO, 80204",
+"footer_name": "Josh Beckner",
+"services": [
+"Long Hairstyles",
+"Skin Fade",
+"Buzz"
+],
+"status": "live",
+"url": "https://getsquire.com/discover/barbershop/golden-road-barbershop-denver/barber/josh-beckner-1",
+"metro": "denver",
+"checked_at": "2026-11-18",
+"verified_by": "first-party page read"
+},
+{
+"short_name": "Ryan V.",
+"shop_name": "The Jefferson Barbershop",
+"address_line": "2912 W 25th Ave, Denver, CO, 80211",
+"footer_name": "Ryan Vanegas at The Jefferson Barbershop",
+"services": [
+"Standard Haircut",
+"Skin Fade",
+"Sides And Back Haircut"
+],
+"status": "live",
+"url": "https://getsquire.com/discover/barbershop/the-jefferson-barbershop-denver/barber/ryan-vanegas-1",
+"metro": "denver",
+"checked_at": "2026-11-18",
+"verified_by": "first-party page read"
+},
+{
+"short_name": "Jason S.",
+"shop_name": "Prospect Trail Barbershop",
+"address_line": "3746 Tejon St, Denver, CO, 80211",
+"footer_name": "Jason Stevens",
+"services": [
+"Buzz",
+"Gentleman's Haircut",
+"Senior Haircut (65 and Older)"
+],
+"status": "live",
+"url": "https://getsquire.com/discover/barbershop/prospect-trail-barbershop-denver/barber/jason-stevens-1",
+"metro": "denver",
+"checked_at": "2026-11-18",
+"verified_by": "first-party page read"
+},
+{
+"short_name": "Travis Y.",
+"shop_name": "Golden Road Barbershop",
+"address_line": "4405 W. Colfax Ave., Denver, CO, 80204",
+"footer_name": "Travis Young",
+"services": [
+"Straight Razor Shave",
+"Long Hairstyles",
+"Skin Fade"
+],
+"status": "live",
+"url": "https://getsquire.com/discover/barbershop/golden-road-barbershop-denver/barber/travis-young-2",
+"metro": "denver",
+"checked_at": "2026-11-18",
+"verified_by": "first-party page read"
+},
+{
+"short_name": "Austin A.",
+"shop_name": "Monarch Barbershop",
+"address_line": "3435 Greystone Dr, Austin, TX, 78731",
+"footer_name": "Austin Ables",
+"services": [
+"Haircut",
+"Haircut + Beard Trim",
+"Beard Trim"
+],
+"status": "live",
+"url": "https://getsquire.com/discover/barbershop/monarch-barbershop-austin/barber/austin-ables",
+"metro": "austin",
+"checked_at": "2026-11-18",
+"verified_by": "first-party page read"
+},
+{
+"short_name": "Anthony R.",
+"shop_name": "Monarch Barbershop",
+"address_line": "3435 Greystone Dr, Austin, TX, 78731",
+"footer_name": "Anthony Ramirez",
+"services": [
+"Custom Haircut",
+"Custom Haircut and Beard",
+"Custom Beard Trim"
+],
+"status": "live",
+"url": "https://getsquire.com/discover/barbershop/monarch-barbershop-austin/barber/anthony-ramirez-3",
+"metro": "austin",
+"checked_at": "2026-11-18",
+"verified_by": "first-party page read"
+},
+{
+"short_name": "Anais M.",
+"shop_name": "Monarch Barbershop",
+"address_line": "3435 Greystone Dr, Austin, TX, 78731",
+"footer_name": "Anais Mendoza",
+"services": [
+"Haircut + Wash",
+"Haircut",
+"Haircut + Beard"
+],
+"status": "live",
+"url": "https://getsquire.com/discover/barbershop/monarch-barbershop-austin/barber/anais-mendoza",
+"metro": "austin",
+"checked_at": "2026-11-18",
+"verified_by": "first-party page read"
+},
+{
+"short_name": "Jesse C.",
+"shop_name": "Monarch Barbershop",
+"address_line": "3435 Greystone Dr, Austin, TX, 78731",
+"footer_name": "Jesse Crouse",
+"services": [
+"Haircut",
+"Haircut + Beard Trim",
+"Beard Trim"
+],
+"status": "live",
+"url": "https://getsquire.com/discover/barbershop/monarch-barbershop-austin/barber/jesse-crouse",
+"metro": "austin",
+"checked_at": "2026-11-18",
+"verified_by": "first-party page read"
+},
+{
+"short_name": "Fernando S.",
+"shop_name": "Beard & Blade Barber Co.",
+"address_line": "2939 W Anderson Ln, AUSTIN, TX, 78757",
+"footer_name": "Fernando Sclater at Beard & Blade Barber Co.",
+"services": [
+"Beard Trim and Neck Shave",
+"Buzz Cut",
+"Full Face Shave"
+],
+"status": "live",
+"url": "https://getsquire.com/discover/barbershop/beard-and-blade-barber-co-austin/barber/fernando-sclater",
+"metro": "austin",
+"checked_at": "2026-11-18",
+"verified_by": "first-party page read"
+},
+{
+"short_name": "Katie S.",
+"shop_name": "Reunion Barbershop",
+"address_line": "9112 Anderson Mill Rd, Suite A600, Austin, TX, 78729",
+"footer_name": "Katie Session at Reunion Barbershop",
+"services": [
+"Beard Trim",
+"Buzz",
+"Line Up"
+],
+"status": "live",
+"url": "https://getsquire.com/discover/barbershop/reunion-barbershop-austin/barber/katie-session-1",
+"metro": "austin",
+"checked_at": "2026-11-18",
+"verified_by": "first-party page read"
+},
+{
+"short_name": "Riley H.",
+"shop_name": "Reunion Barbershop",
+"address_line": "9112 Anderson Mill Rd, Suite A600, Austin, TX, 78729",
+"footer_name": "Riley Hellyar at Reunion Barbershop",
+"services": [
+"Buzz",
+"Line Up",
+"Deep Conditioning Treatment"
+],
+"status": "live",
+"url": "https://getsquire.com/discover/barbershop/reunion-barbershop-austin/barber/riley-hellyar-1",
+"metro": "austin",
+"checked_at": "2026-11-18",
+"verified_by": "first-party page read"
+},
+{
+"short_name": "Adin R.",
+"shop_name": "Reunion Barbershop",
+"address_line": "9112 Anderson Mill Rd, Suite A600, Austin, TX, 78729",
+"footer_name": "Adin Reardon at Reunion Barbershop",
+"services": [
+"Beard Trim",
+"Beard Trim Razor Line Up",
+"Buzz"
+],
+"status": "live",
+"url": "https://getsquire.com/discover/barbershop/reunion-barbershop-austin/barber/adin-reardon",
+"metro": "austin",
+"checked_at": "2026-11-18",
+"verified_by": "first-party page read"
+},
+{
+"short_name": "Jeremy S.",
+"shop_name": "Avenue Barbershop- Austin, TX",
+"address_line": "1710 South Congress Avenue, Austin, TX, 78704",
+"footer_name": "Jeremy Sheffield",
+"services": [
+"Haircut",
+"Buzz Cut, NO FADES",
+"Beard Trim ONLY"
+],
+"status": "live",
+"url": "https://getsquire.com/discover/barbershop/avenue-barbershop-austin-tx-austin/barber/jeremy-sheffield",
+"metro": "austin",
+"checked_at": "2026-11-18",
+"verified_by": "first-party page read"
+},
+{
+"short_name": "Adam P.",
+"shop_name": "Big Hit BarberShop Las Vegas",
+"address_line": "5651 S Grand Canyon Dr, Las Vegas, NV, 89148",
+"footer_name": "Adam Patiño",
+"services": [
+"Regular Cut",
+"Beard trim",
+"Kids haircut"
+],
+"status": "live",
+"url": "https://getsquire.com/discover/barbershop/big-hit-barbershop-las-vegas-las-vegas/barber/adam-patino",
+"metro": "las-vegas",
+"checked_at": "2026-11-18",
+"verified_by": "first-party page read"
+},
+{
+"short_name": "Nick K.",
+"shop_name": "The Barbershop Cuts and Cocktails",
+"address_line": "3708 Las Vegas Blvd S, Las Vegas, NV, 89109",
+"footer_name": "Nick Karel at The Barbershop Cuts and Cocktails",
+"services": [
+"Haircut",
+"Hot Lather Shave & Beard",
+"Facial"
+],
+"status": "live",
+"url": "https://getsquire.com/discover/barbershop/the-barbershop-cuts-and-cocktails-las-vegas/barber/nick-karel",
+"metro": "las-vegas",
+"checked_at": "2026-11-18",
+"verified_by": "first-party page read"
+},
+{
+"short_name": "Anthony N.",
+"shop_name": "The Barbershop Cuts and Cocktails",
+"address_line": "3708 Las Vegas Blvd S, Las Vegas, NV, 89109",
+"footer_name": "Anthony Napolet at The Barbershop Cuts and Cocktails",
+"services": [
+"Haircut",
+"Facial",
+"All Wax"
+],
+"status": "live",
+"url": "https://getsquire.com/discover/barbershop/the-barbershop-cuts-and-cocktails-las-vegas/barber/anthony-napolet",
+"metro": "las-vegas",
+"checked_at": "2026-11-18",
+"verified_by": "first-party page read"
+},
+{
+"short_name": "Junny H.",
+"shop_name": "Goodtimes Barbershop",
+"address_line": "3803 W Sahara Ave, Las Vegas, NV, 89102",
+"footer_name": "Junny Herrera",
+"services": [
+"Haircut",
+"Haircut & Beard",
+"Shave"
+],
+"status": "live",
+"url": "https://getsquire.com/discover/barbershop/goodtimes-barbershop-las-vegas/barber/junny-herrera",
+"metro": "las-vegas",
+"checked_at": "2026-11-18",
+"verified_by": "first-party page read"
+},
+{
+"short_name": "Kevin S.",
+"shop_name": "TEXTURE",
+"address_line": "9575 W Tropicana Ave, Las Vegas, NV, 89148",
+"footer_name": "Kevin Simmons",
+"services": [
+"Beard Trim",
+"Face Shave",
+"Haircut"
+],
+"status": "live",
+"url": "https://getsquire.com/discover/barbershop/texture-las-vegas/barber/kevin-simmons-1",
+"metro": "las-vegas",
+"checked_at": "2026-11-18",
+"verified_by": "first-party page read"
+},
+{
+"short_name": "Abel G.",
+"shop_name": "Barrelhouse Barber llc",
+"address_line": "3502 N Nebraska Ave, Tampa, FL, 33603",
+"footer_name": "Abel Gonzalez at Barrelhouse Barber llc",
+"services": [
+"All Over Buzz",
+"Basic maintenance haircut",
+"Beard Trim"
+],
+"status": "live",
+"url": "https://getsquire.com/discover/barbershop/barrelhouse-barber-llc-tampa/barber/abel-gonzalez-1",
+"metro": "tampa",
+"checked_at": "2026-11-18",
+"verified_by": "first-party page read"
+},
+{
+"short_name": "Julien M.",
+"shop_name": "MACDILL BARBER (MAIN)",
+"address_line": "3108 N Boundary Blvd, Tampa, FL, 33621",
+"footer_name": "Julien Mcfadden at MACDILL BARBER (MAIN)",
+"services": [
+"Regulation Haircut",
+"Men's Scissor Style Cut",
+"Razor (Electric) Add On"
+],
+"status": "live",
+"url": "https://getsquire.com/discover/barbershop/macdill-barber-main-tampa/barber/julien-mcfadden-1",
+"metro": "tampa",
+"checked_at": "2026-11-18",
+"verified_by": "first-party page read"
+},
+{
+"short_name": "Kyle S.",
+"shop_name": "MACDILL BARBER (CENTCOM)",
+"address_line": "7115 S Boundary Blvd, Tampa, FL, 33621",
+"footer_name": "Kyle Stump at MACDILL BARBER (CENTCOM)",
+"services": [
+"Razor (Electric) Add On",
+"Hard Part",
+"Mustache Trim"
+],
+"status": "live",
+"url": "https://getsquire.com/discover/barbershop/macdill-barber-centcom-tampa/barber/kyle-stump-2",
+"metro": "tampa",
+"checked_at": "2026-11-18",
+"verified_by": "first-party page read"
+},
+{
+"short_name": "Ashlee K.",
+"shop_name": "MACDILL BARBER (MAIN)",
+"address_line": "3108 N Boundary Blvd, Tampa, FL, 33621",
+"footer_name": "Ashlee Kirk at MACDILL BARBER (MAIN)",
+"services": [
+"Mustache Trim",
+"Hard Part",
+"Razor (Electric) Add On"
+],
+"status": "live",
+"url": "https://getsquire.com/discover/barbershop/macdill-barber-main-tampa/barber/ashlee-kirk-2",
+"metro": "tampa",
+"checked_at": "2026-11-18",
+"verified_by": "first-party page read"
+},
+{
+"short_name": "Jc A.",
+"shop_name": "MACDILL BARBER (MAIN)",
+"address_line": "3108 N Boundary Blvd, Tampa, FL, 33621",
+"footer_name": "Jc Alvarado at MACDILL BARBER (MAIN)",
+"services": [
+"Regulation Haircut",
+"Men's Scissor Style Cut",
+"Children's Haircut (12 & Under)"
+],
+"status": "live",
+"url": "https://getsquire.com/discover/barbershop/macdill-barber-main-tampa/barber/jc-alvarado-1",
+"metro": "tampa",
+"checked_at": "2026-11-18",
+"verified_by": "first-party page read"
+},
+{
+"short_name": "Chris M.",
+"shop_name": "Refined Barber Co - West Loop",
+"address_line": "328 S. Jefferson St., Chicago, IL, 60661",
+"footer_name": "Chris Mcdonald",
+"services": [
+"Haircut",
+"Haircut & Beard Shave/Beard Lining",
+"Haircut & Razor Shave/Beard Lining"
+],
+"status": "live",
+"url": "https://getsquire.com/discover/barbershop/refined-barber-co-west-loop-chicago/barber/chris-mcdonald-1",
+"metro": "chicago",
+"checked_at": "2026-11-18",
+"verified_by": "first-party page read"
+},
+{
+"short_name": "John G.",
+"shop_name": "Kings The Barber Studio",
+"address_line": "3264 N Clark St, Chicago, IL, 60657",
+"footer_name": "John Garcia",
+"services": [
+"Haircut(BEFORE 9AM)",
+"Haircut (Monday-Friday)",
+"Haircut(SATURDAY)"
+],
+"status": "live",
+"url": "https://getsquire.com/discover/barbershop/kings-the-barber-studio-chicago/barber/john-garcia-1",
+"metro": "chicago",
+"checked_at": "2026-11-18",
+"verified_by": "first-party page read"
+},
+{
+"short_name": "Juan S.",
+"shop_name": "LakeShore Cuts - Edgewater",
+"address_line": "6046 North Broadway, Chicago, IL, 60660",
+"footer_name": "Juan Saldana at LakeShore Cuts - Edgewater",
+"services": [
+"Line-Up (Edges Only)",
+"Beard Trim & Shape Up",
+"Head Shave"
+],
+"status": "live",
+"url": "https://getsquire.com/discover/barbershop/lakeshore-cuts-edgewater-chicago/barber/juan-saldana-2",
+"metro": "chicago",
+"checked_at": "2026-11-18",
+"verified_by": "first-party page read"
+},
+{
+"short_name": "Emir M.",
+"shop_name": "Headliners - Lakeview",
+"address_line": "3700 North Ashland Avenue, Chicago, IL, 60613",
+"footer_name": "Emir Martinez",
+"services": [
+"Haircut",
+"Haircut And Beard",
+"Full Service"
+],
+"status": "live",
+"url": "https://getsquire.com/discover/barbershop/headliners-lakeview-chicago/barber/emir-martinez",
+"metro": "chicago",
+"checked_at": "2026-11-18",
+"verified_by": "first-party page read"
+},
+{
+"short_name": "Ernesto S.",
+"shop_name": "Headliners | West Loop",
+"address_line": "838 W Grand Ave, Chicago, IL, 60642",
+"footer_name": "Ernesto Santillan",
+"services": [
+"Haircut",
+"Haircut And Beard",
+"Full Service"
+],
+"status": "live",
+"url": "https://getsquire.com/discover/barbershop/headliners-or-west-loop-chicago/barber/ernesto-santillan",
+"metro": "chicago",
+"checked_at": "2026-11-18",
+"verified_by": "first-party page read"
+}
+]

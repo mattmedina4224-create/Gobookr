@@ -1,0 +1,40 @@
+name: SQUIRE booking link audit
+
+# Weekly read-only check of GoBookr's existing SQUIRE booking links.
+# Runs on GitHub's runner, not on GoBookr's production servers, and has no database access.
+# It requests each existing link once, pauses between requests, honors robots.txt and stops
+# as soon as SQUIRE refuses requests. Failures are listed for review; nothing is deleted.
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '41 9 * * 3'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: squire-link-audit
+  cancel-in-progress: false
+
+jobs:
+  squire-link-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - name: Check out GoBookr
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Audit existing SQUIRE booking links
+        continue-on-error: true
+        run: node scripts/audit-squire-links.js data/source-audits/squire-booking-links.json --output=tmp/squire-link-audit.json --delay-ms=3000
+      - name: Upload audit report for review
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: squire-link-audit
+          path: tmp/squire-link-audit.json
+          if-no-files-found: warn
+          retention-days: 90
