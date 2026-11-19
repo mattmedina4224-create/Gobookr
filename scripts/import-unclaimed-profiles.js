@@ -8,7 +8,7 @@
 //   node scripts/import-unclaimed-profiles.js data/imports/tx-batch.json --state=TX --dry-run
 //   node scripts/import-unclaimed-profiles.js data/imports/fl-batch.json --state=FL --report=tmp/fl-report.json
 //
-// Input: [{ name, category, workplace_name, city, state, address, zip, booking_url, source_url, source_name }]
+// Input: [{ name, category, workplace_name, city, state, address, zip, booking_url?, contact_phone?, contact_email?, source_url, source_name }]
 
 const fs = require('node:fs');
 const path = require('node:path');
@@ -61,6 +61,8 @@ for (const input of rows) {
     bookingUrl: clean(raw.booking_url),
     sourceUrl: clean(raw.source_url),
     sourceName: clean(raw.source_name),
+    contactPhone: clean(raw.contact_phone),
+    contactEmail: clean(raw.contact_email).toLowerCase(),
   };
 
   const reject = (reason) => {
@@ -77,6 +79,9 @@ for (const input of rows) {
   if (expectedState && row.state !== expectedState) { reject('state_mismatch'); continue; }
   if (!isApprovedBookingSource(row.sourceUrl)) { reject('unapproved_source_host'); continue; }
   if (row.bookingUrl && !isHttpUrl(row.bookingUrl)) { reject('invalid_booking_url'); continue; }
+  if (!row.bookingUrl && !row.contactPhone && !row.contactEmail) { reject('missing_booking_and_public_contact'); continue; }
+  if (row.contactPhone && row.contactPhone.replace(/\D/g, '').length < 10) { reject('invalid_public_business_phone'); continue; }
+  if (row.contactEmail && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(row.contactEmail)) { reject('invalid_public_business_email'); continue; }
 
   const key = fingerprint(row);
   if (seen.has(key)) { reject('duplicate_inside_import_file'); continue; }
@@ -115,10 +120,13 @@ for (const input of rows) {
   const legacyCategory = allowedLegacy.has(row.category) ? row.category : 'barber';
   const result = db.prepare(`INSERT INTO pro_profiles
     (user_id, business_name, category, bio, city, state, workplace_name, street_address, zip_code,
-     booking_url, initials, claim_status, source_url, source_name, source_checked_at)
-    VALUES (NULL, ?, ?, '', ?, ?, ?, ?, ?, ?, ?, 'unclaimed', ?, ?, CURRENT_TIMESTAMP)`)
+     booking_url, initials, claim_status, source_url, source_name, source_checked_at,
+     contact_phone, contact_email, contact_phone_source_url, contact_email_source_url, contact_checked_at)
+    VALUES (NULL, ?, ?, '', ?, ?, ?, ?, ?, ?, ?, 'unclaimed', ?, ?, CURRENT_TIMESTAMP, ?, ?, ?, ?, CURRENT_TIMESTAMP)`)
     .run(row.name, legacyCategory, row.city, row.state, row.workplace, row.address, row.zip,
-      row.bookingUrl, initials(row.name), row.sourceUrl, row.sourceName);
+      row.bookingUrl || '', initials(row.name), row.sourceUrl, row.sourceName,
+      row.contactPhone || null, row.contactEmail || null,
+      row.contactPhone ? row.sourceUrl : null, row.contactEmail ? row.sourceUrl : null);
 
   const proId = Number(result.lastInsertRowid);
   db.prepare('INSERT INTO pro_categories (pro_id, category) VALUES (?, ?)').run(proId, row.category);
