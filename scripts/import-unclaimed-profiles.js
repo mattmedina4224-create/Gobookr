@@ -130,7 +130,7 @@ for (const input of rows) {
      contact_phone, contact_email, contact_phone_source_url, contact_email_source_url, contact_checked_at)
     VALUES (NULL, ?, ?, '', ?, ?, ?, ?, ?, ?, ?, 'unclaimed', ?, ?, CURRENT_TIMESTAMP, ?, ?, ?, ?, CURRENT_TIMESTAMP)`)
     .run(row.name, legacyCategory, row.city, row.state, row.workplace, row.address, row.zip,
-      row.bookingUrl || null, initials(row.name), row.sourceUrl, row.sourceName,
+      row.bookingUrl || '', initials(row.name), row.sourceUrl, row.sourceName,
       row.contactPhone || null, row.contactEmail || null,
       row.contactPhone ? row.sourceUrl : null, row.contactEmail ? row.sourceUrl : null);
 
