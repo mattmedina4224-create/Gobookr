@@ -1,1109 +1,1067 @@
 {
- "https://www.skullandcombs.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 118
- },
  "http://michellesnewhaven.com/": {
   "status": "dead",
   "error": "ENOTFOUND",
-  "ms": 264
+  "ms": 129
  },
  "http://www.yhaircutting.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 323
- },
- "http://www.haironthesquare.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 337
- },
- "https://www.envyhairsalonct.com/": {
-  "status": "error",
-  "error": "UND_ERR_SOCKET",
-  "ms": 351
- },
- "https://elmcitywellness.com/": {
-  "status": "live",
-  "http_status": 200,
-  "final_url": "https://www.elmcitywellness.com/",
-  "ms": 556
- },
- "http://www.mojosolarstudio.com/": {
-  "status": "dead",
-  "error": "ENOTFOUND",
-  "ms": 267
- },
- "http://studiozee.com/": {
-  "status": "blocked",
-  "http_status": 403,
-  "final_url": "https://www.buydomains.com/lander/studiozee.com?domain=studiozee.com&utm_source=studiozee.com&utm_medium=click&utm_campaign=tdfs-AprTest&traffic_id=AprTest&traffic_type=tdfs&redirect=ono-redirect",
-  "ms": 555
- },
- "http://www.hbmassagetherapy.com/": {
-  "status": "dead",
-  "error": "ENOTFOUND",
-  "ms": 246
- },
- "http://www.nailsalonnewington.com/": {
-  "status": "dead",
-  "error": "ENOTFOUND",
-  "ms": 258
- },
- "https://www.inksideouttattoo.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 186
- },
- "https://jetahair.com/": {
-  "status": "error",
-  "error": "ECONNRESET",
-  "ms": 134
- },
- "https://pinky-nails-spa-milford.edan.io/": {
-  "status": "blocked",
-  "http_status": 403,
-  "ms": 120
- },
- "https://locations.waxcenter.com/ct/fairfield/fairfield-0176.html": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 764
- },
- "https://www.granddesignsalon.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 178
+  "ms": 263
  },
  "https://www.modacapellisalon.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 226
+  "ms": 441
  },
- "http://www.robertchristiesalon.com/": {
+ "https://www.captivasalon.com/": {
   "status": "live",
   "http_status": 200,
-  "final_url": "https://robertchristiesalon.com/",
-  "ms": 262
+  "ms": 233
+ },
+ "https://www.skullandcombs.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 621
+ },
+ "https://www.supercuts.com/locations/ct/norwalk/fed-ex-kinkos-plaza-haircuts-82325.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 127
  },
  "https://www.salon1560.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 66
+  "ms": 661
+ },
+ "http://www.djosephsalon.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 84
  },
  "http://www.ryanjohnsalon.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://www.ryanjohnsalon.com/",
-  "ms": 253
+  "ms": 686
  },
- "https://www.captivasalon.com/": {
+ "http://www.robertchristiesalon.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 132
- },
- "http://sunnynailsandspa.net/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 147
- },
- "https://www.coconailspact.com/": {
-  "status": "dead",
-  "error": "ENOTFOUND",
-  "ms": 109
- },
- "https://www.thehairhousesalon.com/": {
-  "status": "live",
-  "http_status": 200,
-  "final_url": "https://thehairhousesalon.com/",
-  "ms": 292
- },
- "https://www.cloud9dayspa.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 267
- },
- "http://bombasalon.net/": {
-  "status": "dead",
-  "error": "ENOTFOUND",
-  "ms": 44
- },
- "https://palmbeachtan.com/locations/CT/Milford-Boston-Post-Road": {
-  "status": "live",
-  "http_status": 200,
-  "final_url": "https://palmbeachtan.com/locations/ct/milford-boston-post-road",
-  "ms": 720
- },
- "http://1595hairboutique.com/": {
-  "status": "live",
-  "http_status": 200,
-  "final_url": "http://www.1595hairboutique.com/",
-  "ms": 818
+  "final_url": "https://robertchristiesalon.com/",
+  "ms": 726
  },
  "http://superiorbarbershop.com/": {
   "status": "blocked",
   "http_status": 403,
   "final_url": "https://www.hugedomains.com/domain_profile.cfm?d=superiorbarbershop.com",
-  "ms": 216
- },
- "https://palmbeachtan.com/locations/CT/Stratford-East-Main-Street": {
-  "status": "live",
-  "http_status": 200,
-  "final_url": "https://palmbeachtan.com/locations/ct/stratford-east-main-street",
-  "ms": 1002
- },
- "https://www.sunreflexologywestport.com/": {
-  "status": "dead",
-  "error": "ENOTFOUND",
-  "ms": 165
- },
- "https://www.ulta.com/stores/guilford-commons-ct-1074": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 391
- },
- "https://www.ulta.com/stores/manchester-ct-435": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 298
- },
- "https://azenanails.com/": {
-  "status": "dead",
-  "error": "ENOTFOUND",
-  "ms": 126
- },
- "https://www.supercuts.com/locations/ct/norwalk/fed-ex-kinkos-plaza-haircuts-82325.html": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 169
- },
- "http://www.djosephsalon.com/": {
-  "status": "dead",
-  "error": "ENOTFOUND",
-  "ms": 42
- },
- "http://www.shannonstrong.com/": {
-  "status": "live",
-  "http_status": 200,
-  "final_url": "https://shannonstrong.com/",
-  "ms": 492
- },
- "https://www.tanningnailssalon.com/": {
-  "status": "dead",
-  "error": "ENOTFOUND",
-  "ms": 35
- },
- "https://www.thehairlabsalon.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 106
+  "ms": 301
  },
  "http://johnpaulsspasalon.com/": {
   "status": "dead",
   "error": "ENOTFOUND",
-  "ms": 42
+  "ms": 81
  },
- "https://massagegreenspa.com/locations/spa/norwalk-ct": {
-  "status": "dead",
-  "http_status": 404,
-  "final_url": "https://www.massagegreenspa.com/locations/spa/norwalk-ct",
-  "ms": 374
- },
- "https://palmbeachtan.com/locations/CT/Westport-Post-Road-East/": {
+ "https://www.thehairhousesalon.com/": {
   "status": "live",
   "http_status": 200,
-  "final_url": "https://palmbeachtan.com/locations/ct/westport-post-road-east",
-  "ms": 527
+  "final_url": "https://thehairhousesalon.com/",
+  "ms": 633
  },
- "https://www.inkhouse203.art/": {
+ "http://1595hairboutique.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 845
+  "final_url": "http://www.1595hairboutique.com/",
+  "ms": 769
  },
- "http://mpowerbeautywellness.com/": {
+ "https://www.supercuts.com/locations/ct/glastonbury/the-shoppes-at-fox-run-haircuts-82625.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 9
+ },
+ "https://www.supercuts.com/locations/ct/willimantic/willimantic-plaza-haircuts-82621.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 90
+ },
+ "https://www.gentlemansbarbershop860.com/": {
   "status": "dead",
   "error": "ENOTFOUND",
-  "ms": 43
+  "ms": 99
  },
- "http://naturallyhealingskincare.com/": {
+ "https://www.thehairlabsalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 220
+ },
+ "https://scissorkidsinc.com/": {
   "status": "dead",
   "error": "ENOTFOUND",
-  "ms": 57
+  "ms": 134
+ },
+ "https://haircutmenglastonburyct.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 184
+ },
+ "http://www.avantihairdesigninc.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 316
+ },
+ "https://www.covesbarbershop.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 448
+ },
+ "https://www.thesecrethairstudio.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 438
+ },
+ "http://texturesstylingsalon.net/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 651
+ },
+ "https://salons.greatclips.com/us/ct/middletown/808-washington-st": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 636
+ },
+ "https://salons.greatclips.com/us/ct/windsor/1095-kennedy-rd": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 489
+ },
+ "https://hartford-ct.connecticut-places.com/la-favorita-barber-shop.html": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 632
  },
  "https://jessicascolorroom.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://www.jessicascolorroom.com/",
-  "ms": 313
- },
- "https://www.eminenceink.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 95
- },
- "https://www.supercuts.com/locations/ct/willimantic/willimantic-plaza-haircuts-82621.html": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 8
- },
- "https://www.elegantnailandspact.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 710
- },
- "https://www.gentlemansbarbershop860.com/": {
-  "status": "dead",
-  "error": "ENOTFOUND",
-  "ms": 44
- },
- "https://guilfordct.spaviadayspa.com/": {
-  "status": "live",
-  "http_status": 200,
-  "final_url": "https://spaviadayspa.com/locations/guilford-ct/",
-  "ms": 376
- },
- "https://marilynscreationssalon.weebly.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 166
- },
- "https://www.ulta.com/stores/hamden-ct-1578": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 182
- },
- "https://www.albasbeautysalon.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 674
- },
- "https://strandsalonct.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 207
- },
- "https://scissorkidsinc.com/": {
-  "status": "dead",
-  "error": "ENOTFOUND",
-  "ms": 49
- },
- "https://www.luluwax.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 185
- },
- "https://www.roostersmgc.com/locations/ct/glastonbury/roosters-haircuts-13127.html": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 252
- },
- "https://opnailsglastonbury.wixsite.com/website": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 38
- },
- "https://haircutmenglastonburyct.com/": {
-  "status": "dead",
-  "error": "ENOTFOUND",
-  "ms": 42
- },
- "https://www.supercuts.com/locations/ct/glastonbury/the-shoppes-at-fox-run-haircuts-82625.html": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 48
- },
- "https://www.storrstherapeuticmassage.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 96
- },
- "https://www.healthbeautyspa2840.com/": {
-  "status": "dead",
-  "error": "ENOTFOUND",
-  "ms": 34
- },
- "https://ironeeltattoo.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 871
- },
- "https://www.gbsbrowz.com/storrs": {
-  "status": "live",
-  "http_status": 200,
-  "final_url": "https://www.gbsbrowz.com/location/storrs",
-  "ms": 1078
- },
- "https://www.covesbarbershop.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 115
- },
- "https://www.gbsbrowz.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 3038
- },
- "https://www.thesecrethairstudio.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 141
- },
- "https://hairtodayct.com/": {
-  "status": "live",
-  "http_status": 200,
-  "final_url": "https://www.hairtodayct.com/",
-  "ms": 410
- },
- "http://texturesstylingsalon.net/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 263
- },
- "https://www.searchingserendipity.com/": {
-  "status": "error",
-  "error": "ERR_SSL_SSL/TLS_ALERT_HANDSHAKE_FAILURE",
-  "ms": 290
- },
- "http://greenbeautyct.com/": {
-  "status": "blocked",
-  "http_status": 403,
-  "ms": 116
- },
- "http://uniqueeyebrowthreadingct.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 564
- },
- "https://salons.greatclips.com/us/ct/middletown/808-washington-st": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 347
- },
- "https://hartford-ct.connecticut-places.com/la-favorita-barber-shop.html": {
-  "status": "blocked",
-  "http_status": 403,
-  "ms": 207
- },
- "https://salons.greatclips.com/us/ct/windsor/1095-kennedy-rd": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 118
- },
- "https://www.suebtouchofcaring.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 315
- },
- "https://www.yojinails.com/": {
-  "status": "live",
-  "http_status": 200,
-  "final_url": "https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fyojibyjoe%2F&is_from_rle",
-  "ms": 802
- },
- "https://www.brooklynbusinessassociation.org/project/anastasias-beauty-skin-clinic": {
-  "status": "dead",
-  "http_status": 404,
-  "ms": 473
+  "ms": 951
  },
  "https://steflorahbeauty.com/": {
   "status": "dead",
   "error": "ENOTFOUND",
-  "ms": 56
- },
- "https://www.vagaro.com/limelightstudio": {
-  "status": "dead",
-  "http_status": 404,
-  "ms": 646
- },
- "https://www.cutsplusct.co/": {
-  "status": "dead",
-  "error": "ENOTFOUND",
-  "ms": 11
+  "ms": 204
  },
  "https://hairtrendz.org/": {
   "status": "live",
   "http_status": 200,
-  "ms": 467
+  "ms": 502
+ },
+ "https://www.cutsplusct.co/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 220
  },
  "https://www.beautynailhairsalons.com/US/Norwich/153492478048121/Hair-%22Do%27s%22-Family-Salon": {
   "status": "blocked",
   "http_status": 403,
-  "ms": 92
- },
- "http://www.antiagingandacne.com/": {
-  "status": "dead",
-  "error": "ENOTFOUND",
-  "ms": 86
- },
- "http://www.avantihairdesigninc.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 1726
- },
- "https://www.bodyworkswellnessct.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 960
+  "ms": 269
  },
  "https://the-chop-shop.business.site/": {
   "status": "dead",
   "http_status": 404,
-  "ms": 717
- },
- "https://oasisfullservicesalon.business.site/": {
-  "status": "dead",
-  "http_status": 404,
-  "ms": 340
- },
- "https://qolmassage.net/": {
-  "status": "live",
-  "http_status": 200,
-  "final_url": "https://www.qolmassage.net/",
-  "ms": 424
- },
- "https://hair-city-llc.business.site/": {
-  "status": "dead",
-  "http_status": 404,
-  "ms": 438
- },
- "http://www.nailenvyct.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 962
- },
- "https://lisa-nail-spa.edan.io/": {
-  "status": "blocked",
-  "http_status": 403,
-  "ms": 140
- },
- "https://www.romaivsalon.com/": {
-  "status": "error",
-  "error": "ERR_TLS_CERT_ALTNAME_INVALID",
-  "ms": 234
- },
- "https://tcnails.webs.com/": {
-  "status": "dead",
-  "error": "ENOTFOUND",
-  "ms": 164
- },
- "https://www.onepersonalgrooming.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 211
- },
- "https://www.highmaintenancehairco.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 676
- },
- "https://www.oldtestamenttattoos.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 221
- },
- "https://aacofct.com/": {
-  "status": "live",
-  "http_status": 200,
-  "final_url": "https://www.aacofct.com/",
-  "ms": 323
+  "ms": 599
  },
  "http://www.ottosbarberonbank.com/": {
   "status": "dead",
   "error": "ENOTFOUND",
-  "ms": 88
+  "ms": 149
  },
- "https://divina-beauty-salon.edan.io/": {
-  "status": "blocked",
-  "http_status": 403,
-  "ms": 103
+ "https://www.onepersonalgrooming.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 292
  },
  "https://www.highstylzsalon.com/": {
   "status": "dead",
   "error": "ENOTFOUND",
-  "ms": 97
+  "ms": 40
  },
- "https://waterhousesalon.com/": {
-  "status": "blocked",
-  "http_status": 403,
-  "ms": 243
- },
- "https://www.ulta.com/stores/southbury-ct-1624": {
+ "https://www.highmaintenancehairco.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 173
+  "ms": 798
  },
- "https://www.ulta.com/stores/lisbon-ct-619": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 185
- },
- "https://razhairdesign.weebly.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 184
- },
- "https://lashesbylee.com/": {
-  "status": "live",
-  "http_status": 200,
-  "final_url": "https://www.lashesbylee.com/",
-  "ms": 753
- },
- "https://enlnailbarnewington.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 125
+ "https://oasisfullservicesalon.business.site/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 796
  },
  "https://www.supercuts.com/locations/nearme/haircut/CT/NEWINGTON/2995-BERLIN-TPKE-STE-A/82869": {
   "status": "live",
   "http_status": 200,
-  "ms": 11
- },
- "https://www.happynailshaven.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 129
+  "ms": 23
  },
  "https://www.vagaro.com/bravado": {
   "status": "dead",
   "http_status": 404,
-  "ms": 861
- },
- "https://www.costcutters.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 106
- },
- "https://www.ulta.com/stores/wethersfield-ct-1440": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 257
- },
- "https://tommystanning.com/": {
-  "status": "error",
-  "error": "UND_ERR_SOCKET",
-  "ms": 113
- },
- "https://www.supercuts.com/locations/ct/wallingford/ives-road-plaza-haircuts-81088.html": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 25
+  "ms": 687
  },
  "http://www.hairdresseronfire.com/": {
   "status": "dead",
   "error": "EAI_AGAIN",
   "ms": 649
  },
- "https://essencewellness.com/": {
+ "https://www.supercuts.com/locations/ct/wallingford/ives-road-plaza-haircuts-81088.html": {
   "status": "live",
   "http_status": 200,
-  "ms": 157
+  "ms": 8
  },
- "https://philshairandspa.salonrunner.com/": {
+ "https://hairtodayct.com/": {
   "status": "live",
   "http_status": 200,
-  "final_url": "https://app.salonrunner.com/customer/home/philshairandspa/index.htm",
-  "ms": 308
+  "final_url": "https://www.hairtodayct.com/",
+  "ms": 1971
  },
- "https://www.ulta.com/stores/plainville-ct-768": {
+ "https://jbsbarberspa.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 274
+  "ms": 1041
  },
  "https://salons.greatclips.com/us/ct/cromwell/51-shunpike-road": {
   "status": "live",
   "http_status": 200,
-  "ms": 34
+  "ms": 56
  },
- "https://www.sicknails69.com/": {
+ "https://www.costcutters.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 79
+  "ms": 397
+ },
+ "https://razhairdesign.weebly.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 485
  },
  "https://haircutmenbrookfieldcandlewoodlakeplaza.com/": {
   "status": "dead",
   "error": "ENOTFOUND",
-  "ms": 61
+  "ms": 470
+ },
+ "https://www.cuttothechasesalonct.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 660
  },
  "https://mancavebarbershop.club/": {
   "status": "live",
   "http_status": 200,
-  "ms": 49
- },
- "https://tuttofamilyhairsalon.com/": {
-  "status": "blocked",
-  "http_status": 403,
-  "final_url": "https://dolar508gacor.com/",
-  "ms": 349
- },
- "https://www.skinmedct.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 197
+  "ms": 712
  },
  "https://www.vagaro.com/mannysbarbershop": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://mysite.vagaro.com/mannysbarbershop",
-  "ms": 1746
+  "ms": 1904
  },
- "https://newclassicnailsandspa.com/": {
-  "status": "dead",
-  "error": "ENOTFOUND",
-  "ms": 43
- },
- "https://www.eminenceink.com/storrs": {
+ "https://philshairandspa.salonrunner.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 24
+  "final_url": "https://app.salonrunner.com/customer/home/philshairandspa/index.htm",
+  "ms": 1119
  },
- "https://anewdermaclinic.com/": {
-  "status": "dead",
-  "error": "ENOTFOUND",
-  "ms": 48
- },
- "https://www.cuttothechasesalonct.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 100
- },
- "https://hairnailgallery.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 1377
+ "https://tuttofamilyhairsalon.com/": {
+  "status": "blocked",
+  "http_status": 403,
+  "final_url": "https://dolar508gacor.com/",
+  "ms": 960
  },
  "https://www.mlcuts.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 182
- },
- "http://www.sleepinggiantbarbershop.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 227
+  "ms": 459
  },
  "https://www.rinsehairstudio.co/find-us": {
   "status": "live",
   "http_status": 200,
-  "ms": 240
+  "ms": 368
  },
  "https://theworldcut.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 186
+  "ms": 473
+ },
+ "http://binetcuts.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 395
+ },
+ "https://wildflowersalonct.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 335
+ },
+ "https://www.supercuts.com/locations/nearme/haircut/CT/ROCKY-HILL/80-TOWN-LINE-RD/82624": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 17
  },
  "https://rebelhair.org/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://www.rebelhair.org/",
-  "ms": 264
+  "ms": 870
  },
- "https://jbsbarberspa.com/": {
+ "https://hellogorgeous391.glossgenius.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 2034
+  "ms": 745
  },
- "http://binetcuts.com/": {
+ "https://www.solasalonstudios.com/locations/wilton": {
   "status": "live",
   "http_status": 200,
-  "ms": 341
+  "ms": 716
  },
- "https://www.flatstattooing.com/": {
+ "https://www.salonshahin.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 342
+  "ms": 768
  },
- "https://wildflowersalonct.com/": {
+ "http://www.sleepinggiantbarbershop.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 338
- },
- "http://naturalpathsmassage.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 400
- },
- "https://www.bevelupmedspa.com/": {
-  "status": "live",
-  "http_status": 200,
-  "final_url": "https://laurelhillsmedspa.com/",
-  "ms": 925
- },
- "https://www.supercuts.com/locations/nearme/haircut/CT/ROCKY-HILL/80-TOWN-LINE-RD/82624": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 35
- },
- "https://locations.waxcenter.com/ct/farmington/farmington-0796.html": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 523
+  "ms": 1793
  },
  "https://booksy.com/en-us/636565_supreme-cuts_barber-shop_15320_hartford": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://booksy.com/en-us/s/barber-shop/15320_hartford?do=showBusinessPubliclyUnavailableModal",
-  "ms": 2098
- },
- "https://hellogorgeous391.glossgenius.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 872
- },
- "https://rootsrelaxation.com/": {
-  "status": "live",
-  "http_status": 200,
-  "final_url": "https://www.rootsrelaxation.com/",
-  "ms": 942
- },
- "https://www.solasalonstudios.com/locations/rocky-hill": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 759
- },
- "https://www.salonshahin.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 198
- },
- "http://thecavebarbershop5.booksy.com/": {
-  "status": "live",
-  "http_status": 200,
-  "final_url": "https://lhkw.app.link/hMSD8i1IiOb?_p=c21429c7991c65f9eb038ffe",
-  "ms": 1575
+  "ms": 2794
  },
  "https://www.skullandcombs.com/branford": {
   "status": "live",
   "http_status": 200,
-  "ms": 185
+  "ms": 722
  },
  "https://www.skullandcombs.com/north-haven": {
   "status": "live",
   "http_status": 200,
-  "ms": 174
+  "ms": 664
  },
- "https://www.ctmassageandbodywork.com/": {
+ "http://thecavebarbershop5.booksy.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 178
- },
- "https://www.solasalonstudios.com/locations/wilton": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 474
- },
- "https://lanphier.us/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 280
+  "final_url": "https://lhkw.app.link/hMSD8i1IiOb?_p=c21429c39a077af2e01590ffe9b4",
+  "ms": 1944
  },
  "https://ldwhc0.wixsite.com/barbershop1049": {
   "status": "live",
   "http_status": 200,
-  "ms": 358
- },
- "https://www.thefadedept.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 698
- },
- "https://www.salonpaulmichael.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 790
+  "ms": 174
  },
  "https://pauliesprofessionalbarbershop.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 212
+  "ms": 129
  },
- "https://southingtonmassage.com/": {
-  "status": "error",
-  "error": "UND_ERR_SOCKET",
-  "ms": 433
- },
- "https://www.dimichelesbarbershop.com/": {
+ "https://www.salonpaulmichael.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 212
- },
- "https://kmcbeauty.glossgenius.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 954
- },
- "https://www.rheniumsalonandspa.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 171
+  "ms": 587
  },
  "https://www.ecochicsalonct.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 547
+  "ms": 246
  },
- "https://salonmimoza.com/": {
+ "https://www.dimichelesbarbershop.com/": {
   "status": "live",
   "http_status": 200,
-  "final_url": "https://www.salonmimoza.com/",
-  "ms": 139
+  "ms": 314
+ },
+ "https://www.rheniumsalonandspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 105
+ },
+ "https://www.thefadedept.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1087
  },
  "https://amg-studio.square.site/": {
   "status": "live",
   "http_status": 200,
-  "ms": 740
+  "ms": 690
  },
  "https://www.nenoclips.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 652
- },
- "https://www.alanbarbosatattoos.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 217
- },
- "https://www.theedgetattoo.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 106
- },
- "https://winx-mimosas.square.site/": {
-  "status": "dead",
-  "http_status": 404,
-  "ms": 229
- },
- "https://www.greenwichmedicalspa.com/contact-us-greenwich/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 97
- },
- "https://jdbarberhouse.com/": {
-  "status": "live",
-  "http_status": 200,
-  "final_url": "https://gonefishinglawncare.com/land-clearing/",
-  "ms": 3504
- },
- "https://www.skellydabarber.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 756
- },
- "https://lashedbyloli.as.me/schedule/e6a01e22": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 727
- },
- "http://lostartlaser.com/": {
-  "status": "live",
-  "http_status": 200,
-  "final_url": "https://www.lostartlaser.com/",
-  "ms": 286
+  "ms": 637
  },
  "http://www.wildirishairsalon.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://www.wildirishairsalon.com/",
-  "ms": 192
+  "ms": 154
  },
- "https://warrentricomi.com/": {
+ "https://www.lensbarber.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 229
+  "ms": 137
+ },
+ "https://elle-j-beauty-lounge.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 539
+ },
+ "https://hairnailgallery.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 4620
+ },
+ "https://www.skellydabarber.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 798
  },
  "https://vipbarbershopllc.as.me/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://vipbarbershopllc.as.me/schedule/ede21b43",
-  "ms": 955
+  "ms": 825
  },
- "https://www.justalittlemedspa.com/": {
+ "https://warrentricomi.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 192
- },
- "https://www.lensbarber.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 59
- },
- "https://www.smittysbarbershop.net/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 84
- },
- "https://elle-j-beauty-lounge.square.site/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 867
- },
- "https://milanlaser.com/locations/ct/new-london/220-route-12": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 668
- },
- "https://www.ivdripandmedicalspa.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 66
- },
- "http://matthewphillipsalon.com/": {
-  "status": "live",
-  "http_status": 200,
-  "final_url": "https://594441.us26.myftpupload.com/",
-  "ms": 377
- },
- "https://luminousluxe.us/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 538
- },
- "http://www.nubianlockitz.com/": {
-  "status": "live",
-  "http_status": 200,
-  "final_url": "https://www.nubianlockitz.com/",
-  "ms": 594
- },
- "https://intouchmassagect.net/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 170
+  "ms": 447
  },
  "http://www.acureecosalon.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://www.acureecosalon.com/",
-  "ms": 177
+  "ms": 178
  },
- "https://polishdaynailsspa.com/": {
-  "status": "error",
-  "error": "UND_ERR_CONNECT_TIMEOUT",
-  "ms": 10315
- },
- "https://www.atouchofhealthmassagect.com/": {
+ "https://www.smittysbarbershop.net/": {
   "status": "live",
   "http_status": 200,
-  "ms": 346
+  "ms": 349
  },
  "http://www.artistabarbershop.com/": {
   "status": "dead",
   "error": "ENOTFOUND",
-  "ms": 38
+  "ms": 366
  },
- "https://qqspa.net/": {
+ "http://matthewphillipsalon.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 3603
+  "final_url": "https://594441.us26.myftpupload.com/",
+  "ms": 667
  },
- "http://www.gbsbrowz.com/": {
+ "http://www.nubianlockitz.com/": {
   "status": "live",
   "http_status": 200,
-  "final_url": "https://www.gbsbrowz.com/",
-  "ms": 594
+  "final_url": "https://www.nubianlockitz.com/",
+  "ms": 803
+ },
+ "https://jdbarberhouse.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://gonefishinglawncare.com/land-clearing/",
+  "ms": 3200
  },
  "https://www.peterdominicsalonandspa.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 193
+  "ms": 418
  },
  "https://chair29.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 198
+  "ms": 466
  },
- "http://www.mane-loft.com/": {
+ "http://turningheadsbarbershopllc.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 384
+ },
+ "https://phenixsalonsuites.com/locations-detail/?id=297": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 298
+ },
+ "https://www.solobellastudio.com/": {
   "status": "live",
   "http_status": 200,
-  "final_url": "https://www.mane-loft.com/",
-  "ms": 555
+  "ms": 246
+ },
+ "https://www.aprilco.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 325
  },
  "http://cardonshairdesign.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://cardonshairdesign.com/",
-  "ms": 785
- },
- "http://turningheadsbarbershopllc.com/": {
-  "status": "dead",
-  "error": "ENOTFOUND",
-  "ms": 43
- },
- "https://www.ulta.com/stores/norwalk-ct-1227": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 260
- },
- "http://www.thebborganics.com/": {
-  "status": "live",
-  "http_status": 200,
-  "final_url": "https://thebborganics.com/",
-  "ms": 812
- },
- "https://phenixsalonsuites.com/locations-detail/?id=297": {
-  "status": "blocked",
-  "http_status": 403,
-  "ms": 91
- },
- "https://www.solobellastudio.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 92
- },
- "https://www.aprilco.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 96
+  "ms": 1262
  },
  "https://www.gettingalldolledup.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 150
+  "ms": 208
  },
- "https://www.ulta.com/stores/old-saybrook-ct-720": {
+ "http://www.mane-loft.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 599
+  "final_url": "https://www.mane-loft.com/",
+  "ms": 1387
  },
- "https://www.labellechateau.com/": {
+ "https://unique-hair-studio-hair-salon.business.site/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 1012
+ },
+ "http://www.haironthesquare.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 128
+  "ms": 476
+ },
+ "http://www.mojosolarstudio.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 404
+ },
+ "http://www.hbmassagetherapy.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 133
+ },
+ "https://www.envyhairsalonct.com/": {
+  "status": "error",
+  "error": "UND_ERR_SOCKET",
+  "ms": 549
  },
  "http://barbersunlimited.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "http://www.barbersunlimited.com/",
-  "ms": 268
+  "ms": 815
  },
- "https://unique-hair-studio-hair-salon.business.site/": {
+ "http://www.nailsalonnewington.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 42
+ },
+ "https://locations.waxcenter.com/ct/fairfield/fairfield-0176.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 798
+ },
+ "https://jetahair.com/": {
+  "status": "error",
+  "error": "ECONNRESET",
+  "ms": 117
+ },
+ "https://pinky-nails-spa-milford.edan.io/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 107
+ },
+ "https://www.granddesignsalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 207
+ },
+ "https://www.coconailspact.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 56
+ },
+ "http://sunnynailsandspa.net/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 256
+ },
+ "http://bombasalon.net/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 43
+ },
+ "https://www.cloud9dayspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 390
+ },
+ "https://palmbeachtan.com/locations/CT/Milford-Boston-Post-Road": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://palmbeachtan.com/locations/ct/milford-boston-post-road",
+  "ms": 716
+ },
+ "https://www.ulta.com/stores/manchester-ct-435": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 265
+ },
+ "https://palmbeachtan.com/locations/CT/Stratford-East-Main-Street": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://palmbeachtan.com/locations/ct/stratford-east-main-street",
+  "ms": 793
+ },
+ "https://azenanails.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 36
+ },
+ "https://www.ulta.com/stores/guilford-commons-ct-1074": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 670
+ },
+ "http://www.shannonstrong.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://shannonstrong.com/",
+  "ms": 335
+ },
+ "https://www.tanningnailssalon.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 33
+ },
+ "https://www.gbsbrowz.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1867
+ },
+ "http://naturallyhealingskincare.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 40
+ },
+ "https://palmbeachtan.com/locations/CT/Westport-Post-Road-East/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://palmbeachtan.com/locations/ct/westport-post-road-east",
+  "ms": 592
+ },
+ "https://www.albasbeautysalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 344
+ },
+ "https://www.elegantnailandspact.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 642
+ },
+ "https://marilynscreationssalon.weebly.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 160
+ },
+ "https://www.gbsbrowz.com/storrs": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.gbsbrowz.com/location/storrs",
+  "ms": 511
+ },
+ "https://strandsalonct.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 188
+ },
+ "https://www.roostersmgc.com/locations/ct/glastonbury/roosters-haircuts-13127.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 238
+ },
+ "https://www.healthbeautyspa2840.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 42
+ },
+ "https://guilfordct.spaviadayspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://spaviadayspa.com/locations/guilford-ct/",
+  "ms": 586
+ },
+ "https://www.luluwax.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 245
+ },
+ "https://opnailsglastonbury.wixsite.com/website": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 184
+ },
+ "https://www.searchingserendipity.com/": {
+  "status": "error",
+  "error": "ERR_SSL_SSL/TLS_ALERT_HANDSHAKE_FAILURE",
+  "ms": 128
+ },
+ "http://greenbeautyct.com/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 205
+ },
+ "https://www.ulta.com/stores/hamden-ct-1578": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 670
+ },
+ "http://uniqueeyebrowthreadingct.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 416
+ },
+ "http://www.antiagingandacne.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 40
+ },
+ "https://www.brooklynbusinessassociation.org/project/anastasias-beauty-skin-clinic": {
   "status": "dead",
   "http_status": 404,
-  "ms": 667
+  "ms": 380
  },
- "http://12tattoos.com/": {
+ "https://www.yojinails.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 454
+  "final_url": "https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fyojibyjoe%2F&is_from_rle",
+  "ms": 659
  },
- "https://www.timelessbyerikabessette.com/": {
+ "https://lisa-nail-spa.edan.io/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 131
+ },
+ "https://www.romaivsalon.com/": {
+  "status": "error",
+  "error": "ERR_TLS_CERT_ALTNAME_INVALID",
+  "ms": 119
+ },
+ "https://www.vagaro.com/limelightstudio": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 645
+ },
+ "https://tcnails.webs.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 44
+ },
+ "https://waterhousesalon.com/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 123
+ },
+ "https://aacofct.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 463
- },
- "https://waxtherapyct.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 4926
- },
- "https://www.shine-salon.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 1833
+  "final_url": "https://www.aacofct.com/",
+  "ms": 258
  },
  "http://www.richardpaulsalon.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://www.richardpaulsalon.com/",
-  "ms": 5594
+  "ms": 4837
+ },
+ "http://www.nailenvyct.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 734
+ },
+ "https://divina-beauty-salon.edan.io/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 96
+ },
+ "https://hair-city-llc.business.site/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 656
+ },
+ "https://www.happynailshaven.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 108
+ },
+ "https://www.ulta.com/stores/southbury-ct-1624": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 217
+ },
+ "https://www.ulta.com/stores/lisbon-ct-619": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 250
+ },
+ "https://tommystanning.com/": {
+  "status": "error",
+  "error": "UND_ERR_SOCKET",
+  "ms": 124
+ },
+ "https://www.ulta.com/stores/wethersfield-ct-1440": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 297
+ },
+ "https://enlnailbarnewington.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 325
+ },
+ "https://essencewellness.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 184
+ },
+ "https://newclassicnailsandspa.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 95
+ },
+ "https://www.sicknails69.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 158
+ },
+ "https://anewdermaclinic.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 104
+ },
+ "https://lashesbylee.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.lashesbylee.com/",
+  "ms": 724
+ },
+ "https://www.ulta.com/stores/plainville-ct-768": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 327
+ },
+ "https://www.skinmedct.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 282
+ },
+ "https://lanphier.us/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 234
+ },
+ "https://www.solasalonstudios.com/locations/rocky-hill": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 278
+ },
+ "https://www.bevelupmedspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://laurelhillsmedspa.com/",
+  "ms": 552
+ },
+ "https://locations.waxcenter.com/ct/farmington/farmington-0796.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 526
+ },
+ "https://salonmimoza.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.salonmimoza.com/",
+  "ms": 288
+ },
+ "https://winx-mimosas.square.site/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 195
+ },
+ "https://www.ulta.com/stores/old-saybrook-ct-720": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 229
+ },
+ "https://www.ulta.com/stores/norwalk-ct-1227": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 182
+ },
+ "https://lashedbyloli.as.me/schedule/e6a01e22": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 528
+ },
+ "https://www.labellechateau.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 268
+ },
+ "https://kmcbeauty.glossgenius.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 899
+ },
+ "http://studiozee.com/": {
+  "status": "blocked",
+  "http_status": 403,
+  "final_url": "https://www.buydomains.com/lander/studiozee.com?domain=studiozee.com&utm_source=studiozee.com&utm_medium=click&utm_campaign=tdfs-AprTest&traffic_id=AprTest&traffic_type=tdfs&redirect=ono-redirect",
+  "ms": 210
+ },
+ "https://www.inksideouttattoo.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 158
+ },
+ "https://elmcitywellness.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.elmcitywellness.com/",
+  "ms": 397
+ },
+ "https://www.sunreflexologywestport.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 244
+ },
+ "https://www.timelessbyerikabessette.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 640
+ },
+ "http://mpowerbeautywellness.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 95
+ },
+ "https://ironeeltattoo.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 219
+ },
+ "https://www.eminenceink.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 159
+ },
+ "https://www.storrstherapeuticmassage.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 151
+ },
+ "https://massagegreenspa.com/locations/spa/norwalk-ct": {
+  "status": "dead",
+  "http_status": 404,
+  "final_url": "https://www.massagegreenspa.com/locations/spa/norwalk-ct",
+  "ms": 572
+ },
+ "https://www.inkhouse203.art/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 800
+ },
+ "https://www.suebtouchofcaring.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 273
+ },
+ "https://www.eminenceink.com/storrs": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 26
+ },
+ "https://www.oldtestamenttattoos.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 181
+ },
+ "https://www.flatstattooing.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 246
+ },
+ "https://qolmassage.net/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.qolmassage.net/",
+  "ms": 364
+ },
+ "http://naturalpathsmassage.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 186
+ },
+ "https://www.bodyworkswellnessct.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 643
+ },
+ "https://www.ctmassageandbodywork.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 211
+ },
+ "https://rootsrelaxation.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.rootsrelaxation.com/",
+  "ms": 244
+ },
+ "https://southingtonmassage.com/": {
+  "status": "error",
+  "error": "UND_ERR_SOCKET",
+  "ms": 181
+ },
+ "https://www.theedgetattoo.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 135
+ },
+ "https://www.alanbarbosatattoos.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 256
+ },
+ "https://www.justalittlemedspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 267
+ },
+ "http://www.thebborganics.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://thebborganics.com/",
+  "ms": 486
+ },
+ "https://qqspa.net/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 3440
+ },
+ "http://12tattoos.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1443
+ },
+ "https://waxtherapyct.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 5726
+ },
+ "https://polishdaynailsspa.com/": {
+  "status": "error",
+  "error": "UND_ERR_CONNECT_TIMEOUT",
+  "ms": 10376
+ },
+ "https://www.shine-salon.com/": {
+  "status": "error",
+  "error": "TimeoutError",
+  "ms": 15001
  }
 }
