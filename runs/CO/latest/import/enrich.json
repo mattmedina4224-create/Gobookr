@@ -275,26 +275,15 @@
   "source_external_id": "osm:node/5894547379"
  },
  {
-  "id": 37,
-  "zip_code": "80524",
+  "id": 25,
+  "zip_code": "",
   "license_number": null,
-  "website_url": "https://screaminpeach.com/",
+  "website_url": "https://melissasbarbershop.com/",
   "phone": "",
   "categories": [
-   "waxing_specialist"
+   "barber"
   ],
-  "source_external_id": "osm:node/6495370318"
- },
- {
-  "id": 65,
-  "zip_code": "80210",
-  "license_number": null,
-  "website_url": "https://salonsbyjc.com/location/colorado-denver-observatory-park/",
-  "phone": "(303) 777-7106",
-  "categories": [
-   "stylist"
-  ],
-  "source_external_id": "osm:node/7266892180"
+  "source_external_id": "osm:node/6385909331"
  },
  {
   "id": 39,
@@ -339,5 +328,27 @@
    "barber"
   ],
   "source_external_id": "osm:node/13806737432"
+ },
+ {
+  "id": 37,
+  "zip_code": "80524",
+  "license_number": null,
+  "website_url": "https://screaminpeach.com/",
+  "phone": "",
+  "categories": [
+   "waxing_specialist"
+  ],
+  "source_external_id": "osm:node/6495370318"
+ },
+ {
+  "id": 65,
+  "zip_code": "80210",
+  "license_number": null,
+  "website_url": "https://salonsbyjc.com/location/colorado-denver-observatory-park/",
+  "phone": "(303) 777-7106",
+  "categories": [
+   "stylist"
+  ],
+  "source_external_id": "osm:node/7266892180"
  }
 ]
