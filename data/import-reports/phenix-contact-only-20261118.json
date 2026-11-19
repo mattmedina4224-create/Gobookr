@@ -1,0 +1,41 @@
+{
+  "source": "https://phenixsalonsuites.com/locations/co-southwest-plaza-littleton/#professionals",
+  "date": "2026-11-18",
+  "production_project": "jbhgeoedwvfxjteyuxum",
+  "status": "production_import_verified",
+  "location": "Southwest Plaza — Littleton, Colorado",
+  "inserted_profile_ids": {
+    "start": 16878,
+    "end": 16901,
+    "count": 24
+  },
+  "additional_confirmed_phoenix_contact_profiles": {
+    "start": 16876,
+    "end": 16877,
+    "count": 2
+  },
+  "source_method": "Public indexed official Phenix pages; direct site request remains HTTP 403",
+  "verified_fields": [
+    "individual display name",
+    "workplace name",
+    "service category",
+    "location",
+    "business phone",
+    "business email",
+    "source provenance"
+  ],
+  "phone_counts": 24,
+  "email_counts": 24,
+  "booking_urls_added": 0,
+  "profile_claim_state": "unclaimed",
+  "false_user_accounts_created": 0,
+  "notes": [
+    "All source location phone/email fields are explicitly associated with listed businesses/professionals, not the Phenix leasing office.",
+    "Regional manager excluded.",
+    "Some source spelling appears nonstandard, e.g. 'C. Micahel Martinez'; retained the source spelling pending correction.",
+    "Booking links stored as empty strings because DB booking_url is NOT NULL; no fabricated bookable destinations.",
+    "26 contact-only professionals total in this import sequence: 24 Colorado, 1 Iowa, 1 California.",
+    "Still requires UI-level audit to confirm unbookable listing cards show contact/claim instead of an empty book link.",
+    "The national Phenix site remains 403 to direct automated fetch; further growth requires permitted feeds or publicly indexed per-location pages."
+  ]
+}
