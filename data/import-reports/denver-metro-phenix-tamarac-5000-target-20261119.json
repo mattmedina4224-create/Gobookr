@@ -1,0 +1,78 @@
+{
+  "project": "GoBookr",
+  "scope": "Denver-area 24-city working list including Boulder and Castle Rock",
+  "goal_verified_professional_profiles": 5000,
+  "source": "GoBookr production Supabase jbhgeoedwvfxjteyuxum",
+  "date": "2026-11-19",
+  "before_tamarac": 1183,
+  "new_tamarac_profiles": 27,
+  "after_tamarac": 1210,
+  "remaining": 3790,
+  "percent_complete": 24.2,
+  "source_page": "https://phenixsalonsuites.com/locations/co-tamarac-denver/",
+  "phenix_import": {
+    "location": "Denver Tamarac Shopping Center",
+    "imported_ids": "16908-16934",
+    "total": 27,
+    "phones": 26,
+    "emails": 27,
+    "empty_booking_links": 27,
+    "claim_status": "unclaimed",
+    "excluded": [
+      "Bare Skin Waxing Studio: business label without a named individual",
+      "Lisa Martino Anderson: published phone malformed; omitted telephone, kept business email"
+    ]
+  },
+  "city_scope": [
+    "Denver",
+    "Littleton",
+    "Lakewood",
+    "Englewood",
+    "Aurora",
+    "Centennial",
+    "Westminster",
+    "Arvada",
+    "Wheat Ridge",
+    "Highlands Ranch",
+    "Greenwood Village",
+    "Golden",
+    "Thornton",
+    "Broomfield",
+    "Commerce City",
+    "Parker",
+    "Lone Tree",
+    "Northglenn",
+    "Castle Rock",
+    "Edgewater",
+    "Boulder",
+    "Superior",
+    "Lafayette",
+    "Louisville"
+  ],
+  "phenix_discovery": {
+    "colorado_locations": 22,
+    "metro_urls": [
+      "https://phenixsalonsuites.com/locations/co-tamarac-denver/",
+      "https://phenixsalonsuites.com/locations/co-northfield-denver/",
+      "https://phenixsalonsuites.com/locations/co-kipling-littleton/",
+      "https://phenixsalonsuites.com/locations/co-southwest-plaza-littleton/",
+      "https://phenixsalonsuites.com/locations/colorado-mills/",
+      "https://phenixsalonsuites.com/locations/co-arvada/",
+      "https://phenixsalonsuites.com/locations/westminster-co/",
+      "https://phenixsalonsuites.com/locations/aurora/",
+      "https://phenixsalonsuites.com/locations/northglenn-marketplace/",
+      "https://phenixsalonsuites.com/locations/co-parker/",
+      "https://phenixsalonsuites.com/locations/co-lone-tree/",
+      "https://phenixsalonsuites.com/locations/highlands-ranch/",
+      "https://phenixsalonsuites.com/locations/phenix-salon-suites-wheat-ridge/",
+      "https://phenixsalonsuites.com/locations/co-boulder/"
+    ],
+    "note": "URLs are discovery references, not a claim that all directories were fully crawled or had valid professionals."
+  },
+  "next_steps": [
+    "Inspect every metro Phenix location page by permitted publicly indexed or authorized source and validate names and public business contacts; no invented details.",
+    "Expand all-platform discovery using Sola, Booksy, GlossGenius, Square, MY SALON Suite and other real sources.",
+    "Deduplicate by professional identity, studio and location; preserve claimed profiles.",
+    "Verify per-city counts and contact-only UI after release."
+  ]
+}
