@@ -28,7 +28,7 @@
  "top_covered_places": [
   {
    "name": "Las Vegas",
-   "shops": 69
+   "shops": 71
   },
   {
    "name": "Henderson",
@@ -59,6 +59,10 @@
    "shops": 2
   },
   {
+   "name": "Elko",
+   "shops": 2
+  },
+  {
    "name": "Boulder City",
    "shops": 1
   },
@@ -68,10 +72,6 @@
   },
   {
    "name": "Enterprise",
-   "shops": 1
-  },
-  {
-   "name": "Elko",
    "shops": 1
   },
   {

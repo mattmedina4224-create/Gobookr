@@ -1177,6 +1177,30 @@
   "website_source_url": ""
  },
  {
+  "name": "Pink Porcupine Bath & Body",
+  "city": "Elko",
+  "state": "NV",
+  "street_address": "1900 Idaho Street",
+  "zip_code": "89801",
+  "county": "",
+  "categories": [
+   "makeup_artist"
+  ],
+  "website_url": "https://www.pinkporcupinebb.com/",
+  "phone": "(801) 718-4386",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/node/8836820082",
+  "source_external_id": "osm:node/8836820082",
+  "license_number": null,
+  "latitude": 40.8445329,
+  "longitude": -115.7491848,
+  "operational_status": "verified",
+  "checked_at": "2026-11-19",
+  "raw_name": "Pink Porcupine Bath & Body",
+  "website_candidate": "https://www.pinkporcupinebb.com/",
+  "website_source_url": ""
+ },
+ {
   "name": "Ulta Beauty",
   "city": "Reno",
   "state": "NV",
@@ -2248,7 +2272,7 @@
   "categories": [
    "nail_technician"
   ],
-  "website_url": "https://lhkw.app.link/bGQBTxT8h3b?_p=c21429c39e0b7af6e5038cfee9",
+  "website_url": "https://lhkw.app.link/bGQBTxT8h3b?_p=c11733dc99016ceee61e90f9e8",
   "phone": "(702) 488-7346",
   "source_name": "OpenStreetMap contributors",
   "source_url": "https://www.openstreetmap.org/node/12779853709",
@@ -3321,6 +3345,54 @@
   "checked_at": "2026-11-19",
   "raw_name": "Inner Visions Tattoo",
   "website_candidate": "https://www.innervisionstattoo.com/",
+  "website_source_url": ""
+ },
+ {
+  "name": "Velora Spa & Massage",
+  "city": "Las Vegas",
+  "state": "NV",
+  "street_address": "4009 Spring Mountain Road",
+  "zip_code": "89102",
+  "county": "",
+  "categories": [
+   "massage_therapist"
+  ],
+  "website_url": "https://www.veloralasvegas.com/",
+  "phone": "(702) 998-8088",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/node/14182590511",
+  "source_external_id": "osm:node/14182590511",
+  "license_number": null,
+  "latitude": 36.1260773,
+  "longitude": -115.1932373,
+  "operational_status": "verified",
+  "checked_at": "2026-11-19",
+  "raw_name": "Velora Spa & Massage",
+  "website_candidate": "https://www.veloralasvegas.com/",
+  "website_source_url": ""
+ },
+ {
+  "name": "Tibet Spa & Massage",
+  "city": "Las Vegas",
+  "state": "NV",
+  "street_address": "5115 W Spring Mountain Rd",
+  "zip_code": "89146",
+  "county": "",
+  "categories": [
+   "massage_therapist"
+  ],
+  "website_url": "https://tibetspamassage.com/",
+  "phone": "(702) 838-8989",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/node/14349504606",
+  "source_external_id": "osm:node/14349504606",
+  "license_number": null,
+  "latitude": 36.1254951,
+  "longitude": -115.211727,
+  "operational_status": "verified",
+  "checked_at": "2026-11-19",
+  "raw_name": "Tibet Spa & Massage",
+  "website_candidate": "https://tibetspamassage.com/",
   "website_source_url": ""
  },
  {

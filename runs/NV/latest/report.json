@@ -2,14 +2,14 @@
  "state": "NV",
  "state_name": "Nevada",
  "wave": 1,
- "created_at": "2026-11-19T22:48:14.301Z",
+ "created_at": "2026-11-19T23:43:42.061Z",
  "staging_only": true,
  "sources": [
   {
    "name": "OpenStreetMap (Overpass)",
    "url": "https://overpass-api.de/api/interpreter",
    "status": "processed",
-   "records": 789,
+   "records": 793,
    "parts_ok": 4,
    "parts_total": 4
   },
@@ -32,10 +32,10 @@
   "filled": 298,
   "failed": 0
  },
- "mapped_beauty_places": 789,
+ "mapped_beauty_places": 793,
  "overpass_endpoint": "https://overpass-api.de/api/interpreter",
- "total_candidates": 732,
- "with_websites": 176,
+ "total_candidates": 735,
+ "with_websites": 178,
  "category_counts": {
   "hair": 286,
   "barber": 53,
@@ -47,7 +47,7 @@
   "spray_tanning": 20,
   "skincare": 26,
   "brows": 13,
-  "massage": 52,
+  "massage": 55,
   "permanent_makeup": 1,
   "tattoo": 53
  },
