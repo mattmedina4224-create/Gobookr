@@ -1,0 +1,79 @@
+{
+  "batch_id": "national-glossgenius-wave-2-20261118",
+  "production_project": "jbhgeoedwvfxjteyuxum",
+  "starting_glossgenius_profiles": 429,
+  "added": 27,
+  "expected_total": 456,
+  "status": "production_db_inserted",
+  "notes": [
+    "Source pages are public GlossGenius team pages; bookings link to shop/team, not individualized staff booking deeplinks.",
+    "The pro_categories table provides the authoritative category; eight nail tech rows have legacy pro_profiles.category='barber' due to compatibility with existing importer, and each has nail_technician pro_categories mapping.",
+    "No fabricated license, review, bio, contact details or portfolio images were added.",
+    "Profile route HTTP and booking redirect tests not yet conducted."
+  ],
+  "sources": [
+    {
+      "shop": "Gloss Haus Westgate Nails & Art",
+      "city": "Glendale",
+      "state": "AZ",
+      "source_url": "https://glosshauswestgate.glossgenius.com/team",
+      "ids": "16848-16855",
+      "names": [
+        "Amber Chenoweth",
+        "Andrea Morales",
+        "Yazmin Barreto",
+        "Talia Joe",
+        "Charlotte Echols",
+        "Kailuv Chew",
+        "Angela Brown",
+        "LEIGHA Hailey"
+      ]
+    },
+    {
+      "shop": "The Salon USC Village",
+      "city": "Los Angeles",
+      "state": "CA",
+      "source_url": "https://thesalonuscvillage.glossgenius.com/team",
+      "ids": "16856-16866",
+      "names": [
+        "Ashley Renee",
+        "Xena Defex",
+        "Rosa Xicara",
+        "Sierra Starr",
+        "Josue Xicara",
+        "Mia Gillis",
+        "Chelsea Penalosa",
+        "Cristal Hernandez",
+        "Jojo Fitzsimmons",
+        "Kira Kohl",
+        "Tara Namjo"
+      ]
+    },
+    {
+      "shop": "Shea Eliz Salon",
+      "city": "Houston",
+      "state": "TX",
+      "source_url": "https://sheaelizsalon.glossgenius.com/team",
+      "ids": "16867-16872",
+      "names": [
+        "Nayeli Soriano",
+        "Rizzy Tsoumbos",
+        "Roxana Gonzalez",
+        "Samantha Baca",
+        "Shanea Garduno",
+        "Stephanie Montoya"
+      ]
+    },
+    {
+      "shop": "Salon Biology",
+      "city": "Los Angeles",
+      "state": "CA",
+      "source_url": "https://salonbiology.glossgenius.com/team",
+      "ids": "16873-16874",
+      "names": [
+        "Naz Avjou",
+        "Autumn Queen"
+      ]
+    }
+  ]
+}
