@@ -42,15 +42,19 @@
   },
   {
    "name": "Santa Fe",
-   "shops": 6
+   "shops": 8
   },
   {
    "name": "Las Cruces",
-   "shops": 4
+   "shops": 6
   },
   {
    "name": "Rio Rancho",
    "shops": 2
+  },
+  {
+   "name": "Lovington",
+   "shops": 1
   },
   {
    "name": "Placitas",
@@ -59,30 +63,61 @@
   {
    "name": "Los Lunas",
    "shops": 1
-  },
-  {
-   "name": "Lovington",
-   "shops": 1
   }
  ],
  "uncovered_places_with_held_candidates": [
   {
-   "name": "Taos",
-   "type": "INCORPORATED PLACE",
-   "held_candidates": 7
-  },
-  {
    "name": "Los Alamos",
    "type": "CENSUS DESIGNATED PLACE",
-   "held_candidates": 6
+   "held_candidates": 19
+  },
+  {
+   "name": "Taos",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 14
+  },
+  {
+   "name": "Truth or Consequences",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 13
   },
   {
    "name": "Portales",
    "type": "INCORPORATED PLACE",
-   "held_candidates": 6
+   "held_candidates": 9
+  },
+  {
+   "name": "Socorro",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 9
   },
   {
    "name": "Farmington",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 6
+  },
+  {
+   "name": "Gallup",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 6
+  },
+  {
+   "name": "Deming",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Corrales",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Eldorado at Santa Fe",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Española",
    "type": "INCORPORATED PLACE",
    "held_candidates": 4
   },
@@ -92,7 +127,12 @@
    "held_candidates": 4
   },
   {
-   "name": "Corrales",
+   "name": "Bloomfield",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Bosque Farms",
    "type": "INCORPORATED PLACE",
    "held_candidates": 3
   },
@@ -102,23 +142,43 @@
    "held_candidates": 3
   },
   {
-   "name": "Socorro",
+   "name": "Peralta",
    "type": "INCORPORATED PLACE",
    "held_candidates": 3
   },
   {
-   "name": "Bloomfield",
+   "name": "Alamogordo",
    "type": "INCORPORATED PLACE",
    "held_candidates": 2
   },
   {
-   "name": "Deming",
+   "name": "Artesia",
    "type": "INCORPORATED PLACE",
    "held_candidates": 2
   },
   {
-   "name": "Eldorado at Santa Fe",
+   "name": "Belen",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Cannon AFB",
    "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Clovis",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Los Ranchos de Albuquerque",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Moriarty",
+   "type": "INCORPORATED PLACE",
    "held_candidates": 2
   },
   {
@@ -127,12 +187,32 @@
    "held_candidates": 2
   },
   {
-   "name": "Edgewood",
+   "name": "Roswell",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Alcalde",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Aztec",
    "type": "INCORPORATED PLACE",
    "held_candidates": 1
   },
   {
-   "name": "Gallup",
+   "name": "Bernalillo",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Carlsbad",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Edgewood",
    "type": "INCORPORATED PLACE",
    "held_candidates": 1
   },
@@ -152,12 +232,22 @@
    "held_candidates": 1
   },
   {
-   "name": "Los Ranchos de Albuquerque",
+   "name": "Los Chaves",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Madrid",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Magdalena",
    "type": "INCORPORATED PLACE",
    "held_candidates": 1
   },
   {
-   "name": "Moriarty",
+   "name": "Mesilla",
    "type": "INCORPORATED PLACE",
    "held_candidates": 1
   },
@@ -167,11 +257,31 @@
    "held_candidates": 1
   },
   {
-   "name": "Truth or Consequences",
+   "name": "Picacho Hills",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Rio Communities",
    "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Sandia Heights",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Silver City",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "White Sands",
+   "type": "CENSUS DESIGNATED PLACE",
    "held_candidates": 1
   }
  ],
- "uncovered_places_without_candidates": 489,
+ "uncovered_places_without_candidates": 467,
  "source": "U.S. Census Bureau 2020 place-by-county and county code files"
 }

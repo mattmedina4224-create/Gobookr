@@ -2,14 +2,22 @@
  "state": "NM",
  "state_name": "New Mexico",
  "wave": 1,
- "created_at": "2026-11-19T22:08:30.298Z",
+ "created_at": "2026-11-19T22:49:33.980Z",
  "staging_only": true,
  "sources": [
   {
    "name": "OpenStreetMap (Overpass)",
    "url": "https://overpass-api.de/api/interpreter",
    "status": "processed",
-   "records": 546
+   "records": 565,
+   "parts_ok": 4,
+   "parts_total": 4
+  },
+  {
+   "name": "U.S. Census Geocoder (place containing map point)",
+   "url": "https://geocoding.geo.census.gov/",
+   "status": "processed",
+   "records": 223
   }
  ],
  "license_records_scanned": 0,
@@ -19,22 +27,28 @@
  "license_shop_types": [],
  "license_type_counts": [],
  "license_type_lookup": [],
- "mapped_beauty_places": 546,
+ "census_city_lookup": {
+  "attempted": 226,
+  "filled": 223,
+  "failed": 0
+ },
+ "mapped_beauty_places": 565,
  "overpass_endpoint": "https://overpass-api.de/api/interpreter",
- "total_candidates": 529,
- "with_websites": 85,
+ "total_candidates": 548,
+ "with_websites": 87,
  "category_counts": {
   "hair": 220,
-  "tattoo": 33,
   "nails": 93,
-  "massage": 68,
-  "skincare": 17,
   "barber": 72,
+  "salon_suites": 4,
+  "skincare": 17,
+  "massage": 68,
+  "makeup": 19,
   "waxing": 9,
   "lashes": 3,
   "brows": 6,
   "spray_tanning": 4,
-  "salon_suites": 4
+  "tattoo": 33
  },
  "errors": [],
  "note": "A license record or map listing alone does not prove a business is open. The importer publishes only rows that meet its rules; the rest are held.",
