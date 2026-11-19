@@ -57040,30 +57040,6 @@
   "reason": "osm_only_without_website"
  },
  {
-  "name": "Shapes",
-  "city": "Denver",
-  "state": "CO",
-  "street_address": "2525 15th Street",
-  "zip_code": "80021",
-  "categories": [
-   "stylist"
-  ],
-  "website_url": "",
-  "phone": "",
-  "source_name": "OpenStreetMap contributors",
-  "source_url": "https://www.openstreetmap.org/node/6373319936",
-  "source_external_id": "osm:node/6373319936",
-  "license_number": null,
-  "latitude": 39.7580179,
-  "longitude": -105.0110727,
-  "operational_status": "verified",
-  "checked_at": "2026-11-19",
-  "raw_name": "Shapes",
-  "website_candidate": "http://shapessalonandstudio.com/",
-  "website_source_url": "",
-  "reason": "osm_website_not_confirmed_live"
- },
- {
   "name": "Brows",
   "city": "Denver",
   "state": "CO",
@@ -61067,6 +61043,30 @@
   "reason": "osm_only_without_website"
  },
  {
+  "name": "Waterside",
+  "city": "Steamboat Springs",
+  "state": "CO",
+  "street_address": "1110 Yampa Street",
+  "zip_code": "80487",
+  "categories": [
+   "stylist"
+  ],
+  "website_url": "",
+  "phone": "",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/node/8855389001",
+  "source_external_id": "osm:node/8855389001",
+  "license_number": null,
+  "latitude": 40.4875012,
+  "longitude": -106.8389726,
+  "operational_status": "verified",
+  "checked_at": "2026-11-19",
+  "raw_name": "Waterside",
+  "website_candidate": "https://watersidedayspa.com/",
+  "website_source_url": "",
+  "reason": "osm_website_not_confirmed_live"
+ },
+ {
   "name": "The Spa/Salon",
   "city": "Steamboat Springs",
   "state": "CO",
@@ -64257,6 +64257,30 @@
   "reason": "missing_city"
  },
  {
+  "name": "Above Ground",
+  "city": "Denver",
+  "state": "CO",
+  "street_address": "1740 Blake Street",
+  "zip_code": "80202",
+  "categories": [
+   "stylist"
+  ],
+  "website_url": "",
+  "phone": "",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/node/11070202338",
+  "source_external_id": "osm:node/11070202338",
+  "license_number": null,
+  "latitude": 39.7519586,
+  "longitude": -104.9971209,
+  "operational_status": "verified",
+  "checked_at": "2026-11-19",
+  "raw_name": "Above Ground",
+  "website_candidate": "https://abovegrounddenver.com/",
+  "website_source_url": "",
+  "reason": "osm_website_not_confirmed_live"
+ },
+ {
   "name": "Great Clips",
   "city": "Aurora",
   "state": "CO",
@@ -64904,6 +64928,30 @@
   "website_candidate": "",
   "website_source_url": "",
   "reason": "osm_only_without_website"
+ },
+ {
+  "name": "Wren Body Wellness",
+  "city": "Golden",
+  "state": "CO",
+  "street_address": "720 14th Street",
+  "zip_code": "80401",
+  "categories": [
+   "massage_therapist"
+  ],
+  "website_url": "",
+  "phone": "",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/node/11410857327",
+  "source_external_id": "osm:node/11410857327",
+  "license_number": null,
+  "latitude": 39.754029,
+  "longitude": -105.2196879,
+  "operational_status": "verified",
+  "checked_at": "2026-11-19",
+  "raw_name": "Wren Body Wellness",
+  "website_candidate": "http://www.wrenbodywellness.com/",
+  "website_source_url": "",
+  "reason": "osm_website_not_confirmed_live"
  },
  {
   "name": "Lash Out Colorado",
@@ -66465,30 +66513,6 @@
   "website_candidate": "",
   "website_source_url": "",
   "reason": "osm_only_without_website"
- },
- {
-  "name": "The Spot Barber Lounge",
-  "city": "Grand Junction",
-  "state": "CO",
-  "street_address": "1000 North 9th Street",
-  "zip_code": "81501",
-  "categories": [
-   "barber"
-  ],
-  "website_url": "",
-  "phone": "",
-  "source_name": "OpenStreetMap contributors",
-  "source_url": "https://www.openstreetmap.org/node/12034892402",
-  "source_external_id": "osm:node/12034892402",
-  "license_number": null,
-  "latitude": 39.0765701,
-  "longitude": -108.5570986,
-  "operational_status": "verified",
-  "checked_at": "2026-11-19",
-  "raw_name": "The Spot Barber Lounge",
-  "website_candidate": "https://linktr.ee/thespotbarberlounge",
-  "website_source_url": "",
-  "reason": "osm_website_not_confirmed_live"
  },
  {
   "name": "JM Salon",
@@ -69006,6 +69030,30 @@
   "website_candidate": "",
   "website_source_url": "",
   "reason": "missing_city"
+ },
+ {
+  "name": "FocalPoint303 BARBERSALON",
+  "city": "Denver",
+  "state": "CO",
+  "street_address": "208 South Broadway",
+  "zip_code": "80209",
+  "categories": [
+   "barber"
+  ],
+  "website_url": "",
+  "phone": "",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/node/13238699278",
+  "source_external_id": "osm:node/13238699278",
+  "license_number": null,
+  "latitude": 39.712785,
+  "longitude": -104.9873116,
+  "operational_status": "verified",
+  "checked_at": "2026-11-19",
+  "raw_name": "FocalPoint303  BARBERSALON",
+  "website_candidate": "https://focalpoint303.com/",
+  "website_source_url": "",
+  "reason": "osm_website_not_confirmed_live"
  },
  {
   "name": "Hong Kong Spa",
