@@ -1,0 +1,332 @@
+[
+ {
+  "id": 79,
+  "zip_code": "80003",
+  "license_number": "REG.2000036199",
+  "website_url": "",
+  "categories": [
+   "stylist"
+  ],
+  "source_external_id": "dora:REG:2000036199"
+ },
+ {
+  "id": 10,
+  "zip_code": "80220",
+  "license_number": "REG.2000028907",
+  "website_url": "",
+  "categories": [
+   "stylist"
+  ],
+  "source_external_id": "dora:REG:2000028907"
+ },
+ {
+  "id": 53,
+  "zip_code": "80904",
+  "license_number": "REG.2000030082",
+  "website_url": "",
+  "categories": [
+   "barber"
+  ],
+  "source_external_id": "dora:REG:2000030082"
+ },
+ {
+  "id": 26,
+  "zip_code": "80524",
+  "license_number": "REG.2000035436",
+  "website_url": "",
+  "categories": [
+   "barber"
+  ],
+  "source_external_id": "dora:REG:2000035436"
+ },
+ {
+  "id": 38,
+  "zip_code": "80951",
+  "license_number": "REG.2000030845",
+  "website_url": "",
+  "categories": [
+   "nail_technician"
+  ],
+  "source_external_id": "dora:REG:2000030845"
+ },
+ {
+  "id": 43,
+  "zip_code": "80917",
+  "license_number": "REG.2000030159",
+  "website_url": "https://tnnailsco.com/",
+  "categories": [
+   "nail_technician"
+  ],
+  "source_external_id": "dora:REG:2000030159"
+ },
+ {
+  "id": 32,
+  "zip_code": "80525",
+  "license_number": "REG.2000032134",
+  "website_url": "",
+  "categories": [
+   "barber"
+  ],
+  "source_external_id": "dora:REG:2000032134"
+ },
+ {
+  "id": 67,
+  "zip_code": "80909",
+  "license_number": "REG.2000036684",
+  "website_url": "",
+  "categories": [
+   "barber"
+  ],
+  "source_external_id": "dora:REG:2000036684"
+ },
+ {
+  "id": 61,
+  "zip_code": "80228",
+  "license_number": "REG.2000029013",
+  "website_url": "",
+  "categories": [
+   "nail_technician"
+  ],
+  "source_external_id": "dora:REG:2000029013"
+ },
+ {
+  "id": 44,
+  "zip_code": "80233",
+  "license_number": "REG.2000035778",
+  "website_url": "",
+  "categories": [
+   "waxing_specialist"
+  ],
+  "source_external_id": "dora:REG:2000035778"
+ },
+ {
+  "id": 23,
+  "zip_code": "80204",
+  "license_number": "REG.2000034884",
+  "website_url": "",
+  "categories": [
+   "stylist"
+  ],
+  "source_external_id": "dora:REG:2000034884"
+ },
+ {
+  "id": 71,
+  "zip_code": "80002",
+  "license_number": "REG.2000031049",
+  "website_url": "",
+  "categories": [
+   "barber"
+  ],
+  "source_external_id": "dora:REG:2000031049"
+ },
+ {
+  "id": 24,
+  "zip_code": "80204",
+  "license_number": "REG.2000034251",
+  "website_url": "",
+  "categories": [
+   "stylist"
+  ],
+  "source_external_id": "dora:REG:2000034251"
+ },
+ {
+  "id": 4,
+  "zip_code": "80205",
+  "license_number": "REG.2000030865",
+  "website_url": "",
+  "categories": [
+   "stylist"
+  ],
+  "source_external_id": "dora:REG:2000030865"
+ },
+ {
+  "id": 34,
+  "zip_code": "80206",
+  "license_number": "REG.2000031538",
+  "website_url": "",
+  "categories": [
+   "stylist"
+  ],
+  "source_external_id": "dora:REG:2000031538"
+ },
+ {
+  "id": 82,
+  "zip_code": "80002",
+  "license_number": "REG.2000035254",
+  "website_url": "",
+  "categories": [
+   "esthetician"
+  ],
+  "source_external_id": "dora:REG:2000035254"
+ },
+ {
+  "id": 48,
+  "zip_code": "80920",
+  "license_number": "REG.3448",
+  "website_url": "https://www.floydsbarbershop.com/locations/colorado/colorado-springs/north-gate",
+  "categories": [
+   "barber"
+  ],
+  "source_external_id": "dora:REG:3448"
+ },
+ {
+  "id": 45,
+  "zip_code": "80203",
+  "license_number": "REG.2000029391",
+  "website_url": "",
+  "categories": [
+   "waxing_specialist"
+  ],
+  "source_external_id": "dora:REG:2000029391"
+ },
+ {
+  "id": 21,
+  "zip_code": "80202",
+  "license_number": "REG.2000035318",
+  "website_url": "",
+  "categories": [
+   "barber"
+  ],
+  "source_external_id": "dora:REG:2000035318"
+ },
+ {
+  "id": 3,
+  "zip_code": "80211",
+  "license_number": "REG.2000029787",
+  "website_url": "",
+  "categories": [
+   "stylist"
+  ],
+  "source_external_id": "dora:REG:2000029787"
+ },
+ {
+  "id": 22,
+  "zip_code": "80203",
+  "license_number": "REG.2000035255",
+  "website_url": "",
+  "categories": [
+   "stylist"
+  ],
+  "source_external_id": "dora:REG:2000035255"
+ },
+ {
+  "id": 57,
+  "zip_code": "80210",
+  "license_number": null,
+  "website_url": "https://www.floydsbarbershop.com/locations/colorado/denver/denver-university",
+  "categories": [
+   "barber"
+  ],
+  "source_external_id": "osm:node/631845186"
+ },
+ {
+  "id": 57,
+  "zip_code": "80203",
+  "license_number": null,
+  "website_url": "https://www.floydsbarbershop.com/locations/colorado/denver/broadway",
+  "categories": [
+   "barber"
+  ],
+  "source_external_id": "osm:node/3401612827"
+ },
+ {
+  "id": 48,
+  "zip_code": "80921",
+  "license_number": null,
+  "website_url": "https://www.floydsbarbershop.com/locations/colorado/colorado-springs/north-gate",
+  "categories": [
+   "barber"
+  ],
+  "source_external_id": "osm:node/5859861007"
+ },
+ {
+  "id": 17,
+  "zip_code": "80216",
+  "license_number": null,
+  "website_url": "https://www.barberx.com/",
+  "categories": [
+   "barber"
+  ],
+  "source_external_id": "osm:node/5894547379"
+ },
+ {
+  "id": 37,
+  "zip_code": "80524",
+  "license_number": null,
+  "website_url": "https://screaminpeach.com/",
+  "categories": [
+   "waxing_specialist"
+  ],
+  "source_external_id": "osm:node/6495370318"
+ },
+ {
+  "id": 65,
+  "zip_code": "80210",
+  "license_number": null,
+  "website_url": "https://salonsbyjc.com/location/colorado-denver-observatory-park/",
+  "categories": [
+   "stylist"
+  ],
+  "source_external_id": "osm:node/7266892180"
+ },
+ {
+  "id": 39,
+  "zip_code": "80920",
+  "license_number": null,
+  "website_url": "https://www.hairdressingco.com/briargate/",
+  "categories": [
+   "stylist"
+  ],
+  "source_external_id": "osm:node/7906545239"
+ },
+ {
+  "id": 43,
+  "zip_code": "80917",
+  "license_number": null,
+  "website_url": "https://tnnailsco.com/",
+  "categories": [
+   "nail_technician"
+  ],
+  "source_external_id": "osm:node/12602396290"
+ },
+ {
+  "id": 37,
+  "zip_code": "80525",
+  "license_number": null,
+  "website_url": "https://screaminpeach.com/south-fort-collins",
+  "categories": [
+   "waxing_specialist"
+  ],
+  "source_external_id": "osm:node/13616029999"
+ },
+ {
+  "id": 14,
+  "zip_code": "80205",
+  "license_number": null,
+  "website_url": "https://www.franksdenver.com/",
+  "categories": [
+   "stylist"
+  ],
+  "source_external_id": "osm:node/13765562962"
+ },
+ {
+  "id": 1,
+  "zip_code": "80204",
+  "license_number": null,
+  "website_url": "https://www.studiosalondenver.com/",
+  "categories": [
+   "stylist"
+  ],
+  "source_external_id": "osm:node/13773020508"
+ },
+ {
+  "id": 21,
+  "zip_code": "80202",
+  "license_number": null,
+  "website_url": "https://speakeasybarberlounge.com/",
+  "categories": [
+   "barber"
+  ],
+  "source_external_id": "osm:node/13806737432"
+ }
+]
