@@ -1,0 +1,45 @@
+{
+  "source": "Salons by JC Observatory Park",
+  "source_pages": [
+    "https://salonsbyjc.com/salons/united-states/colorado/denver/colorado-denver-observatory-park/",
+    "https://salonsbyjc.com/salons/united-states/colorado/denver/colorado-denver-observatory-park/page/2/",
+    "https://salonsbyjc.com/salons/united-states/colorado/denver/colorado-denver-observatory-park/page/3/"
+  ],
+  "location": "2130 S University Blvd, Denver, CO 80210",
+  "source_listing_total": 23,
+  "production_imported": 19,
+  "ids": "17033-17051",
+  "booking_links": 5,
+  "blank_booking_links": 14,
+  "all_unclaimed": true,
+  "all_category_mapped": true,
+  "held": [
+    {
+      "name": "Jessica Brever",
+      "reason": "existing GoBookr profile #330"
+    },
+    {
+      "name": "Allie Davis",
+      "reason": "existing profile #1308 and workplace discrepancy"
+    },
+    {
+      "name": "Bobby and Jessica / Scissor Cult",
+      "reason": "shared business listing, two identities not individually named"
+    },
+    {
+      "name": "Tiarra L Stafford",
+      "reason": "individual website currently refers to a different Denver location, requires location verification"
+    }
+  ],
+  "phones_and_emails": "not copied; individual public business phone and email not confirmed for all profiles",
+  "current_metro_inventory": 1326,
+  "goal": 5000,
+  "scope": "24 Denver-area cities",
+  "notes": [
+    "Imported as contact-first listings; blank booking URLs are empty strings, not false booking destination URLs.",
+    "Individual roster and matching specialty seen on official Salons by JC three-page directory.",
+    "Five external booking destinations were shown on the official listings and had identifiable scheduling pages; live redirect completion not tested end-to-end.",
+    "Production verification confirmed 19 unclaimed profiles and 19 category associations.",
+    "Source indexed pages may be stale; future weekly monitoring should signal change and not automatically delete profiles."
+  ]
+}
