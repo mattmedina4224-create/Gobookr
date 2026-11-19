@@ -2,14 +2,14 @@
  "state": "AZ",
  "state_name": "Arizona",
  "wave": 1,
- "created_at": "2026-11-19T22:46:04.498Z",
+ "created_at": "2026-11-19T23:32:03.624Z",
  "staging_only": true,
  "sources": [
   {
    "name": "OpenStreetMap (Overpass)",
-   "url": "https://overpass.private.coffee/api/interpreter",
+   "url": "https://overpass-api.de/api/interpreter",
    "status": "processed",
-   "records": 2629,
+   "records": 2736,
    "parts_ok": 4,
    "parts_total": 4
   },
@@ -17,7 +17,7 @@
    "name": "U.S. Census Geocoder (place containing map point)",
    "url": "https://geocoding.geo.census.gov/",
    "status": "processed",
-   "records": 1072
+   "records": 1104
   }
  ],
  "license_records_scanned": 0,
@@ -28,26 +28,26 @@
  "license_type_counts": [],
  "license_type_lookup": [],
  "census_city_lookup": {
-  "attempted": 1086,
-  "filled": 1072,
+  "attempted": 1118,
+  "filled": 1104,
   "failed": 0
  },
- "mapped_beauty_places": 2629,
- "overpass_endpoint": "https://overpass.private.coffee/api/interpreter",
- "total_candidates": 2456,
- "with_websites": 286,
+ "mapped_beauty_places": 2736,
+ "overpass_endpoint": "https://overpass-api.de/api/interpreter",
+ "total_candidates": 2560,
+ "with_websites": 310,
  "category_counts": {
-  "hair": 875,
-  "barber": 279,
-  "nails": 564,
-  "salon_suites": 23,
+  "hair": 930,
+  "barber": 307,
+  "nails": 565,
+  "salon_suites": 25,
   "waxing": 23,
-  "lashes": 26,
-  "brows": 22,
+  "lashes": 27,
+  "brows": 25,
   "skincare": 60,
   "spray_tanning": 35,
   "massage": 359,
-  "makeup": 51,
+  "makeup": 65,
   "tattoo": 137,
   "permanent_makeup": 2
  },

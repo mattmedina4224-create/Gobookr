@@ -1,8 +1,8 @@
 {
  "state": "AZ",
  "census_places": 464,
- "places_covered": 33,
- "place_coverage_pct": 7.1,
+ "places_covered": 35,
+ "place_coverage_pct": 7.5,
  "census_counties": 15,
  "counties_covered": 11,
  "counties_uncovered": [
@@ -20,38 +20,38 @@
  "top_covered_places": [
   {
    "name": "Phoenix",
-   "shops": 48
+   "shops": 52
   },
   {
    "name": "Tucson",
-   "shops": 26
+   "shops": 37
   },
   {
    "name": "Scottsdale",
-   "shops": 19
+   "shops": 21
   },
   {
    "name": "Mesa",
    "shops": 15
   },
   {
-   "name": "Surprise",
-   "shops": 11
-  },
-  {
    "name": "Chandler",
    "shops": 10
   },
   {
-   "name": "Gilbert",
-   "shops": 8
+   "name": "Surprise",
+   "shops": 10
   },
   {
    "name": "Tempe",
+   "shops": 9
+  },
+  {
+   "name": "Gilbert",
    "shops": 7
   },
   {
-   "name": "Oro Valley",
+   "name": "Prescott",
    "shops": 7
   },
   {
@@ -59,28 +59,32 @@
    "shops": 6
   },
   {
-   "name": "Prescott",
+   "name": "Oro Valley",
    "shops": 6
-  },
-  {
-   "name": "Peoria",
-   "shops": 6
-  },
-  {
-   "name": "Queen Creek",
-   "shops": 5
   },
   {
    "name": "Apache Junction",
    "shops": 5
   },
   {
+   "name": "Peoria",
+   "shops": 5
+  },
+  {
    "name": "Flagstaff",
+   "shops": 5
+  },
+  {
+   "name": "Queen Creek",
    "shops": 4
   },
   {
    "name": "Yuma",
    "shops": 4
+  },
+  {
+   "name": "Anthem",
+   "shops": 3
   },
   {
    "name": "Sedona",
@@ -139,24 +143,23 @@
    "shops": 1
   },
   {
+   "name": "San Tan Valley",
+   "shops": 1
+  },
+  {
    "name": "Litchfield Park",
+   "shops": 1
+  },
+  {
+   "name": "Sahuarita",
    "shops": 1
   },
   {
    "name": "Cottonwood",
    "shops": 1
-  },
-  {
-   "name": "Anthem",
-   "shops": 1
   }
  ],
  "uncovered_places_with_held_candidates": [
-  {
-   "name": "San Tan Valley",
-   "type": "CENSUS DESIGNATED PLACE",
-   "held_candidates": 15
-  },
   {
    "name": "Carefree",
    "type": "INCORPORATED PLACE",
@@ -168,13 +171,13 @@
    "held_candidates": 10
   },
   {
-   "name": "Fountain Hills",
-   "type": "INCORPORATED PLACE",
-   "held_candidates": 9
-  },
-  {
    "name": "Casas Adobes",
    "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 8
+  },
+  {
+   "name": "Fountain Hills",
+   "type": "INCORPORATED PLACE",
    "held_candidates": 8
   },
   {
@@ -203,6 +206,11 @@
    "held_candidates": 4
   },
   {
+   "name": "Kingman",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
    "name": "Show Low",
    "type": "INCORPORATED PLACE",
    "held_candidates": 4
@@ -216,11 +224,6 @@
    "name": "Wickenburg",
    "type": "INCORPORATED PLACE",
    "held_candidates": 4
-  },
-  {
-   "name": "Kingman",
-   "type": "INCORPORATED PLACE",
-   "held_candidates": 3
   },
   {
    "name": "Sun City West",
@@ -243,11 +246,6 @@
    "held_candidates": 2
   },
   {
-   "name": "Sahuarita",
-   "type": "INCORPORATED PLACE",
-   "held_candidates": 2
-  },
-  {
    "name": "St. Johns",
    "type": "INCORPORATED PLACE",
    "held_candidates": 2
@@ -261,11 +259,6 @@
    "name": "Village of Oak Creek (Big Park)",
    "type": "CENSUS DESIGNATED PLACE",
    "held_candidates": 2
-  },
-  {
-   "name": "Benson",
-   "type": "INCORPORATED PLACE",
-   "held_candidates": 1
   },
   {
    "name": "Chino Valley",
@@ -293,7 +286,17 @@
    "held_candidates": 1
   },
   {
+   "name": "Heber-Overgaard",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
    "name": "Jerome",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Maricopa",
    "type": "INCORPORATED PLACE",
    "held_candidates": 1
   },
@@ -343,6 +346,6 @@
    "held_candidates": 1
   }
  ],
- "uncovered_places_without_candidates": 393,
+ "uncovered_places_without_candidates": 392,
  "source": "U.S. Census Bureau 2020 place-by-county and county code files"
 }
