@@ -1,13 +1,14 @@
 {
  "state": "UT",
  "census_places": 332,
- "places_covered": 44,
- "place_coverage_pct": 13.3,
+ "places_covered": 36,
+ "place_coverage_pct": 10.8,
  "census_counties": 29,
- "counties_covered": 13,
+ "counties_covered": 10,
  "counties_uncovered": [
   "Beaver County",
   "Box Elder County",
+  "Cache County",
   "Carbon County",
   "Daggett County",
   "Duchesne County",
@@ -18,92 +19,54 @@
   "Millard County",
   "Morgan County",
   "Piute County",
+  "Rich County",
   "San Juan County",
   "Sanpete County",
   "Sevier County",
+  "Summit County",
   "Wayne County"
  ],
  "communities_outside_census_places": [
   {
    "city": "Saratoga Spring",
-   "shops": 6
-  },
-  {
-   "city": "Kearns",
-   "shops": 2
+   "shops": 3
   }
  ],
  "top_covered_places": [
   {
    "name": "Salt Lake City",
-   "shops": 54
+   "shops": 22
   },
   {
    "name": "American Fork",
-   "shops": 26
+   "shops": 16
   },
   {
    "name": "Pleasant Grove",
-   "shops": 15
-  },
-  {
-   "name": "St. George",
-   "shops": 14
-  },
-  {
-   "name": "Lehi",
-   "shops": 9
-  },
-  {
-   "name": "Orem",
-   "shops": 9
-  },
-  {
-   "name": "West Valley City",
-   "shops": 9
-  },
-  {
-   "name": "Murray",
-   "shops": 8
-  },
-  {
-   "name": "Bountiful",
    "shops": 8
   },
   {
    "name": "Draper",
-   "shops": 7
+   "shops": 6
+  },
+  {
+   "name": "Murray",
+   "shops": 5
+  },
+  {
+   "name": "Lehi",
+   "shops": 5
+  },
+  {
+   "name": "Bountiful",
+   "shops": 5
   },
   {
    "name": "Saratoga Springs",
-   "shops": 7
-  },
-  {
-   "name": "Taylorsville",
-   "shops": 6
-  },
-  {
-   "name": "West Jordan",
-   "shops": 6
-  },
-  {
-   "name": "Layton",
    "shops": 5
   },
   {
-   "name": "Midvale",
-   "shops": 5
-  },
-  {
-   "name": "Sandy",
-   "shops": 5
-  },
-  {
-   "name": "Logan",
-   "shops": 5
-  },
-  {
-   "name": "Centerville",
+   "name": "St. George",
    "shops": 4
   },
   {
@@ -111,19 +74,11 @@
    "shops": 4
   },
   {
-   "name": "Riverton",
-   "shops": 4
-  },
-  {
-   "name": "Herriman",
+   "name": "Layton",
    "shops": 3
   },
   {
-   "name": "Highland",
-   "shops": 3
-  },
-  {
-   "name": "Ogden",
+   "name": "Midvale",
    "shops": 3
   },
   {
@@ -131,48 +86,40 @@
    "shops": 3
   },
   {
-   "name": "Provo",
+   "name": "Riverton",
+   "shops": 3
+  },
+  {
+   "name": "West Jordan",
+   "shops": 3
+  },
+  {
+   "name": "West Valley City",
+   "shops": 3
+  },
+  {
+   "name": "Ogden",
    "shops": 2
   },
   {
-   "name": "Woods Cross",
+   "name": "Centerville",
    "shops": 2
   },
   {
-   "name": "Stansbury Park",
+   "name": "Herriman",
    "shops": 2
   },
   {
-   "name": "Lindon",
+   "name": "Highland",
    "shops": 2
   },
   {
-   "name": "Ivins",
+   "name": "Sandy",
    "shops": 2
   },
   {
-   "name": "Millcreek",
+   "name": "Orem",
    "shops": 2
-  },
-  {
-   "name": "Heber",
-   "shops": 1
-  },
-  {
-   "name": "Riverdale",
-   "shops": 1
-  },
-  {
-   "name": "Tooele",
-   "shops": 1
-  },
-  {
-   "name": "Kamas",
-   "shops": 1
-  },
-  {
-   "name": "Garden City",
-   "shops": 1
   },
   {
    "name": "Vernal",
@@ -187,127 +134,153 @@
    "shops": 1
   },
   {
+   "name": "Woods Cross",
+   "shops": 1
+  },
+  {
+   "name": "Stansbury Park",
+   "shops": 1
+  },
+  {
    "name": "Cottonwood Heights",
    "shops": 1
   },
   {
-   "name": "North Logan",
+   "name": "Millcreek",
+   "shops": 1
+  },
+  {
+   "name": "Ivins",
+   "shops": 1
+  },
+  {
+   "name": "Farmington",
+   "shops": 1
+  },
+  {
+   "name": "Tooele",
+   "shops": 1
+  },
+  {
+   "name": "Provo",
+   "shops": 1
+  },
+  {
+   "name": "Eden",
+   "shops": 1
+  },
+  {
+   "name": "Cedar City",
+   "shops": 1
+  },
+  {
+   "name": "Moab",
    "shops": 1
   }
  ],
  "uncovered_places_with_held_candidates": [
   {
-   "name": "Roy",
+   "name": "Taylorsville",
    "type": "INCORPORATED PLACE",
-   "held_candidates": 17
+   "held_candidates": 16
+  },
+  {
+   "name": "Logan",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 13
   },
   {
    "name": "Holladay",
    "type": "INCORPORATED PLACE",
-   "held_candidates": 15
+   "held_candidates": 12
   },
   {
-   "name": "South Salt Lake",
-   "type": "INCORPORATED PLACE",
-   "held_candidates": 14
-  },
-  {
-   "name": "Park City",
+   "name": "Roy",
    "type": "INCORPORATED PLACE",
    "held_candidates": 11
   },
   {
-   "name": "Washington",
+   "name": "Park City",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 10
+  },
+  {
+   "name": "South Salt Lake",
    "type": "INCORPORATED PLACE",
    "held_candidates": 9
   },
   {
+   "name": "Heber",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Washington",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Lindon",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
    "name": "Price",
    "type": "INCORPORATED PLACE",
-   "held_candidates": 7
-  },
-  {
-   "name": "South Ogden",
-   "type": "INCORPORATED PLACE",
-   "held_candidates": 6
-  },
-  {
-   "name": "Payson",
-   "type": "INCORPORATED PLACE",
-   "held_candidates": 5
-  },
-  {
-   "name": "West Haven",
-   "type": "INCORPORATED PLACE",
-   "held_candidates": 5
+   "held_candidates": 4
   },
   {
    "name": "Richfield",
    "type": "INCORPORATED PLACE",
-   "held_candidates": 4
+   "held_candidates": 3
   },
   {
-   "name": "Syracuse",
+   "name": "South Ogden",
    "type": "INCORPORATED PLACE",
-   "held_candidates": 4
+   "held_candidates": 3
   },
   {
    "name": "Clinton",
    "type": "INCORPORATED PLACE",
-   "held_candidates": 3
+   "held_candidates": 2
+  },
+  {
+   "name": "Kamas",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
   },
   {
    "name": "Kanab",
    "type": "INCORPORATED PLACE",
-   "held_candidates": 3
+   "held_candidates": 2
   },
   {
-   "name": "North Ogden",
+   "name": "North Logan",
    "type": "INCORPORATED PLACE",
-   "held_candidates": 3
+   "held_candidates": 2
   },
   {
    "name": "Perry",
    "type": "INCORPORATED PLACE",
-   "held_candidates": 3
+   "held_candidates": 2
   },
   {
-   "name": "Salem",
+   "name": "Riverdale",
    "type": "INCORPORATED PLACE",
-   "held_candidates": 3
+   "held_candidates": 2
   },
   {
-   "name": "Tremonton",
+   "name": "Syracuse",
    "type": "INCORPORATED PLACE",
-   "held_candidates": 3
+   "held_candidates": 2
   },
   {
-   "name": "Brigham City",
+   "name": "West Haven",
    "type": "INCORPORATED PLACE",
    "held_candidates": 2
   },
   {
    "name": "Eagle Mountain",
-   "type": "INCORPORATED PLACE",
-   "held_candidates": 2
-  },
-  {
-   "name": "Milford",
-   "type": "INCORPORATED PLACE",
-   "held_candidates": 2
-  },
-  {
-   "name": "Smithfield",
-   "type": "INCORPORATED PLACE",
-   "held_candidates": 2
-  },
-  {
-   "name": "Springville",
-   "type": "INCORPORATED PLACE",
-   "held_candidates": 2
-  },
-  {
-   "name": "Cedar Hills",
    "type": "INCORPORATED PLACE",
    "held_candidates": 1
   },
@@ -317,27 +290,12 @@
    "held_candidates": 1
   },
   {
-   "name": "Kaysville",
+   "name": "Milford",
    "type": "INCORPORATED PLACE",
    "held_candidates": 1
   },
   {
-   "name": "Manti",
-   "type": "INCORPORATED PLACE",
-   "held_candidates": 1
-  },
-  {
-   "name": "Morgan",
-   "type": "INCORPORATED PLACE",
-   "held_candidates": 1
-  },
-  {
-   "name": "Mount Pleasant",
-   "type": "INCORPORATED PLACE",
-   "held_candidates": 1
-  },
-  {
-   "name": "Nephi",
+   "name": "North Ogden",
    "type": "INCORPORATED PLACE",
    "held_candidates": 1
   },
@@ -347,7 +305,7 @@
    "held_candidates": 1
   },
   {
-   "name": "Parowan",
+   "name": "Payson",
    "type": "INCORPORATED PLACE",
    "held_candidates": 1
   },
@@ -357,7 +315,17 @@
    "held_candidates": 1
   },
   {
+   "name": "Salem",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
    "name": "Santa Clara",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Smithfield",
    "type": "INCORPORATED PLACE",
    "held_candidates": 1
   },
@@ -372,6 +340,6 @@
    "held_candidates": 1
   }
  ],
- "uncovered_places_without_candidates": 253,
+ "uncovered_places_without_candidates": 264,
  "source": "U.S. Census Bureau 2020 place-by-county and county code files"
 }
