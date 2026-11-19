@@ -22,16 +22,17 @@ const titleCase = (x) => String(x || '').toLowerCase().replace(/\b([a-z])/g, (m)
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 async function json(url, options = {}) {
-  for (let attempt = 0; attempt < 4; attempt++) {
+  const attempts = options.attempts || 4;
+  for (let attempt = 0; attempt < attempts; attempt++) {
     try {
       const r = await fetch(url, { ...options, signal: AbortSignal.timeout(options.timeout || 120000),
         headers: { Accept: 'application/json', 'User-Agent': 'GoBookr-Public-Shop-Audit/1.1 (+https://gobookr.com)', ...(options.headers || {}) } });
       if (!r.ok) {
-        if ([429, 502, 503, 504].includes(r.status) && attempt < 3) { await sleep(5000 * (attempt + 1)); continue; }
+        if ([429, 502, 503, 504].includes(r.status) && attempt < attempts - 1) { await sleep(5000 * (attempt + 1)); continue; }
         throw Error('HTTP ' + r.status + ' ' + url.slice(0, 200));
       }
       return await r.json();
-    } catch (e) { if (attempt === 3) throw e; await sleep(5000 * (attempt + 1)); }
+    } catch (e) { if (attempt === attempts - 1) throw e; await sleep(5000 * (attempt + 1)); }
   }
 }
 
@@ -132,20 +133,36 @@ async function licenses(st, src) {
 }
 
 // ---- OpenStreetMap ---------------------------------------------------------------------------------------
-const overpassQuery = (st) => '[out:json][timeout:600][maxsize:1073741824];area["ISO3166-2"="US-' + st.code + '"]["admin_level"="4"]->.a;(' +
-  'nwr["shop"~"^(hairdresser|beauty|tattoo|massage|nails|barber)$"](area.a);' +
-  'nwr["beauty"~"^(nails|tanning|eyelash|eyebrow|waxing|permanent_makeup|hair_removal|skin_care|threading)$"](area.a);' +
-  'nwr["craft"="hairdresser"](area.a);nwr["healthcare"="massage_therapist"](area.a););out center tags;';
+// Four lighter queries per state instead of one: statewide union queries time out at the public gateways (504).
+const OSM_PARTS = [
+  'nwr["shop"="hairdresser"](area.a);nwr["craft"="hairdresser"](area.a);',
+  'nwr["shop"~"^(beauty|nails|barber|cosmetics)$"](area.a);',
+  'nwr["shop"~"^(tattoo|massage)$"](area.a);nwr["healthcare"="massage_therapist"](area.a);',
+  'nwr["beauty"~"^(nails|tanning|eyelash|eyebrow|waxing|permanent_makeup|hair_removal|skin_care|threading)$"](area.a);',
+];
+const overpassQuery = (st, part = OSM_PARTS.join('')) => '[out:json][timeout:240];area["ISO3166-2"="US-' + st.code + '"]["admin_level"="4"]->.a;(' + part + ');out center tags;';
 
 async function osm(st) {
   const endpoints = ['https://overpass-api.de/api/interpreter', 'https://overpass.private.coffee/api/interpreter', 'https://overpass.kumi.systems/api/interpreter'];
-  const errors = [];
-  for (const ep of endpoints) {
-    try {
-      const data = await json(ep, { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams({ data: overpassQuery(st) }).toString(), timeout: 660000 });
-      if (data.remark && /runtime error|timed out/i.test(data.remark)) throw Error('Overpass: ' + data.remark);
-      const rows = [];
-      for (const v of data.elements || []) {
+  const errors = []; const elements = new Map(); let okParts = 0; let endpointUsed = null;
+  for (const part of OSM_PARTS) {
+    let done = false;
+    for (let round = 0; round < 2 && !done; round++) {
+      for (const ep of endpoints) {
+        try {
+          const data = await json(ep, { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams({ data: overpassQuery(st, part) }).toString(), timeout: 300000, attempts: 1 });
+          if (data.remark && /runtime error|timed out|out of memory/i.test(data.remark)) throw Error('Overpass: ' + data.remark);
+          for (const v of data.elements || []) elements.set(v.type + '/' + v.id, v);
+          okParts++; endpointUsed = endpointUsed || ep; done = true; break;
+        } catch (e) { errors.push(ep + ' [' + part.slice(0, 40) + ']: ' + String(e.message || e).slice(0, 160)); }
+      }
+      if (!done) await sleep(30000);
+    }
+    await sleep(3000);
+  }
+  if (okParts === OSM_PARTS.length) errors.length = 0; // every part eventually succeeded; earlier retries are not errors
+  const rows = [];
+      for (const v of elements.values()) {
         const t = v.tags || {}; const name = t.name || t['name:en'] || t.brand; if (!name) continue;
         if (t.disused || t['disused:shop'] || t.opening_hours === 'closed') continue;
         if (t['addr:state'] && !new RegExp('^(' + st.code + '|' + st.name + ')$', 'i').test(t['addr:state'])) continue;
@@ -160,10 +177,7 @@ async function osm(st) {
           latitude: loc.lat || null, longitude: loc.lon || null,
         });
       }
-      return { rows, endpoint: ep, errors };
-    } catch (e) { errors.push(ep + ': ' + String(e.message || e)); }
-  }
-  return { rows: [], endpoint: null, errors };
+      return { rows, endpoint: endpointUsed, errors, parts_ok: okParts, parts_total: OSM_PARTS.length };
 }
 
 // Licensed rows are the base; a mapped place with the same name in the same city/ZIP/street lends its website,
@@ -216,7 +230,8 @@ async function main() {
   }
   if (!flag('skip-osm')) {
     map = await osm(st);
-    sources.push({ name: 'OpenStreetMap (Overpass)', url: map.endpoint, status: map.rows.length || !map.errors.length ? 'processed' : 'failed', records: map.rows.length, error: map.errors.join(' | ') || undefined });
+    const osmStatus = map.parts_ok === map.parts_total ? 'processed' : map.parts_ok ? 'partial' : 'failed';
+    sources.push({ name: 'OpenStreetMap (Overpass)', url: map.endpoint, status: osmStatus, records: map.rows.length, parts_ok: map.parts_ok, parts_total: map.parts_total, error: map.errors.join(' | ').slice(0, 2000) || undefined });
     errors.push(...map.errors.map((e) => 'osm: ' + e));
   }
   if (!lic.rows.length && !map.rows.length) throw Error(st.code + ': every source failed: ' + errors.join('; '));
