@@ -1042,6 +1042,32 @@
   "duplicate_of": "dora:REG:2000034964"
  },
  {
+  "name": "Lincoln St. Barbers",
+  "city": "Colorado Springs",
+  "state": "CO",
+  "street_address": "2727 North Cascade Avenue",
+  "zip_code": "80907",
+  "county": "",
+  "categories": [
+   "barber"
+  ],
+  "website_url": "https://www.lincolnstbarbers.com/",
+  "phone": "(719) 632-0725",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/node/6044611580",
+  "source_external_id": "osm:node/6044611580",
+  "license_number": null,
+  "latitude": 38.8715285,
+  "longitude": -104.8220826,
+  "operational_status": "verified",
+  "checked_at": "2026-11-19",
+  "raw_name": "Lincoln St. Barbers",
+  "website_candidate": "https://www.lincolnstbarbers.com/",
+  "website_source_url": "",
+  "reason": "duplicate_candidate",
+  "duplicate_of": "dora:REG:2000030237"
+ },
+ {
   "name": "Melissa's Barbershop",
   "city": "Fort Collins",
   "state": "CO",
@@ -1432,6 +1458,32 @@
   "duplicate_of": "dora:REG:1901"
  },
  {
+  "name": "Cinco Brothers Barbershop",
+  "city": "Greeley",
+  "state": "CO",
+  "street_address": "2123 9th Street",
+  "zip_code": "80631",
+  "county": "",
+  "categories": [
+   "barber"
+  ],
+  "website_url": "https://cincobrothers.com/",
+  "phone": "",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/way/549624498",
+  "source_external_id": "osm:way/549624498",
+  "license_number": null,
+  "latitude": 40.4244137,
+  "longitude": -104.712305,
+  "operational_status": "verified",
+  "checked_at": "2026-11-19",
+  "raw_name": "Cinco Brothers Barbershop",
+  "website_candidate": "https://cincobrothers.com/",
+  "website_source_url": "",
+  "reason": "duplicate_candidate",
+  "duplicate_of": "dora:REG:4599"
+ },
+ {
   "name": "La Bella Vita Spa & Salon",
   "city": "Grand Junction",
   "state": "CO",
@@ -1508,6 +1560,32 @@
   "website_source_url": "",
   "reason": "duplicate_candidate",
   "duplicate_of": "dora:REG:4279"
+ },
+ {
+  "name": "Luxurious Nails & Spa",
+  "city": "Golden",
+  "state": "CO",
+  "street_address": "17121 South Golden Road",
+  "zip_code": "80401",
+  "county": "",
+  "categories": [
+   "nail_technician"
+  ],
+  "website_url": "https://luxuriousnailsgolden.com/",
+  "phone": "(303) 279-4157",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/node/4144799791",
+  "source_external_id": "osm:node/4144799791",
+  "license_number": null,
+  "latitude": 39.7385893,
+  "longitude": -105.1924602,
+  "operational_status": "verified",
+  "checked_at": "2026-11-19",
+  "raw_name": "Luxurious Nails & Spa",
+  "website_candidate": "https://luxuriousnailsgolden.com/",
+  "website_source_url": "",
+  "reason": "duplicate_candidate",
+  "duplicate_of": "dora:REG:3981"
  },
  {
   "name": "LV Spa & Nails",
@@ -1718,6 +1796,32 @@
   "duplicate_of": "osm:node/3200322948"
  },
  {
+  "name": "Beauti Nails & Spa",
+  "city": "Lakewood",
+  "state": "CO",
+  "street_address": "12087 West Alameda Parkway",
+  "zip_code": "80228",
+  "county": "",
+  "categories": [
+   "nail_technician"
+  ],
+  "website_url": "https://beautinailsspalakewood.com/",
+  "phone": "(303) 989-4131",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/node/10794410399",
+  "source_external_id": "osm:node/10794410399",
+  "license_number": null,
+  "latitude": 39.7078323,
+  "longitude": -105.1358665,
+  "operational_status": "verified",
+  "checked_at": "2026-11-19",
+  "raw_name": "Beauti Nails & Spa",
+  "website_candidate": "https://beautinailsspalakewood.com/",
+  "website_source_url": "",
+  "reason": "duplicate_candidate",
+  "duplicate_of": "dora:REG:3026"
+ },
+ {
   "name": "Ulta Beauty",
   "city": "Aurora",
   "state": "CO",
@@ -1742,6 +1846,32 @@
   "website_source_url": "",
   "reason": "duplicate_candidate",
   "duplicate_of": "osm:node/10973804629"
+ },
+ {
+  "name": "G Nail Lounge",
+  "city": "Greeley",
+  "state": "CO",
+  "street_address": "4111 Centerplace Drive",
+  "zip_code": "80634",
+  "county": "",
+  "categories": [
+   "nail_technician"
+  ],
+  "website_url": "https://www.gnaillounge.com/",
+  "phone": "(970) 673-8365",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/node/12097683238",
+  "source_external_id": "osm:node/12097683238",
+  "license_number": null,
+  "latitude": 40.3956668,
+  "longitude": -104.7452323,
+  "operational_status": "verified",
+  "checked_at": "2026-11-19",
+  "raw_name": "G Nail Lounge",
+  "website_candidate": "https://www.gnaillounge.com/",
+  "website_source_url": "",
+  "reason": "duplicate_candidate",
+  "duplicate_of": "dora:REG:2000034046"
  },
  {
   "name": "Ridgeline Nails",
@@ -1822,30 +1952,30 @@
   "duplicate_of": "dora:REG:2000036555"
  },
  {
-  "name": "Golden Nails & Beauty",
-  "city": "Lakewood",
+  "name": "Original Skin MedSpa",
+  "city": "Broomfield",
   "state": "CO",
-  "street_address": "7265 West Alaska Drive",
-  "zip_code": "80226",
+  "street_address": "6821 West 120th Avenue",
+  "zip_code": "80020",
   "county": "",
   "categories": [
-   "nail_technician"
+   "esthetician"
   ],
-  "website_url": "https://goldennailsandbeauty.com/",
-  "phone": "(303) 922-9999",
+  "website_url": "https://originalskinclinic.com/",
+  "phone": "(303) 438-8555",
   "source_name": "OpenStreetMap contributors",
-  "source_url": "https://www.openstreetmap.org/node/14372476204",
-  "source_external_id": "osm:node/14372476204",
+  "source_url": "https://www.openstreetmap.org/node/14131541930",
+  "source_external_id": "osm:node/14131541930",
   "license_number": null,
-  "latitude": 39.7093664,
-  "longitude": -105.0777946,
+  "latitude": 39.9153054,
+  "longitude": -105.0727065,
   "operational_status": "verified",
   "checked_at": "2026-11-19",
-  "raw_name": "Golden Nails & Beauty",
-  "website_candidate": "https://goldennailsandbeauty.com/",
+  "raw_name": "Original Skin MedSpa",
+  "website_candidate": "https://originalskinclinic.com/",
   "website_source_url": "",
   "reason": "duplicate_candidate",
-  "duplicate_of": "dora:REG:2000032907"
+  "duplicate_of": "dora:REG:3285"
  },
  {
   "name": "Beauty Bar",

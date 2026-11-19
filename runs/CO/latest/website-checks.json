@@ -1,526 +1,537 @@
 {
- "https://www.salonjoa.com/": {
-  "status": "error",
-  "error": "UND_ERR_SOCKET",
-  "ms": 235
- },
  "https://www.paisleysalonauroraco.com/": {
   "status": "blocked",
   "http_status": 403,
-  "ms": 298
- },
- "https://www.greatclips.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 334
- },
- "https://cameosalongj.com/": {
-  "status": "error",
-  "error": "ERR_TLS_CERT_ALTNAME_INVALID",
-  "ms": 424
+  "ms": 95
  },
  "https://rnmedispa.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 433
+  "ms": 101
  },
- "https://nailscowheatridge.com/": {
+ "https://www.greatclips.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 458
+  "ms": 122
  },
  "http://nailstouchdenver.com/": {
   "status": "blocked",
   "http_status": 403,
-  "ms": 147
+  "ms": 23
  },
- "https://tnnailsco.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 298
- },
- "https://thewaxingbee.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 253
+ "https://cameosalongj.com/": {
+  "status": "error",
+  "error": "ERR_TLS_CERT_ALTNAME_INVALID",
+  "ms": 163
  },
  "https://www.pureskinandco.com/": {
   "status": "error",
   "error": "ERR_TLS_CERT_ALTNAME_INVALID",
-  "ms": 190
+  "ms": 48
  },
  "https://www.kayleighscuts.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 271
+  "ms": 63
  },
- "https://www.vipnailsdurango.com/": {
+ "https://nailscowheatridge.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 413
+  "ms": 253
  },
- "https://phenixsalonsuites.com/": {
-  "status": "blocked",
-  "http_status": 403,
-  "ms": 481
- },
- "https://www.sephora.com/happening/stores/colorado-springs-outdoor-center": {
-  "status": "blocked",
-  "http_status": 403,
-  "ms": 471
- },
- "https://leashypeashy22.wixsite.com/beautyco": {
+ "https://www.salonjoa.com/": {
   "status": "live",
-  "http_status": 200,
-  "ms": 465
- },
- "https://www.myfriendsnailspa.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 460
+  "http_status": 202,
+  "ms": 303
  },
  "https://www.greatclips.com/salons/0482": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://salons.greatclips.com/us/co/westminster/10343-n-federal-blvd",
-  "ms": 1135
+  "ms": 277
+ },
+ "https://leashypeashy22.wixsite.com/beautyco": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 35
+ },
+ "https://www.sephora.com/happening/stores/colorado-springs-outdoor-center": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 71
+ },
+ "https://phenixsalonsuites.com/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 102
+ },
+ "https://www.vipnailsdurango.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 149
+ },
+ "https://tnnailsco.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 259
+ },
+ "https://thewaxingbee.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 278
+ },
+ "http://www.apollonow.com/": {
+  "status": "live",
+  "http_status": 202,
+  "ms": 65
  },
  "https://sarahdipityhair.tripod.com/": {
   "status": "dead",
   "error": "ENOTFOUND",
-  "ms": 206
+  "ms": 83
  },
- "http://www.apollonow.com/": {
-  "status": "error",
-  "error": "UND_ERR_SOCKET",
-  "ms": 408
+ "https://www.myfriendsnailspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 151
  },
  "https://www.therosemontbarbers.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 381
- },
- "https://fadedlifestylebarbershop.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 1486
- },
- "http://www.benshairstudio.com/": {
-  "status": "live",
-  "http_status": 200,
-  "final_url": "https://www.benshairstudio.com/",
-  "ms": 826
- },
- "https://wildkittywaxing.com/": {
-  "status": "error",
-  "error": "UND_ERR_SOCKET",
-  "ms": 453
+  "ms": 136
  },
  "https://revitalizeskincarestudio.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 450
- },
- "https://www.pearlnailbar.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 338
+  "ms": 72
  },
  "https://www.tributebarbers.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://tributebarbers.com/",
-  "ms": 698
+  "ms": 158
+ },
+ "https://thehairshop.me/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 37
+ },
+ "https://www.pearlnailbar.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 49
+ },
+ "http://www.benshairstudio.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.benshairstudio.com/",
+  "ms": 275
  },
  "http://www.wildwoodmn.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://www.wildwoodmn.com/",
-  "ms": 492
- },
- "https://thehairshop.me/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 292
- },
- "https://www.luminarhair.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 319
- },
- "https://www.boulderhairsalon.com/": {
-  "status": "live",
-  "http_status": 200,
-  "final_url": "https://boulderhairsalon.com/",
-  "ms": 917
- },
- "https://classicbarbershop.net/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 330
- },
- "https://www.envynails.org/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 308
- },
- "https://www.sephora.com/": {
-  "status": "blocked",
-  "http_status": 403,
-  "ms": 217
- },
- "https://www.corinadoeshair.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 638
+  "ms": 177
  },
  "https://sportclips.com/us-co-coloradosprings-co210": {
   "status": "live",
   "http_status": 200,
-  "ms": 729
+  "ms": 94
+ },
+ "https://wildkittywaxing.com/": {
+  "status": "live",
+  "http_status": 202,
+  "ms": 235
+ },
+ "https://classicbarbershop.net/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 54
+ },
+ "https://www.luminarhair.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 159
+ },
+ "https://www.sephora.com/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 45
+ },
+ "https://www.envynails.org/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 130
  },
  "https://berenicesdenver.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://www.berenicesdenver.com/",
-  "ms": 592
+  "ms": 145
+ },
+ "https://www.latherhouse.com/": {
+  "status": "live",
+  "http_status": 202,
+  "ms": 37
  },
  "https://www.thestyleemporiumco.com/": {
   "status": "dead",
   "error": "ENOTFOUND",
-  "ms": 132
+  "ms": 13
  },
- "https://www.latherhouse.com/": {
-  "status": "error",
-  "error": "UND_ERR_SOCKET",
-  "ms": 375
- },
- "http://grandnailspacoloradosprings.com/": {
+ "https://www.corinadoeshair.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 125
- },
- "https://www.fantasticsams.com/pages/FindASalon/findsalondetail.aspx?SalonId=10353": {
-  "status": "dead",
-  "http_status": 404,
-  "ms": 284
- },
- "https://www.sephora.com/happening/stores/centennial-south-glenn": {
-  "status": "blocked",
-  "http_status": 403,
-  "ms": 157
+  "ms": 306
  },
  "https://allnailspa.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 223
+  "ms": 56
+ },
+ "https://www.boulderhairsalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://boulderhairsalon.com/",
+  "ms": 488
+ },
+ "https://www.sephora.com/happening/stores/centennial-south-glenn": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 50
+ },
+ "http://grandnailspacoloradosprings.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 93
+ },
+ "https://www.fantasticsams.com/pages/FindASalon/findsalondetail.aspx?SalonId=10353": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 183
  },
  "https://bellabluebeauty.glossgenius.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://glossgenius.com/",
-  "ms": 598
+  "ms": 255
  },
  "https://elitebarbershoplongmont.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 125
- },
- "https://angelamarieartistry.glossgenius.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 856
+  "ms": 53
  },
  "https://www.greatclips.com/salons/1139": {
   "status": "dead",
   "http_status": 404,
   "final_url": "https://salons.greatclips.com/1139",
-  "ms": 110
+  "ms": 22
+ },
+ "https://acuitymaasc.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 60
  },
  "https://places.singleplatform.com/linda-whittakerindulgence-a-salon/menu": {
   "status": "live",
-  "http_status": 202,
-  "ms": 223
+  "http_status": 200,
+  "ms": 48
+ },
+ "https://angelamarieartistry.glossgenius.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 420
  },
  "https://www.elizabeth-salon.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://www.elizabethsaloncolorado.com/",
-  "ms": 440
+  "ms": 207
  },
- "https://www.beautybar-inc.com/": {
+ "https://fadedlifestylebarbershop.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 920
+  "ms": 1375
  },
  "https://javanailspa.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://expireddomains.com/domain/javanailspa.com?utm_source=redi",
-  "ms": 938
- },
- "https://magicnailsspalakewood.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 1155
- },
- "https://acuitymaasc.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 1129
- },
- "https://screaminpeach.com/south-fort-collins": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 453
- },
- "https://osegateas.com/spoilednailspa/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 262
- },
- "https://illusionssalonandspa.mysalononline.com/": {
-  "status": "live",
-  "http_status": 200,
-  "final_url": "https://illusionssalonandspa.mysalononline.com/Error/CookiesDisabled",
-  "ms": 904
- },
- "https://shavenahaircut.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 502
- },
- "https://virtuesalongj.glossgenius.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 507
- },
- "https://salonpanache.co/": {
-  "status": "error",
-  "error": "ECONNRESET",
-  "ms": 153
- },
- "https://www.floydsbarbershop.com/locations/colorado/colorado-springs/north-gate": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 329
- },
- "https://twinpeakshairsalon.glossgenius.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 362
- },
- "https://lotusnailsboulder.com/": {
-  "status": "dead",
-  "error": "ENOTFOUND",
-  "ms": 56
- },
- "https://www.oldtownhaircompany.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 104
- },
- "https://sunsetnaillakewood.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 955
- },
- "https://www.thewildhairsalon.net/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 221
- },
- "https://www.thebriosalon.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 174
- },
- "https://bossstudiogj.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 124
- },
- "https://northsidehair.co/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 242
- },
- "http://www.touchofstylesalon.com/": {
-  "status": "live",
-  "http_status": 200,
-  "final_url": "https://www.touchofstylesalon.com/",
-  "ms": 586
- },
- "http://www.breckenridgechoppingblock.com/": {
-  "status": "error",
-  "error": "UND_ERR_SOCKET",
-  "ms": 290
- },
- "https://triviumsalon.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 149
- },
- "https://kathy-nails-grand-junction.edan.io/": {
-  "status": "blocked",
-  "http_status": 403,
-  "ms": 95
- },
- "https://castlerocknaturalnails.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 230
+  "ms": 354
  },
  "https://www.winkthelashlounge.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://winklashes-midtown.com/",
-  "ms": 3007
+  "ms": 606
  },
- "https://www.rmcf.com/": {
+ "https://illusionssalonandspa.mysalononline.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 281
+  "final_url": "https://illusionssalonandspa.mysalononline.com/Error/CookiesDisabled",
+  "ms": 329
  },
- "https://rootshairbreck.com/": {
+ "https://screaminpeach.com/south-fort-collins": {
   "status": "live",
   "http_status": 200,
-  "final_url": "https://www.rootshairbreck.com/",
-  "ms": 383
+  "ms": 232
  },
- "https://www.vagaro.com/lookinggoodsalon": {
+ "https://osegateas.com/spoilednailspa/": {
   "status": "live",
   "http_status": 200,
-  "ms": 1160
+  "ms": 256
  },
- "https://masterpiece.hairpronetwork.com/": {
+ "https://shavenahaircut.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 326
+  "ms": 161
  },
- "https://no5nailspa.com/": {
+ "https://www.beautybar-inc.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 176
+  "ms": 918
  },
- "https://creationnailswestminster.com/": {
-  "status": "dead",
-  "error": "ENOTFOUND",
-  "ms": 58
- },
- "https://greatclips.com/salons/0475": {
+ "https://victorianailslashes.com/": {
   "status": "live",
   "http_status": 200,
-  "final_url": "https://salons.greatclips.com/us/co/englewood/4920-s-yosemite-st",
-  "ms": 683
- },
- "https://facialaestheticsinc.com/superior/": {
-  "status": "blocked",
-  "http_status": 403,
-  "ms": 118
- },
- "https://www.floydsbarbershop.com/ft-collins--college/": {
-  "status": "live",
-  "http_status": 200,
-  "final_url": "https://www.floydsbarbershop.com/locations/colorado/fort-collins/ft-collins-college",
-  "ms": 302
- },
- "http://www.mavrickstudiosalon.org/": {
-  "status": "dead",
-  "error": "ENOTFOUND",
-  "ms": 40
- },
- "https://lockssalon.net/barbershop-broomfield/": {
-  "status": "error",
-  "error": "UND_ERR_SOCKET",
   "ms": 168
  },
- "https://elmbarbershop.square.site/?location=0XNAXA4D0A7JZ": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 613
+ "https://salonpanache.co/": {
+  "status": "error",
+  "error": "ECONNRESET",
+  "ms": 12
  },
- "https://www.vagaro.com/amhairstudio": {
+ "https://www.oldtownhaircompany.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 1378
+  "ms": 53
  },
  "https://lengthhairdenver.com/denver/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://lengthhairdenver.com/",
-  "ms": 4121
+  "ms": 868
  },
- "https://sonnenalp.com/spa": {
+ "https://lotusnailsboulder.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 13
+ },
+ "https://www.thewildhairsalon.net/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 78
+ },
+ "https://www.thebriosalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 64
+ },
+ "https://magicnailsspalakewood.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1110
+ },
+ "https://sunsetnaillakewood.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 616
+ },
+ "https://www.floydsbarbershop.com/locations/colorado/colorado-springs/north-gate": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 297
+ },
+ "https://northsidehair.co/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 32
+ },
+ "https://virtuesalongj.glossgenius.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 520
+ },
+ "https://twinpeakshairsalon.glossgenius.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 379
+ },
+ "https://kathy-nails-grand-junction.edan.io/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 24
+ },
+ "https://triviumsalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 48
+ },
+ "https://castlerocknaturalnails.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 48
+ },
+ "http://www.breckenridgechoppingblock.com/": {
   "status": "error",
   "error": "UND_ERR_SOCKET",
-  "ms": 352
+  "ms": 149
+ },
+ "https://www.rmcf.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 211
+ },
+ "https://greatclips.com/salons/0475": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://salons.greatclips.com/us/co/englewood/4920-s-yosemite-st",
+  "ms": 128
+ },
+ "https://rootshairbreck.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.rootshairbreck.com/",
+  "ms": 231
+ },
+ "http://www.touchofstylesalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.touchofstylesalon.com/",
+  "ms": 538
+ },
+ "https://no5nailspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 57
+ },
+ "https://creationnailswestminster.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 22
+ },
+ "https://masterpiece.hairpronetwork.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 293
+ },
+ "https://facialaestheticsinc.com/superior/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 47
+ },
+ "https://www.floydsbarbershop.com/ft-collins--college/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.floydsbarbershop.com/locations/colorado/fort-collins/ft-collins-college",
+  "ms": 248
+ },
+ "http://www.mavrickstudiosalon.org/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 24
  },
  "https://www.orchideesalonandspa.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://orchideesalonandspa.com/",
-  "ms": 598
+  "ms": 208
  },
- "https://www.prismhairdenver.com/": {
+ "https://lockssalon.net/barbershop-broomfield/": {
+  "status": "live",
+  "http_status": 202,
+  "ms": 276
+ },
+ "https://www.broomfieldhair.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 151
+  "ms": 137
  },
- "https://salons.greatclips.com/us/co/centennial/8223-s-quebec-st": {
+ "https://bossstudiogj.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 78
+  "ms": 1100
+ },
+ "https://elmbarbershop.square.site/?location=0XNAXA4D0A7JZ": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 742
  },
  "https://linktr.ee/thespotbarberlounge": {
+  "status": "error",
+  "http_status": 406,
+  "ms": 82
+ },
+ "https://sonnenalp.com/spa": {
   "status": "live",
-  "http_status": 200,
-  "ms": 501
+  "http_status": 202,
+  "ms": 187
  },
  "https://www.salonmichelleberthoud.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 255
+  "ms": 50
  },
- "https://kiddiekutterscoloradosprings.com/": {
+ "https://salons.greatclips.com/us/co/centennial/8223-s-quebec-st": {
   "status": "live",
   "http_status": 200,
-  "ms": 1587
+  "ms": 77
  },
  "https://www.lemm1030studio.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 449
+  "ms": 52
+ },
+ "https://www.prismhairdenver.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 161
  },
  "https://cristianasalonspa.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 543
- },
- "https://www.heydayskincare.com/pages/lowry": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 640
+  "ms": 102
  },
  "https://ashhoneysalongj.com/": {
   "status": "dead",
   "error": "ENOTFOUND",
-  "ms": 186
+  "ms": 24
  },
- "https://www.rivalrybarbershop.com/": {
+ "https://www.heydayskincare.com/pages/lowry": {
   "status": "live",
   "http_status": 200,
-  "ms": 918
+  "ms": 300
  },
  "https://www.crushsalon970.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 325
+  "ms": 180
  },
  "https://www.shamelesswaxing.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 483
+  "ms": 136
+ },
+ "https://www.vagaro.com/lookinggoodsalon": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1681
+ },
+ "https://dapperbarbershopco.com/castle-rock/": {
+  "status": "live",
+  "http_status": 202,
+  "ms": 184
+ },
+ "http://diamondrocksalonbarber.booksy.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://lhkw.app.link/eejXbeiRFXb?_p=c30a33c3860065f0fc1c8ffb",
+  "ms": 578
+ },
+ "https://www.demajsalon.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 10
  },
  "https://www.floydsbarbershop.com/denver-university/": {
   "status": "live",
@@ -528,1200 +539,1187 @@
   "final_url": "https://www.floydsbarbershop.com/locations/colorado/denver/denver-university",
   "ms": 225
  },
- "https://dapperbarbershopco.com/castle-rock/": {
-  "status": "error",
-  "error": "UND_ERR_SOCKET",
-  "ms": 911
- },
- "https://www.demajsalon.com/": {
-  "status": "dead",
-  "error": "ENOTFOUND",
-  "ms": 621
- },
- "https://nobosalon.com/": {
+ "https://kiddiekutterscoloradosprings.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 739
- },
- "http://diamondrocksalonbarber.booksy.com/": {
-  "status": "live",
-  "http_status": 200,
-  "final_url": "https://lhkw.app.link/eejXbeiRFXb?_p=c41429c39a067af2e61490f4ea",
-  "ms": 1604
+  "ms": 1566
  },
  "https://www.thebarberjoint.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 204
- },
- "https://www.costcutters.com/salondetail/default.asp?salonid=62161": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 287
+  "ms": 57
  },
  "https://www.northsidebarbers.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 280
+  "ms": 78
  },
- "https://www.floydsbarbershop.com/boulder/": {
+ "https://www.costcutters.com/salondetail/default.asp?salonid=62161": {
   "status": "live",
   "http_status": 200,
-  "final_url": "https://www.floydsbarbershop.com/locations/colorado/boulder/boulder",
-  "ms": 249
- },
- "https://salons.greatclips.com/us/co/louisville/1355-s-boulder-rd": {
-  "status": "dead",
-  "http_status": 404,
-  "ms": 120
+  "ms": 102
  },
  "https://www.greatclips.com/salons/9512": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://salons.greatclips.com/us/co/conifer/27182-main-st",
-  "ms": 219
+  "ms": 30
+ },
+ "https://salons.greatclips.com/us/co/louisville/1355-s-boulder-rd": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 57
+ },
+ "https://www.floydsbarbershop.com/boulder/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.floydsbarbershop.com/locations/colorado/boulder/boulder",
+  "ms": 143
  },
  "https://haircutmentowncenterhighlandsranchco.com/": {
   "status": "dead",
   "error": "ENOTFOUND",
-  "ms": 48
+  "ms": 11
  },
  "http://faded-fresh-barbershop.square.site/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://faded-fresh-barbershop.square.site/",
-  "ms": 1574
+  "ms": 538
  },
- "http://www.floydsbarbershop.com/Shop/97-CO-Aurora-Cornerstar.aspx": {
+ "https://nobosalon.com/": {
   "status": "live",
   "http_status": 200,
-  "final_url": "https://www.floydsbarbershop.com/Shop/97-CO-Aurora-Cornerstar.aspx",
-  "ms": 175
- },
- "https://www.clipshairsalon.org/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 300
- },
- "https://www.costcutters.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 17
+  "ms": 332
  },
  "https://www.blondiessalondenver.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 464
+  "ms": 37
  },
- "https://jjshairsalonboulder.com/": {
+ "https://www.clipshairsalon.org/": {
   "status": "live",
   "http_status": 200,
-  "ms": 488
+  "ms": 92
+ },
+ "https://www.costcutters.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 38
  },
  "http://www.salondechelle.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://www.salondechelle.com/",
-  "ms": 577
+  "ms": 145
+ },
+ "http://www.floydsbarbershop.com/Shop/97-CO-Aurora-Cornerstar.aspx": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.floydsbarbershop.com/Shop/97-CO-Aurora-Cornerstar.aspx",
+  "ms": 194
+ },
+ "https://localscut.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 38
+ },
+ "https://www.roostersmgc.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 52
  },
  "https://www.costcutters.com/checkin/17742": {
   "status": "live",
   "http_status": 200,
-  "ms": 384
+  "ms": 61
+ },
+ "http://studiopinksalon.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 12
+ },
+ "https://sportclips.com/us-co-parker-co115": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 41
+ },
+ "https://jjshairsalonboulder.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 169
  },
  "https://www.floydsbarbershop.com/basemar/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://www.floydsbarbershop.com/locations/colorado/boulder/basemar",
-  "ms": 640
- },
- "https://localscut.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 383
- },
- "https://www.roostersmgc.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 504
- },
- "http://studiopinksalon.com/": {
-  "status": "dead",
-  "error": "ENOTFOUND",
-  "ms": 306
+  "ms": 190
  },
  "https://sportclips.com/us-co-highlandsranch-co101": {
   "status": "live",
   "http_status": 200,
-  "ms": 172
+  "ms": 54
  },
  "http://www.floydsbarbershop.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://www.floydsbarbershop.com/",
-  "ms": 344
- },
- "https://www.salonsabiha.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 212
+  "ms": 67
  },
  "http://voguespa2.com/": {
   "status": "dead",
   "error": "ENOTFOUND",
-  "ms": 76
+  "ms": 8
  },
  "https://therelaxsalon.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://www.therelaxsalon.com/",
-  "ms": 625
- },
- "https://www.broomfieldhair.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 4223
- },
- "https://sportclips.com/us-co-parker-co115": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 826
+  "ms": 92
  },
  "https://www.walmart.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 251
+  "ms": 28
+ },
+ "https://hairandnowsalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 38
  },
  "http://www.lacbeauty.com/": {
   "status": "blocked",
   "http_status": 403,
   "final_url": "https://www.hugedomains.com/domain_profile.cfm?d=lacbeauty.com",
-  "ms": 367
- },
- "http://salondenobelle.com/": {
-  "status": "error",
-  "error": "UND_ERR_RES_CONTENT_LENGTH_MISMATCH",
-  "ms": 348
+  "ms": 89
  },
  "http://centresalontiffanyplaza.com/": {
-  "status": "error",
-  "error": "UND_ERR_SOCKET",
-  "ms": 418
+  "status": "live",
+  "http_status": 202,
+  "final_url": "http://www.centresalon.com/",
+  "ms": 84
+ },
+ "https://www.salonsabiha.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 147
  },
  "http://haircutmenfortcollinsco.com/": {
   "status": "dead",
   "error": "ENOTFOUND",
-  "ms": 170
- },
- "https://sportclips.com/us-co-denver-co120": {
-  "status": "live",
-  "http_status": 200,
-  "final_url": "https://sportclips.com/",
-  "ms": 422
- },
- "https://alwaysbeautiful.net/": {
-  "status": "live",
-  "http_status": 200,
-  "final_url": "https://www.alwaysbeautiful.net/",
-  "ms": 563
- },
- "https://sportclips.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 107
+  "ms": 10
  },
  "http://www.greatclips.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://www.greatclips.com/",
-  "ms": 188
+  "ms": 45
  },
- "https://bellalunasalon.com/": {
+ "https://sportclips.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 208
+  "ms": 39
  },
- "http://saloneuphoriacos.com/": {
-  "status": "dead",
-  "error": "ENOTFOUND",
-  "ms": 194
+ "https://sportclips.com/us-co-denver-co120": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://sportclips.com/",
+  "ms": 107
+ },
+ "https://www.vagaro.com/amhairstudio": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 2441
  },
  "https://www.greatclips.com/salons/409": {
   "status": "dead",
   "http_status": 404,
   "final_url": "https://salons.greatclips.com/salons/409",
-  "ms": 331
+  "ms": 39
  },
- "https://hairandnowsalon.com/": {
+ "http://saloneuphoriacos.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 5
+ },
+ "http://salondenobelle.com/": {
+  "status": "error",
+  "error": "UND_ERR_RES_CONTENT_LENGTH_MISMATCH",
+  "ms": 206
+ },
+ "https://bellalunasalon.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 923
+  "ms": 64
  },
  "http://bswsuperstores.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "http://www.bswsuperstores.com/",
-  "ms": 411
- },
- "https://www.floydsbarbershop.com/broadway/": {
-  "status": "live",
-  "http_status": 200,
-  "final_url": "https://www.floydsbarbershop.com/locations/colorado/denver/broadway",
-  "ms": 229
- },
- "https://www.goldieandbob.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 350
- },
- "https://www.twistedbohemiansalon.com/": {
-  "status": "error",
-  "error": "UND_ERR_CONNECT_TIMEOUT",
-  "ms": 10207
- },
- "http://headturnersalon.net/": {
-  "status": "dead",
-  "error": "ENOTFOUND",
-  "ms": 188
- },
- "https://classiccut.webs.com/": {
-  "status": "dead",
-  "error": "ENOTFOUND",
-  "ms": 254
+  "ms": 77
  },
  "http://accentshairandnails.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://accentssalon.wordpress.com/",
-  "ms": 711
+  "ms": 80
+ },
+ "https://www.goldieandbob.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 63
+ },
+ "http://headturnersalon.net/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 10
+ },
+ "https://alwaysbeautiful.net/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.alwaysbeautiful.net/",
+  "ms": 367
+ },
+ "https://classiccut.webs.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 25
  },
  "http://www.qualitycarehair.com/": {
   "status": "dead",
   "error": "ENOTFOUND",
-  "ms": 266
+  "ms": 13
  },
  "http://yolisbeautyconcepts.com/home/": {
   "status": "dead",
   "error": "ENOTFOUND",
-  "ms": 256
+  "ms": 10
+ },
+ "https://www.floydsbarbershop.com/broadway/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.floydsbarbershop.com/locations/colorado/denver/broadway",
+  "ms": 173
  },
  "https://www.smartstyle.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 225
+  "ms": 63
+ },
+ "https://www.supercuts.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 62
+ },
+ "https://www.emergemodernsalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 279
+ },
+ "https://zandiksalon.com/": {
+  "status": "live",
+  "http_status": 202,
+  "ms": 42
+ },
+ "https://app.greatclips.com/salon/3136/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 104
+ },
+ "https://www.gallipott.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 132
+ },
+ "http://www.hairjunkyz.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 133
  },
  "https://www.velvetdayspa.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://velvetdayspa.com/",
-  "ms": 1127
- },
- "https://www.supercuts.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 176
- },
- "https://www.emergemodernsalon.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 701
- },
- "https://app.greatclips.com/salon/3136/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 266
- },
- "https://www.gallipott.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 364
+  "ms": 641
  },
  "https://www.floydsbarbershop.com/locations/colorado/denver/arvada-ward-rd": {
   "status": "live",
   "http_status": 200,
-  "ms": 120
+  "ms": 94
  },
  "https://www.floydsbarbershop.com/locations/colorado/denver/stonegate-crossing": {
   "status": "live",
   "http_status": 200,
-  "ms": 107
- },
- "https://zandiksalon.com/": {
-  "status": "error",
-  "http_status": 502,
-  "ms": 654
- },
- "http://www.hairjunkyz.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 475
- },
- "https://www.georgetown-colorado.org/business/sage-salon": {
-  "status": "live",
-  "http_status": 200,
-  "final_url": "https://georgetown-colorado.org/",
-  "ms": 1851
+  "ms": 85
  },
  "https://www.greatclips.com/salons/0444": {
   "status": "dead",
   "http_status": 404,
   "final_url": "https://salons.greatclips.com/0444",
-  "ms": 129
- },
- "https://www.supercuts.com/locations/nearme/haircut/CO/COLORADO-SPRINGS/2130-SOUTHGATE-RD-STE-105/82765": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 62
- },
- "https://app.greatclips.com/salon/9852/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 93
+  "ms": 17
  },
  "https://www.greatclips.com/salons/480": {
   "status": "dead",
   "http_status": 404,
   "final_url": "https://salons.greatclips.com/salons/480",
-  "ms": 215
+  "ms": 45
+ },
+ "https://www.supercuts.com/locations/nearme/haircut/CO/COLORADO-SPRINGS/2130-SOUTHGATE-RD-STE-105/82765": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 50
+ },
+ "https://app.greatclips.com/salon/9852/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 149
+ },
+ "https://www.georgetown-colorado.org/business/sage-salon": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://georgetown-colorado.org/",
+  "ms": 952
  },
  "https://thebubbleroomsalon.com/": {
   "status": "dead",
   "error": "ENOTFOUND",
-  "ms": 114
+  "ms": 5
  },
  "http://www.thegranvilleassisted.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://thegranville.com/",
-  "ms": 1321
+  "ms": 926
+ },
+ "https://www.rivalrybarbershop.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 2560
  },
  "http://www.littlebssalon.com/": {
   "status": "dead",
   "error": "ENOTFOUND",
-  "ms": 47
- },
- "https://www.sharkeyscutsforkids.com/HighlandsRanch-CO": {
-  "status": "dead",
-  "http_status": 404,
-  "ms": 381
- },
- "https://www.dmh-studio.com/": {
-  "status": "error",
-  "error": "ECONNREFUSED",
-  "ms": 226
+  "ms": 10
  },
  "https://www.fantasticsams.com/salons/fantastic-sams-parker-co": {
   "status": "live",
   "http_status": 200,
-  "ms": 78
+  "ms": 21
  },
  "http://www.als-barbershop.net/": {
   "status": "live",
   "http_status": 200,
-  "ms": 126
+  "ms": 39
+ },
+ "https://www.dmh-studio.com/": {
+  "status": "error",
+  "error": "ECONNREFUSED",
+  "ms": 130
+ },
+ "https://www.sharkeyscutsforkids.com/HighlandsRanch-CO": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 343
  },
  "https://jrbarber.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 198
+  "ms": 116
  },
  "http://icapellisalon.com/": {
   "status": "blocked",
   "http_status": 403,
   "final_url": "https://www.hugedomains.com/domain_profile.cfm?d=icapellisalon.com",
-  "ms": 188
- },
- "https://www.montanasalondtc.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 156
- },
- "https://blomedry.com/locations/blo-boulder-colorado/": {
-  "status": "dead",
-  "http_status": 404,
-  "ms": 1121
- },
- "http://www.salonphoenix.online/": {
-  "status": "dead",
-  "error": "ENOTFOUND",
   "ms": 25
  },
  "https://www.haircutsarefun.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://haircutsarefun.com/",
-  "ms": 890
+  "ms": 283
+ },
+ "https://www.montanasalondtc.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 92
+ },
+ "http://www.salonphoenix.online/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 5
+ },
+ "https://blomedry.com/locations/blo-boulder-colorado/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 801
  },
  "http://cilithesalonanddayspa.com/": {
   "status": "dead",
   "error": "ENOTFOUND",
-  "ms": 66
- },
- "https://rockbarbers.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 222
- },
- "https://www.schedulicity.com/scheduling/cbsgfe": {
-  "status": "live",
-  "http_status": 200,
-  "final_url": "https://www.vagaro.com/cbsgfe",
-  "ms": 1568
- },
- "https://www.salonorea.com/": {
-  "status": "live",
-  "http_status": 200,
-  "final_url": "https://salonorea.com/",
-  "ms": 2270
+  "ms": 8
  },
  "https://halohairsalondenver.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 4048
+  "ms": 1751
  },
- "http://tanglesofparker.com/": {
-  "status": "dead",
-  "error": "ENOTFOUND",
-  "ms": 180
- },
- "https://www.smartstyle.com/locations/nearme/haircut/North/Grand-Junction/Located-Inside-Walmart-1280/11943": {
+ "https://rockbarbers.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 90
- },
- "https://www.ontheavenuelongmont.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 559
+  "ms": 114
  },
  "https://www.wisphairsalon.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 651
+  "ms": 480
+ },
+ "http://tanglesofparker.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 10
  },
  "http://www.barberx.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://www.barberx.com/",
-  "ms": 587
+  "ms": 206
  },
- "https://salons.greatclips.com/us/co/highlands-ranch/4004-red-cedar-dr": {
+ "https://www.ontheavenuelongmont.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 85
+  "ms": 853
+ },
+ "https://www.smartstyle.com/locations/nearme/haircut/North/Grand-Junction/Located-Inside-Walmart-1280/11943": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 71
+ },
+ "https://www.salonorea.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://salonorea.com/",
+  "ms": 2261
  },
  "https://northtownbeauty.setmore.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 516
+  "ms": 494
+ },
+ "https://salons.greatclips.com/us/co/highlands-ranch/4004-red-cedar-dr": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 34
  },
  "https://www.lincolnstbarbers.com/": {
-  "status": "error",
-  "error": "UND_ERR_SOCKET",
-  "ms": 296
+  "status": "live",
+  "http_status": 202,
+  "ms": 270
+ },
+ "https://www.schedulicity.com/scheduling/cbsgfe": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.vagaro.com/cbsgfe",
+  "ms": 2183
  },
  "https://hairloungegolden.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 325
- },
- "http://www.collajio.com/": {
-  "status": "dead",
-  "error": "EAI_AGAIN",
-  "ms": 1884
- },
- "https://salons.greatclips.com/us/co/grand-junction/2546-rimrock-ave": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 55
- },
- "https://www.greatclips.com/salons/1330": {
-  "status": "live",
-  "http_status": 200,
-  "final_url": "https://salons.greatclips.com/us/co/aurora/1627-s-havana-st",
-  "ms": 187
+  "ms": 145
  },
  "https://erguntercansalon.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://www.erguntercansalon.com/",
-  "ms": 552
- },
- "https://www.vagaro.com/diamantesalonandspa": {
-  "status": "live",
-  "http_status": 200,
-  "final_url": "https://mysite.vagaro.com/diamantesalonandspa",
-  "ms": 1186
+  "ms": 83
  },
  "https://thesalon.blue/bluelion-location/highland-ranch/": {
   "status": "error",
   "http_status": 521,
-  "ms": 627
+  "ms": 75
+ },
+ "https://salons.greatclips.com/us/co/grand-junction/2546-rimrock-ave": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 98
  },
  "http://www.roostersmgc.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://www.roostersmgc.com/",
-  "ms": 189
+  "ms": 61
  },
- "https://www.thesidedoorsalon.com/": {
+ "https://www.greatclips.com/salons/1330": {
   "status": "live",
   "http_status": 200,
-  "ms": 119
+  "final_url": "https://salons.greatclips.com/us/co/aurora/1627-s-havana-st",
+  "ms": 168
  },
  "http://shapessalonandstudio.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://shapessalonandstudio.com/",
-  "ms": 304
- },
- "https://www.semionbarbershop.com/locations/greenwood-village/": {
-  "status": "live",
-  "http_status": 200,
-  "final_url": "https://www.semionbarbershop.com/",
-  "ms": 2433
- },
- "https://alpinebarbers.com/": {
-  "status": "blocked",
-  "http_status": 403,
-  "ms": 137
- },
- "https://www.orangepoppyspa.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 212
- },
- "https://www.salonfifty4thirty.com/": {
-  "status": "blocked",
-  "http_status": 403,
-  "ms": 131
- },
- "https://www.aceoffadesgj.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 231
- },
- "https://www.anekohairstudio.com/": {
-  "status": "dead",
-  "error": "ENOTFOUND",
-  "ms": 56
- },
- "https://www.supercuts.com/locations/nearme/haircut/co/grand-junction/shoppes/80858": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 129
- },
- "https://www.avilasbarbershop.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 138
- },
- "https://salons.greatclips.com/us/co/colorado-springs/8838-n-union-blvd": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 121
+  "ms": 398
  },
  "http://browsonupper15th.com/": {
   "status": "blocked",
   "http_status": 429,
-  "final_url": "https://www.google.com/sorry/index?continue=https://brows.blogspot.com/&q=EgQofPlcGLj-_dcGIi0iHpvS_drN7x6vIRclrh3hiwiPOsW9T9SoCNihvspX81QfjMFFG3VacA1Ia9YyAnJSWgFDYLXI6-KO4OOu9gE",
-  "ms": 835
+  "final_url": "https://www.google.com/sorry/index?continue=https://brows.blogspot.com/&q=EgQDKdJ0GNWT_tcGIi3GNrO7YwzFM9XukeRlBa-XrKbKb3DUnCP8hI0rx3MlqzUzjK6zTJ4NzZRElXMyAnJSWgFDYP64s8KticfYGw",
+  "ms": 447
  },
- "https://blomedry.com/denver-cherry-hills-co/": {
+ "http://www.collajio.com/": {
+  "status": "dead",
+  "error": "EAI_AGAIN",
+  "ms": 2375
+ },
+ "https://www.orangepoppyspa.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 35
+  "ms": 48
  },
- "https://www.supercuts.com/locations/nearme/haircut/CO/Colorado-Springs/Marketplace-At-Briargate/82754": {
+ "https://www.thesidedoorsalon.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 86
+  "ms": 74
+ },
+ "https://www.vagaro.com/diamantesalonandspa": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://mysite.vagaro.com/diamantesalonandspa",
+  "ms": 1467
  },
  "http://steelandlatherbarber.co/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://www.steelandlatherbarber.co/store/c1/Featured_Products.html",
-  "ms": 1314
+  "ms": 814
  },
- "https://www.beautybarallure.com/": {
+ "https://alpinebarbers.com/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 100
+ },
+ "https://www.aceoffadesgj.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 54
+ },
+ "https://www.anekohairstudio.com/": {
   "status": "dead",
-  "http_status": 404,
-  "ms": 361
+  "error": "ENOTFOUND",
+  "ms": 9
+ },
+ "https://www.salonfifty4thirty.com/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 64
+ },
+ "https://www.supercuts.com/locations/nearme/haircut/co/grand-junction/shoppes/80858": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 63
+ },
+ "https://www.avilasbarbershop.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 53
+ },
+ "https://www.semionbarbershop.com/locations/greenwood-village/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.semionbarbershop.com/",
+  "ms": 2576
+ },
+ "https://salons.greatclips.com/us/co/colorado-springs/8838-n-union-blvd": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 51
+ },
+ "https://blomedry.com/denver-cherry-hills-co/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 20
+ },
+ "https://www.supercuts.com/locations/nearme/haircut/CO/Colorado-Springs/Marketplace-At-Briargate/82754": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 53
  },
  "https://mollyssalon.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://www.mollyssalon.com/",
-  "ms": 482
+  "ms": 110
+ },
+ "https://www.beautybarallure.com/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 142
  },
  "https://coloradohairbraiding.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://www.syllahairstudio.com/",
-  "ms": 610
- },
- "https://melissasbarbershop.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 1516
+  "ms": 171
  },
  "https://www.renzothabarber.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 162
+  "ms": 146
  },
  "https://solsticesalonandspa.com/services": {
   "status": "live",
   "http_status": 200,
-  "ms": 200
- },
- "https://haircutmenlafayetteco.com/": {
-  "status": "dead",
-  "error": "ENOTFOUND",
-  "ms": 43
+  "ms": 47
  },
  "https://www.coloroomhair.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 145
+  "ms": 149
  },
- "https://www.voltagehair.com/": {
-  "status": "live",
-  "http_status": 200,
-  "final_url": "https://voltagehair.com/",
-  "ms": 1470
- },
- "https://www.salononze.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 586
+ "https://haircutmenlafayetteco.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 10
  },
  "https://www.supercuts.com/locations/co/thornton/thornton-town-center-haircuts-81692.html": {
   "status": "live",
   "http_status": 200,
-  "ms": 92
- },
- "https://www.supercuts.com/locations/nearme/haircut/co/colorado-springs/6046-stetson-hills-blvd/82361": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 18
+  "final_url": "https://www.supercuts.com/locations/nearme/haircut/co/thornton/thornton/81692",
+  "ms": 38
  },
  "http://www.anudo.salon/": {
   "status": "dead",
   "error": "ENOTFOUND",
-  "ms": 229
+  "ms": 89
+ },
+ "https://www.salononze.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 559
  },
  "https://www.signaturestyle.com/locations/co/littleton/cost-cutters-kipling-plaza-shopping-ctr-haircuts-62112.html": {
   "status": "dead",
   "http_status": 404,
-  "ms": 319
+  "ms": 115
  },
- "https://www.vagaro.com/uniquelysalonandspa": {
+ "https://www.supercuts.com/locations/nearme/haircut/co/colorado-springs/6046-stetson-hills-blvd/82361": {
   "status": "live",
   "http_status": 200,
-  "ms": 767
- },
- "https://www.supercuts.com/locations/co/thornton/thorncreek-crossing-haircuts-9239.html": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 186
+  "ms": 45
  },
  "https://www.floydsbarbershop.com/locations/colorado/colorado-springs/cinema-point": {
   "status": "live",
   "http_status": 200,
-  "ms": 410
- },
- "https://meshascoiffure.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 227
- },
- "https://victorianailslashes.com/": {
-  "status": "error",
-  "error": "TimeoutError",
-  "ms": 15001
- },
- "https://www.supercuts.com/locations/co/thornton/larkridge-shopping-center-haircuts-82638.html": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 85
- },
- "https://theboulderbarber.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 169
- },
- "https://www.hairdressingco.com/briargate": {
-  "status": "live",
-  "http_status": 200,
-  "final_url": "https://www.hairdressingco.com/briargate/",
-  "ms": 376
+  "ms": 123
  },
  "http://roshambosalon.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://mysite.vagaro.com/rockpaperscissorssalon57",
-  "ms": 1751
+  "ms": 969
  },
- "https://www.stylessalonco.com/": {
+ "https://www.vagaro.com/uniquelysalonandspa": {
   "status": "live",
   "http_status": 200,
-  "ms": 781
+  "ms": 834
+ },
+ "https://www.supercuts.com/locations/co/thornton/thorncreek-crossing-haircuts-9239.html": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.supercuts.com/locations/nearme/haircut/co/thornton/thorncreek/9239",
+  "ms": 71
+ },
+ "https://melissasbarbershop.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1373
+ },
+ "https://meshascoiffure.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 176
+ },
+ "https://theboulderbarber.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 178
+ },
+ "https://www.supercuts.com/locations/co/thornton/larkridge-shopping-center-haircuts-82638.html": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.supercuts.com/locations/nearme/haircut/co/thornton/larkridge/82638",
+  "ms": 55
  },
  "https://www.salonsisu.com/": {
   "status": "blocked",
   "http_status": 403,
-  "ms": 220
+  "ms": 94
  },
- "https://www.vagaro.com/rosewoodhairstudio": {
-  "status": "dead",
-  "http_status": 404,
-  "ms": 277
+ "https://www.voltagehair.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://voltagehair.com/",
+  "ms": 1525
  },
  "https://www.twighairsalon.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 283
+  "ms": 37
  },
- "https://app.greatclips.com/salon/1326/": {
+ "https://www.stylessalonco.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 385
+  "ms": 705
  },
- "https://salons.greatclips.com/us/co/colorado-springs/2850-s-academy-blvd": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 61
- },
- "https://www.floydsbarbershop.com/locations/colorado/denver/southglenn": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 182
+ "https://avedainspiregreatness.com/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 31
  },
  "https://www.steamboatbarbershop.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 408
+  "ms": 80
  },
- "https://avedainspiregreatness.com/": {
+ "https://app.greatclips.com/salon/1326/": {
   "status": "live",
   "http_status": 200,
-  "ms": 465
+  "ms": 159
+ },
+ "https://www.vagaro.com/rosewoodhairstudio": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 308
+ },
+ "https://www.hairdressingco.com/briargate": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.hairdressingco.com/briargate/",
+  "ms": 613
  },
  "https://www.fantasticsams.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 262
+  "ms": 20
  },
  "https://prosalonbarber.com/": {
   "status": "dead",
   "error": "ENOTFOUND",
-  "ms": 261
+  "ms": 5
  },
  "https://superhairdesigns.com/": {
   "status": "dead",
   "error": "ENOTFOUND",
-  "ms": 269
- },
- "https://the-mens-room-102500.square.site/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 741
+  "ms": 10
  },
  "https://suitecsalon.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 404
+  "ms": 62
+ },
+ "https://salons.greatclips.com/us/co/colorado-springs/2850-s-academy-blvd": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 126
+ },
+ "https://www.floydsbarbershop.com/locations/colorado/denver/southglenn": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 205
+ },
+ "https://www.austinsbarbershop.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 93
+ },
+ "https://haircutmenstrohranchparkerco.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 10
+ },
+ "https://sunbeamhairstudio.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 49
+ },
+ "https://the-mens-room-102500.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 425
+ },
+ "https://houseofcolorcolorado.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 57
  },
  "https://sundaybarberco.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://www.sundaybarberco.com/",
-  "ms": 1080
- },
- "https://haircutmenstrohranchparkerco.com/": {
-  "status": "dead",
-  "error": "ENOTFOUND",
-  "ms": 310
- },
- "https://sunbeamhairstudio.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 449
- },
- "https://houseofcolorcolorado.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 729
- },
- "https://genes-barber-shop-barber-shop.business.site/": {
-  "status": "dead",
-  "http_status": 404,
-  "ms": 1271
+  "ms": 523
  },
  "https://harrahssalon.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 692
+  "ms": 39
  },
  "https://www.dryitsalon.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 162
+  "ms": 110
  },
  "https://salons.greatclips.com/us/co/grand-junction/2510-n-12th-st": {
   "status": "live",
   "http_status": 200,
-  "ms": 88
+  "ms": 121
  },
- "https://juniperandpoppysalon.squarespace.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 148
+ "https://www.twistedbohemiansalon.com/": {
+  "status": "error",
+  "error": "UND_ERR_CONNECT_TIMEOUT",
+  "ms": 10354
  },
- "https://www.barbonesbarbershop.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 137
+ "https://genes-barber-shop-barber-shop.business.site/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 667
  },
  "https://www.260studio.com/": {
   "status": "dead",
   "http_status": 404,
-  "ms": 300
+  "ms": 170
+ },
+ "https://www.barbonesbarbershop.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 169
  },
  "https://www.sundaybarberco.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 37
+  "ms": 8
+ },
+ "https://juniperandpoppysalon.squarespace.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 372
  },
  "https://sheloveshairsalon.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 135
+  "ms": 150
  },
- "https://www.austinsbarbershop.com/": {
+ "https://map.contact/site/hotstreaks-osalon": {
   "status": "live",
   "http_status": 200,
-  "ms": 1945
+  "ms": 642
  },
  "https://ptbarbers.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 162
+  "ms": 78
+ },
+ "https://theblondingparlour.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 78
+ },
+ "https://thebarberstopevergreen.com/": {
+  "status": "error",
+  "error": "CERT_HAS_EXPIRED",
+  "ms": 43
+ },
+ "https://www.theclipjointdenver.com/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 40
  },
  "https://hairfusiondurango.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 258
+  "ms": 163
+ },
+ "https://coyotesllc.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 10
+ },
+ "https://app.salonrunner.com/customer/directory/index.htm?id=35131": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 51
  },
  "http://stansdowntownbarbers.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://stansdowntownbarbers.com/",
-  "ms": 2138
- },
- "https://theblondingparlour.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 82
- },
- "https://map.contact/site/hotstreaks-osalon": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 969
- },
- "https://thebarberstopevergreen.com/": {
-  "status": "error",
-  "error": "CERT_HAS_EXPIRED",
-  "ms": 191
- },
- "https://coyotesllc.com/": {
-  "status": "dead",
-  "error": "ENOTFOUND",
-  "ms": 202
- },
- "https://app.salonrunner.com/customer/directory/index.htm?id=35131": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 367
- },
- "https://www.theclipjointdenver.com/": {
-  "status": "dead",
-  "http_status": 404,
-  "ms": 434
- },
- "https://www.thelookbyamanda.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 99
+  "ms": 1166
  },
  "https://square.site/book/CPYZRMHWQPYKF/honeycomb-studio-salon-grand-jct-co": {
   "status": "dead",
   "http_status": 404,
-  "ms": 228
+  "ms": 127
  },
  "https://modernman.setmore.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 490
+  "ms": 200
+ },
+ "https://www.thelookbyamanda.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 163
  },
  "https://www.hugosbarbershop.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 144
+  "ms": 54
  },
  "https://www.vagaro.com/desertrootsgj": {
   "status": "dead",
   "http_status": 404,
   "final_url": "https://www.vagaro.com/PageNotFound.aspx",
-  "ms": 439
+  "ms": 266
  },
  "https://moesbarbers.weebly.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 207
- },
- "https://jordansbarbershop.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 2560
+  "ms": 145
  },
  "https://www.ohanasalon.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 129
+  "ms": 64
+ },
+ "https://abovegrounddenver.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 625
  },
  "https://www.phenixsalonsuites.com/": {
   "status": "blocked",
   "http_status": 403,
-  "ms": 234
+  "ms": 37
  },
  "https://www.curlupcastlerock.com/": {
   "status": "dead",
   "http_status": 404,
-  "ms": 238
- },
- "https://www.supercuts.com/locations/nearme/haircut/co/colorado-springs/1451-s-murray-blvd/82766": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 17
+  "ms": 105
  },
  "https://imagessalon.simvoly.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 387
+  "ms": 43
  },
- "https://modefi.com/": {
+ "https://www.supercuts.com/locations/nearme/haircut/co/colorado-springs/1451-s-murray-blvd/82766": {
   "status": "live",
   "http_status": 200,
-  "ms": 367
- },
- "https://www.platinumhairstudio.org/information.html": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 543
+  "ms": 49
  },
  "https://finessestudio.glossgenius.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 1289
+  "ms": 461
+ },
+ "https://modefi.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 47
  },
  "https://www.lush-beautylounge.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 135
+  "ms": 60
+ },
+ "https://www.platinumhairstudio.org/information.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 168
  },
  "https://salons.greatclips.com/us/co/woodland-park/1117-e-us-highway-24": {
   "status": "live",
   "http_status": 200,
-  "ms": 116
- },
- "https://colorcrewsalon.com/": {
-  "status": "live",
-  "http_status": 200,
-  "final_url": "https://bandit4dqq.com/",
-  "ms": 1461
- },
- "https://myprodigysalon.com/": {
-  "status": "error",
-  "http_status": 480,
-  "ms": 444
+  "ms": 37
  },
  "https://www.clipper-over-comb.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://expireddomains.com/domain/clipper-over-comb.com?utm_source=redi",
-  "ms": 777
- },
- "https://www.costcutters.com/locations/nearme/haircut/co/bennett/965-s-1st-st-ste-400/15932": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 540
+  "ms": 83
  },
  "https://www.twobitbarbershop.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 1449
+  "ms": 298
  },
- "https://www.loverevolutionsalon.com/": {
+ "https://myprodigysalon.com/": {
+  "status": "error",
+  "http_status": 480,
+  "ms": 85
+ },
+ "https://www.costcutters.com/locations/nearme/haircut/co/bennett/965-s-1st-st-ste-400/15932": {
   "status": "live",
   "http_status": 200,
-  "ms": 240
- },
- "https://www.figarossalon.com/": {
-  "status": "live",
-  "http_status": 200,
-  "final_url": "https://figarossalon.com/",
-  "ms": 953
- },
- "https://www.basksalon.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 207
+  "ms": 101
  },
  "https://paulmitchell.edu/denver": {
   "status": "blocked",
   "http_status": 403,
-  "ms": 253
+  "ms": 35
  },
- "https://www.themanesalon.com/": {
+ "https://www.basksalon.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 375
+  "ms": 151
+ },
+ "https://www.loverevolutionsalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 320
+ },
+ "https://jordansbarbershop.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 2038
+ },
+ "https://bishops.co/locations/lowry/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 202
  },
  "https://headlinessalons.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 472
+  "ms": 73
  },
- "https://www.mariasbraiding.com/": {
+ "https://www.themanesalon.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 188
+  "ms": 53
  },
  "https://focalpoint303.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 244
+  "ms": 42
  },
- "https://scissorsscotch.com/locations/co/casle-rock/encore/": {
-  "status": "dead",
-  "http_status": 404,
-  "ms": 642
+ "https://www.mariasbraiding.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 79
  },
  "https://salons.greatclips.com/us/co/highlands-ranch/9249-s-broadway": {
   "status": "live",
   "http_status": 200,
-  "ms": 102
+  "ms": 48
+ },
+ "https://scissorsscotch.com/locations/co/casle-rock/encore/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 252
  },
  "https://www.tiffanyhairsalondenver.com/": {
-  "status": "error",
-  "error": "UND_ERR_SOCKET",
-  "ms": 272
- },
- "https://calaverabarbers.com/": {
   "status": "live",
-  "http_status": 200,
-  "ms": 250
+  "http_status": 202,
+  "ms": 183
  },
  "https://blomedry.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 144
+  "ms": 41
+ },
+ "https://calaverabarbers.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 178
  },
  "https://www.wiseguysbarbers.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://wiseguysbarbers.com/",
-  "ms": 1103
+  "ms": 601
  },
  "https://www.theusualbarbershop.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 112
- },
- "https://bishops.co/locations/lowry/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 1459
+  "ms": 68
  },
  "https://sportclips.com/us-co-greeley-co302": {
   "status": "live",
   "http_status": 200,
-  "ms": 383
+  "ms": 56
+ },
+ "https://www.franksdenver.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 81
  },
  "http://thehairbarsalonerie.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "http://www.thehairbarsalonerie.com/",
-  "ms": 412
- },
- "https://www.franksdenver.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 138
+  "ms": 158
  },
  "https://www.islasalon.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 185
+  "ms": 67
  },
  "https://www.studiosalondenver.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 146
+  "ms": 62
+ },
+ "https://colorcrewsalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://bandit4dqq.com/",
+  "ms": 1597
+ },
+ "https://speakeasybarberlounge.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 220
  },
  "http://alfanisbarbershop.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://www.alfanisbarbershop.com/",
-  "ms": 1063
+  "ms": 686
  },
- "https://bellasarasalon.com/": {
-  "status": "dead",
-  "http_status": 404,
-  "final_url": "https://bellasarasalon.com/?avia_forced_reroute=1",
-  "ms": 7764
- },
- "https://speakeasybarberlounge.com/": {
+ "https://cincobrothers.com/": {
   "status": "live",
-  "http_status": 200,
-  "ms": 320
+  "http_status": 202,
+  "ms": 176
  },
  "https://www.locdwithlovellc.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 880
- },
- "https://www.dbrookesalon.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 180
- },
- "https://cincobrothers.com/": {
-  "status": "error",
-  "error": "UND_ERR_SOCKET",
-  "ms": 261
- },
- "https://www.antoineduchez.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 174
- },
- "https://stansdowntownbarbers.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 853
+  "ms": 681
  },
  "https://hickoryhairaffair.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 432
+  "ms": 81
  },
- "https://www.mtnandmanesalon.com/": {
+ "https://www.dbrookesalon.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 130
+  "ms": 147
+ },
+ "https://www.antoineduchez.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 71
+ },
+ "https://stansdowntownbarbers.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 683
+ },
+ "https://www.figarossalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://figarossalon.com/",
+  "ms": 1990
  },
  "https://clipperclark.square.site/": {
   "status": "live",
@@ -1731,2521 +1729,2529 @@
  "https://studio-828.square.site/": {
   "status": "live",
   "http_status": 200,
-  "ms": 525
- },
- "https://www.katies5280.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 611
+  "ms": 380
  },
  "https://shearfaithsalonfc.glossgenius.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 518
+  "ms": 381
  },
- "https://salons.greatclips.com/us/co/centennial/5210-e-arapahoe-rd": {
+ "https://www.mtnandmanesalon.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 107
+  "ms": 125
  },
  "https://www.swanksalononline.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 172
+  "ms": 66
  },
  "https://www.floydsbarbershop.com/arvada--53rd--wadsworth/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://www.floydsbarbershop.com/locations/colorado/denver/arvada-53rd-wadsworth",
-  "ms": 417
+  "ms": 132
  },
- "https://commonsalon.com/": {
+ "https://salons.greatclips.com/us/co/centennial/5210-e-arapahoe-rd": {
   "status": "live",
   "http_status": 200,
-  "ms": 171
+  "ms": 182
  },
- "https://babooshka.glossgenius.com/": {
+ "https://salon66-arvada.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 425
- },
- "https://paulmitchell.edu/coloradosprings": {
-  "status": "blocked",
-  "http_status": 403,
-  "ms": 26
+  "ms": 780
  },
  "https://studio153.glossgenius.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 393
- },
- "http://www.salonbella4u.com/": {
-  "status": "dead",
-  "error": "ENOTFOUND",
-  "ms": 59
- },
- "https://thebeautystudio.netlify.app/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 377
- },
- "http://formandfunctionhairdressing.com/locations.html": {
-  "status": "dead",
-  "error": "ENOTFOUND",
-  "ms": 54
- },
- "http://www.hethers.com/": {
-  "status": "error",
-  "error": "UND_ERR_SOCKET",
-  "ms": 170
+  "ms": 418
  },
  "https://cassandra-gallegos.square.site/": {
   "status": "live",
   "http_status": 200,
-  "ms": 920
+  "ms": 581
+ },
+ "https://paulmitchell.edu/coloradosprings": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 16
+ },
+ "https://thebeautystudio.netlify.app/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 303
+ },
+ "http://www.hethers.com/": {
+  "status": "live",
+  "http_status": 202,
+  "ms": 45
+ },
+ "http://www.salonbella4u.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 20
+ },
+ "http://formandfunctionhairdressing.com/locations.html": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 17
+ },
+ "https://www.katies5280.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1014
  },
  "https://www.edensalonandbarbershop.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 205
+  "ms": 84
+ },
+ "https://babooshka.glossgenius.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 618
+ },
+ "https://commonsalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 245
  },
  "https://www.greatclips.com/salons/487": {
   "status": "dead",
   "http_status": 404,
   "final_url": "https://salons.greatclips.com/salons/487",
-  "ms": 365
- },
- "https://intellitec.edu/locations/grand-junction-cosmetology-salon-clinic/": {
-  "status": "dead",
-  "http_status": 404,
-  "ms": 454
- },
- "https://salon66-arvada.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 1606
+  "ms": 210
  },
  "https://www.dustansbarbershop.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 206
+  "ms": 113
+ },
+ "https://shearsbarbershop.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 358
  },
  "https://cavicuts2on1st.setmore.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 416
+  "ms": 268
  },
  "https://www.mauvesalonandspa.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 130
+  "ms": 54
  },
- "http://www.themodernsalonstudios.com/": {
-  "status": "error",
-  "error": "TimeoutError",
-  "ms": 15000
+ "https://intellitec.edu/locations/grand-junction-cosmetology-salon-clinic/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 468
+ },
+ "https://www.refinementsonmain.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 404
  },
  "https://www.zumahairstudio.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 298
+  "ms": 315
+ },
+ "https://www.supercuts.com/locations/nearme/haircut/CO/CLIFTON/3235-I-70-BUSINESS-LOOP-STE-B/81049": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 49
  },
  "https://www.greatclips.com/salons/1331": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://salons.greatclips.com/us/co/littleton/6756-w-coal-mine-ave",
-  "ms": 219
- },
- "https://www.supercuts.com/locations/nearme/haircut/CO/CLIFTON/3235-I-70-BUSINESS-LOOP-STE-B/81049": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 88
- },
- "https://www.refinementsonmain.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 1117
- },
- "https://shearsbarbershop.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 1471
- },
- "http://boxstatebarbers.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 166
- },
- "https://theofficialtruegrit.com/": {
-  "status": "error",
-  "error": "UND_ERR_SOCKET",
-  "ms": 199
- },
- "https://angelabernaltheht.glossgenius.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 484
+  "ms": 280
  },
  "https://www.tresbeauxsalongj.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://www.tresbeauxsalongj.com/Error/CookiesDisabled",
-  "ms": 1045
+  "ms": 373
  },
- "https://www.vagaro.com/five60salon": {
+ "http://boxstatebarbers.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 1741
+  "ms": 151
+ },
+ "https://theofficialtruegrit.com/": {
+  "status": "live",
+  "http_status": 202,
+  "ms": 160
+ },
+ "https://angelabernaltheht.glossgenius.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 434
  },
  "https://thevortexbarbershop.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 221
+  "ms": 57
  },
  "https://labellavitaspa.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 1220
+  "ms": 880
  },
  "https://theskincompany.com/": {
-  "status": "error",
-  "error": "UND_ERR_SOCKET",
-  "ms": 134
- },
- "https://www.ladyjanes.com/": {
   "status": "live",
-  "http_status": 200,
-  "ms": 1291
- },
- "http://mychellusa.com/": {
-  "status": "dead",
-  "error": "ENOTFOUND",
-  "ms": 61
- },
- "https://hollywoodbodyandface.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 271
- },
- "http://www.sheshelounge.com/": {
-  "status": "error",
-  "http_status": 503,
-  "ms": 170
+  "http_status": 202,
+  "ms": 167
  },
  "http://www.hairendipitydowntown.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://www.hairendipitydowntown.com/",
-  "ms": 460
+  "ms": 279
  },
- "https://booksy.com/en-us/60204_manny-sharpimage_barber-shop_15106_grand-junction": {
+ "https://hollywoodbodyandface.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 756
+  "ms": 61
+ },
+ "http://mychellusa.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 18
+ },
+ "https://bellasarasalon.com/": {
+  "status": "dead",
+  "http_status": 404,
+  "final_url": "https://bellasarasalon.com/?avia_forced_reroute=1",
+  "ms": 6470
+ },
+ "https://www.ladyjanes.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1094
  },
  "https://www.saloncosabella.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 171
+  "ms": 41
  },
  "https://www.charmingnailsboulder.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 317
+  "ms": 113
  },
- "https://www.sephora.com/stores/boulder": {
-  "status": "blocked",
-  "http_status": 403,
-  "ms": 331
+ "http://www.sheshelounge.com/": {
+  "status": "error",
+  "http_status": 503,
+  "ms": 158
  },
- "https://luxurynailslouisville.com/": {
+ "https://booksy.com/en-us/60204_manny-sharpimage_barber-shop_15106_grand-junction": {
   "status": "live",
   "http_status": 200,
-  "final_url": "https://theoceanwide.com/",
-  "ms": 860
- },
- "http://tandknailsalon.com/": {
-  "status": "dead",
-  "error": "ENOTFOUND",
-  "ms": 115
+  "ms": 594
  },
  "http://www.bouldereyebrowthreading.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://bouldereyebrowthreading.com/",
-  "ms": 697
+  "ms": 83
+ },
+ "https://www.sephora.com/stores/boulder": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 33
  },
  "http://nicenailsfortcollins.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://nicenailsfortcollins.com/",
-  "ms": 259
+  "ms": 71
  },
- "https://frenchiesnails.com/location/co-fort-collins/": {
+ "http://tandknailsalon.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 6
+ },
+ "https://luxurynailslouisville.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 645
- },
- "https://www.29thnailspa.com/": {
-  "status": "dead",
-  "error": "EAI_AGAIN",
-  "ms": 705
+  "final_url": "https://theoceanwide.com/",
+  "ms": 413
  },
  "https://www.cgnailsandspa.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 486
+  "ms": 239
  },
- "https://www.lashandcompany.com/co-fort-collins/": {
+ "https://frenchiesnails.com/location/co-fort-collins/": {
   "status": "live",
   "http_status": 200,
-  "ms": 1226
+  "ms": 393
  },
  "https://www.sugaringmepretty.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://sugaringmepretty.com/",
-  "ms": 607
+  "ms": 83
  },
  "https://www.therefillrevolution.com/": {
   "status": "blocked",
   "http_status": 403,
   "final_url": "https://www.hugedomains.com/domain_profile.cfm?d=therefillrevolution.com",
-  "ms": 529
+  "ms": 51
  },
  "https://www.ulta.com/stores/denver-co-70": {
   "status": "live",
   "http_status": 200,
-  "ms": 660
- },
- "http://siennatans.com/": {
-  "status": "dead",
-  "error": "ENOTFOUND",
-  "ms": 40
+  "ms": 319
  },
  "https://www.atbtanning.com/locations/store/hampden-tamarac-denver/": {
   "status": "dead",
   "http_status": 404,
-  "ms": 258
+  "ms": 53
  },
- "http://www.debonetchalet.com/": {
+ "http://siennatans.com/": {
   "status": "dead",
   "error": "ENOTFOUND",
-  "ms": 113
+  "ms": 28
  },
  "https://clementinesdenver.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 150
+  "ms": 50
  },
- "https://www.ulta.com/stores/fort-collins-co-333": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 267
+ "http://www.debonetchalet.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 10
  },
  "http://www.aquabaytans.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 415
- },
- "http://sleeknailsspa.com/": {
-  "status": "dead",
-  "error": "ENOTFOUND",
-  "ms": 146
- },
- "https://abovegrounddenver.com/": {
-  "status": "error",
-  "error": "UND_ERR_CONNECT_TIMEOUT",
-  "ms": 10371
- },
- "https://salonsalonfortcollins.com/": {
-  "status": "live",
-  "http_status": 200,
-  "final_url": "https://www.salonsalonfortcollins.com/",
-  "ms": 770
- },
- "https://locations.waxcenter.com/co/aurora/aurora-parker-arapahoe-roads-0173.html": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 501
- },
- "http://3rdavenuestudio.com/": {
-  "status": "dead",
-  "error": "ENOTFOUND",
-  "ms": 34
- },
- "http://kimswigbotik.com/": {
-  "status": "live",
-  "http_status": 200,
-  "final_url": "https://www.kimswigbotik.com/",
-  "ms": 1097
- },
- "https://www.solasalonstudios.com/locations/front-range-village": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 602
- },
- "http://www.atbtanning.com/": {
-  "status": "live",
-  "http_status": 200,
-  "final_url": "https://palmbeachtan.com/",
-  "ms": 288
+  "ms": 171
  },
  "https://www.thepostsalon.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://thepostsalon.com/",
-  "ms": 3444
+  "ms": 1733
  },
- "https://palmbeachtan.com/locations/CO/Denver-Broadway": {
+ "http://kimswigbotik.com/": {
   "status": "live",
   "http_status": 200,
-  "final_url": "https://palmbeachtan.com/locations/co/denver-broadway",
-  "ms": 1163
+  "final_url": "https://www.kimswigbotik.com/",
+  "ms": 385
  },
- "https://www.glosshouz.com/": {
+ "https://www.lashandcompany.com/co-fort-collins/": {
   "status": "live",
   "http_status": 200,
-  "ms": 188
+  "ms": 936
+ },
+ "https://salonsalonfortcollins.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.salonsalonfortcollins.com/",
+  "ms": 77
+ },
+ "http://sleeknailsspa.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 10
+ },
+ "https://www.vagaro.com/five60salon": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 2530
+ },
+ "https://www.ulta.com/stores/fort-collins-co-333": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 236
+ },
+ "https://www.29thnailspa.com/": {
+  "status": "dead",
+  "error": "EAI_AGAIN",
+  "ms": 1046
+ },
+ "http://3rdavenuestudio.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 9
  },
  "https://www.restore.com/locations/co-wheat-ridge-co027": {
   "status": "live",
   "http_status": 200,
-  "ms": 366
+  "ms": 38
  },
  "https://kubiti.wordpress.com/nail-trends/?q=nails+time+salon": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://kubiti.org/nail-trends/?q=nails+time+salon",
-  "ms": 369
+  "ms": 59
  },
- "https://palmbeachtan.com/locations/CO/Centennial": {
+ "https://www.glosshouz.com/": {
   "status": "live",
   "http_status": 200,
-  "final_url": "https://palmbeachtan.com/locations/co/centennial",
-  "ms": 998
+  "ms": 42
+ },
+ "https://www.solasalonstudios.com/locations/front-range-village": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 272
+ },
+ "https://luxuriousnailsgolden.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 131
+ },
+ "https://locations.waxcenter.com/co/aurora/aurora-parker-arapahoe-roads-0173.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 411
+ },
+ "http://www.atbtanning.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://palmbeachtan.com/",
+  "ms": 368
  },
  "https://lvspanailsgrandjunction.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 238
- },
- "https://www.ulta.com/stores/grand-junction-co-313": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 211
+  "ms": 110
  },
  "https://www.atbtanning.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://palmbeachtan.com/",
-  "ms": 421
- },
- "https://www.advancedskincaregj.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 107
- },
- "https://aerostudiosalons.com/": {
-  "status": "error",
-  "error": "UNABLE_TO_GET_ISSUER_CERT_LOCALLY",
-  "ms": 174
+  "ms": 237
  },
  "https://thenailspagrandjunction.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 370
+  "ms": 92
+ },
+ "https://aerostudiosalons.com/": {
+  "status": "error",
+  "error": "UNABLE_TO_GET_ISSUER_CERT_LOCALLY",
+  "ms": 57
+ },
+ "https://www.advancedskincaregj.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 58
+ },
+ "https://palmbeachtan.com/locations/CO/Centennial": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://palmbeachtan.com/locations/co/centennial",
+  "ms": 645
  },
  "https://signaturenailsgrandjunction.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 480
+  "ms": 250
  },
  "https://planetnailsboulder.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 261
+  "ms": 69
+ },
+ "https://palmbeachtan.com/locations/CO/Denver-Broadway": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://palmbeachtan.com/locations/co/denver-broadway",
+  "ms": 721
+ },
+ "https://xonailspa.com/": {
+  "status": "live",
+  "http_status": 202,
+  "ms": 52
+ },
+ "https://www.ulta.com/stores/grand-junction-co-313": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 379
  },
  "https://www.idealimage.com/locations/colorado/boulder": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://idealimage.com/",
-  "ms": 2481
- },
- "https://xonailspa.com/": {
-  "status": "error",
-  "error": "UND_ERR_SOCKET",
-  "ms": 330
- },
- "https://hydrateivbar.com/location/folsom-village-boulder/": {
-  "status": "error",
-  "error": "UND_ERR_SOCKET",
-  "ms": 293
- },
- "https://www.ulta.com/stores/westminster-co-540": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 351
- },
- "https://milanlaser.com/locations/co/colorado-springs/2014-southgate-rd": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 979
- },
- "https://locations.waxcenter.com/co/denver/denver-tiffany-plaza-0131.html": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 76
+  "ms": 1448
  },
  "https://skinspirit.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://www.skinspirit.com/",
-  "ms": 655
+  "ms": 146
  },
  "https://www.handandstonelakewood.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://handandstone.com/locations/lakewood-belmar/",
-  "ms": 856
+  "ms": 363
  },
- "https://us.aritaum.com/": {
+ "https://hydrateivbar.com/location/folsom-village-boulder/": {
   "status": "live",
-  "http_status": 200,
-  "ms": 329
+  "http_status": 202,
+  "ms": 285
  },
  "https://glammedispa.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://www.glammedispa.com/",
-  "ms": 521
- },
- "https://www.ulta.com/stores/greeley-co-1033": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 227
- },
- "https://www.topnailpueblo.net/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 421
- },
- "http://pineycreeknails.com/": {
-  "status": "dead",
-  "error": "ENOTFOUND",
-  "ms": 43
+  "ms": 89
  },
  "https://www.madison-reed.com/colorbar/locations/boulder": {
   "status": "live",
   "http_status": 200,
-  "ms": 1841
+  "ms": 681
+ },
+ "https://us.aritaum.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 179
+ },
+ "https://www.ulta.com/stores/westminster-co-540": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 441
+ },
+ "https://locations.waxcenter.com/co/denver/denver-tiffany-plaza-0131.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 616
+ },
+ "https://milanlaser.com/locations/co/colorado-springs/2014-southgate-rd": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1072
+ },
+ "http://pineycreeknails.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 11
  },
  "https://www.joyfill.co/": {
   "status": "live",
   "http_status": 200,
-  "ms": 896
+  "ms": 296
+ },
+ "https://www.topnailpueblo.net/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 282
+ },
+ "https://salonnove.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 56
  },
  "https://www.doyouwaxit.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 186
+  "ms": 141
  },
  "https://lolanailslashes.com/": {
-  "status": "error",
-  "error": "UND_ERR_SOCKET",
-  "ms": 212
+  "status": "live",
+  "http_status": 202,
+  "ms": 54
+ },
+ "https://bronzeddenver.com/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 173
+ },
+ "https://www.waxingthecity.com/locations/w2/us/co/parker/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 136
  },
  "https://www.glotanning.com/location/boulder/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://www.glotanning.com/location/boulder-co/",
-  "ms": 2268
+  "ms": 1687
  },
- "https://bronzeddenver.com/": {
-  "status": "dead",
-  "http_status": 404,
-  "ms": 456
- },
- "https://www.waxingthecity.com/locations/w2/us/co/parker/": {
+ "https://www.ulta.com/stores/greeley-co-1033": {
   "status": "live",
   "http_status": 200,
-  "ms": 277
- },
- "https://dekalash.com/find-a-studio/colorado/parker": {
-  "status": "error",
-  "error": "UND_ERR_SOCKET",
-  "ms": 188
+  "ms": 667
  },
  "https://amazinglashstudio.com/": {
   "status": "blocked",
   "http_status": 403,
-  "ms": 112
- },
- "https://www.ulta.com/stores/littleton-co-774": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 198
+  "ms": 48
  },
  "http://encorenailspaboulder.com/": {
   "status": "dead",
   "error": "ENOTFOUND",
-  "ms": 37
+  "ms": 5
  },
- "https://www.cleanyourdirtyface.com/boulder": {
+ "https://dekalash.com/find-a-studio/colorado/parker": {
   "status": "live",
-  "http_status": 200,
-  "ms": 133
+  "http_status": 202,
+  "ms": 282
  },
  "https://on-the-edge-barber-styling.business.site/": {
   "status": "dead",
   "http_status": 404,
-  "ms": 855
+  "ms": 548
+ },
+ "https://www.ulta.com/stores/littleton-co-774": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 182
+ },
+ "https://www.cleanyourdirtyface.com/boulder": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 53
  },
  "https://innovaesmethod.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://innovaes.life/",
-  "ms": 619
- },
- "https://locations.waxcenter.com/co/fortcollins/fort-collins-0616.html": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 523
- },
- "https://elegantnailsparker.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 2417
- },
- "https://www.sassysuntan.com/": {
-  "status": "live",
-  "http_status": 200,
-  "final_url": "https://banyu4d113.com/",
-  "ms": 1841
+  "ms": 178
  },
  "https://palmbeachtan.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 271
+  "ms": 211
+ },
+ "https://divanailsloveland.org/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 332
  },
  "https://www.atbtanning.com/locations/store/28th-pearl-boulder/": {
   "status": "dead",
   "http_status": 404,
-  "ms": 236
+  "ms": 21
  },
  "https://theresanails.webs.com/": {
   "status": "dead",
   "error": "ENOTFOUND",
-  "ms": 184
+  "ms": 6
+ },
+ "https://locations.waxcenter.com/co/fortcollins/fort-collins-0616.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 415
+ },
+ "https://www.polishnailsboulder.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://polishnailsboulder.com/",
+  "ms": 188
  },
  "https://www.roycespas.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 132
- },
- "https://salonnove.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 2142
+  "ms": 88
  },
  "https://locations.waxcenter.com/co/boulder/boulder-0552.html": {
   "status": "live",
   "http_status": 200,
-  "ms": 732
+  "ms": 448
  },
  "https://www.screaminpeach.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://screaminpeach.com/",
-  "ms": 388
+  "ms": 260
+ },
+ "https://www.sassysuntan.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://banyu4d113.com/",
+  "ms": 1640
  },
  "http://www.digitsvail.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 402
- },
- "https://www.cosbar.com/storepickup/cos-bar-vail": {
-  "status": "dead",
-  "http_status": 404,
-  "final_url": "https://cosbar.com/storepickup/cos-bar-vail",
-  "ms": 569
- },
- "https://www.thevailcollection.com/play-dine/arrabelle-spa": {
-  "status": "error",
-  "error": "ERR_TLS_CERT_ALTNAME_INVALID",
-  "ms": 154
+  "ms": 310
  },
  "https://fourseasons.com/vail/spa": {
   "status": "blocked",
   "http_status": 403,
   "final_url": "https://www.fourseasons.com/vail/spa",
-  "ms": 356
+  "ms": 108
  },
  "https://oasis-nails-spa-grand-junction.edan.io/": {
   "status": "blocked",
   "http_status": 403,
-  "ms": 104
+  "ms": 25
+ },
+ "https://elegantnailsparker.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 2235
+ },
+ "https://www.thevailcollection.com/play-dine/arrabelle-spa": {
+  "status": "error",
+  "error": "ERR_TLS_CERT_ALTNAME_INVALID",
+  "ms": 151
+ },
+ "http://www.themodernsalonstudios.com/": {
+  "status": "error",
+  "error": "TimeoutError",
+  "ms": 15001
+ },
+ "https://focusnailgrandjunction.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 140
  },
  "https://www.resveralife.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 1160
- },
- "https://www.lavailboutique.com/": {
-  "status": "live",
-  "http_status": 200,
-  "final_url": "https://cenizaindigo.com/producto/botines-bratz-cana-alta/",
-  "ms": 1162
- },
- "https://divanailsloveland.org/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 2306
+  "ms": 748
  },
  "https://facialaestheticsinc.com/fort-collins/": {
   "status": "blocked",
   "http_status": 403,
-  "ms": 63
+  "ms": 58
  },
- "https://nailcessityspacoloradosprings.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 241
- },
- "https://www.lashandcompany.com/co-louisville/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 963
- },
- "https://www.ulta.com/stores/johnstown-co-1234": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 540
+ "https://www.cosbar.com/storepickup/cos-bar-vail": {
+  "status": "dead",
+  "http_status": 404,
+  "final_url": "https://cosbar.com/storepickup/cos-bar-vail",
+  "ms": 644
  },
  "https://www.tanyourhide.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 354
+  "ms": 48
  },
- "https://glossynails.us/": {
+ "https://nailcessityspacoloradosprings.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 180
+  "ms": 88
+ },
+ "https://jolienailspacoloradosprings.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 182
  },
  "https://www.glowtanninggj.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 147
+  "ms": 67
+ },
+ "https://glossynails.us/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 112
  },
  "https://crystalnailsloveland.com/": {
   "status": "dead",
   "http_status": 404,
   "final_url": "https://www.crystalnailsloveland.com/",
-  "ms": 292
- },
- "https://mesaspaandnails.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 254
+  "ms": 197
  },
  "https://www.blauna-aesthetics.com/": {
   "status": "dead",
   "error": "ENOTFOUND",
-  "ms": 45
+  "ms": 25
+ },
+ "https://mesaspaandnails.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 191
+ },
+ "https://www.ulta.com/stores/johnstown-co-1234": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 406
+ },
+ "https://www.lavailboutique.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://cenizaindigo.com/producto/botines-bratz-cana-alta/",
+  "ms": 1169
  },
  "https://www.dollskinbeauty.com/": {
   "status": "dead",
   "http_status": 404,
-  "ms": 331
+  "ms": 123
  },
- "https://hollywoodbodyandface.com/colorado-springs/": {
+ "https://lvnailmidtownfortcollins.com/contact": {
   "status": "live",
   "http_status": 200,
-  "ms": 2357
- },
- "https://salonsbyjc.com/location/colorado-denver-observatory-park": {
-  "status": "live",
-  "http_status": 200,
-  "final_url": "https://salonsbyjc.com/location/colorado-denver-observatory-park/",
-  "ms": 1181
- },
- "https://jaggededgestudiosalon.square.site/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 348
+  "ms": 119
  },
  "https://www.transformationsspaandsalon.com/": {
   "status": "dead",
   "error": "EAI_AGAIN",
-  "ms": 804
+  "ms": 237
+ },
+ "https://jaggededgestudiosalon.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 276
+ },
+ "https://www.lashandcompany.com/co-louisville/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 983
  },
  "https://locations.waxcenter.com/co/coloradosprings/colorado-springs-0174.html": {
   "status": "live",
   "http_status": 200,
-  "ms": 640
- },
- "https://thedermalair.glossgenius.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 1126
+  "ms": 409
  },
  "https://ebsalons.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://www.opalbyeb.com/",
-  "ms": 359
+  "ms": 220
  },
- "https://veenailsspa.com/": {
+ "https://thedermalair.glossgenius.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 938
- },
- "https://www.bathandbodyworks.com/": {
-  "status": "error",
-  "http_status": 307,
-  "ms": 185
- },
- "https://www.ulta.com/stores/colorado-springs-co-133": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 313
- },
- "https://www.allaboutyou-dayspa.com/": {
-  "status": "error",
-  "error": "UND_ERR_CONNECT_TIMEOUT",
-  "ms": 10213
+  "ms": 496
  },
  "https://www.anthonyvincenailspa.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 169
+  "ms": 42
  },
- "https://facefoundrie.com/location/colorado-springs": {
+ "https://www.bathandbodyworks.com/": {
+  "status": "error",
+  "http_status": 307,
+  "ms": 160
+ },
+ "https://salonsbyjc.com/location/colorado-denver-observatory-park": {
   "status": "live",
   "http_status": 200,
-  "final_url": "https://facefoundrie.com/location/colorado-springs/",
-  "ms": 1086
+  "final_url": "https://salonsbyjc.com/location/colorado-denver-observatory-park/",
+  "ms": 1036
  },
- "https://www.jackandjillchildrenssalon.com/": {
+ "https://www.ulta.com/stores/colorado-springs-co-133": {
   "status": "live",
   "http_status": 200,
-  "ms": 306
+  "ms": 317
  },
  "https://www.blushbeautybarloveland.com/": {
   "status": "dead",
   "error": "ENOTFOUND",
-  "ms": 44
+  "ms": 21
  },
  "https://www.simplicitylaser.com/pages/denver-co": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://simplicitylaser.com/pages/denver-co",
-  "ms": 788
+  "ms": 294
  },
- "https://barrislaser.com/": {
+ "https://www.jackandjillchildrenssalon.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 1083
+  "ms": 228
+ },
+ "https://veenailsspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 784
+ },
+ "https://facefoundrie.com/location/colorado-springs": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://facefoundrie.com/location/colorado-springs/",
+  "ms": 642
+ },
+ "https://thenailspafoco.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 9
+ },
+ "https://www.ulta.com/stores/colorado-springs-co-1536": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 195
+ },
+ "https://www.ulta.com/stores/westminster-co-789": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 377
+ },
+ "https://www.ulta.com/stores/wheat-ridge-co-1267": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 165
+ },
+ "https://www.slaysisbeauty.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 11
+ },
+ "https://jtnailsco.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 148
+ },
+ "https://watersidedayspa.com/": {
+  "status": "error",
+  "error": "ERR_SSL_TLSV1_ALERT_INTERNAL_ERROR",
+  "ms": 97
+ },
+ "https://www.thespasalon.net/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 7
  },
  "https://waxxpot.com/locations/denver/": {
   "status": "dead",
   "http_status": 404,
   "final_url": "https://waxxpot.com/co/denver/cherrry-creek/",
-  "ms": 2263
+  "ms": 1156
  },
- "https://www.ulta.com/stores/westminster-co-789": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 261
- },
- "https://thenailspafoco.com/": {
+ "https://www.glowep.com/": {
   "status": "dead",
   "error": "ENOTFOUND",
-  "ms": 28
- },
- "https://www.ulta.com/stores/colorado-springs-co-1536": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 340
+  "ms": 5
  },
  "https://www.thelashlounge.com/co-boulder-alcove-arapahoe": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://www.thelashlounge.com/",
-  "ms": 932
- },
- "https://www.ulta.com/stores/wheat-ridge-co-1267": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 235
- },
- "https://www.slaysisbeauty.com/": {
-  "status": "dead",
-  "error": "ENOTFOUND",
-  "ms": 71
- },
- "https://www.ulta.com/stores/superior-co-1116": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 516
- },
- "https://watersidedayspa.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 246
- },
- "https://www.thespasalon.net/": {
-  "status": "dead",
-  "error": "ENOTFOUND",
-  "ms": 41
- },
- "https://renaudnaturals.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 3354
- },
- "https://www.glowep.com/": {
-  "status": "dead",
-  "error": "ENOTFOUND",
-  "ms": 34
- },
- "https://www.ulta.com/stores/arvada-co-1419": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 312
- },
- "https://www.studioeightsalonandspa.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 231
- },
- "https://luxuriousnailsgolden.com/": {
-  "status": "error",
-  "error": "TimeoutError",
-  "ms": 15000
+  "ms": 756
  },
  "https://www.slatesalonstudios.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 117
+  "ms": 65
+ },
+ "https://www.ulta.com/stores/superior-co-1116": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 460
  },
  "https://bnbnailsspa.com/": {
-  "status": "error",
-  "error": "UND_ERR_SOCKET",
-  "ms": 291
+  "status": "live",
+  "http_status": 202,
+  "ms": 38
+ },
+ "https://www.studioeightsalonandspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 175
  },
  "https://www.dolcenailssalon.com/": {
   "status": "dead",
   "error": "ENOTFOUND",
-  "ms": 39
+  "ms": 11
  },
  "https://joanneshouseofnaturalbeauty.com/": {
   "status": "dead",
   "error": "ENOTFOUND",
-  "ms": 27
+  "ms": 5
  },
- "https://locations.waxcenter.com/co/coloradosprings/colorado-springs-interquest-marketplace-0906.html": {
+ "https://barrislaser.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 348
- },
- "https://studiourbanwax.com/locations/": {
-  "status": "error",
-  "error": "ERR_TLS_CERT_ALTNAME_INVALID",
-  "ms": 451
+  "ms": 1075
  },
  "https://www.skindeepfc.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 125
+  "ms": 64
  },
  "https://www.primfoco.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 197
+  "ms": 62
  },
  "https://www.dluxbeautybox.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://www.dluxbrowsandbeauty.com/",
-  "ms": 311
+  "ms": 134
  },
- "https://jolienailspacoloradosprings.com/": {
+ "https://studiourbanwax.com/locations/": {
+  "status": "error",
+  "error": "ERR_TLS_CERT_ALTNAME_INVALID",
+  "ms": 467
+ },
+ "https://locations.waxcenter.com/co/coloradosprings/colorado-springs-interquest-marketplace-0906.html": {
   "status": "live",
   "http_status": 200,
-  "ms": 10273
+  "ms": 469
  },
  "http://thevenusnails.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://thevenusnails.com/",
-  "ms": 669
+  "ms": 458
  },
  "https://www.ulta.com/stores/fort-collins-co-1168": {
   "status": "live",
   "http_status": 200,
-  "ms": 219
+  "ms": 202
+ },
+ "https://www.ulta.com/stores/arvada-co-1419": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 804
  },
  "https://aspenvidamedispa.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 142
- },
- "https://www.ulta.com/stores/littleton-co-58": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 214
- },
- "https://www.rejuvenatecolorado.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 357
- },
- "https://square.site/book/8DT21NPH7K938/glamour-by-kristi-longmont-co": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 705
+  "ms": 74
  },
  "https://www.bestprosintown.com/co/salida/cj-and-company-salon-and-bodyworks-/": {
   "status": "live",
   "http_status": 200,
-  "ms": 255
+  "ms": 53
+ },
+ "https://square.site/book/8DT21NPH7K938/glamour-by-kristi-longmont-co": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 323
  },
  "https://www.reflectionsofeaton.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 217
+  "ms": 58
  },
- "https://www.novatans.com/": {
+ "https://www.ulta.com/stores/littleton-co-58": {
   "status": "live",
   "http_status": 200,
-  "ms": 273
+  "ms": 291
  },
  "https://pamperednailsspa.com/": {
   "status": "dead",
   "http_status": 404,
-  "ms": 223
+  "ms": 47
  },
  "https://www.nailsgolden.com/": {
   "status": "error",
   "error": "UNABLE_TO_GET_ISSUER_CERT_LOCALLY",
-  "ms": 193
+  "ms": 62
  },
- "https://aluxspalon.com/": {
+ "https://hollywoodbodyandface.com/colorado-springs/": {
   "status": "live",
   "http_status": 200,
-  "ms": 120
+  "ms": 3299
  },
- "https://www.expressionsseverance.com/": {
-  "status": "dead",
-  "error": "ENOTFOUND",
-  "ms": 84
+ "https://www.rejuvenatecolorado.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 435
  },
  "https://www.spraytanningboutique.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 178
+  "ms": 71
+ },
+ "https://www.expressionsseverance.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 6
+ },
+ "https://aluxspalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 131
  },
  "https://laserallclinic.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 175
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 43
  },
- "https://www.beauty-haven.com/": {
+ "https://www.novatans.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 681
+  "ms": 259
  },
  "https://vespergray.com/": {
   "status": "error",
   "error": "ERR_TLS_CERT_ALTNAME_INVALID",
-  "ms": 88
+  "ms": 20
  },
- "https://flawlessglogj.com/": {
+ "https://beautinailsspalakewood.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 200
+  "ms": 149
+ },
+ "https://www.beauty-haven.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 467
  },
  "https://www.ulta.com/stores/aurora-co-414": {
   "status": "live",
   "http_status": 200,
-  "ms": 439
+  "ms": 176
  },
- "https://www.vagaro.com/blueskynailsandlashlowry": {
-  "status": "dead",
-  "http_status": 404,
-  "ms": 765
- },
- "https://focusnailgrandjunction.com/": {
+ "https://flawlessglogj.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 12386
- },
- "https://milanlaserdenver.com/locations/denver/aurora/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 556
+  "ms": 233
  },
  "https://phenixsalonsuites.com/locations-detail/?id=168#professional_list_list": {
   "status": "blocked",
   "http_status": 403,
   "final_url": "https://phenixsalonsuites.com/locations-detail/?id=168",
-  "ms": 136
+  "ms": 44
  },
- "https://thewaxshoppe.com/": {
+ "https://milanlaserdenver.com/locations/denver/aurora/": {
   "status": "live",
   "http_status": 200,
-  "ms": 2078
+  "ms": 303
+ },
+ "https://www.vagaro.com/blueskynailsandlashlowry": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 446
+ },
+ "https://lrskin.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 58
  },
  "https://www.grottowax.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://grottowax.com/",
-  "ms": 531
+  "ms": 211
  },
- "https://www.polishnailsboulder.com/": {
-  "status": "error",
-  "error": "TimeoutError",
-  "ms": 15001
- },
- "https://lrskin.com/": {
+ "https://thewaxshoppe.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 130
- },
- "https://www.ulta.com/stores/castle-rock-co-1146": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 321
- },
- "https://facialaestheticsinc.com/golden": {
-  "status": "blocked",
-  "http_status": 403,
-  "ms": 54
+  "ms": 596
  },
  "https://www.simplicitylaser.com/pages/centennial": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://simplicitylaser.com/pages/centennial",
-  "ms": 490
+  "ms": 213
+ },
+ "https://www.ulta.com/stores/castle-rock-co-1146": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 238
  },
  "https://ledlavelier.com/": {
   "status": "dead",
   "error": "ENOTFOUND",
-  "ms": 47
- },
- "https://www.browarc.com/mesa-mall": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 307
- },
- "https://www.ulta.com/stores/aurora-co-1658": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 399
- },
- "https://www.cherrycreekelectrolysis.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 817
- },
- "https://www.nocoaestheticsstudio.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 140
- },
- "https://white-shell-mountain-ranch.square.site/": {
-  "status": "dead",
-  "error": "ENOTFOUND",
-  "ms": 375
- },
- "https://blueravencosmo.square.site/": {
-  "status": "dead",
-  "http_status": 404,
-  "ms": 293
+  "ms": 22
  },
  "https://colourbarsalonandspa.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 2687
+  "ms": 653
  },
- "https://www.vagaro.com/lonails": {
-  "status": "dead",
-  "http_status": 404,
-  "ms": 367
- },
- "https://milanlaser.com/locations/co/denver/8223-s-quebec-st": {
+ "https://www.nocoaestheticsstudio.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 962
+  "ms": 57
+ },
+ "https://www.ulta.com/stores/aurora-co-1658": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 268
+ },
+ "https://www.browarc.com/mesa-mall": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 169
+ },
+ "https://facialaestheticsinc.com/golden": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://facialaestheticsinc.com/golden/",
+  "ms": 472
+ },
+ "https://white-shell-mountain-ranch.square.site/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 155
+ },
+ "https://blueravencosmo.square.site/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 165
+ },
+ "https://www.cherrycreekelectrolysis.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 880
  },
  "https://www.crimsonskyaesthetics.com/": {
   "status": "dead",
   "error": "ENOTFOUND",
-  "ms": 59
+  "ms": 11
  },
  "https://www.vagaro.com/lashgrandjunction": {
   "status": "dead",
   "http_status": 404,
   "final_url": "https://www.vagaro.com/PageNotFound.aspx",
-  "ms": 836
+  "ms": 561
  },
- "https://www.vagaro.com/activelashz": {
+ "https://renaudnaturals.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 858
+  "ms": 3612
  },
- "https://www.vagaro.com/lashin": {
+ "https://www.vagaro.com/lonails": {
   "status": "dead",
   "http_status": 404,
-  "ms": 275
+  "ms": 737
+ },
+ "https://milanlaser.com/locations/co/denver/8223-s-quebec-st": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 923
  },
  "https://square.site/book/8R9XJA19R00KD/the-body-shop-grand-junction-co": {
   "status": "live",
   "http_status": 200,
-  "ms": 633
+  "ms": 299
  },
  "https://book.squareup.com/appointments/616c2a993bjj7w/location/3FYDTZYW2MSVC": {
   "status": "live",
   "http_status": 200,
-  "ms": 194
- },
- "https://lvnailmidtownfortcollins.com/contact": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 14071
- },
- "https://elegantesthetics.glossgenius.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 975
- },
- "https://lashtastic-102086.square.site/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 494
+  "ms": 99
  },
  "https://www.spraycastlerock.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://spraycastlerock.com/",
-  "ms": 532
+  "ms": 67
+ },
+ "https://elegantesthetics.glossgenius.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 405
  },
  "https://enchantesalon.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 188
+  "ms": 98
  },
  "https://www.sunkissdtanandwellness.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 225
- },
- "https://www.ulta.com/stores/boulder-co-1717": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 215
+  "ms": 141
  },
  "https://www.gnaillounge.com/": {
-  "status": "error",
-  "error": "UND_ERR_SOCKET",
-  "ms": 380
+  "status": "live",
+  "http_status": 202,
+  "ms": 147
+ },
+ "https://www.vagaro.com/activelashz": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1208
  },
  "https://regenesisplasticsurgery.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 331
+  "ms": 55
  },
  "https://go.booker.com/location/accentbeauty": {
   "status": "live",
   "http_status": 200,
-  "ms": 359
+  "ms": 67
  },
- "https://www.vagaro.com/aboutfacegj": {
+ "https://www.ulta.com/stores/boulder-co-1717": {
   "status": "live",
   "http_status": 200,
-  "ms": 1921
- },
- "https://www.schoolofsa.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 491
+  "ms": 228
  },
  "https://www.laser-lofts.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://laser-lofts.com/",
-  "ms": 695
+  "ms": 93
  },
- "https://www.statebeautystores.com/": {
+ "https://www.schoolofsa.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 138
+  "ms": 116
+ },
+ "https://www.suiteoneskincare.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 496
+ },
+ "https://www.vagaro.com/aboutfacegj": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1629
  },
  "https://palmbeachtan.com/locations/co/arvada-wadsworth": {
   "status": "live",
   "http_status": 200,
-  "ms": 554
+  "ms": 480
  },
- "https://www.rejuvenatecolorado.com/locations/colorado-springs/": {
+ "https://www.statebeautystores.com/": {
   "status": "live",
   "http_status": 200,
-  "final_url": "https://www.rejuvenatecolorado.com/colorado-springs/",
-  "ms": 313
+  "ms": 149
+ },
+ "https://harmonynaillounge.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 131
  },
  "https://allaboutthesuds.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 150
+  "ms": 42
+ },
+ "https://theridgelinenails.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 78
  },
  "https://pinkpapayawaxnlash.com/": {
   "status": "dead",
   "http_status": 404,
   "final_url": "https://www.pinkpapayawaxnlash.com/",
-  "ms": 312
- },
- "https://www.suiteoneskincare.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 1125
- },
- "https://theridgelinenails.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 246
- },
- "https://sunstudiocos.com/": {
-  "status": "live",
-  "http_status": 200,
-  "final_url": "https://member.gyoumuyou.com/",
-  "ms": 284
+  "ms": 214
  },
  "https://julienailsandlashes.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://thefision.com/pages/secure-checkout-ssl-payments",
-  "ms": 2100
+  "ms": 1224
+ },
+ "https://sunstudiocos.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://member.gyoumuyou.com/",
+  "ms": 148
  },
  "https://www.waxingthecity.com/locations/w12/us/co/lakewood/": {
   "status": "live",
   "http_status": 200,
-  "ms": 277
+  "ms": 114
+ },
+ "https://www.rejuvenatecolorado.com/locations/colorado-springs/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.rejuvenatecolorado.com/colorado-springs/",
+  "ms": 680
+ },
+ "https://www.allaboutyou-dayspa.com/": {
+  "status": "error",
+  "error": "UND_ERR_CONNECT_TIMEOUT",
+  "ms": 10007
  },
  "https://thecoloradotan.com/location/": {
   "status": "live",
   "http_status": 200,
-  "ms": 270
+  "ms": 67
  },
  "https://orangetwist.com/locations/co/lakewood/": {
   "status": "blocked",
   "http_status": 403,
-  "ms": 113
+  "ms": 46
+ },
+ "https://milanonailspabelmar.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 112
+ },
+ "https://www.chispa.life/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 157
  },
  "https://mysalonsuite.com/lakewoodco": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://www.mysalonsuite.com/lakewoodco/",
-  "ms": 1123
+  "ms": 758
  },
- "https://www.vagaro.com/nudeskincarestudio": {
+ "https://vipnailspaarvada.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 1069
+  "ms": 174
  },
- "https://www.chispa.life/": {
+ "https://lashtastic-102086.square.site/": {
   "status": "live",
   "http_status": 200,
-  "ms": 227
+  "ms": 2151
  },
- "https://milanonailspabelmar.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 276
- },
- "https://palmbeachtan.com/locations/CO/Denver-Lowry": {
-  "status": "live",
-  "http_status": 200,
-  "final_url": "https://palmbeachtan.com/locations/co/denver-lowry",
-  "ms": 624
- },
- "https://inailspalakewood.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 1773
- },
- "https://kalonlaser.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 347
+ "https://www.vagaro.com/lashin": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 2291
  },
  "https://waxcenter.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 278
+  "ms": 87
  },
  "https://belmarcolorado.com/retailer/iffis-eyebrow-threading/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://belmarcolorado.com/retailer/iffis-eyebrow-threading",
-  "ms": 440
- },
- "https://www.viomedspa.com/locations/lowry": {
-  "status": "dead",
-  "http_status": 404,
-  "final_url": "http://viomedspa.com/locations/lowry/",
-  "ms": 1419
- },
- "https://www.cleanyourdirtyface.com/lakewood": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 73
+  "ms": 117
  },
  "https://locations.woodhousespas.com/colorado/centennial/6955-s-york-st/": {
   "status": "live",
   "http_status": 200,
-  "ms": 156
+  "ms": 27
  },
- "https://www.permanentcosmeticscolorado.com/": {
+ "https://www.cleanyourdirtyface.com/lakewood": {
   "status": "live",
   "http_status": 200,
-  "ms": 613
- },
- "https://www.timelessaestheticsllc.com/": {
-  "status": "blocked",
-  "http_status": 403,
-  "ms": 118
+  "ms": 34
  },
  "https://reservations.waxcenter.com/webstoreNew/4ddb2c05-c77d-4d37-b492-047263f1b0ab": {
   "status": "live",
   "http_status": 200,
-  "ms": 485
+  "ms": 205
+ },
+ "https://kalonlaser.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 472
+ },
+ "https://www.timelessaestheticsllc.com/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 68
+ },
+ "https://palmbeachtan.com/locations/CO/Denver-Lowry": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://palmbeachtan.com/locations/co/denver-lowry",
+  "ms": 631
+ },
+ "https://www.permanentcosmeticscolorado.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 536
  },
  "https://milanlaserdenver.com/locations/denver/wheatridge/": {
   "status": "live",
   "http_status": 200,
-  "ms": 502
+  "ms": 246
  },
  "https://www.fingersandtoesdenver.com/": {
   "status": "blocked",
   "http_status": 401,
-  "ms": 239
+  "ms": 149
  },
  "https://www.peaktox.com/dysport": {
   "status": "live",
   "http_status": 200,
-  "ms": 160
+  "ms": 64
+ },
+ "https://www.hellosugar.salon/co-coloradosprings-academy": {
+  "status": "blocked",
+  "http_status": 429,
+  "ms": 65
  },
  "https://locations.woodhousespas.com/dir/co/colorado-springs/1885-briargate-parkway": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://locations.woodhousespas.com/colorado/colorado-springs/1885-briargate-pkwy/",
-  "ms": 421
+  "ms": 215
  },
  "https://www.cosmicsmile.co/": {
   "status": "live",
   "http_status": 200,
-  "ms": 161
+  "ms": 144
  },
- "https://www.hellosugar.salon/co-coloradosprings-academy": {
-  "status": "blocked",
-  "http_status": 429,
-  "ms": 457
+ "https://www.viomedspa.com/locations/lowry": {
+  "status": "dead",
+  "http_status": 404,
+  "final_url": "http://viomedspa.com/locations/lowry/",
+  "ms": 961
  },
- "https://5280nailsandlash.com/": {
-  "status": "error",
-  "error": "UND_ERR_CONNECT_TIMEOUT",
-  "ms": 9992
- },
- "https://ultimateyoumedspa.com/colorado-springs-co/": {
+ "https://www.vagaro.com/nudeskincarestudio": {
   "status": "live",
   "http_status": 200,
-  "ms": 283
- },
- "https://www.sculptedmd.com/colorado/colorado-springs/": {
-  "status": "error",
-  "error": "UND_ERR_SOCKET",
-  "ms": 348
+  "ms": 1700
  },
  "https://www.zap-electrolysis.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 149
+  "ms": 69
  },
- "https://www.lanluxurynailspa.com/": {
+ "https://ultimateyoumedspa.com/colorado-springs-co/": {
   "status": "live",
   "http_status": 200,
-  "ms": 748
+  "ms": 150
  },
  "https://laserallclinic.com/location/colorado-springs/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 112
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 18
  },
- "https://organicnailshighlandsranch.com/": {
+ "https://www.sculptedmd.com/colorado/colorado-springs/": {
+  "status": "live",
+  "http_status": 202,
+  "ms": 334
+ },
+ "https://inailspalakewood.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 422
+  "ms": 1650
  },
  "https://nailsboutiquearvada.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 266
+  "ms": 77
  },
- "https://yeehawclaws.glossgenius.com/about": {
+ "https://organicnailshighlandsranch.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 467
- },
- "https://jtnailsco.com/": {
-  "status": "error",
-  "error": "TimeoutError",
-  "ms": 15000
+  "ms": 354
  },
  "https://angelicnailsandlash.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 190
+  "ms": 47
  },
- "https://milanlaser.com/locations/co/colorado-springs/3224-cinema-point": {
+ "https://yeehawclaws.glossgenius.com/about": {
   "status": "live",
   "http_status": 200,
-  "ms": 823
- },
- "https://atroposbeauty.square.site/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 606
+  "ms": 362
  },
  "https://www.ulta.com/stores/littleton-co-429": {
   "status": "live",
   "http_status": 200,
-  "ms": 562
+  "ms": 172
+ },
+ "https://atroposbeauty.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 233
+ },
+ "http://thevoguenails.com/": {
+  "status": "error",
+  "error": "UND_ERR_SOCKET",
+  "ms": 88
+ },
+ "https://milanlaser.com/locations/co/colorado-springs/3224-cinema-point": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 513
+ },
+ "https://www.lanluxurynailspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 804
  },
  "https://stores.saloncentric.com/co/centennial/5124": {
   "status": "live",
   "http_status": 200,
-  "ms": 224
+  "ms": 118
  },
  "https://locations.waxcenter.com/co/centennial/": {
   "status": "live",
   "http_status": 200,
-  "ms": 735
- },
- "https://oplnails.com/": {
-  "status": "error",
-  "error": "UND_ERR_SOCKET",
-  "ms": 285
- },
- "https://www.pinecreekesthetics.com/": {
-  "status": "live",
-  "http_status": 200,
-  "final_url": "https://pinecreekesthetics.com/",
-  "ms": 3293
- },
- "https://www.thecoloradocameo.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 657
- },
- "https://www.springslashes.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 750
+  "ms": 333
  },
  "https://halohairstudioftc.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 213
+  "ms": 51
+ },
+ "https://oplnails.com/": {
+  "status": "live",
+  "http_status": 202,
+  "ms": 189
  },
  "https://isolatefc.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://www.isolatefc.com/",
-  "ms": 389
+  "ms": 231
  },
- "https://orangetwist.com/center/centennial/": {
-  "status": "blocked",
-  "http_status": 403,
-  "ms": 70
- },
- "https://www.vagaro.com/lashedbykateryna": {
-  "status": "dead",
-  "http_status": 404,
-  "ms": 399
+ "https://www.pinecreekesthetics.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://pinecreekesthetics.com/",
+  "ms": 1432
  },
  "https://celestialskinnoco.com/contact-celestial-skin": {
   "status": "live",
   "http_status": 200,
-  "ms": 231
+  "ms": 45
  },
- "https://www.hottipsnailspa.com/": {
-  "status": "blocked",
-  "http_status": 403,
-  "ms": 122
+ "https://www.springslashes.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 566
  },
  "https://nailsolutionplus.firebaseapp.com/?storeKey=-OHeaVGQFFm6GiZmTdt4": {
   "status": "live",
   "http_status": 200,
-  "ms": 194
+  "ms": 30
+ },
+ "https://www.hottipsnailspa.com/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 94
  },
  "https://www.balanceskincarestudio.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 155
+  "ms": 64
  },
- "https://www.allaboutmeaesthetics.com/": {
+ "https://www.thecoloradocameo.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 153
+  "ms": 712
  },
- "https://beautinailsspalakewood.com/": {
-  "status": "error",
-  "error": "TimeoutError",
-  "ms": 15001
+ "https://www.vagaro.com/lashedbykateryna": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 553
  },
  "https://candelasnailspa.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 211
+  "ms": 71
  },
- "https://www.vagaro.com/thefaceshop": {
+ "https://www.allaboutmeaesthetics.com/": {
   "status": "live",
   "http_status": 200,
-  "final_url": "https://mysite.vagaro.com/thefaceshop",
-  "ms": 941
- },
- "https://originalskinclinic.com/": {
-  "status": "error",
-  "error": "UND_ERR_SOCKET",
-  "ms": 152
- },
- "https://www.lashandcompany.com/co-centennial/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 1837
- },
- "https://www.hollywoodeyebrows.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 168
- },
- "https://www.arkmedaesthetics.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 144
+  "ms": 343
  },
  "https://thetenspot.com/fort-collins/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://thetenspot.com/",
-  "ms": 568
+  "ms": 217
  },
- "http://superstarnailsdenver.com/": {
+ "https://originalskinclinic.com/": {
+  "status": "live",
+  "http_status": 202,
+  "ms": 157
+ },
+ "https://www.hollywoodeyebrows.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 1738
+  "ms": 153
  },
- "https://www.the-noco-collective.com/": {
+ "https://orangetwist.com/center/centennial/": {
   "status": "live",
   "http_status": 200,
-  "ms": 451
+  "final_url": "https://orangetwist.com/locations/co/centennial/",
+  "ms": 942
+ },
+ "https://www.arkmedaesthetics.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 86
+ },
+ "https://tlove-nails-and-lashes-westminster.nailsites.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 50
  },
  "https://awe-ewa.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 189
+  "ms": 198
+ },
+ "https://www.lashandcompany.com/co-centennial/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1263
+ },
+ "https://laseraway.com/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 33
  },
  "https://royalnailsandlash.favesalon.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://www.fave.salon/salon/59478",
-  "ms": 2697
- },
- "https://tlove-nails-and-lashes-westminster.nailsites.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 302
- },
- "https://laseraway.com/": {
-  "status": "blocked",
-  "http_status": 403,
-  "ms": 200
- },
- "https://www.keynailsupply.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 307
+  "ms": 1570
  },
  "https://spaviadayspa.com/locations/lakewood-co/": {
   "status": "live",
   "http_status": 200,
-  "ms": 306
+  "ms": 115
  },
  "https://milanonailsandspathornton.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 387
+  "ms": 340
  },
  "https://www.laseraway.com/locations/co/belmar/": {
   "status": "blocked",
   "http_status": 403,
-  "ms": 151
+  "ms": 35
  },
  "https://radiancemedspalousiville.com/": {
   "status": "dead",
   "error": "ENOTFOUND",
-  "ms": 47
- },
- "https://www.windwatersalon.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 147
- },
- "http://jcnailspro.com/": {
-  "status": "dead",
-  "error": "ENOTFOUND",
-  "ms": 136
+  "ms": 6
  },
  "https://www.ulta.com/stores/lakewood-co-95": {
   "status": "live",
   "http_status": 200,
-  "ms": 238
+  "ms": 87
+ },
+ "http://jcnailspro.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 7
  },
  "http://www.hyacinthsboutiqueandspa.com/": {
   "status": "dead",
   "error": "ENOTFOUND",
-  "ms": 169
+  "ms": 11
+ },
+ "https://www.windwatersalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 85
  },
  "http://www.genesissaloncs.com/": {
   "status": "dead",
   "error": "ENOTFOUND",
-  "ms": 59
+  "ms": 9
  },
- "https://www.tanperfection.com/": {
+ "https://www.vagaro.com/thefaceshop": {
   "status": "live",
   "http_status": 200,
-  "ms": 165
+  "final_url": "https://mysite.vagaro.com/thefaceshop",
+  "ms": 1100
  },
  "https://www.beesmoothwaxing.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 227
+  "ms": 91
  },
- "https://harmonynaillounge.com/": {
+ "https://www.keynailsupply.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 10577
- },
- "https://www.londonalleysalon.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 152
+  "ms": 443
  },
  "https://state-rda.com/": {
   "status": "blocked",
   "http_status": 403,
   "final_url": "https://www.saloncentric.com/",
-  "ms": 336
+  "ms": 129
  },
- "https://goldennailsandbeauty.com/": {
+ "https://www.tanperfection.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 836
- },
- "https://victorianailsgrandjunction.com/": {
-  "status": "error",
-  "http_status": 521,
-  "ms": 445
- },
- "https://arbor-nails.edan.io/": {
-  "status": "blocked",
-  "http_status": 403,
-  "ms": 108
- },
- "https://www.ulta.com/stores/aurora-co-1027": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 431
+  "ms": 164
  },
  "https://uhddenver.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 258
+  "ms": 58
+ },
+ "https://www.londonalleysalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 135
+ },
+ "https://www.the-noco-collective.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 925
+ },
+ "https://www.ulta.com/stores/aurora-co-1027": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 197
+ },
+ "https://arbor-nails.edan.io/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 24
+ },
+ "https://victorianailsgrandjunction.com/": {
+  "status": "error",
+  "http_status": 521,
+  "ms": 292
  },
  "https://www.aboutfaceandbodymedspa.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 210
- },
- "https://buffcitysoap.com/pages/stores/dublin-co": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 497
- },
- "https://www.bathandbodyworks.com/?cm_mmc=local_BBW01837": {
-  "status": "error",
-  "http_status": 307,
-  "ms": 205
- },
- "https://www.ulta.com/stores/brighton-co-1320": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 540
+  "ms": 88
  },
  "https://www.eyebrowstationco.com/": {
   "status": "dead",
   "http_status": 404,
-  "ms": 316
+  "ms": 56
+ },
+ "https://www.ulta.com/stores/brighton-co-1320": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 168
+ },
+ "https://soluxe-suites.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 63
  },
  "https://www.thecosmeticscompanystore.com/en-us/": {
   "status": "blocked",
   "http_status": 403,
   "final_url": "https://www.cosmeticscompanystore.com/closing",
-  "ms": 350
+  "ms": 96
  },
  "http://breckenridgeblissmassage.com/": {
   "status": "dead",
   "error": "ENOTFOUND",
-  "ms": 88
+  "ms": 4
  },
- "https://soluxe-suites.com/": {
+ "https://buffcitysoap.com/pages/stores/dublin-co": {
   "status": "live",
   "http_status": 200,
-  "ms": 224
+  "ms": 291
  },
  "https://www.stretchzone.com/locations/boulder/": {
   "status": "blocked",
   "http_status": 403,
-  "ms": 138
+  "ms": 31
  },
- "https://www.bodytmm.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 166
- },
- "https://freakys.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 336
- },
- "https://buffcitysoap.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 769
+ "https://www.bathandbodyworks.com/?cm_mmc=local_BBW01837": {
+  "status": "error",
+  "http_status": 307,
+  "ms": 153
  },
  "https://elementsmassage.com/boulder/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://elementsmassage.com/boulder",
-  "ms": 547
+  "ms": 148
+ },
+ "https://www.bodytmm.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 64
+ },
+ "https://buffcitysoap.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 388
  },
  "https://www.bonarootattoo.com/aurora": {
   "status": "dead",
   "http_status": 404,
-  "ms": 267
+  "ms": 122
+ },
+ "https://freakys.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 311
  },
  "https://planetxtattoo.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 376
+  "ms": 97
  },
  "https://irispiercing.com/pages/denver?view=denver": {
   "status": "live",
   "http_status": 200,
-  "ms": 597
- },
- "https://www.empiremassage.net/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 376
- },
- "https://relaxingspacebouldermassagespa.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 423
- },
- "https://gallerymassages.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 222
- },
- "https://www.clawandtalontattoo.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 349
- },
- "http://tattooxcolorado.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 181
- },
- "https://www.aquapuradayspa.com/": {
-  "status": "error",
-  "error": "ECONNREFUSED",
-  "ms": 202
- },
- "https://www.auspicioustattoo.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 173
+  "ms": 269
  },
  "https://locations.massageenvy.com/co/boulder/2490-arapahoe-avenue.html": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://locations.massageenvy.com/index.html",
-  "ms": 636
+  "ms": 163
  },
- "https://handandstone.com/locations/colorado-springs-north/": {
+ "https://www.empiremassage.net/": {
   "status": "live",
   "http_status": 200,
-  "ms": 203
+  "ms": 237
  },
- "https://www.modernink.net/": {
+ "https://gallerymassages.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 188
+  "ms": 32
+ },
+ "https://www.clawandtalontattoo.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 170
+ },
+ "https://relaxingspacebouldermassagespa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 279
+ },
+ "http://tattooxcolorado.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 104
+ },
+ "https://www.auspicioustattoo.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 44
  },
  "http://www.massageenvy.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://www.massageenvy.com/",
-  "ms": 330
+  "ms": 16
+ },
+ "https://www.modernink.net/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 63
+ },
+ "https://irispiercing.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 341
+ },
+ "https://handandstone.com/locations/colorado-springs-north/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 297
+ },
+ "https://themassagestore.net/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.themassagestore.net/",
+  "ms": 229
  },
  "https://elementsmassage.com/louisville-co/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://elementsmassage.com/louisville-co",
-  "ms": 145
- },
- "https://www.tribalrites.com/": {
-  "status": "live",
-  "http_status": 200,
-  "final_url": "https://tribalrites.com/",
-  "ms": 1502
+  "ms": 78
  },
  "http://21spaa.com/": {
   "status": "dead",
   "error": "ENOTFOUND",
-  "ms": 51
+  "ms": 10
  },
- "https://irispiercing.com/": {
+ "https://landmarktattooing.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 852
+  "final_url": "https://www.landmarktattooing.com/",
+  "ms": 117
  },
  "https://locations.massageenvy.com/colorado/highlands-ranch/9471-s-university-blvd.html": {
   "status": "live",
   "http_status": 200,
-  "ms": 397
+  "ms": 261
+ },
+ "https://bodyworkbistro.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 31
  },
  "https://tattooboulder.com/": {
   "status": "live",
   "http_status": 200,
   "ms": 153
  },
- "https://landmarktattooing.com/": {
+ "https://www.inksmithcolorado.com/": {
   "status": "live",
   "http_status": 200,
-  "final_url": "https://www.landmarktattooing.com/",
-  "ms": 247
+  "final_url": "https://inksmithcolorado.com/",
+  "ms": 84
  },
  "https://bolderinktattoo.wordpress.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 92
- },
- "https://bodyworkbistro.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 257
- },
- "https://locations.massageenvy.com/colorado/parker/17001-lincoln-ave.html": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 358
+  "ms": 14
  },
  "https://www.sunshinemassagestudio.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 184
+  "ms": 62
+ },
+ "https://locations.massageenvy.com/colorado/parker/17001-lincoln-ave.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 288
  },
  "https://doctormolly.com/": {
   "status": "error",
   "error": "ECONNRESET",
-  "ms": 168
+  "ms": 55
+ },
+ "https://zenoasismassage.top888site.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 109
  },
  "https://ritualtattoogallery.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://www.ritualtattoogallery.com/",
-  "ms": 268
+  "ms": 171
  },
  "https://www.gildedlilymassage.com/": {
   "status": "dead",
   "error": "ENOTFOUND",
-  "ms": 51
- },
- "https://www.hearttohandsmassagetherapy.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 136
- },
- "https://locations.massageenvy.com/colorado/colorado-springs/9235-north-union-boulevard.html": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 330
- },
- "https://www.inksmithcolorado.com/": {
-  "status": "live",
-  "http_status": 200,
-  "final_url": "https://inksmithcolorado.com/",
-  "ms": 581
+  "ms": 10
  },
  "https://www.rimrockwellness.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 191
+  "ms": 164
+ },
+ "https://locations.massageenvy.com/colorado/colorado-springs/9235-north-union-boulevard.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 227
  },
  "https://www.gemstonegj.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 105
+  "ms": 67
  },
- "https://zenoasismassage.top888site.com/": {
+ "https://www.hearttohandsmassagetherapy.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 570
+  "ms": 236
+ },
+ "https://www.massagebook.com/therapists/ReViveMassagebyEmma": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 35
+ },
+ "https://www.tribalrites.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://tribalrites.com/",
+  "ms": 1643
+ },
+ "http://superstarnailsdenver.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 3435
  },
  "https://www.heightswellnessretreat.com/dublin-commons/": {
   "status": "blocked",
   "http_status": 403,
-  "ms": 168
+  "ms": 90
  },
  "http://www.thetlctouch.massagetherapy.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 242
- },
- "https://www.massagebook.com/therapists/ReViveMassagebyEmma": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 548
- },
- "https://themassagestore.net/": {
-  "status": "live",
-  "http_status": 200,
-  "final_url": "https://www.themassagestore.net/",
-  "ms": 1837
+  "ms": 218
  },
  "https://handandstone.com/locations/co-boulder": {
   "status": "dead",
   "http_status": 404,
   "final_url": "https://handandstone.com/locations/co-boulder/",
-  "ms": 519
- },
- "https://estesparkmassagetherapy.com/": {
-  "status": "live",
-  "http_status": 200,
-  "final_url": "https://www.estesparkmassagetherapy.com/",
-  "ms": 666
- },
- "https://www.renewmassagestudio.com/": {
-  "status": "live",
-  "http_status": 200,
-  "final_url": "https://renewmassagestudio.com/",
-  "ms": 1048
+  "ms": 192
  },
  "https://wonderfulmassagespa.wixsite.com/80634/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://wonderfulmassagespa.wixsite.com/80634",
-  "ms": 347
- },
- "https://kismetbodyarts.com/": {
-  "status": "dead",
-  "error": "ENOTFOUND",
-  "ms": 46
+  "ms": 68
  },
  "https://www.mammothamerican.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://mammothamerican.com/",
-  "ms": 609
+  "ms": 171
  },
- "https://elementsmassage.com/piney-creek": {
+ "https://estesparkmassagetherapy.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 86
- },
- "https://wellnessmassage.as.me/schedule/319d2715": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 427
- },
- "https://timads.wixsite.com/sunmassage": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 124
+  "final_url": "https://www.estesparkmassagetherapy.com/",
+  "ms": 487
  },
  "https://daylightmassagefortcollins.onbuildhealth.com/": {
   "status": "dead",
   "http_status": 404,
   "final_url": "https://directory.onbuildhealth.com/",
-  "ms": 624
+  "ms": 248
  },
- "https://www.thinktanksouth.com/": {
+ "https://kismetbodyarts.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 12
+ },
+ "https://elementsmassage.com/piney-creek": {
   "status": "live",
   "http_status": 200,
-  "ms": 152
+  "ms": 59
+ },
+ "https://5280nailsandlash.com/": {
+  "status": "error",
+  "error": "UND_ERR_CONNECT_TIMEOUT",
+  "ms": 10053
+ },
+ "https://timads.wixsite.com/sunmassage": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 35
  },
  "https://creaturearcade.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://www.creaturearcade.com/",
-  "ms": 455
+  "ms": 184
  },
- "https://lismassagetherapy.com/": {
+ "https://www.thinktanksouth.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 230
+  "ms": 76
+ },
+ "https://wellnessmassage.as.me/schedule/319d2715": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 526
+ },
+ "https://www.renewmassagestudio.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://renewmassagestudio.com/",
+  "ms": 1178
  },
  "http://www.wrenbodywellness.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://www.wrenbody.com/",
-  "ms": 588
+  "ms": 280
+ },
+ "https://www.massagebook.com/therapists/monumental-massage": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 3
  },
  "https://www.relaxingworld80501.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 485
+  "ms": 306
  },
- "https://www.massagebook.com/therapists/monumental-massage": {
+ "https://lismassagetherapy.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 245
+  "ms": 260
+ },
+ "https://enigmamassagegj.com/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 66
+ },
+ "https://amandahorst.massagetherapy.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 292
+ },
+ "https://www.therapeuticinkgj.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 22
  },
  "https://inkjunkiestattoo.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://www.inkjunkiestattoo.com/",
-  "ms": 1128
+  "ms": 1123
  },
  "https://onthegowellnessspa.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 835
- },
- "https://www.therapeuticinkgj.com/": {
-  "status": "dead",
-  "error": "ENOTFOUND",
-  "ms": 53
- },
- "https://amandahorst.massagetherapy.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 368
- },
- "https://enigmamassagegj.com/": {
-  "status": "dead",
-  "http_status": 404,
-  "ms": 233
+  "ms": 899
  },
  "https://massagegrandjunction.com/": {
   "status": "dead",
   "error": "ENOTFOUND",
-  "ms": 58
- },
- "https://www.vagaro.com/healinghandsmassagetherapy3": {
-  "status": "dead",
-  "http_status": 404,
-  "ms": 367
- },
- "http://thevoguenails.com/": {
-  "status": "error",
-  "error": "UND_ERR_CONNECT_TIMEOUT",
-  "ms": 10204
+  "ms": 12
  },
  "https://pure-energy-100873.square.site/": {
   "status": "live",
   "http_status": 200,
-  "ms": 663
+  "ms": 595
  },
- "https://www.ritualtattoogallery.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 19
+ "https://www.vagaro.com/healinghandsmassagetherapy3": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 651
  },
  "https://blackbucketink.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 580
+  "ms": 547
  },
- "https://www.longmontmassage.com/": {
+ "https://www.ritualtattoogallery.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 284
- },
- "https://www.amassageinc.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 158
+  "ms": 16
  },
  "https://lizeth-rodriguez-licensed-massage-therapist.square.site/": {
   "status": "live",
   "http_status": 200,
-  "ms": 751
- },
- "https://vipnailspaarvada.com/": {
-  "status": "error",
-  "error": "TimeoutError",
-  "ms": 15000
+  "ms": 647
  },
  "https://serenitytherapeuticparkerco.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://www.go3technology.com/",
-  "ms": 481
+  "ms": 158
  },
- "https://hotrodta2.com/": {
+ "https://www.amassageinc.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 210
- },
- "https://www.tattoofreakshow.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 449
+  "ms": 81
  },
  "https://www.summitspamassage.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 389
+  "ms": 283
+ },
+ "https://hotrodta2.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 41
  },
  "https://locations.massageenvy.com/colorado/lakewood/7033-w-alaska-drive.html": {
   "status": "live",
   "http_status": 200,
-  "ms": 323
- },
- "https://crystalamassage.com/": {
-  "status": "dead",
-  "error": "ENOTFOUND",
-  "ms": 156
+  "ms": 240
  },
  "https://www.footspaco.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 387
- },
- "https://www.stretchzone.com/locations/highlands-ranch-co": {
-  "status": "blocked",
-  "http_status": 403,
-  "ms": 58
- },
- "https://bronzeeyetattoo.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 258
- },
- "https://wholistichealingexperiences.com/": {
-  "status": "blocked",
-  "http_status": 403,
-  "ms": 142
+  "ms": 288
  },
  "https://denverco.spaviadayspa.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://spaviadayspa.com/locations/denver-co/",
-  "ms": 546
+  "ms": 242
  },
  "https://deeplyrooted.massagetherapy.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://www.abmpmembers.com/profile/DeeplyRootedTherapeuticMassage",
-  "ms": 588
+  "ms": 352
  },
- "https://karmareflex.com/": {
-  "status": "blocked",
-  "http_status": 403,
-  "ms": 140
+ "https://crystalamassage.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 11
  },
- "https://www.thinktanktattoo.com/": {
+ "https://www.tattoofreakshow.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 207
+  "ms": 1585
+ },
+ "https://bronzeeyetattoo.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 212
+ },
+ "https://www.stretchzone.com/locations/highlands-ranch-co": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 41
  },
  "https://massagegreenspa.com/?SPA=Westminster": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://www.massagegreenspa.com/?SPA=Westminster",
-  "ms": 550
+  "ms": 302
  },
- "https://www.boulderconsciousrolfing.com/": {
+ "https://wholistichealingexperiences.com/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 138
+ },
+ "https://karmareflex.com/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 58
+ },
+ "https://www.thinktanktattoo.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 281
- },
- "http://www.massagetherapistman.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 290
- },
- "https://www.montrosedayspa.com/": {
-  "status": "dead",
-  "error": "ENOTFOUND",
-  "ms": 49
+  "ms": 66
  },
  "https://sharkysparadise.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 646
- },
- "https://wellspringholisticmassage.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 222
- },
- "https://www.massagebyjess.co/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 152
- },
- "https://bradwooten.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 170
+  "ms": 444
  },
  "https://heal.me/kiltedpaws/": {
   "status": "live",
   "http_status": 200,
-  "ms": 966
+  "ms": 534
  },
- "https://phantom8.com/": {
+ "https://www.boulderconsciousrolfing.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 109
+  "ms": 54
  },
- "https://modbodyarts.com/": {
-  "status": "error",
-  "error": "UND_ERR_SOCKET",
-  "ms": 287
- },
- "https://www.meliora-massage.com/": {
+ "http://www.massagetherapistman.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 135
+  "ms": 46
  },
- "https://www.thehavenmassagetherapy.com/": {
+ "https://wellspringholisticmassage.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 634
+  "ms": 38
  },
- "https://www.mitigationmassage.com/": {
+ "https://www.montrosedayspa.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 6
+ },
+ "https://www.massagebyjess.co/": {
   "status": "live",
   "http_status": 200,
-  "ms": 154
+  "ms": 44
  },
- "https://www.sagewellnesscos.com/": {
+ "https://www.weareonetatt2.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 134
- },
- "https://serenevitalitymassage.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 99
+  "ms": 693
  },
  "https://www.dragonflyaura.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 1696
+  "ms": 1323
+ },
+ "https://bradwooten.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 177
+ },
+ "https://www.thehavenmassagetherapy.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 542
+ },
+ "https://modbodyarts.com/": {
+  "status": "live",
+  "http_status": 202,
+  "ms": 198
+ },
+ "https://www.meliora-massage.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 56
+ },
+ "https://www.mitigationmassage.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 61
+ },
+ "https://phantom8.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 351
+ },
+ "https://www.sagewellnesscos.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 53
  },
  "https://colosprgsmassage.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 594
+  "ms": 530
  },
  "https://saberneedletat.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://www.saberneedletat.com/",
-  "ms": 648
- },
- "https://fort-collins-massage.square.site/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 268
- },
- "https://www.weareonetatt2.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 1378
- },
- "https://www.relaxexpressmassage.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 159
- },
- "https://thestudytattoo.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 356
+  "ms": 492
  },
  "https://www.newyoumassage.co/booknow45649839": {
   "status": "live",
   "http_status": 200,
-  "ms": 694
+  "ms": 131
  },
- "https://handledwithcare.net/": {
+ "https://serenevitalitymassage.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 278
+  "ms": 407
+ },
+ "https://thestudytattoo.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 63
+ },
+ "https://www.relaxexpressmassage.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 47
+ },
+ "https://goldennailsandbeauty.com/": {
+  "status": "error",
+  "error": "UND_ERR_CONNECT_TIMEOUT",
+  "ms": 10063
  },
  "https://www.sageworksmassage.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 300
+  "ms": 128
  },
- "https://www.scrimshawtattoo.com/": {
+ "https://fort-collins-massage.square.site/": {
   "status": "live",
   "http_status": 200,
-  "ms": 165
+  "ms": 413
  },
- "https://www.milehighholistics.com/": {
+ "https://handledwithcare.net/": {
   "status": "live",
   "http_status": 200,
-  "ms": 204
- },
- "https://elementsmassage.com/denver-west": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 271
- },
- "https://www.glorybadgestattoo.com/": {
-  "status": "dead",
-  "error": "ENOTFOUND",
-  "ms": 43
- },
- "https://www.westsidetattoo.net/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 226
+  "ms": 80
  },
  "https://miracletouchreflexology.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 466
+  "ms": 63
  },
- "http://www.to-the-grave-tattoo.com/": {
+ "https://shellymeschkemassage.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 6739
+ },
+ "https://www.milehighholistics.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 58
+ },
+ "https://elementsmassage.com/denver-west": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 96
+ },
+ "https://www.scrimshawtattoo.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 64
+ },
+ "https://www.glorybadgestattoo.com/": {
   "status": "dead",
   "error": "ENOTFOUND",
-  "ms": 171
+  "ms": 77
  },
- "https://www.elysium-studios.com/": {
-  "status": "blocked",
-  "http_status": 403,
-  "ms": 260
+ "https://www.westsidetattoo.net/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 95
  },
  "https://www.sandersinkstudio.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 381
+  "ms": 226
+ },
+ "https://www.elysium-studios.com/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 220
+ },
+ "http://www.to-the-grave-tattoo.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 11
  },
  "https://www.skinevolutiontattoo.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 173
+  "ms": 65
+ },
+ "https://www.aquapuradayspa.com/": {
+  "status": "error",
+  "error": "UND_ERR_CONNECT_TIMEOUT",
+  "ms": 10326
  },
  "https://www.massagespecialists.com/": {
   "status": "error",
   "error": "CERT_HAS_EXPIRED",
-  "ms": 166
- },
- "http://torturedsoulstattoos.com/": {
-  "status": "dead",
-  "error": "ENOTFOUND",
-  "ms": 29
- },
- "http://goffickgrrl.wix.com/heebeejeebeestattoos": {
-  "status": "dead",
-  "http_status": 404,
-  "final_url": "https://goffickgrrl.wix.com/heebeejeebeestattoos",
-  "ms": 446
- },
- "https://locations.massageenvy.com/colorado/grand-junction/2490-patterson-rd.html": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 393
+  "ms": 226
  },
  "http://www.tattoocovenant.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://tattoocovenant.com/",
-  "ms": 1586
+  "ms": 1733
  },
- "https://www.theinkdentattoostudio.com/": {
-  "status": "live",
-  "http_status": 200,
-  "final_url": "https://theinkdentattoostudio.com/",
-  "ms": 530
- },
- "https://welcomemassage.business.site/": {
-  "status": "dead",
-  "http_status": 404,
-  "ms": 792
- },
- "https://www.bleedandbloomstudio.com/": {
-  "status": "live",
-  "http_status": 200,
-  "final_url": "https://bleedandbloomtattoo.com/",
-  "ms": 280
- },
- "https://locations.massageenvy.com/colorado/denver/5465-w-20th-ave.html": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 323
- },
- "https://furnitureforlifecolorado.com/": {
-  "status": "live",
-  "http_status": 200,
-  "final_url": "https://www.furnitureforlife.com/frontrange/",
-  "ms": 575
- },
- "https://mantratattoo.us/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 410
- },
- "https://www.independence-ink.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 447
- },
- "https://shellymeschkemassage.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 7001
- },
- "http://www.nostalgiatattoos.com/": {
-  "status": "live",
-  "http_status": 200,
-  "final_url": "https://nostalgiatattoos.com/",
-  "ms": 2958
+ "https://electriccrayontattoo.com/": {
+  "status": "error",
+  "error": "UND_ERR_CONNECT_TIMEOUT",
+  "ms": 10222
  },
  "https://tribalritestattoo.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://tribalritespiercing.com/",
-  "ms": 3874
+  "ms": 3086
  },
- "https://electriccrayontattoo.com/": {
-  "status": "error",
-  "error": "UND_ERR_CONNECT_TIMEOUT",
-  "ms": 10118
+ "http://torturedsoulstattoos.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 2264
+ },
+ "http://goffickgrrl.wix.com/heebeejeebeestattoos": {
+  "status": "dead",
+  "http_status": 404,
+  "final_url": "https://goffickgrrl.wix.com/heebeejeebeestattoos",
+  "ms": 3497
+ },
+ "https://www.theinkdentattoostudio.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://theinkdentattoostudio.com/",
+  "ms": 803
+ },
+ "https://furnitureforlifecolorado.com/": {
+  "status": "blocked",
+  "http_status": 403,
+  "final_url": "https://www.furnitureforlife.com/frontrange/",
+  "ms": 119
+ },
+ "https://locations.massageenvy.com/colorado/grand-junction/2490-patterson-rd.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 2356
+ },
+ "https://locations.massageenvy.com/colorado/denver/5465-w-20th-ave.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 294
+ },
+ "https://mantratattoo.us/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 175
+ },
+ "https://www.bleedandbloomstudio.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://bleedandbloomtattoo.com/",
+  "ms": 427
  },
  "https://thehaunt.co/": {
   "status": "error",
   "error": "UND_ERR_CONNECT_TIMEOUT",
-  "ms": 10488
+  "ms": 10085
+ },
+ "https://www.independence-ink.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 321
+ },
+ "https://welcomemassage.business.site/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 2026
+ },
+ "https://www.longmontmassage.com/": {
+  "status": "error",
+  "error": "TimeoutError",
+  "ms": 15000
+ },
+ "http://www.nostalgiatattoos.com/": {
+  "status": "error",
+  "error": "UND_ERR_CONNECT_TIMEOUT",
+  "ms": 11533
  }
 }

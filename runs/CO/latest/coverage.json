@@ -55,15 +55,15 @@
  "top_covered_places": [
   {
    "name": "Denver",
-   "shops": 785
+   "shops": 788
   },
   {
    "name": "Colorado Springs",
-   "shops": 547
+   "shops": 546
   },
   {
    "name": "Aurora",
-   "shops": 255
+   "shops": 256
   },
   {
    "name": "Fort Collins",
@@ -71,22 +71,22 @@
   },
   {
    "name": "Grand Junction",
-   "shops": 186
+   "shops": 184
   },
   {
    "name": "Lakewood",
-   "shops": 159
+   "shops": 162
   },
   {
    "name": "Littleton",
    "shops": 156
   },
   {
-   "name": "Westminster",
-   "shops": 130
+   "name": "Boulder",
+   "shops": 132
   },
   {
-   "name": "Boulder",
+   "name": "Westminster",
    "shops": 130
   },
   {
@@ -99,7 +99,7 @@
   },
   {
    "name": "Arvada",
-   "shops": 110
+   "shops": 112
   },
   {
    "name": "Thornton",
@@ -111,11 +111,11 @@
   },
   {
    "name": "Parker",
-   "shops": 94
+   "shops": 95
   },
   {
    "name": "Longmont",
-   "shops": 89
+   "shops": 88
   },
   {
    "name": "Greeley",
@@ -123,22 +123,22 @@
   },
   {
    "name": "Castle Rock",
-   "shops": 69
+   "shops": 70
   },
   {
    "name": "Englewood",
-   "shops": 68
+   "shops": 69
   },
   {
    "name": "Lone Tree",
    "shops": 66
   },
   {
-   "name": "Highlands Ranch",
-   "shops": 65
+   "name": "Greenwood Village",
+   "shops": 66
   },
   {
-   "name": "Greenwood Village",
+   "name": "Highlands Ranch",
    "shops": 65
   },
   {
@@ -166,16 +166,16 @@
    "shops": 31
   },
   {
-   "name": "Montrose",
-   "shops": 30
-  },
-  {
    "name": "Golden",
-   "shops": 30
+   "shops": 31
   },
   {
    "name": "Louisville",
-   "shops": 29
+   "shops": 30
+  },
+  {
+   "name": "Montrose",
+   "shops": 30
   },
   {
    "name": "Windsor",
@@ -195,7 +195,7 @@
   },
   {
    "name": "Johnstown",
-   "shops": 20
+   "shops": 21
   },
   {
    "name": "Monument",
@@ -206,12 +206,12 @@
    "shops": 19
   },
   {
-   "name": "Steamboat Springs",
+   "name": "Cañon City",
    "shops": 18
   },
   {
-   "name": "Cañon City",
-   "shops": 18
+   "name": "Salida",
+   "shops": 17
   }
  ],
  "uncovered_places_with_held_candidates": [
