@@ -41,6 +41,8 @@ for (const [idx,entry] of records.entries()) {
   const state=String(record.state||input.state||process.argv.find(a=>a.startsWith('--state='))?.slice(8)||'').toUpperCase().trim();
   const source=String(record.source_url||'').trim();
   const booking=String(record.booking_url||'').trim();
+  const contactPhone=String(record.contact_phone||'').trim();
+  const contactEmail=String(record.contact_email||'').trim().toLowerCase();
   const categoryList=Array.isArray(record.categories) ? record.categories
     : Number.isInteger(Number(record.category_bits)) ? bits.filter(([bit]) => (Number(record.category_bits)&bit)!==0).map(([,cat])=>cat)
     : [record.category].filter(Boolean);
@@ -48,7 +50,10 @@ for (const [idx,entry] of records.entries()) {
   let reason='';
   if (!name||!city||!/^([A-Z]{2})$/.test(state)) reason='missing_identity_or_location';
   else if (!hostAllowed(source,['phenixsalonsuites.com','phenixsalonaz.com'])) reason='unverified_phenix_source';
-  else if (!approvedBooking(booking)) reason='missing_or_unapproved_direct_booking';
+  else if (booking && !approvedBooking(booking)) reason='unapproved_direct_booking';
+  else if (!booking && !contactPhone && !contactEmail) reason='missing_public_contact_or_booking';
+  else if (contactEmail && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(contactEmail)) reason='invalid_public_email';
+  else if (contactPhone && contactPhone.replace(/\D/g,'').length<10) reason='invalid_public_phone';
   else if (!supported.length) reason='no_supported_category';
   if (reason) { rejected.push({index:idx,name,reason}); continue; }
   const key=[name.toLowerCase(), city.toLowerCase(), state, source.toLowerCase()].join('|');
@@ -58,7 +63,8 @@ for (const [idx,entry] of records.entries()) {
     name,category:supported[0],categories:supported,workplace_name:String(record.workplace_name||'').trim(),
     city,state,street_address:String(record.street_address||'').trim(),
     suite:String(record.suite||'').trim(),zip_code:String(record.zip_code||'').trim(),
-    booking_url:booking,source_url:source,source_name:'Phenix Salon Suites'
+    booking_url:booking||null,contact_phone:contactPhone||null,contact_email:contactEmail||null,
+    source_url:source,source_name:'Phenix Salon Suites'
   });
 }
 fs.mkdirSync(require('node:path').dirname(outputPath),{recursive:true});
