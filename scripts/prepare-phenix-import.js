@@ -38,7 +38,7 @@ for (const [idx,entry] of records.entries()) {
     : entry;
   const name=String(record.name||'').trim();
   const city=String(record.city||'').trim();
-  const state=String(record.state||input.state||'AZ').toUpperCase().trim();
+  const state=String(record.state||input.state||process.argv.find(a=>a.startsWith('--state='))?.slice(8)||'').toUpperCase().trim();
   const source=String(record.source_url||'').trim();
   const booking=String(record.booking_url||'').trim();
   const categoryList=Array.isArray(record.categories) ? record.categories
