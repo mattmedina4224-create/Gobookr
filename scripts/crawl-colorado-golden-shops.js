@@ -53,8 +53,19 @@ async function dora(){
  // Read the real license-type values instead of guessing their spelling, then keep business registrations
  // for shops and salons (barber/cosmetology, salon suites) and massage businesses if DORA lists them.
  const types=await json(API+'/resource/'+ID+'.json?'+new URLSearchParams({'$select':licenseField+', count(*) AS n','$group':licenseField,'$limit':'2000'}));
- const shopTypes=types.map(t=>t[licenseField]).filter(t=>t&&/shop|salon|registration.*(barber|cosmet)|(barber|cosmet).*registration/i.test(t)&&!/school|instructor|apprentic/i.test(t));
- if(!shopTypes.length)throw Error('DORA has no shop/salon license types; values seen: '+types.map(t=>t[licenseField]).slice(0,80).join(' | '));
+ const values=new Set(types.map(t=>t[licenseField]).filter(Boolean));
+ // The license dataset stores prefix codes (e.g. BAR, COS). DORA's license-type lookup (349y-twqi) names each prefix;
+ // keep the codes whose name or board describes a barber/cosmetology shop or salon registration.
+ let lookup=[];try{lookup=await json(API+'/resource/349y-twqi.json?$limit=5000')}catch(e){}
+ const described=[];
+ for(const row of lookup){
+  const text=Object.values(row).map(String).join(' ');
+  const code=Object.values(row).map(String).find(v=>values.has(v));
+  if(code)described.push({code,text});
+ }
+ const isShop=t=>/(shop|salon)/i.test(t)&&/(barber|cosmet|registration|business)/i.test(t)&&!/school|instructor|apprentic|pharmac|body art/i.test(t);
+ const shopTypes=[...new Set([...described.filter(d=>isShop(d.text)).map(d=>d.code),...[...values].filter(isShop)])];
+ if(!shopTypes.length)throw Error('DORA has no shop/salon license types; lookup rows: '+described.map(d=>d.code+'='+d.text).join(' | ').slice(0,4000));
  const rows=[];let total=0;
  const inList=shopTypes.map(t=>"'"+t.replace(/'/g,"''")+"'").join(',');
  for(let offset=0;offset<300000;offset+=5000){
@@ -77,7 +88,7 @@ async function dora(){
   }
   if(batch.length<5000)break;
  }
- return {rows,total,cols,shopTypes,typeCounts:types};
+ return {rows,total,cols,shopTypes,typeCounts:types,typeLookup:described.filter(d=>/barber|cosmet|massage|tattoo|esthet|nail|salon|shop/i.test(d.text))};
 }
 const OVERPASS='[out:json][timeout:180];area["name"="Colorado"]["admin_level"="4"]["boundary"="administrative"]->.a;('+
  'nwr["shop"~"^(hairdresser|beauty|tattoo|massage|cosmetics|nails)$"](area.a);'+
@@ -140,7 +151,7 @@ function csv(rows){
  const report={created_at:new Date().toISOString(),staging_only:true,licensed_shops_scanned:a.total,
  licensed_active_candidates:a.rows.length,mapped_beauty_places:b.rows.length,
  total_candidates:rows.length,with_websites:rows.filter(x=>x.website_url).length,
- category_counts:categories,errors:[...errors,...b.errors],source_fields:a.cols,dora_shop_license_types:a.shopTypes||[],dora_license_type_counts:a.typeCounts||[],overpass_endpoint:b.endpoint,
+ category_counts:categories,errors:[...errors,...b.errors],source_fields:a.cols,dora_shop_license_types:a.shopTypes||[],dora_license_type_counts:a.typeCounts||[],dora_license_type_lookup:a.typeLookup||[],overpass_endpoint:b.endpoint,
  note:'License or OSM listing alone is not sufficient to assert current operation. Verify websites, physical location and category before publishing.',
  attribution:'OpenStreetMap data © OpenStreetMap contributors; ODbL applies https://www.openstreetmap.org/copyright'};
  fs.mkdirSync('tmp',{recursive:true});
