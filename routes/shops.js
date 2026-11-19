@@ -20,6 +20,7 @@ module.exports = function (router) {
     const logo = safeUrl(shop.logo_url);
     const cover = safeUrl(shop.cover_url);
     const booking = safeUrl(shop.booking_url);
+    const website = safeUrl(shop.website_url);
     const address = [shop.street_address, shop.suite, shop.city, shop.state, shop.zip_code].filter(Boolean).join(', ');
     const claimed = shop.claim_status === 'claimed';
     const teamEnabled=require('../lib/business-team').enabled();
@@ -37,6 +38,7 @@ module.exports = function (router) {
             <div><div class="badge">${claimed ? 'Claimed shop' : 'Unclaimed business'}</div><h1 style="margin:8px 0 4px;">${escapeHtml(shop.name)}</h1><p class="muted" style="margin:0;">${escapeHtml(shop.city)}, ${escapeHtml(shop.state)}</p></div>
           </div>
           ${shop.description ? `<p style="margin-top:20px;">${escapeHtml(shop.description)}</p>` : ''}
+          ${website ? `<a class="btn secondary" href="${escapeHtml(website)}" target="_blank" rel="noopener noreferrer">Visit business website <span aria-hidden="true">↗</span></a>` : ''}
           ${booking ? `<a class="btn shop-book-btn" href="${escapeHtml(booking)}" target="_blank" rel="noopener noreferrer">Book with this business <span aria-hidden="true">↗</span></a>` : ''}
           <div class="shop-info-grid">
             <div class="card"><h3>Location</h3><p>${escapeHtml(address || 'Address coming soon')}</p>${shop.phone ? `<p>${escapeHtml(shop.phone)}</p>` : ''}</div>
