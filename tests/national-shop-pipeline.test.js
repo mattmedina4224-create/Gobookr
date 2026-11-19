@@ -43,12 +43,15 @@ test('state import: licensed rows need an active license and ZIP; map rows need 
     lic({ name: 'Lone Star Barbers', city: 'Austin', external_id: 'tdlr:1', license_key: 'TX-TDLR.1' }),
     lic({ name: 'Rose Nail Spa', city: 'Austin', external_id: 'tdlr:2', license_key: 'TX-TDLR.2', licensed: false }),
     lic({ name: 'Zip Less Salon', city: 'Austin', zip_code: '', external_id: 'tdlr:3', license_key: 'TX-TDLR.3' }),
+    lic({ name: 'Bella', city: 'Austin', external_id: 'tdlr:4', license_key: 'TX-TDLR.4', license_type: 'Eyelash Extension Establishment' }),
+    lic({ name: 'Numbers Salon', city: '75006', external_id: 'tdlr:5', license_key: 'TX-TDLR.5' }),
     map({ name: 'Moon Nails', city: 'Austin', category: 'nails', website_url: 'https://moon.example/', external_id: 'osm:node/2', source_url: 'https://www.openstreetmap.org/node/2' }),
     map({ name: 'Sun Nails', city: 'Austin', category: 'nails', website_url: '', external_id: 'osm:node/3', source_url: 'https://www.openstreetmap.org/node/3' }),
   ], { state: 'TX', checks: { 'https://moon.example/': { status: 'live' } }, checkedAt: '2026-11-19' });
-  assert.deepEqual(r.publish.map((x) => x.name), ['Lone Star Barbers', 'Moon Nails']);
+  assert.deepEqual(r.publish.map((x) => x.name), ['Lone Star Barbers', 'Bella', 'Moon Nails']);
+  assert.deepEqual(r.publish[1].categories, ['eyelash_technician']);
   assert.deepEqual(Object.fromEntries(r.review.map((x) => [x.name, x.reason])), {
-    'Rose Nail Spa': 'license_not_confirmed_active', 'Zip Less Salon': 'missing_zip', 'Sun Nails': 'map_only_without_website' });
+    'Rose Nail Spa': 'license_not_confirmed_active', 'Zip Less Salon': 'missing_zip', 'Numbers Salon': 'missing_city', 'Sun Nails': 'map_only_without_website' });
   const sql = insertSql(r.publish, 'TX');
   assert.match(sql, /UPPER\(s\.state\) = 'TX'/);
   assert.match(sql, /SELECT NULL, name/);

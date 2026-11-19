@@ -40,6 +40,7 @@ const matchKey = (x) => String(x || '').normalize('NFKD').replace(/[̀-ͯ]/g, ''
   .replace(LEGAL_SUFFIX, '').replace(/\b(the|salon|studio|llc|inc)\b/g, '').replace(/[^a-z0-9]+/g, '');
 const cityKey = (x) => String(x || '').toLowerCase().replace(/[^a-z]+/g, '');
 const titleCity = (x) => String(x || '').trim().toLowerCase().replace(/\b([a-z])/g, (m) => m.toUpperCase());
+const LICENSE_TYPE_CATEGORIES = [[/eyelash/i, 'eyelash_technician'], [/hair weav|braid/i, 'stylist'], [/manicur|nail/i, 'nail_technician'], [/esthetic|facial/i, 'esthetician'], [/barber/i, 'barber']];
 const sql = (v) => (v === null || v === undefined ? 'NULL' : "'" + String(v).replace(/'/g, "''") + "'");
 
 // Candidates from the original Colorado crawler carry DORA fields without external ids; derive them the same way.
@@ -69,6 +70,8 @@ function plan(candidates, { state, existing = [], checks = {}, checkedAt }) {
     const zip = (String(c.zip_code || '').match(/\b\d{5}\b/) || [''])[0];
     let categories = classifyShop(name);
     if (!categories.length && !licensedSource && CRAWLER_KIND_TO_CATEGORY[c.category]) categories = [CRAWLER_KIND_TO_CATEGORY[c.category]]; // map shop/beauty tag evidence
+    // A specialty license names the service itself (e.g. TDLR "Eyelash Extension Establishment").
+    for (const [re, cat] of LICENSE_TYPE_CATEGORIES) if (re.test(c.license_type || '') && !categories.includes(cat)) categories.push(cat);
     const website = c.website_status === 'conflicting_websites_review' ? '' : live(c.website_url);
     const row = {
       name, city, state, street_address: String(c.street_address || '').trim(), zip_code: zip, county: c.county || '', categories, website_url: website,
@@ -80,7 +83,7 @@ function plan(candidates, { state, existing = [], checks = {}, checkedAt }) {
     const hold = (reason) => review.push({ ...row, reason });
     if (!name || name.length < 2) { hold('missing_name'); continue; }
     if (!row.source_external_id) { hold('missing_source_identifier'); continue; }
-    if (!city) { hold('missing_city'); continue; }
+    if (!city || !/[a-z]/i.test(city)) { hold('missing_city'); continue; }
     if (licensedSource && (c.license_rejected || !c.licensed)) { hold('license_not_confirmed_active'); continue; }
     if (licensedSource && !zip) { hold('missing_zip'); continue; }
     if (/\b(academy|school|college|institute|university|training)\b/i.test(name)) { hold('school_or_training_facility'); continue; }
