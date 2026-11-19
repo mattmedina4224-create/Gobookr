@@ -1,0 +1,57 @@
+{
+ "state": "UT",
+ "state_name": "Utah",
+ "wave": 1,
+ "created_at": "2026-11-19T22:41:51.801Z",
+ "staging_only": true,
+ "sources": [
+  {
+   "name": "OpenStreetMap (Overpass)",
+   "url": "https://overpass-api.de/api/interpreter",
+   "status": "processed",
+   "records": 1145,
+   "parts_ok": 4,
+   "parts_total": 4
+  },
+  {
+   "name": "U.S. Census Geocoder (place containing map point)",
+   "url": "https://geocoding.geo.census.gov/",
+   "status": "processed",
+   "records": 418
+  }
+ ],
+ "license_records_scanned": 0,
+ "licensed_active_candidates": 0,
+ "license_dropped": null,
+ "license_fields": null,
+ "license_shop_types": [],
+ "license_type_counts": [],
+ "license_type_lookup": [],
+ "census_city_lookup": {
+  "attempted": 418,
+  "filled": 418,
+  "failed": 0
+ },
+ "mapped_beauty_places": 1145,
+ "overpass_endpoint": "https://overpass-api.de/api/interpreter",
+ "total_candidates": 1067,
+ "with_websites": 321,
+ "category_counts": {
+  "hair": 448,
+  "nails": 223,
+  "barber": 113,
+  "brows": 13,
+  "salon_suites": 12,
+  "makeup": 32,
+  "lashes": 21,
+  "waxing": 16,
+  "spray_tanning": 29,
+  "skincare": 28,
+  "permanent_makeup": 1,
+  "tattoo": 61,
+  "massage": 70
+ },
+ "errors": [],
+ "note": "A license record or map listing alone does not prove a business is open. The importer publishes only rows that meet its rules; the rest are held.",
+ "attribution": "OpenStreetMap data © OpenStreetMap contributors (ODbL, https://www.openstreetmap.org/copyright). Licensing data from the listed state open-data portals."
+}

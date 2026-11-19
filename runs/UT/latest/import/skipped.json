@@ -1,0 +1,28 @@
+[
+ {
+  "name": "Fantastic Sams",
+  "city": "West Valley City",
+  "state": "UT",
+  "street_address": "2993 South 5600 West",
+  "zip_code": "84120",
+  "county": "",
+  "categories": [
+   "stylist"
+  ],
+  "website_url": "https://www.fantasticsams.com/salons/fantastic-sams-west-valley-city-ut",
+  "phone": "(801) 966-0182",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/node/10029799650",
+  "source_external_id": "osm:node/10029799650",
+  "license_number": null,
+  "latitude": 40.7057798,
+  "longitude": -112.0242509,
+  "operational_status": "verified",
+  "checked_at": "2026-11-19",
+  "raw_name": "Fantastic Sams",
+  "website_candidate": "https://www.fantasticsams.com/about/regions/salt-lake-city-ut/fantastic-sams-west-valley-city-ut",
+  "website_source_url": "",
+  "reason": "duplicate_candidate",
+  "duplicate_of": "osm:node/9611879173"
+ }
+]
