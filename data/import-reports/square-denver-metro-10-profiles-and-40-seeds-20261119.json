@@ -1,0 +1,58 @@
+{
+  "run_date": "2026-11-19",
+  "goal": "Scale real Square Appointments professionals across 24-city Denver metro",
+  "production_database": "jbhgeoedwvfxjteyuxum",
+  "production_import": {
+    "count": 10,
+    "ids": "17052-17061",
+    "unclaimed": 10,
+    "valid_category_links": 10,
+    "booking_links": 10,
+    "sources": [
+      "Salon Corivander (five named stylists)",
+      "Expert Waxer (one named waxing professional)",
+      "5280 Salon (two named stylists)",
+      "Jessica Martinez (one nail professional)",
+      "Yelena Styles Salon (one stylist; owner states booking moved to Vagaro)"
+    ],
+    "duplicate_exclusions": [
+      "Jafet Garcia",
+      "Stacy Harris",
+      "chema Romero",
+      "Josiah Archuleta",
+      "Shayla Jacquot",
+      "Caitlin McConaughy",
+      "Mahogany Herndon",
+      "Kristin Mercer",
+      "Courtney Phillipa",
+      "Rumpai Childs",
+      "Alexis Hoppe",
+      "Jessica Berdiales",
+      "Natalie Polston",
+      "Carlee Ann"
+    ]
+  },
+  "square_source_inventory": {
+    "colorado_professionals": 246,
+    "by_source_name": {
+      "Square Appointments": 212,
+      "Square": 34
+    },
+    "new_discovery_seed_urls": 40,
+    "seed_file": "data/source-audits/square-appointments-denver-metro-seeds-20261119.json"
+  },
+  "denver_metro": {
+    "previous": 1326,
+    "current": 1336,
+    "target": 5000,
+    "remaining": 3664
+  },
+  "weekly_job": ".github/workflows/square-appointments-audit.yml",
+  "limitations": [
+    "Weekly Square audit is DISCOVERY only and does not auto-publish.",
+    "40 seed URLs are mostly known merchant pages, not 40 new professionals.",
+    "Some booking URLs in this insert are merchant-level Square scheduling pages rather than staff-specific links; staff-specific URLs require separate verification.",
+    "Do not claim 5000 complete; production count only 1336.",
+    "Square may change website formats or block crawls; monitor status rather than inventing profiles."
+  ]
+}
