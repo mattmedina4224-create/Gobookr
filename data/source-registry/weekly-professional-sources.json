@@ -1,0 +1,136 @@
+{
+  "version": 1,
+  "goal": "Maintain current real-world professional directory inventory; do not invent profiles or automatically delete people when a page fails.",
+  "schedule": "weekly",
+  "policy": {
+    "access": "Respect robots, 403 and 429. Never circumvent access controls.",
+    "persist": "Store status and page fingerprint only; do not copy copyrighted bios/photos.",
+    "production": "Scanner is discovery/monitoring only: validated distinct professionals need separate dedupe and verified import step. Preserve claimed profiles.",
+    "contact": "Only published business contacts; never invent contact details or auto-send outreach."
+  },
+  "sources": [
+    {
+      "id": "phenix-national",
+      "provider": "phenix",
+      "type": "directory",
+      "state": "national",
+      "enabled": true,
+      "url": "https://phenixsalonsuites.com/book-a-service/"
+    },
+    {
+      "id": "phenix-barbers",
+      "provider": "phenix",
+      "type": "filtered_directory",
+      "state": "national",
+      "enabled": true,
+      "url": "https://phenixsalonsuites.com/book-a-service/?_services_select=barber"
+    },
+    {
+      "id": "phenix-littleton-radius",
+      "provider": "phenix",
+      "type": "proximity_directory",
+      "state": "CO",
+      "enabled": true,
+      "url": "https://phenixsalonsuites.com/book-a-service/?_proximity_providers=39.595193333333334%2C-105.04483638333335%2C25%2C4%2520S%2520MacLean%2520Dr%252C%2520Littleton%252C%2520CO%252080123%252C%2520USA"
+    },
+    {
+      "id": "phenix-sw-plaza",
+      "provider": "phenix",
+      "type": "location",
+      "city": "Littleton",
+      "state": "CO",
+      "enabled": true,
+      "url": "https://phenixsalonsuites.com/locations/co-southwest-plaza-littleton/#professionals"
+    },
+    {
+      "id": "phenix-highlands-ranch",
+      "provider": "phenix",
+      "type": "location",
+      "city": "Littleton",
+      "state": "CO",
+      "enabled": true,
+      "url": "https://phenixsalonsuites.com/locations/highlands-ranch/"
+    },
+    {
+      "id": "phenix-jefferson-marketplace",
+      "provider": "phenix",
+      "type": "location",
+      "city": "Littleton",
+      "state": "CO",
+      "enabled": true,
+      "url": "https://phenixsalonsuites.com/locations/co-kipling-littleton/"
+    },
+    {
+      "id": "phenix-tamarac",
+      "provider": "phenix",
+      "type": "location",
+      "city": "Denver",
+      "state": "CO",
+      "enabled": true,
+      "url": "https://phenixsalonsuites.com/locations/co-tamarac-denver/"
+    },
+    {
+      "id": "phenix-edgewater-owners",
+      "provider": "phenix",
+      "type": "directory",
+      "city": "Edgewater",
+      "state": "CO",
+      "enabled": true,
+      "url": "http://phenixsalonsuitesco.com/salon-owners/"
+    },
+    {
+      "id": "phenix-tempe-owners",
+      "provider": "phenix",
+      "type": "directory",
+      "city": "Tempe",
+      "state": "AZ",
+      "enabled": true,
+      "url": "https://phenixsalonaz.com/salon-owners-tempe/"
+    },
+    {
+      "id": "phenix-gilbert-owners",
+      "provider": "phenix",
+      "type": "directory",
+      "city": "Gilbert",
+      "state": "AZ",
+      "enabled": true,
+      "url": "https://phenixsalonaz.com/salon-owners-gilbert/"
+    },
+    {
+      "id": "phenix-phoenix-owners",
+      "provider": "phenix",
+      "type": "directory",
+      "city": "Phoenix",
+      "state": "AZ",
+      "enabled": true,
+      "url": "https://phenixsalonaz.com/salon-owners-phoenix/"
+    },
+    {
+      "id": "sola-aspen-grove",
+      "provider": "sola",
+      "type": "location",
+      "city": "Littleton",
+      "state": "CO",
+      "enabled": true,
+      "url": "https://book.solasalonstudios.com/aspen-grove/location"
+    },
+    {
+      "id": "glossgenius-ritual-space",
+      "provider": "glossgenius",
+      "type": "team",
+      "city": "Dallas",
+      "state": "TX",
+      "enabled": false,
+      "url": "https://ritualspace.glossgenius.com/team"
+    },
+    {
+      "id": "glossgenius-pretty-hair",
+      "provider": "glossgenius",
+      "type": "team",
+      "city": "Dallas",
+      "state": "TX",
+      "enabled": false,
+      "url": "https://prettyhairboutique.glossgenius.com/team"
+    }
+  ]
+}

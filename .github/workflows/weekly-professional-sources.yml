@@ -1,0 +1,87 @@
+name: Weekly GoBookr professional source scan
+on:
+  schedule:
+    - cron: '27 13 * * 1'
+  workflow_dispatch:
+  push:
+    paths:
+      - 'scripts/weekly-source-scan.js'
+      - 'data/source-registry/weekly-professional-sources.json'
+      - '.github/workflows/weekly-professional-sources.yml'
+permissions:
+  contents: read
+  issues: write
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check scanner syntax
+        run: node --check scripts/weekly-source-scan.js
+      - name: Scan registered public sources
+        run: node scripts/weekly-source-scan.js
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: weekly-professional-source-scan
+          path: tmp/weekly-source-scan.json
+          if-no-files-found: warn
+          retention-days: 30
+      - name: Update persistent weekly monitoring issue
+        if: success()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const report = JSON.parse(fs.readFileSync('tmp/weekly-source-scan.json','utf8'));
+            const {owner,repo}=context.repo;
+            const title='GoBookr weekly professional source scan';
+            const issues=await github.paginate(github.rest.issues.listForRepo,{owner,repo,state:'open',per_page:100});
+            let issue=issues.find(item=>!item.pull_request&&item.title===title);
+            if(!issue){
+              const created=await github.rest.issues.create({
+                owner,repo,title,
+                body:'Persistent weekly source health and discovery log. Monitor-only: no automatic publishing or removal of professionals.\n\nSee comments for weekly results.'
+              });
+              issue=created.data;
+            }
+            const comments=await github.paginate(github.rest.issues.listComments,{owner,repo,issue_number:issue.number,per_page:100});
+            let previous=null;
+            for(const comment of comments.slice().reverse()){
+              const match=(comment.body||'').match(/<!-- scan-state:([^ ]+) -->/);
+              if(match){try{previous=JSON.parse(Buffer.from(match[1],'base64').toString('utf8'));break;}catch{}}
+            }
+            const old=new Map((previous?.results||[]).map(x=>[x.id,x]));
+            const changed=[],blocked=[],newNames=[];
+            for(const row of report.results){
+              const prior=old.get(row.id);
+              if(row.status!=='ok')blocked.push(row.id+' ('+row.status+')');
+              else if(prior&&prior.content_fingerprint&&prior.content_fingerprint!==row.content_fingerprint)changed.push(row.id);
+              if(row.status==='ok'&&Array.isArray(row.schema_person_names)){
+                const names=new Set(prior?.schema_person_names||[]);
+                for(const name of row.schema_person_names)if(!names.has(name))newNames.push(row.id+': '+name);
+              }
+            }
+            const ok=report.results.filter(x=>x.status==='ok').length;
+            const summary=[
+              '### Weekly scan — '+report.scanned_at,
+              '- Sources checked: **'+report.results.length+'**',
+              '- Accessible pages: **'+ok+'**',
+              '- Blocked/failed sources: **'+blocked.length+'**',
+              '- Changed accessible page fingerprints: **'+changed.length+'**',
+              '- New JSON-LD Person names detected: **'+newNames.length+'** (unverified signals)',
+              '',
+              'Changed: '+(changed.join(', ')||'none or first baseline'),
+              '',
+              'Blocked or failed: '+(blocked.join(', ')||'none'),
+              '',
+              'Potential new structured names: '+(newNames.slice(0,30).join('; ')||'none') ,
+              '',
+              '**No GoBookr profiles were imported, removed, or altered by this scan.**'
+            ].join('\n');
+            const state=Buffer.from(JSON.stringify({results:report.results.map(({id,status,content_fingerprint,schema_person_names})=>({id,status,content_fingerprint,schema_person_names}))})).toString('base64');
+            await github.rest.issues.createComment({owner,repo,issue_number:issue.number,body:summary+'\n\n<!-- scan-state:'+state+' -->'});
