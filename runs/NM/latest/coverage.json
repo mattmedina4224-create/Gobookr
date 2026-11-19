@@ -1,0 +1,177 @@
+{
+ "state": "NM",
+ "census_places": 517,
+ "places_covered": 7,
+ "place_coverage_pct": 1.4,
+ "census_counties": 33,
+ "counties_covered": 6,
+ "counties_uncovered": [
+  "Catron County",
+  "Chaves County",
+  "Cibola County",
+  "Colfax County",
+  "Curry County",
+  "De Baca County",
+  "Eddy County",
+  "Grant County",
+  "Guadalupe County",
+  "Harding County",
+  "Hidalgo County",
+  "Lincoln County",
+  "Los Alamos County",
+  "Luna County",
+  "McKinley County",
+  "Mora County",
+  "Otero County",
+  "Quay County",
+  "Rio Arriba County",
+  "Roosevelt County",
+  "San Juan County",
+  "San Miguel County",
+  "Sierra County",
+  "Socorro County",
+  "Taos County",
+  "Torrance County",
+  "Union County"
+ ],
+ "communities_outside_census_places": [],
+ "top_covered_places": [
+  {
+   "name": "Albuquerque",
+   "shops": 35
+  },
+  {
+   "name": "Santa Fe",
+   "shops": 6
+  },
+  {
+   "name": "Las Cruces",
+   "shops": 4
+  },
+  {
+   "name": "Rio Rancho",
+   "shops": 2
+  },
+  {
+   "name": "Placitas",
+   "shops": 1
+  },
+  {
+   "name": "Los Lunas",
+   "shops": 1
+  },
+  {
+   "name": "Lovington",
+   "shops": 1
+  }
+ ],
+ "uncovered_places_with_held_candidates": [
+  {
+   "name": "Taos",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 7
+  },
+  {
+   "name": "Los Alamos",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 6
+  },
+  {
+   "name": "Portales",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 6
+  },
+  {
+   "name": "Farmington",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Hobbs",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Corrales",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Las Vegas",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Socorro",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Bloomfield",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Deming",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Eldorado at Santa Fe",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Raton",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Edgewood",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Gallup",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Hatch",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Kirtland",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Logan",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Los Ranchos de Albuquerque",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Moriarty",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Mountainair",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Truth or Consequences",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  }
+ ],
+ "uncovered_places_without_candidates": 489,
+ "source": "U.S. Census Bureau 2020 place-by-county and county code files"
+}
