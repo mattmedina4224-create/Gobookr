@@ -1,0 +1,95 @@
+{
+ "state": "TX",
+ "state_name": "Texas",
+ "wave": 2,
+ "created_at": "2026-11-19T22:31:02.479Z",
+ "staging_only": true,
+ "sources": [
+  {
+   "name": "Texas TDLR Barbering & Cosmetology Establishment License",
+   "url": "https://data.texas.gov/dataset/TDLR-All-Licenses/7358-krk7",
+   "status": "processed",
+   "records": 58022
+  },
+  {
+   "name": "OpenStreetMap (Overpass)",
+   "url": null,
+   "status": "failed",
+   "records": 0,
+   "error": "https://overpass-api.de/api/interpreter: HTTP 502 https://overpass-api.de/api/interpreter | https://overpass.private.coffee/api/interpreter: HTTP 504 https://overpass.private.coffee/api/interpreter | https://overpass.kumi.systems/api/interpreter: fetch failed"
+  }
+ ],
+ "license_records_scanned": 58111,
+ "licensed_active_candidates": 58022,
+ "license_dropped": {
+  "inactive": 0,
+  "expired": 0,
+  "out_of_state": 23,
+  "no_name_or_city": 66
+ },
+ "license_fields": {
+  "type": "license_type",
+  "status": "",
+  "name": "business_name",
+  "street": "business_address_line1",
+  "city": "",
+  "cityStateZip": "business_city_state_zip",
+  "zip": "",
+  "state": "",
+  "county": "business_county",
+  "number": "license_number",
+  "expires": ""
+ },
+ "license_shop_types": [
+  "Eyelash Extension Establishment",
+  "Full Service Establishment",
+  "Hair Weaving  Establishment",
+  "Mini Establishment"
+ ],
+ "license_type_counts": [
+  {
+   "license_type": "Eyelash Extension Establishment",
+   "n": "642"
+  },
+  {
+   "license_type": "Full Service Establishment",
+   "n": "35619"
+  },
+  {
+   "license_type": "Hair Weaving  Establishment",
+   "n": "83"
+  },
+  {
+   "license_type": "Mini Establishment",
+   "n": "21767"
+  }
+ ],
+ "license_type_lookup": [],
+ "mapped_beauty_places": 0,
+ "overpass_endpoint": null,
+ "total_candidates": 57151,
+ "with_websites": 0,
+ "category_counts": {
+  "shop_category_review": 18858,
+  "hair": 23743,
+  "nails": 2885,
+  "skincare": 1296,
+  "salon_suites": 552,
+  "brows": 395,
+  "lashes": 1471,
+  "waxing": 677,
+  "barber": 6867,
+  "massage": 125,
+  "permanent_makeup": 23,
+  "makeup": 223,
+  "tattoo": 16,
+  "spray_tanning": 20
+ },
+ "errors": [
+  "osm: https://overpass-api.de/api/interpreter: HTTP 502 https://overpass-api.de/api/interpreter",
+  "osm: https://overpass.private.coffee/api/interpreter: HTTP 504 https://overpass.private.coffee/api/interpreter",
+  "osm: https://overpass.kumi.systems/api/interpreter: fetch failed"
+ ],
+ "note": "A license record or map listing alone does not prove a business is open. The importer publishes only rows that meet its rules; the rest are held.",
+ "attribution": "OpenStreetMap data © OpenStreetMap contributors (ODbL, https://www.openstreetmap.org/copyright). Licensing data from the listed state open-data portals."
+}
