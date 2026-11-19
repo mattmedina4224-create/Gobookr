@@ -1,0 +1,58 @@
+{
+  "source_url": "https://phenixsalonsuites.com/book-a-service/?_services_select=barber",
+  "status": "imported_production_verified",
+  "source_access": "Public search-indexed first-party page; direct requests 403; not an exhaustive scrape",
+  "imported_count": 6,
+  "ids": [
+    16902,
+    16903,
+    16904,
+    16905,
+    16906,
+    16907
+  ],
+  "market_counts": {
+    "New Berlin, WI": 3,
+    "San Antonio, TX": 3
+  },
+  "contacts": {
+    "phone": 6,
+    "email": 4
+  },
+  "booking_links": 0,
+  "claim_state": "unclaimed",
+  "category": "barber",
+  "note": "These six were independently named in public Phenix directory with Barber service tag; further national automation needs permitted feed or site access. Never infer a blank booking URL as bookable.",
+  "professionals": [
+    [
+      "Chris Bordoy",
+      "Stache Studio Barbershop",
+      "WI"
+    ],
+    [
+      "Jodi Schreiber",
+      "GM Barbershop",
+      "WI"
+    ],
+    [
+      "Samantha Siragusa",
+      "The Classic Clipper",
+      "WI"
+    ],
+    [
+      "Gabriela Quiroz",
+      "G: Men’s Grooming",
+      "TX"
+    ],
+    [
+      "Veronica Anaya",
+      "Studio23",
+      "TX"
+    ],
+    [
+      "Gabriela Lozano",
+      "Gabby’s beauty salon",
+      "TX"
+    ]
+  ]
+}
