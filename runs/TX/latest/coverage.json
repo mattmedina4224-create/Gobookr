@@ -1,8 +1,8 @@
 {
  "state": "TX",
  "census_places": 1837,
- "places_covered": 926,
- "place_coverage_pct": 50.4,
+ "places_covered": 927,
+ "place_coverage_pct": 50.5,
  "census_counties": 254,
  "counties_covered": 243,
  "counties_uncovered": [
@@ -21,15 +21,15 @@
  "communities_outside_census_places": [
   {
    "city": "Cypress",
-   "shops": 313
+   "shops": 315
   },
   {
    "city": "New Caney",
-   "shops": 68
+   "shops": 70
   },
   {
    "city": "Kingwood",
-   "shops": 57
+   "shops": 61
   },
   {
    "city": "Porter",
@@ -56,11 +56,11 @@
    "shops": 10
   },
   {
-   "city": "San Antonio Tx",
-   "shops": 8
+   "city": "Horizon",
+   "shops": 9
   },
   {
-   "city": "Horizon",
+   "city": "San Antonio Tx",
    "shops": 8
   },
   {
@@ -104,6 +104,10 @@
    "shops": 4
   },
   {
+   "city": "Haltom",
+   "shops": 4
+  },
+  {
    "city": "Carrolton",
    "shops": 4
   },
@@ -125,10 +129,6 @@
   },
   {
    "city": "Adkins",
-   "shops": 3
-  },
-  {
-   "city": "Haltom",
    "shops": 3
   },
   {
@@ -209,6 +209,10 @@
   },
   {
    "city": "Houton",
+   "shops": 2
+  },
+  {
+   "city": "Browsville",
    "shops": 2
   },
   {
@@ -636,10 +640,6 @@
    "shops": 1
   },
   {
-   "city": "Browsville",
-   "shops": 1
-  },
-  {
    "city": "Misson47",
    "shops": 1
   },
@@ -708,15 +708,7 @@
    "shops": 1
   },
   {
-   "city": "75061",
-   "shops": 1
-  },
-  {
    "city": "Farmerville",
-   "shops": 1
-  },
-  {
-   "city": "#1200",
    "shops": 1
   },
   {
@@ -877,10 +869,6 @@
   },
   {
    "city": "Grand Priaire",
-   "shops": 1
-  },
-  {
-   "city": "77396",
    "shops": 1
   },
   {
@@ -1160,10 +1148,6 @@
    "shops": 1
   },
   {
-   "city": "75006",
-   "shops": 1
-  },
-  {
    "city": "E Paso",
    "shops": 1
   },
@@ -1224,10 +1208,6 @@
    "shops": 1
   },
   {
-   "city": "79927",
-   "shops": 1
-  },
-  {
    "city": "Baytowon",
    "shops": 1
   },
@@ -1267,163 +1247,163 @@
  "top_covered_places": [
   {
    "name": "Houston",
-   "shops": 4021
+   "shops": 4102
   },
   {
    "name": "San Antonio",
-   "shops": 2461
+   "shops": 2499
   },
   {
    "name": "Dallas",
-   "shops": 1813
+   "shops": 1885
   },
   {
    "name": "Austin",
-   "shops": 1491
+   "shops": 1590
   },
   {
    "name": "Fort Worth",
-   "shops": 1161
+   "shops": 1185
   },
   {
    "name": "El Paso",
-   "shops": 856
+   "shops": 862
   },
   {
    "name": "Plano",
-   "shops": 696
+   "shops": 721
   },
   {
    "name": "Katy",
-   "shops": 630
+   "shops": 635
   },
   {
    "name": "Arlington",
-   "shops": 609
+   "shops": 619
   },
   {
    "name": "Frisco",
-   "shops": 585
+   "shops": 604
   },
   {
    "name": "Spring",
-   "shops": 511
+   "shops": 528
   },
   {
    "name": "Lubbock",
-   "shops": 438
+   "shops": 445
   },
   {
    "name": "Corpus Christi",
-   "shops": 392
+   "shops": 398
   },
   {
    "name": "McAllen",
-   "shops": 364
-  },
-  {
-   "name": "Irving",
-   "shops": 338
+   "shops": 369
   },
   {
    "name": "Sugar Land",
-   "shops": 332
+   "shops": 345
   },
   {
-   "name": "Garland",
-   "shops": 325
+   "name": "Irving",
+   "shops": 342
   },
   {
    "name": "Round Rock",
-   "shops": 316
+   "shops": 335
+  },
+  {
+   "name": "Garland",
+   "shops": 330
   },
   {
    "name": "Amarillo",
-   "shops": 310
+   "shops": 319
   },
   {
    "name": "Laredo",
-   "shops": 310
+   "shops": 311
   },
   {
    "name": "Richardson",
-   "shops": 285
+   "shops": 294
   },
   {
    "name": "McKinney",
-   "shops": 272
+   "shops": 281
   },
   {
    "name": "Southlake",
+   "shops": 265
+  },
+  {
+   "name": "Rockwall",
    "shops": 258
   },
   {
    "name": "Lewisville",
-   "shops": 253
+   "shops": 258
   },
   {
    "name": "Brownsville",
-   "shops": 253
+   "shops": 255
   },
   {
    "name": "Waco",
-   "shops": 247
-  },
-  {
-   "name": "Rockwall",
-   "shops": 243
+   "shops": 253
   },
   {
    "name": "Pearland",
-   "shops": 237
+   "shops": 241
   },
   {
    "name": "Tyler",
-   "shops": 233
+   "shops": 237
   },
   {
    "name": "Odessa",
-   "shops": 232
+   "shops": 237
   },
   {
    "name": "Conroe",
-   "shops": 231
+   "shops": 234
   },
   {
    "name": "Humble",
-   "shops": 229
+   "shops": 230
   },
   {
    "name": "Midland",
-   "shops": 225
+   "shops": 228
   },
   {
    "name": "Allen",
-   "shops": 213
+   "shops": 218
   },
   {
    "name": "Pasadena",
-   "shops": 213
+   "shops": 215
+  },
+  {
+   "name": "Georgetown",
+   "shops": 203
+  },
+  {
+   "name": "Abilene",
+   "shops": 201
   },
   {
    "name": "Mission",
    "shops": 199
   },
   {
-   "name": "Abilene",
-   "shops": 198
+   "name": "Mesquite",
+   "shops": 199
   },
   {
    "name": "Keller",
-   "shops": 195
-  },
-  {
-   "name": "Mesquite",
-   "shops": 195
-  },
-  {
-   "name": "New Braunfels",
-   "shops": 194
+   "shops": 196
   }
  ],
  "uncovered_places_with_held_candidates": [
@@ -1473,6 +1453,11 @@
    "held_candidates": 2
   },
   {
+   "name": "University Park",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
    "name": "Allison",
    "type": "CENSUS DESIGNATED PLACE",
    "held_candidates": 1
@@ -1488,7 +1473,22 @@
    "held_candidates": 1
   },
   {
+   "name": "Bolivar Peninsula",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
    "name": "Briarcliff",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Brushy Creek",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Carbon",
    "type": "INCORPORATED PLACE",
    "held_candidates": 1
   },
@@ -1524,6 +1524,11 @@
   },
   {
    "name": "Fort Davis",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Fort Hood",
    "type": "CENSUS DESIGNATED PLACE",
    "held_candidates": 1
   },
@@ -1578,6 +1583,11 @@
    "held_candidates": 1
   },
   {
+   "name": "Lackland AFB",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
    "name": "Malone",
    "type": "INCORPORATED PLACE",
    "held_candidates": 1
@@ -1608,17 +1618,17 @@
    "held_candidates": 1
   },
   {
+   "name": "Pecan Plantation",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
    "name": "Plains",
    "type": "INCORPORATED PLACE",
    "held_candidates": 1
   },
   {
    "name": "Prairie View",
-   "type": "INCORPORATED PLACE",
-   "held_candidates": 1
-  },
-  {
-   "name": "Ranger",
    "type": "INCORPORATED PLACE",
    "held_candidates": 1
   },
@@ -1653,12 +1663,22 @@
    "held_candidates": 1
   },
   {
+   "name": "Spring Valley Village",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
    "name": "St. Jo",
    "type": "INCORPORATED PLACE",
    "held_candidates": 1
   },
   {
    "name": "Sundown",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Sunray",
    "type": "INCORPORATED PLACE",
    "held_candidates": 1
   },
@@ -1673,11 +1693,6 @@
    "held_candidates": 1
   },
   {
-   "name": "University Park",
-   "type": "INCORPORATED PLACE",
-   "held_candidates": 1
-  },
-  {
    "name": "Volente",
    "type": "INCORPORATED PLACE",
    "held_candidates": 1
@@ -1686,8 +1701,13 @@
    "name": "Welch",
    "type": "CENSUS DESIGNATED PLACE",
    "held_candidates": 1
+  },
+  {
+   "name": "West Odessa",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
   }
  ],
- "uncovered_places_without_candidates": 859,
+ "uncovered_places_without_candidates": 850,
  "source": "U.S. Census Bureau 2020 place-by-county and county code files"
 }

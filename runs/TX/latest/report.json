@@ -2,7 +2,7 @@
  "state": "TX",
  "state_name": "Texas",
  "wave": 2,
- "created_at": "2026-11-19T22:31:02.479Z",
+ "created_at": "2026-11-19T22:55:04.407Z",
  "staging_only": true,
  "sources": [
   {
@@ -13,10 +13,17 @@
   },
   {
    "name": "OpenStreetMap (Overpass)",
-   "url": null,
-   "status": "failed",
-   "records": 0,
-   "error": "https://overpass-api.de/api/interpreter: HTTP 502 https://overpass-api.de/api/interpreter | https://overpass.private.coffee/api/interpreter: HTTP 504 https://overpass.private.coffee/api/interpreter | https://overpass.kumi.systems/api/interpreter: fetch failed"
+   "url": "https://overpass-api.de/api/interpreter",
+   "status": "processed",
+   "records": 5958,
+   "parts_ok": 4,
+   "parts_total": 4
+  },
+  {
+   "name": "U.S. Census Geocoder (place containing map point)",
+   "url": "https://geocoding.geo.census.gov/",
+   "status": "processed",
+   "records": 2244
   }
  ],
  "license_records_scanned": 58111,
@@ -65,31 +72,32 @@
   }
  ],
  "license_type_lookup": [],
- "mapped_beauty_places": 0,
- "overpass_endpoint": null,
- "total_candidates": 57151,
- "with_websites": 0,
+ "census_city_lookup": {
+  "attempted": 2358,
+  "filled": 2244,
+  "failed": 0
+ },
+ "mapped_beauty_places": 5958,
+ "overpass_endpoint": "https://overpass-api.de/api/interpreter",
+ "total_candidates": 61796,
+ "with_websites": 1365,
  "category_counts": {
   "shop_category_review": 18858,
-  "hair": 23743,
-  "nails": 2885,
-  "skincare": 1296,
-  "salon_suites": 552,
-  "brows": 395,
-  "lashes": 1471,
-  "waxing": 677,
-  "barber": 6867,
-  "massage": 125,
-  "permanent_makeup": 23,
-  "makeup": 223,
-  "tattoo": 16,
-  "spray_tanning": 20
+  "hair": 25487,
+  "nails": 4074,
+  "skincare": 1417,
+  "salon_suites": 600,
+  "brows": 451,
+  "lashes": 1559,
+  "waxing": 745,
+  "barber": 7272,
+  "massage": 560,
+  "permanent_makeup": 24,
+  "makeup": 410,
+  "tattoo": 240,
+  "spray_tanning": 99
  },
- "errors": [
-  "osm: https://overpass-api.de/api/interpreter: HTTP 502 https://overpass-api.de/api/interpreter",
-  "osm: https://overpass.private.coffee/api/interpreter: HTTP 504 https://overpass.private.coffee/api/interpreter",
-  "osm: https://overpass.kumi.systems/api/interpreter: fetch failed"
- ],
+ "errors": [],
  "note": "A license record or map listing alone does not prove a business is open. The importer publishes only rows that meet its rules; the rest are held.",
  "attribution": "OpenStreetMap data © OpenStreetMap contributors (ODbL, https://www.openstreetmap.org/copyright). Licensing data from the listed state open-data portals."
 }
