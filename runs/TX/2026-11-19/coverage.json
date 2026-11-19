@@ -29,7 +29,7 @@
   },
   {
    "city": "Kingwood",
-   "shops": 61
+   "shops": 62
   },
   {
    "city": "Porter",
@@ -1251,15 +1251,15 @@
   },
   {
    "name": "San Antonio",
-   "shops": 2499
+   "shops": 2497
   },
   {
    "name": "Dallas",
-   "shops": 1885
+   "shops": 1884
   },
   {
    "name": "Austin",
-   "shops": 1590
+   "shops": 1587
   },
   {
    "name": "Fort Worth",
@@ -1283,11 +1283,11 @@
   },
   {
    "name": "Frisco",
-   "shops": 604
+   "shops": 602
   },
   {
    "name": "Spring",
-   "shops": 528
+   "shops": 527
   },
   {
    "name": "Lubbock",
@@ -1295,11 +1295,11 @@
   },
   {
    "name": "Corpus Christi",
-   "shops": 398
+   "shops": 397
   },
   {
    "name": "McAllen",
-   "shops": 369
+   "shops": 367
   },
   {
    "name": "Sugar Land",
@@ -1307,7 +1307,7 @@
   },
   {
    "name": "Irving",
-   "shops": 342
+   "shops": 339
   },
   {
    "name": "Round Rock",
@@ -1331,7 +1331,7 @@
   },
   {
    "name": "McKinney",
-   "shops": 281
+   "shops": 280
   },
   {
    "name": "Southlake",
@@ -1460,6 +1460,11 @@
   {
    "name": "Allison",
    "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Alma",
+   "type": "INCORPORATED PLACE",
    "held_candidates": 1
   },
   {
@@ -1708,6 +1713,6 @@
    "held_candidates": 1
   }
  ],
- "uncovered_places_without_candidates": 850,
+ "uncovered_places_without_candidates": 849,
  "source": "U.S. Census Bureau 2020 place-by-county and county code files"
 }
