@@ -1,0 +1,57 @@
+{
+ "state": "NV",
+ "state_name": "Nevada",
+ "wave": 1,
+ "created_at": "2026-11-19T22:48:14.301Z",
+ "staging_only": true,
+ "sources": [
+  {
+   "name": "OpenStreetMap (Overpass)",
+   "url": "https://overpass-api.de/api/interpreter",
+   "status": "processed",
+   "records": 789,
+   "parts_ok": 4,
+   "parts_total": 4
+  },
+  {
+   "name": "U.S. Census Geocoder (place containing map point)",
+   "url": "https://geocoding.geo.census.gov/",
+   "status": "processed",
+   "records": 298
+  }
+ ],
+ "license_records_scanned": 0,
+ "licensed_active_candidates": 0,
+ "license_dropped": null,
+ "license_fields": null,
+ "license_shop_types": [],
+ "license_type_counts": [],
+ "license_type_lookup": [],
+ "census_city_lookup": {
+  "attempted": 298,
+  "filled": 298,
+  "failed": 0
+ },
+ "mapped_beauty_places": 789,
+ "overpass_endpoint": "https://overpass-api.de/api/interpreter",
+ "total_candidates": 732,
+ "with_websites": 176,
+ "category_counts": {
+  "hair": 286,
+  "barber": 53,
+  "nails": 159,
+  "salon_suites": 5,
+  "waxing": 11,
+  "lashes": 8,
+  "makeup": 45,
+  "spray_tanning": 20,
+  "skincare": 26,
+  "brows": 13,
+  "massage": 52,
+  "permanent_makeup": 1,
+  "tattoo": 53
+ },
+ "errors": [],
+ "note": "A license record or map listing alone does not prove a business is open. The importer publishes only rows that meet its rules; the rest are held.",
+ "attribution": "OpenStreetMap data © OpenStreetMap contributors (ODbL, https://www.openstreetmap.org/copyright). Licensing data from the listed state open-data portals."
+}
