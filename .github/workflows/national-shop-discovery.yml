@@ -1,0 +1,104 @@
+name: National Golden List — 50-state shop discovery
+# Weekly discovery + dry-run import for every state, in rollout-wave order. Nothing here writes to the
+# production database: each state's publishable rows, held rows, website checks and coverage audit are
+# committed to the data/national-shop-discovery branch, and production imports run as audited batches.
+on:
+  workflow_dispatch:
+    inputs:
+      states:
+        description: 'Comma-separated state codes (blank = use wave)'
+        required: false
+        default: ''
+      wave:
+        description: 'Wave 1-10, or "all"'
+        required: false
+        default: 'all'
+  push:
+    branches: [main]
+    paths:
+      - 'lib/shop-states.js'
+      - 'scripts/crawl-state-shops.js'
+      - 'scripts/import-state-shops.js'
+      - '.github/workflows/national-shop-discovery.yml'
+  schedule:
+    - cron: '37 9 * * 2' # Tuesdays 09:37 UTC; Colorado's own refresh runs Mondays
+permissions:
+  contents: write # only to commit discovery results to data/national-shop-discovery
+concurrency:
+  group: national-shop-discovery
+  cancel-in-progress: false
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      states: ${{ steps.pick.outputs.states }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: pick
+        env:
+          STATES: ${{ github.event.inputs.states || (github.event_name == 'push' && 'CO,AZ,UT,NV,NM,TX,NY' || '') }}
+          WAVE: ${{ github.event.inputs.wave || 'all' }}
+        run: |
+          node -e "
+            const { STATES } = require('./lib/shop-states');
+            const asked = (process.env.STATES || '').split(',').map((s) => s.trim().toUpperCase()).filter(Boolean);
+            const wave = process.env.WAVE || 'all';
+            const list = asked.length ? STATES.filter((s) => asked.includes(s.code)) : STATES.filter((s) => wave === 'all' || s.wave === Number(wave));
+            require('fs').appendFileSync(process.env.GITHUB_OUTPUT, 'states=' + JSON.stringify(list.map((s) => s.code)) + '\n');
+            console.log(list.map((s) => s.code).join(' '));
+          "
+  discover:
+    needs: plan
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    strategy:
+      fail-fast: false
+      max-parallel: 3 # keeps Overpass, state portals and website checks well inside polite rate limits
+      matrix:
+        state: ${{ fromJson(needs.plan.outputs.states) }}
+    env:
+      ST: ${{ matrix.state }}
+      OUT: tmp/shops-${{ matrix.state }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Syntax check
+        run: for f in scripts/crawl-state-shops.js scripts/import-state-shops.js scripts/shop-coverage.js scripts/check-shop-websites.js; do node --check $f; done
+      - name: Discover (state licensing data where published + OpenStreetMap)
+        run: node scripts/crawl-state-shops.js --state=$ST --out=$OUT
+      - name: Check candidate websites
+        run: node scripts/check-shop-websites.js $OUT/candidates.json --concurrency=8 --out=$OUT/website-checks.json
+      - name: Dry-run import (idempotent plan against the committed shop export)
+        run: |
+          EXISTING=data/business-inventories/national-shops-existing.json
+          [ "$ST" = CO ] && EXISTING=data/business-inventories/colorado-shops-existing.json
+          node scripts/import-state-shops.js $OUT/candidates.json --state=$ST --existing=$EXISTING --websites=$OUT/website-checks.json --out=$OUT/import
+      - name: Census coverage audit
+        run: |
+          mkdir -p /tmp/census
+          curl -fsSL --retry 3 -o /tmp/census/places.txt https://www2.census.gov/geo/docs/reference/codes2020/national_place_by_county2020.txt
+          curl -fsSL --retry 3 -o /tmp/census/counties.txt https://www2.census.gov/geo/docs/reference/codes2020/national_county2020.txt
+          node scripts/shop-coverage.js --state=$ST --places=/tmp/census/places.txt --counties=/tmp/census/counties.txt --shops=$OUT/import/publish.json --held=$OUT/import/review.json --out=$OUT/coverage.json
+      - name: Save results to data/national-shop-discovery
+        if: success()
+        run: |
+          set -e
+          DAY=$(date -u +%Y-%m-%d)
+          mkdir -p /tmp/out/$ST/latest/import /tmp/out/$ST/$DAY
+          cp $OUT/report.json $OUT/coverage.json $OUT/website-checks.json $OUT/candidates.json /tmp/out/$ST/latest/
+          cp $OUT/import/summary.json $OUT/import/publish.json $OUT/import/review.json $OUT/import/skipped.json $OUT/import/enrich.json /tmp/out/$ST/latest/import/
+          cp $OUT/report.json $OUT/coverage.json $OUT/import/summary.json /tmp/out/$ST/$DAY/
+          git config user.name "gobookr-discovery-bot"
+          git config user.email "discovery-bot@users.noreply.github.com"
+          for attempt in 1 2 3 4 5 6; do
+            git fetch -q origin data/national-shop-discovery || true
+            if git rev-parse --verify -q origin/data/national-shop-discovery >/dev/null; then git checkout -qf -B data/national-shop-discovery origin/data/national-shop-discovery; else git checkout -q --orphan data/national-shop-discovery && git rm -rfq . && git clean -fdq -e tmp; fi
+            mkdir -p runs && rm -rf runs/$ST/latest && mkdir -p runs/$ST && cp -r /tmp/out/$ST/* runs/$ST/
+            git add runs/$ST
+            git commit -qm "$ST shop discovery $(date -u +%Y-%m-%dT%H:%MZ) run ${{ github.run_id }}" || { echo "no changes"; exit 0; }
+            if git push -q origin data/national-shop-discovery; then exit 0; fi
+            echo "push raced another state; retrying ($attempt)"; sleep $((RANDOM % 20 + 5))
+          done
+          exit 1

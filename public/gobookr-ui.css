@@ -918,3 +918,14 @@ td { border-bottom: 1px solid var(--gb-line); padding: 12px; vertical-align: top
 @media print {
   .site-header, .site-footer, .profile-v3-tabs, .profile-v3-sticky-book { display: none !important; }
 }
+
+/* Admin: national shop expansion dashboard */
+.gb-expansion-totals { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin: 20px 0 28px; }
+.gb-expansion-totals div { background: #fff; border: 1px solid var(--gb-silver); border-radius: 12px; padding: 14px 16px; }
+.gb-expansion-totals dt { color: var(--gb-slate, #475467); font-size: 13px; }
+.gb-expansion-totals dd { margin: 4px 0 0; font-size: 24px; font-weight: 600; color: var(--gb-midnight); }
+.gb-expansion-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.gb-expansion table { font-size: 13px; }
+.gb-expansion td, .gb-expansion th { white-space: nowrap; }
+.gb-expansion-split { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+@media (max-width: 760px) { .gb-expansion-split { grid-template-columns: 1fr; } }

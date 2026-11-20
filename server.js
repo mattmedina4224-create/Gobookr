@@ -26,6 +26,7 @@ require('./routes/pro-email-confirmation')(router);
 require('./routes/customer')(router);
 require('./routes/following')(router);
 require('./routes/admin')(router);
+require('./routes/admin-expansion')(router);
 require('./routes/legal')(router);
 require('./routes/claim')(router);
 require('./routes/embedded-billing')(router);
