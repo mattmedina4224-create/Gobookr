@@ -1,0 +1,371 @@
+{
+ "state": "CO",
+ "census_places": 479,
+ "places_covered": 190,
+ "place_coverage_pct": 39.7,
+ "census_counties": 64,
+ "counties_covered": 57,
+ "counties_uncovered": [
+  "Gilpin County",
+  "Hinsdale County",
+  "Jackson County",
+  "Kiowa County",
+  "Mineral County",
+  "San Juan County",
+  "Sedgwick County"
+ ],
+ "communities_outside_census_places": [
+  {
+   "city": "Conifer",
+   "shops": 11
+  },
+  {
+   "city": "Falcon",
+   "shops": 5
+  },
+  {
+   "city": "Colorado Spgs",
+   "shops": 4
+  },
+  {
+   "city": "Grand Jct",
+   "shops": 2
+  },
+  {
+   "city": "Eckert",
+   "shops": 2
+  },
+  {
+   "city": "Whitewater",
+   "shops": 1
+  },
+  {
+   "city": "Security",
+   "shops": 1
+  },
+  {
+   "city": "Aravada",
+   "shops": 1
+  },
+  {
+   "city": "Mesa",
+   "shops": 1
+  }
+ ],
+ "top_covered_places": [
+  {
+   "name": "Denver",
+   "shops": 766
+  },
+  {
+   "name": "Colorado Springs",
+   "shops": 528
+  },
+  {
+   "name": "Aurora",
+   "shops": 253
+  },
+  {
+   "name": "Fort Collins",
+   "shops": 202
+  },
+  {
+   "name": "Grand Junction",
+   "shops": 183
+  },
+  {
+   "name": "Littleton",
+   "shops": 155
+  },
+  {
+   "name": "Lakewood",
+   "shops": 154
+  },
+  {
+   "name": "Westminster",
+   "shops": 129
+  },
+  {
+   "name": "Boulder",
+   "shops": 118
+  },
+  {
+   "name": "Centennial",
+   "shops": 117
+  },
+  {
+   "name": "Loveland",
+   "shops": 115
+  },
+  {
+   "name": "Arvada",
+   "shops": 109
+  },
+  {
+   "name": "Thornton",
+   "shops": 103
+  },
+  {
+   "name": "Pueblo",
+   "shops": 95
+  },
+  {
+   "name": "Parker",
+   "shops": 92
+  },
+  {
+   "name": "Longmont",
+   "shops": 85
+  },
+  {
+   "name": "Greeley",
+   "shops": 82
+  },
+  {
+   "name": "Castle Rock",
+   "shops": 67
+  },
+  {
+   "name": "Lone Tree",
+   "shops": 66
+  },
+  {
+   "name": "Englewood",
+   "shops": 66
+  },
+  {
+   "name": "Greenwood Village",
+   "shops": 64
+  },
+  {
+   "name": "Highlands Ranch",
+   "shops": 63
+  },
+  {
+   "name": "Wheat Ridge",
+   "shops": 60
+  },
+  {
+   "name": "Broomfield",
+   "shops": 53
+  },
+  {
+   "name": "Brighton",
+   "shops": 45
+  },
+  {
+   "name": "Durango",
+   "shops": 41
+  },
+  {
+   "name": "Lafayette",
+   "shops": 34
+  },
+  {
+   "name": "Northglenn",
+   "shops": 31
+  },
+  {
+   "name": "Montrose",
+   "shops": 30
+  },
+  {
+   "name": "Golden",
+   "shops": 29
+  },
+  {
+   "name": "Windsor",
+   "shops": 28
+  },
+  {
+   "name": "Louisville",
+   "shops": 26
+  },
+  {
+   "name": "Evergreen",
+   "shops": 24
+  },
+  {
+   "name": "Pueblo West",
+   "shops": 22
+  },
+  {
+   "name": "Commerce City",
+   "shops": 21
+  },
+  {
+   "name": "Johnstown",
+   "shops": 20
+  },
+  {
+   "name": "Monument",
+   "shops": 19
+  },
+  {
+   "name": "Delta",
+   "shops": 19
+  },
+  {
+   "name": "Cañon City",
+   "shops": 18
+  },
+  {
+   "name": "Salida",
+   "shops": 17
+  }
+ ],
+ "uncovered_places_with_held_candidates": [
+  {
+   "name": "Del Norte",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Eads",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Grand Lake",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Julesburg",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Kiowa",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Kit Carson",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Larkspur",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Manitou Springs",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Applewood",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Aspen Park",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Black Hawk",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Deer Trail",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Fort Carson",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Fowler",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Granada",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Howard",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Idaho Springs",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Idalia",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "La Jara",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Lakeside",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Manzanola",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Moffat",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Nathrop",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Olathe",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Olney Springs",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Sherrelwood",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "South Fork",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Stratmoor",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Tabernash",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "West Pleasant View",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  }
+ ],
+ "uncovered_places_without_candidates": 259,
+ "source": "U.S. Census Bureau 2020 place-by-county and county code files"
+}

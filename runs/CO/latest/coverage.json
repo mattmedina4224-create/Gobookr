@@ -55,51 +55,51 @@
  "top_covered_places": [
   {
    "name": "Denver",
-   "shops": 788
+   "shops": 766
   },
   {
    "name": "Colorado Springs",
-   "shops": 546
+   "shops": 528
   },
   {
    "name": "Aurora",
-   "shops": 256
+   "shops": 253
   },
   {
    "name": "Fort Collins",
-   "shops": 209
+   "shops": 202
   },
   {
    "name": "Grand Junction",
-   "shops": 184
-  },
-  {
-   "name": "Lakewood",
-   "shops": 162
+   "shops": 183
   },
   {
    "name": "Littleton",
-   "shops": 156
+   "shops": 155
   },
   {
-   "name": "Boulder",
-   "shops": 132
+   "name": "Lakewood",
+   "shops": 154
   },
   {
    "name": "Westminster",
-   "shops": 130
+   "shops": 129
   },
   {
-   "name": "Loveland",
+   "name": "Boulder",
    "shops": 118
   },
   {
    "name": "Centennial",
-   "shops": 118
+   "shops": 117
+  },
+  {
+   "name": "Loveland",
+   "shops": 115
   },
   {
    "name": "Arvada",
-   "shops": 112
+   "shops": 109
   },
   {
    "name": "Thornton",
@@ -107,47 +107,47 @@
   },
   {
    "name": "Pueblo",
-   "shops": 96
-  },
-  {
-   "name": "Parker",
    "shops": 95
   },
   {
+   "name": "Parker",
+   "shops": 92
+  },
+  {
    "name": "Longmont",
-   "shops": 88
+   "shops": 85
   },
   {
    "name": "Greeley",
-   "shops": 86
+   "shops": 82
   },
   {
    "name": "Castle Rock",
-   "shops": 70
-  },
-  {
-   "name": "Englewood",
-   "shops": 69
+   "shops": 67
   },
   {
    "name": "Lone Tree",
    "shops": 66
   },
   {
-   "name": "Greenwood Village",
+   "name": "Englewood",
    "shops": 66
   },
   {
+   "name": "Greenwood Village",
+   "shops": 64
+  },
+  {
    "name": "Highlands Ranch",
-   "shops": 65
+   "shops": 63
   },
   {
    "name": "Wheat Ridge",
-   "shops": 61
+   "shops": 60
   },
   {
    "name": "Broomfield",
-   "shops": 56
+   "shops": 53
   },
   {
    "name": "Brighton",
@@ -166,20 +166,20 @@
    "shops": 31
   },
   {
-   "name": "Golden",
-   "shops": 31
-  },
-  {
-   "name": "Louisville",
-   "shops": 30
-  },
-  {
    "name": "Montrose",
    "shops": 30
   },
   {
+   "name": "Golden",
+   "shops": 29
+  },
+  {
    "name": "Windsor",
    "shops": 28
+  },
+  {
+   "name": "Louisville",
+   "shops": 26
   },
   {
    "name": "Evergreen",
@@ -195,7 +195,7 @@
   },
   {
    "name": "Johnstown",
-   "shops": 21
+   "shops": 20
   },
   {
    "name": "Monument",
@@ -215,11 +215,6 @@
   }
  ],
  "uncovered_places_with_held_candidates": [
-  {
-   "name": "Applewood",
-   "type": "CENSUS DESIGNATED PLACE",
-   "held_candidates": 2
-  },
   {
    "name": "Del Norte",
    "type": "INCORPORATED PLACE",
@@ -261,9 +256,9 @@
    "held_candidates": 2
   },
   {
-   "name": "Stratmoor",
+   "name": "Applewood",
    "type": "CENSUS DESIGNATED PLACE",
-   "held_candidates": 2
+   "held_candidates": 1
   },
   {
    "name": "Aspen Park",
@@ -273,11 +268,6 @@
   {
    "name": "Black Hawk",
    "type": "INCORPORATED PLACE",
-   "held_candidates": 1
-  },
-  {
-   "name": "Blende",
-   "type": "CENSUS DESIGNATED PLACE",
    "held_candidates": 1
   },
   {
@@ -361,6 +351,11 @@
    "held_candidates": 1
   },
   {
+   "name": "Stratmoor",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
    "name": "Tabernash",
    "type": "CENSUS DESIGNATED PLACE",
    "held_candidates": 1
@@ -371,6 +366,6 @@
    "held_candidates": 1
   }
  ],
- "uncovered_places_without_candidates": 258,
+ "uncovered_places_without_candidates": 259,
  "source": "U.S. Census Bureau 2020 place-by-county and county code files"
 }
