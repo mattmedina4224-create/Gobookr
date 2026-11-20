@@ -1,0 +1,32 @@
+{
+ "TX-01.json": {
+  "rows": 10000,
+  "md5": "02acbb7dc22075a04f9526241c12766a",
+  "bytes": 4509613
+ },
+ "TX-02.json": {
+  "rows": 10000,
+  "md5": "6787fa6f165b16bd28054baccabd6b8c",
+  "bytes": 4500222
+ },
+ "TX-03.json": {
+  "rows": 10000,
+  "md5": "84695c1e6c1b1a85826b54fb54bfe9eb",
+  "bytes": 4510561
+ },
+ "TX-04.json": {
+  "rows": 9650,
+  "md5": "e3bb9e09379f782723403bdd63b05a84",
+  "bytes": 4374123
+ },
+ "NY-01.json": {
+  "rows": 10000,
+  "md5": "5256c5d5b002d0482933c3743cffedd6",
+  "bytes": 4403400
+ },
+ "NY-02.json": {
+  "rows": 8912,
+  "md5": "b34479a6f1a5309cc6aafe72c82016d0",
+  "bytes": 3935105
+ }
+}
