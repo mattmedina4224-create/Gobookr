@@ -218,3 +218,14 @@ test('branding never claims GoBookr made the goods and only promises supported p
   assert.ok(promise[1].items.every((i) => !i.ok), 'nothing promised for unverified suppliers');
   assert.ok(qr.verify(qr.encode(branding.reorderUrl('GBM-1')), 'https://gobookr.com/merch/reorder/GBM-1').ok);
 });
+
+test('public demo stays simulated even when the environment holds a live Stripe key', async () => {
+  const prev = process.env.STRIPE_SECRET_KEY; process.env.STRIPE_SECRET_KEY = 'sk_live_x';
+  try {
+    const d = await require('../lib/merch/demo').build();
+    assert.equal(d.order.status, 'delivered');
+    assert.equal(d.order.mode, 'simulated');
+    assert.ok(d.checks.card.ok && d.checks.sticker.ok);
+    assert.equal(orders.timeline(d.events).filter((s) => s.done).length, 11);
+  } finally { if (prev === undefined) delete process.env.STRIPE_SECRET_KEY; else process.env.STRIPE_SECRET_KEY = prev; }
+});
