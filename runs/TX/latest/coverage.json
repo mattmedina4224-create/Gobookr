@@ -21,7 +21,7 @@
  "communities_outside_census_places": [
   {
    "city": "Cypress",
-   "shops": 315
+   "shops": 316
   },
   {
    "city": "New Caney",
@@ -29,7 +29,7 @@
   },
   {
    "city": "Kingwood",
-   "shops": 62
+   "shops": 60
   },
   {
    "city": "Porter",
@@ -1247,79 +1247,79 @@
  "top_covered_places": [
   {
    "name": "Houston",
-   "shops": 4102
+   "shops": 4081
   },
   {
    "name": "San Antonio",
-   "shops": 2497
+   "shops": 2491
   },
   {
    "name": "Dallas",
-   "shops": 1884
+   "shops": 1853
   },
   {
    "name": "Austin",
-   "shops": 1587
+   "shops": 1538
   },
   {
    "name": "Fort Worth",
-   "shops": 1185
+   "shops": 1173
   },
   {
    "name": "El Paso",
-   "shops": 862
+   "shops": 861
   },
   {
    "name": "Plano",
-   "shops": 721
+   "shops": 708
   },
   {
    "name": "Katy",
-   "shops": 635
+   "shops": 633
   },
   {
    "name": "Arlington",
-   "shops": 619
+   "shops": 617
   },
   {
    "name": "Frisco",
-   "shops": 602
+   "shops": 600
   },
   {
    "name": "Spring",
-   "shops": 527
+   "shops": 520
   },
   {
    "name": "Lubbock",
-   "shops": 445
+   "shops": 442
   },
   {
    "name": "Corpus Christi",
-   "shops": 397
+   "shops": 395
   },
   {
    "name": "McAllen",
-   "shops": 367
+   "shops": 366
   },
   {
    "name": "Sugar Land",
-   "shops": 345
+   "shops": 343
   },
   {
    "name": "Irving",
-   "shops": 339
-  },
-  {
-   "name": "Round Rock",
-   "shops": 335
+   "shops": 340
   },
   {
    "name": "Garland",
-   "shops": 330
+   "shops": 328
+  },
+  {
+   "name": "Round Rock",
+   "shops": 324
   },
   {
    "name": "Amarillo",
-   "shops": 319
+   "shops": 315
   },
   {
    "name": "Laredo",
@@ -1327,31 +1327,31 @@
   },
   {
    "name": "Richardson",
-   "shops": 294
+   "shops": 291
   },
   {
    "name": "McKinney",
-   "shops": 280
+   "shops": 277
   },
   {
    "name": "Southlake",
-   "shops": 265
-  },
-  {
-   "name": "Rockwall",
-   "shops": 258
+   "shops": 263
   },
   {
    "name": "Lewisville",
-   "shops": 258
+   "shops": 256
   },
   {
    "name": "Brownsville",
    "shops": 255
   },
   {
-   "name": "Waco",
+   "name": "Rockwall",
    "shops": 253
+  },
+  {
+   "name": "Waco",
+   "shops": 250
   },
   {
    "name": "Pearland",
@@ -1359,39 +1359,35 @@
   },
   {
    "name": "Tyler",
-   "shops": 237
+   "shops": 236
   },
   {
    "name": "Odessa",
-   "shops": 237
-  },
-  {
-   "name": "Conroe",
    "shops": 234
   },
   {
+   "name": "Conroe",
+   "shops": 233
+  },
+  {
    "name": "Humble",
-   "shops": 230
+   "shops": 231
   },
   {
    "name": "Midland",
-   "shops": 228
+   "shops": 226
   },
   {
    "name": "Allen",
-   "shops": 218
+   "shops": 217
   },
   {
    "name": "Pasadena",
-   "shops": 215
-  },
-  {
-   "name": "Georgetown",
-   "shops": 203
+   "shops": 214
   },
   {
    "name": "Abilene",
-   "shops": 201
+   "shops": 200
   },
   {
    "name": "Mission",
@@ -1399,10 +1395,14 @@
   },
   {
    "name": "Mesquite",
-   "shops": 199
+   "shops": 198
   },
   {
    "name": "Keller",
+   "shops": 196
+  },
+  {
+   "name": "New Braunfels",
    "shops": 196
   }
  ],
@@ -1463,11 +1463,6 @@
    "held_candidates": 1
   },
   {
-   "name": "Alma",
-   "type": "INCORPORATED PLACE",
-   "held_candidates": 1
-  },
-  {
    "name": "Amherst",
    "type": "INCORPORATED PLACE",
    "held_candidates": 1
@@ -1485,11 +1480,6 @@
   {
    "name": "Briarcliff",
    "type": "INCORPORATED PLACE",
-   "held_candidates": 1
-  },
-  {
-   "name": "Brushy Creek",
-   "type": "CENSUS DESIGNATED PLACE",
    "held_candidates": 1
   },
   {
@@ -1529,11 +1519,6 @@
   },
   {
    "name": "Fort Davis",
-   "type": "CENSUS DESIGNATED PLACE",
-   "held_candidates": 1
-  },
-  {
-   "name": "Fort Hood",
    "type": "CENSUS DESIGNATED PLACE",
    "held_candidates": 1
   },
@@ -1588,11 +1573,6 @@
    "held_candidates": 1
   },
   {
-   "name": "Lackland AFB",
-   "type": "CENSUS DESIGNATED PLACE",
-   "held_candidates": 1
-  },
-  {
    "name": "Malone",
    "type": "INCORPORATED PLACE",
    "held_candidates": 1
@@ -1619,11 +1599,6 @@
   },
   {
    "name": "Palmer",
-   "type": "CENSUS DESIGNATED PLACE",
-   "held_candidates": 1
-  },
-  {
-   "name": "Pecan Plantation",
    "type": "CENSUS DESIGNATED PLACE",
    "held_candidates": 1
   },
@@ -1683,11 +1658,6 @@
    "held_candidates": 1
   },
   {
-   "name": "Sunray",
-   "type": "INCORPORATED PLACE",
-   "held_candidates": 1
-  },
-  {
    "name": "Texline",
    "type": "INCORPORATED PLACE",
    "held_candidates": 1
@@ -1706,13 +1676,8 @@
    "name": "Welch",
    "type": "CENSUS DESIGNATED PLACE",
    "held_candidates": 1
-  },
-  {
-   "name": "West Odessa",
-   "type": "CENSUS DESIGNATED PLACE",
-   "held_candidates": 1
   }
  ],
- "uncovered_places_without_candidates": 849,
+ "uncovered_places_without_candidates": 856,
  "source": "U.S. Census Bureau 2020 place-by-county and county code files"
 }
