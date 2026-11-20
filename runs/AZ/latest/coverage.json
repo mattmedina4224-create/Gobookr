@@ -20,11 +20,11 @@
  "top_covered_places": [
   {
    "name": "Phoenix",
-   "shops": 52
+   "shops": 49
   },
   {
    "name": "Tucson",
-   "shops": 37
+   "shops": 33
   },
   {
    "name": "Scottsdale",
@@ -35,15 +35,15 @@
    "shops": 15
   },
   {
-   "name": "Chandler",
-   "shops": 10
-  },
-  {
    "name": "Surprise",
    "shops": 10
   },
   {
    "name": "Tempe",
+   "shops": 9
+  },
+  {
+   "name": "Chandler",
    "shops": 9
   },
   {
@@ -80,7 +80,7 @@
   },
   {
    "name": "Yuma",
-   "shops": 4
+   "shops": 3
   },
   {
    "name": "Anthem",

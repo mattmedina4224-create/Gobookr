@@ -2,14 +2,14 @@
  "state": "AZ",
  "state_name": "Arizona",
  "wave": 1,
- "created_at": "2026-11-19T23:32:03.624Z",
+ "created_at": "2026-11-20T06:39:00.485Z",
  "staging_only": true,
  "sources": [
   {
    "name": "OpenStreetMap (Overpass)",
    "url": "https://overpass-api.de/api/interpreter",
    "status": "processed",
-   "records": 2736,
+   "records": 2711,
    "parts_ok": 4,
    "parts_total": 4
   },
@@ -17,7 +17,7 @@
    "name": "U.S. Census Geocoder (place containing map point)",
    "url": "https://geocoding.geo.census.gov/",
    "status": "processed",
-   "records": 1104
+   "records": 1094
   }
  ],
  "license_records_scanned": 0,
@@ -28,14 +28,14 @@
  "license_type_counts": [],
  "license_type_lookup": [],
  "census_city_lookup": {
-  "attempted": 1118,
-  "filled": 1104,
+  "attempted": 1108,
+  "filled": 1094,
   "failed": 0
  },
- "mapped_beauty_places": 2736,
+ "mapped_beauty_places": 2711,
  "overpass_endpoint": "https://overpass-api.de/api/interpreter",
- "total_candidates": 2560,
- "with_websites": 310,
+ "total_candidates": 2538,
+ "with_websites": 305,
  "category_counts": {
   "hair": 930,
   "barber": 307,
@@ -46,9 +46,9 @@
   "brows": 25,
   "skincare": 60,
   "spray_tanning": 35,
-  "massage": 359,
+  "massage": 342,
   "makeup": 65,
-  "tattoo": 137,
+  "tattoo": 132,
   "permanent_makeup": 2
  },
  "errors": [],
