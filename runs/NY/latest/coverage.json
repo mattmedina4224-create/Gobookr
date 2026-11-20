@@ -13,7 +13,7 @@
   },
   {
    "city": "Bronx",
-   "shops": 1022
+   "shops": 1023
   },
   {
    "city": "Staten Island",
@@ -33,7 +33,7 @@
   },
   {
    "city": "Jackson Heights",
-   "shops": 129
+   "shops": 128
   },
   {
    "city": "Corona",
@@ -41,7 +41,7 @@
   },
   {
    "city": "Amherst",
-   "shops": 84
+   "shops": 86
   },
   {
    "city": "Ridgewood",
@@ -224,15 +224,15 @@
    "shops": 10
   },
   {
+   "city": "Glenville",
+   "shops": 10
+  },
+  {
    "city": "Getzville",
    "shops": 9
   },
   {
    "city": "Elma",
-   "shops": 9
-  },
-  {
-   "city": "Glenville",
    "shops": 9
   },
   {
@@ -352,10 +352,6 @@
    "shops": 4
   },
   {
-   "city": "Glen Oaks",
-   "shops": 4
-  },
-  {
    "city": "West Coxsackie",
    "shops": 4
   },
@@ -441,6 +437,10 @@
   },
   {
    "city": "Poughquag",
+   "shops": 3
+  },
+  {
+   "city": "Glen Oaks",
    "shops": 3
   },
   {
@@ -665,10 +665,6 @@
   },
   {
    "city": "Brainardsville",
-   "shops": 1
-  },
-  {
-   "city": "Hector",
    "shops": 1
   },
   {
@@ -1104,18 +1100,18 @@
    "shops": 1
   },
   {
-   "city": "Bearsville",
+   "city": "Greenburgh",
    "shops": 1
   },
   {
-   "city": "Greenburgh",
+   "city": "Bearsville",
    "shops": 1
   }
  ],
  "top_covered_places": [
   {
    "name": "New York",
-   "shops": 2311
+   "shops": 2296
   },
   {
    "name": "Rochester",
@@ -1123,7 +1119,7 @@
   },
   {
    "name": "Buffalo",
-   "shops": 271
+   "shops": 270
   },
   {
    "name": "Albany",
@@ -1131,7 +1127,7 @@
   },
   {
    "name": "Syracuse",
-   "shops": 173
+   "shops": 172
   },
   {
    "name": "White Plains",
@@ -1163,15 +1159,15 @@
   },
   {
    "name": "Saratoga Springs",
-   "shops": 84
-  },
-  {
-   "name": "Liverpool",
-   "shops": 81
+   "shops": 85
   },
   {
    "name": "Massapequa",
    "shops": 81
+  },
+  {
+   "name": "Liverpool",
+   "shops": 80
   },
   {
    "name": "Huntington",
@@ -1254,10 +1250,6 @@
    "shops": 51
   },
   {
-   "name": "Kingston",
-   "shops": 51
-  },
-  {
    "name": "Hempstead",
    "shops": 50
   },
@@ -1270,6 +1262,10 @@
    "shops": 50
   },
   {
+   "name": "Kingston",
+   "shops": 50
+  },
+  {
    "name": "New Hartford",
    "shops": 49
   }
@@ -1278,22 +1274,12 @@
   {
    "name": "Brighton",
    "type": "CENSUS DESIGNATED PLACE",
-   "held_candidates": 14
-  },
-  {
-   "name": "Herricks",
-   "type": "CENSUS DESIGNATED PLACE",
-   "held_candidates": 6
+   "held_candidates": 12
   },
   {
    "name": "Heuvelton",
    "type": "INCORPORATED PLACE",
-   "held_candidates": 5
-  },
-  {
-   "name": "Manorhaven",
-   "type": "INCORPORATED PLACE",
-   "held_candidates": 5
+   "held_candidates": 6
   },
   {
    "name": "Westmere",
@@ -1306,7 +1292,17 @@
    "held_candidates": 4
   },
   {
+   "name": "Manorhaven",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
    "name": "Mechanicstown",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Red Oaks Mill",
    "type": "CENSUS DESIGNATED PLACE",
    "held_candidates": 4
   },
@@ -1323,11 +1319,6 @@
   {
    "name": "Colton",
    "type": "CENSUS DESIGNATED PLACE",
-   "held_candidates": 3
-  },
-  {
-   "name": "Corfu",
-   "type": "INCORPORATED PLACE",
    "held_candidates": 3
   },
   {
@@ -1401,6 +1392,11 @@
    "held_candidates": 2
   },
   {
+   "name": "Herricks",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
    "name": "Lincoln Park",
    "type": "CENSUS DESIGNATED PLACE",
    "held_candidates": 2
@@ -1428,11 +1424,6 @@
   {
    "name": "Philmont",
    "type": "INCORPORATED PLACE",
-   "held_candidates": 2
-  },
-  {
-   "name": "Red Oaks Mill",
-   "type": "CENSUS DESIGNATED PLACE",
    "held_candidates": 2
   },
   {
@@ -1561,6 +1552,11 @@
    "held_candidates": 1
   },
   {
+   "name": "Freedom Plains",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
    "name": "Fultonville",
    "type": "INCORPORATED PLACE",
    "held_candidates": 1
@@ -1646,6 +1642,11 @@
    "held_candidates": 1
   },
   {
+   "name": "North Ballston Spa",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
    "name": "North Bay",
    "type": "CENSUS DESIGNATED PLACE",
    "held_candidates": 1
@@ -1688,6 +1689,11 @@
   {
    "name": "Schroon Lake",
    "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "South Corning",
+   "type": "INCORPORATED PLACE",
    "held_candidates": 1
   },
   {
@@ -1771,6 +1777,6 @@
    "held_candidates": 1
   }
  ],
- "uncovered_places_without_candidates": 450,
+ "uncovered_places_without_candidates": 448,
  "source": "U.S. Census Bureau 2020 place-by-county and county code files"
 }

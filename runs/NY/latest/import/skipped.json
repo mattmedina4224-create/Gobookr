@@ -1155,8 +1155,8 @@
   "categories": [
    "eyebrow_technician"
   ],
-  "website_url": "",
-  "phone": "(212) 866-2713",
+  "website_url": "https://www.perfectbrowsnyc.com/",
+  "phone": "",
   "source_name": "New York DOS Appearance Enhancement & Barber Business License",
   "source_url": "https://data.ny.gov/d/y3u4-jbgh",
   "source_external_id": "nydos:21EY1345984",
@@ -1166,7 +1166,7 @@
   "operational_status": "verified",
   "checked_at": "2026-11-20",
   "raw_name": "perfect brows nyc",
-  "website_candidate": "",
+  "website_candidate": "https://www.perfectbrowsnyc.com/",
   "website_source_url": "",
   "reason": "duplicate_candidate",
   "duplicate_of": "nydos:AEB-21-00883"
@@ -1573,8 +1573,8 @@
   "categories": [
    "eyebrow_technician"
   ],
-  "website_url": "",
-  "phone": "(212) 866-2713",
+  "website_url": "https://www.perfectbrowsnyc.com/",
+  "phone": "",
   "source_name": "New York DOS Appearance Enhancement & Barber Business License",
   "source_url": "https://data.ny.gov/d/y3u4-jbgh",
   "source_external_id": "nydos:AEB-15-01883",
@@ -1584,7 +1584,7 @@
   "operational_status": "verified",
   "checked_at": "2026-11-20",
   "raw_name": "perfect  brows nyc",
-  "website_candidate": "",
+  "website_candidate": "https://www.perfectbrowsnyc.com/",
   "website_source_url": "",
   "reason": "duplicate_candidate",
   "duplicate_of": "nydos:AEB-18-01640"
@@ -3784,8 +3784,8 @@
   "categories": [
    "eyebrow_technician"
   ],
-  "website_url": "",
-  "phone": "(212) 866-2713",
+  "website_url": "https://www.perfectbrowsnyc.com/",
+  "phone": "",
   "source_name": "New York DOS Appearance Enhancement & Barber Business License",
   "source_url": "https://data.ny.gov/d/y3u4-jbgh",
   "source_external_id": "nydos:AEB-19-01972",
@@ -3795,7 +3795,7 @@
   "operational_status": "verified",
   "checked_at": "2026-11-20",
   "raw_name": "PERFECT BROWS NYC",
-  "website_candidate": "",
+  "website_candidate": "https://www.perfectbrowsnyc.com/",
   "website_source_url": "",
   "reason": "duplicate_candidate",
   "duplicate_of": "nydos:AEB-19-01301"
@@ -8554,13 +8554,13 @@
    "stylist"
   ],
   "website_url": "https://www.headspacesaugerties.com/",
-  "phone": "",
+  "phone": "(845) 247-3924",
   "source_name": "OpenStreetMap contributors",
   "source_url": "https://www.openstreetmap.org/node/8446198390",
   "source_external_id": "osm:node/8446198390",
   "license_number": null,
-  "latitude": 42.0770523,
-  "longitude": -73.9518971,
+  "latitude": 42.0769995,
+  "longitude": -73.9519026,
   "operational_status": "verified",
   "checked_at": "2026-11-20",
   "raw_name": "Headspace Salon",
@@ -8594,6 +8594,32 @@
   "website_source_url": "",
   "reason": "duplicate_candidate",
   "duplicate_of": "nydos:21HA1362157"
+ },
+ {
+  "name": "Lupinetti's Hair Styling",
+  "city": "Honeoye Falls",
+  "state": "NY",
+  "street_address": "11 East Street",
+  "zip_code": "14472",
+  "county": "",
+  "categories": [
+   "stylist"
+  ],
+  "website_url": "https://lupinettishairstyling.com/",
+  "phone": "(585) 582-6313",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/node/8785927563",
+  "source_external_id": "osm:node/8785927563",
+  "license_number": null,
+  "latitude": 42.9523086,
+  "longitude": -77.5905163,
+  "operational_status": "verified",
+  "checked_at": "2026-11-20",
+  "raw_name": "Lupinetti's Hair Styling",
+  "website_candidate": "http://www.lupinettishairstyling.net/",
+  "website_source_url": "",
+  "reason": "duplicate_candidate",
+  "duplicate_of": "nydos:21LU1433758"
  },
  {
   "name": "Christine Cordey Salon",
@@ -8943,7 +8969,7 @@
   "categories": [
    "stylist"
   ],
-  "website_url": "https://lhkw.app.link/TIpeAwrUZXb?_p=c21429c390067af1e71d90fceeb5",
+  "website_url": "https://lhkw.app.link/TIpeAwrUZXb?_p=c21429cb9f1c65f9e3038ffcea",
   "phone": "(518) 636-9865",
   "source_name": "OpenStreetMap contributors",
   "source_url": "https://www.openstreetmap.org/node/10016233764",
@@ -9714,6 +9740,32 @@
   "duplicate_of": "osm:node/5625653719"
  },
  {
+  "name": "Perfect Brows NYC",
+  "city": "New York",
+  "state": "NY",
+  "street_address": "1163 2nd Avenue",
+  "zip_code": "10065",
+  "county": "New York",
+  "categories": [
+   "eyebrow_technician"
+  ],
+  "website_url": "https://www.perfectbrowsnyc.com/",
+  "phone": "(212) 319-4130",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/node/6206637825",
+  "source_external_id": "osm:node/6206637825",
+  "license_number": null,
+  "latitude": 40.7620974,
+  "longitude": -73.9634799,
+  "operational_status": "verified",
+  "checked_at": "2026-11-20",
+  "raw_name": "Perfect Brows NYC",
+  "website_candidate": "https://www.perfectbrowsnyc.com/",
+  "website_source_url": "",
+  "reason": "duplicate_candidate",
+  "duplicate_of": "nydos:AEB-21-00883"
+ },
+ {
   "name": "Iconic Hair Salon",
   "city": "Rhinebeck",
   "state": "NY",
@@ -10180,5 +10232,57 @@
   "website_source_url": "",
   "reason": "duplicate_candidate",
   "duplicate_of": "nydos:AEB-25-01638"
+ },
+ {
+  "name": "Blink Lash Club",
+  "city": "New York",
+  "state": "NY",
+  "street_address": "321 Bleecker Street",
+  "zip_code": "10014",
+  "county": "New York",
+  "categories": [
+   "eyelash_technician"
+  ],
+  "website_url": "https://blinklashclub.com/",
+  "phone": "(646) 858-0398",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/node/13973107135",
+  "source_external_id": "osm:node/13973107135",
+  "license_number": null,
+  "latitude": 40.7331868,
+  "longitude": -74.004017,
+  "operational_status": "verified",
+  "checked_at": "2026-11-20",
+  "raw_name": "Blink Lash Club",
+  "website_candidate": "https://blinklashclub.com/",
+  "website_source_url": "",
+  "reason": "duplicate_candidate",
+  "duplicate_of": "nydos:AEB-20-00029"
+ },
+ {
+  "name": "Lunara Glow Beauty Salon",
+  "city": "Astoria",
+  "state": "NY",
+  "street_address": "38-02 Broadway",
+  "zip_code": "11103",
+  "county": "",
+  "categories": [
+   "stylist"
+  ],
+  "website_url": "https://lunaraglowsalon.com/",
+  "phone": "(347) 242-4252",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/node/14158747442",
+  "source_external_id": "osm:node/14158747442",
+  "license_number": null,
+  "latitude": 40.759072,
+  "longitude": -73.919832,
+  "operational_status": "verified",
+  "checked_at": "2026-11-20",
+  "raw_name": "Lunara Glow Beauty Salon",
+  "website_candidate": "https://lunaraglowsalon.com/",
+  "website_source_url": "",
+  "reason": "duplicate_candidate",
+  "duplicate_of": "nydos:AEB-26-01730"
  }
 ]

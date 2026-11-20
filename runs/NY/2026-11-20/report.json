@@ -2,20 +2,20 @@
  "state": "NY",
  "state_name": "New York",
  "wave": 2,
- "created_at": "2026-11-20T00:07:50.259Z",
+ "created_at": "2026-11-20T07:04:47.193Z",
  "staging_only": true,
  "sources": [
   {
    "name": "New York DOS Appearance Enhancement & Barber Business License",
    "url": "https://data.ny.gov/d/y3u4-jbgh",
    "status": "processed",
-   "records": 27521
+   "records": 27514
   },
   {
    "name": "OpenStreetMap (Overpass)",
    "url": "https://overpass-api.de/api/interpreter",
    "status": "processed",
-   "records": 6749,
+   "records": 6798,
    "parts_ok": 4,
    "parts_total": 4
   },
@@ -23,14 +23,14 @@
    "name": "U.S. Census Geocoder (place containing map point)",
    "url": "https://geocoding.geo.census.gov/",
    "status": "processed",
-   "records": 3855
+   "records": 3850
   }
  ],
  "license_records_scanned": 27539,
- "licensed_active_candidates": 27521,
+ "licensed_active_candidates": 27514,
  "license_dropped": {
   "inactive": 0,
-  "expired": 0,
+  "expired": 7,
   "out_of_state": 10,
   "no_name_or_city": 8
  },
@@ -64,26 +64,26 @@
  "license_type_lookup": [],
  "census_city_lookup": {
   "attempted": 4000,
-  "filled": 3855,
+  "filled": 3850,
   "failed": 0
  },
- "mapped_beauty_places": 6749,
+ "mapped_beauty_places": 6798,
  "overpass_endpoint": "https://overpass-api.de/api/interpreter",
- "total_candidates": 32911,
- "with_websites": 1377,
+ "total_candidates": 32953,
+ "with_websites": 1401,
  "category_counts": {
-  "shop_category_review": 8897,
-  "skincare": 733,
-  "hair": 10875,
-  "lashes": 505,
-  "nails": 6257,
-  "barber": 3688,
-  "spray_tanning": 98,
-  "brows": 338,
-  "massage": 459,
-  "waxing": 454,
+  "shop_category_review": 8893,
+  "skincare": 738,
+  "hair": 10908,
+  "lashes": 511,
+  "nails": 6255,
+  "barber": 3687,
+  "spray_tanning": 96,
+  "brows": 339,
+  "massage": 461,
+  "waxing": 455,
   "salon_suites": 38,
-  "makeup": 266,
+  "makeup": 269,
   "tattoo": 297,
   "permanent_makeup": 6
  },
