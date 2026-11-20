@@ -19,6 +19,8 @@ function ownedShop(ctx) {
 }
 
 module.exports = function (router) {
+  // The app serves GET /dashboard/shop from routes/shop-profile-routes.js (registered first). This handler remains
+  // for the flag-gated sponsorship setup flow and its tests.
   router.get('/dashboard/shop', async (ctx) => {
     const shop = ownedShop(ctx); if (!shop) return;
     if(process.env.BUSINESS_TEAMS_ENABLED==='1' && ['basics','profile'].includes(ctx.query.setup)) {
