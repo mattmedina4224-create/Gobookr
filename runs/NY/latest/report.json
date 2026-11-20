@@ -2,7 +2,7 @@
  "state": "NY",
  "state_name": "New York",
  "wave": 2,
- "created_at": "2026-11-19T22:59:04.934Z",
+ "created_at": "2026-11-20T00:07:50.259Z",
  "staging_only": true,
  "sources": [
   {
@@ -15,7 +15,7 @@
    "name": "OpenStreetMap (Overpass)",
    "url": "https://overpass-api.de/api/interpreter",
    "status": "processed",
-   "records": 6797,
+   "records": 6749,
    "parts_ok": 4,
    "parts_total": 4
   },
@@ -23,7 +23,7 @@
    "name": "U.S. Census Geocoder (place containing map point)",
    "url": "https://geocoding.geo.census.gov/",
    "status": "processed",
-   "records": 3850
+   "records": 3855
   }
  ],
  "license_records_scanned": 27539,
@@ -38,7 +38,7 @@
   "type": "license_type",
   "status": "",
   "name": "business_name",
-  "street": "",
+  "street": "business_address_1",
   "city": "business_city",
   "cityStateZip": "",
   "zip": "business_zip",
@@ -64,26 +64,26 @@
  "license_type_lookup": [],
  "census_city_lookup": {
   "attempted": 4000,
-  "filled": 3850,
+  "filled": 3855,
   "failed": 0
  },
- "mapped_beauty_places": 6797,
+ "mapped_beauty_places": 6749,
  "overpass_endpoint": "https://overpass-api.de/api/interpreter",
- "total_candidates": 32751,
+ "total_candidates": 32911,
  "with_websites": 1377,
  "category_counts": {
-  "shop_category_review": 8819,
-  "skincare": 736,
-  "hair": 10857,
-  "lashes": 508,
-  "nails": 6222,
-  "barber": 3654,
-  "spray_tanning": 96,
-  "brows": 336,
-  "massage": 462,
-  "waxing": 451,
-  "salon_suites": 37,
-  "makeup": 270,
+  "shop_category_review": 8897,
+  "skincare": 733,
+  "hair": 10875,
+  "lashes": 505,
+  "nails": 6257,
+  "barber": 3688,
+  "spray_tanning": 98,
+  "brows": 338,
+  "massage": 459,
+  "waxing": 454,
+  "salon_suites": 38,
+  "makeup": 266,
   "tattoo": 297,
   "permanent_makeup": 6
  },

@@ -1,8 +1,8 @@
 {
  "state": "NY",
  "census_places": 1285,
- "places_covered": 737,
- "place_coverage_pct": 57.4,
+ "places_covered": 736,
+ "place_coverage_pct": 57.3,
  "census_counties": 62,
  "counties_covered": 62,
  "counties_uncovered": [],
@@ -13,7 +13,7 @@
   },
   {
    "city": "Bronx",
-   "shops": 1023
+   "shops": 1022
   },
   {
    "city": "Staten Island",
@@ -41,7 +41,7 @@
   },
   {
    "city": "Amherst",
-   "shops": 86
+   "shops": 84
   },
   {
    "city": "Ridgewood",
@@ -56,15 +56,15 @@
    "shops": 69
   },
   {
+   "city": "Bayside",
+   "shops": 68
+  },
+  {
    "city": "Long Island City",
    "shops": 68
   },
   {
    "city": "Elmhurst",
-   "shops": 67
-  },
-  {
-   "city": "Bayside",
    "shops": 67
   },
   {
@@ -224,15 +224,15 @@
    "shops": 10
   },
   {
-   "city": "Glenville",
-   "shops": 10
-  },
-  {
    "city": "Getzville",
    "shops": 9
   },
   {
    "city": "Elma",
+   "shops": 9
+  },
+  {
+   "city": "Glenville",
    "shops": 9
   },
   {
@@ -1104,18 +1104,18 @@
    "shops": 1
   },
   {
-   "city": "Greenburgh",
+   "city": "Bearsville",
    "shops": 1
   },
   {
-   "city": "Bearsville",
+   "city": "Greenburgh",
    "shops": 1
   }
  ],
  "top_covered_places": [
   {
    "name": "New York",
-   "shops": 2317
+   "shops": 2311
   },
   {
    "name": "Rochester",
@@ -1123,7 +1123,7 @@
   },
   {
    "name": "Buffalo",
-   "shops": 269
+   "shops": 271
   },
   {
    "name": "Albany",
@@ -1163,7 +1163,7 @@
   },
   {
    "name": "Saratoga Springs",
-   "shops": 85
+   "shops": 84
   },
   {
    "name": "Liverpool",
@@ -1278,12 +1278,22 @@
   {
    "name": "Brighton",
    "type": "CENSUS DESIGNATED PLACE",
-   "held_candidates": 12
+   "held_candidates": 14
+  },
+  {
+   "name": "Herricks",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 6
   },
   {
    "name": "Heuvelton",
    "type": "INCORPORATED PLACE",
-   "held_candidates": 6
+   "held_candidates": 5
+  },
+  {
+   "name": "Manorhaven",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
   },
   {
    "name": "Westmere",
@@ -1296,17 +1306,7 @@
    "held_candidates": 4
   },
   {
-   "name": "Manorhaven",
-   "type": "INCORPORATED PLACE",
-   "held_candidates": 4
-  },
-  {
    "name": "Mechanicstown",
-   "type": "CENSUS DESIGNATED PLACE",
-   "held_candidates": 4
-  },
-  {
-   "name": "Red Oaks Mill",
    "type": "CENSUS DESIGNATED PLACE",
    "held_candidates": 4
   },
@@ -1323,6 +1323,11 @@
   {
    "name": "Colton",
    "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Corfu",
+   "type": "INCORPORATED PLACE",
    "held_candidates": 3
   },
   {
@@ -1396,11 +1401,6 @@
    "held_candidates": 2
   },
   {
-   "name": "Herricks",
-   "type": "CENSUS DESIGNATED PLACE",
-   "held_candidates": 2
-  },
-  {
    "name": "Lincoln Park",
    "type": "CENSUS DESIGNATED PLACE",
    "held_candidates": 2
@@ -1428,6 +1428,11 @@
   {
    "name": "Philmont",
    "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Red Oaks Mill",
+   "type": "CENSUS DESIGNATED PLACE",
    "held_candidates": 2
   },
   {
@@ -1552,11 +1557,6 @@
   },
   {
    "name": "Fly Creek",
-   "type": "CENSUS DESIGNATED PLACE",
-   "held_candidates": 1
-  },
-  {
-   "name": "Freedom Plains",
    "type": "CENSUS DESIGNATED PLACE",
    "held_candidates": 1
   },
@@ -1691,11 +1691,6 @@
    "held_candidates": 1
   },
   {
-   "name": "South Corning",
-   "type": "INCORPORATED PLACE",
-   "held_candidates": 1
-  },
-  {
    "name": "South Huntington",
    "type": "CENSUS DESIGNATED PLACE",
    "held_candidates": 1
@@ -1776,6 +1771,6 @@
    "held_candidates": 1
   }
  ],
- "uncovered_places_without_candidates": 448,
+ "uncovered_places_without_candidates": 450,
  "source": "U.S. Census Bureau 2020 place-by-county and county code files"
 }
