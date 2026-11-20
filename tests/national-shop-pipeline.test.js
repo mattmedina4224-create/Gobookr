@@ -72,6 +72,15 @@ test('a website shared by two different businesses is not attached', () => {
   assert.deepEqual(r.review.map((x) => x.reason), ['website_shared_with_other_business', 'website_shared_with_other_business']);
 });
 
+test('a license number listed at two addresses holds both locations', () => {
+  const r = plan([
+    lic({ name: 'Rini Hair Salon', city: 'White Plains', zip_code: '10601', external_id: 'nydos:1', license_key: 'NY-DOS.1' }),
+    lic({ name: 'Rini Hair Salon', city: 'Hopewell Junction', zip_code: '12533', external_id: 'nydos:1', license_key: 'NY-DOS.1' }),
+  ], { state: 'NY', checkedAt: '2026-11-19' });
+  assert.equal(r.publish.length, 0);
+  assert.deepEqual(r.review.map((x) => x.reason), ['license_number_on_multiple_locations', 'license_number_on_multiple_locations']);
+});
+
 test('coverage counts Census places and counties, and lists communities outside places', () => {
   const placeRows = [
     { STATEFP: '35', PLACENAME: 'Albuquerque city', COUNTYNAME: 'Bernalillo County', TYPE: 'INCORPORATED PLACE' },
