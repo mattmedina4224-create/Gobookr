@@ -48,3 +48,17 @@ States other than CO, TX and NY have no open bulk shop-license dataset we found.
 - **Statuses:** Discovery → Importing → Verification → Live → Maintenance. A new discovery run never lowers a state's status.
 
 Census coverage figures are computed from the run's publishable rows. Before a state is imported they show eligible coverage, not live coverage.
+
+## Website rule
+
+- **Directories, aggregators and social networks are never a business's website.** Examples: Yelp, Facebook, Instagram, `map.contact`, `muse.ai`.
+- **Booking and site-builder platforms are allowed**, but only as the business's own page there (`shop.square.site`, `vagaro.com/shopname`), never the bare platform homepage.
+- **A URL listed for two differently named businesses is dropped as a source error.** For a map-only row that means the row is held.
+
+These Colorado production shops carry a website that fails this rule. They are left unchanged pending review, and production edits need approval:
+
+| Shop | Problem |
+|---|---|
+| 216 Hot Streaks | `map.contact` directory page |
+| 415 Sizzor Magic | bare `glossgenius.com` homepage |
+| 193 Active Lash'z and 194 AC Touch of Pure Healing | same Vagaro URL; it likely belongs only to 193 |

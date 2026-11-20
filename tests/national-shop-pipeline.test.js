@@ -20,6 +20,11 @@ test('crawler keeps only stated, safe contact fields', () => {
   assert.equal(website('https://www.instagram.com/x'), '');
   assert.equal(website('javascript:alert(1)'), '');
   assert.equal(website('https://glow.example/'), 'https://glow.example/');
+  assert.equal(website('https://map.contact/site/awsumsalon'), '', 'directory pages are not official websites');
+  assert.equal(website('https://muse.ai/s/website-x'), '');
+  assert.equal(website('https://glossgenius.com/'), '', 'a bare platform homepage is not the business website');
+  assert.equal(website('https://finesse.glossgenius.com/'), 'https://finesse.glossgenius.com/', "the business's own platform page is");
+  assert.equal(website('https://www.vagaro.com/cbsgfe'), 'https://www.vagaro.com/cbsgfe');
   assert.equal(phone('+1 602-555-0100'), '(602) 555-0100');
   assert.equal(phone('555-0100'), '');
 });
@@ -56,6 +61,15 @@ test('state import: licensed rows need an active license and ZIP; map rows need 
   assert.match(sql, /UPPER\(s\.state\) = 'TX'/);
   assert.match(sql, /SELECT NULL, name/);
   assert.doesNotMatch(sql, /\b(DELETE|DROP|TRUNCATE|UPDATE)\b/);
+});
+
+test('a website shared by two different businesses is not attached', () => {
+  const r = plan([
+    map({ name: 'Active Lashz', city: 'Mesa', category: 'lashes', website_url: 'https://www.vagaro.com/activelashz', external_id: 'osm:node/7', source_url: 'https://www.openstreetmap.org/node/7' }),
+    map({ name: 'Touch of Healing Massage', city: 'Mesa', category: 'massage', website_url: 'https://www.vagaro.com/activelashz', external_id: 'osm:node/8', source_url: 'https://www.openstreetmap.org/node/8' }),
+  ], { state: 'AZ', checks: { 'https://www.vagaro.com/activelashz': { status: 'live' } }, checkedAt: '2026-11-19' });
+  assert.equal(r.publish.length, 0);
+  assert.deepEqual(r.review.map((x) => x.reason), ['website_shared_with_other_business', 'website_shared_with_other_business']);
 });
 
 test('coverage counts Census places and counties, and lists communities outside places', () => {

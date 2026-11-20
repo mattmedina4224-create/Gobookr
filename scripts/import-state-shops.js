@@ -20,6 +20,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const { classifyShop, CRAWLER_KIND_TO_CATEGORY } = require('../lib/shop-categories');
 const { LICENSE_SOURCES } = require('../lib/shop-states');
+const { officialWebsite } = require('../lib/shop-websites');
 
 const LEGAL_SUFFIX = /[,\s]+(l\.?\s?l\.?\s?c\.?|p\.?l\.?l\.?c\.?|inc\.?|incorporated|corp\.?|corporation|co\.?|company|ltd\.?|llp)$/i;
 function repairText(raw) {
@@ -55,7 +56,7 @@ function normalizeCandidate(c, state) {
 }
 
 function plan(candidates, { state, existing = [], checks = {}, checkedAt }) {
-  const live = (url) => { const c = url && checks[url]; return c && c.status === 'live' ? (c.final_url || url) : ''; };
+  const live = (url) => { const c = url && officialWebsite(url) && checks[url]; return c && c.status === 'live' ? officialWebsite(c.final_url || url) : ''; };
   const existingByLicense = new Map(existing.filter((s) => s.license_number).map((s) => [String(s.license_number), s]));
   const existingByExternal = new Map(existing.filter((s) => s.source_external_id).map((s) => [String(s.source_external_id), s]));
   const existingByNameCity = new Map();
@@ -112,7 +113,20 @@ function plan(candidates, { state, existing = [], checks = {}, checkedAt }) {
     seen.set(key, row);
     publish.push(row);
   }
-  return { publish, review, skipped, enrich };
+  // One website on two differently named businesses is a source error (e.g. a copied booking link): drop it.
+  const owners = new Map();
+  for (const r of publish) if (r.website_url) { const k = r.website_url.replace(/\/+$/, '').toLowerCase(); if (!owners.has(k)) owners.set(k, new Set()); owners.get(k).add(matchKey(r.name)); }
+  const finalPublish = [];
+  for (const r of publish) {
+    const k = r.website_url && r.website_url.replace(/\/+$/, '').toLowerCase();
+    if (k && owners.get(k).size > 1) {
+      const licensed = Boolean(r.license_number);
+      if (licensed) { finalPublish.push({ ...r, website_url: '', review_note: 'website_shared_with_other_business' }); continue; }
+      review.push({ ...r, website_url: '', reason: 'website_shared_with_other_business' }); continue;
+    }
+    finalPublish.push(r);
+  }
+  return { publish: finalPublish, review, skipped, enrich };
 }
 
 function insertSql(rows, state) {

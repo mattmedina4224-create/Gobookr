@@ -11,6 +11,7 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const { stateInfo } = require('../lib/shop-states');
+const { officialWebsite } = require('../lib/shop-websites');
 
 const args = process.argv.slice(2);
 const opt = (n, d) => { const a = args.find((x) => x.startsWith(`--${n}=`)); return a ? a.slice(n.length + 3) : d; };
@@ -53,10 +54,7 @@ function kind(name, detail = '') {
   if (/hair|salon|braid|extension|stylist|beauty|hairdresser/.test(n)) return 'hair';
   return detail ? 'other_beauty' : 'shop_category_review';
 }
-function website(v) {
-  try { const u = new URL(String(v || '').trim()); if (!['http:', 'https:'].includes(u.protocol)) return '';
-    if (/(^|\.)(instagram|facebook|yelp|tiktok|twitter|x|google|goo)\.(com|gl)$/.test(u.hostname)) return ''; return u.toString(); } catch { return ''; }
-}
+const website = officialWebsite;
 function phone(v) { const d = String(v || '').split(/[;,]/)[0].replace(/[^\d+]/g, ''); const ten = d.replace(/^\+?1/, ''); return /^\d{10}$/.test(ten) ? `(${ten.slice(0, 3)}) ${ten.slice(3, 6)}-${ten.slice(6)}` : ''; }
 
 // ---- licensing adapter (Socrata) ---------------------------------------------------------------------------
