@@ -61,8 +61,13 @@ INSERT INTO pro_profiles (id, user_id, business_name, category, initials, city, 
   (14, NULL, 'Listing Tech', 'nail_technician', 'LT', 'Denver', 'CO', 'Listed Nails', 'unclaimed', '', 0);
 INSERT INTO subscriptions VALUES (12, 'trialing'), (13, 'active');`;
 
+// One database for the whole file (PGlite instances are heavy); each test resets the schema.
+let shared = null;
+test.after(async () => { if (shared) await shared.close(); });
 function harness() {
-  const db = database();
+  if (!shared) shared = database();
+  const db = { ...shared, close: async () => {} };
+  db.exec('DROP SCHEMA public CASCADE; CREATE SCHEMA public;');
   db.exec(SCHEMA);
   const migration = fs.readFileSync(path.join(__dirname, '../db/migrations/20261120_business_profiles.sql'), 'utf8');
   db.exec(migration); db.exec(migration); // forward-safe: applying twice is a no-op
