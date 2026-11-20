@@ -14,7 +14,7 @@ on:
         required: false
         default: 'all'
   push:
-    branches: [main, feature/national-shop-expansion]
+    branches: [main]
     paths:
       - 'lib/shop-states.js'
       - 'scripts/crawl-state-shops.js'
@@ -36,7 +36,7 @@ jobs:
       - uses: actions/checkout@v4
       - id: pick
         env:
-          STATES: ${{ github.event.inputs.states || (github.event_name == 'push' && 'CO,AZ,UT,NV,NM,TX,NY,CT' || '') }}
+          STATES: ${{ github.event.inputs.states || (github.event_name == 'push' && 'CO,AZ,UT,NV,NM,TX,NY' || '') }}
           WAVE: ${{ github.event.inputs.wave || 'all' }}
         run: |
           node -e "

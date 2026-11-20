@@ -20,14 +20,14 @@ The `National Golden List — 50-state shop discovery` workflow runs steps 1–4
 
 | Source | States | Notes |
 |---|---|---|
-| State shop-license open data (Socrata) | CO (DORA `7s5z-vewr`), TX (TDLR `7358-krk7`), NY (DOS `y3u4-jbgh`), CT (DCP `ngch-56tr`) | Business licenses only. Individual practitioners, schools and booth/area renters are excluded, and inactive or expired rows are dropped. |
+| State shop-license open data (Socrata) | CO (DORA `7s5z-vewr`), TX (TDLR `7358-krk7`), NY (DOS `y3u4-jbgh`) | Business licenses only. Individual practitioners, schools and booth/area renters are excluded, and inactive or expired rows are dropped. |
 | OpenStreetMap via Overpass | all 50 | Four smaller queries per state. A failed part makes the source `partial`; it is never silently dropped. ODbL attribution applies. |
 | U.S. Census Geocoder | all 50 | Fills a missing city only when the map point lies inside an incorporated or census-designated place. |
 | Census 2020 place/county files | all 50 | Coverage denominators. |
 
 Not yet used: city/chamber directories, salon-suite locators (Sola, Phenix, MY SALON Suite, Salons by JC), and booking platforms (Square, Booksy, Vagaro, GlossGenius, SQUIRE, Boulevard, Mangomint, Zenoti, Booker). Each needs its own adapter. Each must respect robots.txt and the platform's terms, with no login, block or rate-limit circumvention. Their listings are mostly individual professionals rather than shop locations, so they must not be counted as new businesses.
 
-States other than CO, TX, NY and CT have no open bulk shop-license dataset. For those, adding licensing-board data needs either a published bulk file or a records request; scraping lookup pages is not allowed.
+States other than CO, TX and NY have no open bulk shop-license dataset we found. Connecticut's DCP license dataset was checked and lists no shop or salon credentials. For those, adding licensing-board data needs either a published bulk file or a records request; scraping lookup pages is not allowed.
 
 ## Publishing rules
 
