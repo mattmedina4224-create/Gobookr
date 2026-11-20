@@ -1,877 +1,1638 @@
 {
- "https://imagessalon93.wixsite.com/website": {
+ "https://shadenine.co/": {
   "status": "live",
   "http_status": 200,
-  "ms": 110
+  "ms": 225
  },
- "https://www.studioaurumslc.com/": {
-  "status": "dead",
-  "error": "ENOTFOUND",
-  "ms": 128
+ "https://perrysbarbershop.net/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 259
  },
- "https://www.lush.com/us/en_us/shops/lush-cosmetics-city-creek?id=US441": {
+ "http://www.hairitagehairacademy.com/": {
   "status": "blocked",
   "http_status": 403,
-  "ms": 200
+  "final_url": "http://paulmitchell.edu/stgeorge",
+  "ms": 380
  },
- "https://www.mvincenailspa.com/book-your-appt-sugarhouse-ut": {
+ "https://sportclips.com/us-ut-stgeorge-ut201": {
   "status": "live",
   "http_status": 200,
+  "ms": 405
+ },
+ "https://salons.greatclips.com/us/ut/pleasant-grove/881-w-state-rd": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 476
+ },
+ "https://raysbarbershopslc.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 476
+ },
+ "https://www.greatclips.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 346
+ },
+ "https://salons.greatclips.com/us/ut/american-fork/484-n-950-w": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 116
+ },
+ "https://www.greatclips.com/salons/5734": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://salons.greatclips.com/us/ut/murray/5293-s-state-st",
+  "ms": 236
+ },
+ "https://landissalon.com/marmalade-salon/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://landis.mystagingwebsite.com/locations/marmalade-landis-lifestyle-salon/",
+  "ms": 737
+ },
+ "https://landissalon.com/sugar-house-saltlake-utah-salon/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://landis.mystagingwebsite.com/locations/sugar-house-salon/",
+  "ms": 741
+ },
+ "https://salons.greatclips.com/us/ut/draper/11483-s-state-st": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 218
+ },
+ "https://www.nichollssalon.com/": {
+  "status": "blocked",
+  "http_status": 403,
+  "final_url": "https://www.hugedomains.com/domain_profile.cfm?d=nichollssalon.com",
+  "ms": 188
+ },
+ "https://www.drybarshops.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 262
+ },
+ "https://salons.greatclips.com/us/ut/taylorsville/5443-s-redwood-rd": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 158
+ },
+ "https://sportclips.com/us-ut-saltlakecity-ut115": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 427
+ },
+ "https://salons.greatclips.com/us/ut/woods-cross/618-w-2600-s/salon-services": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 32
+ },
+ "https://troubadourslc.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.troubadourslc.com/",
   "ms": 230
  },
- "https://www.ulta.com/stores/riverdale-ut-371": {
+ "https://salonblac.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 382
+  "ms": 89
  },
- "http://www.wildstylesalon.com/": {
+ "http://www.riversidebarbershopslc.com/": {
   "status": "dead",
   "error": "ENOTFOUND",
-  "ms": 76
+  "ms": 38
  },
- "https://cosmonailstgeorge.com/": {
+ "https://www.sportclipsinc.com/store/UT112": {
   "status": "live",
   "http_status": 200,
-  "ms": 424
+  "ms": 137
  },
- "https://www.ulta.com/stores/st-george-ut-459": {
+ "https://salons.greatclips.com/us/ut/salt-lake-city/532-e-400-s": {
   "status": "live",
   "http_status": 200,
-  "ms": 471
+  "ms": 161
  },
- "http://www.browspa24.com/index.html": {
+ "https://www.dollarcuts.com/rose-park": {
   "status": "dead",
   "http_status": 404,
-  "final_url": "https://www.browspa24.com/index.html",
-  "ms": 360
+  "ms": 197
  },
- "https://spaoneutah.com/": {
+ "https://www.blacksheepbarberco.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 199
+  "final_url": "https://thefellas.com/",
+  "ms": 455
  },
- "https://www.koipiercingslc.com/": {
+ "https://sportclips.com/us-ut-layton-ut118": {
   "status": "live",
   "http_status": 200,
-  "ms": 119
+  "ms": 281
  },
- "https://www.ulta.com/stores/midvale-ut-767": {
+ "https://bureaubarbershop.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.bureaubarbershop.com/",
+  "ms": 288
+ },
+ "https://www.rhyshairloft.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 104
+ },
+ "https://preciouseyebrowthreading.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 324
+ },
+ "https://trolleysquarebarbers.com/": {
+  "status": "error",
+  "error": "UND_ERR_SOCKET",
+  "ms": 201
+ },
+ "https://goathaircuts.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 144
+ },
+ "https://arraysalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 174
+ },
+ "https://www.supercuts.com/locations/ut/centerville/centerville-marketplace-haircuts-90402.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 106
+ },
+ "https://www.greatclips.com/salons/1938": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://salons.greatclips.com/us/ut/centerville/310-n-marketplace-dr",
+  "ms": 91
+ },
+ "https://sportclips.com/us-ut-logan-ut133": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 265
+ },
+ "https://www.breakbreadbarber.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://breakbreadbarber.com/",
+  "ms": 173
+ },
+ "https://www.butterflyjac.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 123
+ },
+ "https://goathaircuts.com/logan": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 38
+ },
+ "https://createthecollective.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 95
+ },
+ "https://cleancutslc.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 212
+ },
+ "https://evesandsonsbarbers.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.evesandsonsbarbers.com/",
+  "ms": 225
+ },
+ "https://www.seasonsalonanddayspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://seasonsalonanddayspa.com/",
+  "ms": 391
+ },
+ "https://goathaircuts.com/taylorsville": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 41
+ },
+ "https://jedsbarbershop.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 938
+ },
+ "https://www.aphillyaided.com/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 209
+ },
+ "https://www.supercuts.com/locations/ut/west-valley-city/35th-south-center-haircuts-80979.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 10
+ },
+ "https://haircutmentaylorsvilleut.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 32
+ },
+ "https://www.mysalonsuite.com/taylorsville/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 148
+ },
+ "https://salons.greatclips.com/us/ut/west-valley-city/3573-w-3500-s": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 62
+ },
+ "https://www.salonkeiji.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 103
+ },
+ "https://salons.greatclips.com/us/ut/west-valley-city/2592-s-5600-w": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 33
+ },
+ "https://haircutsarefun.com/location/stgeorge-ut/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 2121
+ },
+ "https://www.nolimitbarbers.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 86
+ },
+ "https://www.hashtaghairsalon.com/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 229
+ },
+ "https://glamourhairandmakeup.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 436
+ },
+ "https://haircutmenwestvalleyut.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 40
+ },
+ "https://regalbarberco.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 82
+ },
+ "https://www.fantasticsams.com/salons/fantastic-sams-west-valley-city-ut-0": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1096
+ },
+ "https://throwbacksbarber.com/": {
+  "status": "error",
+  "error": "ERR_SSL_SSL/TLS_ALERT_HANDSHAKE_FAILURE",
+  "ms": 55
+ },
+ "https://www.slbarbershop.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 184
+ },
+ "https://sportclips.com/us-ut-riverton-ut110": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 245
+ },
+ "https://theparlorlogan.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 74
+ },
+ "https://www.fantasticsams.com/about/regions/salt-lake-city-ut/fantastic-sams-west-valley-city-ut": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.fantasticsams.com/salons/fantastic-sams-west-valley-city-ut",
+  "ms": 806
+ },
+ "https://ladyjanes.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.ladyjanes.com/",
+  "ms": 1911
+ },
+ "https://www.ggbarbers.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 146
+ },
+ "https://kingsroadsalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 297
+ },
+ "https://www.haircutsarefun.com/location/lehi-ut": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://haircutsarefun.com/location/lehi-ut/",
+  "ms": 3339
+ },
+ "https://shadesoffadesbarbershop.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 117
+ },
+ "https://ogbarbershopbooking.setmore.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 242
+ },
+ "https://www.dollarcuts.com/west-jordan": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 89
+ },
+ "https://www.haircutsarefun.com/location/layton-ut": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://haircutsarefun.com/location/layton-ut/",
+  "ms": 3214
+ },
+ "https://lucerohairandwellness.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 141
+ },
+ "https://www.saltlakecityflowerdelivery.com/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 146
+ },
+ "https://lacedhair.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 847
+ },
+ "https://www.mybeautiqueonline.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 46
+ },
+ "https://h2blowdrybar.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.h2blowdrybar.com/",
+  "ms": 229
+ },
+ "https://nextlevelbarberandbeauty.com/index.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 228
+ },
+ "https://salons.greatclips.com/us/ut/highland/5435-w-11000-n": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 33
+ },
+ "https://anvilbarberco.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 85
+ },
+ "https://theclassicgentlemanslc.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 94
+ },
+ "https://www.thestudiohustle.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 116
+ },
+ "https://sportclips.com/us-ut-orem-ut104": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 55
+ },
+ "https://bamboosalonstudios.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 129
+ },
+ "https://thebarberschool.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 494
+ },
+ "https://salonatlibrarysquare.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 37
+ },
+ "https://www.haircutsarefun.com/location/southjordan-ut": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://haircutsarefun.com/location/southjordan-ut/",
+  "ms": 2359
+ },
+ "https://www.vagaro.com/us02/centerandmainsalon": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1651
+ },
+ "https://skullcuttersbarbershop.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 904
+ },
+ "https://gemini-salon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.gemini-salon.com/",
+  "ms": 314
+ },
+ "https://www.omniasalons.com/af-beauty-pros": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://omniasalons.com/af-beauty-pros/",
+  "ms": 1453
+ },
+ "https://square.site/book/964D095RXAM9Z/the-barber-house-taylorsville-ut": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 319
+ },
+ "https://www.fantasticsams.com/salons/fantastic-sams-american-fork-ut": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1063
+ },
+ "https://www.lacedhair.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://lacedhair.com/",
+  "ms": 591
+ },
+ "https://www.rekindledandco.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 224
+ },
+ "https://sportclips.com/us-ut-lehi-ut126": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 253
+ },
+ "https://app.greatclips.com/salon/1931/": {
   "status": "live",
   "http_status": 200,
   "ms": 299
  },
- "https://revivology.com/": {
-  "status": "blocked",
-  "http_status": 403,
-  "final_url": "https://www.brandbucket.com/names/revivology",
-  "ms": 430
- },
- "http://secretnailsbar.com/": {
-  "status": "dead",
-  "error": "ENOTFOUND",
-  "ms": 56
- },
- "https://www.merlenormanstudio.com/ut/murray/mn-8309/": {
+ "https://www.fullthrottlehair.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 311
+  "ms": 143
  },
- "https://www.queennailsandspa.net/": {
+ "https://salons.greatclips.com/us/ut/west-jordan/5688-w-7800-s": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 29
+ },
+ "https://portfoliohairsalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 64
+ },
+ "https://www.goodbrotherbarbers.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 104
+ },
+ "https://www.saltlakebarberco.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://saltlakebarberco.com/",
+  "ms": 1160
+ },
+ "https://the-madd-barber.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 731
+ },
+ "https://www.omniasalons.com/make-an-appointment": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://omniasalons.com/locations/",
+  "ms": 560
+ },
+ "https://www.uluspas.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 372
+ },
+ "https://www.lineandblade.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 229
+ },
+ "https://sportclips.com/us-ut-lindon-ut108": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 43
+ },
+ "https://leesbarbershop.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.leesfamilybarber.com/",
+  "ms": 982
+ },
+ "https://pleasantgrove.sandandsagebrush.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 387
+ },
+ "https://thefellas.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 159
+ },
+ "https://www.westiviecollective.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 381
+ },
+ "https://www.varasuites.com/pg": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 182
+ },
+ "https://www.jennhairartist.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 266
+ },
+ "https://retro-barbers.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 321
+ },
+ "https://kamaskuts.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 353
+ },
+ "https://salons.greatclips.com/us/ut/cedar-city/1380-s-providence-center-drhttps://salons.greatclips.com/us/ut/cedar-city/1380-s-providence-center-dr": {
+  "status": "dead",
+  "http_status": 404,
+  "final_url": "https://salons.greatclips.com/us/ut/cedar-city/1380-s-providence-center-drhttps:/salons.greatclips.com/us/ut/cedar-city/1380-s-providence-center-dr",
+  "ms": 310
+ },
+ "http://www.tonsorialsalon.com/index.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 220
+ },
+ "https://scissorandbone.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 529
+ },
+ "https://salons.greatclips.com/us/ut/st-george/1973-w-sunset-blvd": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 164
+ },
+ "https://honestcuts.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 2683
+ },
+ "https://www.kingdom-barbers.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 283
+ },
+ "https://sportclips.com/us-ut-stgeorge-ut202": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 248
+ },
+ "https://legendssalonstg.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 249
+ },
+ "https://leefongbarbers.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 86
+ },
+ "https://www.wasatchbarbershop.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 105
+ },
+ "https://thecrowncutstudio.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 2052
+ },
+ "https://studio1030.byu.edu/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 453
+ },
+ "https://www.salonpettine.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 649
+ },
+ "https://sportclips.com/us-ut-orem-ut122": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 60
+ },
+ "https://www.lavishbyminordetails.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 529
+ },
+ "https://www.amaradayspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 940
+ },
+ "https://www.blushskysalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 807
+ },
+ "https://mcc-carmasterdetailing.com/barber-shop": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://mcc-carmasterdetailing.com/barber-shop/",
+  "ms": 996
+ },
+ "https://boneyardbarbering.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 487
+ },
+ "http://www.salonoslc.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 287
+ },
+ "https://www.poisebeautyutah.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 260
+ },
+ "https://www.birdsofafeather.salon/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 410
+ },
+ "https://www.sugarhouseparlour.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 656
+ },
+ "https://amavi.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 524
+ },
+ "https://app.greatclips.com/salon/3657/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 148
+ },
+ "https://www.tulliahairco.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 551
+ },
+ "https://www.universitybarber.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 961
+ },
+ "https://www.supercuts.com/locations/nearme/haircut/ut/saratoga-springs/the/81647": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 159
+ },
+ "https://www.sharkeyscutsforkidssaratogasprings.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 325
+ },
+ "https://www.oscarsbarbershopslc.com/locations/oscars-saratoga-springs": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 230
+ },
+ "https://generationssalonut.weebly.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 304
+ },
+ "https://imagessalon93.wixsite.com/website": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 246
+ },
+ "https://www.studioaurumslc.com/": {
   "status": "dead",
   "error": "ENOTFOUND",
-  "ms": 57
+  "ms": 93
+ },
+ "https://www.lush.com/us/en_us/shops/lush-cosmetics-city-creek?id=US441": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 102
+ },
+ "https://www.ulta.com/stores/riverdale-ut-371": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 843
+ },
+ "https://www.ulta.com/stores/st-george-ut-459": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 250
+ },
+ "https://cosmonailstgeorge.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 133
+ },
+ "https://www.mvincenailspa.com/book-your-appt-sugarhouse-ut": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 135
+ },
+ "https://bloodymarysbarbers.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 3140
+ },
+ "http://www.wildstylesalon.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 41
+ },
+ "https://spaoneutah.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 169
+ },
+ "https://www.beachestanningcenter.com/american-fork/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 1156
+ },
+ "https://kknailsamericanfork.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1384
+ },
+ "https://www.koipiercingslc.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 114
  },
  "https://www.radiantwaxing.com/ut-layton/": {
   "status": "live",
   "http_status": 200,
-  "ms": 866
+  "ms": 708
+ },
+ "https://www.merlenormanstudio.com/ut/murray/mn-8309/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 169
  },
  "https://palmbeachtan.com/locations/UT/Draper-East-12300S": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://palmbeachtan.com/locations/ut/draper-east-12300s",
-  "ms": 693
+  "ms": 867
  },
- "https://www.beachestanningcenter.com/american-fork/": {
+ "https://revivology.com/": {
+  "status": "blocked",
+  "http_status": 403,
+  "final_url": "https://www.brandbucket.com/names/revivology",
+  "ms": 457
+ },
+ "http://secretnailsbar.com/": {
   "status": "dead",
-  "http_status": 404,
-  "ms": 1067
+  "error": "ENOTFOUND",
+  "ms": 87
  },
- "https://www.ulta.com/stores/vernal-ut-1076": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 460
+ "https://www.queennailsandspa.net/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 309
  },
  "https://palmbeachtan.com/locations/UT/American-Fork-West-Main-Street": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://palmbeachtan.com/locations/ut/american-fork-west-main-street",
-  "ms": 567
+  "ms": 631
  },
- "https://www.ulta.com/stores/spanish-fork-ut-1277": {
+ "https://www.ulta.com/stores/vernal-ut-1076": {
   "status": "live",
   "http_status": 200,
-  "ms": 204
+  "ms": 502
  },
- "https://kknailsamericanfork.com/": {
+ "https://www.ulta.com/stores/midvale-ut-767": {
   "status": "live",
   "http_status": 200,
-  "ms": 1278
+  "ms": 901
  },
- "https://www.sephora.com/happening/stores/downtown-salt-lake-city": {
-  "status": "blocked",
-  "http_status": 403,
-  "ms": 133
- },
- "https://formmedspa.com/": {
-  "status": "error",
-  "error": "CERT_HAS_EXPIRED",
-  "ms": 295
- },
- "https://starlashstudio.com/": {
+ "https://www.saltwaxsociety.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 605
+  "ms": 107
  },
  "https://www.cossetbathandbody.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 652
+  "ms": 282
  },
- "https://luxheber.com/": {
-  "status": "dead",
-  "error": "ENOTFOUND",
-  "ms": 147
+ "https://www.sephora.com/happening/stores/downtown-salt-lake-city": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 226
+ },
+ "https://www.haircutsarefun.com/location/saratoga-springs-ut": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://haircutsarefun.com/location/saratoga-springs-ut/",
+  "ms": 2934
+ },
+ "https://starlashstudio.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 373
+ },
+ "https://formmedspa.com/": {
+  "status": "error",
+  "error": "CERT_HAS_EXPIRED",
+  "ms": 268
+ },
+ "https://www.ulta.com/stores/spanish-fork-ut-1277": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 735
  },
  "https://www.bloombeauty.studio/": {
   "status": "live",
   "http_status": 200,
-  "ms": 198
- },
- "https://www.saltylashandbrow.com/": {
-  "status": "live",
-  "http_status": 200,
-  "final_url": "https://saltylashandbrow.com/",
-  "ms": 937
- },
- "https://planetbeach.com/spa/centerville/": {
-  "status": "live",
-  "http_status": 200,
-  "final_url": "https://planetbeach.com/spa-locator/",
-  "ms": 636
+  "ms": 123
  },
  "http://gigilashandnail.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://gigilash.us/",
-  "ms": 652
+  "ms": 600
+ },
+ "https://planetbeach.com/spa/centerville/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://planetbeach.com/spa-locator/",
+  "ms": 608
+ },
+ "https://luxheber.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 93
  },
  "https://europeantanning.com/": {
   "status": "error",
   "error": "UND_ERR_SOCKET",
-  "ms": 655
- },
- "https://www.peakdayspa.com/": {
-  "status": "error",
-  "error": "UND_ERR_SOCKET",
-  "ms": 208
- },
- "https://topbeautyschoolutah.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 240
+  "ms": 598
  },
  "https://www.lunchboxwax.com/sugar-house/": {
   "status": "dead",
   "http_status": 404,
   "final_url": "https://www.radiantwaxing.com/sugar-house/?utm_source=lbwredirect",
-  "ms": 629
+  "ms": 701
+ },
+ "https://www.peakdayspa.com/": {
+  "status": "error",
+  "error": "UND_ERR_SOCKET",
+  "ms": 591
+ },
+ "https://topbeautyschoolutah.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 671
  },
  "http://www.studio7200.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 193
- },
- "https://www.sephora.com/happening/stores/mountain-view-village": {
-  "status": "blocked",
-  "http_status": 403,
-  "ms": 51
- },
- "https://polishnailbarriverton.com/": {
-  "status": "error",
-  "error": "ECONNRESET",
-  "ms": 146
+  "ms": 283
  },
  "https://lushusa.com/": {
   "status": "blocked",
   "http_status": 403,
   "final_url": "https://www.lush.com/us/us_en",
-  "ms": 294
+  "ms": 215
+ },
+ "https://www.sephora.com/happening/stores/mountain-view-village": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 56
+ },
+ "https://lavender-nails-social-services-organization.business.site/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 1003
+ },
+ "https://www.bathandbodyworks.com/store-locator": {
+  "status": "error",
+  "http_status": 307,
+  "ms": 106
+ },
+ "https://www.saltylashandbrow.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://saltylashandbrow.com/",
+  "ms": 2699
+ },
+ "https://polishnailbarriverton.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 114
  },
  "https://www.jafra.com/DJensen": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://www.jafra.com/?pws=djensen",
-  "ms": 545
- },
- "https://lavender-nails-social-services-organization.business.site/": {
-  "status": "dead",
-  "http_status": 404,
-  "ms": 855
- },
- "http://hottipsnailsdraper.com/": {
-  "status": "dead",
-  "error": "ENOTFOUND",
-  "ms": 21
- },
- "https://elase.com/locations/draper/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 227
+  "ms": 819
  },
  "https://eroedge.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 1206
+  "ms": 1572
  },
- "https://www.saltwaxsociety.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 2018
+ "http://hottipsnailsdraper.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 244
  },
  "https://locations.waxcenter.com/ut/draper/draper-0290.html": {
   "status": "live",
   "http_status": 200,
-  "ms": 792
+  "ms": 747
  },
  "https://www.nima.edu/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://nima.edu/",
-  "ms": 416
+  "ms": 542
+ },
+ "https://www.bathandbodyworks.com/": {
+  "status": "error",
+  "http_status": 307,
+  "ms": 45
  },
  "https://www.sephora.com/": {
   "status": "blocked",
   "http_status": 403,
-  "ms": 70
- },
- "https://www.bathandbodyworks.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 299
- },
- "https://elase.com/locations/american-fork/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 99
- },
- "https://www.bathandbodyworks.com/store-locator": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 1130
- },
- "https://www.hawaiinails2.com/": {
-  "status": "dead",
-  "error": "ENOTFOUND",
-  "ms": 110
- },
- "https://perfectnailsogden.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 93
- },
- "https://palmbeachtan.com/locations/UT/South-Jordan-South-Parkway-Plaza-Drive": {
-  "status": "live",
-  "http_status": 200,
-  "final_url": "https://palmbeachtan.com/locations/ut/south-jordan-south-parkway-plaza-drive",
-  "ms": 472
+  "ms": 68
  },
  "https://www.radiantwaxing.com/ut-south-jordan/": {
   "status": "live",
   "http_status": 200,
-  "ms": 658
- },
- "https://www.ulta.com/stores/american-fork-ut-1273": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 195
- },
- "https://www.ulta.com/stores/salt-lake-city-ut-1056": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 264
- },
- "https://tropicalnailsalon.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 201
+  "ms": 688
  },
  "https://hausofaestheticsslc.com/": {
   "status": "error",
   "error": "UND_ERR_SOCKET",
-  "ms": 530
+  "ms": 297
  },
- "https://modernnailslehi.com/": {
+ "https://www.hawaiinails2.com/": {
   "status": "dead",
   "error": "ENOTFOUND",
-  "ms": 78
- },
- "https://www.topcoatslc.com/": {
-  "status": "dead",
-  "error": "ENOTFOUND",
-  "ms": 44
- },
- "https://www.kqnailbar.online/": {
-  "status": "dead",
-  "error": "ENOTFOUND",
-  "ms": 45
- },
- "https://www.wildivyblowdrybar.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 234
- },
- "http://venusnailsamericanfork.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 372
+  "ms": 68
  },
  "http://phenixsalonsuitesdraper.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 1870
+  "ms": 1303
  },
- "https://nailsalonriverton.com/": {
+ "https://elase.com/locations/draper/": {
   "status": "live",
   "http_status": 200,
-  "ms": 923
+  "ms": 1321
+ },
+ "https://perfectnailsogden.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 168
  },
  "https://www.floatspa19.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://floatspa19.com/",
-  "ms": 2585
+  "ms": 2849
+ },
+ "https://palmbeachtan.com/locations/UT/South-Jordan-South-Parkway-Plaza-Drive": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://palmbeachtan.com/locations/ut/south-jordan-south-parkway-plaza-drive",
+  "ms": 844
+ },
+ "https://www.matryoshkashair.com/": {
+  "status": "dead",
+  "error": "EAI_AGAIN",
+  "ms": 10015
+ },
+ "https://tropicalnailsalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 123
+ },
+ "https://www.ulta.com/stores/salt-lake-city-ut-1056": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 381
+ },
+ "https://modernnailslehi.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 30
+ },
+ "https://www.topcoatslc.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 33
+ },
+ "https://www.kqnailbar.online/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 14
+ },
+ "https://www.ulta.com/stores/american-fork-ut-1273": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 383
+ },
+ "https://www.wildivyblowdrybar.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 217
+ },
+ "https://elase.com/locations/american-fork/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 950
+ },
+ "http://venusnailsamericanfork.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 237
+ },
+ "https://nailsalonriverton.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 902
  },
  "https://omgnailsamericanfork.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 502
+  "ms": 401
  },
  "https://www.radiantwaxing.com/ut-american-fork/": {
   "status": "live",
   "http_status": 200,
-  "ms": 450
+  "ms": 548
  },
- "http://www.flamingonailsandspa.com/": {
+ "https://minkys.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 1739
+  "ms": 785
+ },
+ "https://ivysnailsandspa.com/Home/AppointmentLink": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 539
  },
  "https://kenziew.avonrepresentative.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://www.avon.com/?rep=kenziew",
-  "ms": 1089
- },
- "https://minkys.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 805
+  "ms": 999
  },
  "https://linhslashstudioshighland.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 566
+  "ms": 167
  },
  "https://jennynailaf.com/": {
   "status": "dead",
   "error": "ENOTFOUND",
-  "ms": 202
+  "ms": 39
  },
  "https://rogerspremiersalonsuites.com/west-jordan-suite-directory/": {
   "status": "error",
   "error": "UND_ERR_SOCKET",
-  "ms": 339
+  "ms": 283
  },
  "https://jlnailsandlashes.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 231
+  "ms": 164
+ },
+ "https://envyblowdry.com/": {
+  "status": "error",
+  "error": "TimeoutError",
+  "ms": 15001
  },
  "https://americanforknailsalon.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 711
+  "ms": 605
  },
- "https://tiffanynailspabountiful.com/": {
+ "http://www.flamingonailsandspa.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 437
- },
- "https://www.soulsticedayspa.com/": {
-  "status": "live",
-  "http_status": 200,
-  "final_url": "https://soulsticedayspa.com/",
-  "ms": 555
+  "ms": 2412
  },
  "http://www.sunandsolstudios.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://sunandsolstudios.com/",
-  "ms": 661
+  "ms": 375
+ },
+ "https://www.soulsticedayspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://soulsticedayspa.com/",
+  "ms": 388
+ },
+ "https://tiffanynailspabountiful.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 418
  },
  "https://gnailsbar.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 319
+  "ms": 316
+ },
+ "https://www.jolienailsutah.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 269
  },
  "https://nailsnow.net/practices/united-states/utah/highland/nails---spa-too-23018": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://betberryjuara.com/login-slot/",
-  "ms": 1523
- },
- "https://www.jolienailsutah.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 306
- },
- "https://ivysnailsandspa.com/Home/AppointmentLink": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 1974
+  "ms": 1295
  },
  "https://spacexnailslehi.com/": {
   "status": "error",
   "http_status": 503,
-  "ms": 406
+  "ms": 318
  },
  "https://floatinglotussanctuary.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 328
+  "ms": 336
  },
  "https://lotusnailspautah.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 604
+  "ms": 561
+ },
+ "https://www.theskincaretherapist.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 486
+ },
+ "https://pineappleexpressutah.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 810
  },
  "https://hennabysanz.square.site/": {
   "status": "live",
   "http_status": 200,
-  "ms": 823
+  "ms": 836
+ },
+ "https://usnailssugarhouse.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 245
+ },
+ "https://elase.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 78
  },
  "https://sandyut.spaviadayspa.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://spaviadayspa.com/locations/sandy-ut/",
-  "ms": 833
- },
- "https://mandalabeautylounge.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 1365
- },
- "https://www.sunnyraenails.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 563
- },
- "https://elase.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 104
- },
- "https://usnailssugarhouse.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 303
- },
- "https://pineappleexpressutah.square.site/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 1181
- },
- "https://www.theskincaretherapist.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 1169
+  "ms": 728
  },
  "https://goglow.co/pleasant-grove-ut": {
   "status": "live",
   "http_status": 200,
-  "ms": 269
+  "ms": 102
  },
  "https://heartsnailspasj.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 283
+  "ms": 183
+ },
+ "https://mandalabeautylounge.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1409
  },
  "https://xxnails.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 400
+  "ms": 336
  },
  "https://roaesthetics.com/": {
   "status": "error",
   "error": "UND_ERR_SOCKET",
-  "ms": 512
+  "ms": 234
  },
  "https://embeauty.com/pages/american-fork": {
   "status": "live",
   "http_status": 200,
-  "ms": 689
+  "ms": 424
  },
  "https://skinmcl.org/": {
-  "status": "error",
-  "error": "ECONNRESET",
-  "ms": 554
- },
- "https://selvaspautah.com/": {
-  "status": "error",
-  "error": "UND_ERR_SOCKET",
-  "ms": 698
- },
- "https://goodmedicinebeautylab.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 963
- },
- "https://www.pendry.com/park-city/wellness/spa-pendry/": {
-  "status": "blocked",
-  "http_status": 403,
-  "ms": 362
- },
- "https://www.stgeorgenail.com/": {
-  "status": "error",
-  "error": "ERR_SSL_TLSV1_ALERT_INTERNAL_ERROR",
-  "ms": 504
+  "ms": 274
  },
  "https://beutimi.glossgenius.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://glossgenius.com/",
-  "ms": 1611
+  "ms": 597
  },
- "https://illumin8skin.com/": {
+ "https://goodmedicinebeautylab.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 5478
+  "ms": 372
+ },
+ "https://selvaspautah.com/": {
+  "status": "error",
+  "error": "UND_ERR_SOCKET",
+  "ms": 342
+ },
+ "https://www.sunnyraenails.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1045
+ },
+ "https://www.pendry.com/park-city/wellness/spa-pendry/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 69
+ },
+ "https://www.stgeorgenail.com/": {
+  "status": "error",
+  "error": "ERR_SSL_TLSV1_ALERT_INTERNAL_ERROR",
+  "ms": 106
  },
  "https://www.sunhaventanbeauty.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 457
+  "ms": 210
+ },
+ "https://illumin8skin.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 4261
  },
  "https://www.synchronicities1111.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 146
- },
- "https://www.varasuites.com/bountiful": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 125
- },
- "https://www.vagaro.com/shorties/services": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 1055
- },
- "https://www.ulta.com/stores/riverton-ut-1456": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 234
- },
- "https://www.silvernailsandlashpleasantgrove.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 326
- },
- "https://locations.waxcenter.com/ut/americanfork/facial-waxing-american-fork-0292.html": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 907
- },
- "https://myindiestudio.com/salon-suites-in-bountiful/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 95
- },
- "https://www.sheerindulgencesalon.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 207
- },
- "https://www.bathandbodyworks.com/?cm_mmc=local_BBW02916": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 282
- },
- "https://www.ulta.com/stores/farmington-ut-455": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 508
- },
- "https://voguenailsspaut.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 279
- },
- "https://www.beachestanningandspa.com/tanning-salon-locations/north-orem": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 1284
- },
- "https://www.ulta.com/stores/saratoga-springs-ut-1673": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 391
+  "ms": 278
  },
  "https://libranailsandspa.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 2172
+  "ms": 596
+ },
+ "https://www.ulta.com/stores/riverton-ut-1456": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 343
+ },
+ "https://www.varasuites.com/bountiful": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 284
+ },
+ "https://www.silvernailsandlashpleasantgrove.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 533
+ },
+ "https://www.ulta.com/stores/farmington-ut-455": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 213
+ },
+ "https://www.sheerindulgencesalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 210
+ },
+ "https://locations.waxcenter.com/ut/americanfork/facial-waxing-american-fork-0292.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 945
+ },
+ "https://www.bathandbodyworks.com/?cm_mmc=local_BBW02916": {
+  "status": "error",
+  "http_status": 307,
+  "ms": 140
+ },
+ "https://ivynailsspasaratoga.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 295
+ },
+ "https://www.ulta.com/stores/saratoga-springs-ut-1673": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 228
+ },
+ "https://www.beachestanningandspa.com/tanning-salon-locations/north-orem": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1264
+ },
+ "https://myindiestudio.com/salon-suites-in-bountiful/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 596
  },
  "https://cknailssaratogasprings.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 286
+  "ms": 289
+ },
+ "https://voguenailsspaut.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 466
+ },
+ "https://www.etdmassage.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 205
  },
  "https://www.ulta.com/stores/west-valley-city-ut-1062": {
   "status": "live",
   "http_status": 200,
-  "ms": 274
- },
- "https://sideshowproductionstattoo.com/": {
-  "status": "error",
-  "error": "UND_ERR_SOCKET",
-  "ms": 102
+  "ms": 355
  },
  "http://dohmassage.com/": {
   "status": "dead",
   "error": "ENOTFOUND",
   "ms": 38
  },
- "https://www.etdmassage.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 256
+ "https://sideshowproductionstattoo.com/": {
+  "status": "error",
+  "error": "UND_ERR_SOCKET",
+  "ms": 190
  },
- "https://palmbeachtan.com/locations/ut/saratoga-springs-utah-73": {
+ "https://beautifulumedspa.com/american-fork/": {
   "status": "live",
   "http_status": 200,
-  "ms": 485
+  "ms": 1412
  },
  "https://olympustattoogallery.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 191
+  "ms": 190
  },
- "https://locations.massageenvy.com/utah/salt-lake-city/655-east-400-south.html": {
+ "https://palmbeachtan.com/locations/ut/saratoga-springs-utah-73": {
   "status": "live",
   "http_status": 200,
-  "ms": 186
+  "ms": 626
  },
- "https://www.nitehawktattoo.com/": {
-  "status": "dead",
-  "error": "ENOTFOUND",
-  "ms": 42
+ "https://www.vagaro.com/shorties/services": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 2082
  },
  "https://www.solereflexologyspa.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 169
+  "ms": 271
  },
- "https://www.kultureshocktattoo.com/": {
+ "https://www.nitehawktattoo.com/": {
   "status": "dead",
-  "http_status": 404,
-  "ms": 163
+  "error": "ENOTFOUND",
+  "ms": 255
+ },
+ "https://locations.massageenvy.com/utah/salt-lake-city/655-east-400-south.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 482
  },
  "https://locations.massageenvy.com/utah/murray/6352-south-state-street.html": {
   "status": "live",
   "http_status": 200,
-  "ms": 317
+  "ms": 482
  },
- "https://locations.massageenvy.com/utah/layton/519-ring-road.html": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 451
- },
- "https://yunsmassageutah.com/": {
-  "status": "blocked",
-  "http_status": 403,
-  "ms": 142
+ "https://www.kultureshocktattoo.com/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 313
  },
  "https://www.onlyforevertattoo.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 178
+  "ms": 162
  },
- "https://ivynailsspasaratoga.com/": {
+ "https://yunsmassageutah.com/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 143
+ },
+ "https://locations.massageenvy.com/utah/layton/519-ring-road.html": {
   "status": "live",
   "http_status": 200,
-  "ms": 1671
+  "ms": 863
  },
  "https://thehiveslc.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 184
+  "ms": 194
  },
  "https://looklooktattoo.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://shop.looklooktattoo.com/",
-  "ms": 433
- },
- "https://locations.massageenvy.com/utah/draper/219-e-12300-south.html": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 309
+  "ms": 547
  },
  "https://saltykittentattoo.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 212
- },
- "https://heartsnailspa.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 1976
- },
- "https://beautifulumedspa.com/american-fork/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 2258
- },
- "https://www.massageenvy.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 278
+  "ms": 92
  },
  "https://alohamassages.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 204
+  "ms": 63
  },
  "https://asiana-center-massage.business.site/": {
   "status": "dead",
   "http_status": 404,
-  "ms": 793
+  "ms": 667
  },
  "https://www.montage.com/deervalley/spa/": {
   "status": "blocked",
   "http_status": 403,
-  "ms": 144
+  "ms": 94
+ },
+ "https://www.massageenvy.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 350
  },
  "https://stonepathenergy.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 270
+  "ms": 84
  },
- "https://www.utahcorehealth.com/": {
+ "https://locations.massageenvy.com/utah/draper/219-e-12300-south.html": {
   "status": "live",
   "http_status": 200,
-  "ms": 247
- },
- "https://www.time4uspa.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 222
+  "ms": 677
  },
  "https://locations.massageenvy.com/utah/american-fork/356-north-750-west.html": {
   "status": "live",
   "http_status": 200,
-  "ms": 351
+  "ms": 337
  },
- "https://handandstone.com/locations/lehi/": {
+ "https://www.utahcorehealth.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 232
+  "ms": 195
  },
  "https://cocoartspa.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://www.cocoartspa.com/",
-  "ms": 510
+  "ms": 415
  },
- "https://handandstone.com/locations/pleasant-grove/": {
+ "https://www.time4uspa.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 249
+  "ms": 275
  },
- "https://www.pinyonandstarwellness.com/": {
+ "https://handandstone.com/locations/lehi/": {
   "status": "live",
   "http_status": 200,
-  "ms": 169
+  "ms": 460
  },
  "https://inklifters.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 374
+  "ms": 460
  },
- "https://simonssomatics.com/": {
+ "https://handandstone.com/locations/pleasant-grove/": {
   "status": "live",
   "http_status": 200,
-  "ms": 289
- },
- "http://lunarenergymw.com/": {
-  "status": "live",
-  "http_status": 200,
-  "final_url": "https://mysite.vagaro.com/lunarenergymw",
-  "ms": 1378
- },
- "http://elitespautah.com/": {
-  "status": "live",
-  "http_status": 200,
-  "final_url": "https://elitespautah.com/",
-  "ms": 368
- },
- "https://releasefactormassageforher.square.site/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 815
- },
- "https://osytattoo.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 118
- },
- "https://tinyurl.com/tattooutah": {
-  "status": "live",
-  "http_status": 200,
-  "final_url": "https://muse.ai/s/website-xuxf5xyxzlxluxvfo",
-  "ms": 273
- },
- "https://www.healingpathwaysmassageut.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 491
- },
- "https://www.fikareflexbar.com/saratoga-springs": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 159
- },
- "https://massageluxe.com/locations/saratoga-springs-ut/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 309
- },
- "https://www.desertsunmassagestg.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 1075
- },
- "https://nellieshairandnailtaylorsville.com/": {
-  "status": "error",
-  "error": "UND_ERR_CONNECT_TIMEOUT",
-  "ms": 10294
+  "ms": 312
  },
  "https://kookoofootheadmassage.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://www.go3technology.com/",
-  "ms": 2472
+  "ms": 723
+ },
+ "https://www.pinyonandstarwellness.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 123
+ },
+ "https://www.desertsunmassagestg.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 788
+ },
+ "https://simonssomatics.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 331
+ },
+ "http://lunarenergymw.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://mysite.vagaro.com/lunarenergymw",
+  "ms": 1732
+ },
+ "http://elitespautah.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://elitespautah.com/",
+  "ms": 438
+ },
+ "https://osytattoo.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 127
+ },
+ "https://releasefactormassageforher.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1141
+ },
+ "https://massageluxe.com/locations/saratoga-springs-ut/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 236
+ },
+ "https://www.fikareflexbar.com/saratoga-springs": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 211
+ },
+ "https://tinyurl.com/tattooutah": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://muse.ai/s/website-xuxf5xyxzlxluxvfo",
+  "ms": 458
+ },
+ "https://www.healingpathwaysmassageut.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 635
+ },
+ "https://heartsnailspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 3901
+ },
+ "https://nellieshairandnailtaylorsville.com/": {
+  "status": "error",
+  "error": "UND_ERR_CONNECT_TIMEOUT",
+  "ms": 10426
  }
 }
