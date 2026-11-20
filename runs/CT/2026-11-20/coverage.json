@@ -1,0 +1,493 @@
+{
+ "state": "CT",
+ "census_places": 214,
+ "places_covered": 28,
+ "place_coverage_pct": 13.1,
+ "census_counties": 8,
+ "counties_covered": 8,
+ "counties_uncovered": [],
+ "communities_outside_census_places": [
+  {
+   "city": "Glastonbury",
+   "shops": 11
+  },
+  {
+   "city": "Southington",
+   "shops": 5
+  },
+  {
+   "city": "Fairfield",
+   "shops": 4
+  },
+  {
+   "city": "Vernon",
+   "shops": 3
+  },
+  {
+   "city": "Southbury",
+   "shops": 3
+  },
+  {
+   "city": "Hamden",
+   "shops": 2
+  },
+  {
+   "city": "Windsor",
+   "shops": 2
+  },
+  {
+   "city": "Cromwell",
+   "shops": 2
+  },
+  {
+   "city": "Rocky Hill",
+   "shops": 2
+  },
+  {
+   "city": "Branford",
+   "shops": 2
+  },
+  {
+   "city": "Westport",
+   "shops": 2
+  },
+  {
+   "city": "South Windsor",
+   "shops": 2
+  },
+  {
+   "city": "Guilford",
+   "shops": 2
+  },
+  {
+   "city": "Old Saybrook",
+   "shops": 2
+  },
+  {
+   "city": "Coventry",
+   "shops": 1
+  },
+  {
+   "city": "Wallingford",
+   "shops": 1
+  },
+  {
+   "city": "Preston",
+   "shops": 1
+  },
+  {
+   "city": "Wilton",
+   "shops": 1
+  },
+  {
+   "city": "Simsbury",
+   "shops": 1
+  },
+  {
+   "city": "Milford City (Balance)",
+   "shops": 1
+  },
+  {
+   "city": "Lisbon",
+   "shops": 1
+  },
+  {
+   "city": "Plainville",
+   "shops": 1
+  },
+  {
+   "city": "Berlin",
+   "shops": 1
+  },
+  {
+   "city": "Farmington",
+   "shops": 1
+  },
+  {
+   "city": "Darien",
+   "shops": 1
+  },
+  {
+   "city": "Woodbridge",
+   "shops": 1
+  }
+ ],
+ "top_covered_places": [
+  {
+   "name": "New Haven",
+   "shops": 5
+  },
+  {
+   "name": "Newington",
+   "shops": 5
+  },
+  {
+   "name": "Bridgeport",
+   "shops": 4
+  },
+  {
+   "name": "Norwalk",
+   "shops": 4
+  },
+  {
+   "name": "Long Hill",
+   "shops": 4
+  },
+  {
+   "name": "Milford",
+   "shops": 3
+  },
+  {
+   "name": "New London",
+   "shops": 3
+  },
+  {
+   "name": "Plantsville",
+   "shops": 3
+  },
+  {
+   "name": "Middletown",
+   "shops": 2
+  },
+  {
+   "name": "Willimantic",
+   "shops": 2
+  },
+  {
+   "name": "Hartford",
+   "shops": 2
+  },
+  {
+   "name": "Wethersfield",
+   "shops": 2
+  },
+  {
+   "name": "Storrs",
+   "shops": 2
+  },
+  {
+   "name": "Poquonock Bridge",
+   "shops": 2
+  },
+  {
+   "name": "Danbury",
+   "shops": 1
+  },
+  {
+   "name": "Norwich",
+   "shops": 1
+  },
+  {
+   "name": "Conning Towers-Nautilus Park",
+   "shops": 1
+  },
+  {
+   "name": "Wilton Center",
+   "shops": 1
+  },
+  {
+   "name": "Stamford",
+   "shops": 1
+  },
+  {
+   "name": "North Haven",
+   "shops": 1
+  },
+  {
+   "name": "Ridgefield",
+   "shops": 1
+  },
+  {
+   "name": "Stratford Downtown",
+   "shops": 1
+  },
+  {
+   "name": "Manchester",
+   "shops": 1
+  },
+  {
+   "name": "Thomaston",
+   "shops": 1
+  },
+  {
+   "name": "Dayville",
+   "shops": 1
+  },
+  {
+   "name": "West Haven",
+   "shops": 1
+  },
+  {
+   "name": "Stafford Springs",
+   "shops": 1
+  },
+  {
+   "name": "Greenwich",
+   "shops": 1
+  }
+ ],
+ "uncovered_places_with_held_candidates": [
+  {
+   "name": "Meriden",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 34
+  },
+  {
+   "name": "Orange",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 27
+  },
+  {
+   "name": "Shelton",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 18
+  },
+  {
+   "name": "Kensington",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 16
+  },
+  {
+   "name": "Mystic",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 12
+  },
+  {
+   "name": "Wallingford Center",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 12
+  },
+  {
+   "name": "Colchester",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 11
+  },
+  {
+   "name": "Niantic",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 9
+  },
+  {
+   "name": "Portland",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 7
+  },
+  {
+   "name": "Clinton",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "East Hampton",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Guilford Center",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Northford",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Southport",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Waterbury",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Bristol",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Brooklyn",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Danielson",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "East Haven",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Higganum",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Lake Pocotopaug",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Mashantucket",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "New Milford",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Windsor Locks",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Ansonia",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Collinsville",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "East Hartford",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Gaylordsville",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Hazardville",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Putnam",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "South Coventry",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Torrington",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Bethel",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Branchville",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Branford Center",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Cos Cob",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Darien Downtown",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Durham",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Essex Village",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Glastonbury Center",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Jewett City",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Mansfield Center",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "New Britain",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Newtown",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Old Greenwich",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Rockville",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Simsbury Center",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Tariffville",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Terramuggus",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Weatogue",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Westport Village",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Woodbury Center",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  }
+ ],
+ "uncovered_places_without_candidates": 134,
+ "source": "U.S. Census Bureau 2020 place-by-county and county code files"
+}

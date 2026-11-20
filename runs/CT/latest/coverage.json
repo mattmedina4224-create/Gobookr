@@ -1,26 +1,26 @@
 {
  "state": "CT",
  "census_places": 214,
- "places_covered": 34,
- "place_coverage_pct": 15.9,
+ "places_covered": 28,
+ "place_coverage_pct": 13.1,
  "census_counties": 8,
  "counties_covered": 8,
  "counties_uncovered": [],
  "communities_outside_census_places": [
   {
    "city": "Glastonbury",
-   "shops": 13
+   "shops": 11
+  },
+  {
+   "city": "Southington",
+   "shops": 5
   },
   {
    "city": "Fairfield",
    "shops": 4
   },
   {
-   "city": "Southington",
-   "shops": 4
-  },
-  {
-   "city": "South Windsor",
+   "city": "Vernon",
    "shops": 3
   },
   {
@@ -33,10 +33,6 @@
   },
   {
    "city": "Windsor",
-   "shops": 2
-  },
-  {
-   "city": "Vernon",
    "shops": 2
   },
   {
@@ -53,6 +49,10 @@
   },
   {
    "city": "Westport",
+   "shops": 2
+  },
+  {
+   "city": "South Windsor",
    "shops": 2
   },
   {
@@ -110,31 +110,15 @@
   {
    "city": "Woodbridge",
    "shops": 1
-  },
-  {
-   "city": "Hebron",
-   "shops": 1
   }
  ],
  "top_covered_places": [
   {
-   "name": "Long Hill",
-   "shops": 7
-  },
-  {
-   "name": "West Hartford",
-   "shops": 7
-  },
-  {
    "name": "New Haven",
-   "shops": 6
-  },
-  {
-   "name": "Milford",
    "shops": 5
   },
   {
-   "name": "Norwalk",
+   "name": "Newington",
    "shops": 5
   },
   {
@@ -142,19 +126,19 @@
    "shops": 4
   },
   {
+   "name": "Norwalk",
+   "shops": 4
+  },
+  {
+   "name": "Long Hill",
+   "shops": 4
+  },
+  {
+   "name": "Milford",
+   "shops": 3
+  },
+  {
    "name": "New London",
-   "shops": 4
-  },
-  {
-   "name": "Newington",
-   "shops": 4
-  },
-  {
-   "name": "Storrs",
-   "shops": 4
-  },
-  {
-   "name": "Willimantic",
    "shops": 3
   },
   {
@@ -166,11 +150,11 @@
    "shops": 2
   },
   {
-   "name": "Hartford",
+   "name": "Willimantic",
    "shops": 2
   },
   {
-   "name": "Norwich",
+   "name": "Hartford",
    "shops": 2
   },
   {
@@ -178,19 +162,19 @@
    "shops": 2
   },
   {
+   "name": "Storrs",
+   "shops": 2
+  },
+  {
    "name": "Poquonock Bridge",
    "shops": 2
   },
   {
-   "name": "Stamford",
-   "shops": 2
-  },
-  {
-   "name": "Greenwich",
-   "shops": 2
-  },
-  {
    "name": "Danbury",
+   "shops": 1
+  },
+  {
+   "name": "Norwich",
    "shops": 1
   },
   {
@@ -202,15 +186,15 @@
    "shops": 1
   },
   {
+   "name": "Stamford",
+   "shops": 1
+  },
+  {
    "name": "North Haven",
    "shops": 1
   },
   {
-   "name": "New Milford",
-   "shops": 1
-  },
-  {
-   "name": "Sharon",
+   "name": "Ridgefield",
    "shops": 1
   },
   {
@@ -238,19 +222,7 @@
    "shops": 1
   },
   {
-   "name": "Collinsville",
-   "shops": 1
-  },
-  {
-   "name": "Brooklyn",
-   "shops": 1
-  },
-  {
-   "name": "Groton",
-   "shops": 1
-  },
-  {
-   "name": "Canaan",
+   "name": "Greenwich",
    "shops": 1
   }
  ],
@@ -258,12 +230,12 @@
   {
    "name": "Meriden",
    "type": "INCORPORATED PLACE",
-   "held_candidates": 37
+   "held_candidates": 34
   },
   {
    "name": "Orange",
    "type": "CENSUS DESIGNATED PLACE",
-   "held_candidates": 30
+   "held_candidates": 27
   },
   {
    "name": "Shelton",
@@ -273,22 +245,22 @@
   {
    "name": "Kensington",
    "type": "CENSUS DESIGNATED PLACE",
-   "held_candidates": 17
-  },
-  {
-   "name": "Wallingford Center",
-   "type": "CENSUS DESIGNATED PLACE",
-   "held_candidates": 13
-  },
-  {
-   "name": "Colchester",
-   "type": "CENSUS DESIGNATED PLACE",
-   "held_candidates": 12
+   "held_candidates": 16
   },
   {
    "name": "Mystic",
    "type": "CENSUS DESIGNATED PLACE",
    "held_candidates": 12
+  },
+  {
+   "name": "Wallingford Center",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 12
+  },
+  {
+   "name": "Colchester",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 11
   },
   {
    "name": "Niantic",
@@ -298,21 +270,11 @@
   {
    "name": "Portland",
    "type": "CENSUS DESIGNATED PLACE",
-   "held_candidates": 8
-  },
-  {
-   "name": "Ridgefield",
-   "type": "CENSUS DESIGNATED PLACE",
-   "held_candidates": 6
+   "held_candidates": 7
   },
   {
    "name": "Clinton",
    "type": "CENSUS DESIGNATED PLACE",
-   "held_candidates": 5
-  },
-  {
-   "name": "Danielson",
-   "type": "INCORPORATED PLACE",
    "held_candidates": 5
   },
   {
@@ -324,11 +286,6 @@
    "name": "Guilford Center",
    "type": "CENSUS DESIGNATED PLACE",
    "held_candidates": 5
-  },
-  {
-   "name": "Lake Pocotopaug",
-   "type": "CENSUS DESIGNATED PLACE",
-   "held_candidates": 4
   },
   {
    "name": "Northford",
@@ -351,8 +308,13 @@
    "held_candidates": 3
   },
   {
-   "name": "East Hartford",
+   "name": "Brooklyn",
    "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Danielson",
+   "type": "INCORPORATED PLACE",
    "held_candidates": 3
   },
   {
@@ -366,7 +328,17 @@
    "held_candidates": 3
   },
   {
+   "name": "Lake Pocotopaug",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 3
+  },
+  {
    "name": "Mashantucket",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "New Milford",
    "type": "CENSUS DESIGNATED PLACE",
    "held_candidates": 3
   },
@@ -378,6 +350,16 @@
   {
    "name": "Ansonia",
    "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Collinsville",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "East Hartford",
+   "type": "CENSUS DESIGNATED PLACE",
    "held_candidates": 2
   },
   {
@@ -506,6 +488,6 @@
    "held_candidates": 1
   }
  ],
- "uncovered_places_without_candidates": 130,
+ "uncovered_places_without_candidates": 134,
  "source": "U.S. Census Bureau 2020 place-by-county and county code files"
 }
