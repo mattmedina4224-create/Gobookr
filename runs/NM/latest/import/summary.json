@@ -1,18 +1,18 @@
 {
  "state": "NM",
- "checked_at": "2026-11-19",
- "candidates": 548,
+ "checked_at": "2026-11-20",
+ "candidates": 542,
  "existing_compared": 0,
- "publish": 54,
- "review": 494,
+ "publish": 53,
+ "review": 489,
  "skipped": 0,
  "enrich_existing": 0,
- "publish_with_website": 54,
- "publish_with_street": 53,
- "publish_with_phone": 46,
+ "publish_with_website": 53,
+ "publish_with_street": 52,
+ "publish_with_phone": 45,
  "review_reasons": {
-  "map_only_without_website": 455,
-  "map_website_not_confirmed_live": 32,
+  "map_only_without_website": 448,
+  "map_website_not_confirmed_live": 34,
   "missing_name": 1,
   "missing_city": 3,
   "school_or_training_facility": 3
@@ -22,7 +22,7 @@
   "stylist": 29,
   "barber": 4,
   "esthetician": 6,
-  "massage_therapist": 6,
+  "massage_therapist": 5,
   "makeup_artist": 1,
   "waxing_specialist": 2,
   "nail_technician": 4,
@@ -30,10 +30,10 @@
   "tattoo_artist": 3
  },
  "publish_sources": {
-  "OpenStreetMap contributors": 54
+  "OpenStreetMap contributors": 53
  },
  "publish_cities": {
-  "Albuquerque": 35,
+  "Albuquerque": 34,
   "Santa Fe": 8,
   "Las Cruces": 6,
   "Rio Rancho": 2,
@@ -42,8 +42,8 @@
   "Los Lunas": 1
  },
  "review_cities": {
-  "Albuquerque": 204,
-  "Santa Fe": 101,
+  "Albuquerque": 203,
+  "Santa Fe": 97,
   "Las Cruces": 22,
   "Los Alamos": 19,
   "Taos": 14,
