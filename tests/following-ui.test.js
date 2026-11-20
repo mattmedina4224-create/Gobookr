@@ -7,7 +7,7 @@ const read = file => fs.readFileSync(require.resolve('../' + file), 'utf8');
 test('following is discoverable from customer navigation and dashboard', () => {
   assert.match(read('lib/layout.js'), /href="\/following">Following/);
   assert.match(read('routes/customer.js'), /Open your Following feed/);
-  assert.match(read('routes/pro.js'), /href: '\/dashboard\/pro\/updates'/);
+  assert.match(read('routes/pro.js') + read('lib/pro-dashboard-view.js'), /href: '\/dashboard\/pro\/updates'/); // nav items live in lib/pro-dashboard-view.js
 });
 test('profile follow controls remain accessible on mobile and public updates are escaped', () => {
   assert.match(read('routes/public.js'), /class="profile-follow-mobile">\$\{followHtml\}/);

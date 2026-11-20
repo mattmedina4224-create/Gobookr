@@ -4,61 +4,39 @@ const db = require('../db');
 const { layout } = require('../lib/layout');
 const { send, flashFromQuery } = require('../lib/http');
 const { escapeHtml } = require('../lib/util');
-
-function safeUrl(value) {
-  try { const u = new URL(String(value || '').trim()); return ['http:','https:'].includes(u.protocol) ? u.toString() : ''; } catch { return ''; }
-}
+const ShopProfile = require('../lib/shop-profile');
+const { renderProfile, structuredData, metaDescription } = require('../lib/shop-profile-view');
 
 function shopForClaim(id) { return db.prepare('SELECT * FROM shops WHERE id = ?').get(id); }
 function pendingShopClaim(shopId, userId) { return db.prepare("SELECT id FROM shop_claims WHERE shop_id = ? AND claimant_user_id = ? AND status = 'pending' ORDER BY id DESC LIMIT 1").get(shopId, userId); }
 
 module.exports = function (router) {
   router.get('/shop/:id', async (ctx) => {
-    const shop = db.prepare('SELECT * FROM shops WHERE id = ?').get(ctx.params.id);
+    const id = Number(ctx.params.id);
+    const shop = Number.isInteger(id) && id > 0 ? db.prepare('SELECT * FROM shops WHERE id = ?').get(id) : null;
     if (!shop) return send(ctx.res, layout({ title:'Shop not found', currentUser:ctx.currentUser, session:ctx.session, body:'<section class="section container"><div class="panel"><h1>Shop not found</h1><p>This shop listing is not available.</p></div></section>' }), 404);
-
-    const logo = safeUrl(shop.logo_url);
-    const cover = safeUrl(shop.cover_url);
-    const booking = safeUrl(shop.booking_url);
-    const website = safeUrl(shop.website_url);
-    const address = [shop.street_address, shop.suite, shop.city, shop.state, shop.zip_code].filter(Boolean).join(', ');
-    const claimed = shop.claim_status === 'claimed';
-    const teamEnabled=require('../lib/business-team').enabled();
-    const rawProfessionals = teamEnabled && claimed
-      ? db.prepare("SELECT p.* FROM pro_profiles p JOIN business_team_members m ON m.pro_id=p.id WHERE m.shop_id=? AND m.status='accepted' ORDER BY p.business_name LIMIT 500").all(shop.id)
-      : db.prepare(`SELECT * FROM pro_profiles WHERE LOWER(COALESCE(workplace_name,'')) = LOWER(?) AND LOWER(city) = LOWER(?) AND UPPER(state) = UPPER(?) AND (? = '' OR COALESCE(street_address,'') = '' OR LOWER(street_address) = LOWER(?)) ORDER BY business_name ASC LIMIT 50`).all(shop.name, shop.city, shop.state, String(shop.street_address || ''), String(shop.street_address || ''));
-    const professionals=teamEnabled?require('../lib/pro-listing-data').hydratePros(rawProfessionals,{includeServices:false}):rawProfessionals;
-    let categoryLabels = [];
-    try { categoryLabels = db.prepare('SELECT category FROM shop_categories WHERE shop_id = ? ORDER BY category').all(shop.id).map((r) => require('../lib/shop-categories').shopCategoryLabel(r.category)).filter(Boolean); } catch (_) { /* not migrated */ }
-    const categoryHtml = categoryLabels.length ? `<div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:12px;">${categoryLabels.map((label) => `<span class="badge category">${escapeHtml(label)}</span>`).join('')}</div>` : '';
-    const sourceHtml = !claimed && shop.source_name ? `<p class="muted" style="font-size:13px;margin-top:14px;">Listing information from ${escapeHtml(shop.source_name)}${shop.source_checked_at ? ', checked ' + escapeHtml(new Date(shop.source_checked_at).toISOString().slice(0, 10)) : ''}. Details may have changed; the business can claim this page to update it.</p>` : '';
-    const closedHtml = shop.operational_status === 'closed' ? '<div class="card" style="margin-top:14px;"><p style="margin:0;">This business may have closed. We are reviewing this listing.</p></div>' : '';
-    const staffHtml = professionals.length ? professionals.map((pro) => `<a class="card" href="/pro/${pro.id}" style="text-decoration:none;color:inherit;display:flex;align-items:center;gap:12px;">${pro.profile_photo_url ? `<img class="shop-staff-photo" src="${escapeHtml(pro.profile_photo_url)}" alt="${escapeHtml(pro.business_name)} profile photo">` : `<div class="shop-staff-photo shop-staff-fallback">${escapeHtml(pro.initials || 'GB')}</div>`}<div><strong>${escapeHtml(pro.business_name)}</strong>${pro.professional_handle ? `<div class="profile-handle">@${escapeHtml(pro.professional_handle)}</div>` : ''}<div class="muted" style="margin-top:2px;">${escapeHtml(String(pro.category || 'Professional').replace(/_/g,' '))}${pro.license_verified ? ' · Verified' : ''}</div></div></a>`).join('') : '<p class="muted">No GoBookr professionals are connected to this business yet.</p>';
-    const body = `<section class="section container shop-public-page">
-      <div class="panel shop-public-shell" style="overflow:hidden;padding:0;">
-        ${cover ? `<img src="${escapeHtml(cover)}" alt="" style="width:100%;height:260px;object-fit:cover;display:block;">` : ''}
-        <div style="padding:24px;">
-          <div style="display:flex;gap:18px;align-items:center;flex-wrap:wrap;">
-            ${logo ? `<img src="${escapeHtml(logo)}" alt="${escapeHtml(shop.name)} logo" style="width:84px;height:84px;border-radius:18px;object-fit:cover;border:1px solid #e5e7eb;">` : ''}
-            <div><div class="badge">${claimed ? 'Claimed shop' : 'Unclaimed business'}</div><h1 style="margin:8px 0 4px;">${escapeHtml(shop.name)}</h1><p class="muted" style="margin:0;">${escapeHtml(shop.city)}, ${escapeHtml(shop.state)}</p></div>
-          </div>
-          ${categoryHtml}${closedHtml}
-          ${shop.description ? `<p style="margin-top:20px;">${escapeHtml(shop.description)}</p>` : ''}
-          ${website ? `<a class="btn secondary" href="${escapeHtml(website)}" target="_blank" rel="noopener noreferrer">Visit business website <span aria-hidden="true">↗</span></a>` : ''}
-          ${booking ? `<a class="btn shop-book-btn" href="${escapeHtml(booking)}" target="_blank" rel="noopener noreferrer">Book with this business <span aria-hidden="true">↗</span></a>` : ''}
-          <div class="shop-info-grid">
-            <div class="card"><h3>Location</h3><p>${escapeHtml(address || 'Address coming soon')}</p>${shop.phone ? `<p>${escapeHtml(shop.phone)}</p>` : ''}</div>
-            <div class="card"><h3>GoBookr professionals</h3><p class="muted" style="margin-bottom:0;">Choose a professional below to view their profile and booking options.</p></div>
-          </div>
-          <div class="shop-staff-section"><h2>${claimed ? 'Professionals at this business' : 'Professionals who list this business'}</h2>${!claimed && professionals.length ? '<p class="muted">These professionals named this business on their own GoBookr profiles. The business has not confirmed them as staff.</p>' : ''}<div class="shop-staff-grid">${staffHtml}</div></div>
-          ${sourceHtml}
-          ${!claimed ? `<div class="card" style="margin-top:18px;"><h3>Own this business?</h3><p>Claim this business to manage its GoBookr business profile.</p><a class="btn secondary" href="/shop/${shop.id}/claim">Claim this business</a></div>` : ''}
-        </div>
-      </div>
-    </section>`;
+    let claimed = shop.claim_status === 'claimed';
+    const isOwner = Boolean(claimed && ctx.currentUser && Number(shop.owner_user_id) === Number(ctx.currentUser.id));
+    // Owners see their own saves immediately (bypasses the per-instance read cache).
+    if (isOwner) { Object.assign(shop, db.prepare(ShopProfile.FRESH + 'SELECT * FROM shops WHERE id = ?').get(id)); claimed = shop.claim_status === 'claimed'; }
+    const mode = isOwner && ctx.query?.preview === '1' ? 'preview' : (claimed && !shop.profile_published_at ? 'base' : 'public');
+    const profile = ShopProfile.loadProfile(shop.id, { fresh: isOwner });
+    // Unclaimed pages only: professionals who name this business on their own profiles (shown as unconfirmed).
+    const listedPros = claimed ? [] : db.prepare(`SELECT id, business_name, professional_handle, category, profile_photo_url, booking_url, license_verified, initials FROM pro_profiles
+      WHERE LOWER(COALESCE(workplace_name,'')) = LOWER(?) AND LOWER(city) = LOWER(?) AND UPPER(state) = UPPER(?)
+        AND (? = '' OR COALESCE(street_address,'') = '' OR LOWER(street_address) = LOWER(?)) ORDER BY business_name ASC LIMIT 50`)
+      .all(shop.name, shop.city, shop.state, String(shop.street_address || ''), String(shop.street_address || ''));
+    const full = claimed && (mode === 'preview' || Boolean(shop.profile_published_at));
+    // Professionals see where they stand with a claimed business (request to join, invited, on the team).
+    const relationship = claimed && ctx.currentUser?.role === 'pro' ? ShopProfile.teamRelationship(ctx.currentUser, shop.id) : null;
+    const body = renderProfile({ shop, profile, listedPros, mode, canEdit: isOwner, relationship, csrf: ctx.session?.csrf_token || '' });
     const shopUrl = 'https://gobookr.com/shop/' + shop.id;
-    const structuredData = { '@context':'https://schema.org', '@type':'LocalBusiness', name:shop.name, url:shopUrl, description:shop.description || undefined, image:logo || cover || undefined, telephone:shop.phone || undefined, address: address ? { '@type':'PostalAddress', streetAddress:[shop.street_address,shop.suite].filter(Boolean).join(', ') || undefined, addressLocality:shop.city || undefined, addressRegion:shop.state || undefined, postalCode:shop.zip_code || undefined } : undefined };
-    send(ctx.res, layout({ title: shop.name + (shop.city ? ' · ' + shop.city + ', ' + shop.state : ''), description:`View ${shop.name}${shop.city ? ' in ' + shop.city + ', ' + shop.state : ''} on GoBookr. Explore professionals at this business and booking options.`, canonical:shopUrl, structuredData, currentUser:ctx.currentUser, session:ctx.session, flash:flashFromQuery(ctx.query), body }));
+    send(ctx.res, layout({
+      title: shop.name + (shop.city ? ' · ' + shop.city + ', ' + shop.state : ''),
+      description: metaDescription(shop, profile, full), canonical: shopUrl, robots: mode === 'preview' ? 'noindex,nofollow' : '',
+      structuredData: structuredData(shop, profile, full), shareImage: full ? ShopProfile.publicUrl(shop.cover_url) : '',
+      currentUser: ctx.currentUser, session: ctx.session, flash: flashFromQuery(ctx.query), body,
+    }));
   });
   router.get('/shop/:id/claim', async (ctx) => {
     const id = Number(ctx.params.id); const shop = Number.isInteger(id) && id > 0 ? shopForClaim(id) : null;

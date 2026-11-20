@@ -1,1 +1,18 @@
-'use strict';const test=require('node:test');const assert=require('node:assert/strict');const fs=require('node:fs');const path=require('node:path');test('business pages are mobile friendly and connect customers to professionals',()=>{const src=fs.readFileSync(path.join(__dirname,'..','routes','shops.js'),'utf8');const css=fs.readFileSync(path.join(__dirname,'..','public','styles.css'),'utf8');assert.match(src,/professional_handle/);assert.match(src,/profile_photo_url/);assert.match(src,/Book with this business/);assert.match(src,/shop-staff-grid/);assert.match(css,/shop-public-page/);assert.match(css,/shop-staff-photo/);});
+'use strict';
+const test = require('node:test');
+const assert = require('node:assert/strict');
+const fs = require('node:fs');
+const path = require('node:path');
+
+// Rendering behavior is covered end to end in business-profile.test.js; this guards the mobile essentials.
+test('business pages are mobile friendly and connect customers to professionals', () => {
+  const view = fs.readFileSync(path.join(__dirname, '..', 'lib', 'shop-profile-view.js'), 'utf8');
+  const css = fs.readFileSync(path.join(__dirname, '..', 'public', 'shop-profile.css'), 'utf8');
+  assert.match(view, /profile_photo_url/);
+  assert.match(view, /href="\/pro\/\$\{Number\(p\.id\)\}"/, 'team cards link to each professional profile');
+  assert.match(view, /Book<span class="sp-long"> an appointment/);
+  assert.match(view, /class="sp-actionbar"/, 'mobile quick actions');
+  assert.match(css, /@media \(max-width: 640px\)/);
+  assert.match(css, /\.sp-actionbar \{ display: flex;/);
+  assert.match(css, /\.sp-team \{ grid-template-columns: 1fr; \}/);
+});

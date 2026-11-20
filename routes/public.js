@@ -106,15 +106,18 @@ function shopCategoryLabels(shop) {
   return (shop.categories || []).map(shopCategoryLabel).filter(Boolean);
 }
 function businessCard(shop) {
+  // Owner content (logo, tagline, description) shows only once the owner publishes their page.
+  const published = shop.claim_status === 'claimed' && Boolean(shop.profile_published_at);
+  let logo = ''; try { const u = new URL(String(shop.logo_url || '')); if (['http:', 'https:'].includes(u.protocol)) logo = u.toString(); } catch (_) {}
   const location = [shop.city, shop.state].filter(Boolean).join(', ');
   const status = shop.claim_status === 'unclaimed' ? '<span class="badge" style="background:var(--gb-iris-wash);color:var(--gb-midnight);border:1px solid var(--gb-iris-line);">Unclaimed business</span>' : '';
   const action = shop.claim_status === 'unclaimed' ? 'View & claim business →' : 'View business →';
   const distanceHtml = shop.cityOnly ? '<span class="distance-away">Distance unavailable</span>' : typeof shop.distanceMiles === 'number' && Number.isFinite(shop.distanceMiles) ? '<span class="distance-away">' + shop.distanceMiles.toFixed(1) + ' miles away</span>' : '';
   return '<a class="pro-card business-card" href="/shop/' + shop.id + '"><div class="pro-card-body"><div class="pro-card-top">' +
-    (shop.logo_url ? '<img src="' + escapeHtml(shop.logo_url) + '" alt="" style="width:52px;height:52px;border-radius:14px;object-fit:cover;border:1px solid var(--paper-line);"/>' : '<div class="avatar accent-slate">B</div>') +
+    (published && logo ? '<img src="' + escapeHtml(logo) + '" alt="" loading="lazy" style="width:52px;height:52px;border-radius:14px;object-fit:cover;border:1px solid var(--paper-line);"/>' : '<div class="avatar accent-slate">' + escapeHtml((String(shop.name || 'B').match(/[A-Za-z0-9]/) || ['B'])[0].toUpperCase()) + '</div>') +
     '<div class="pro-card-main"><div style="margin-bottom:5px;"><span class="badge category">Business</span></div><h3>' + escapeHtml(shop.name) + '</h3><div class="pro-location">' + escapeHtml(location) + (distanceHtml ? ' <span aria-hidden="true">·</span> ' + distanceHtml : '') + '</div></div></div>' +
     (status ? '<div style="margin:8px 0;">' + status + '</div>' : '') +
-    '<div class="services-line">' + escapeHtml((shop.description || shopCategoryLabels(shop).join(' · ') || 'Local service business').slice(0, 140)) + '</div><div class="pro-card-footer"><span></span><span class="view-profile">' + action + '</span></div></div></a>';
+    '<div class="services-line">' + escapeHtml(((published && (shop.tagline || shop.description)) || shopCategoryLabels(shop).join(' · ') || 'Local service business').slice(0, 140)) + '</div><div class="pro-card-footer"><span></span><span class="view-profile">' + action + '</span></div></div></a>';
 }
 
 function socialLinks(pro) {
@@ -249,7 +252,8 @@ module.exports = function (router) {
       if (resultType !== 'professionals') {
         // Category searches include shops tagged with that category in shop_categories; closed shops are hidden.
         // Older databases without these columns/tables fall back to the plain shop query (or no shops for a category).
-        const shopFilter = (sql) => sql.replace('SELECT * FROM shops WHERE 1=1', "SELECT * FROM shops WHERE COALESCE(operational_status,'uncertain') <> 'closed'" + (category ? ' AND EXISTS (SELECT 1 FROM shop_categories sc WHERE sc.shop_id = shops.id AND sc.category = ?)' : ''));
+        // Name searches also match a published page's tagline and specialties.
+        const shopFilter = (sql) => sql.replace(' AND name LIKE ?', " AND (name || CASE WHEN profile_published_at IS NOT NULL THEN ' ' || COALESCE(tagline, '') || ' ' || COALESCE(specialties::text, '') ELSE '' END) LIKE ?").replace('SELECT * FROM shops WHERE 1=1', "SELECT * FROM shops WHERE COALESCE(operational_status,'uncertain') <> 'closed'" + (category ? ' AND EXISTS (SELECT 1 FROM shop_categories sc WHERE sc.shop_id = shops.id AND sc.category = ?)' : ''));
         const withCategory = (args) => category ? [category, ...args] : args;
         try {
           businesses = db.prepare(shopFilter(businessSql)).all(...withCategory(businessArgs));

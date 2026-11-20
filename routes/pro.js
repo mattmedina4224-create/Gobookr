@@ -11,7 +11,7 @@ const { send, redirect, flashFromQuery } = require('../lib/http');
 const { escapeHtml, money, slugCategory, avgRating } = require('../lib/util');
 
 
-const { dashboardNav, renderDashboard } = require('../lib/pro-dashboard-view');
+const { dashboardNav, renderDashboard, PRO_NAV_ITEMS } = require('../lib/pro-dashboard-view');
 const { mergeSetupProfile, setupDestination, PROFILE_FIELDS } = require('../lib/pro-setup');
 const { renderSetupPage } = require('./onboarding');
 const { PROFESSIONAL_CATEGORIES } = require('../lib/pro-categories');
@@ -155,18 +155,8 @@ async function geocodeBusinessAddress({ street, city, state, zip }) {
 }
 
 function dashNav(active) {
-  const items = [
-    { key: 'overview', href: '/dashboard/pro', label: 'Overview' },
-    { key: 'onboarding', href: '/dashboard/pro/onboarding', label: 'Get started' },
-    { key: 'profile', href: '/dashboard/pro/profile', label: 'Profile & services' },
-    { key: 'portfolio', href: '/dashboard/pro/portfolio', label: 'Portfolio' },
-    { key: 'updates', href: '/dashboard/pro/updates', label: 'Updates' },
-    { key: 'marketing', href: '/dashboard/pro/marketing', label: 'Marketing' },
-    { key: 'social', href: '/dashboard/pro/social', label: 'Social connections' },
-    { key: 'analytics', href: '/dashboard/pro/analytics', label: 'Analytics' },
-    { key: 'billing', href: '/dashboard/pro/billing', label: 'Billing' },
-  ];
-  return dashboardNav(active, items);
+  // One list for every professional dashboard page (also used by My workplaces in routes/shop-profile-routes.js).
+  return dashboardNav(active, PRO_NAV_ITEMS);
 }
 
 function portfolioTile(item, i, gradientFor) {

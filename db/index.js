@@ -48,7 +48,8 @@ function callWorker(op, sql, args = []) {
   if (!packet || !packet.message || packet.message.id !== id) throw new Error('Database worker returned an invalid response.');
   const response = packet.message;
   if (response.error) { const err = new Error(response.error.message || 'Database query failed.'); if (response.error.code) err.code = response.error.code; if (response.error.detail) err.detail = response.error.detail; throw err; }
-  if (isRead) writeCached(op, sql, args, response.value); else if (op === 'run' || op === 'exec') clearReadCache();
+  // Writes issued through get/all (INSERT/UPDATE/DELETE ... RETURNING) must invalidate cached reads too.
+  if (isRead) writeCached(op, sql, args, response.value); else if (op === 'run' || op === 'exec' || /\b(INSERT|UPDATE|DELETE)\b/i.test(String(sql || ''))) clearReadCache();
   return response.value;
 }
 
