@@ -2,6 +2,18 @@
   // Keep the current tab/step visible on narrow screens.
   document.querySelector('.sd-tabs [aria-current], .sd-steps [aria-current]')?.scrollIntoView({ block: 'nearest', inline: 'center' });
 
+  // Dialogs (e.g. Leave business): open, close, Escape, backdrop click.
+  document.querySelectorAll('[data-open-dialog]').forEach((btn) => btn.addEventListener('click', () => {
+    const d = document.getElementById(btn.dataset.openDialog);
+    if (d && typeof d.showModal === 'function') { d.showModal(); d.querySelector('[data-close-dialog]')?.focus(); }
+    else if (d) d.setAttribute('open', '');
+  }));
+  document.querySelectorAll('dialog').forEach((d) => {
+    d.querySelectorAll('[data-close-dialog]').forEach((b) => b.addEventListener('click', () => d.close()));
+    d.addEventListener('click', (ev) => { if (ev.target === d) d.close(); });
+  });
+  document.querySelector('.wp-departed')?.focus();
+
   // Confirm destructive actions.
   document.addEventListener('click', (ev) => {
     const btn = ev.target.closest('[data-confirm]');

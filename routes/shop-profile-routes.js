@@ -9,8 +9,15 @@ const { escapeHtml: e } = require('../lib/util');
 const { SHOP_CATEGORY_LABELS } = require('../lib/shop-categories');
 const P = require('../lib/shop-profile');
 const View = require('../lib/shop-dashboard-view');
+const WorkplacesView = require('../lib/workplaces-view');
 
 const sponsorshipEnabled = () => process.env.BUSINESS_TEAMS_ENABLED === '1';
+// Optional paid sponsorship (lib/business-team.js) only exists when its flag is on; loaded lazily so the free
+// affiliation never depends on billing code.
+function sponsorshipFor(pro) {
+  if (!pro || !sponsorshipEnabled()) return null;
+  try { return require('../lib/business-team').membership(pro.id) || null; } catch (_) { return null; }
+}
 const OWNER_SCOPE = "id = ? AND owner_user_id = ? AND claim_status = 'claimed'";
 
 function sendJson(res, status, body) { res.writeHead(status, { 'Content-Type': 'application/json; charset=utf-8', 'Cache-Control': 'no-store', 'X-Content-Type-Options': 'nosniff' }); res.end(JSON.stringify(body)); }
@@ -274,7 +281,8 @@ module.exports = function (router) {
         const delivery = await P.sendInviteEmail({ to: r.email, shopName: o.shop.name, link });
         links.push({ email: r.email, link, emailed: delivery === 'sent' });
       }
-      const skipped = results.filter((x) => !x.token).map((x) => `${x.email} (${x.status === 'already_member' ? 'already on your team' : x.status === 'already_invited' ? 'already invited' : 'team is full'})`);
+      const why = { already_member: 'already on your team', already_invited: 'already invited', request_approved: 'they had asked to join, so they are now on your team', declines_invitations: 'they have chosen not to receive invitations from your business', team_full: 'team is full' };
+      const skipped = results.filter((x) => !x.token).map((x) => `${x.email} (${why[x.status] || x.status})`);
       const message = [links.length ? `${links.length} invitation${links.length === 1 ? '' : 's'} created.` : '', skipped.length ? `Skipped ${skipped.join(', ')}.` : '', invalid.length ? `Not valid: ${invalid.join(', ')}.` : ''].filter(Boolean).join(' ');
       render(ctx, o.shop, o.shops, { tab: 'team', step, flash: { type: links.length ? 'success' : 'error', message }, extra: { inviteLinks: links } });
     } catch (err) {
@@ -316,6 +324,17 @@ module.exports = function (router) {
     back(ctx, o.shop, 'tab=settings', 'Your page is unpublished. Customers now see your basic listing.');
   });
 
+  router.post('/dashboard/shop/requests/:id/approve', async (ctx) => {
+    const o = owner(ctx); if (!o) return;
+    const row = P.approveRequest(o.shop.id, Number(ctx.params.id));
+    back(ctx, o.shop, 'tab=team', row ? 'Request approved. They now appear on your page.' : 'That request is no longer waiting, or they have reached their workplace limit.', row ? 'success' : 'error');
+  });
+  router.post('/dashboard/shop/requests/:id/decline', async (ctx) => {
+    const o = owner(ctx); if (!o) return;
+    const row = P.rejectRequest(o.shop.id, Number(ctx.params.id));
+    back(ctx, o.shop, 'tab=team', row ? 'Request declined.' : 'That request is no longer waiting.', row ? 'success' : 'error');
+  });
+
   // ---- professional side ---------------------------------------------------------------------------------------
   function invitePage(ctx, invite, { status = 200, flash } = {}) {
     const token = String(ctx.params.token);
@@ -352,18 +371,65 @@ module.exports = function (router) {
   });
   router.get('/dashboard/pro/businesses', async (ctx) => {
     if (!ctx.currentUser || ctx.currentUser.role !== 'pro') return redirect(ctx.res, '/login?next=' + encodeURIComponent('/dashboard/pro/businesses'));
-    const pro = db.prepare('SELECT id FROM pro_profiles WHERE user_id = ?').get(ctx.currentUser.id);
-    const rows = pro ? P.proMemberships(pro.id) : [];
-    send(ctx.res, layout({ title: 'Your businesses', currentUser: ctx.currentUser, session: ctx.session, flash: flashFromQuery(ctx.query), robots: 'noindex,nofollow',
-      body: `<link rel="stylesheet" href="/shop-dashboard.css?v=1"><section class="section container sd sd-narrow"><p class="sd-crumb">Professional dashboard</p><h1>Your businesses</h1><p class="sd-help">Businesses that show you on their GoBookr page. Leaving is free and immediate.</p>
-        ${rows.length ? `<ul class="sd-people">${rows.map((r) => `<li><span class="sd-avatar">${e(String(r.name).slice(0, 1))}</span><span><strong><a href="/shop/${Number(r.shop_id)}">${e(r.name)}</a></strong><small>${e(r.city)}, ${e(r.state)}</small></span>
-          <form method="POST" action="/dashboard/pro/businesses/${Number(r.id)}/leave" class="sd-inline-form"><input type="hidden" name="_csrf" value="${e(ctx.session?.csrf_token || '')}"><button class="sd-textbtn sd-danger" data-confirm="Leave ${e(r.name)}?">Leave</button></form></li>`).join('')}</ul>` : '<div class="sd-empty"><p>You are not on any business page yet. When a business invites you, the link brings you here.</p></div>'}
-        <p><a class="sd-link" href="/dashboard/pro">Back to your dashboard</a></p></section><script src="/shop-dashboard.js?v=1" defer></script>` }));
+    const pro = db.prepare(P.FRESH + 'SELECT id FROM pro_profiles WHERE user_id = ?').get(ctx.currentUser.id);
+    const rows = pro ? P.proWorkplaces(pro.id, ctx.currentUser.email) : [];
+    const sponsored = sponsorshipFor(pro);
+    let nav = '';
+    try { const { dashboardNav, PRO_NAV_ITEMS } = require('../lib/pro-dashboard-view'); nav = dashboardNav('workplaces', PRO_NAV_ITEMS); } catch (_) { nav = ''; }
+    const notice = ctx.query?.sponsorship_ended ? `<div class="sd-card wp-sponsor-note" role="status"><h2>Your sponsored membership ended</h2><p class="sd-help">The business you left was paying for your GoBookr membership. Your account, profile and portfolio are unchanged and nothing has been charged. To keep Pro features after the current period, choose individual billing.</p><a class="btn small" href="/dashboard/pro/billing">Choose individual billing</a></div>` : '';
+    send(ctx.res, layout({ title: 'My workplaces', currentUser: ctx.currentUser, session: ctx.session, flash: flashFromQuery(ctx.query), robots: 'noindex,nofollow',
+      body: WorkplacesView.page({ rows, csrf: ctx.session?.csrf_token || '', nav, sponsoredShopId: sponsored ? Number(sponsored.shop_id) : null, departedId: Number(ctx.query?.left) || null, notice }) }));
   });
+
+  // Leave: authenticated POST (CSRF is enforced globally), only for the professional's own accepted connection.
+  // No owner approval. Ends the affiliation only; the owner is notified afterwards.
   router.post('/dashboard/pro/businesses/:id/leave', async (ctx) => {
+    if (!ctx.currentUser || ctx.currentUser.role !== 'pro') return redirect(ctx.res, '/login?next=' + encodeURIComponent('/dashboard/pro/businesses'));
+    const pro = db.prepare(P.FRESH + 'SELECT id, business_name FROM pro_profiles WHERE user_id = ?').get(ctx.currentUser.id);
+    const row = pro ? P.leaveShop(pro.id, Number(ctx.params.id), { blockInvites: ctx.body.block_invites === '1' }) : null;
+    if (!row) return redirect(ctx.res, '/dashboard/pro/businesses?error=' + encodeURIComponent('That connection was not found or has already ended.'));
+    // Optional paid sponsorship (flag-gated) ends with the affiliation; the professional's own billing is never started.
+    let sponsorshipEnded = false;
+    const sponsored = sponsorshipFor(pro);
+    if (sponsored && Number(sponsored.shop_id) === Number(row.shop_id)) {
+      try { await require('../lib/business-team').remove(row.shop_id, sponsored.id); sponsorshipEnded = true; }
+      catch (err) { console.error('sponsorship end after leave failed', row.shop_id, err.message); sponsorshipEnded = true; }
+    }
+    await P.notifyOwnerOfDeparture({ memberId: row.id, shopId: row.shop_id, shopName: row.shop_name, ownerUserId: row.owner_user_id, proName: pro.business_name, origin: origin(ctx) });
+    redirect(ctx.res, `/dashboard/pro/businesses?left=${Number(row.id)}${sponsorshipEnded ? '&sponsorship_ended=1' : ''}#workplace-${Number(row.id)}`);
+  });
+  router.post('/dashboard/pro/businesses/:id/allow-invites', async (ctx) => {
     if (!ctx.currentUser || ctx.currentUser.role !== 'pro') return redirect(ctx.res, '/login');
-    const pro = db.prepare('SELECT id FROM pro_profiles WHERE user_id = ?').get(ctx.currentUser.id);
-    const row = pro ? P.leaveShop(pro.id, Number(ctx.params.id)) : null;
-    redirect(ctx.res, '/dashboard/pro/businesses?' + (row ? 'success=' + encodeURIComponent('You left the team.') : 'error=' + encodeURIComponent('Membership not found.')));
+    const pro = db.prepare(P.FRESH + 'SELECT id FROM pro_profiles WHERE user_id = ?').get(ctx.currentUser.id);
+    const row = pro ? P.allowInvitesAgain(pro.id, Number(ctx.params.id)) : null;
+    redirect(ctx.res, '/dashboard/pro/businesses?' + (row ? 'success=' + encodeURIComponent('That business can invite you again.') : 'error=' + encodeURIComponent('Not found.')));
+  });
+  router.post('/dashboard/pro/businesses/invites/:id/accept', async (ctx) => {
+    if (!ctx.currentUser) return redirect(ctx.res, '/login?next=' + encodeURIComponent('/dashboard/pro/businesses'));
+    try { P.acceptInviteById(ctx.currentUser, Number(ctx.params.id)); redirect(ctx.res, '/dashboard/pro/businesses?success=' + encodeURIComponent('You joined the team. You now appear on their business page.')); }
+    catch (err) { if (!(err instanceof P.InputError)) throw err; redirect(ctx.res, '/dashboard/pro/businesses?error=' + encodeURIComponent(err.message)); }
+  });
+  router.post('/dashboard/pro/businesses/invites/:id/decline', async (ctx) => {
+    if (!ctx.currentUser) return redirect(ctx.res, '/login?next=' + encodeURIComponent('/dashboard/pro/businesses'));
+    try { P.declineInviteById(ctx.currentUser, Number(ctx.params.id), { block: ctx.body.block_invites === '1' }); redirect(ctx.res, '/dashboard/pro/businesses?success=' + encodeURIComponent(ctx.body.block_invites === '1' ? 'Invitation declined. That business can’t invite you again unless you allow it.' : 'Invitation declined.')); }
+    catch (err) { if (!(err instanceof P.InputError)) throw err; redirect(ctx.res, '/dashboard/pro/businesses?error=' + encodeURIComponent(err.message)); }
+  });
+  router.post('/dashboard/pro/businesses/requests/:id/cancel', async (ctx) => {
+    if (!ctx.currentUser || ctx.currentUser.role !== 'pro') return redirect(ctx.res, '/login');
+    const pro = db.prepare(P.FRESH + 'SELECT id FROM pro_profiles WHERE user_id = ?').get(ctx.currentUser.id);
+    const row = pro ? P.cancelRequest(pro.id, Number(ctx.params.id)) : null;
+    redirect(ctx.res, '/dashboard/pro/businesses?' + (row ? 'success=' + encodeURIComponent('Request canceled.') : 'error=' + encodeURIComponent('That request was not found.')));
+  });
+  // Ask to join a claimed business (from its public page). The owner approves from their Team tab.
+  router.post('/shop/:id/join', async (ctx) => {
+    const id = Number(ctx.params.id);
+    if (!ctx.currentUser) return redirect(ctx.res, '/login?next=' + encodeURIComponent('/shop/' + id));
+    try {
+      const r = P.requestToJoin(ctx.currentUser, id);
+      redirect(ctx.res, `/shop/${id}?success=` + encodeURIComponent(r.status === 'joined' ? `You joined ${r.shop.name}. You now appear on their page.` : `Request sent. ${r.shop.name} will see it on their dashboard.`));
+    } catch (err) {
+      if (!(err instanceof P.InputError)) throw err;
+      redirect(ctx.res, `/shop/${id}?error=` + encodeURIComponent(err.message));
+    }
   });
 };

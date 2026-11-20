@@ -285,3 +285,78 @@ test('search and importer guards around claimed business pages', () => {
   assert.match(importer, /s\.owner_user_id IS NULL AND s\.claim_status = 'unclaimed'/, 'importer enrichment never touches claimed shops');
   assert.doesNotMatch(importer, /shop_photos|shop_services|shop_team_members|tagline|profile_published_at/, 'importers never write owner content');
 });
+
+test('professionals control their workplaces: leave without approval, block re-invites, request to join elsewhere', async () => {
+  const h = harness();
+  try {
+    h.db.exec(`INSERT INTO shops (id, owner_user_id, name, city, state, zip_code, claim_status) VALUES (50, 5, 'Second Shop', 'Denver', 'CO', '80203', 'claimed');`);
+    const invite = async (shop, owner, email) => (await h.request('POST', '/dashboard/shop/invites', owner, { shop: String(shop), emails: email })).body.match(/team\/invite\/([^"]+)"/)?.[1];
+    await h.request('POST', `/team/invite/${await invite(10, 1, 'pro@example.com')}/accept`, 2, {});
+    const row = () => h.db.prepare("SELECT * FROM shop_team_members WHERE shop_id = 10 AND pro_id = 12 ORDER BY id DESC LIMIT 1").get();
+    const id = row().id;
+    const billing = h.db.prepare('SELECT * FROM subscriptions ORDER BY pro_id').all();
+
+    const page = await h.request('GET', '/dashboard/pro/businesses', 2);
+    assert.match(page.body, /My workplaces/); assert.match(page.body, /Connected/); assert.match(page.body, /Leave business/);
+    assert.ok(page.body.includes('Are you sure you want to leave Fixture Barbers? Your professional profile, portfolio, booking links, and individual subscription will remain active.'));
+
+    // Only the professional can leave: not another pro, not the owner (a customer account), not signed out.
+    await h.request('POST', `/dashboard/pro/businesses/${id}/leave`, 4, {});
+    await h.request('POST', `/dashboard/pro/businesses/${id}/leave`, 1, {});
+    await h.request('POST', `/dashboard/pro/businesses/${id}/leave`, null, {});
+    assert.equal(row().status, 'accepted');
+
+    const left = await h.request('POST', `/dashboard/pro/businesses/${id}/leave`, 2, { block_invites: '1' });
+    assert.equal(left.status, 302); assert.match(left.location, new RegExp(`left=${id}`));
+    assert.equal(row().status, 'left'); assert.equal(row().invites_blocked, true);
+    assert.deepEqual(h.db.prepare('SELECT * FROM subscriptions ORDER BY pro_id').all(), billing, 'leaving never touches billing');
+    assert.equal(h.db.prepare("SELECT claim_status FROM pro_profiles WHERE id = 12").get().claim_status, 'claimed', 'profile untouched');
+    assert.doesNotMatch((await h.request('GET', '/shop/10', null)).body, /First Pro/, 'gone from the roster immediately');
+    const done = await h.request('GET', `/dashboard/pro/businesses?left=${id}`, 2);
+    assert.match(done.body, /You left Fixture Barbers/); assert.match(done.body, /Your subscription and billing are unchanged/);
+    assert.match((await h.request('GET', '/dashboard/shop?shop=10&tab=team', 1)).body, /Left your team on/, 'owner sees the departure');
+
+    // Blocked: no re-invite. After allowing again: an invite is only a request; nothing changes until they accept.
+    const blocked = await h.request('POST', '/dashboard/shop/invites', 1, { shop: '10', emails: 'pro@example.com' });
+    assert.match(blocked.body, /chosen not to receive invitations/);
+    await h.request('POST', `/dashboard/pro/businesses/${id}/allow-invites`, 2, {});
+    assert.ok(await invite(10, 1, 'pro@example.com'));
+    assert.doesNotMatch((await h.request('GET', '/shop/10', null)).body, /First Pro/, 'an invitation never lists anyone');
+    const pending = h.db.prepare("SELECT id FROM shop_team_members WHERE shop_id = 10 AND status = 'pending'").get().id;
+    await h.request('POST', `/dashboard/shop/requests/${pending}/approve`, 1, { shop: '10' });
+    assert.equal(h.db.prepare('SELECT status FROM shop_team_members WHERE id = ?').get(pending).status, 'pending', 'owners cannot approve an invitation for the professional');
+    await h.request('POST', `/dashboard/pro/businesses/invites/${pending}/decline`, 2, {});
+    assert.equal(h.db.prepare('SELECT status FROM shop_team_members WHERE id = ?').get(pending).status, 'declined');
+
+    // Join another business with the same account: request → owner approval.
+    const asked = await h.request('POST', '/shop/50/join', 2, {});
+    assert.match(decodeURIComponent(asked.location), /Request sent/);
+    assert.match(decodeURIComponent((await h.request('POST', '/shop/50/join', 2, {})).location), /already waiting/);
+    assert.doesNotMatch((await h.request('GET', '/shop/50', null)).body, /First Pro/);
+    const reqId = h.db.prepare("SELECT id FROM shop_team_members WHERE shop_id = 50 AND status = 'requested'").get().id;
+    await h.request('POST', `/dashboard/shop/requests/${reqId}/approve`, 1, { shop: '10' });
+    assert.equal(h.db.prepare('SELECT status FROM shop_team_members WHERE id = ?').get(reqId).status, 'requested', "another shop's owner cannot approve");
+    await h.request('POST', `/dashboard/shop/requests/${reqId}/approve`, 5, { shop: '50' });
+    assert.equal(h.db.prepare('SELECT status FROM shop_team_members WHERE id = ?').get(reqId).status, 'accepted');
+    assert.deepEqual(h.db.prepare('SELECT * FROM subscriptions ORDER BY pro_id').all(), billing);
+
+    // Owner removal is roster-only, and a status-guarded change cannot be applied twice.
+    const removed = await h.request('POST', `/dashboard/shop/members/${reqId}/remove`, 5, { shop: '50' });
+    assert.match(decodeURIComponent(removed.location), /Removed from your page/);
+    assert.match(decodeURIComponent((await h.request('POST', `/dashboard/pro/businesses/${reqId}/leave`, 2, {})).location), /already ended/);
+    assert.equal(h.db.prepare("SELECT count(*)::int AS n FROM pro_profiles WHERE id = 12").get().n, 1);
+    assert.deepEqual(h.db.prepare('SELECT * FROM subscriptions ORDER BY pro_id').all(), billing);
+  } finally { await h.db.close(); }
+});
+
+test('public shop page shows a professional where they stand', async () => {
+  const h = harness();
+  try {
+    await h.request('POST', '/dashboard/shop/publish', 1, { shop: '10' });
+    assert.match((await h.request('GET', '/shop/10', 2)).body, /Request to join<\/button>/);
+    assert.doesNotMatch((await h.request('GET', '/shop/10', 3)).body, /Request to join/, 'customers do not see it');
+    assert.doesNotMatch((await h.request('GET', '/shop/30', 2)).body, /Request to join/, 'unclaimed businesses cannot take requests');
+    await h.request('POST', '/shop/10/join', 2, {});
+    assert.match((await h.request('GET', '/shop/10', 2)).body, /Your request to join is waiting for the owner/);
+  } finally { await h.db.close(); }
+});

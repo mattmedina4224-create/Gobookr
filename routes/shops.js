@@ -27,7 +27,9 @@ module.exports = function (router) {
         AND (? = '' OR COALESCE(street_address,'') = '' OR LOWER(street_address) = LOWER(?)) ORDER BY business_name ASC LIMIT 50`)
       .all(shop.name, shop.city, shop.state, String(shop.street_address || ''), String(shop.street_address || ''));
     const full = claimed && (mode === 'preview' || Boolean(shop.profile_published_at));
-    const body = renderProfile({ shop, profile, listedPros, mode, canEdit: isOwner });
+    // Professionals see where they stand with a claimed business (request to join, invited, on the team).
+    const relationship = claimed && ctx.currentUser?.role === 'pro' ? ShopProfile.teamRelationship(ctx.currentUser, shop.id) : null;
+    const body = renderProfile({ shop, profile, listedPros, mode, canEdit: isOwner, relationship, csrf: ctx.session?.csrf_token || '' });
     const shopUrl = 'https://gobookr.com/shop/' + shop.id;
     send(ctx.res, layout({
       title: shop.name + (shop.city ? ' · ' + shop.city + ', ' + shop.state : ''),

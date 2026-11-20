@@ -55,12 +55,21 @@ CREATE INDEX IF NOT EXISTS idx_shop_services_shop ON shop_services (shop_id, sor
 
 -- Free team affiliation. Separate from business_team_members/business_team_plans (optional paid
 -- sponsorship, still behind BUSINESS_TEAMS_ENABLED). Accepting never changes anyone's billing.
+-- A professional owns their side of every row: only they can accept an invitation, request to join, or leave
+-- (no owner approval needed to leave). Owners invite, approve requests and remove from their own roster.
+--   pending   owner invited; waiting for the professional      requested  professional asked; waiting for the owner
+--   accepted  shown on the business page                       left       professional left (immediately)
+--   declined  professional declined an invitation              rejected   owner declined a join request
+--   canceled  invitation/request withdrawn                     removed    owner removed them from the roster
+-- invites_blocked = the professional chose not to receive further invitations from this business.
 CREATE TABLE IF NOT EXISTS shop_team_members (
   id BIGSERIAL PRIMARY KEY,
   shop_id BIGINT NOT NULL REFERENCES shops(id) ON DELETE CASCADE,
   email TEXT NOT NULL,
   pro_id BIGINT REFERENCES pro_profiles(id) ON DELETE SET NULL,
-  status TEXT NOT NULL DEFAULT 'pending' CHECK (status IN ('pending', 'accepted', 'declined', 'canceled', 'removed', 'left')),
+  status TEXT NOT NULL DEFAULT 'pending' CHECK (status IN ('pending', 'requested', 'accepted', 'declined', 'rejected', 'canceled', 'removed', 'left')),
+  invites_blocked BOOLEAN NOT NULL DEFAULT FALSE,
+  owner_notified_at TIMESTAMPTZ,
   token_hash TEXT,
   invited_by BIGINT,
   invited_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -71,11 +80,13 @@ CREATE TABLE IF NOT EXISTS shop_team_members (
   ended_at TIMESTAMPTZ,
   sort_order INTEGER NOT NULL DEFAULT 0
 );
-CREATE UNIQUE INDEX IF NOT EXISTS uniq_shop_team_open_invite ON shop_team_members (shop_id, lower(email)) WHERE status IN ('pending', 'accepted');
+CREATE UNIQUE INDEX IF NOT EXISTS uniq_shop_team_open ON shop_team_members (shop_id, lower(email)) WHERE status IN ('pending', 'requested', 'accepted');
 CREATE UNIQUE INDEX IF NOT EXISTS uniq_shop_team_member_pro ON shop_team_members (shop_id, pro_id) WHERE status = 'accepted';
 CREATE UNIQUE INDEX IF NOT EXISTS uniq_shop_team_token ON shop_team_members (token_hash) WHERE token_hash IS NOT NULL;
 CREATE INDEX IF NOT EXISTS idx_shop_team_shop ON shop_team_members (shop_id, status);
-CREATE INDEX IF NOT EXISTS idx_shop_team_pro ON shop_team_members (pro_id) WHERE status = 'accepted';
+CREATE INDEX IF NOT EXISTS idx_shop_team_pro ON shop_team_members (pro_id, status);
+CREATE INDEX IF NOT EXISTS idx_shop_team_email ON shop_team_members (lower(email), status);
+CREATE INDEX IF NOT EXISTS idx_shop_team_blocked ON shop_team_members (shop_id, lower(email)) WHERE invites_blocked;
 
 -- Server-side access only (the app connects with the database role; nothing here is for the public API).
 ALTER TABLE shop_photos ENABLE ROW LEVEL SECURITY;
