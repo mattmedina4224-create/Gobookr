@@ -35,6 +35,8 @@ require('./routes/square')(router);
 require('./routes/meta-connect')(router);
 require('./routes/shops')(router);
 require('./routes/shop-profile-routes')(router);
+require('./routes/career')(router);
+require('./routes/business-pro-demo')(router);
 require('./routes/shop-dashboard')(router);
 require('./routes/shop-billing')(router);
 require('./routes/business-account')(router);
