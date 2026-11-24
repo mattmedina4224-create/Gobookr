@@ -1,0 +1,80 @@
+[
+ {
+  "name": "Great Clips",
+  "city": "Eagan",
+  "state": "MN",
+  "street_address": "1016 Diffley Road",
+  "zip_code": "55123",
+  "county": "",
+  "categories": [
+   "stylist"
+  ],
+  "website_url": "https://www.greatclips.com/",
+  "phone": "(651) 405-6740",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/node/9464286591",
+  "source_external_id": "osm:node/9464286591",
+  "license_number": null,
+  "latitude": 44.8037976,
+  "longitude": -93.1392629,
+  "operational_status": "verified",
+  "checked_at": "2026-11-24",
+  "raw_name": "Great Clips",
+  "website_candidate": "https://www.greatclips.com/",
+  "website_source_url": "",
+  "reason": "duplicate_candidate",
+  "duplicate_of": "osm:node/1719957682"
+ },
+ {
+  "name": "Heart Salon",
+  "city": "Minneapolis",
+  "state": "MN",
+  "street_address": "1310 Northeast 2nd Street",
+  "zip_code": "55413",
+  "county": "",
+  "categories": [
+   "stylist"
+  ],
+  "website_url": "https://heartsalon.com/",
+  "phone": "(612) 379-4022",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/way/249994669",
+  "source_external_id": "osm:way/249994669",
+  "license_number": null,
+  "latitude": 45.0014038,
+  "longitude": -93.2663769,
+  "operational_status": "verified",
+  "checked_at": "2026-11-24",
+  "raw_name": "Heart Salon",
+  "website_candidate": "https://heartsalon.com/",
+  "website_source_url": "",
+  "reason": "duplicate_candidate",
+  "duplicate_of": "osm:node/11699113331"
+ },
+ {
+  "name": "Hour Rose Salon",
+  "city": "Saint Louis Park",
+  "state": "MN",
+  "street_address": "6600 West Lake Street",
+  "zip_code": "55426",
+  "county": "",
+  "categories": [
+   "stylist"
+  ],
+  "website_url": "https://www.hourrosesalon.com/",
+  "phone": "(612) 232-7805",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/way/509546050",
+  "source_external_id": "osm:way/509546050",
+  "license_number": null,
+  "latitude": 44.9407,
+  "longitude": -93.3622276,
+  "operational_status": "verified",
+  "checked_at": "2026-11-24",
+  "raw_name": "Hour Rose Salon",
+  "website_candidate": "https://www.hourrosesalon.com/",
+  "website_source_url": "",
+  "reason": "duplicate_candidate",
+  "duplicate_of": "osm:node/13648912713"
+ }
+]

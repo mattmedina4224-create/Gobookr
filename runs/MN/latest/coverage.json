@@ -1,0 +1,841 @@
+{
+ "state": "MN",
+ "census_places": 907,
+ "places_covered": 70,
+ "place_coverage_pct": 7.7,
+ "census_counties": 87,
+ "counties_covered": 33,
+ "counties_uncovered": [
+  "Big Stone County",
+  "Brown County",
+  "Chippewa County",
+  "Clearwater County",
+  "Cook County",
+  "Cottonwood County",
+  "Dodge County",
+  "Douglas County",
+  "Faribault County",
+  "Fillmore County",
+  "Freeborn County",
+  "Grant County",
+  "Houston County",
+  "Hubbard County",
+  "Itasca County",
+  "Jackson County",
+  "Kanabec County",
+  "Kandiyohi County",
+  "Kittson County",
+  "Koochiching County",
+  "Lac qui Parle County",
+  "Lake of the Woods County",
+  "Lincoln County",
+  "Mahnomen County",
+  "Marshall County",
+  "Martin County",
+  "Meeker County",
+  "Morrison County",
+  "Mower County",
+  "Murray County",
+  "Nobles County",
+  "Norman County",
+  "Otter Tail County",
+  "Pennington County",
+  "Pine County",
+  "Pipestone County",
+  "Pope County",
+  "Red Lake County",
+  "Redwood County",
+  "Renville County",
+  "Rock County",
+  "Roseau County",
+  "Sibley County",
+  "Steele County",
+  "Stevens County",
+  "Swift County",
+  "Todd County",
+  "Traverse County",
+  "Wabasha County",
+  "Waseca County",
+  "Watonwan County",
+  "Wilkin County",
+  "Winona County",
+  "Yellow Medicine County"
+ ],
+ "communities_outside_census_places": [],
+ "top_covered_places": [
+  {
+   "name": "Minneapolis",
+   "shops": 71
+  },
+  {
+   "name": "St. Paul",
+   "shops": 29
+  },
+  {
+   "name": "St. Louis Park",
+   "shops": 19
+  },
+  {
+   "name": "Edina",
+   "shops": 16
+  },
+  {
+   "name": "Maple Grove",
+   "shops": 10
+  },
+  {
+   "name": "Duluth",
+   "shops": 7
+  },
+  {
+   "name": "Minnetonka",
+   "shops": 6
+  },
+  {
+   "name": "Roseville",
+   "shops": 6
+  },
+  {
+   "name": "Eagan",
+   "shops": 4
+  },
+  {
+   "name": "Lakeville",
+   "shops": 4
+  },
+  {
+   "name": "Cottage Grove",
+   "shops": 4
+  },
+  {
+   "name": "Rochester",
+   "shops": 4
+  },
+  {
+   "name": "St. Cloud",
+   "shops": 3
+  },
+  {
+   "name": "Woodbury",
+   "shops": 3
+  },
+  {
+   "name": "Cloquet",
+   "shops": 3
+  },
+  {
+   "name": "Coon Rapids",
+   "shops": 3
+  },
+  {
+   "name": "Bloomington",
+   "shops": 3
+  },
+  {
+   "name": "Mankato",
+   "shops": 3
+  },
+  {
+   "name": "Shakopee",
+   "shops": 3
+  },
+  {
+   "name": "St. Anthony",
+   "shops": 2
+  },
+  {
+   "name": "Eden Prairie",
+   "shops": 2
+  },
+  {
+   "name": "Farmington",
+   "shops": 2
+  },
+  {
+   "name": "Bemidji",
+   "shops": 2
+  },
+  {
+   "name": "Oakdale",
+   "shops": 2
+  },
+  {
+   "name": "Apple Valley",
+   "shops": 2
+  },
+  {
+   "name": "Rogers",
+   "shops": 2
+  },
+  {
+   "name": "Lake Elmo",
+   "shops": 2
+  },
+  {
+   "name": "Red Wing",
+   "shops": 2
+  },
+  {
+   "name": "Lino Lakes",
+   "shops": 2
+  },
+  {
+   "name": "Blaine",
+   "shops": 2
+  },
+  {
+   "name": "Chanhassen",
+   "shops": 2
+  },
+  {
+   "name": "Marshall",
+   "shops": 2
+  },
+  {
+   "name": "Glencoe",
+   "shops": 2
+  },
+  {
+   "name": "Burnsville",
+   "shops": 2
+  },
+  {
+   "name": "Brooklyn Park",
+   "shops": 2
+  },
+  {
+   "name": "Center City",
+   "shops": 2
+  },
+  {
+   "name": "Savage",
+   "shops": 1
+  },
+  {
+   "name": "St. Francis",
+   "shops": 1
+  },
+  {
+   "name": "Richfield",
+   "shops": 1
+  },
+  {
+   "name": "Shorewood",
+   "shops": 1
+  }
+ ],
+ "uncovered_places_with_held_candidates": [
+  {
+   "name": "Buffalo",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 13
+  },
+  {
+   "name": "New Hope",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 11
+  },
+  {
+   "name": "Cambridge",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 10
+  },
+  {
+   "name": "Hutchinson",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 9
+  },
+  {
+   "name": "Monticello",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 8
+  },
+  {
+   "name": "International Falls",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 7
+  },
+  {
+   "name": "West St. Paul",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 7
+  },
+  {
+   "name": "Crystal",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 6
+  },
+  {
+   "name": "New Brighton",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 6
+  },
+  {
+   "name": "Oak Park Heights",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 6
+  },
+  {
+   "name": "Albert Lea",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Crookston",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Fergus Falls",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Luverne",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Sartell",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Willmar",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Alexandria",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Big Lake",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "South St. Paul",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Vadnais Heights",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Wabasso",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Wayzata",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Austin",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Champlin",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Grand Rapids",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Harmony",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Janesville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Maplewood",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Mendota Heights",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Preston",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Slayton",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Virginia",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Waconia",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Winona",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Amboy",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Avon",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Bagley",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Barnesville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Canby",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Chatfield",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Eyota",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Hackensack",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Henning",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Hilltop",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Menahga",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Nisswa",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Pequot Lakes",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Rosemount",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Sandstone",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Scandia",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Sleepy Eye",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "St. Joseph",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "St. Michael",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Thief River Falls",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Wells",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Adrian",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Albertville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Alpha",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Arden Hills",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Atwater",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Aurora",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Becker",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Blomkest",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Bowlus",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Brainerd",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Byron",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Caledonia",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Claremont",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Cook",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Dodge Center",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Eagle Lake",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Ely",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Evansville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Falcon Heights",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Foley",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Fosston",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Frazee",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Golden Valley",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Gonvick",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Grand Marais",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Ham Lake",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Hampton",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Hawley",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Hayfield",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Hoyt Lakes",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Lake Park",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Lakeland",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Laporte",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Lindstrom",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Litchfield",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Long Lake",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Longville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Medford",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Medina",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Minnesota Lake",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Montevideo",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Mora",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Morristown",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Nevis",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "New Prague",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "North Branch",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "North Mankato",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Ortonville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Otsego",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Pine River",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Plainview",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Ramsey",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Redwood Falls",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Rockford",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Roseau",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Sauk Rapids",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "St. Bonifacius",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "St. Paul Park",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "St. Peter",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Stephen",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Taylors Falls",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Turtle River",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Ulen",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Warroad",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Waseca",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Watertown",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Wyoming",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  }
+ ],
+ "uncovered_places_without_candidates": 715,
+ "source": "U.S. Census Bureau 2020 place-by-county and county code files"
+}
