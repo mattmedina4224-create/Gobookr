@@ -1,0 +1,548 @@
+{
+ "state": "AL",
+ "census_places": 591,
+ "places_covered": 35,
+ "place_coverage_pct": 5.9,
+ "census_counties": 67,
+ "counties_covered": 25,
+ "counties_uncovered": [
+  "Barbour County",
+  "Bibb County",
+  "Bullock County",
+  "Butler County",
+  "Calhoun County",
+  "Chambers County",
+  "Cherokee County",
+  "Chilton County",
+  "Choctaw County",
+  "Clarke County",
+  "Clay County",
+  "Cleburne County",
+  "Coffee County",
+  "Conecuh County",
+  "Coosa County",
+  "Covington County",
+  "Crenshaw County",
+  "Dallas County",
+  "DeKalb County",
+  "Escambia County",
+  "Fayette County",
+  "Franklin County",
+  "Geneva County",
+  "Greene County",
+  "Hale County",
+  "Jackson County",
+  "Lamar County",
+  "Lawrence County",
+  "Lowndes County",
+  "Macon County",
+  "Marengo County",
+  "Marion County",
+  "Perry County",
+  "Pickens County",
+  "Randolph County",
+  "St. Clair County",
+  "Sumter County",
+  "Tallapoosa County",
+  "Walker County",
+  "Washington County",
+  "Wilcox County",
+  "Winston County"
+ ],
+ "communities_outside_census_places": [
+  {
+   "city": "Tusclaoosa",
+   "shops": 1
+  },
+  {
+   "city": "Hoover Hoover",
+   "shops": 1
+  }
+ ],
+ "top_covered_places": [
+  {
+   "name": "Huntsville",
+   "shops": 19
+  },
+  {
+   "name": "Birmingham",
+   "shops": 15
+  },
+  {
+   "name": "Auburn",
+   "shops": 10
+  },
+  {
+   "name": "Madison",
+   "shops": 10
+  },
+  {
+   "name": "Tuscaloosa",
+   "shops": 9
+  },
+  {
+   "name": "Opelika",
+   "shops": 7
+  },
+  {
+   "name": "Dothan",
+   "shops": 4
+  },
+  {
+   "name": "Oneonta",
+   "shops": 3
+  },
+  {
+   "name": "Alabaster",
+   "shops": 3
+  },
+  {
+   "name": "Montgomery",
+   "shops": 2
+  },
+  {
+   "name": "Homewood",
+   "shops": 2
+  },
+  {
+   "name": "Hoover",
+   "shops": 2
+  },
+  {
+   "name": "Mobile",
+   "shops": 2
+  },
+  {
+   "name": "Phenix City",
+   "shops": 2
+  },
+  {
+   "name": "Guntersville",
+   "shops": 2
+  },
+  {
+   "name": "Foley",
+   "shops": 2
+  },
+  {
+   "name": "Daphne",
+   "shops": 2
+  },
+  {
+   "name": "Troy",
+   "shops": 2
+  },
+  {
+   "name": "Orange Beach",
+   "shops": 1
+  },
+  {
+   "name": "Mountain Brook",
+   "shops": 1
+  },
+  {
+   "name": "Gardendale",
+   "shops": 1
+  },
+  {
+   "name": "Vestavia Hills",
+   "shops": 1
+  },
+  {
+   "name": "Athens",
+   "shops": 1
+  },
+  {
+   "name": "Harvest",
+   "shops": 1
+  },
+  {
+   "name": "Cullman",
+   "shops": 1
+  },
+  {
+   "name": "Albertville",
+   "shops": 1
+  },
+  {
+   "name": "Fultondale",
+   "shops": 1
+  },
+  {
+   "name": "Monroeville",
+   "shops": 1
+  },
+  {
+   "name": "Northport",
+   "shops": 1
+  },
+  {
+   "name": "Spanish Fort",
+   "shops": 1
+  },
+  {
+   "name": "Florence",
+   "shops": 1
+  },
+  {
+   "name": "Prattville",
+   "shops": 1
+  },
+  {
+   "name": "Talladega",
+   "shops": 1
+  },
+  {
+   "name": "Gadsden",
+   "shops": 1
+  },
+  {
+   "name": "Muscle Shoals",
+   "shops": 1
+  }
+ ],
+ "uncovered_places_with_held_candidates": [
+  {
+   "name": "Trussville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 22
+  },
+  {
+   "name": "Gulf Shores",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 11
+  },
+  {
+   "name": "Greensboro",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 8
+  },
+  {
+   "name": "Rainsville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 7
+  },
+  {
+   "name": "Decatur",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Jemison",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Oxford",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Prichard",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Sylacauga",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Tarrant",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Alexander City",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Childersburg",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Clanton",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Enterprise",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Helena",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Jasper",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Pell City",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Wetumpka",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Andalusia",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Bessemer",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Brantley",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Brent",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Centre",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Clay",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Eufaula",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Fairhope",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Greenville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Hazel Green",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Ozark",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Selma",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Springville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Addison",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Anniston",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Ardmore",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Brilliant",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Carrollton",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Centreville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Chatom",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Chelsea",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Eclectic",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Elkmont",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Fort Payne",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Grayson Valley",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Hartford",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Hokes Bluff",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Irondale",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Jacksonville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Killen",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Kinston",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Leeds",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Midfield",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Midland City",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Montevallo",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Moundville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Odenville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Owens Cross Roads",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Pelham",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Pleasant Grove",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Red Bay",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Reform",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Russellville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Samson",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Saraland",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Scottsboro",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Stapleton",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Sylvan Springs",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Tallassee",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Woodstock",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  }
+ ],
+ "uncovered_places_without_candidates": 488,
+ "source": "U.S. Census Bureau 2020 place-by-county and county code files"
+}

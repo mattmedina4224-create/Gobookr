@@ -1,0 +1,794 @@
+{
+ "http://cutscurlsbyhopeandkristi.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 74
+ },
+ "http://salaosalon.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 141
+ },
+ "http://www.aj72barbers.com/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 326
+ },
+ "https://www.zephyrbarber.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 340
+ },
+ "https://www.statiksalonauburn.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 274
+ },
+ "https://thecollectivebham.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.thecollectivebham.com/",
+  "ms": 619
+ },
+ "http://just4himhaircutlounge.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.just4himhaircuts.com/",
+  "ms": 730
+ },
+ "https://www.luckysbarber.com/": {
+  "status": "blocked",
+  "http_status": 401,
+  "ms": 253
+ },
+ "https://www.theshaghuntsville.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 164
+ },
+ "https://www.smartstyle.com/locations/nearme/haircut/AL/ONEONTA/2453-2ND-AVE-E/11487?": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 242
+ },
+ "https://sunkissedstudiollc.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 173
+ },
+ "https://www.mensdenbarbershop.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://expireddomains.com/domain/mensdenbarbershop.com?utm_source=redi",
+  "ms": 940
+ },
+ "https://hairodysseymontgomery.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.hairodysseymontgomery.com/",
+  "ms": 1048
+ },
+ "https://sportclips.com/us-al-huntsville-al501": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 325
+ },
+ "https://salons.greatclips.com/us/al/huntsville/4800-whitesburg-dr": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 382
+ },
+ "https://www.lauralanesalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 288
+ },
+ "https://sportclips.com/us-al-huntsville-al502": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 430
+ },
+ "https://www.cutsbyus.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 648
+ },
+ "https://kaylaforbach.glossgenius.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://glossgenius.com/",
+  "ms": 1317
+ },
+ "https://www.supercuts.com/locations/nearme/haircut/al/birmingham/200-doug-baker-blvd-ste-500/80357": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 164
+ },
+ "https://www.supercuts.com/locations/nearme/haircut/al/gardendale/439-fieldstown-rd/80619": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 147
+ },
+ "https://www.supercuts.com/locations/nearme/haircut/al/alabaster/300-colonial-promenade-pkwy/80539": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 110
+ },
+ "https://www.supercuts.com/locations/nearme/haircut/al/homewood/1919-28th-ave-s-ste-102/80256": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 122
+ },
+ "https://www.supercuts.com/locations/nearme/haircut/al/hoover/5250-medford-dr-ste-110/81481": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 106
+ },
+ "https://www.supercuts.com/locations/nearme/haircut/al/vestavia/1031-montgomery-hwy-unit-119/81496": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 74
+ },
+ "https://phenixsalonshuntsville.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1637
+ },
+ "https://salons.greatclips.com/us/al/opelika/2484-enterprise-dr": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 74
+ },
+ "https://barberiabarbers.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 223
+ },
+ "https://www.greatclips.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 230
+ },
+ "https://sportclips.com/us-al-opelika-al330": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 124
+ },
+ "https://www.artistrybeautybar.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 333
+ },
+ "https://www.appearsonsalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 375
+ },
+ "https://www.vagaro.com/us04/bybellaeebsbrowsandlashes": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1234
+ },
+ "https://tracessalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 388
+ },
+ "https://salons.greatclips.com/us/al/madison/4577-wall-triana-hwy": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 67
+ },
+ "https://www.greasyhands.co/huntsville": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 378
+ },
+ "https://iglambeautylounge.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 582
+ },
+ "https://bullfeathersbarbershops.com/": {
+  "status": "error",
+  "error": "UND_ERR_SOCKET",
+  "ms": 330
+ },
+ "https://marcusandbeatty.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 323
+ },
+ "https://itsfabuloussalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.itsfabuloussalon.com/",
+  "ms": 443
+ },
+ "https://houseoffadesal.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "http://www.importantlocalbusinesses.com/",
+  "ms": 818
+ },
+ "https://www.laruesalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 953
+ },
+ "https://acethebarbaer.as.me/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://acethebarbaer.as.me/schedule/c529f82c",
+  "ms": 1066
+ },
+ "https://www.tacticalgroomingsupplies.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://tgsbarber.com/",
+  "ms": 275
+ },
+ "https://crimsoncuts.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 549
+ },
+ "http://www.headstartsalons.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 65
+ },
+ "http://www.lifestylesfamilyhaircare.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 66
+ },
+ "http://www.katherinetaylors.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 68
+ },
+ "https://aurorabeautybarr.glossgenius.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 838
+ },
+ "https://www.davismannandco.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 192
+ },
+ "https://salons.greatclips.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 78
+ },
+ "https://www.kidslandsalon.com/": {
+  "status": "error",
+  "error": "ERR_SSL_SSL/TLS_ALERT_HANDSHAKE_FAILURE",
+  "ms": 176
+ },
+ "https://www.2200trim.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 430
+ },
+ "https://c1-hair-studio.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 498
+ },
+ "https://salons.greatclips.com/us/al/harvest/5850-highway-53": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 102
+ },
+ "https://www.salonmodandspa.com/": {
+  "status": "error",
+  "error": "ECONNRESET",
+  "ms": 326
+ },
+ "https://elements-salon-101160.square.site/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 290
+ },
+ "https://blogosalonmedspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 2229
+ },
+ "https://square.site/book/ET5YF175RKJRN/anthony-s-barber-and-style-birmingham-al": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://linda-james.square.site/",
+  "ms": 771
+ },
+ "https://www.brittlebonesbarber.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 388
+ },
+ "http://uandibeautysupply.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 132
+ },
+ "https://locations.waxcenter.com/al/tuscaloosa/tuscaloosa-0144.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 520
+ },
+ "https://www.auburnmedspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 318
+ },
+ "https://tuscaloosanailsandspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 636
+ },
+ "https://www.ulta.com/stores/tuscaloosa-al-311": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 730
+ },
+ "https://palmbeachtan.com/locations/AL/Tuscaloosa-University-Boulevard": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://palmbeachtan.com/locations/al/tuscaloosa-university-boulevard",
+  "ms": 758
+ },
+ "https://www.ulta.com/stores/cullman-al-1115": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 487
+ },
+ "https://palmbeachtan.com/locations/AL/Auburn-Annalue-Drive": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://palmbeachtan.com/locations/al/auburn-annalue-drive",
+  "ms": 569
+ },
+ "https://www.lushusa.com/shop?StoreID=742": {
+  "status": "blocked",
+  "http_status": 403,
+  "final_url": "https://www.lush.com/us/en_us",
+  "ms": 565
+ },
+ "https://nailtimebirmingham.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://expireddomains.com/domain/nailtimebirmingham.com?utm_source=redi",
+  "ms": 544
+ },
+ "https://www.ulta.com/stores/birmingham-al-1154": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 545
+ },
+ "http://places.singleplatform.com/another-level-beauty-salon/menu?ref=google": {
+  "status": "live",
+  "http_status": 202,
+  "ms": 96
+ },
+ "https://www.ulta.com/stores/opelika-al-379": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 664
+ },
+ "https://www.ulta.com/stores/alabaster-al-1084": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 674
+ },
+ "https://www.ulta.com/stores/albertville-al-1635": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 655
+ },
+ "https://med-i-spa.com/locations/huntsville/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 115
+ },
+ "https://donatellanailloungehuntsville.com/": {
+  "status": "error",
+  "error": "ECONNRESET",
+  "ms": 158
+ },
+ "https://www.bluemercury.com/pages/store-details?store_number=172176": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://bluemercury.com/pages/bluemercury-near-me?store_number=172176",
+  "ms": 1145
+ },
+ "https://dothannailsspa-al.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 96
+ },
+ "https://lifestylenail100.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 685
+ },
+ "https://www.appointfix.com/book/Epic-Fresh-Cuts-LLC": {
+  "status": "dead",
+  "http_status": 404,
+  "final_url": "https://book.heygoldie.com/Epic-Fresh-Cuts-LLC",
+  "ms": 1040
+ },
+ "https://www.bathandbodyworks.com/?cm_mmc=local_bbw01678": {
+  "status": "error",
+  "http_status": 307,
+  "ms": 219
+ },
+ "https://luxe-nails.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.luxe-nails.com/",
+  "ms": 621
+ },
+ "https://locations.waxcenter.com/al/huntsville/huntsville-valley-bend-1142.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 412
+ },
+ "https://finest-nails.hub.biz/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 67
+ },
+ "https://summit-nails.hub.biz/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 76
+ },
+ "https://mobilebeautysupplystore.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 75
+ },
+ "https://nail-spa-andover-mn.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 306
+ },
+ "https://www.laseraway.com/locations/al/birmingham/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 164
+ },
+ "https://tonyajonessalon.com/about-us/locations/jones-valley/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 717
+ },
+ "https://poshnailslashloungeauburn.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 209
+ },
+ "https://www.theclassybeauty.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 319
+ },
+ "https://www.bathandbodyworks.com/": {
+  "status": "error",
+  "http_status": 307,
+  "ms": 60
+ },
+ "https://palmbeachtan.com/locations/AL/Huntsville-Whitesburg-Drive": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://palmbeachtan.com/locations/al/huntsville-whitesburg-drive",
+  "ms": 462
+ },
+ "https://nailsalonhuntsville.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 533
+ },
+ "https://www.vagaro.com/us04/becomingwellnessspa": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1158
+ },
+ "https://mjnailbar.com/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 181
+ },
+ "https://www.nailboutiquespamooresmill.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 587
+ },
+ "https://www.bluhavenspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 330
+ },
+ "https://locations.waxcenter.com/al/opelika/opelika-0892.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 407
+ },
+ "https://www.ulta.com/stores/hoover-al-1396": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 250
+ },
+ "https://thecornersoakandspa.com/": {
+  "status": "error",
+  "error": "UND_ERR_SOCKET",
+  "ms": 207
+ },
+ "https://www.lsbaesthetics.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 237
+ },
+ "https://www.davisestheticsinstitute.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 308
+ },
+ "https://www.thexclusivebeautybar.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 637
+ },
+ "https://www.thelashlounge.com/al-huntsville-whitesburg/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.thelashlounge.com/locations/al/huntsville/whitesburg/",
+  "ms": 1222
+ },
+ "https://jtbeautynails.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 482
+ },
+ "https://danterasalondayspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 386
+ },
+ "https://magnoliasalonauburn.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 172
+ },
+ "http://josephsalonspa.com/contact": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 382
+ },
+ "https://coastalrootssc.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 357
+ },
+ "https://elitenailtuscaloosa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 579
+ },
+ "https://www.agavebodywellness.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 431
+ },
+ "https://firefliessalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 322
+ },
+ "https://www.facesandbeyond.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 179
+ },
+ "https://tipsntoesnailsalon.glossgenius.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 585
+ },
+ "https://cultivatedbeauty.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1513
+ },
+ "https://www.themillhousestudio.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 127
+ },
+ "http://www.bronzedbodytanning.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 77
+ },
+ "https://wickedlygoodwax.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 243
+ },
+ "https://primpandposhmadison.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1262
+ },
+ "https://www.ulta.com/stores/daphne-al-508": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 196
+ },
+ "https://www.ulta.com/stores/mobile-al-478": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 286
+ },
+ "https://www.ulta.com/stores/troy-al-1598": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 214
+ },
+ "https://morethancolonics.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 337
+ },
+ "https://palmbeachtan.com/locations/AL/Cox-Creek-Parkway/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://palmbeachtan.com/locations/al/cox-creek-parkway",
+  "ms": 485
+ },
+ "https://www.ulta.com/stores/prattville-al-752": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 361
+ },
+ "https://www.themedspadothan.com/": {
+  "status": "error",
+  "error": "UND_ERR_SOCKET",
+  "ms": 382
+ },
+ "https://www.relaxmassagelife.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 409
+ },
+ "http://pearlnailsnorthport.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1970
+ },
+ "https://locations.massageenvy.com/alabama/birmingham/310-rele-street.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 468
+ },
+ "https://www.fourswordstattoo.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 554
+ },
+ "https://locations.massageenvy.com/alabama/hoover/5519-grove-boulevard.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 413
+ },
+ "https://locations.massageenvy.com/alabama/birmingham/250-doug-baker-blvd.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 499
+ },
+ "https://www.terrame.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://terrame.com/",
+  "ms": 850
+ },
+ "https://www.artifactstattoo.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 223
+ },
+ "https://www.solemnink.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 375
+ },
+ "https://www.chernotattoo.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 245
+ },
+ "https://whichcraftbymedusa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.whichcraftbymedusa.com/",
+  "ms": 524
+ },
+ "https://tupelohoneycafe.com/restaurant/huntsville/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 186
+ },
+ "https://www.thepulsetattoos.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 82
+ },
+ "https://southernstyleoasisreviews.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "http://www.importantlocalbusinesses.com/",
+  "ms": 557
+ },
+ "https://hairbyashleydastylist.as.me/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://hairbyashleydastylist.as.me/schedule/2446c5e9",
+  "ms": 1631
+ },
+ "https://footyrooty.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1033
+ },
+ "https://www.massagebook.com/Dothan~Massage~peaceoutmassage": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 528
+ },
+ "https://www.atomictattoohsv.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 357
+ },
+ "http://www.madisonorthopedicmassage.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.madisonorthopedicmassage.com/",
+  "ms": 478
+ },
+ "https://inkmonkeytattoollc.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 274
+ },
+ "https://www.mychinesetherapeuticmassage.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1153
+ },
+ "https://inkaholicz.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.inkaholicz.com/",
+  "ms": 486
+ },
+ "https://studio251tattoosllc.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1430
+ },
+ "https://www.smartskinmedspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://smartskinmedspa.com/",
+  "ms": 590
+ },
+ "https://www.beehivetc.co/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 977
+ }
+}
