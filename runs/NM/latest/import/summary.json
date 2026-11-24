@@ -1,18 +1,18 @@
 {
  "state": "NM",
- "checked_at": "2026-11-20",
- "candidates": 542,
+ "checked_at": "2026-11-24",
+ "candidates": 549,
  "existing_compared": 0,
  "publish": 53,
- "review": 489,
+ "review": 496,
  "skipped": 0,
  "enrich_existing": 0,
  "publish_with_website": 53,
  "publish_with_street": 52,
  "publish_with_phone": 45,
  "review_reasons": {
-  "map_only_without_website": 448,
-  "map_website_not_confirmed_live": 34,
+  "map_only_without_website": 456,
+  "map_website_not_confirmed_live": 33,
   "missing_name": 1,
   "missing_city": 3,
   "school_or_training_facility": 3
@@ -42,8 +42,8 @@
   "Los Lunas": 1
  },
  "review_cities": {
-  "Albuquerque": 203,
-  "Santa Fe": 97,
+  "Albuquerque": 206,
+  "Santa Fe": 101,
   "Las Cruces": 22,
   "Los Alamos": 19,
   "Taos": 14,
