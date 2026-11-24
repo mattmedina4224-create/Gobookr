@@ -1,8 +1,8 @@
 {
  "state": "CO",
  "census_places": 479,
- "places_covered": 186,
- "place_coverage_pct": 38.8,
+ "places_covered": 190,
+ "place_coverage_pct": 39.7,
  "census_counties": 64,
  "counties_covered": 57,
  "counties_uncovered": [
@@ -55,127 +55,131 @@
  "top_covered_places": [
   {
    "name": "Denver",
-   "shops": 723
+   "shops": 780
   },
   {
    "name": "Colorado Springs",
-   "shops": 496
+   "shops": 544
   },
   {
    "name": "Aurora",
-   "shops": 242
+   "shops": 255
   },
   {
    "name": "Fort Collins",
-   "shops": 177
-  },
-  {
-   "name": "Littleton",
-   "shops": 155
+   "shops": 209
   },
   {
    "name": "Grand Junction",
-   "shops": 148
+   "shops": 185
   },
   {
    "name": "Lakewood",
-   "shops": 140
+   "shops": 156
+  },
+  {
+   "name": "Littleton",
+   "shops": 156
   },
   {
    "name": "Westminster",
-   "shops": 127
-  },
-  {
-   "name": "Centennial",
-   "shops": 111
-  },
-  {
-   "name": "Loveland",
-   "shops": 108
-  },
-  {
-   "name": "Arvada",
-   "shops": 104
-  },
-  {
-   "name": "Thornton",
-   "shops": 98
+   "shops": 130
   },
   {
    "name": "Boulder",
-   "shops": 93
+   "shops": 130
+  },
+  {
+   "name": "Centennial",
+   "shops": 120
+  },
+  {
+   "name": "Loveland",
+   "shops": 115
+  },
+  {
+   "name": "Arvada",
+   "shops": 111
+  },
+  {
+   "name": "Thornton",
+   "shops": 103
   },
   {
    "name": "Pueblo",
-   "shops": 92
+   "shops": 96
   },
   {
    "name": "Parker",
-   "shops": 85
+   "shops": 94
   },
   {
    "name": "Longmont",
-   "shops": 84
+   "shops": 89
   },
   {
    "name": "Greeley",
-   "shops": 77
-  },
-  {
-   "name": "Lone Tree",
-   "shops": 65
-  },
-  {
-   "name": "Englewood",
-   "shops": 64
+   "shops": 84
   },
   {
    "name": "Castle Rock",
-   "shops": 63
+   "shops": 69
+  },
+  {
+   "name": "Englewood",
+   "shops": 67
+  },
+  {
+   "name": "Lone Tree",
+   "shops": 66
   },
   {
    "name": "Highlands Ranch",
-   "shops": 60
+   "shops": 65
   },
   {
    "name": "Greenwood Village",
-   "shops": 59
+   "shops": 65
   },
   {
    "name": "Wheat Ridge",
-   "shops": 58
+   "shops": 61
   },
   {
    "name": "Broomfield",
-   "shops": 51
+   "shops": 55
   },
   {
    "name": "Brighton",
-   "shops": 44
+   "shops": 46
   },
   {
    "name": "Durango",
-   "shops": 40
+   "shops": 41
   },
   {
    "name": "Lafayette",
-   "shops": 33
+   "shops": 34
   },
   {
    "name": "Northglenn",
-   "shops": 30
+   "shops": 31
   },
   {
    "name": "Montrose",
    "shops": 30
   },
   {
-   "name": "Windsor",
-   "shops": 27
+   "name": "Golden",
+   "shops": 30
   },
   {
-   "name": "Golden",
-   "shops": 27
+   "name": "Louisville",
+   "shops": 29
+  },
+  {
+   "name": "Windsor",
+   "shops": 28
   },
   {
    "name": "Evergreen",
@@ -186,44 +190,35 @@
    "shops": 22
   },
   {
-   "name": "Louisville",
-   "shops": 21
-  },
-  {
    "name": "Commerce City",
-   "shops": 20
+   "shops": 21
   },
   {
    "name": "Johnstown",
    "shops": 20
   },
   {
+   "name": "Monument",
+   "shops": 19
+  },
+  {
    "name": "Delta",
    "shops": 19
   },
   {
-   "name": "Cañon City",
+   "name": "Steamboat Springs",
    "shops": 18
   },
   {
-   "name": "Monument",
-   "shops": 17
-  },
-  {
-   "name": "Fort Morgan",
-   "shops": 17
+   "name": "Cañon City",
+   "shops": 18
   }
  ],
  "uncovered_places_with_held_candidates": [
   {
-   "name": "Columbine",
+   "name": "Applewood",
    "type": "CENSUS DESIGNATED PLACE",
-   "held_candidates": 5
-  },
-  {
-   "name": "Ken Caryl",
-   "type": "CENSUS DESIGNATED PLACE",
-   "held_candidates": 3
+   "held_candidates": 2
   },
   {
    "name": "Del Norte",
@@ -231,7 +226,17 @@
    "held_candidates": 2
   },
   {
+   "name": "Eads",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
    "name": "Grand Lake",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Julesburg",
    "type": "INCORPORATED PLACE",
    "held_candidates": 2
   },
@@ -251,12 +256,32 @@
    "held_candidates": 2
   },
   {
+   "name": "Manitou Springs",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Stratmoor",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Aspen Park",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
    "name": "Black Hawk",
    "type": "INCORPORATED PLACE",
    "held_candidates": 1
   },
   {
-   "name": "Eads",
+   "name": "Blende",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Deer Trail",
    "type": "INCORPORATED PLACE",
    "held_candidates": 1
   },
@@ -281,13 +306,13 @@
    "held_candidates": 1
   },
   {
-   "name": "Idalia",
-   "type": "CENSUS DESIGNATED PLACE",
+   "name": "Idaho Springs",
+   "type": "INCORPORATED PLACE",
    "held_candidates": 1
   },
   {
-   "name": "Julesburg",
-   "type": "INCORPORATED PLACE",
+   "name": "Idalia",
+   "type": "CENSUS DESIGNATED PLACE",
    "held_candidates": 1
   },
   {
@@ -296,7 +321,7 @@
    "held_candidates": 1
   },
   {
-   "name": "Manitou Springs",
+   "name": "Lakeside",
    "type": "INCORPORATED PLACE",
    "held_candidates": 1
   },
@@ -326,8 +351,8 @@
    "held_candidates": 1
   },
   {
-   "name": "Snowmass Village",
-   "type": "INCORPORATED PLACE",
+   "name": "Sherrelwood",
+   "type": "CENSUS DESIGNATED PLACE",
    "held_candidates": 1
   },
   {
@@ -339,8 +364,13 @@
    "name": "Tabernash",
    "type": "CENSUS DESIGNATED PLACE",
    "held_candidates": 1
+  },
+  {
+   "name": "West Pleasant View",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
   }
  ],
- "uncovered_places_without_candidates": 268,
+ "uncovered_places_without_candidates": 258,
  "source": "U.S. Census Bureau 2020 place-by-county and county code files"
 }
