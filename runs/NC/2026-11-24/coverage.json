@@ -1,0 +1,791 @@
+{
+ "state": "NC",
+ "census_places": 774,
+ "places_covered": 40,
+ "place_coverage_pct": 5.2,
+ "census_counties": 100,
+ "counties_covered": 31,
+ "counties_uncovered": [
+  "Alexander County",
+  "Alleghany County",
+  "Anson County",
+  "Ashe County",
+  "Beaufort County",
+  "Bertie County",
+  "Bladen County",
+  "Brunswick County",
+  "Burke County",
+  "Caldwell County",
+  "Carteret County",
+  "Caswell County",
+  "Cherokee County",
+  "Chowan County",
+  "Clay County",
+  "Columbus County",
+  "Craven County",
+  "Currituck County",
+  "Dare County",
+  "Duplin County",
+  "Edgecombe County",
+  "Gates County",
+  "Graham County",
+  "Granville County",
+  "Greene County",
+  "Halifax County",
+  "Harnett County",
+  "Haywood County",
+  "Henderson County",
+  "Hertford County",
+  "Hoke County",
+  "Hyde County",
+  "Jackson County",
+  "Jones County",
+  "Lenoir County",
+  "Lincoln County",
+  "Macon County",
+  "Madison County",
+  "Martin County",
+  "McDowell County",
+  "Mitchell County",
+  "Montgomery County",
+  "Nash County",
+  "Northampton County",
+  "Onslow County",
+  "Pamlico County",
+  "Pender County",
+  "Perquimans County",
+  "Person County",
+  "Polk County",
+  "Randolph County",
+  "Richmond County",
+  "Robeson County",
+  "Rockingham County",
+  "Rutherford County",
+  "Sampson County",
+  "Scotland County",
+  "Stokes County",
+  "Surry County",
+  "Transylvania County",
+  "Tyrrell County",
+  "Vance County",
+  "Warren County",
+  "Washington County",
+  "Wayne County",
+  "Wilkes County",
+  "Wilson County",
+  "Yadkin County",
+  "Yancey County"
+ ],
+ "communities_outside_census_places": [
+  {
+   "city": "Arden",
+   "shops": 1
+  }
+ ],
+ "top_covered_places": [
+  {
+   "name": "Greensboro",
+   "shops": 41
+  },
+  {
+   "name": "Charlotte",
+   "shops": 21
+  },
+  {
+   "name": "Raleigh",
+   "shops": 14
+  },
+  {
+   "name": "Southern Pines",
+   "shops": 9
+  },
+  {
+   "name": "Asheville",
+   "shops": 6
+  },
+  {
+   "name": "Cary",
+   "shops": 6
+  },
+  {
+   "name": "Mooresville",
+   "shops": 4
+  },
+  {
+   "name": "Chapel Hill",
+   "shops": 4
+  },
+  {
+   "name": "Durham",
+   "shops": 4
+  },
+  {
+   "name": "Boone",
+   "shops": 4
+  },
+  {
+   "name": "Winston-Salem",
+   "shops": 4
+  },
+  {
+   "name": "Carthage",
+   "shops": 3
+  },
+  {
+   "name": "Morrisville",
+   "shops": 3
+  },
+  {
+   "name": "Garner",
+   "shops": 3
+  },
+  {
+   "name": "Wake Forest",
+   "shops": 3
+  },
+  {
+   "name": "Carrboro",
+   "shops": 2
+  },
+  {
+   "name": "Jamestown",
+   "shops": 2
+  },
+  {
+   "name": "Concord",
+   "shops": 2
+  },
+  {
+   "name": "Mint Hill",
+   "shops": 2
+  },
+  {
+   "name": "Albemarle",
+   "shops": 2
+  },
+  {
+   "name": "Sanford",
+   "shops": 2
+  },
+  {
+   "name": "Elizabeth City",
+   "shops": 1
+  },
+  {
+   "name": "Vass",
+   "shops": 1
+  },
+  {
+   "name": "Hillsborough",
+   "shops": 1
+  },
+  {
+   "name": "Newland",
+   "shops": 1
+  },
+  {
+   "name": "Lexington",
+   "shops": 1
+  },
+  {
+   "name": "Bryson City",
+   "shops": 1
+  },
+  {
+   "name": "Greenville",
+   "shops": 1
+  },
+  {
+   "name": "Fayetteville",
+   "shops": 1
+  },
+  {
+   "name": "Burlington",
+   "shops": 1
+  },
+  {
+   "name": "Cherryville",
+   "shops": 1
+  },
+  {
+   "name": "Clayton",
+   "shops": 1
+  },
+  {
+   "name": "Clemmons",
+   "shops": 1
+  },
+  {
+   "name": "Salisbury",
+   "shops": 1
+  },
+  {
+   "name": "Huntersville",
+   "shops": 1
+  },
+  {
+   "name": "Kernersville",
+   "shops": 1
+  },
+  {
+   "name": "Bermuda Run",
+   "shops": 1
+  },
+  {
+   "name": "Conover",
+   "shops": 1
+  },
+  {
+   "name": "Shelby",
+   "shops": 1
+  },
+  {
+   "name": "Wilmington",
+   "shops": 1
+  }
+ ],
+ "uncovered_places_with_held_candidates": [
+  {
+   "name": "High Point",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 16
+  },
+  {
+   "name": "Apex",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 9
+  },
+  {
+   "name": "Thomasville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 8
+  },
+  {
+   "name": "Fuquay-Varina",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 7
+  },
+  {
+   "name": "Goldsboro",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 7
+  },
+  {
+   "name": "Murphy",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 7
+  },
+  {
+   "name": "Jacksonville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 6
+  },
+  {
+   "name": "Asheboro",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Pineville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Smithfield",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Spruce Pine",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Weaverville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Archdale",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Emerald Isle",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Morehead City",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Morganton",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Mount Airy",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Mebane",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "New Bern",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Oak Island",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Angier",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Benson",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Black Mountain",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Dunn",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Forest City",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Frisco",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Granite Falls",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Holly Springs",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Madison",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Marion",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Matthews",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Mount Holly",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Raeford",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Richfield",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "South Mills",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Warrenton",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Waves",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Waynesville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Belmont",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Biscoe",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Black Creek",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Bostic",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Burnsville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Buxton",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Cherokee",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Chocowinity",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Claremont",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Clinton",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Clyde",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Coats",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Columbia",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Columbus",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Cornelius",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Creedmoor",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Dobson",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Fairview",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Farmville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Fontana Dam",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Franklin",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Gastonia",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Grandy",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Grantsboro",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Harmony",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Harrisburg",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Henderson",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Hendersonville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Hickory",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Hildebran",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Hope Mills",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "James City",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Jonesville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "King",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Laurinburg",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Louisburg",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Lucama",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Manns Harbor",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Mars Hill",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Marshall",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Nags Head",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Nashville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Old Fort",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Pilot Mountain",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Pinetops",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Plymouth",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Ramseur",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Reidsville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Roanoke Rapids",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Rockwell",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Salvo",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Selma",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Sneads Ferry",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Southern Shores",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Summerfield",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Swannanoa",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Sylva",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Taylorsville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Walkertown",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Wallace",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Walnut Cove",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Warsaw",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Washington",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Wendell",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "West Jefferson",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Whiteville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Whitsett",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Wilkesboro",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Yadkinville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Youngsville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  }
+ ],
+ "uncovered_places_without_candidates": 626,
+ "source": "U.S. Census Bureau 2020 place-by-county and county code files"
+}

@@ -1,0 +1,998 @@
+{
+ "http://www.wakeupwithmakeup.net/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 63
+ },
+ "http://legacyironstattoo.com/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 86
+ },
+ "https://www.massageenvy.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 241
+ },
+ "https://www.bestcharlottemassage.com/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 249
+ },
+ "https://www.itmassagetherapy.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 373
+ },
+ "https://www.lucidstudionc.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 193
+ },
+ "https://handandstone.com/locations/greensboro/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 374
+ },
+ "https://www.willjgonzalez.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 447
+ },
+ "http://triedandtruetattoocompany.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "http://www.triedandtruetattoocompany.com/",
+  "ms": 609
+ },
+ "https://www.goldenfalcontattoo.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 390
+ },
+ "https://www.naturalspachapelhill.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 278
+ },
+ "http://www.phoenixtattoostudio.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.phoenixtattoostudio.com/",
+  "ms": 751
+ },
+ "https://twistedinktattoostudio.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 321
+ },
+ "https://hotstufftattoos.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 361
+ },
+ "https://www.junipertreemassage.com/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 345
+ },
+ "https://www.handandstonechapelhill.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://handandstone.com/locations/chapel-hill-meadowmont/",
+  "ms": 671
+ },
+ "https://www.tstcstudio.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 487
+ },
+ "https://www.cosmictattoos.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 366
+ },
+ "https://locations.massageenvy.com/north-carolina/raleigh/3201-edwards-mill-road.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 659
+ },
+ "https://www.kyotospa.net/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 112
+ },
+ "https://drloopomd.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 421
+ },
+ "https://www.sacredmandalastudio.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://sacredmandalastudio.com/",
+  "ms": 902
+ },
+ "https://www.lotuschinesespa.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 184
+ },
+ "https://massagespacharlottenc.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 343
+ },
+ "http://bodyrubscharlotte.org/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 469
+ },
+ "https://www.aromaspanc.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 202
+ },
+ "https://midorispanc.wixsite.com/home": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 490
+ },
+ "https://www.sevensagastattoo.com/": {
+  "status": "dead",
+  "error": "EAI_AGAIN",
+  "ms": 1333
+ },
+ "https://www.lorenaluca.com/the-spa": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.lorenaluca.com/about/",
+  "ms": 847
+ },
+ "http://www.needexhalemassage.com/": {
+  "status": "error",
+  "http_status": 523,
+  "ms": 2186
+ },
+ "https://www.onespacharlotte.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 712
+ },
+ "https://redrabbittattoo.com/": {
+  "status": "error",
+  "error": "ECONNRESET",
+  "ms": 138
+ },
+ "https://www.tmclt.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 207
+ },
+ "https://tatsutattoos.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 218
+ },
+ "http://www.absolutetattooclt.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "http://absolutetattooclt.com/",
+  "ms": 1758
+ },
+ "https://www.alchemyasheville.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 241
+ },
+ "https://www.twinsunsdurham.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 248
+ },
+ "https://www.prancingponygso.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 296
+ },
+ "https://www.charlottecoolspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 310
+ },
+ "https://durhamsaltcave.com/": {
+  "status": "error",
+  "error": "UND_ERR_SOCKET",
+  "ms": 356
+ },
+ "https://foxglovestudiosgso.com/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 493
+ },
+ "https://www.obsidiantattoostudio.com/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 154
+ },
+ "https://www.wholisticrebirth.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 433
+ },
+ "https://www.spabyjing.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 193
+ },
+ "https://renewaltattooremoval.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 846
+ },
+ "https://www.aboutfaceskin.org/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 690
+ },
+ "https://opalustattoo.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 164
+ },
+ "https://invidiatattoo.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 148
+ },
+ "https://www.cedarwalkwellness.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 127
+ },
+ "https://www.li-medical-aesthetics.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://li-medical-aesthetics.com/",
+  "ms": 620
+ },
+ "https://www.headspachalet.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 371
+ },
+ "https://www.sondermindandbody.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 158
+ },
+ "https://prasada-massage-therapy.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 439
+ },
+ "https://www.inkbiotics.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 163
+ },
+ "http://www.handandstone.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://handandstone.com/",
+  "ms": 237
+ },
+ "https://elase.com/locations/greensboro/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 158
+ },
+ "https://www.fernpiercing.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 475
+ },
+ "https://epicestheticsnc.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 193
+ },
+ "https://gravitymassage.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 382
+ },
+ "https://schedulewithpiercingsbyjill.as.me/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://schedulewithpiercingsbyjill.as.me/schedule/a8b1c7e5",
+  "ms": 1106
+ },
+ "https://www.thenowmassage.com/boutique/downtown-cary": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 173
+ },
+ "https://www.thryvewellness.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 159
+ },
+ "https://www.lucidwellnessspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 131
+ },
+ "https://www.madinkartstudio.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 130
+ },
+ "https://locations.massageenvy.com/north-carolina/southern-pines/10564-us-hwy-15-501.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 297
+ },
+ "https://raleightattoocompany.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 96
+ },
+ "https://neptunestattoosandsupplies.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1408
+ },
+ "https://handandstone.com/locations/southern-pines/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 85
+ },
+ "https://millinhtontattoo.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 488
+ },
+ "https://www.intouchmassage-spnc.net/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 143
+ },
+ "https://www.bewellmassages.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 131
+ },
+ "https://removery.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 254
+ },
+ "https://zendenofsouthernpines.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 159
+ },
+ "https://southernpinesmassage.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 135
+ },
+ "https://restorationmedspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 949
+ },
+ "https://locations.massageenvy.com/north-carolina/charlotte/2008-e-arbor-drive.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 35
+ },
+ "https://www.kneadedenergy.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 158
+ },
+ "https://topusadetails.com/details/massage-by-melissa-ChIJzz4": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 501
+ },
+ "https://www.zenfulu-nc.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 165
+ },
+ "https://ascensiontattoonc.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 83
+ },
+ "https://carrboromassagetherapy.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 128
+ },
+ "https://paintedladync.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://eyeonceclinic.com/scotoma/",
+  "ms": 2489
+ },
+ "https://www.goldenspiraltattoo.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 160
+ },
+ "https://healingoasismassage.amtamembers.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 304
+ },
+ "https://www.littlejohnstattoo.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 177
+ },
+ "http://luckytigertattoo.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 203
+ },
+ "https://krazykatskc.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 224
+ },
+ "https://www.sadupiercing.org/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 294
+ },
+ "https://www.nurturewellnessstudio.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 679
+ },
+ "https://locations.waxcenter.com/nc/morrisville/morrisville-park-west-village-0838.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 233
+ },
+ "https://www.ulta.com/stores/chapel-hill-nc-1279": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 795
+ },
+ "https://vesselsmassageandwellnessspa.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1197
+ },
+ "https://parkwestnailspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 257
+ },
+ "https://www.ulta.com/stores/greensboro-nc-1678": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 488
+ },
+ "https://suntancity.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.suntancity.com/",
+  "ms": 595
+ },
+ "https://bsttattoo.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1732
+ },
+ "https://locations.waxcenter.com/nc/cary/cary-tryon-village-0837.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 435
+ },
+ "https://www.vagaro.com/lavenderlux": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 2107
+ },
+ "http://lisasnails.net/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 94
+ },
+ "https://regalnailssalonandspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 130
+ },
+ "https://locations.waxcenter.com/nc/greensboro/greensboro-0639.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 35
+ },
+ "https://www.ulta.com/stores/charlotte-nc-147": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 418
+ },
+ "https://www.ulta.com/stores/greensboro-nc-331": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 374
+ },
+ "https://www.brilliantnailbarofpreston.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 219
+ },
+ "https://palmbeachtan.com/locations/NC/Mooresville-Marketplace-Avenue": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://palmbeachtan.com/locations/nc/mooresville-marketplace-avenue",
+  "ms": 585
+ },
+ "https://palmbeachtan.com/locations/NC/Charlotte-East-Woodlawn-Road": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://palmbeachtan.com/locations/nc/charlotte-east-woodlawn-road",
+  "ms": 745
+ },
+ "https://www.ulta.com/stores/raleigh-nc-741": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 368
+ },
+ "https://martininailbar.us/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 178
+ },
+ "https://www.ulta.com/stores/morrisville-nc-680": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 418
+ },
+ "https://nailsandtangarner.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 181
+ },
+ "https://www.ulta.com/stores/garner-nc-461": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 184
+ },
+ "https://www.ulta.com/stores/burlington-nc-241": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 308
+ },
+ "https://trinitynailsspachapelhill.com/": {
+  "status": "error",
+  "error": "ERR_TLS_CERT_ALTNAME_INVALID",
+  "ms": 91
+ },
+ "https://www.ulta.com/stores/fayetteville-nc-219": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 424
+ },
+ "https://tintinnails.com/services/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 44
+ },
+ "https://www.ulta.com/stores/cary-nc-126": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 248
+ },
+ "https://www.suntancity.com/find-a-salon/north-carolina/greensboro/west-friendly-center/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 583
+ },
+ "https://locations.waxcenter.com/nc/durham/durham-southpoint-0140.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 128
+ },
+ "https://www.anthonyvincenailspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 131
+ },
+ "https://www.manicure.com/nail-salon/Luxor-Nail/3480": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 2501
+ },
+ "https://princessnailbarnc.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 104
+ },
+ "https://wowbrows.me/location/737/Greensboro-NC": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 234
+ },
+ "https://allurenailspadurham.com/": {
+  "status": "error",
+  "error": "UND_ERR_SOCKET",
+  "ms": 137
+ },
+ "https://tmnailsparaleigh.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://pov88fresh.online/",
+  "ms": 570
+ },
+ "http://www.snsnailsandspa.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 120
+ },
+ "https://www.ulta.com/stores/asheville-nc-376": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 442
+ },
+ "https://locations.waxcenter.com/nc/raleigh/raleigh-brier-creek-0085.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 658
+ },
+ "https://elegantnailscharlotte.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 191
+ },
+ "https://villanailsspaclayton.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 281
+ },
+ "https://www.ulta.com/stores/southern-pines-nc-683": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 245
+ },
+ "https://www.aplusnailsparaleigh.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 75
+ },
+ "https://www.ulta.com/stores/clemmons-nc-1676": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 196
+ },
+ "http://speakeasytattooco.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://speakeasytattooco.com/",
+  "ms": 4204
+ },
+ "https://www.embassynailspagarner.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://hellohongkong.org/",
+  "ms": 918
+ },
+ "https://style-nails.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 66
+ },
+ "https://www.bestprosintown.com/nc/salisbury/citi-nails-and-spa-/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 521
+ },
+ "https://www.perfectlypolished2021llc.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 465
+ },
+ "https://nailupinhuntersville.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 138
+ },
+ "https://locations.waxcenter.com/nc/raleigh/raleigh-village-district-0156.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 36
+ },
+ "https://victorianailsandspahuntersville.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 398
+ },
+ "https://nailstechwinstonsalem.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 385
+ },
+ "https://www.walmart.com/store/4594/cherryville-nc/whats-new": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.walmart.com/store/4594-cherryville-nc/whats-new",
+  "ms": 1781
+ },
+ "https://xonaillounge.com/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 68
+ },
+ "https://placenearme.org/nail-trends/?q=jazzy+nails": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 591
+ },
+ "https://www.perfactbrow.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://perfactbrow.com/winston-salem/",
+  "ms": 1299
+ },
+ "https://sweethoneybrazilianwax.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 385
+ },
+ "https://www.ulta.com/stores/durham-nc-181": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 506
+ },
+ "https://luxurynailspa.biz/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 225
+ },
+ "https://www.ulta.com/stores/arden-nc-1073": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 292
+ },
+ "https://hollywoodnailsandspagreensboro.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 263
+ },
+ "https://www.vagaro.com/niniandco": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 2297
+ },
+ "https://signaturenailsspalawndaledrive.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 364
+ },
+ "https://arriya-nails.hub.biz/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 573
+ },
+ "https://sohocary.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1312
+ },
+ "https://elegantspanails.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 448
+ },
+ "https://www.tanning-studios.com/": {
+  "status": "error",
+  "error": "UND_ERR_SOCKET",
+  "ms": 497
+ },
+ "https://www.conceptsalonn.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 271
+ },
+ "https://waxcenter.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 274
+ },
+ "https://blushnailsspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 536
+ },
+ "https://balancedayspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 354
+ },
+ "https://peachystudio.com/pages/charlotte-botox": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 195
+ },
+ "https://www.yougotnailedandspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 110
+ },
+ "https://booking.gocheckin.net/v2/9995": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 293
+ },
+ "http://revivenailbar.us/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 177
+ },
+ "https://thevincinailspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 381
+ },
+ "https://nailyeah.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.nailyeah.com/",
+  "ms": 269
+ },
+ "https://nouvonailbar.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1175
+ },
+ "https://polishnailsbar.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 278
+ },
+ "https://noirethenailbarnc.com/": {
+  "status": "error",
+  "error": "UND_ERR_SOCKET",
+  "ms": 122
+ },
+ "https://www.luxarasalon.com/henson-location/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 400
+ },
+ "https://gatecitynailloungegreensboro.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 264
+ },
+ "https://ipolished.com/locations/#southend": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://ipolished.com/locations/",
+  "ms": 964
+ },
+ "https://fivenailnspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 975
+ },
+ "https://thenailbargreensboro.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1290
+ },
+ "https://sugarnailwakeforest.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 526
+ },
+ "https://www.curewaterlessnailspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 289
+ },
+ "https://www.diananailsgso.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1011
+ },
+ "https://www.soleisalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 129
+ },
+ "https://infinitebodiesnc.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 289
+ },
+ "https://royalnailspaheritagecorner.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 682
+ },
+ "https://blessingnailsnc.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 120
+ },
+ "https://www.ulta.com/stores/winston-salem-nc-762": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 223
+ },
+ "https://www.glotanning.com/location/greensboro/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.glotanning.com/location/greensboro-nc/",
+  "ms": 904
+ },
+ "https://thetarnishedbrush.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 214
+ },
+ "https://www.ulta.com/stores/concord-nc-1531": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 233
+ },
+ "https://www.ulta.com/stores/wilmington-nc-193": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 240
+ },
+ "https://www.topnailsnc.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 130
+ },
+ "https://www.ulta.com/stores/raleigh-nc-1564": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 335
+ },
+ "https://www.ulta.com/stores/mooresville-nc-231": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 250
+ },
+ "https://shecravesnails.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 625
+ },
+ "https://minailsalonboone.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 244
+ },
+ "https://www.ulta.com/stores/boone-nc-1597": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 344
+ },
+ "https://divasdennailsspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1522
+ },
+ "https://lb-nails-and-spa.business.site/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 687
+ },
+ "https://lavidamassageclemmonsnc.com/": {
+  "status": "error",
+  "error": "TimeoutError",
+  "ms": 15000
+ }
+}
