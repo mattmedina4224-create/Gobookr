@@ -1,0 +1,2108 @@
+{
+ "https://www.alfredstephens.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 221
+ },
+ "http://www.emiliani.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 251
+ },
+ "https://www.drybarshops.com/service/locator/detail/?slug=mount-laurel": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 301
+ },
+ "https://www.supercuts.com/locations/nearme/haircut/nj/plainsboro/10-shalks-crossing-rd/80358": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 335
+ },
+ "http://townebarbershoppe.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 352
+ },
+ "https://allendalehairstudios.com/mainmenu.html": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 376
+ },
+ "http://newwavebarbershop.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 153
+ },
+ "https://hairtime.us/north-brunswick-township/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 405
+ },
+ "http://romiromisalonandspa.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 122
+ },
+ "http://santasbeautyhair.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 154
+ },
+ "http://www.teaseco.com/": {
+  "status": "blocked",
+  "http_status": 403,
+  "final_url": "https://www.hugedomains.com/domain_profile.cfm?d=teaseco.com",
+  "ms": 393
+ },
+ "https://www.lamechesalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 249
+ },
+ "https://locations.haircuttery.com/nj/mount-laurel/28-centerton-road": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.haircuttery.com/locations/nj/mount-laurel/28-centerton-road",
+  "ms": 649
+ },
+ "https://jerseyboysbarber.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 248
+ },
+ "https://locations.haircuttery.com/nj/bridgeton/27-cornwell-drive": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.haircuttery.com/locations/nj/bridgeton/27-cornwell-drive",
+  "ms": 358
+ },
+ "https://combmontclair.com/": {
+  "status": "error",
+  "error": "CERT_HAS_EXPIRED",
+  "ms": 371
+ },
+ "https://www.hausofhilights.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 220
+ },
+ "https://www.artofhairsalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 200
+ },
+ "https://www.vsosagroomingbar.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 249
+ },
+ "https://www.rabbithairstudio.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 168
+ },
+ "https://www.authenticbarbershop.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 105
+ },
+ "https://estheticasalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 480
+ },
+ "http://xpectationssalon.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 90
+ },
+ "https://www.supercuts.com/locations/nearme/haircut/nj/monmouth-junction/4180-route-1-n/80719": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 30
+ },
+ "https://www.atouchofambiancenj.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 64
+ },
+ "https://www.giovannyshairsalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 229
+ },
+ "https://www.hillsboroughbarbershop.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 290
+ },
+ "https://eighteeneight.com/": {
+  "status": "error",
+  "http_status": 520,
+  "ms": 366
+ },
+ "https://www.supercuts.com/locations/nearme/haircut/NJ/WOODBRIDGE/765-SAINT-GEORGE-AVE/82346?location=wodbridge,%20nj": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 10
+ },
+ "https://www.theridgewoodman.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 454
+ },
+ "https://www.threadingstation.com/ridgewood": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.threadingstation.com/ridgewood-nj",
+  "ms": 340
+ },
+ "https://lemontree.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 763
+ },
+ "https://www.denvillefamilybarber.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://denvillefamilybarber.com/",
+  "ms": 355
+ },
+ "https://www.houseofbeautyhair.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 202
+ },
+ "https://saloncaru.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.saloncaru.com/",
+  "ms": 750
+ },
+ "https://www.littlejoejohnbarbershop.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 234
+ },
+ "https://highlightsnhairdesign.com/": {
+  "status": "error",
+  "error": "UND_ERR_SOCKET",
+  "ms": 283
+ },
+ "https://soffiatovia.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 139
+ },
+ "https://parlorhairstudio.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1268
+ },
+ "https://waveshairstudio.godaddysites.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 125
+ },
+ "https://www.ganddsalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 217
+ },
+ "http://terrysbarbershop.net/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 39
+ },
+ "https://www.supercuts.com/locations/nj/west-long-branch/paddock-plaza-haircuts-82804.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 14
+ },
+ "https://www.tribalbarbers.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 121
+ },
+ "https://sportclips.com/us-nj-tomsriver-nj109": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 433
+ },
+ "https://moxiesalonandbeautybar.com/saddlebrook/": {
+  "status": "error",
+  "http_status": 500,
+  "ms": 65
+ },
+ "https://www.craftandtheoryhair.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 553
+ },
+ "https://www.liquidhairsalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 132
+ },
+ "https://www.afrakuts.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 29
+ },
+ "https://www.haruonoro.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://haruonoro.com/",
+  "ms": 998
+ },
+ "https://justinsbarbershop.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 416
+ },
+ "https://salon121mc.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 85
+ },
+ "https://locations.haircuttery.com/nj/princeton/3495-us-highway-1-suite-b114.html": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 108
+ },
+ "https://salonconcrete.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.salonconcrete.com/",
+  "ms": 183
+ },
+ "https://21godwinsalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1439
+ },
+ "https://salongatto.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 185
+ },
+ "https://lakoetsalonjc.com/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 158
+ },
+ "https://www.brotherbarber.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 177
+ },
+ "https://www.gentlemanjackbarbershop.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 94
+ },
+ "https://www.supercuts.com/locations/nearme/haircut/NJ/East-Brunswick/Between-Starbucks-And-5-Guys/81729?location=08872": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 10
+ },
+ "http://m.tiffanywigs.biz/mobile/index.xhtml": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 860
+ },
+ "https://www.wildhoneyhairsalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 92
+ },
+ "https://www.exclusivecutsnj.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 139
+ },
+ "https://salonallureandspanj.com/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 68
+ },
+ "https://www.supercuts.com/locations/nearme/haircut/nj/pennington/800-denow-rd-ste-g/8919": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 36
+ },
+ "https://www.randologyhairstudio.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 131
+ },
+ "https://www.rusticrootsnj.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 209
+ },
+ "http://www.friendssalonhopewell.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.friendssalonhopewell.com/",
+  "ms": 505
+ },
+ "https://www.society201salon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 326
+ },
+ "https://laperfectionhair.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 231
+ },
+ "https://www.fabulousstylz.com/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 149
+ },
+ "https://www.avantgirlsalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 71
+ },
+ "https://www.haircuttery.com/locations/nj/browns-mills/18-broadway-suite-g": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 92
+ },
+ "https://www.rizzieri.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 189
+ },
+ "https://creativehairsalonn.wixsite.com/creative-hair-salon": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 98
+ },
+ "https://rphsms.wixsite.com/tonysbarbershop": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 81
+ },
+ "https://entouragesalonnj.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.entouragesalonnj.com/",
+  "ms": 1150
+ },
+ "https://www.hairbymfj.com/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 184
+ },
+ "https://booksy.com/en-us/99473_tijeras-barber_barber-shop_28816_manville": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://booksy.com/en-us/99473_tijeras-barber-shop_barber-shop_28806_bridgewater",
+  "ms": 1482
+ },
+ "https://www.vladshairstudio.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://vladshairstudio.com/",
+  "ms": 2007
+ },
+ "https://www.qoebeauty.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://qoehair.myshopify.com/",
+  "ms": 419
+ },
+ "https://myblowoutbar.com/": {
+  "status": "blocked",
+  "http_status": 403,
+  "final_url": "https://www.hugedomains.com/domain_profile.cfm?d=myblowoutbar.com",
+  "ms": 104
+ },
+ "https://www.georgessalon.net/": {
+  "status": "error",
+  "error": "CERT_HAS_EXPIRED",
+  "ms": 287
+ },
+ "https://shamirasbraids288.as.me/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 319
+ },
+ "https://www.impressionsspasalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 2638
+ },
+ "https://handsomeheadsbarbershop.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1948
+ },
+ "https://www.barberculturenj.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 108
+ },
+ "https://salons.greatclips.com/us/nj/chester/155-route-206-s": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 339
+ },
+ "https://sportclips.com/us-nj-brick-nj121": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 377
+ },
+ "https://wcbshop.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 332
+ },
+ "https://salons.greatclips.com/us/nj/hamilton/600-marketplace-blvd": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 304
+ },
+ "https://thebroadstreetbarbers.com/": {
+  "status": "error",
+  "error": "UND_ERR_SOCKET",
+  "ms": 412
+ },
+ "https://phenixsalons.com/professionals/new-jersey-nj-cliffwood/": {
+  "status": "error",
+  "http_status": 502,
+  "ms": 605
+ },
+ "https://www.salonenvy.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 304
+ },
+ "https://locations.haircuttery.com/nj/millville/2267-n-2nd-street-space-b5": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.haircuttery.com/locations/nj/millville/2267-n-2nd-street-space-b5",
+  "ms": 245
+ },
+ "http://bestbarbershophp.com/": {
+  "status": "dead",
+  "http_status": 404,
+  "final_url": "http://www.bestbarbershophp.com/",
+  "ms": 720
+ },
+ "https://sportclips.com/us-nj-hamiltontownship-nj206": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 401
+ },
+ "https://sportclips.com/us-nj-forkedriver-nj129": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 48
+ },
+ "https://locations.haircuttery.com/nj/delran/4004-route-130": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.haircuttery.com/locations/nj/delran/4004-route-130",
+  "ms": 521
+ },
+ "http://www.romasbeauty.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "http://ww1.romasbeauty.com/",
+  "ms": 1109
+ },
+ "https://locations.haircuttery.com/nj/deptford/1500-almonesson-road-building-d15": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.haircuttery.com/locations/nj/deptford/1500-almonesson-road-building-d15",
+  "ms": 164
+ },
+ "https://www.alx61.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 777
+ },
+ "https://www.supercuts.com/locations/nearme/haircut/nj/metuchen/665-middlesex-ave/81644": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 46
+ },
+ "https://www.derosasbarbershop.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 572
+ },
+ "https://placewind.top/prince-cutz-barber-shop-xcli9vk": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://placejuice.com/prince-cutz-barber-shop-xcli9vk",
+  "ms": 1182
+ },
+ "https://www.lawrencevillebarber.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 263
+ },
+ "https://salons.greatclips.com/us/nj/clinton/31-walmart-plz": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 18
+ },
+ "https://salons.greatclips.com/us/nj/east-brunswick/300-rte-18": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 38
+ },
+ "https://rootsrockssalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 288
+ },
+ "https://www.apollobarberstudio.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 104
+ },
+ "https://larrycadillac.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 104
+ },
+ "https://michaels-salon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 99
+ },
+ "https://www.theloftsalonnj.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1445
+ },
+ "https://www.blendmensgrooming.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 560
+ },
+ "https://alexasdominicansalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 182
+ },
+ "https://philyscuts.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 103
+ },
+ "https://locations.haircuttery.com/nj/west-berlin/116-walker-avenue-space-4a": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.haircuttery.com/locations/nj/west-berlin/116-walker-avenue-space-4a",
+  "ms": 147
+ },
+ "https://www.thehairports.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://mdgwin-a.site/",
+  "ms": 2833
+ },
+ "http://lemontree.com/Newton": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://lemontree.com/newton",
+  "ms": 2081
+ },
+ "https://therefinery-hairlounge.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1663
+ },
+ "https://www.supercuts.com/locations/nearme/haircut/nj/brick/16-brick-plz/82342": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 13
+ },
+ "https://www.salon518.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 649
+ },
+ "https://www.lightenupsalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 5891
+ },
+ "https://uppermontclairbarbers.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 86
+ },
+ "https://www.monarchbeautylounge.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 2006
+ },
+ "https://www.studiodandg.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 226
+ },
+ "https://studio5salonmontclair.glossgenius.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 476
+ },
+ "https://jghairstudio.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 2360
+ },
+ "https://moxiesalonandbeautybar.com/montclair-new-jersey": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 609
+ },
+ "https://salonmonty.net/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 565
+ },
+ "https://stevedelucassalon.com/": {
+  "status": "error",
+  "error": "ERR_SSL_TLSV1_ALERT_INTERNAL_ERROR",
+  "ms": 160
+ },
+ "https://roots-by-linda.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1342
+ },
+ "https://www.keycuts.co/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 160
+ },
+ "https://fabandjules.squarespace.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 207
+ },
+ "https://calesalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 2744
+ },
+ "https://www.southfinleybarbershop.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 308
+ },
+ "https://www.classicmancutandshave.com/montclair-nj-fullerton-barbershop/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 479
+ },
+ "https://www.moralibarberhouse.com/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 244
+ },
+ "https://salondiparruchiere.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 342
+ },
+ "https://www.customcutsalon.net/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 220
+ },
+ "http://balkanbarbershop.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.balkanbarbershop.com/",
+  "ms": 679
+ },
+ "https://www.salonodenj.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 148
+ },
+ "https://vanitysalonnj.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 153
+ },
+ "https://sportclips.com/us-nj-glassboro-nj208": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 62
+ },
+ "http://www.musesalon.net/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 257
+ },
+ "https://book.pigtailsandcrewcuts.com/102611/home": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://book.pigtailsandcrewcuts.com/find?storeUnavailable=true",
+  "ms": 845
+ },
+ "https://barberandcomontclair.booksy.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://lhkw.app.link/rDrdbdYEr1b?_p=c61c29c09a027af1e51c90ffeabc",
+  "ms": 895
+ },
+ "https://locations.haircuttery.com/nj/brooklawn/700-crescent-boulevard": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.haircuttery.com/locations/nj/brooklawn/700-crescent-boulevard",
+  "ms": 63
+ },
+ "https://www.margiesbarbershop.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 217
+ },
+ "https://www.one60.biz/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 243
+ },
+ "https://sportclips.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 46
+ },
+ "https://locations.haircuttery.com/nj/glassboro/840-delsea-drive-n": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.haircuttery.com/locations/nj/glassboro/840-delsea-drive-n",
+  "ms": 229
+ },
+ "https://www.barbergodsnj.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 249
+ },
+ "http://padmasbeauty.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 390
+ },
+ "https://sportclips.com/us-nj-cherryhill-nj201": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 320
+ },
+ "https://locations.haircuttery.com/nj/cinnaminson/127-route-130-south-suite-e": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.haircuttery.com/locations/nj/cinnaminson/127-route-130-south-suite-e",
+  "ms": 94
+ },
+ "https://www.hofthesalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 199
+ },
+ "https://joethebarber.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1368
+ },
+ "https://www.standardhaircuts.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 367
+ },
+ "https://www.roccoscutsandmore.net/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 547
+ },
+ "https://locations.waxcenter.com/nj/shorthills/short-hills-0143.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 546
+ },
+ "https://www.jinyaramenbar.com/locations/totowa/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 759
+ },
+ "https://www.ulta.com/stores/rockaway-nj-186": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 969
+ },
+ "https://www.ulta.com/stores/holmdel-nj-125": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 731
+ },
+ "http://www.salonrockpaperscissors.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://salonrockpaperscissors.com/",
+  "ms": 1141
+ },
+ "https://www.ulta.com/stores/clark-nj-782": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 582
+ },
+ "http://justhairnj.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 138
+ },
+ "https://www.ulta.com/stores/north-brunswick-nj-1467": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 354
+ },
+ "https://www.divineorganicnail.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 290
+ },
+ "https://www.eastcoastsalon.com/": {
+  "status": "error",
+  "error": "ERR_TLS_CERT_ALTNAME_INVALID",
+  "ms": 192
+ },
+ "https://lalalobster.com/?utm_source=GMB&utm_medium=organic&utm_campaign=1SEO_SM_GMB": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 241
+ },
+ "https://bluemercury.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 373
+ },
+ "https://jjeyelashes.com/locations/city-place/": {
+  "status": "error",
+  "error": "UND_ERR_SOCKET",
+  "ms": 246
+ },
+ "http://www.salonmarcjoseph.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 27
+ },
+ "https://www.ulta.com/stores/wayne-nj-1197": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 440
+ },
+ "https://www.vagaro.com/absoluteweaveworks": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1700
+ },
+ "https://www.ulta.com/stores/princeton-nj-109": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 307
+ },
+ "https://www.tanlinersclub.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 104
+ },
+ "https://imagesunnj.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.imagesunnj.com/",
+  "ms": 220
+ },
+ "http://sapphireelitespa.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 70
+ },
+ "https://spavirtue.net/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 157
+ },
+ "https://soniabeautysalonnj.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 84
+ },
+ "https://www.ulta.com/stores/manahawkin-nj-378": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 181
+ },
+ "http://thevanityroom.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.thevanityroom.com/",
+  "ms": 931
+ },
+ "https://www.theoriginalssalon.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 37
+ },
+ "http://elieesper.com/": {
+  "status": "error",
+  "error": "UND_ERR_CONNECT_TIMEOUT",
+  "ms": 10348
+ },
+ "https://www.cryolete.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 52
+ },
+ "https://www.blushfaceandbodylab.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 112
+ },
+ "https://www.bangz.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 383
+ },
+ "https://zonnys.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 344
+ },
+ "https://locations.waxcenter.com/nj/wayne/wayne-0054.html": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://locations.waxcenter.com/nj/wayne/wayne-the-yard-in-wayne-1478.html",
+  "ms": 721
+ },
+ "https://houseofdecicco.com/": {
+  "status": "error",
+  "error": "ECONNRESET",
+  "ms": 59
+ },
+ "https://www.nailsforyounj.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.thaichallenge22.org/nutrition/",
+  "ms": 695
+ },
+ "https://bluemercury.com/pages/store-locator": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://bluemercury.com/pages/bluemercury-near-me",
+  "ms": 393
+ },
+ "https://www.ulta.com/storea/edgewater-nj-123": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1275
+ },
+ "https://www.chromamontclair.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 270
+ },
+ "https://www.arcbeautysalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 246
+ },
+ "https://www.serenusdayspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 241
+ },
+ "https://www.ulta.com/stores/phillipsburg-nj-1288": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 197
+ },
+ "https://www.karmaorganicspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://karmaorganicspa.com/",
+  "ms": 644
+ },
+ "https://fashionnailspaus.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.fashionnailspaus.com/",
+  "ms": 230
+ },
+ "https://subzerocryo.net/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 152
+ },
+ "https://www.ulta.com/stores/ramsey-nj-510": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 367
+ },
+ "https://www.victoynailsspa.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 37
+ },
+ "https://lalvaynails.salon/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 784
+ },
+ "https://star-nails-south-amboy.edan.io/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 78
+ },
+ "https://www.shadownails.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 37
+ },
+ "https://www.ulta.com/stores/wayne-nj-1641": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 168
+ },
+ "https://www.nelaserveininstitute.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.amapsykologmottagning.se/",
+  "ms": 1031
+ },
+ "https://www.humabeautysalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 243
+ },
+ "https://www.artistsandarchitects.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://artistsandarchitects.com/",
+  "ms": 460
+ },
+ "https://www.tikiimage.com/westlongbranch": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 124
+ },
+ "https://nail-club-west-long-branch.edan.io/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 102
+ },
+ "https://tntnails.net/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 376
+ },
+ "https://phenixsalonsuites.com/locations/east-brunswick-nj/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 183
+ },
+ "https://www.lashbeautyloungenj.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 177
+ },
+ "https://newjerseynailsandspaeastbrunswick.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 175
+ },
+ "https://www.egosalonandspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 125
+ },
+ "https://www.walkersapothecary.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 257
+ },
+ "https://locations.waxcenter.com/nj/parsippany/parsippany-0580.html": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://locations.waxcenter.com/nj/",
+  "ms": 802
+ },
+ "https://www.ulta.com/stores/brick-township-nj-1204": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 209
+ },
+ "https://locations.waxcenter.com/nj/eastbrunswick/east-brunswick-0082.html": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://locations.waxcenter.com/nj/eastbrunswick/",
+  "ms": 549
+ },
+ "https://www.ulta.com/stores/kearney-nj-1428": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 439
+ },
+ "https://lizbeautysalon.net/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 129
+ },
+ "https://www.ulta.com/stores/parsippany-nj-1497/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.ulta.com/stores/parsippany-nj-1497",
+  "ms": 198
+ },
+ "https://timeoutwellnessllc.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 47
+ },
+ "https://pro-files.edan.io/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 110
+ },
+ "https://locations.waxcenter.com/nj/hoboken/hoboken-0059.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 401
+ },
+ "https://www.ulta.com/stores/turnersville-nj-1338": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 195
+ },
+ "https://irisnailbar.business.site/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 536
+ },
+ "https://dominicanstyleunisexsalon.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 42
+ },
+ "https://www.imstellabeauty.com/about-2": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 209
+ },
+ "https://heavenleenailsspahackettstown.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 31
+ },
+ "https://www.cardonacardonainc.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 136
+ },
+ "https://araya-rebirth.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://laecoreserva.bio/",
+  "ms": 2850
+ },
+ "https://www.madison-reed.com/colorbar/locations/montclair": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 677
+ },
+ "https://www.shiseido.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.shiseido.com/us/en/",
+  "ms": 2062
+ },
+ "https://www.ulta.com/stores/garfield-nj-1301": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 163
+ },
+ "https://www.ulta.com/stores/bound-brook-nj-1266": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 167
+ },
+ "https://phoenixgroomingstudio.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 201
+ },
+ "https://www.beauinstitute.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://beauinstitute.com/",
+  "ms": 637
+ },
+ "https://square.site/book/FB1PE31Q630S5/boujiee-blinks-beauty-bar-palmyra-nj": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 337
+ },
+ "https://elvyrose-nail-spa.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 862
+ },
+ "https://beachbum.com/locations/beach-bum-tanning-brick-nj/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 81
+ },
+ "https://www.vagaro.com/blissnailspa": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1417
+ },
+ "https://evolvemedspa.com/in/new-jersey/red-bank-nj/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 142
+ },
+ "https://locations.waxcenter.com/nj/marlton/marlton-0397.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 14
+ },
+ "https://www.ulta.com/stores/chester-nj-1609": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 236
+ },
+ "https://www.restore.com/locations/nj-marlton-nj001": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 216
+ },
+ "https://angelinanailsspa2.com/": {
+  "status": "error",
+  "error": "ERR_TLS_CERT_ALTNAME_INVALID",
+  "ms": 137
+ },
+ "https://www.hygorgeous.com/": {
+  "status": "error",
+  "error": "ERR_SSL_SSL/TLS_ALERT_HANDSHAKE_FAILURE",
+  "ms": 96
+ },
+ "https://salonbeautybuzz.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 79
+ },
+ "https://forclique.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 2126
+ },
+ "https://unitedstates.nhtglobal.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://central.nhtglobal.com/",
+  "ms": 583
+ },
+ "https://www.sephora.com/happening/stores/kohls-at-millville": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 153
+ },
+ "https://locations.waxcenter.com/nj/chester/chester-0863.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 549
+ },
+ "https://www.naturalskincarellc.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 198
+ },
+ "https://www.bellanailspanj.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 252
+ },
+ "https://www.lessencedayspanj.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 368
+ },
+ "https://www.blinkbymack.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 194
+ },
+ "https://salonfemi.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 614
+ },
+ "https://www.secretstoplush.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 122
+ },
+ "https://locations.waxcenter.com/nj/hamilton/hamilton-0938.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 419
+ },
+ "https://synergywellnessmedispa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 143
+ },
+ "https://nail-sketch-llc.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 844
+ },
+ "https://www.cocoabeachtanninglounge.com/": {
+  "status": "error",
+  "error": "UND_ERR_SOCKET",
+  "ms": 195
+ },
+ "https://phenixsalonsuites.com/locations/deptford-nj/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 15
+ },
+ "https://finetouchnailsspa.top/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 416
+ },
+ "https://bellanailsflemington.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 163
+ },
+ "https://diornailsbuddlake.com/": {
+  "status": "error",
+  "http_status": 503,
+  "ms": 114
+ },
+ "https://phenixsalonsuites.com/professionals/jazzie-lashes-spa-llc": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 13
+ },
+ "https://www.ulta.com/stores/deptford-nj-732": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 218
+ },
+ "https://locations.waxcenter.com/nj/deptford/deptford-0790.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 412
+ },
+ "https://www.danielsmitssalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 116
+ },
+ "https://locations.waxcenter.com/nj/metuchen/metuchen-0695.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 478
+ },
+ "https://iristree.store/": {
+  "status": "error",
+  "http_status": 500,
+  "ms": 167
+ },
+ "https://mobiletanningsalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 652
+ },
+ "https://queenbestnailspa.localsearch.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 941
+ },
+ "https://allurenailbarinc.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1791
+ },
+ "https://gracefulnailsbykimriver.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 105
+ },
+ "https://myperfectlypolished.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1861
+ },
+ "http://www.angeltipsgarwood.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://angeltipsgarwood.a-zcompanies.com/",
+  "ms": 715
+ },
+ "https://www.sephora.com/happening/stores/centerton-square": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 73
+ },
+ "https://locations.waxcenter.com/nj/brick/brick-0158.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 16
+ },
+ "https://www.waxingthecity.com/locations/w75/us/nj/princeton-marketfair-mall/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 204
+ },
+ "https://orangetwist.com/locations/nj/princeton/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 184
+ },
+ "https://bricknailsspanj.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 173
+ },
+ "https://www.jeeyunenailspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 205
+ },
+ "https://www.montclairnailspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 287
+ },
+ "https://bosphorusbarber.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 287
+ },
+ "https://www.thebrowclinique.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 4609
+ },
+ "https://www.lurelash.com/montclair/": {
+  "status": "error",
+  "error": "UND_ERR_SOCKET",
+  "ms": 266
+ },
+ "https://xonailscliffwood.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://staterafoods.co.uk/",
+  "ms": 3653
+ },
+ "https://polishedmontclair.mysalononline.com/booking": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://polishedmontclair.mysalononline.com/Error/CookiesDisabled",
+  "ms": 562
+ },
+ "https://www.montclairbarbershop.net/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 90
+ },
+ "https://beautifuljasminenails.weebly.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 193
+ },
+ "https://skinnbrowbar.glossgenius.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 433
+ },
+ "https://removery.com/tattoo-removal/locations/nj/cinnaminson/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1788
+ },
+ "https://sknmontclair.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 71
+ },
+ "https://montclair.chillcryo.net/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 103
+ },
+ "https://www.mellowlashbar.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 118
+ },
+ "https://www.classicmancutandshave.com/montclair-nj-watchung-barbershop/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 367
+ },
+ "https://www.dollymoo.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 295
+ },
+ "https://lovenailsspanj.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1870
+ },
+ "https://www.cityimagebarbershop.com/locations/montclair": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.cityimagebarbershop.com/locations/montclair/",
+  "ms": 1174
+ },
+ "https://prestigebarbering.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1030
+ },
+ "https://katesskin.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 62
+ },
+ "https://www.new2000nailsnj.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 201
+ },
+ "https://evolvemedspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 76
+ },
+ "https://www.dawntilduskcosmetics.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 421
+ },
+ "https://alchemyscentbar.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 164
+ },
+ "https://www.unitybeautysupplies.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 491
+ },
+ "https://www.tlcmontclair.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 304
+ },
+ "https://www.lashmelily.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 284
+ },
+ "https://locations.woodhousespas.com/new-jersey/montclair/56-s-park-st": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://locations.woodhousespas.com/new-jersey/montclair/56-s-park-st/",
+  "ms": 408
+ },
+ "https://amournailsnj.com/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 106
+ },
+ "https://www.ulta.com/stores/skillman-nj-1552": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 166
+ },
+ "https://aspenprimemedspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 283
+ },
+ "https://www.charlieslashesbr.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 93
+ },
+ "http://finanailbar.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://finanailbar.com/",
+  "ms": 331
+ },
+ "https://www.ulta.com/stores/marlton-nj-106": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 334
+ },
+ "https://locations.waxcenter.com/nj/mountlaurel/mount-laurel-0396.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 15
+ },
+ "https://www.fantasynailsspa120.com/": {
+  "status": "error",
+  "error": "CERT_HAS_EXPIRED",
+  "ms": 441
+ },
+ "https://bernardssalonandspa.com/": {
+  "status": "error",
+  "error": "UNABLE_TO_GET_ISSUER_CERT_LOCALLY",
+  "ms": 84
+ },
+ "https://locations.waxcenter.com/nj/sicklerville/sicklerville-0706.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 16
+ },
+ "https://www.ulta.com/stores/maywood-nj-399": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 432
+ },
+ "https://auraheadspanj.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 955
+ },
+ "https://regalnails.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 628
+ },
+ "https://www.lavishlbi.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 315
+ },
+ "https://www.ulta.com/stores/mt-laurel-nj-104": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 262
+ },
+ "https://aboutfaceessentials.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 283
+ },
+ "https://beachbum.com/locations/beach-bum-tanning-east-brunswick-nj/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 325
+ },
+ "https://www.ulta.com/stores/toms-river-nj-1568": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 535
+ },
+ "https://williamrobertsalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 835
+ },
+ "https://www.victoriabeautylounge.net/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 361
+ },
+ "https://pronailspa1flander.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 154
+ },
+ "https://206nail.setmore.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 614
+ },
+ "http://milanonailspabuddlake.com/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 183
+ },
+ "https://bellasnailspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.bellasnailspa.com/",
+  "ms": 3268
+ },
+ "https://locations.waxcenter.com/nj/clinton/clinton-walmart-plaza-0658.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 32
+ },
+ "https://locations.waxcenter.com/nj/glassboro/glassboro-collegetown-shopping-center-0868.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 448
+ },
+ "https://beachbum.com/locations/beach-bum-tanning-rockaway-nj/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 23
+ },
+ "https://www.ulta.com/stores/hamilton-township-nj-1400": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 266
+ },
+ "http://toujourshairsalon.com/": {
+  "status": "error",
+  "error": "UND_ERR_CONNECT_TIMEOUT",
+  "ms": 10325
+ },
+ "https://www.sweetandsassy.com/ridgewood/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 1727
+ },
+ "https://www.nailsplusspa.com/locations/red-bank/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 706
+ },
+ "https://www.rumsontherapeutic.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 109
+ },
+ "https://locations.waxcenter.com/nj/cinnaminson/cinnaminson-0625.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 451
+ },
+ "http://lenoreshaircolorandspa.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 131
+ },
+ "https://www.thenowmassage.com/boutique/montclair": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 239
+ },
+ "https://risinglotusholistic.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 357
+ },
+ "https://powerhousetattoo.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://powerhousetattoo.com/home.html",
+  "ms": 309
+ },
+ "http://hillsbrough.rorschachgalleries.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 54
+ },
+ "http://serenitynailsclinton.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 614
+ },
+ "https://olivespa.us/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 120
+ },
+ "https://locations.massageenvy.com/new-jersey/waldwick/26-franklin-turnpike.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 322
+ },
+ "https://www.moonspasayreville.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 41
+ },
+ "https://oceanspanj.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 37
+ },
+ "https://www.hocuspocustattoos.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 725
+ },
+ "https://locations.massageenvy.com/new-jersey/east-brunswick/314-rt-18.html": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://locations.massageenvy.com/index.html",
+  "ms": 144
+ },
+ "https://handandstone.com/locations/woodbridge": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://handandstone.com/locations/woodbridge/",
+  "ms": 279
+ },
+ "https://handandstone.com/locations/old-bridge/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 68
+ },
+ "https://the-ink-emporium.business.site/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 618
+ },
+ "https://handandstone.com/locations/east-brunswick/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 185
+ },
+ "https://www.theoceanac.com/exhale-spa/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 115
+ },
+ "https://locations.massageenvy.com/new-jersey/toms-river/2-route-37-west.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 342
+ },
+ "https://locations.massageenvy.com/new-jersey/verona/285-pompton-avenue.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 56
+ },
+ "https://eternaldavincigallery.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 179
+ },
+ "https://www.greenhealthmassage.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 300
+ },
+ "https://alieninkllc1.wixsite.com/alieninktattoos": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 133
+ },
+ "https://www.handandstonekearny.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://handandstone.com/locations/kearny/",
+  "ms": 481
+ },
+ "https://www.pinsandroses.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 339
+ },
+ "https://touchofhealth.us/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.touchofhealth.us/",
+  "ms": 516
+ },
+ "https://healingpointmassage.abmp.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 619
+ },
+ "https://www.handandstoneflanders.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://handandstone.com/locations/flanders-mt-olive-twp/",
+  "ms": 585
+ },
+ "https://hydralivetherapy.com/location/chester/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 157
+ },
+ "https://locations.massageenvy.com/new-jersey/chester/145-us-route-206-s.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 262
+ },
+ "https://handandstone.com/locations/millville/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 76
+ },
+ "https://www.handsomedeviltattoocompany.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 119
+ },
+ "https://handandstone.com/locations/delran/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 67
+ },
+ "https://www.diamondbackmassagetherapy.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 83
+ },
+ "https://mythaiwellness.com/oceanport": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 89
+ },
+ "https://metuchenmassagetherapy.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 133
+ },
+ "https://locations.massageenvy.com/new-jersey/metuchen/665-middlesex-ave-.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 44
+ },
+ "https://asianmassagejerseyshore.com/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 313
+ },
+ "https://www.jingmassagereflexology.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 187
+ },
+ "https://lomo-da.massagetherapy.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 430
+ },
+ "https://www.monstersinknj.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 184
+ },
+ "https://badintentionz.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1120
+ },
+ "http://www.rockcitytattoonj.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 304
+ },
+ "https://handandstone.com/locations/mullica-hill/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 81
+ },
+ "https://lemiragesalonspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 2273
+ },
+ "https://artisticevolutiontattoos.setmore.com/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 161
+ },
+ "https://www.inktherapynj.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 146
+ },
+ "https://lymassagecenter.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 210
+ },
+ "https://www.classictattooclub.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 120
+ },
+ "https://hiddencovetattoos.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 86
+ },
+ "https://www.pendry.com/natirar/wellness/spa-pendry/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 50
+ },
+ "https://handandstone.com/locations/brick-plaza/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 57
+ },
+ "https://pureinktattoo.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.pureinktattoo.com/",
+  "ms": 1005
+ },
+ "https://locations.massageenvy.com/new-jersey/mount-laurel/46a-centerton-road.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 261
+ },
+ "https://www.valhalla-nj.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 558
+ },
+ "https://jinxproof.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 206
+ },
+ "https://handandstone.com/locations/glassboro/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 224
+ },
+ "https://www.lbiacupuncture.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 182
+ },
+ "https://www.deluxedentistry.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 160
+ },
+ "https://locations.massageenvy.com/new-jersey/sicklerville/610-cross-keys-rd.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 349
+ },
+ "https://www.badintentionz.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://badintentionz.com/",
+  "ms": 875
+ },
+ "https://theinkshoptattooz.com/": {
+  "status": "error",
+  "error": "CERT_HAS_EXPIRED",
+  "ms": 2768
+ }
+}

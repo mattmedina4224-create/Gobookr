@@ -1,0 +1,1124 @@
+{
+ "state": "NJ",
+ "census_places": 697,
+ "places_covered": 92,
+ "place_coverage_pct": 13.2,
+ "census_counties": 21,
+ "counties_covered": 20,
+ "counties_uncovered": [
+  "Cape May County"
+ ],
+ "communities_outside_census_places": [
+  {
+   "city": "Montclair",
+   "shops": 49
+  },
+  {
+   "city": "East Brunswick",
+   "shops": 9
+  },
+  {
+   "city": "Brick",
+   "shops": 6
+  },
+  {
+   "city": "Belleville",
+   "shops": 6
+  },
+  {
+   "city": "Saddle Brook",
+   "shops": 4
+  },
+  {
+   "city": "Mount Laurel",
+   "shops": 3
+  },
+  {
+   "city": "East Windsor",
+   "shops": 3
+  },
+  {
+   "city": "Delran",
+   "shops": 3
+  },
+  {
+   "city": "Deptford",
+   "shops": 3
+  },
+  {
+   "city": "Cherry Hill",
+   "shops": 3
+  },
+  {
+   "city": "Cinnaminson",
+   "shops": 3
+  },
+  {
+   "city": "Mount Holly",
+   "shops": 3
+  },
+  {
+   "city": "North Brunswick",
+   "shops": 2
+  },
+  {
+   "city": "Holmdel",
+   "shops": 2
+  },
+  {
+   "city": "Hamilton",
+   "shops": 2
+  },
+  {
+   "city": "Hamilton Township",
+   "shops": 2
+  },
+  {
+   "city": "Wayne",
+   "shops": 2
+  },
+  {
+   "city": "Brick Township",
+   "shops": 2
+  },
+  {
+   "city": "Parlin",
+   "shops": 2
+  },
+  {
+   "city": "Bloomfield",
+   "shops": 2
+  },
+  {
+   "city": "Plainsboro",
+   "shops": 1
+  },
+  {
+   "city": "Denville",
+   "shops": 1
+  },
+  {
+   "city": "Moorestown Township",
+   "shops": 1
+  },
+  {
+   "city": "Robbinsville Township",
+   "shops": 1
+  },
+  {
+   "city": "Glenwood",
+   "shops": 1
+  },
+  {
+   "city": "Mahwah",
+   "shops": 1
+  },
+  {
+   "city": "Moorestown",
+   "shops": 1
+  },
+  {
+   "city": "Lawrence Township",
+   "shops": 1
+  },
+  {
+   "city": "West Orange",
+   "shops": 1
+  },
+  {
+   "city": "Sparta",
+   "shops": 1
+  },
+  {
+   "city": "Clark",
+   "shops": 1
+  },
+  {
+   "city": "Stafford Township",
+   "shops": 1
+  },
+  {
+   "city": "Howell",
+   "shops": 1
+  },
+  {
+   "city": "New",
+   "shops": 1
+  },
+  {
+   "city": "Cliffwood",
+   "shops": 1
+  },
+  {
+   "city": "Mount Laurel Township",
+   "shops": 1
+  },
+  {
+   "city": "Edison",
+   "shops": 1
+  },
+  {
+   "city": "Mt",
+   "shops": 1
+  },
+  {
+   "city": "Verona",
+   "shops": 1
+  },
+  {
+   "city": "Livingston",
+   "shops": 1
+  }
+ ],
+ "top_covered_places": [
+  {
+   "name": "Ridgewood",
+   "shops": 10
+  },
+  {
+   "name": "Chester",
+   "shops": 9
+  },
+  {
+   "name": "Flanders",
+   "shops": 8
+  },
+  {
+   "name": "Metuchen",
+   "shops": 8
+  },
+  {
+   "name": "Hoboken",
+   "shops": 6
+  },
+  {
+   "name": "Toms River",
+   "shops": 6
+  },
+  {
+   "name": "Jersey City",
+   "shops": 5
+  },
+  {
+   "name": "Glassboro",
+   "shops": 5
+  },
+  {
+   "name": "Princeton",
+   "shops": 5
+  },
+  {
+   "name": "Palmyra",
+   "shops": 4
+  },
+  {
+   "name": "Highland Park",
+   "shops": 4
+  },
+  {
+   "name": "Hopewell",
+   "shops": 3
+  },
+  {
+   "name": "Ho-Ho-Kus",
+   "shops": 3
+  },
+  {
+   "name": "Budd Lake",
+   "shops": 3
+  },
+  {
+   "name": "Clinton",
+   "shops": 3
+  },
+  {
+   "name": "Rockaway",
+   "shops": 3
+  },
+  {
+   "name": "Kearny",
+   "shops": 3
+  },
+  {
+   "name": "Marlton",
+   "shops": 3
+  },
+  {
+   "name": "Garfield",
+   "shops": 2
+  },
+  {
+   "name": "Hillsborough",
+   "shops": 2
+  },
+  {
+   "name": "Woodbridge",
+   "shops": 2
+  },
+  {
+   "name": "Ramsey",
+   "shops": 2
+  },
+  {
+   "name": "Eatontown",
+   "shops": 2
+  },
+  {
+   "name": "Millville",
+   "shops": 2
+  },
+  {
+   "name": "Short Hills",
+   "shops": 2
+  },
+  {
+   "name": "Basking Ridge",
+   "shops": 2
+  },
+  {
+   "name": "Pennsville",
+   "shops": 2
+  },
+  {
+   "name": "Edgewater",
+   "shops": 2
+  },
+  {
+   "name": "Phillipsburg",
+   "shops": 2
+  },
+  {
+   "name": "Parsippany",
+   "shops": 2
+  },
+  {
+   "name": "Red Bank",
+   "shops": 2
+  },
+  {
+   "name": "Oceanport",
+   "shops": 2
+  },
+  {
+   "name": "Flemington",
+   "shops": 2
+  },
+  {
+   "name": "Skillman",
+   "shops": 2
+  },
+  {
+   "name": "Sicklerville",
+   "shops": 2
+  },
+  {
+   "name": "Pitman",
+   "shops": 1
+  },
+  {
+   "name": "Bridgeton",
+   "shops": 1
+  },
+  {
+   "name": "Brownville",
+   "shops": 1
+  },
+  {
+   "name": "Sea Girt",
+   "shops": 1
+  },
+  {
+   "name": "Union City",
+   "shops": 1
+  }
+ ],
+ "uncovered_places_with_held_candidates": [
+  {
+   "name": "Trenton",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 117
+  },
+  {
+   "name": "Camden",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 69
+  },
+  {
+   "name": "Newark",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 62
+  },
+  {
+   "name": "Cranford",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 27
+  },
+  {
+   "name": "Pompton Lakes",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 22
+  },
+  {
+   "name": "Atlantic City",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 21
+  },
+  {
+   "name": "Madison",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 16
+  },
+  {
+   "name": "Sayreville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 15
+  },
+  {
+   "name": "Hawthorne",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 14
+  },
+  {
+   "name": "Palisades Park",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 14
+  },
+  {
+   "name": "Hackettstown",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 13
+  },
+  {
+   "name": "Clifton",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 12
+  },
+  {
+   "name": "Moorestown-Lenola",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 11
+  },
+  {
+   "name": "Raritan",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 11
+  },
+  {
+   "name": "Dover",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 9
+  },
+  {
+   "name": "Westfield",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 9
+  },
+  {
+   "name": "Brigantine",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 8
+  },
+  {
+   "name": "Leonia",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 8
+  },
+  {
+   "name": "Blairstown",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 7
+  },
+  {
+   "name": "Cherry Hill Mall",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 7
+  },
+  {
+   "name": "Fort Lee",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 7
+  },
+  {
+   "name": "Paramus",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 7
+  },
+  {
+   "name": "Riverdale",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 7
+  },
+  {
+   "name": "Rutherford",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 7
+  },
+  {
+   "name": "South Plainfield",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 7
+  },
+  {
+   "name": "Washington",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 7
+  },
+  {
+   "name": "Belle Mead",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 6
+  },
+  {
+   "name": "Boonton",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 6
+  },
+  {
+   "name": "Beachwood",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Kenilworth",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Keyport",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "New Providence",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Perth Amboy",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Somerset",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Tinton Falls",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Wildwood",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Alpha",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Echelon",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Marmora",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Milltown",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Ocean City",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Port Monmouth",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Singac",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Smithville",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Somerville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "South Amboy",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Villas",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Absecon",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Butler",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Carlls Corner",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Cedar Knolls",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Englewood",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Golden Triangle",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Guttenberg",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Hackensack",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Lakewood",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Landing",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "New Milford",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Old Bridge",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Pemberton",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Roselle",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Sewell",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "South Toms River",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Towaco",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Ventnor City",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "West New York",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Westwood",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "White Horse",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Barclay",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Bayonne",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Bradley Gardens",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Cape May",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Cliffside Park",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Colonia",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Cresskill",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Dumont",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "East Orange",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Ellisburg",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Gibbsboro",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Green Village",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Greentree",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Harlingen",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Harrison",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Hasbrouck Heights",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Hopatcong",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Lake Hopatcong",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Lakehurst",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Leisure Knoll",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Little Ferry",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Manahawkin",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Manasquan",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Merchantville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "New Brunswick",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Norwood",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Park Ridge",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Plainsboro Center",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Pleasantville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Pomona",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Roselle Park",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Silver Lake",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Springfield",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Summit",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Tenafly",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Wharton",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Woodstown",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Atco",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Audubon",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Avon-by-the-Sea",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Barrington",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Bellmawr",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Belvidere",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Berlin",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Bloomingdale",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Bordentown",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Caldwell",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Califon",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Clementon",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Collingswood",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "East Franklin",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Fair Haven",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Franklin Park",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Freehold",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Haddon Heights",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Harrington Park",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Hi-Nella",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Hillsdale",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Lake Hiawatha",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Lambertville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Lavallette",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Leisure Village",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Martinsville",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "McGuire AFB",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "McKee City",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "North Arlington",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "North Wildwood",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Oak Valley",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Oakhurst",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Pine Brook",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Pine Lake Park",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Point Pleasant",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Port Colden",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Princeton Junction",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Ridgefield",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Robertsville",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Rumson",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Sea Isle City",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Secaucus",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Strathmore",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Surf City",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "The Hills",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Turnersville",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Upper Pohatcong",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Vineland",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Wanaque",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Westmont",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "White House Station",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Williamstown",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  }
+ ],
+ "uncovered_places_without_candidates": 448,
+ "source": "U.S. Census Bureau 2020 place-by-county and county code files"
+}

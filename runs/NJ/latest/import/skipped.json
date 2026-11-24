@@ -1,0 +1,54 @@
+[
+ {
+  "name": "Ulta Beauty",
+  "city": "Wayne",
+  "state": "NJ",
+  "street_address": "914 Hamburg Turnpike",
+  "zip_code": "07470",
+  "county": "",
+  "categories": [
+   "stylist"
+  ],
+  "website_url": "https://www.ulta.com/stores/wayne-nj-1641",
+  "phone": "(862) 684-4313",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/node/8233167106",
+  "source_external_id": "osm:node/8233167106",
+  "license_number": null,
+  "latitude": 40.9600025,
+  "longitude": -74.2298577,
+  "operational_status": "verified",
+  "checked_at": "2026-11-24",
+  "raw_name": "Ulta Beauty",
+  "website_candidate": "https://www.ulta.com/stores/wayne-nj-1641",
+  "website_source_url": "",
+  "reason": "duplicate_candidate",
+  "duplicate_of": "osm:node/4838654962"
+ },
+ {
+  "name": "Classic Man Cut & Shave",
+  "city": "Montclair",
+  "state": "NJ",
+  "street_address": "37 Watchung Plaza",
+  "zip_code": "07042",
+  "county": "",
+  "categories": [
+   "barber"
+  ],
+  "website_url": "https://www.classicmancutandshave.com/montclair-nj-watchung-barbershop/",
+  "phone": "(973) 337-5359",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/node/14089111322",
+  "source_external_id": "osm:node/14089111322",
+  "license_number": null,
+  "latitude": 40.8302186,
+  "longitude": -74.2060667,
+  "operational_status": "verified",
+  "checked_at": "2026-11-24",
+  "raw_name": "Classic Man Cut & Shave",
+  "website_candidate": "https://www.classicmancutandshave.com/montclair-nj-watchung-barbershop/",
+  "website_source_url": "",
+  "reason": "duplicate_candidate",
+  "duplicate_of": "osm:node/14092102272"
+ }
+]
