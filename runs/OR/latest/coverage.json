@@ -1,0 +1,570 @@
+{
+ "state": "OR",
+ "census_places": 425,
+ "places_covered": 50,
+ "place_coverage_pct": 11.8,
+ "census_counties": 36,
+ "counties_covered": 20,
+ "counties_uncovered": [
+  "Baker County",
+  "Crook County",
+  "Curry County",
+  "Gilliam County",
+  "Grant County",
+  "Harney County",
+  "Jefferson County",
+  "Lake County",
+  "Malheur County",
+  "Morrow County",
+  "Sherman County",
+  "Tillamook County",
+  "Umatilla County",
+  "Union County",
+  "Wallowa County",
+  "Wheeler County"
+ ],
+ "communities_outside_census_places": [
+  {
+   "city": "Clackamas",
+   "shops": 7
+  },
+  {
+   "city": "Pleasant Hill",
+   "shops": 1
+  },
+  {
+   "city": "Gleneden Beach",
+   "shops": 1
+  },
+  {
+   "city": "Lake Grove",
+   "shops": 1
+  }
+ ],
+ "top_covered_places": [
+  {
+   "name": "Portland",
+   "shops": 252
+  },
+  {
+   "name": "Beaverton",
+   "shops": 42
+  },
+  {
+   "name": "Bend",
+   "shops": 36
+  },
+  {
+   "name": "Medford",
+   "shops": 31
+  },
+  {
+   "name": "Hillsboro",
+   "shops": 27
+  },
+  {
+   "name": "Lake Oswego",
+   "shops": 27
+  },
+  {
+   "name": "Tigard",
+   "shops": 26
+  },
+  {
+   "name": "Eugene",
+   "shops": 20
+  },
+  {
+   "name": "West Linn",
+   "shops": 13
+  },
+  {
+   "name": "Salem",
+   "shops": 12
+  },
+  {
+   "name": "Happy Valley",
+   "shops": 10
+  },
+  {
+   "name": "Gresham",
+   "shops": 9
+  },
+  {
+   "name": "Corvallis",
+   "shops": 7
+  },
+  {
+   "name": "Sherwood",
+   "shops": 7
+  },
+  {
+   "name": "Albany",
+   "shops": 7
+  },
+  {
+   "name": "Wilsonville",
+   "shops": 6
+  },
+  {
+   "name": "Cottage Grove",
+   "shops": 6
+  },
+  {
+   "name": "Tualatin",
+   "shops": 5
+  },
+  {
+   "name": "Ashland",
+   "shops": 4
+  },
+  {
+   "name": "Springfield",
+   "shops": 4
+  },
+  {
+   "name": "Astoria",
+   "shops": 3
+  },
+  {
+   "name": "Canby",
+   "shops": 3
+  },
+  {
+   "name": "Keizer",
+   "shops": 3
+  },
+  {
+   "name": "St. Helens",
+   "shops": 2
+  },
+  {
+   "name": "Oak Grove",
+   "shops": 2
+  },
+  {
+   "name": "Grants Pass",
+   "shops": 2
+  },
+  {
+   "name": "The Dalles",
+   "shops": 2
+  },
+  {
+   "name": "Wood Village",
+   "shops": 2
+  },
+  {
+   "name": "Oregon City",
+   "shops": 2
+  },
+  {
+   "name": "Troutdale",
+   "shops": 2
+  },
+  {
+   "name": "Roseburg",
+   "shops": 2
+  },
+  {
+   "name": "Forest Grove",
+   "shops": 1
+  },
+  {
+   "name": "McMinnville",
+   "shops": 1
+  },
+  {
+   "name": "Newberg",
+   "shops": 1
+  },
+  {
+   "name": "Klamath Falls",
+   "shops": 1
+  },
+  {
+   "name": "Phoenix",
+   "shops": 1
+  },
+  {
+   "name": "Waldport",
+   "shops": 1
+  },
+  {
+   "name": "Newport",
+   "shops": 1
+  },
+  {
+   "name": "Lincoln City",
+   "shops": 1
+  },
+  {
+   "name": "Florence",
+   "shops": 1
+  }
+ ],
+ "uncovered_places_with_held_candidates": [
+  {
+   "name": "Sisters",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 17
+  },
+  {
+   "name": "Gladstone",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 9
+  },
+  {
+   "name": "Milwaukie",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 9
+  },
+  {
+   "name": "Creswell",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 7
+  },
+  {
+   "name": "Eagle Point",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 6
+  },
+  {
+   "name": "Brookings",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Central Point",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Prineville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Woodburn",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Banks",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Four Corners",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Jacksonville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Manzanita",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Sandy",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Warrenton",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Dallas",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Junction City",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Baker City",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Canyonville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Damascus",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Lakeview",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Myrtle Point",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Ontario",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Silverton",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Tillamook",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Toledo",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Aloha",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Altamont",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Arlington",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Bandon",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Bay City",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Boring",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Cannon Beach",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Cascade Locks",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Chiloquin",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Clatskanie",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Coos Bay",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Cornelius",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Depoe Bay",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Dundee",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Estacada",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Garibaldi",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Gearhart",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Gold Beach",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Gold Hill",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Harbor",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Harrisburg",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Hayesville",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Hermiston",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Hubbard",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "King City",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "La Grande",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Madras",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Monroe",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Mount Hood Villages",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Nehalem",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "North Bend",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "North Plains",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Philomath",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Rainier",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Rogue River",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Selma",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Shady Cove",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Stayton",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Sunriver",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Sweet Home",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Talent",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Tumalo",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Veneta",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "West Slope",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Winston",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Yachats",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  }
+ ],
+ "uncovered_places_without_candidates": 303,
+ "source": "U.S. Census Bureau 2020 place-by-county and county code files"
+}

@@ -1,0 +1,4388 @@
+{
+ "http://www.seventysevensalon.com/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 167
+ },
+ "https://www.bellapearlsalon.com/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 175
+ },
+ "https://www.theretreatonline.com/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 242
+ },
+ "https://mindyshairaffair.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 300
+ },
+ "http://www.bishopsbs.com/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 407
+ },
+ "https://www.vanityjunkie.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 65
+ },
+ "https://booksy.com/en-us/instant-experiences/widget/634494?instant_experiences_enabled=true&ig_ix=true&is_fb=1": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 259
+ },
+ "https://salons.greatclips.com/us/or/hillsboro/7337-ne-imbrie-drive": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 341
+ },
+ "https://salons.greatclips.com/us/or/hillsboro/6577-se-tualatin-valley-hwy": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 235
+ },
+ "https://www.studiomilano.biz/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://garuda69terbaru.xyz/promotion",
+  "ms": 950
+ },
+ "https://top-stylists.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 784
+ },
+ "https://www.greatclips.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 146
+ },
+ "http://www.refugebarbershop.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 74
+ },
+ "https://www.modastudiosportland.com/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 165
+ },
+ "https://www.entrusthair.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 117
+ },
+ "http://thephixhairstudio.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 50
+ },
+ "http://www.chelseasalonpdx.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 170
+ },
+ "https://www.hairendipitypdx.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 90
+ },
+ "http://evolutionhairdesign-hub.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 32
+ },
+ "https://southshoreartisticsalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1034
+ },
+ "https://www.b2beautyandbarber.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 141
+ },
+ "https://www.salonmoxiepdx.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 163
+ },
+ "https://www.gp-salon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 895
+ },
+ "https://www.supercuts.com/locations/nearme/haircut/OR/Portland/Hollywood-District/8525": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 130
+ },
+ "http://www.hollywoodbarber.net/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 88
+ },
+ "https://www.42ndstreetstation.net/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 158
+ },
+ "http://www.coralfuentes.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 111
+ },
+ "https://www.zuzuorganicsalon.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 108
+ },
+ "https://www.220salon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 172
+ },
+ "https://thebarbersonline.com/location/?location=hillsboro": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1712
+ },
+ "https://www.thefancysalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 249
+ },
+ "https://metromanhairsalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 152
+ },
+ "https://www.callidorapdx.com/": {
+  "status": "error",
+  "error": "CERT_HAS_EXPIRED",
+  "ms": 2021
+ },
+ "http://thehairportsalon.net/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 104
+ },
+ "http://www.wallflowerssalon.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 96
+ },
+ "https://www.techartsalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 124
+ },
+ "https://www.salon26hair.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 184
+ },
+ "https://salons.greatclips.com/us/or/portland/4124-se-82nd-ave": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 39
+ },
+ "http://www.houseofsmithsalon.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 101
+ },
+ "https://www.sessionstudiopdx.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 135
+ },
+ "https://luminarysalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://luminary.salon/",
+  "ms": 476
+ },
+ "http://twistedlocks.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 238
+ },
+ "https://app.greatclips.com/salon/1812/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 410
+ },
+ "http://www.chachihair.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://triosalem.salon/",
+  "ms": 810
+ },
+ "https://www.studioonepdx.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 39
+ },
+ "http://thecatwalkhairstudio.net/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 81
+ },
+ "https://www.hairportsalonandbeautysupply.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 13
+ },
+ "https://www.rumisimone.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 642
+ },
+ "https://www.smartstyle.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 101
+ },
+ "http://www.bendbarberhouse.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 93
+ },
+ "https://sonderbeautybend.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.sonderbeautybend.com/",
+  "ms": 305
+ },
+ "https://www.lemondropsalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 96
+ },
+ "https://www.tangerinehairsalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 114
+ },
+ "https://beaumondecollege.com/": {
+  "status": "error",
+  "http_status": 500,
+  "ms": 1619
+ },
+ "https://www.landkbarbershop.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 38
+ },
+ "https://www.bellasalonmurrayhill.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://movemedancenfitness.com/",
+  "ms": 1515
+ },
+ "https://zantesalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://netcomdomainsforsale.com/",
+  "ms": 898
+ },
+ "https://mosaichair.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1924
+ },
+ "https://www.perfectlooksalons.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://perfectlooksalons.com/",
+  "ms": 3830
+ },
+ "https://www.salonhavana.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://havanasalon.com/",
+  "ms": 4402
+ },
+ "http://www.ceremonyportland.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 165
+ },
+ "https://www.derossobrothers.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://linktr.ee/derossobrothers",
+  "ms": 195
+ },
+ "http://enhanceportland.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 52
+ },
+ "https://rudysbarbershop.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 154
+ },
+ "https://avenuehair.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1954
+ },
+ "https://www.acutabovepdx.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 208
+ },
+ "https://app.greatclips.com/salon/1806/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 150
+ },
+ "http://passionfamilyhaircare.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 36
+ },
+ "https://www.pdxprimphair.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 47
+ },
+ "https://www.regissalons.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.signaturestyle.com/regissalon",
+  "ms": 297
+ },
+ "http://www.brickandmortarpdx.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 76
+ },
+ "https://joebarber80.wixsite.com/joesbarbershop": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 121
+ },
+ "https://www.hartzohairshop.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 37
+ },
+ "https://rhbarbers.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://oldgrowthbarber.com/",
+  "ms": 267
+ },
+ "https://www.heritagebarbershop.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 109
+ },
+ "http://creampdx.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 170
+ },
+ "https://hairm-w.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 45
+ },
+ "http://www.fyisalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "http://www.fyisalon.com/index.html",
+  "ms": 373
+ },
+ "https://www.glowboutiquesalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 193
+ },
+ "https://www.azurasalonspabend.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1690
+ },
+ "https://www.zahair.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 760
+ },
+ "https://www.solasalonstudios.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 129
+ },
+ "http://sixninehairdesign.com/": {
+  "status": "blocked",
+  "http_status": 403,
+  "final_url": "https://topagengacor.online/",
+  "ms": 140
+ },
+ "https://manlyandsons.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "http://www.manlyandsons.com/",
+  "ms": 153
+ },
+ "https://bestcoastbarberco.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 89
+ },
+ "https://www.aesop.com/us/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 78
+ },
+ "https://www.pdxwuntwo.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 114
+ },
+ "https://www.junosalonportland.com/": {
+  "status": "error",
+  "http_status": 520,
+  "ms": 1049
+ },
+ "https://pulsesalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 92
+ },
+ "https://urbantopiaspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 72
+ },
+ "https://www.hautecoiffurepdx.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 30
+ },
+ "https://www.goldandarrowsalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 192
+ },
+ "http://www.bridgetownbarbersociety.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 93
+ },
+ "https://www.clubhousepdx.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 198
+ },
+ "https://chromepdx.com/": {
+  "status": "error",
+  "error": "UND_ERR_SOCKET",
+  "ms": 289
+ },
+ "https://fringesalonstudio.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.fringesalonstudio.com/",
+  "ms": 1022
+ },
+ "https://dosha.org/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 87
+ },
+ "https://app.greatclips.com/salon/1821/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 157
+ },
+ "https://www.salonestilobend.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 3682
+ },
+ "http://www.moxieforhair.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 305
+ },
+ "https://www.completedesignshairstudio.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 115
+ },
+ "https://www.brilliantsalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 110
+ },
+ "https://eurocutspdx.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 232
+ },
+ "https://www.bkhair.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 139
+ },
+ "http://bostoncutterssalonforcolor.blogspot.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 95
+ },
+ "https://whatsthebuzzpdx.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://whatsthebuzzpdx.glossgenius.com/",
+  "ms": 677
+ },
+ "https://halosalonportland.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.halosalonportland.com/",
+  "ms": 1105
+ },
+ "https://50thavenuesalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 3066
+ },
+ "https://venusalluresalonandspa.com/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 83
+ },
+ "https://www.supercuts.com/locations/or/eugene/willamette-sq-shopping-center-haircuts-82368.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 74
+ },
+ "http://northendbarbercompany.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 158
+ },
+ "https://www.blueprintmodernhair.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 114
+ },
+ "https://www.kelzbeauty.com/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 136
+ },
+ "https://dthairdesign07.wixsite.com/dthairdesign": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 220
+ },
+ "https://square.site/book/VH5YVHJ316QMT/bosscuts-salem-or": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 168
+ },
+ "https://sugarmeportland.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 85
+ },
+ "https://www.pinnsalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 85
+ },
+ "https://www.jtsbarbershophillsboro.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 208
+ },
+ "https://www.obsidianhairspa.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 38
+ },
+ "https://thebarbersonline.com/location/?location=wilsonville": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1593
+ },
+ "https://www.carbonsalonpdx.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 77
+ },
+ "https://salemwisp.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 119
+ },
+ "https://thebarbersonline.com/location/canyon-road/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 1671
+ },
+ "https://www.houseofcolorhairsalon.com/": {
+  "status": "error",
+  "http_status": 502,
+  "ms": 347
+ },
+ "https://www.maisondeburgundy.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 92
+ },
+ "https://booksy.com/en-us/37525_diamond-cuts-barbershop_barber-shop_134595_salem": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 584
+ },
+ "https://www.sitstillkids.com/locations/lake-oswego": {
+  "status": "dead",
+  "http_status": 404,
+  "final_url": "https://sitstillkids.com/locations/lake-oswego",
+  "ms": 303
+ },
+ "https://beauty-by-maryssa.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.beautybymaryssa.com/",
+  "ms": 579
+ },
+ "https://sagekidssalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 83
+ },
+ "https://www.identityhairspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 87
+ },
+ "https://www.briochique.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 68
+ },
+ "https://www.oranjstudio.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 87
+ },
+ "https://beardedladyelectrology.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 249
+ },
+ "https://sportclips.com/us-or-westlinn-or105": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 482
+ },
+ "https://sportclips.com/us-or-clackamas-or104": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 260
+ },
+ "https://www.elmonicahair.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 109
+ },
+ "https://www.drybarshops.com/service/locator/detail/?slug=happy-valley": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 236
+ },
+ "http://www.twystsalon.net/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 162
+ },
+ "https://formation-hair.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 185
+ },
+ "https://sportclips.com/us-or-corvallis-or304": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://sportclips.com/",
+  "ms": 132
+ },
+ "https://talk-of-the-town-salon.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 711
+ },
+ "http://haircutsarefun.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://haircutsarefun.com/",
+  "ms": 197
+ },
+ "https://www.trueheartbarbershop.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 119
+ },
+ "https://salons.greatclips.com/us/or/grants-pass/211-ne-terry-ln": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 68
+ },
+ "https://www.thelighteningsocietysalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 357
+ },
+ "https://hairtherapypdx.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 76
+ },
+ "https://www.hairmgrooming.com/contact-us/downtown-portland/": {
+  "status": "error",
+  "error": "UND_ERR_SOCKET",
+  "ms": 336
+ },
+ "https://www.vagaro.com/bluefadedbarber/book-now": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1662
+ },
+ "http://prostylessalons.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 128
+ },
+ "https://kamisalonpdx.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 154
+ },
+ "https://www.sweetdreamsbarbershop.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 110
+ },
+ "http://aspensalonpdx.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 170
+ },
+ "https://valleys-barbershop.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 546
+ },
+ "https://www.waynewertz.com/kcc/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 277
+ },
+ "https://propagandapdx.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 116
+ },
+ "https://thebarbersonline.com/location/coburg-station/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1107
+ },
+ "https://www.supercuts.com/locations/nearme/haircut/OR/MEDFORD/1345-CENTER-DR-STE-E/8893?prevStep=sd": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 13
+ },
+ "http://www.belmontbarbershoppdx.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.belmontbarbershoppdx.com/",
+  "ms": 535
+ },
+ "https://www.treschicbridgeport.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.treschiclakeoswego.com/",
+  "ms": 176
+ },
+ "https://www.541fades-styles.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 125
+ },
+ "https://www.frenchcuthairpdx.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://frenchcuthairpdx.com/",
+  "ms": 4655
+ },
+ "https://cut4cutstudio.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 448
+ },
+ "https://www.timstrims.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 570
+ },
+ "https://www.trinitysalonnewberg.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.cashmeresalonnewberg.com/",
+  "ms": 486
+ },
+ "https://fadedculture-102003.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 527
+ },
+ "https://www.theblockbarbershop.com/home": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 136
+ },
+ "https://darkstarbarbers.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 99
+ },
+ "https://www.seasidebarber.com/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 176
+ },
+ "https://hairbymoecuts.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 373
+ },
+ "https://barberqlakeoswego.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 176
+ },
+ "https://www.townbarberpdx.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 122
+ },
+ "https://www.westbrookhairdesign.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 884
+ },
+ "https://www.moesbeautyco.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 259
+ },
+ "https://www.zekethebarber.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 834
+ },
+ "https://www.thegentlemensdenusa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 196
+ },
+ "https://barberjohn.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 751
+ },
+ "https://www.strangepowerspdx.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 104
+ },
+ "https://shalom-beauty-salon-or.hub.biz/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 73
+ },
+ "http://matteblacksalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.matteblacksalon.com/",
+  "ms": 1315
+ },
+ "https://www.treschiclakeoswego.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 19
+ },
+ "https://boneheadsbarber.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 2423
+ },
+ "https://brothersbarbershop.pro/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 108
+ },
+ "http://bondstreetbarbershop.com/": {
+  "status": "error",
+  "error": "UND_ERR_CONNECT_TIMEOUT",
+  "ms": 10429
+ },
+ "https://mysite.vagaro.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 190
+ },
+ "https://fellasbarber.shop/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 192
+ },
+ "https://bouffanthairsalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.bouffanthairsalon.com/",
+  "ms": 233
+ },
+ "https://www.gigisalon.org/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 147
+ },
+ "http://swedesbarbershop.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 55
+ },
+ "https://www.greenhairpdx.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 106
+ },
+ "https://www.supercuts.com/locations/nearme/haircut/or/portland/6525-sw-beaverton-hillsdale-hw/82411": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 10
+ },
+ "https://rudysbarbershop.com/blogs/locations/northeast-portland-barbershop": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 213
+ },
+ "https://www.magnumo.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 140
+ },
+ "https://www.supercuts.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 11
+ },
+ "https://dosha.org/about/locations/westlinn": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 136
+ },
+ "http://gingersalon.com/locations#location34": {
+  "status": "error",
+  "error": "UND_ERR_CONNECT_TIMEOUT",
+  "ms": 10310
+ },
+ "https://www.salondolcebrookings.com/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 274
+ },
+ "https://westlinnhairport.net/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 187
+ },
+ "http://www.dreadgoddess.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 262
+ },
+ "http://www.lucas--lucas.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 150
+ },
+ "http://www.rooksbarbershop.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 187
+ },
+ "http://www.dapperbarberco.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 162
+ },
+ "http://www.besalonspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 121
+ },
+ "http://www.visavispdx.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 36
+ },
+ "http://evergreensalonpdx.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 13
+ },
+ "https://twistedmane.weebly.com/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 312
+ },
+ "https://book.solasalonstudios.com/lloyd-district/location": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1399
+ },
+ "http://www.hairapypdx.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 75
+ },
+ "http://www.chameleonnw.com/": {
+  "status": "blocked",
+  "http_status": 403,
+  "final_url": "https://3wisnu123pro.vip/mobile/game/slot/hacksaw",
+  "ms": 194
+ },
+ "https://www.haircutsarefun.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://haircutsarefun.com/",
+  "ms": 810
+ },
+ "https://sportclips.com/us-or-tigard-or107": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 123
+ },
+ "https://www.revolutionpdx.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 113
+ },
+ "https://app.greatclips.com/salon/1826/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 131
+ },
+ "https://salons.greatclips.com/us/or/beaverton/10755-sw-beaverton-hillsdale-hwy": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 138
+ },
+ "https://www.annastasias.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 496
+ },
+ "https://perfectlooksalons.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 2324
+ },
+ "https://psstyles.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 264
+ },
+ "http://www.new-visions-salon.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 323
+ },
+ "https://shena-beauty-salon-by-dv.business.site/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 624
+ },
+ "https://www.snipsandstyles.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 508
+ },
+ "https://www.crescendosalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 135
+ },
+ "https://www.salondesirepdx.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://salondesirepdx.com/",
+  "ms": 779
+ },
+ "https://www.dandjsbarbershop.com/": {
+  "status": "error",
+  "error": "UND_ERR_CONNECT_TIMEOUT",
+  "ms": 10157
+ },
+ "https://enzohairstudio.weebly.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 689
+ },
+ "https://valeriumbeauty.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 4124
+ },
+ "http://www.zensalonatthelanding.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.zensalonatthelanding.com/",
+  "ms": 688
+ },
+ "http://www.naturallookssalon.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 46
+ },
+ "https://www.sharkeyscutsforkidstigard.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://sharkeyscutsforkidstigard.com/",
+  "ms": 424
+ },
+ "https://salons.greatclips.com/us/or/hillsboro/2239-nw-185th-ave": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 137
+ },
+ "http://www.watchyourheadhair.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 36
+ },
+ "https://www.gingerandmaude.com/locations/tigard": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 186
+ },
+ "https://lakegrovebarbershop.weebly.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 171
+ },
+ "https://www.supercuts.com/locations/nearme/haircut/OR/Happy-Valley/Johnson-Creek-Crossing/80070": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 13
+ },
+ "http://www.sarasbarbershop.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 36
+ },
+ "https://www.splendoron13th.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 84
+ },
+ "https://www.barbessalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 90
+ },
+ "https://shearcreations.net/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 2455
+ },
+ "https://www.nwcollege.edu/tualatin-campus/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 379
+ },
+ "http://deluxesalonportland.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 84
+ },
+ "https://thebarbersonline.com/location/sellwood/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 2295
+ },
+ "https://www.coteriesalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 102
+ },
+ "http://www.chouchoupdx.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 101
+ },
+ "https://www.akemisalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://hairbyjaimejean.com/",
+  "ms": 301
+ },
+ "https://thebarbersonline.com/location/peterkort/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1925
+ },
+ "https://www.empyrebarbers.com/south-hillsboro": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 124
+ },
+ "https://salons.greatclips.com/us/or/portland/7303-sw-garden-home-rd": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 42
+ },
+ "https://sportclips.com/us-or-beaverton-or102": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 276
+ },
+ "http://broadwaybarbershop.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 55
+ },
+ "https://honeycombsalonandspa.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 159
+ },
+ "https://www.mascolassalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 192
+ },
+ "https://www.supercuts.com/locations/nearme/haircut/or/portland/230-nw-lost-springs-ter-ste-20/81471": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 11
+ },
+ "http://www.littleclippers.com/": {
+  "status": "error",
+  "http_status": 400,
+  "ms": 238
+ },
+ "https://salons.greatclips.com/us/or/portland/4768-nw-bethany-blvd": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 34
+ },
+ "https://www.mintbeautylounge.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 100
+ },
+ "http://www.cloakanddaggerbarbers.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 114
+ },
+ "https://contextsalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 216
+ },
+ "https://hairarchitectspdx.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.hairarchitectspdx.com/",
+  "ms": 4437
+ },
+ "https://thebarbersonline.com/location/scholls-ferry/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 2154
+ },
+ "https://bishops.co/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 273
+ },
+ "https://www.tickleclipssalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 279
+ },
+ "https://www.nwcollege.edu/beaverton-campus/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 135
+ },
+ "https://tldesignsalon.com/": {
+  "status": "error",
+  "error": "CERT_HAS_EXPIRED",
+  "ms": 363
+ },
+ "https://www.supercuts.com/locations/nearme/haircut/OR/Portland/Powell-Square/82795": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 46
+ },
+ "https://www.logikthesalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 419
+ },
+ "https://urbanasparasalon.square.site/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 219
+ },
+ "https://www.oakbarbershop.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 641
+ },
+ "https://salons.greatclips.com/us/or/hillsboro/880-ne-25th-st": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 31
+ },
+ "https://salon29.squarespace.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 400
+ },
+ "http://www.manlyandsons.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 39
+ },
+ "https://barberqbarbershop.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 204
+ },
+ "https://appelnouveausalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 184
+ },
+ "https://www.vagaro.com/rsvugk": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1615
+ },
+ "http://www.perfectlooksalons.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "http://perfectlooksalons.com/",
+  "ms": 4276
+ },
+ "https://www.gildedopalsalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 196
+ },
+ "https://www.malvahouse.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 189
+ },
+ "https://www.creativehairstyles.net/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 124
+ },
+ "https://antique-barbershop.com/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 147
+ },
+ "https://sportclips.com/us-or-sherwood-or115": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 205
+ },
+ "http://atouchofvanitysalon.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 123
+ },
+ "http://www.tedisaacssalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 225
+ },
+ "https://www.supercuts.com/locations/nearme/haircut/OR/WILSONVILLE/25725-SW-GWEN-DR-STE-B/81553": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 16
+ },
+ "https://www.transformations-salon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 187
+ },
+ "https://app.greatclips.com/salon/7136/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 184
+ },
+ "http://www.loloswestmorelandbarbershop.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.loloswestmorelandbarbershop.com/",
+  "ms": 549
+ },
+ "https://app.greatclips.com/salon/8992/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 195
+ },
+ "https://www.signaturestyle.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 47
+ },
+ "https://salons.greatclips.com/us/or/wood-village/22741-ne-park-ln": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 288
+ },
+ "https://roughcutbarbershop.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1171
+ },
+ "https://app.greatclips.com/salon/1803/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 78
+ },
+ "https://www.salonfuss.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 121
+ },
+ "https://salons.greatclips.com/us/or/hillsboro/2471-se-tualatin-valley-hwy": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 33
+ },
+ "https://salons.greatclips.com/us/or/tigard/14250-sw-barrows-rd": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 60
+ },
+ "https://www.zibasalonbeaverton.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 38
+ },
+ "https://eighteeneight.com/": {
+  "status": "error",
+  "http_status": 520,
+  "ms": 338
+ },
+ "https://gillyssalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://gillyssalon.com/index.html",
+  "ms": 524
+ },
+ "http://www.denevbeauty.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 14
+ },
+ "https://salons.greatclips.com/us/or/beaverton/6117-sw-murray-blvd": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 109
+ },
+ "https://bellavitasherwood.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 64
+ },
+ "https://thebarbersonline.com/location/progress-ridge/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1453
+ },
+ "https://www.beautypdx.com/": {
+  "status": "error",
+  "error": "ECONNREFUSED",
+  "ms": 144
+ },
+ "https://www.haircutsarefun.com/location/beaverton-or": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://haircutsarefun.com/location/beaverton-or/",
+  "ms": 3137
+ },
+ "http://www.bamboosalonandspabend.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 37
+ },
+ "https://thebarbersonline.com/location/happy-valley/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1936
+ },
+ "https://www.rmcf.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 150
+ },
+ "https://slabsoap.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 204
+ },
+ "http://www.apollosalon.com/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 136
+ },
+ "http://sweeteasebend.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 175
+ },
+ "https://www.edwardjones.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.edwardjones.com/us-en",
+  "ms": 347
+ },
+ "https://app.greatclips.com/salon/1852/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 72
+ },
+ "https://thebarbersonline.com/location/sherwood/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1774
+ },
+ "https://thebarbersonline.com/location/oregon-city/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1839
+ },
+ "https://www.roots-salon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://roots-salon.com/",
+  "ms": 474
+ },
+ "https://salons.greatclips.com/us/or/aloha/17683-sw-farmington-rd": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 148
+ },
+ "https://salons.greatclips.com/us/or/hillsboro/7462-e-main-street": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 84
+ },
+ "https://www.sostylesandbarber.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://sostylesandbarber.com/",
+  "ms": 6429
+ },
+ "http://poshe-salon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 496
+ },
+ "https://www.vitalitysalonpdx.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 365
+ },
+ "https://issesalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 528
+ },
+ "http://element909.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://netcomdomainsforsale.com/",
+  "ms": 1003
+ },
+ "https://www.hairdousa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://hairdousa.com/",
+  "ms": 844
+ },
+ "https://thebarbersonline.com/location/tualatin/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1196
+ },
+ "https://www.supercuts.com/locations/nearme/haircut/OR/Troutdale/The-Commons/82797": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 14
+ },
+ "https://amazesalon2.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 927
+ },
+ "http://ritzsalonlo.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 735
+ },
+ "https://www.pigtailsandcrewcuts.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://pigtailsandcrewcuts.com/",
+  "ms": 1294
+ },
+ "https://www.nbsalonspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1376
+ },
+ "https://thebarbersonline.com/location/tanasbourne-central/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1324
+ },
+ "http://www.platformartistic.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 257
+ },
+ "https://sportclips.com/us-or-lakeoswego-or111": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 111
+ },
+ "https://www.paradigm-salon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 213
+ },
+ "http://www.kimssalonbeaverton.com/": {
+  "status": "dead",
+  "error": "EAI_AGAIN",
+  "ms": 10147
+ },
+ "http://www.gotfreshhair.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 162
+ },
+ "https://lakeoswegotangles.wixsite.com/tangleshairstudio": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 294
+ },
+ "http://www.scissorandcombpdx.com/": {
+  "status": "error",
+  "http_status": 409,
+  "ms": 132
+ },
+ "https://studio77salon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 375
+ },
+ "https://studio590eugene.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 165
+ },
+ "https://www.nwcollege.edu/springfield-campus/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 457
+ },
+ "https://www.bohobellasalon.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 50
+ },
+ "https://davesplacesalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.davesplacesalon.com/",
+  "ms": 381
+ },
+ "https://salons.greatclips.com/us/or/medford/1374-center-dr": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 38
+ },
+ "https://www.vintagesalonkf.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 94
+ },
+ "http://www.sarahndipitysalonmedford.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.sarahndipitysalonmedford.com/",
+  "ms": 497
+ },
+ "https://salons.greatclips.com/us/or/medford/1200-biddle-rd": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 52
+ },
+ "https://www.nwcollege.edu/medford-campus/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 368
+ },
+ "https://www.hairmgrooming.com/": {
+  "status": "error",
+  "error": "UND_ERR_SOCKET",
+  "ms": 296
+ },
+ "https://www.scissorheadsalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 132
+ },
+ "https://www.glorifyhouseofbeauty.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 98
+ },
+ "https://luminouswell-being.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 98
+ },
+ "https://oliviasonline.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 102
+ },
+ "https://www.waterstonespa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 193
+ },
+ "https://thebarbersonline.com/location/clackamas/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1272
+ },
+ "https://www.merlenormanstudio.com/OR/ROSEBURG/mn-7782/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.merlenormanstudio.com/",
+  "ms": 270
+ },
+ "https://www.ulta.com/stores/medford-or-497": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 282
+ },
+ "https://gorgeousnailandspahillsboro.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 289
+ },
+ "https://beautifymelashandspa.com/": {
+  "status": "error",
+  "http_status": 503,
+  "ms": 101
+ },
+ "https://evolveskincare.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 82
+ },
+ "https://bogotanning.com/tualatin": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 168
+ },
+ "http://www.facesbyvivian.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 32
+ },
+ "https://www.lmusalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://lmusalon.com/",
+  "ms": 231
+ },
+ "https://www.emzblendz.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://emzblendz.com/",
+  "ms": 844
+ },
+ "http://www.spapure.info/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 67
+ },
+ "https://shop.saloninteractive.com/store/DeCoSalon": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 971
+ },
+ "https://palmbeachtan.com/locations/OR/Hillsboro-North-West-Stucki-Ave": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://palmbeachtan.com/locations/or/hillsboro-north-west-stucki-ave",
+  "ms": 910
+ },
+ "http://www.redlotusskincaresalon.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 168
+ },
+ "https://www.nichemassagepdx.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://nichemassagepdx.com/",
+  "ms": 313
+ },
+ "https://palmbeachtan.com/locations/OR/Portland-North-East-Broadway": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://palmbeachtan.com/locations/or/portland-north-east-broadway",
+  "ms": 640
+ },
+ "http://www.massageoregon.com/": {
+  "status": "dead",
+  "error": "EAI_AGAIN",
+  "ms": 553
+ },
+ "https://bendspa.com/": {
+  "status": "error",
+  "error": "ECONNRESET",
+  "ms": 137
+ },
+ "https://www.lovelylashesandskincare.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 220
+ },
+ "https://www.midorilashes.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 494
+ },
+ "https://www.ulta.com/stores/tigard-or-1053": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 157
+ },
+ "https://polishdayspapdx.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 112
+ },
+ "https://gptnailsspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 132
+ },
+ "http://newimagelhr.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 36
+ },
+ "https://www.urbanwaxx.com/": {
+  "status": "error",
+  "error": "UND_ERR_SOCKET",
+  "ms": 505
+ },
+ "https://silkface.skincaretherapy.net/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 585
+ },
+ "http://www.spabeaverton.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 85
+ },
+ "http://www.plumerianailspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 332
+ },
+ "https://celebritymedspa.com/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 288
+ },
+ "https://stores.kiehls.com/or/portland/712-nw-23rd-ave.html": {
+  "status": "blocked",
+  "http_status": 403,
+  "final_url": "https://www.kiehls.com/or/portland/712-nw-23rd-ave.html",
+  "ms": 186
+ },
+ "https://essanceskincare.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 326
+ },
+ "https://vanderveercenter.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 603
+ },
+ "https://www.clochebeauty.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://clochebeauty.com/",
+  "ms": 521
+ },
+ "https://www.urbanbeautybar.com/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 264
+ },
+ "http://www.benddayspa.com/": {
+  "status": "blocked",
+  "http_status": 403,
+  "final_url": "https://forsale.godaddy.com/forsale/benddayspa.com?utm_source=tdfs&utm_medium=sn_affiliate_click&utm_campaign=tdfs_godaddy_dls&traffic_type=tdfs&traffic_id=godaddy_dls",
+  "ms": 325
+ },
+ "https://www.solasalonstudios.com/locations/pearl-district": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 393
+ },
+ "https://www.ulta.com/stores/keizer-or-464": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 174
+ },
+ "https://www.lush.com/us/en_us/shops/lush-cosmetics-clackamas-town-center?id=US407": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 98
+ },
+ "https://www.sephora.com/happening/stores/portland-clackamas": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 90
+ },
+ "https://www.olenasdayspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 82
+ },
+ "https://www.eyebrowplus.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 263
+ },
+ "https://www.liveedgeecosalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 206
+ },
+ "https://www.ulta.com/stores/springfield-or-1129": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 381
+ },
+ "http://www.thenailparlour.net/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 57
+ },
+ "https://www.pcnorthwest.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 86
+ },
+ "https://stylishthreadingandbeauty.godaddysites.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 67
+ },
+ "https://www.gingersalon.com/": {
+  "status": "error",
+  "error": "UND_ERR_CONNECT_TIMEOUT",
+  "ms": 10253
+ },
+ "https://www.tanrepublic.com/tan-republic-lake-oswego-bridgeport-lake-oswego-or": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 185
+ },
+ "http://lenagelnails.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 36
+ },
+ "https://www.vigammedicalspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 94
+ },
+ "https://fancynailshillsboro.weebly.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 202
+ },
+ "https://angelnailsspatanasbourne.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 98
+ },
+ "https://palmbeachtan.com/locations/OR/Portland-North-East-102nd-Avenue": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://palmbeachtan.com/locations/or/portland-north-east-102nd-avenue",
+  "ms": 502
+ },
+ "https://www.kananipearl.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 150
+ },
+ "https://urbanwaxx.com/locations/tanasbourne/": {
+  "status": "error",
+  "error": "UND_ERR_SOCKET",
+  "ms": 246
+ },
+ "https://echonaturalbeauty.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.echonaturalbeauty.com/",
+  "ms": 990
+ },
+ "https://www.maccosmetics.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 895
+ },
+ "https://www.ksnailsandspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://ksnailsandspa.com/",
+  "ms": 357
+ },
+ "https://www.thairapypdx.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 102
+ },
+ "https://tekostudio.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 188
+ },
+ "https://stores.bluemercury.com/or/portland/34834/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://stores.bluemercury.com/",
+  "ms": 292
+ },
+ "https://www.cryopdx.com/": {
+  "status": "blocked",
+  "http_status": 403,
+  "final_url": "https://www.hugedomains.com/domain_profile.cfm?d=cryopdx.com",
+  "ms": 126
+ },
+ "https://www.luxtan.co/": {
+  "status": "error",
+  "http_status": 520,
+  "ms": 314
+ },
+ "https://www.spasasse.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 126
+ },
+ "https://reflectspa.com/": {
+  "status": "error",
+  "error": "ECONNRESET",
+  "ms": 87
+ },
+ "https://thebeautycollectivepdx.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.ettemedi.com/",
+  "ms": 279
+ },
+ "https://www.sephora.com/happening/stores/portland": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 59
+ },
+ "https://hushtan.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 81
+ },
+ "https://www.sunsuptanningcenters.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "http://sunsuptanningcenters.com/",
+  "ms": 347
+ },
+ "https://pearlmedspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 491
+ },
+ "https://www.aboutfaceandmore.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 100
+ },
+ "http://nailgardensalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://expireddomains.com/domain/nailgardensalon.com?utm_source=redi",
+  "ms": 398
+ },
+ "https://www.ulta.com/stores/portland-or-1404": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 219
+ },
+ "https://www.thesugarmamapdx.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 362
+ },
+ "https://stores.maccosmetics.com/us/or/portland/615-nw-23rd-street": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 190
+ },
+ "https://www.ulta.com/stores/bend-or-1386": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 350
+ },
+ "https://www.healthynailsandspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 437
+ },
+ "https://www.tanrepublic.com/locations#!/l/eugene/2570-willamette-street/1255085": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.tanrepublic.com/locations",
+  "ms": 19
+ },
+ "https://www.ulta.com/stores/roseburg-or-1509": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 272
+ },
+ "http://www.fingersandtoessalonspa.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 174
+ },
+ "https://www.kitsunesalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 209
+ },
+ "https://www.freshfacesrx.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://freshfacesrx.com/",
+  "ms": 1539
+ },
+ "https://tiffanys-nails.edan.io/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 103
+ },
+ "https://www.ulta.com/stores/salem-or-1413": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 207
+ },
+ "https://www.adoredayspa.net/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://adoredayspa.net/",
+  "ms": 1355
+ },
+ "https://headquarters-hairsalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 85
+ },
+ "https://www.salonnyla.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 213
+ },
+ "https://nailsuncorked.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.nailsuncorked.com/",
+  "ms": 823
+ },
+ "http://venturanailsspa.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 28
+ },
+ "https://www.labellenails.net/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 179
+ },
+ "https://www.coralstorybeauty.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 389
+ },
+ "https://shannonkasten.glossgenius.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 786
+ },
+ "https://www.tresjolienailspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://tresjolienailspa.com/",
+  "ms": 162
+ },
+ "https://maxnailsalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 151
+ },
+ "https://aurapdx.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.aurapdx.com/",
+  "ms": 156
+ },
+ "https://www.lush.com/us/en_us/shops/lush-cosmetics-portland?id=US408": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 16
+ },
+ "http://www.expnails.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 121
+ },
+ "https://www.aesop.com/us/r/aesop-nw-23rd-avenue/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 53
+ },
+ "https://www.urbanaestheticsbymelissa.com/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 149
+ },
+ "https://www.bellinispdx.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 241
+ },
+ "https://www.solasalonstudios.com/locations/streets-of-tanasbourne": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 340
+ },
+ "https://locations.waxcenter.com/or/portland/portland-0307.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 743
+ },
+ "https://vstarnailspabeaverton.com/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 76
+ },
+ "https://www.luminoussalon.net/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 122
+ },
+ "https://birch-blond.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 500
+ },
+ "https://aqua-nails-v1-menu.onrender.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 305
+ },
+ "https://www.epicdayspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 202
+ },
+ "http://www.breathepdx.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 211
+ },
+ "https://palmbeachtan.com/locations/OR/Salem-Commercial-Street-South-East": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://palmbeachtan.com/locations/or/salem-commercial-street-south-east",
+  "ms": 528
+ },
+ "https://thedragontree.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 290
+ },
+ "https://rusticelegancesalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.rusticelegancesalon.com/",
+  "ms": 280
+ },
+ "https://theportlandgirl.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 187
+ },
+ "https://www.retreat4108.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 165
+ },
+ "https://www.thelashlounge.com/or-portland-nw-23rd/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.thelashlounge.com/locations/or/portland/nw-23rd/",
+  "ms": 1026
+ },
+ "https://z-nails-spa.edan.io/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 121
+ },
+ "https://urbanrosepdx.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 85
+ },
+ "https://urbanwaxx.com/locations/division/": {
+  "status": "error",
+  "error": "UND_ERR_SOCKET",
+  "ms": 280
+ },
+ "https://www.sugaringnyc.com/locations/sugaring-hair-removal-happy-valley/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 80
+ },
+ "https://www.wigswearhouse.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 391
+ },
+ "https://www.iheartblushsalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 92
+ },
+ "https://www.maquillageesthetics.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 36
+ },
+ "https://www.modanails.com/": {
+  "status": "error",
+  "error": "ERR_SSL_TLSV1_ALERT_INTERNAL_ERROR",
+  "ms": 98
+ },
+ "https://www.islandstylecryobeauty.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 36
+ },
+ "https://www.revebeautypdx.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 86
+ },
+ "http://www.michellecookesthetics.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 188
+ },
+ "https://www.optimasalons.com/beaverton": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://optimasalons.com/locations/oregon/beaverton/",
+  "ms": 2499
+ },
+ "https://lushnailsandspahappyvalley.business.site/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 624
+ },
+ "https://mytwinnails.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 82
+ },
+ "https://locations.waxcenter.com/or/hillsboro/hillsboro-tanasbourne-town-center-0309.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 561
+ },
+ "https://crystal-nails-beauty-salon-nail-salon.business.site/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 548
+ },
+ "https://bellospa.com/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 142
+ },
+ "https://www.luxenailseugene.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1756
+ },
+ "http://browsbyfee.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.browsbyfee.com/",
+  "ms": 1066
+ },
+ "https://frenchiesnails.com/location/or-beaverton/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 704
+ },
+ "https://pamperedtipstoes.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 76
+ },
+ "https://bollywoodbrowz.com/": {
+  "status": "error",
+  "error": "UNABLE_TO_GET_ISSUER_CERT_LOCALLY",
+  "ms": 141
+ },
+ "https://mesmereyeslashes.com/home": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 88
+ },
+ "https://www.nowandzensalonboutique.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 335
+ },
+ "https://www.mountainroseherbs.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://mountainroseherbs.com/",
+  "ms": 480
+ },
+ "https://vagaro.com/fringeandhue": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.vagaro.com/fringeandhue",
+  "ms": 1827
+ },
+ "https://summermedspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 103
+ },
+ "https://www.perfecteyebrowthreading.us/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "http://23.21.124.144/",
+  "ms": 97
+ },
+ "https://www.citynailsandspaoregon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 98
+ },
+ "https://mississippinailsandspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 456
+ },
+ "https://estheticsbyaubrie.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 635
+ },
+ "https://columbialaserskincenter.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 189
+ },
+ "https://onyxpnw.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 953
+ },
+ "https://www.zensationswaldport.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 86
+ },
+ "https://www.optimizeupdx.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1060
+ },
+ "https://www.edensalonclackamas.com/": {
+  "status": "error",
+  "error": "UND_ERR_CONNECT_TIMEOUT",
+  "ms": 10378
+ },
+ "https://www.pinkpoppynails.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 225
+ },
+ "https://www.ulta.com/stores/corvallis-or-791": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 196
+ },
+ "https://www.bestlifeelectrolysis.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 113
+ },
+ "https://dahlianailspapdx.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 151
+ },
+ "https://www.saltbend.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 94
+ },
+ "https://lashdimensions.glossgenius.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 483
+ },
+ "https://marjoriemaypdx.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 89
+ },
+ "https://glamorousnailsandspawestlinn.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://expireddomains.com/domain/glamorousnailsandspawestlinn.com?utm_source=redi",
+  "ms": 381
+ },
+ "https://www.radiantskincareandmakeupdesign.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 122
+ },
+ "https://web.archive.org/web/20201017183009/https://sites.google.com/site/sarnailsspa/home": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 930
+ },
+ "https://evanailsandspatigard.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 116
+ },
+ "https://deluxenailswestlinn.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 208
+ },
+ "https://www.purebeautology.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 131
+ },
+ "https://www.westwoodsbeautyspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 161
+ },
+ "https://lepetitastoriaspa.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 39
+ },
+ "https://www.hellosugar.salon/or-portland-belmont": {
+  "status": "blocked",
+  "http_status": 429,
+  "ms": 435
+ },
+ "https://www.pnwelectrology.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 141
+ },
+ "https://664marias.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 112
+ },
+ "http://studiomsalem.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://studiomsalem.com/",
+  "ms": 175
+ },
+ "https://locations.waxcenter.com/or/gresham/gresham-gresham-station-1000.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 393
+ },
+ "https://luxeatelierspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 517
+ },
+ "https://viviaspa.fillout.com/book-now": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 183
+ },
+ "https://palmbeachtan.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 357
+ },
+ "https://www.fourteenthavenuesalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 111
+ },
+ "http://flydragonspa.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 91
+ },
+ "https://adorenailsportland.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 2025
+ },
+ "https://albanailsspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 191
+ },
+ "https://snazzynailsspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1547
+ },
+ "https://www.bathandbodyworks.com/": {
+  "status": "error",
+  "http_status": 307,
+  "ms": 67
+ },
+ "https://luxtan.co/lake-oswego-or/": {
+  "status": "error",
+  "http_status": 520,
+  "ms": 321
+ },
+ "http://www.b-nailslincolncity.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 63
+ },
+ "https://www.sophiasnails.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 132
+ },
+ "https://sunsuptanningcenters.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 197
+ },
+ "https://www.browbetty.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://browbetty.com/",
+  "ms": 243
+ },
+ "https://www.tanrepublic.com/locations#!/l/west-linn/22000-willamette-drive/1255033": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.tanrepublic.com/locations",
+  "ms": 50
+ },
+ "https://locations.waxcenter.com/or/tualatin/tualatin-lake-oswego-0417.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 485
+ },
+ "https://4everyoungantiaging.com/bridgeport/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 321
+ },
+ "https://www.mytiffanynailsandspa.com/": {
+  "status": "error",
+  "error": "ERR_SSL_SSL/TLS_ALERT_HANDSHAKE_FAILURE",
+  "ms": 85
+ },
+ "https://hillsdalenails.webs.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 116
+ },
+ "https://stores.saloncentric.com/or/portland/5403": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 207
+ },
+ "https://iconnails.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 64
+ },
+ "http://www.meravbeautique.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 66
+ },
+ "https://imagestudios360.com/studio_locations/image-studios-portland/": {
+  "status": "dead",
+  "http_status": 404,
+  "final_url": "https://imagestudios.co/studio_locations/image-studios-portland/",
+  "ms": 762
+ },
+ "https://www.soleilmedicalspa.com/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 272
+ },
+ "https://palmbeachtan.com/locations/OR/Tigard-South-West-Hazel-Fern-Road": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://palmbeachtan.com/locations/or/tigard-south-west-hazel-fern-road",
+  "ms": 743
+ },
+ "https://benitoitenails.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 403
+ },
+ "https://www.merlenorman.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.merlenorman.com/homepage",
+  "ms": 302
+ },
+ "https://www.cedarhillscrossing.com/store/Sunflower-Beauty-Salon/2138837595/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.cedarhillscrossing.com/store/Sunflower-Beauty-Salon/2138837595",
+  "ms": 304
+ },
+ "https://www.westhillssalon.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 29
+ },
+ "https://www.ulta.com/stores/beaverton-or-188": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 163
+ },
+ "https://www.vagaro.com/roguenailsandwax": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1647
+ },
+ "https://fingerbangpdx.com/se-division/": {
+  "status": "error",
+  "error": "ECONNREFUSED",
+  "ms": 205
+ },
+ "https://www.rejuvenationdayspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://rejuvenationdayspa.com/",
+  "ms": 405
+ },
+ "http://portlandfootspa.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 31
+ },
+ "https://vivenailspahillsboro.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 224
+ },
+ "http://places.singleplatform.com/omnia-salon--day-spa/menu?ref=google": {
+  "status": "live",
+  "http_status": 202,
+  "ms": 100
+ },
+ "https://wshollywoodnails.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 4908
+ },
+ "https://palmbeachtan.com/locations/OR/Hillsboro-North-East-Cornell-Road": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://palmbeachtan.com/locations/or/hillsboro-north-east-cornell-road",
+  "ms": 517
+ },
+ "https://exclusivesalonproducts.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.jcsportsbarandgrill.com/",
+  "ms": 413
+ },
+ "https://www.sephora.com/happening/stores/bridgeport-village": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 50
+ },
+ "https://www.servelloskincare.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://servelloskincare.com/",
+  "ms": 1583
+ },
+ "https://vnailsandspalakeoswego.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 176
+ },
+ "https://www.laseraway.com/locations/or/portland-tualatin/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 77
+ },
+ "https://www.idealimage.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://idealimage.com/",
+  "ms": 1071
+ },
+ "https://stores.bluemercury.com/or/tigard/34823/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://stores.bluemercury.com/",
+  "ms": 173
+ },
+ "https://www.ulta.com/stores/portland-or-708": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 188
+ },
+ "https://royalluxenailsspacg.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 232
+ },
+ "https://www.restore.com/locations/or-tigard-or002": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 1033
+ },
+ "https://www.lisagskincare.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 135
+ },
+ "http://luxurynailsportland.com/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 54
+ },
+ "https://voguenailsportland.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 95
+ },
+ "http://www.elitenailsandskincare.net/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 112
+ },
+ "https://www.devapdx.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 85
+ },
+ "http://www.nwnailspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://nwnailspa.com/",
+  "ms": 218
+ },
+ "http://www.justhairbeauty.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 37
+ },
+ "https://locations.waxcenter.com/or/beaverton/beaverton-0196.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 390
+ },
+ "https://www.madison-reed.com/colorbar/locations/tigard": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 676
+ },
+ "https://thewaxskinspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 91
+ },
+ "https://shampoodollssalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.shampoodollssalon.com/",
+  "ms": 261
+ },
+ "https://palmbeachtan.com/locations/OR/McLoughlin-McLoughlin-Boulevard": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://palmbeachtan.com/locations/or/mcloughlin-mcloughlin-boulevard",
+  "ms": 503
+ },
+ "https://www.saloncentric.com/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 270
+ },
+ "https://www.ibrowthreadingsalon.com/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 287
+ },
+ "https://uniquenailsbeaverton.com/": {
+  "status": "error",
+  "error": "ECONNRESET",
+  "ms": 354
+ },
+ "https://www.ulta.com/stores/tualatin-or-258": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 227
+ },
+ "https://urbanwaxx.com/": {
+  "status": "error",
+  "error": "UND_ERR_SOCKET",
+  "ms": 272
+ },
+ "https://www.bogotanning.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://bogotanning.com/",
+  "ms": 503
+ },
+ "http://deluxenailsandspaportland.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 14
+ },
+ "https://www.massageenvy.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 295
+ },
+ "https://www.thelashlounge.com/or-portland-bethany-village/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.thelashlounge.com/",
+  "ms": 843
+ },
+ "https://maniandpedisalon.com/": {
+  "status": "error",
+  "error": "UND_ERR_SOCKET",
+  "ms": 201
+ },
+ "http://www.redcarpetnails.biz/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 55
+ },
+ "https://paradisenailspabeaverton.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 184
+ },
+ "https://palmbeachtan.com/locations/OR/Portland-North-West-21st": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://palmbeachtan.com/locations/or/portland-north-west-21st",
+  "ms": 534
+ },
+ "https://www.salonservicesnw.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.salonservicespro.com/",
+  "ms": 449
+ },
+ "https://eclipseairbrushtanning.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://agenpkvqq.com/",
+  "ms": 911
+ },
+ "http://classynailsmilwaukie.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 29
+ },
+ "https://www.tanrepublic.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 17
+ },
+ "https://www.ulta.com/stores/beaverton-or-493": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 369
+ },
+ "http://nails2000oregon.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 43
+ },
+ "http://galanailsandspa.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 36
+ },
+ "https://www.cypressportland.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 185
+ },
+ "https://sassynailandspacanby.com/about": {
+  "status": "error",
+  "http_status": 503,
+  "ms": 118
+ },
+ "https://www.imagenailcare.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://imagenailcare.com/",
+  "ms": 311
+ },
+ "https://www.soakbox.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 84
+ },
+ "https://www.tanrepublic.com/tan-republic-portland-division-crossing-portland-or": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 129
+ },
+ "https://www.ulta.com/stores/gresham-or-322": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 189
+ },
+ "https://www.blissnailandspas.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 43
+ },
+ "http://www.miracleeyebrowthreading.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 43
+ },
+ "https://mimosanailbar.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1044
+ },
+ "https://www.top-ten-nails.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1140
+ },
+ "https://vvnailsbar.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 38
+ },
+ "http://www.amorenail.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 207
+ },
+ "https://www.tanrepublic.com/tan-republic-tigard-south-tigard-or": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 105
+ },
+ "https://palmbeachtan.com/locations/OR/Wood-Village-North-East-Glisan-Street": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://palmbeachtan.com/locations/or/wood-village-north-east-glisan-street",
+  "ms": 491
+ },
+ "http://maxnailslo.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 80
+ },
+ "http://www.tlcnailsandspa.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 83
+ },
+ "https://nails-by-donna.poi.place/": {
+  "status": "blocked",
+  "http_status": 403,
+  "final_url": "https://nails-by-donna.edan.io/",
+  "ms": 503
+ },
+ "https://www.tanrepublic.com/tan-republic-wilsonville-wilsonville-or": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 201
+ },
+ "https://www.sallybeauty.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 330
+ },
+ "https://www.tanrepublic.com/tan-republic-sherwood-sherwood-or": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 125
+ },
+ "https://usanailshair.wixsite.com/mysite": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 79
+ },
+ "https://www.infinitenailsalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 236
+ },
+ "https://gardennailshillsboro.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 203
+ },
+ "http://creativexperiencesalon.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 32
+ },
+ "https://haircutmenbendor.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 40
+ },
+ "https://velvetgoldminecollective.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 91
+ },
+ "https://www.lunchboxwax.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.radiantwaxing.com/?utm_source=lbwredirect",
+  "ms": 497
+ },
+ "https://thebloomproject.org/": {
+  "status": "error",
+  "error": "ECONNRESET",
+  "ms": 218
+ },
+ "https://spa-w.com/": {
+  "status": "error",
+  "error": "ERR_SSL_SSL/TLS_ALERT_HANDSHAKE_FAILURE",
+  "ms": 198
+ },
+ "https://www.topsolarnails.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 99
+ },
+ "https://prosolarnailsbend.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 285
+ },
+ "https://luxurynailbarportland.com/": {
+  "status": "error",
+  "error": "ECONNRESET",
+  "ms": 112
+ },
+ "https://oregonbodyandbath.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 329
+ },
+ "https://www.luxenailstudio.com/": {
+  "status": "blocked",
+  "http_status": 403,
+  "final_url": "https://www.hugedomains.com/domain_profile.cfm?d=luxenailstudio.com",
+  "ms": 244
+ },
+ "http://bellasbeautysupply.weebly.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 146
+ },
+ "https://www.browbeautyandbeyond.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 88
+ },
+ "https://xenanaspa.com/": {
+  "status": "error",
+  "error": "UND_ERR_SOCKET",
+  "ms": 433
+ },
+ "https://organicbronzebar.com/": {
+  "status": "error",
+  "error": "UND_ERR_SOCKET",
+  "ms": 291
+ },
+ "https://www.myarianails.com/": {
+  "status": "error",
+  "error": "UND_ERR_SOCKET",
+  "ms": 83
+ },
+ "https://spalakeoswego.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 99
+ },
+ "https://ck-nails-hair.business.site/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 615
+ },
+ "https://vnsnailspaportland.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 213
+ },
+ "https://locations.waxcenter.com/or/clackamas/clackamas-0308.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 467
+ },
+ "https://northwestmedispa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 926
+ },
+ "https://www.lavienailsbeauty.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 118
+ },
+ "https://rejuvenationmassageandwellness.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 184
+ },
+ "https://brewingwellness.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 260
+ },
+ "https://www.perfectsolarnails.com/": {
+  "status": "error",
+  "error": "CERT_HAS_EXPIRED",
+  "ms": 496
+ },
+ "https://www.bridgeportnails.com/": {
+  "status": "blocked",
+  "http_status": 403,
+  "final_url": "https://www.agengacorjp.online/promotion",
+  "ms": 534
+ },
+ "https://www.sephora.com/happening/stores/portland-washington-square": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 56
+ },
+ "https://www.waxingthecity.com/locations/w692/us/or/hillsboro/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 169
+ },
+ "https://4seasonsnailandspa.us/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://salon300west.com/stylists/",
+  "ms": 1039
+ },
+ "https://unique-threading-salon-109226.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 658
+ },
+ "https://www.advancedaesthetics.center/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 202
+ },
+ "https://www.pnwbrowstudio.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 36
+ },
+ "http://diamondnailsnspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 334
+ },
+ "https://trust-salon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1272
+ },
+ "https://browbetty.com/contact-cedar-hills": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 166
+ },
+ "https://www.adornwaxandskin.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 150
+ },
+ "https://www.admireaesthetics.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 162
+ },
+ "https://elitemedispabend.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1340
+ },
+ "https://admireretreat.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 137
+ },
+ "https://www.solasalonstudios.com/locations/medford-oregon": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 59
+ },
+ "https://www.gervaiseugene.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 122
+ },
+ "https://milanlaserportland.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://milanlaser.com/locations/or/portland",
+  "ms": 1060
+ },
+ "https://www.weightlosspnw.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 228
+ },
+ "https://www.salonhalloo.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1691
+ },
+ "https://miraclenailsandspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 198
+ },
+ "https://www.avalonbend.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 108
+ },
+ "https://wolfsbane-tattoo-collective.business.site/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 158
+ },
+ "https://www.teascapepdx.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 13
+ },
+ "http://www.molallarivermassage.blogspot.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "http://molallarivermassage.blogspot.com/",
+  "ms": 192
+ },
+ "http://www.sacredgroundmassage.com/": {
+  "status": "dead",
+  "http_status": 404,
+  "final_url": "https://www.sacredgroundmassage.com/",
+  "ms": 138
+ },
+ "https://samsonstattoocollective.com/moo-manu-tattoo": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 48
+ },
+ "https://www.tigerlilyportland.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 145
+ },
+ "https://esoterictattooart.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 309
+ },
+ "https://perfectnailsmedford.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1555
+ },
+ "https://bukkii.io/": {
+  "status": "error",
+  "error": "UND_ERR_CONNECT_TIMEOUT",
+  "ms": 10116
+ },
+ "https://novatattoostudio.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 80
+ },
+ "http://www.serenityspaportland.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 38
+ },
+ "https://www.gaealanahealingarts.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 37
+ },
+ "https://powelltattoospdx.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 43
+ },
+ "https://www.borgheseaesthetics.com/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 3593
+ },
+ "https://www.lunaspapdx.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 116
+ },
+ "https://www.thebirdhousetattoo.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 129
+ },
+ "https://www.evertruetattoo.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://evertruetattoo.com/",
+  "ms": 238
+ },
+ "https://bodyawaremassage.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 265
+ },
+ "https://portlandmassagestudio.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 131
+ },
+ "https://iwantcolor.net/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 2229
+ },
+ "https://www.albatrosstattoo.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://slots-gacor.net/cara-baca-rtp-slot/",
+  "ms": 489
+ },
+ "http://carols-massage.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 200
+ },
+ "https://www.blacklisttattoo.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 196
+ },
+ "http://www.wellness-180.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 126
+ },
+ "http://www.robertsirch.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 68
+ },
+ "https://www.phagans-schools.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 4524
+ },
+ "https://www.touchoflightmassage.biz/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 35
+ },
+ "https://ravishinkacademy.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 197
+ },
+ "https://thepedicuresalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 2303
+ },
+ "https://www.thrivebodypdx.com/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 792
+ },
+ "http://www.nailsavvyspa.com/": {
+  "status": "error",
+  "error": "UND_ERR_CONNECT_TIMEOUT",
+  "ms": 10217
+ },
+ "https://www.muscleandbonepdx.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 127
+ },
+ "https://cgwc.org/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.cgwc.org/",
+  "ms": 373
+ },
+ "https://suitectattoo.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 64
+ },
+ "https://www.mortalemblem.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 77
+ },
+ "https://www.handandstoneprogressridge.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://handandstone.com/locations/beaverton-progress-ridge/",
+  "ms": 494
+ },
+ "https://www.transcendbodywork.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 562
+ },
+ "https://locations.massageenvy.com/oregon/portland/1517-ne-broadway.html": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://locations.massageenvy.com/index.html",
+  "ms": 451
+ },
+ "http://www.pepilmt.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 82
+ },
+ "http://bodyinharmonypdx.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 87
+ },
+ "https://www.medicalmassagehillsboro.com/": {
+  "status": "error",
+  "error": "ECONNRESET",
+  "ms": 147
+ },
+ "https://radtattoocompany.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 449
+ },
+ "http://5starasianfootmassage.club/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 135
+ },
+ "http://lemonteamassage.club/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 96
+ },
+ "https://www.seasons-therapeutic-massage.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 228
+ },
+ "http://www.naturalmanualtherapymassage.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 60
+ },
+ "http://www.authenticmassagetherapyllc.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.authenticmassagetherapyllc.com/",
+  "ms": 698
+ },
+ "https://captainjackstattoo.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 112
+ },
+ "https://www.fortunetattoopdx.com/": {
+  "status": "error",
+  "error": "ERR_TLS_CERT_ALTNAME_INVALID",
+  "ms": 222
+ },
+ "https://www.murderinkpdx.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 65
+ },
+ "https://elementsmassage.com/portland-pearl-district": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 234
+ },
+ "https://juliedecker.massagetherapy.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 447
+ },
+ "http://www.feilongspa.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 119
+ },
+ "https://www.thenowmassage.com/boutique/portland-pearl-district": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 185
+ },
+ "http://www.dustinkendigtattoos.com/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 217
+ },
+ "https://www.skeletonkeytattooportland.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 196
+ },
+ "https://www.alchemywellnesspdx.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 217
+ },
+ "https://www.rosewatertattoo.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 280
+ },
+ "https://www.fuzzypitstattoo.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 201
+ },
+ "https://keepsaketattooing.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 150
+ },
+ "https://www.brasada.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.brasadaranch.com/",
+  "ms": 224
+ },
+ "https://handandstone.com/locations/portland-nw": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://handandstone.com/locations/portland-nw/",
+  "ms": 217
+ },
+ "http://taylorlmt.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 42
+ },
+ "https://beststudioever.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 432
+ },
+ "https://www.itsallaboutyouskincare.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 126
+ },
+ "https://www.thestudiolapine.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 337
+ },
+ "https://linktr.ee/straydogtattoopdx": {
+  "status": "error",
+  "http_status": 406,
+  "ms": 593
+ },
+ "https://www.wildrosetattoo.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 80
+ },
+ "https://desertsun.studio/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 46
+ },
+ "https://mementoink.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 97
+ },
+ "https://move541.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://massage-eugene.com/",
+  "ms": 247
+ },
+ "https://fitformbodywork.massagetherapy.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.abmp.com/",
+  "ms": 858
+ },
+ "http://www.inclusioninktattoo.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2Finclusioninktattoo",
+  "ms": 421
+ },
+ "https://alliancetattooseugene.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 120
+ },
+ "https://its-all-goad-massage.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 634
+ },
+ "http://www.lombardstreettattoo.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 111
+ },
+ "https://www.darkcreaturestattoo.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 54
+ },
+ "https://fortune-tree-asian-spa.business.site/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 591
+ },
+ "https://hotstonespastayton.business.site/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 609
+ },
+ "https://www.jankybird.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 96
+ },
+ "http://www.greshamtattoo.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 36
+ },
+ "https://www.direwolftattoocompany.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 122
+ },
+ "https://www.bodyofworkwellness.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 204
+ },
+ "https://oblivionart.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 139
+ },
+ "https://adornbodyart.com/adorn-east/": {
+  "status": "error",
+  "error": "UND_ERR_SOCKET",
+  "ms": 290
+ },
+ "https://www.massagebook.com/Cottage_Grove~Massage~julia-serra": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 206
+ },
+ "https://www.hohmassage.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.hohmassage.com/index.html",
+  "ms": 218
+ },
+ "https://bodybalanceportland.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 256
+ },
+ "https://www.orthopedicmedicalmassage.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 86
+ },
+ "https://www.touchwellnessmassage.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 180
+ },
+ "https://www.earthandmuscle.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 211
+ },
+ "https://www.angrytoadsucks.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 98
+ },
+ "https://www.familytradition.co/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 172
+ },
+ "https://nellyneedles.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 474
+ },
+ "https://floatnorthpdx.com/": {
+  "status": "error",
+  "error": "UND_ERR_SOCKET",
+  "ms": 237
+ },
+ "https://www.medicarelist.com/massage-therapist/sarah-miller-massagegarden-coquille-or/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 187
+ },
+ "https://upshurtattoo.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 291
+ },
+ "http://greshammassage.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 825
+ },
+ "https://www.oostattoo.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 171
+ },
+ "https://fortunetreefootspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 289
+ },
+ "https://www.laserbabesportland.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 318
+ },
+ "https://healinghandspdx.massagetherapy.com/": {
+  "status": "error",
+  "error": "TypeError",
+  "ms": 3155
+ },
+ "http://linktr.ee/Betterfriendstattoo": {
+  "status": "error",
+  "http_status": 406,
+  "final_url": "https://linktr.ee/Betterfriendstattoo",
+  "ms": 523
+ },
+ "https://lalumieremassage.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1179
+ },
+ "https://www.ritualartspdx.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 165
+ },
+ "https://www.zamamassage.com/": {
+  "status": "error",
+  "error": "UND_ERR_SOCKET",
+  "ms": 309
+ },
+ "http://pointofviewtattooschool.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.pointofviewtattooschool.com/",
+  "ms": 722
+ },
+ "https://www.therubygore.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 287
+ },
+ "https://loyly.net/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.loyly.net/",
+  "ms": 186
+ },
+ "https://thenowmassage.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.thenowmassage.com/",
+  "ms": 155
+ },
+ "https://www.grizzlytattoo.com/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 100
+ },
+ "https://elementsmassage.com/west-linn": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 138
+ },
+ "https://om-massage.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 80
+ },
+ "https://www.ladylucktattoo.net/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://ladylucktattoo.net/",
+  "ms": 144
+ },
+ "http://www.multnomahvillagemassage.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 129
+ },
+ "https://wildrootsastoria.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1481
+ },
+ "https://elementsmassage.com/lake-oswego": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 138
+ },
+ "https://anaarean.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1623
+ },
+ "https://handandstone.com/locations/beaverton/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 111
+ },
+ "https://confluencebodywork.com/": {
+  "status": "error",
+  "error": "ERR_TLS_CERT_ALTNAME_INVALID",
+  "ms": 150
+ },
+ "https://elementsmassage.com/tanasbourne": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 61
+ },
+ "https://www.opticnervearts.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 214
+ },
+ "https://deadgodstattoo.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 94
+ },
+ "https://locations.massageenvy.com/oregon/portland/6645-sw-macadam-avenue.html": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://locations.massageenvy.com/index.html",
+  "ms": 201
+ },
+ "http://massageexcellence.biz/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://massageexcellence.biz/",
+  "ms": 154
+ },
+ "https://bauhiniaspa102.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 34
+ },
+ "https://biofootmassage.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 734
+ },
+ "https://elementsmassage.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 51
+ },
+ "https://adornbodyart.com/": {
+  "status": "error",
+  "error": "UND_ERR_SOCKET",
+  "ms": 270
+ },
+ "https://reliquarytattoo.weebly.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 166
+ },
+ "https://www.tattoo34pdx.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 87
+ },
+ "https://locations.massageenvy.com/oregon/beaverton/2680-sw-cedar-hills-blvd.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 268
+ },
+ "https://pussycattattoo.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 77
+ },
+ "https://anatomytattoo.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 2402
+ },
+ "https://elizacrockett.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.elizacrockett.com/",
+  "ms": 5138
+ },
+ "https://www.skincitytattoos.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 124
+ },
+ "http://violetpage.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 104
+ },
+ "https://www.floatinglotustattoo.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 151
+ },
+ "https://handandstone.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 84
+ },
+ "https://bamboomassageor.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 300
+ },
+ "https://blueoxtattoo.com/": {
+  "status": "dead",
+  "http_status": 404,
+  "final_url": "https://www.blueoxtattoo.com/",
+  "ms": 375
+ },
+ "https://www.thelittletattooshoppe.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://thelittletattooshoppe.com/",
+  "ms": 330
+ },
+ "https://www.sovereign-tattoo.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://sovereign-tattoo.com/",
+  "ms": 271
+ },
+ "http://www.mumstattoos.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://mumstattoo.com/",
+  "ms": 251
+ },
+ "https://www.sideshowalleytattoo.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 358
+ },
+ "https://freaksandgeekstattoo.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 498
+ },
+ "https://elementsmassage.com/south-hillsboro": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 63
+ },
+ "https://locations.massageenvy.com/oregon/sherwood/16078-sw-tualatin-sherwood-road.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 60
+ },
+ "http://www.massagesolutionsofbend.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 87
+ },
+ "https://octopusinktattoo.com/": {
+  "status": "error",
+  "error": "UND_ERR_SOCKET",
+  "ms": 124
+ },
+ "http://bigfootfootspa.wixsite.com/mysite": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://bigfootfootspa.wixsite.com/mysite",
+  "ms": 136
+ },
+ "https://www.whitelighttattoo.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 111
+ },
+ "http://connectionrioacademy.com/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 81
+ },
+ "https://www.solefootbar.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 141
+ },
+ "https://www.ironelephanttattoo.com/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 170
+ },
+ "https://www.oddballstudios.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 248
+ },
+ "https://tattoo-42.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 183
+ },
+ "http://newrosetattoo.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1084
+ },
+ "https://capitalgstattoo.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 188
+ },
+ "https://www.sole2solereflexology.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 261
+ },
+ "http://www.getsomeinc.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://oblivionart.com/",
+  "ms": 237
+ },
+ "http://www.vertigogallerytattoo.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://expireddomains.com/domain/vertigogallerytattoo.com?utm_source=redi",
+  "ms": 330
+ },
+ "https://washburnemassage.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 37
+ },
+ "https://www.radianthealtheugene.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 133
+ },
+ "http://www.northtosouthwellness.com/": {
+  "status": "dead",
+  "error": "EAI_AGAIN",
+  "ms": 999
+ },
+ "https://regalfootspa.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 38
+ },
+ "https://area-51tattoo.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 76
+ },
+ "https://blusteelstudio.com/": {
+  "status": "error",
+  "http_status": 520,
+  "ms": 416
+ },
+ "https://troncitytattoo.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.troncitytattoo.com/",
+  "ms": 299
+ },
+ "https://www.indigoinkcosmetic.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 105
+ },
+ "https://www.scapegoattattoo.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://wilsonbrostattoo.com/",
+  "ms": 1275
+ },
+ "https://www.therapeuticmassagemedford.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 181
+ },
+ "https://www.offthegridtattoos.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 101
+ },
+ "https://www.cecilportertattoos.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://musamani.com/",
+  "ms": 2245
+ },
+ "https://www.massagemagicpdx.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 381
+ },
+ "https://dependabletattoo.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://dependabletattoo.com/home.html",
+  "ms": 264
+ },
+ "https://islandmassage.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 822
+ },
+ "https://martianartstattoo.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 3151
+ },
+ "https://blacksheepmassage.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1558
+ },
+ "https://tattoosonwoodstock.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 3809
+ },
+ "https://www.trendkilloregon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://trendkilloregon.com/",
+  "ms": 2879
+ }
+}

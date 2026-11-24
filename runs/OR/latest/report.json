@@ -1,0 +1,56 @@
+{
+ "state": "OR",
+ "state_name": "Oregon",
+ "wave": 5,
+ "created_at": "2026-11-24T23:07:45.213Z",
+ "staging_only": true,
+ "sources": [
+  {
+   "name": "OpenStreetMap (Overpass)",
+   "url": "https://overpass-api.de/api/interpreter",
+   "status": "processed",
+   "records": 2096,
+   "parts_ok": 4,
+   "parts_total": 4
+  },
+  {
+   "name": "U.S. Census Geocoder (place containing map point)",
+   "url": "https://geocoding.geo.census.gov/",
+   "status": "processed",
+   "records": 480
+  }
+ ],
+ "license_records_scanned": 0,
+ "licensed_active_candidates": 0,
+ "license_dropped": null,
+ "license_fields": null,
+ "license_shop_types": [],
+ "license_type_counts": [],
+ "license_type_lookup": [],
+ "census_city_lookup": {
+  "attempted": 491,
+  "filled": 480,
+  "failed": 0
+ },
+ "mapped_beauty_places": 2096,
+ "overpass_endpoint": "https://overpass-api.de/api/interpreter",
+ "total_candidates": 2037,
+ "with_websites": 904,
+ "category_counts": {
+  "hair": 905,
+  "barber": 203,
+  "nails": 351,
+  "salon_suites": 4,
+  "waxing": 29,
+  "brows": 20,
+  "spray_tanning": 58,
+  "makeup": 62,
+  "skincare": 33,
+  "lashes": 23,
+  "massage": 191,
+  "tattoo": 158
+ },
+ "errors": [],
+ "note": "A license record or map listing alone does not prove a business is open. The importer publishes only rows that meet its rules; the rest are held.",
+ "attribution": "OpenStreetMap data © OpenStreetMap contributors (ODbL, https://www.openstreetmap.org/copyright). Licensing data from the listed state open-data portals."
+}
