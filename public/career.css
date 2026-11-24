@@ -1,0 +1,174 @@
+/* Career Studio + Business Pro. Tokens from gobookr-ui.css only. */
+.cs-kicker { margin: 0 0 var(--gb-1); color: var(--gb-ink-3); font-size: var(--gb-text-sm); font-weight: 600; }
+.cs-kicker a { color: inherit; }
+.cs-hint { color: var(--gb-ink-3); font-size: var(--gb-text-xs); line-height: 1.5; margin: var(--gb-2) 0 0; }
+.cs-note, .cs-ok, .cs-warn { border-radius: var(--gb-r-sm); padding: var(--gb-3) var(--gb-4); font-size: var(--gb-text-sm); margin: 0 0 var(--gb-4); }
+.cs-note { background: var(--gb-cloud); border: 1px solid var(--gb-line); color: var(--gb-ink-2); }
+.cs-ok { background: var(--gb-mint-wash); color: var(--gb-mint-ink); font-weight: 600; }
+.cs-warn { background: var(--gb-warn-wash); color: var(--gb-ink); }
+.cs-sub { color: var(--gb-ink-3); font-size: var(--gb-text-sm); margin: 2px 0 0; }
+
+/* plan */
+.cs-plan { background: var(--gb-midnight); color: var(--gb-white); border-radius: var(--gb-r-lg); padding: var(--gb-8); margin-bottom: var(--gb-6); }
+.cs-plan .cs-kicker { color: rgba(255, 255, 255, .62); }
+.cs-plan .cs-actions + .cs-hint { margin-top: var(--gb-3); }
+.cs-plan h2 { font-family: var(--gb-font-display); font-size: var(--gb-h2); line-height: 1.1; margin: 0 0 var(--gb-2); color: var(--gb-white); }
+.cs-plan p { color: rgba(255, 255, 255, .78); max-width: 56ch; margin: 0; }
+.cs-plan .cs-note { background: rgba(255, 255, 255, .08); border-color: rgba(255, 255, 255, .14); color: var(--gb-white); }
+.cs-plan .cs-hint { color: rgba(255, 255, 255, .6); }
+.cs-plan-head { display: flex; justify-content: space-between; gap: var(--gb-6); align-items: flex-start; flex-wrap: wrap; }
+.cs-price { text-align: right; } .cs-price strong { display: block; color: var(--gb-white); font-family: var(--gb-font-display); font-size: 44px; line-height: 1; letter-spacing: -0.02em; } .cs-price span { color: rgba(255, 255, 255, .62); font-size: var(--gb-text-sm); }
+.cs-facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: var(--gb-4); margin: var(--gb-6) 0 0; padding-top: var(--gb-5); border-top: 1px solid rgba(255, 255, 255, .14); }
+.cs-facts dt { color: rgba(255, 255, 255, .6); font-size: var(--gb-text-xs); } .cs-facts dd { margin: 2px 0 0; font-weight: 600; }
+.cs-actions { display: flex; gap: var(--gb-3); align-items: center; flex-wrap: wrap; margin-top: var(--gb-6); }
+.cs-actions form { margin: 0; }
+.cs-plan .sd-textbtn { color: var(--gb-white); }
+.cs-plan .btn.secondary { background: transparent; color: var(--gb-white); border-color: rgba(255, 255, 255, .4); }
+.cs-state-past_due .cs-plan-head h2, .cs-state-unpaid .cs-plan-head h2, .cs-state-past_due_grace .cs-plan-head h2 { color: #FFD7A8; }
+.cs-compare { display: grid; grid-template-columns: 1fr 1.3fr; gap: var(--gb-5); align-items: start; }
+.cs-compare section { border: 1px solid var(--gb-line); border-radius: var(--gb-r-md); padding: var(--gb-6); background: var(--gb-white); }
+.cs-compare section.cs-pro { border-color: var(--gb-iris-line); box-shadow: 0 0 0 3px var(--gb-iris-wash); }
+.cs-compare h3 { font-size: var(--gb-h4); margin: 0 0 var(--gb-4); }
+.cs-list { list-style: none; padding: 0; margin: 0; display: grid; gap: var(--gb-3); }
+.cs-list li { position: relative; padding-left: 26px; font-size: var(--gb-text-sm); }
+.cs-list li::before { content: ""; position: absolute; left: 0; top: 3px; width: 16px; height: 16px; border-radius: 50%; background: var(--gb-mint-wash) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4.5 8.2l2.2 2.2 4.8-4.9' fill='none' stroke='%230E8C7E' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 14px no-repeat; }
+.cs-list li.later::before { background: var(--gb-cloud); border: 1px dashed var(--gb-line-strong); }
+.cs-list li strong { display: block; } .cs-list li span { color: var(--gb-ink-3); }
+
+/* inbox */
+.cs-preview-banner { display: flex; justify-content: space-between; align-items: center; gap: var(--gb-5); flex-wrap: wrap; background: var(--gb-iris-wash); border: 1px solid var(--gb-iris-line); border-radius: var(--gb-r-lg); padding: var(--gb-6); margin-bottom: var(--gb-6); }
+.cs-preview-banner h2 { font-family: var(--gb-font-display); font-size: var(--gb-h3); margin: 0 0 var(--gb-1); }
+.cs-preview-banner p { margin: 0; color: var(--gb-ink-2); max-width: 60ch; }
+.cs-locked { border: 1px solid var(--gb-line); border-radius: var(--gb-r-md); padding: var(--gb-4) var(--gb-5); margin-bottom: var(--gb-6); background: var(--gb-cloud); }
+.cs-locked p { margin: 2px 0 0; color: var(--gb-ink-3); font-size: var(--gb-text-sm); }
+.cs-inbox, .cs-jobs { border: 1px solid var(--gb-line); border-radius: var(--gb-r-md); background: var(--gb-white); margin-bottom: var(--gb-6); overflow: hidden; }
+.cs-inbox.is-preview { position: relative; }
+.cs-inbox.is-preview .cs-rows, .cs-inbox.is-preview .cs-thread-peek { filter: saturate(.6); opacity: .82; pointer-events: none; user-select: none; }
+.cs-inbox-head { display: flex; justify-content: space-between; align-items: center; gap: var(--gb-3); padding: var(--gb-4) var(--gb-5); border-bottom: 1px solid var(--gb-line); }
+.cs-inbox-head h3 { margin: 0; font-size: var(--gb-h4); }
+.cs-example-tag { font-size: var(--gb-text-xs); font-weight: 600; color: var(--gb-iris); background: var(--gb-iris-wash); padding: 2px 10px; border-radius: var(--gb-r-pill); }
+.cs-filter { display: flex; gap: 2px; padding: 0 var(--gb-4); border-bottom: 1px solid var(--gb-line); overflow-x: auto; scrollbar-width: none; }
+.cs-filter a { padding: 10px 10px 9px; font-size: var(--gb-text-sm); color: var(--gb-ink-3); text-decoration: none; white-space: nowrap; border-bottom: 2px solid transparent; }
+.cs-filter a[aria-current="page"] { color: var(--gb-midnight); border-bottom-color: var(--gb-iris); }
+.cs-filter span { font-size: var(--gb-text-xs); background: var(--gb-cloud); border-radius: var(--gb-r-pill); padding: 0 6px; }
+.cs-rows { list-style: none; padding: 0; margin: 0; }
+.cs-row > .cs-rowlink, .cs-row.is-example { display: grid; grid-template-columns: 40px minmax(0, 2fr) minmax(0, 1.3fr) auto 96px; gap: var(--gb-4); align-items: center; padding: var(--gb-4) var(--gb-5); border-bottom: 1px solid var(--gb-line); color: inherit; text-decoration: none; }
+.cs-myapps .cs-row > .cs-rowlink { grid-template-columns: minmax(0, 2fr) minmax(0, 1fr) auto 96px; }
+.cs-row:last-child > * { border-bottom: 0; }
+.cs-row > .cs-rowlink:hover { background: var(--gb-cloud); }
+.cs-row.is-unread .cs-who strong::after { content: ""; display: inline-block; width: 8px; height: 8px; margin-left: 8px; border-radius: 50%; background: var(--gb-iris); vertical-align: middle; }
+.cs-avatar { width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; background: var(--gb-cloud); border: 1px solid var(--gb-line); font-weight: 700; font-size: var(--gb-text-sm); color: var(--gb-ink-2); }
+.cs-avatar.lg { width: 64px; height: 64px; font-size: var(--gb-text-lg); }
+.cs-who, .cs-meta, .cs-when { display: grid; gap: 2px; min-width: 0; }
+.cs-who strong, .cs-who small, .cs-meta, .cs-meta small { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.cs-who small, .cs-meta small, .cs-when small { color: var(--gb-ink-3); font-size: var(--gb-text-xs); }
+.cs-meta, .cs-when { font-size: var(--gb-text-sm); color: var(--gb-ink-2); }
+.cs-when { text-align: right; }
+.cs-status { display: inline-block; padding: 2px 10px; border-radius: var(--gb-r-pill); font-size: var(--gb-text-xs); font-weight: 600; background: var(--gb-cloud); color: var(--gb-ink-2); border: 1px solid var(--gb-line); white-space: nowrap; }
+.cs-status.st-new { background: var(--gb-iris-wash); color: var(--gb-iris); border-color: transparent; }
+.cs-status.st-interview, .cs-status.st-offer { background: var(--gb-warn-wash); color: var(--gb-ink); border-color: transparent; }
+.cs-status.st-hired { background: var(--gb-mint-wash); color: var(--gb-mint-ink); border-color: transparent; }
+.cs-status.st-declined, .cs-status.st-withdrawn { color: var(--gb-ink-3); }
+.cs-empty { text-align: center; padding: var(--gb-10) var(--gb-6); color: var(--gb-ink-3); }
+.cs-empty h4, .cs-empty h2 { color: var(--gb-ink); margin: 0 0 var(--gb-1); }
+.cs-thread-peek { padding: var(--gb-5); display: grid; gap: var(--gb-2); border-top: 1px solid var(--gb-line); background: var(--gb-cloud); }
+
+/* jobs editor */
+.cs-joblist { list-style: none; padding: 0; margin: 0; }
+.cs-job { display: grid; grid-template-columns: minmax(0, 1fr) auto auto; gap: var(--gb-4); align-items: center; padding: var(--gb-4) var(--gb-5); border-bottom: 1px solid var(--gb-line); }
+.cs-job small { display: block; color: var(--gb-ink-3); font-size: var(--gb-text-xs); margin-top: 2px; }
+.cs-jobstate { font-size: var(--gb-text-xs); font-weight: 600; color: var(--gb-ink-3); }
+.cs-jobstate.js-open { color: var(--gb-mint-ink); }
+.cs-inline { display: flex; gap: var(--gb-3); align-items: center; margin: 0; }
+.cs-newjob { padding: var(--gb-4) var(--gb-5); }
+.cs-newjob summary { cursor: pointer; font-weight: 600; color: var(--gb-iris); }
+.cs-jobform, .cs-resumeform fieldset { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--gb-3) var(--gb-4); margin-top: var(--gb-4); }
+.cs-field { display: grid; gap: 4px; font-size: var(--gb-text-sm); }
+.cs-field > span { font-weight: 500; } .cs-field em { font-style: normal; color: var(--gb-ink-3); font-weight: 400; }
+.cs-field input, .cs-field select, .cs-field textarea { width: 100%; }
+.cs-wide { grid-column: 1 / -1; }
+
+/* résumé + application */
+.cs-career-head { display: flex; justify-content: space-between; align-items: flex-end; gap: var(--gb-5); flex-wrap: wrap; margin-bottom: var(--gb-6); }
+.cs-career-head h1 { font-family: var(--gb-font-display); font-size: var(--gb-h1); line-height: 1.08; margin: 0 0 var(--gb-2); }
+.cs-career-head p { margin: 0; color: var(--gb-ink-2); max-width: 62ch; }
+.cs-career h2 { font-family: var(--gb-font-display); font-size: var(--gb-h3); margin: 0 0 var(--gb-3); }
+.cs-notes ul, .cs-myapps .cs-rows { list-style: none; padding: 0; margin: 0 0 var(--gb-8); border: 1px solid var(--gb-line); border-radius: var(--gb-r-md); background: var(--gb-white); overflow: hidden; }
+.cs-notes li { display: flex; justify-content: space-between; gap: var(--gb-3); padding: var(--gb-3) var(--gb-4); border-bottom: 1px solid var(--gb-line); font-size: var(--gb-text-sm); }
+.cs-notes li.is-unread a { font-weight: 700; } .cs-notes small { color: var(--gb-ink-3); white-space: nowrap; }
+.cs-resume-grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: var(--gb-8); align-items: start; }
+.cs-preview { position: sticky; top: 88px; }
+.cs-resumeform fieldset { border: 0; border-top: 1px solid var(--gb-line); padding: var(--gb-5) 0 0; margin: 0 0 var(--gb-5); }
+.cs-resumeform legend { font-weight: 700; padding-right: var(--gb-2); }
+.cs-repeat { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--gb-3) var(--gb-4); padding: var(--gb-4); border: 1px dashed var(--gb-line-strong); border-radius: var(--gb-r-sm); }
+.cs-checks { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: var(--gb-2) var(--gb-5); font-size: var(--gb-text-sm); }
+.cs-check { grid-column: 1 / -1; display: flex; gap: var(--gb-2); align-items: center; font-size: var(--gb-text-sm); font-weight: 600; }
+.cs-savebar { display: flex; gap: var(--gb-4); align-items: center; border-top: 1px solid var(--gb-line); padding: var(--gb-4) 0; }
+.cs-savebar .cs-hint { margin: 0; }
+.cs-resume { border: 1px solid var(--gb-line); border-radius: var(--gb-r-md); background: var(--gb-white); padding: var(--gb-6); }
+.cs-resume header { display: flex; gap: var(--gb-4); align-items: flex-start; padding-bottom: var(--gb-4); border-bottom: 1px solid var(--gb-line); }
+.cs-resume header h2 { font-family: var(--gb-font-display); font-size: var(--gb-h3); margin: 0; }
+.cs-headline { margin: 4px 0 0; font-weight: 600; }
+.cs-resume section { padding-top: var(--gb-4); }
+.cs-resume h3, .cs-small-h { font-size: var(--gb-text-sm); color: var(--gb-ink-3); margin: 0 0 var(--gb-2); font-weight: 600; }
+.cs-resume section p { margin: 0; font-size: var(--gb-text-sm); line-height: 1.6; }
+.cs-tags { display: flex; flex-wrap: wrap; gap: var(--gb-2); list-style: none; padding: 0; margin: 0; }
+.cs-tags li { padding: 3px 10px; border-radius: var(--gb-r-pill); background: var(--gb-cloud); border: 1px solid var(--gb-line); font-size: var(--gb-text-xs); }
+.cs-timeline { list-style: none; padding: 0; margin: 0; display: grid; gap: var(--gb-3); }
+.cs-timeline li { padding-left: var(--gb-4); border-left: 2px solid var(--gb-line); font-size: var(--gb-text-sm); }
+.cs-timeline small { display: block; color: var(--gb-ink-3); }
+.cs-plainlist { padding-left: var(--gb-4); margin: 0; font-size: var(--gb-text-sm); } .cs-plainlist small { color: var(--gb-ink-3); }
+.cs-app { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(280px, 1fr); gap: var(--gb-6); align-items: start; }
+.cs-side { border: 1px solid var(--gb-line); border-radius: var(--gb-r-md); background: var(--gb-white); padding: var(--gb-5); margin-bottom: var(--gb-5); }
+.cs-statusform { display: flex; gap: var(--gb-2); align-items: center; flex-wrap: wrap; margin-top: var(--gb-3); }
+.cs-cover { border: 1px solid var(--gb-line); border-radius: var(--gb-r-md); padding: var(--gb-5); margin-top: var(--gb-4); background: var(--gb-cloud); }
+.cs-cover h3 { margin: 0 0 var(--gb-2); font-size: var(--gb-text-sm); }
+.cs-thread { border: 1px solid var(--gb-line); border-radius: var(--gb-r-md); background: var(--gb-white); padding: var(--gb-5); }
+.cs-thread h3 { margin: 0 0 var(--gb-3); font-size: var(--gb-h4); }
+.cs-thread ul { list-style: none; padding: 0; margin: 0 0 var(--gb-4); display: grid; gap: var(--gb-2); max-height: 480px; overflow-y: auto; }
+.cs-bubble { max-width: 85%; padding: var(--gb-3) var(--gb-4); border-radius: 16px; font-size: var(--gb-text-sm); margin: 0; }
+.cs-bubble p { margin: 0; } .cs-bubble small { display: block; margin-top: 4px; opacity: .7; font-size: var(--gb-text-xs); }
+.cs-bubble.them { background: var(--gb-cloud); border: 1px solid var(--gb-line); justify-self: start; border-bottom-left-radius: 4px; }
+.cs-bubble.us { background: var(--gb-midnight); color: var(--gb-white); justify-self: end; border-bottom-right-radius: 4px; }
+.cs-reply { display: grid; gap: var(--gb-2); } .cs-reply .btn { justify-self: end; }
+
+/* public */
+.cs-board { padding-top: var(--gb-8); padding-bottom: var(--gb-16); }
+.cs-boardfilter { display: flex; gap: var(--gb-3); align-items: flex-end; flex-wrap: wrap; margin-bottom: var(--gb-6); }
+.cs-boardfilter label { display: grid; gap: 4px; font-size: var(--gb-text-sm); font-weight: 500; }
+.cs-pubjobs { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: var(--gb-4); }
+.cs-pubjobs.compact { grid-template-columns: 1fr; gap: var(--gb-2); margin-top: var(--gb-4); }
+.cs-pubjob a { display: grid; gap: 4px; padding: var(--gb-5); border: 1px solid var(--gb-line); border-radius: var(--gb-r-md); background: var(--gb-white); color: inherit; text-decoration: none; height: 100%; }
+.cs-pubjob a:hover { border-color: var(--gb-iris-line); }
+.cs-pubjob strong { font-size: var(--gb-text-lg); } .cs-pubjob span { color: var(--gb-ink-2); } .cs-pubjob small { color: var(--gb-ink-3); } .cs-pubjob em { font-style: normal; font-weight: 600; font-size: var(--gb-text-sm); }
+.cs-jobpage h1 { font-family: var(--gb-font-display); font-size: var(--gb-h1); margin: 0 0 var(--gb-3); }
+.cs-jobpage section h2 { font-size: var(--gb-h4); margin: var(--gb-6) 0 var(--gb-2); }
+.cs-shophiring { display: grid; grid-template-columns: minmax(0, 1fr) minmax(260px, .8fr); gap: var(--gb-6); padding: var(--gb-6); margin-top: var(--gb-8); border: 1px solid var(--gb-iris-line); border-radius: var(--gb-r-lg); background: var(--gb-iris-wash); }
+.cs-shophiring h2 { font-family: var(--gb-font-display); font-size: var(--gb-h3); margin: 0 0 var(--gb-1); }
+.cs-shophiring p { margin: 0; }
+.cs-applyform { display: grid; gap: var(--gb-3); }
+
+@media (max-width: 860px) {
+  .cs-compare, .cs-resume-grid, .cs-app, .cs-shophiring { grid-template-columns: minmax(0, 1fr); }
+  .cs-preview { position: static; }
+  .cs-plan { padding: var(--gb-6); } .cs-price { text-align: left; }
+  .cs-row > .cs-rowlink, .cs-row.is-example { grid-template-columns: 40px minmax(0, 1fr) auto; }
+  .cs-myapps .cs-row > .cs-rowlink { grid-template-columns: minmax(0, 1fr) auto; }
+  .cs-row .cs-meta, .cs-row .cs-when { display: none; }
+  .cs-jobform, .cs-resumeform fieldset, .cs-repeat { grid-template-columns: minmax(0, 1fr); }
+  .cs-job { grid-template-columns: minmax(0, 1fr) auto; } .cs-job .cs-inline { grid-column: 1 / -1; }
+}
+.cs-jobs > .cs-hint { padding: var(--gb-4) var(--gb-5) 0; margin: 0; }
+.cs-bubble.us p, .cs-bubble.us small { color: var(--gb-white); }
+
+.cs-resumeform fieldset > .cs-hint { grid-column: 1 / -1; margin: 0; }
+.cs-myapps { margin-bottom: var(--gb-8); }
+.cs-myapps > .cs-hint { font-size: var(--gb-text-sm); }
+.cs-jobstate.js-paused { color: var(--gb-warn); }
+.cs-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.cs-back { font-weight: 600; text-decoration: none; }
+.cs-demo { display: grid; gap: var(--gb-3); padding: var(--gb-5); margin-bottom: var(--gb-6); border-radius: var(--gb-r-md); background: var(--gb-warn-wash); border: 1px solid #F1D9A8; font-size: var(--gb-text-sm); }
+.cs-demo nav { display: flex; gap: var(--gb-2); flex-wrap: wrap; }
+.cs-demo nav a { padding: 6px 12px; border-radius: var(--gb-r-pill); background: var(--gb-white); border: 1px solid var(--gb-line); text-decoration: none; color: var(--gb-ink-2); font-weight: 600; }
+.cs-demo nav a[aria-current="true"] { background: var(--gb-midnight); color: var(--gb-white); border-color: var(--gb-midnight); }
+.cs-demo .cs-hint { margin: 0; }
