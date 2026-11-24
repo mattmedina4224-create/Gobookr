@@ -2,7 +2,7 @@
  "state": "TX",
  "state_name": "Texas",
  "wave": 2,
- "created_at": "2026-11-24T17:36:18.635Z",
+ "created_at": "2026-11-24T21:06:56.025Z",
  "staging_only": true,
  "sources": [
   {
@@ -15,7 +15,7 @@
    "name": "OpenStreetMap (Overpass)",
    "url": "https://overpass-api.de/api/interpreter",
    "status": "processed",
-   "records": 5930,
+   "records": 5841,
    "parts_ok": 4,
    "parts_total": 4
   },
@@ -23,7 +23,7 @@
    "name": "U.S. Census Geocoder (place containing map point)",
    "url": "https://geocoding.geo.census.gov/",
    "status": "processed",
-   "records": 2236
+   "records": 2191
   }
  ],
  "license_records_scanned": 58111,
@@ -73,29 +73,29 @@
  ],
  "license_type_lookup": [],
  "census_city_lookup": {
-  "attempted": 2349,
-  "filled": 2236,
+  "attempted": 2299,
+  "filled": 2191,
   "failed": 0
  },
- "mapped_beauty_places": 5930,
+ "mapped_beauty_places": 5841,
  "overpass_endpoint": "https://overpass-api.de/api/interpreter",
- "total_candidates": 61765,
- "with_websites": 1360,
+ "total_candidates": 61700,
+ "with_websites": 1323,
  "category_counts": {
   "shop_category_review": 18858,
-  "hair": 25500,
-  "nails": 4082,
-  "skincare": 1417,
-  "salon_suites": 600,
-  "brows": 452,
-  "lashes": 1559,
-  "waxing": 747,
-  "barber": 7273,
-  "massage": 524,
+  "hair": 25435,
+  "nails": 4074,
+  "skincare": 1411,
+  "salon_suites": 593,
+  "brows": 446,
+  "lashes": 1554,
+  "waxing": 745,
+  "barber": 7271,
+  "massage": 561,
   "permanent_makeup": 24,
-  "makeup": 412,
-  "tattoo": 218,
-  "spray_tanning": 99
+  "makeup": 389,
+  "tattoo": 239,
+  "spray_tanning": 100
  },
  "errors": [],
  "note": "A license record or map listing alone does not prove a business is open. The importer publishes only rows that meet its rules; the rest are held.",

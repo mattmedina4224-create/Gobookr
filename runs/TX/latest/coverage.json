@@ -1247,7 +1247,7 @@
  "top_covered_places": [
   {
    "name": "Houston",
-   "shops": 4102
+   "shops": 4099
   },
   {
    "name": "San Antonio",
@@ -1255,15 +1255,15 @@
   },
   {
    "name": "Dallas",
-   "shops": 1891
+   "shops": 1884
   },
   {
    "name": "Austin",
-   "shops": 1583
+   "shops": 1587
   },
   {
    "name": "Fort Worth",
-   "shops": 1182
+   "shops": 1181
   },
   {
    "name": "El Paso",
@@ -1271,11 +1271,11 @@
   },
   {
    "name": "Plano",
-   "shops": 721
+   "shops": 717
   },
   {
    "name": "Katy",
-   "shops": 636
+   "shops": 635
   },
   {
    "name": "Arlington",
@@ -1287,7 +1287,7 @@
   },
   {
    "name": "Spring",
-   "shops": 526
+   "shops": 527
   },
   {
    "name": "Lubbock",
@@ -1295,19 +1295,19 @@
   },
   {
    "name": "Corpus Christi",
-   "shops": 397
+   "shops": 398
   },
   {
    "name": "McAllen",
-   "shops": 367
+   "shops": 369
   },
   {
    "name": "Sugar Land",
-   "shops": 344
+   "shops": 345
   },
   {
    "name": "Irving",
-   "shops": 341
+   "shops": 342
   },
   {
    "name": "Round Rock",
@@ -1319,7 +1319,7 @@
   },
   {
    "name": "Amarillo",
-   "shops": 319
+   "shops": 318
   },
   {
    "name": "Laredo",
@@ -1327,23 +1327,23 @@
   },
   {
    "name": "Richardson",
-   "shops": 294
+   "shops": 293
   },
   {
    "name": "McKinney",
-   "shops": 280
+   "shops": 281
   },
   {
    "name": "Southlake",
    "shops": 265
   },
   {
-   "name": "Rockwall",
+   "name": "Lewisville",
    "shops": 258
   },
   {
-   "name": "Lewisville",
-   "shops": 258
+   "name": "Rockwall",
+   "shops": 257
   },
   {
    "name": "Brownsville",
@@ -1379,11 +1379,11 @@
   },
   {
    "name": "Allen",
-   "shops": 221
+   "shops": 220
   },
   {
    "name": "Pasadena",
-   "shops": 216
+   "shops": 217
   },
   {
    "name": "Georgetown",
@@ -1460,11 +1460,6 @@
   {
    "name": "Allison",
    "type": "CENSUS DESIGNATED PLACE",
-   "held_candidates": 1
-  },
-  {
-   "name": "Alma",
-   "type": "INCORPORATED PLACE",
    "held_candidates": 1
   },
   {
@@ -1713,6 +1708,6 @@
    "held_candidates": 1
   }
  ],
- "uncovered_places_without_candidates": 849,
+ "uncovered_places_without_candidates": 850,
  "source": "U.S. Census Bureau 2020 place-by-county and county code files"
 }
