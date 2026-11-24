@@ -1,0 +1,161 @@
+{
+ "state": "CO",
+ "state_name": "Colorado",
+ "wave": 1,
+ "created_at": "2026-11-24T17:10:37.152Z",
+ "staging_only": true,
+ "sources": [
+  {
+   "name": "Colorado DORA Shop Registration",
+   "url": "https://data.colorado.gov/Regulations/Professional-and-Occupational-Licenses-in-Colorado/7s5z-vewr",
+   "status": "processed",
+   "records": 7359
+  },
+  {
+   "name": "OpenStreetMap (Overpass)",
+   "url": "https://overpass.kumi.systems/api/interpreter",
+   "status": "partial",
+   "records": 518,
+   "parts_ok": 2,
+   "parts_total": 4,
+   "error": "https://overpass-api.de/api/interpreter [nwr[\"shop\"=\"hairdresser\"](area.a);nwr[\"c]: HTTP 502 https://overpass-api.de/api/interpreter | https://overpass.private.coffee/api/interpreter [nwr[\"shop\"=\"hairdresser\"](area.a);nwr[\"c]: HTTP 504 https://overpass.private.coffee/api/interpreter | https://overpass.kumi.systems/api/interpreter [nwr[\"shop\"=\"hairdresser\"](area.a);nwr[\"c]: HTTP 504 https://overpass.kumi.systems/api/interpreter | https://overpass-api.de/api/interpreter [nwr[\"shop\"=\"hairdresser\"](area.a);nwr[\"c]: HTTP 502 https://overpass-api.de/api/interpreter | https://overpass.private.coffee/api/interpreter [nwr[\"shop\"=\"hairdresser\"](area.a);nwr[\"c]: HTTP 504 https://overpass.private.coffee/api/interpreter | https://overpass.kumi.systems/api/interpreter [nwr[\"shop\"=\"hairdresser\"](area.a);nwr[\"c]: HTTP 504 https://overpass.kumi.systems/api/interpreter | https://overpass-api.de/api/interpreter [nwr[\"shop\"~\"^(beauty|nails|barber|cosmet]: HTTP 502 https://overpass-api.de/api/interpreter | https://overpass.private.coffee/api/interpreter [nwr[\"shop\"~\"^(beauty|nails|barber|cosmet]: The operation was aborted due to timeout | https://overpass.kumi.systems/api/interpreter [nwr[\"shop\"~\"^(beauty|nails|barber|cosmet]: HTTP 502 https://overpass.kumi.systems/api/interpreter | https://overpass-api.de/api/interpreter [nwr[\"shop\"~\"^(beauty|nails|barber|cosmet]: HTTP 502 https://overpass-api.de/api/interpreter | https://overpass.private.coffee/api/interpreter [nwr[\"shop\"~\"^(beauty|nails|barber|cosmet]: HTTP 504 https://overpass.private.coffee/api/interpreter | https://overpass.kumi.systems/api/interpreter [nwr[\"shop\"~\"^(beauty|nails|barber|cosmet]: HTTP 502 https://overpass.kumi.systems/api/interpreter | https://overpass-api.de/api/interpreter [nwr[\"shop\"~\"^(tattoo|massage)$\"](area.a)]: HTTP 502 https://overpass-api.de/api/interpreter | https://overpass.private.coffee/api/interpreter [nwr[\"shop\"~\"^(tattoo|massage)$\"](area.a)]: The operation was aborted due to timeout"
+  },
+  {
+   "name": "U.S. Census Geocoder (place containing map point)",
+   "url": "https://geocoding.geo.census.gov/",
+   "status": "processed",
+   "records": 168
+  }
+ ],
+ "license_records_scanned": 23292,
+ "licensed_active_candidates": 7359,
+ "license_dropped": {
+  "inactive": 15927,
+  "expired": 1,
+  "out_of_state": 2,
+  "no_name_or_city": 3
+ },
+ "license_fields": {
+  "type": "licensetype",
+  "status": "licensestatusdescription",
+  "name": "entityname",
+  "street": "",
+  "city": "city",
+  "cityStateZip": "",
+  "zip": "mailzipcode",
+  "state": "state",
+  "county": "",
+  "number": "licensenumber",
+  "expires": "licenseexpirationdate"
+ },
+ "license_shop_types": [
+  "REG"
+ ],
+ "license_type_counts": [
+  {
+   "licensetype": "REG",
+   "n": "23292"
+  }
+ ],
+ "license_type_lookup": [
+  {
+   "code": "BAR",
+   "text": "Barber/Cosmetology Barber BAR Individual Two Year Even 31-Mar"
+  },
+  {
+   "code": "COS",
+   "text": "Barber/Cosmetology Cosmetologist COS Individual Two Year Odd and Even 30-Apr"
+  },
+  {
+   "code": "COZ",
+   "text": "Barber/Cosmetology Esthetician COZ Individual Two Year Even 31-Mar"
+  },
+  {
+   "code": "HST",
+   "text": "Barber/Cosmetology Hair Stylist HST Individual Two Year Even 31-Mar"
+  },
+  {
+   "code": "MSBAR",
+   "text": "Barber/Cosmetology Military Spouse - Barber MSBAR Individual Two Year Even 31-Mar"
+  },
+  {
+   "code": "MSCOS",
+   "text": "Barber/Cosmetology Military Spouse - Cosmetologist MSCOS Individual Two Year Odd and Even 30-Apr"
+  },
+  {
+   "code": "MSCOZ",
+   "text": "Barber/Cosmetology Military Spouse - Esthetician MSCOZ Individual Two Year Even 31-Mar"
+  },
+  {
+   "code": "MSHST",
+   "text": "Barber/Cosmetology Military Spouse - Hair Stylist MSHST Individual Two Year Even 31-Mar"
+  },
+  {
+   "code": "MSMAN",
+   "text": "Barber/Cosmetology Military Spouse - Nail Technician MSMAN Individual Two Year Even 31-Mar"
+  },
+  {
+   "code": "MAN",
+   "text": "Barber/Cosmetology Nail Technician MAN Individual Two Year Even 31-Mar"
+  },
+  {
+   "code": "REG",
+   "text": "Barber/Cosmetology Shop Registration REG Business Two Year Odd 30-Nov"
+  },
+  {
+   "code": "MT",
+   "text": "Massage Therapists Massage Therapist MT Individual Two Year Odd 31-Jan"
+  },
+  {
+   "code": "MSMT",
+   "text": "Massage Therapists Military Spouse - Massage Therapist MSMT Individual Two Year Odd 31-Jan"
+  },
+  {
+   "code": "PMT",
+   "text": "Massage Therapists Provisional Massage Therapist (Historic Only) PMT Individual Do not renew"
+  }
+ ],
+ "census_city_lookup": {
+  "attempted": 169,
+  "filled": 168,
+  "failed": 0
+ },
+ "mapped_beauty_places": 518,
+ "overpass_endpoint": "https://overpass.kumi.systems/api/interpreter",
+ "total_candidates": 7016,
+ "with_websites": 166,
+ "category_counts": {
+  "hair": 2041,
+  "shop_category_review": 2292,
+  "nails": 1213,
+  "barber": 565,
+  "skincare": 426,
+  "lashes": 108,
+  "waxing": 125,
+  "brows": 43,
+  "salon_suites": 16,
+  "makeup": 40,
+  "spray_tanning": 61,
+  "massage": 54,
+  "permanent_makeup": 7,
+  "tattoo": 25
+ },
+ "errors": [
+  "osm: https://overpass-api.de/api/interpreter [nwr[\"shop\"=\"hairdresser\"](area.a);nwr[\"c]: HTTP 502 https://overpass-api.de/api/interpreter",
+  "osm: https://overpass.private.coffee/api/interpreter [nwr[\"shop\"=\"hairdresser\"](area.a);nwr[\"c]: HTTP 504 https://overpass.private.coffee/api/interpreter",
+  "osm: https://overpass.kumi.systems/api/interpreter [nwr[\"shop\"=\"hairdresser\"](area.a);nwr[\"c]: HTTP 504 https://overpass.kumi.systems/api/interpreter",
+  "osm: https://overpass-api.de/api/interpreter [nwr[\"shop\"=\"hairdresser\"](area.a);nwr[\"c]: HTTP 502 https://overpass-api.de/api/interpreter",
+  "osm: https://overpass.private.coffee/api/interpreter [nwr[\"shop\"=\"hairdresser\"](area.a);nwr[\"c]: HTTP 504 https://overpass.private.coffee/api/interpreter",
+  "osm: https://overpass.kumi.systems/api/interpreter [nwr[\"shop\"=\"hairdresser\"](area.a);nwr[\"c]: HTTP 504 https://overpass.kumi.systems/api/interpreter",
+  "osm: https://overpass-api.de/api/interpreter [nwr[\"shop\"~\"^(beauty|nails|barber|cosmet]: HTTP 502 https://overpass-api.de/api/interpreter",
+  "osm: https://overpass.private.coffee/api/interpreter [nwr[\"shop\"~\"^(beauty|nails|barber|cosmet]: The operation was aborted due to timeout",
+  "osm: https://overpass.kumi.systems/api/interpreter [nwr[\"shop\"~\"^(beauty|nails|barber|cosmet]: HTTP 502 https://overpass.kumi.systems/api/interpreter",
+  "osm: https://overpass-api.de/api/interpreter [nwr[\"shop\"~\"^(beauty|nails|barber|cosmet]: HTTP 502 https://overpass-api.de/api/interpreter",
+  "osm: https://overpass.private.coffee/api/interpreter [nwr[\"shop\"~\"^(beauty|nails|barber|cosmet]: HTTP 504 https://overpass.private.coffee/api/interpreter",
+  "osm: https://overpass.kumi.systems/api/interpreter [nwr[\"shop\"~\"^(beauty|nails|barber|cosmet]: HTTP 502 https://overpass.kumi.systems/api/interpreter",
+  "osm: https://overpass-api.de/api/interpreter [nwr[\"shop\"~\"^(tattoo|massage)$\"](area.a)]: HTTP 502 https://overpass-api.de/api/interpreter",
+  "osm: https://overpass.private.coffee/api/interpreter [nwr[\"shop\"~\"^(tattoo|massage)$\"](area.a)]: The operation was aborted due to timeout"
+ ],
+ "note": "A license record or map listing alone does not prove a business is open. The importer publishes only rows that meet its rules; the rest are held.",
+ "attribution": "OpenStreetMap data © OpenStreetMap contributors (ODbL, https://www.openstreetmap.org/copyright). Licensing data from the listed state open-data portals."
+}

@@ -179,8 +179,8 @@
   "id": 48,
   "zip_code": "80920",
   "license_number": "REG.3448",
-  "website_url": "https://www.floydsbarbershop.com/locations/colorado/colorado-springs/north-gate",
-  "phone": "(719) 785-7166",
+  "website_url": "",
+  "phone": "",
   "categories": [
    "barber"
   ],
@@ -234,100 +234,12 @@
   "id": 48,
   "zip_code": "80922",
   "license_number": "REG.4642",
-  "website_url": "https://www.floydsbarbershop.com/locations/colorado/colorado-springs/north-gate",
-  "phone": "(719) 785-7166",
+  "website_url": "",
+  "phone": "",
   "categories": [
    "barber"
   ],
   "source_external_id": "dora:REG:4642"
- },
- {
-  "id": 57,
-  "zip_code": "80210",
-  "license_number": null,
-  "website_url": "https://www.floydsbarbershop.com/locations/colorado/denver/denver-university",
-  "phone": "(303) 733-1616",
-  "categories": [
-   "barber"
-  ],
-  "source_external_id": "osm:node/631845186"
- },
- {
-  "id": 57,
-  "zip_code": "80203",
-  "license_number": null,
-  "website_url": "https://www.floydsbarbershop.com/locations/colorado/denver/broadway",
-  "phone": "(303) 830-9191",
-  "categories": [
-   "barber"
-  ],
-  "source_external_id": "osm:node/3401612827"
- },
- {
-  "id": 17,
-  "zip_code": "80216",
-  "license_number": null,
-  "website_url": "https://www.barberx.com/",
-  "phone": "",
-  "categories": [
-   "barber"
-  ],
-  "source_external_id": "osm:node/5894547379"
- },
- {
-  "id": 25,
-  "zip_code": "",
-  "license_number": null,
-  "website_url": "https://melissasbarbershop.com/",
-  "phone": "",
-  "categories": [
-   "barber"
-  ],
-  "source_external_id": "osm:node/6385909331"
- },
- {
-  "id": 39,
-  "zip_code": "80920",
-  "license_number": null,
-  "website_url": "https://www.hairdressingco.com/briargate/",
-  "phone": "(719) 266-9277",
-  "categories": [
-   "stylist"
-  ],
-  "source_external_id": "osm:node/7906545239"
- },
- {
-  "id": 14,
-  "zip_code": "80205",
-  "license_number": null,
-  "website_url": "https://www.franksdenver.com/",
-  "phone": "(303) 593-0640",
-  "categories": [
-   "stylist"
-  ],
-  "source_external_id": "osm:node/13765562962"
- },
- {
-  "id": 1,
-  "zip_code": "80204",
-  "license_number": null,
-  "website_url": "https://www.studiosalondenver.com/",
-  "phone": "(303) 623-0720",
-  "categories": [
-   "stylist"
-  ],
-  "source_external_id": "osm:node/13773020508"
- },
- {
-  "id": 21,
-  "zip_code": "80202",
-  "license_number": null,
-  "website_url": "https://speakeasybarberlounge.com/",
-  "phone": "(720) 466-3567",
-  "categories": [
-   "barber"
-  ],
-  "source_external_id": "osm:node/13806737432"
  },
  {
   "id": 37,
@@ -339,16 +251,5 @@
    "waxing_specialist"
   ],
   "source_external_id": "osm:node/6495370318"
- },
- {
-  "id": 65,
-  "zip_code": "80210",
-  "license_number": null,
-  "website_url": "https://salonsbyjc.com/location/colorado-denver-observatory-park/",
-  "phone": "(303) 777-7106",
-  "categories": [
-   "stylist"
-  ],
-  "source_external_id": "osm:node/7266892180"
  }
 ]
