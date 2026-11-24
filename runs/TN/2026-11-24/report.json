@@ -1,0 +1,57 @@
+{
+ "state": "TN",
+ "state_name": "Tennessee",
+ "wave": 4,
+ "created_at": "2026-11-24T22:54:08.521Z",
+ "staging_only": true,
+ "sources": [
+  {
+   "name": "OpenStreetMap (Overpass)",
+   "url": "https://overpass.private.coffee/api/interpreter",
+   "status": "processed",
+   "records": 1029,
+   "parts_ok": 4,
+   "parts_total": 4
+  },
+  {
+   "name": "U.S. Census Geocoder (place containing map point)",
+   "url": "https://geocoding.geo.census.gov/",
+   "status": "processed",
+   "records": 450
+  }
+ ],
+ "license_records_scanned": 0,
+ "licensed_active_candidates": 0,
+ "license_dropped": null,
+ "license_fields": null,
+ "license_shop_types": [],
+ "license_type_counts": [],
+ "license_type_lookup": [],
+ "census_city_lookup": {
+  "attempted": 466,
+  "filled": 450,
+  "failed": 0
+ },
+ "mapped_beauty_places": 1029,
+ "overpass_endpoint": "https://overpass.private.coffee/api/interpreter",
+ "total_candidates": 928,
+ "with_websites": 252,
+ "category_counts": {
+  "hair": 376,
+  "barber": 77,
+  "nails": 234,
+  "salon_suites": 9,
+  "brows": 4,
+  "makeup": 32,
+  "spray_tanning": 25,
+  "massage": 53,
+  "skincare": 23,
+  "waxing": 7,
+  "permanent_makeup": 1,
+  "lashes": 8,
+  "tattoo": 79
+ },
+ "errors": [],
+ "note": "A license record or map listing alone does not prove a business is open. The importer publishes only rows that meet its rules; the rest are held.",
+ "attribution": "OpenStreetMap data © OpenStreetMap contributors (ODbL, https://www.openstreetmap.org/copyright). Licensing data from the listed state open-data portals."
+}

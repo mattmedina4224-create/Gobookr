@@ -1,0 +1,28 @@
+[
+ {
+  "name": "Great Clips",
+  "city": "Knoxville",
+  "state": "TN",
+  "street_address": "113 Moss Grove Boulevard",
+  "zip_code": "37922",
+  "county": "",
+  "categories": [
+   "stylist"
+  ],
+  "website_url": "https://salons.greatclips.com/us/tn/knoxville/113-moss-grove-blvd",
+  "phone": "(865) 200-4890",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/node/13530072753",
+  "source_external_id": "osm:node/13530072753",
+  "license_number": null,
+  "latitude": 35.9102755,
+  "longitude": -84.0916069,
+  "operational_status": "verified",
+  "checked_at": "2026-11-24",
+  "raw_name": "Great Clips",
+  "website_candidate": "https://salons.greatclips.com/us/tn/knoxville/113-moss-grove-blvd",
+  "website_source_url": "",
+  "reason": "duplicate_candidate",
+  "duplicate_of": "osm:node/4439521464"
+ }
+]

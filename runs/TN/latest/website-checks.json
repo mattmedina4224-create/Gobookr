@@ -1,0 +1,1282 @@
+{
+ "http://groominginclaxton.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 142
+ },
+ "https://editsalonchattanooga.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 177
+ },
+ "https://www.plumfancyhairstudio.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 189
+ },
+ "https://salons.greatclips.com/us/tn/knoxville/1035-n-cedar-bluff-rd": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 455
+ },
+ "https://www.greatclips.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 623
+ },
+ "https://www.angieshairdesign.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 558
+ },
+ "https://salons.greatclips.com/us/tn/knoxville/2024-town-center-blvd": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 899
+ },
+ "https://www.rosstheboss.com/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 282
+ },
+ "https://www.trimnashville.com/": {
+  "status": "error",
+  "error": "ECONNRESET",
+  "ms": 464
+ },
+ "https://larueshaircutters.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 52
+ },
+ "https://barberkingstheoriginal.com/": {
+  "status": "error",
+  "error": "UNABLE_TO_GET_ISSUER_CERT_LOCALLY",
+  "ms": 243
+ },
+ "https://salons.greatclips.com/us/tn/bristol/412-pinnacle-pkwy": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 844
+ },
+ "https://haircutmenturnpikeoakridgetn.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 146
+ },
+ "https://www.supercuts.com/locations/nearme/haircut/tn/red-bank/3849-dayton-blvd-ste-107/81308": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 229
+ },
+ "https://trumangrey.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.trumangrey.com/",
+  "ms": 352
+ },
+ "https://backstage-salon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 278
+ },
+ "https://salons.greatclips.com/us/tn/elizabethton/1514-west-elk-avenue": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 199
+ },
+ "https://loweredmensgrooming.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 163
+ },
+ "https://salonocknox.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 251
+ },
+ "http://www.holidaybarbershop.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.holidaybarbershop.com/index.html",
+  "ms": 1522
+ },
+ "https://haircolorchattanooga.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 268
+ },
+ "https://m.greatclips.com/salons/4410": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://salons.greatclips.com/us/tn/springfield/2552-memorial-blvd",
+  "ms": 1495
+ },
+ "https://www.boltsbarbershop.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 270
+ },
+ "https://hdstarbarbershop.org/": {
+  "status": "error",
+  "error": "UND_ERR_SOCKET",
+  "ms": 301
+ },
+ "https://www.csbarbers.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 341
+ },
+ "https://salons.greatclips.com/us/tn/knoxville/10661-hardin-valley-road": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 350
+ },
+ "https://styles-unlimited-tn.hub.biz/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 196
+ },
+ "https://salons.greatclips.com/us/tn/knoxville/11657-parkside-dr": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 50
+ },
+ "https://www.cuttingcrewknoxville.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 487
+ },
+ "https://salons.greatclips.com/us/tn/ooltewah/5910-reagan-lane": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 364
+ },
+ "https://gambuzzasbarbershop.com/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 268
+ },
+ "https://brucescutandcurl.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.brucescutandcurl.com/",
+  "ms": 2139
+ },
+ "https://hairbysher.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.hairbysher.com/",
+  "ms": 1200
+ },
+ "https://www.hawkinsbarbershop.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 137
+ },
+ "https://www.huehairstudionashville.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 236
+ },
+ "https://westside-salon.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 591
+ },
+ "https://anchorbarberco.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 379
+ },
+ "https://www.everydaymagicksalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1461
+ },
+ "https://www.atouchofeden2.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 528
+ },
+ "https://salons.greatclips.com/us/tn/knoxville/113-moss-grove-blvd": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 392
+ },
+ "https://sportclips.com/us-tn-knoxville-tn412": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 720
+ },
+ "https://www.studio135knoxville.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://studio135knoxville.com/",
+  "ms": 1001
+ },
+ "https://www.salonmercuryknox.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 676
+ },
+ "https://naturalalternativessalonspa.com/locations/the-landings-at-cedar-bluff/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 591
+ },
+ "https://downtownbourbonandblades.barberly.app/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1002
+ },
+ "https://sportclips.com/us-tn-knoxville-tn408": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 186
+ },
+ "https://wildfiresalonnashville.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 308
+ },
+ "https://sportclips.com/us-tn-knoxville-tn405": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 864
+ },
+ "https://naturalalternativessalonspa.com/locations/western-plaza-bearden/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 306
+ },
+ "https://pikebarbershop.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 448
+ },
+ "https://www.kingcameonashvillebarber.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 225
+ },
+ "https://booksy.com/en-us/1012832_dee-the-barber_barber-shop_35902_knoxville": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1663
+ },
+ "https://breeze-hair-restoration.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 515
+ },
+ "https://lavishlylaidhair.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 631
+ },
+ "https://luxebygoulds.com/germantown": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://luxebygoulds.com/germantown/",
+  "ms": 528
+ },
+ "https://salons.greatclips.com/us/tn/hixson/5450-highway-153": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 116
+ },
+ "https://jr-barbershop.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 221
+ },
+ "https://rocbarbering.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 885
+ },
+ "https://roccocosalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 884
+ },
+ "https://hbisalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 216
+ },
+ "https://www.saintsalonchatt.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 146
+ },
+ "https://hair-by-megan-105147.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 444
+ },
+ "https://meagahair.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 446
+ },
+ "https://locality.com/place/hair-station-clarksville-tn": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 150
+ },
+ "https://www.manecontrolsalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 251
+ },
+ "http://liztorressalon.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 230
+ },
+ "https://www.salonazure.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 304
+ },
+ "https://sportclips.com/us-tn-chattanooga-tn501": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 77
+ },
+ "https://haircutmenwilmarudolphclarksvilletn.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 272
+ },
+ "https://www.salonsbyjc.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://salonsbyjc.com/",
+  "ms": 458
+ },
+ "https://royevansnewbeginnings.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 192
+ },
+ "https://lavoguehairsalon.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 161
+ },
+ "https://salons.greatclips.com/us/tn/chattanooga/2288-gunbarrel-rd": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 248
+ },
+ "https://fruitshairlab.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 543
+ },
+ "https://shapowlabs.com/": {
+  "status": "error",
+  "error": "DEPTH_ZERO_SELF_SIGNED_CERT",
+  "ms": 336
+ },
+ "https://salons.greatclips.com/us/tn/ashland-city/300-hutton-place": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 81
+ },
+ "https://www.montysbarbershop.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://montysbarbershop.com/",
+  "ms": 682
+ },
+ "https://moosenashville.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.moosenashville.com/",
+  "ms": 722
+ },
+ "https://www.thealchemysalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 407
+ },
+ "https://zennailbarknoxville.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 453
+ },
+ "https://douglasj.edu/knoxville-school/": {
+  "status": "error",
+  "error": "UND_ERR_SOCKET",
+  "ms": 265
+ },
+ "https://truebluesalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 313
+ },
+ "https://phenixsalonstennessee.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 940
+ },
+ "https://www.hbisalon.com/hair-benders-east-brainerd/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://hbisalon.com/hair-benders-east-brainerd/",
+  "ms": 995
+ },
+ "http://anewdaymassage.net/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 50
+ },
+ "http://dicksonnailspa.net/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 66
+ },
+ "https://omololu.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 289
+ },
+ "https://imagestudios360.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://imagestudios.co/",
+  "ms": 1040
+ },
+ "https://www.expressionshairandtan.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 145
+ },
+ "http://camillesbeautystudio.net/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 50
+ },
+ "https://www.vagaro.com/philbillycutandshave": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 2614
+ },
+ "https://lebellanailspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 364
+ },
+ "https://www.suntancity.com/find-a-salon/tennessee/maryville/hunters-crossing/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 596
+ },
+ "https://serenity-nails-tn.hub.biz/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 194
+ },
+ "https://topnailsclintontn.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 355
+ },
+ "https://www.jillbrooksbeauty.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 123
+ },
+ "https://www.simplyyoudayspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 484
+ },
+ "https://www.rougesalonandgallery.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1744
+ },
+ "https://www.marykay.com/bvaughn": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 970
+ },
+ "https://www.ulta.com/stores/nashville-tn-722": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 315
+ },
+ "https://www.ulta.com/stores/bristol-tn-756": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 765
+ },
+ "https://a2aspasalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 464
+ },
+ "https://3d-nail.hub.biz/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 84
+ },
+ "https://www.ulta.com/stores/murfreesboro-tn-254": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 238
+ },
+ "https://demo6.zotawebsites.com/": {
+  "status": "error",
+  "error": "ERR_TLS_CERT_ALTNAME_INVALID",
+  "ms": 113
+ },
+ "https://vibesnailsandlotionbar.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 114
+ },
+ "https://www.ulta.com/stores/jackson-tn-237": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 303
+ },
+ "https://www.lldtek.org/salon/appt/VkU1Zk1UQXlNalk9": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 313
+ },
+ "https://amomentspeace.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 166
+ },
+ "https://beautyboxtn.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 130
+ },
+ "http://www.salonfxspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.salonfxspa.com/Default.asp",
+  "ms": 1032
+ },
+ "https://www.bathandbodyworks.com/": {
+  "status": "error",
+  "http_status": 307,
+  "ms": 260
+ },
+ "https://www.luxnailspacleveland.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 354
+ },
+ "https://www.ulta.com/stores/oak-ridge-tn-1145": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 269
+ },
+ "https://zennailspatn.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 314
+ },
+ "https://manhattannailbaror.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 182
+ },
+ "https://nailstrixandspa.us/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 173
+ },
+ "https://nailspaclarksville.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 203
+ },
+ "https://curlupanddyehairandnailsalon.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 225
+ },
+ "https://spaloungestudio.com/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 150
+ },
+ "https://phenixsalonsuitestn.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1034
+ },
+ "https://spaoneseventy.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 647
+ },
+ "https://labellanailspapineyflats.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 293
+ },
+ "https://www.larimarmedspa.com/contact": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 210
+ },
+ "https://stores.sallybeauty.com/tn/oakridge/beauty-supply-oakridge-tn-3954.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1171
+ },
+ "https://jbangssalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.jbangssalon.com/",
+  "ms": 508
+ },
+ "https://zennailmaryville.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 318
+ },
+ "https://www.bathandbodyworks.com/?cm_mmc=local_BBW02372": {
+  "status": "error",
+  "http_status": 307,
+  "ms": 60
+ },
+ "https://www.ulta.com/stores/knoxville-tn-760": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 401
+ },
+ "https://www.ulta.com/stores/tullahoma-tn-1730": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 254
+ },
+ "https://www.ulta.com/stores/sevierville-tn-638": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 234
+ },
+ "https://changesmedical.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 443
+ },
+ "https://www.exquisitenailsfranklin.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://exquisitenailsfranklin.com/",
+  "ms": 2139
+ },
+ "http://wfsites.websitecreatorprotool.com/beautyandbeyondnashville.com/home.html": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 125
+ },
+ "https://divinestylesmobilesalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.divinestylesmobilesalon.com/",
+  "ms": 374
+ },
+ "https://vipnailsspanashville.com/": {
+  "status": "error",
+  "error": "CERT_HAS_EXPIRED",
+  "ms": 139
+ },
+ "https://www.omaetsalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.underbellyjax.com/",
+  "ms": 230
+ },
+ "https://madebeautybyher.glossgenius.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 488
+ },
+ "https://www.laseraway.com/locations/tn/nashville/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 149
+ },
+ "https://jadorehausofbrows.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 223
+ },
+ "https://www.merlenormanofbellevue.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 244
+ },
+ "https://www.54thnailfarragut.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 217
+ },
+ "https://thewaxhouse.net/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1319
+ },
+ "https://thenailbarnorthshore.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 257
+ },
+ "https://www.vipnailsspajohnsoncity.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 515
+ },
+ "https://bella-nails-cookeville.edan.io/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 122
+ },
+ "https://aspirebarberandbeauty.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 304
+ },
+ "https://5thnailloungetn.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 212
+ },
+ "https://serenitysuitessalonspa.com/home": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 334
+ },
+ "https://mnailspa1.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 189
+ },
+ "https://sassynailssalon.godaddysites.com/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 269
+ },
+ "https://www.hausofmo.co/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 305
+ },
+ "https://westlandnailsknoxville.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 130
+ },
+ "https://premanailsandlashes.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 3524
+ },
+ "https://pureluxespa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 154
+ },
+ "https://dynastynailbar.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 136
+ },
+ "https://dermazenspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1898
+ },
+ "https://nicole-diamond-holistic-skin-care.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 529
+ },
+ "https://polishednailssalon.wixsite.com/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 284
+ },
+ "https://topknoxbeautybar.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.topknoxbeautybar.com/",
+  "ms": 421
+ },
+ "https://blancnailbarknox.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 208
+ },
+ "https://abetteryoumedspatn.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.abetteryoumedspatn.com/",
+  "ms": 489
+ },
+ "https://aponte-salon.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 409
+ },
+ "https://locations.waxcenter.com/tn/knoxville/knoxville-brookview-0802.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 448
+ },
+ "https://urbannailbarknoxville.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 2199
+ },
+ "http://www.lovely-nail.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 229
+ },
+ "https://54thnailloungealcoa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1896
+ },
+ "https://serenitynailsut.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1946
+ },
+ "https://parisnailspaalcoa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 121
+ },
+ "https://linktr.ee/lunasnailandwax": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 131
+ },
+ "https://coconailslashes.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1121
+ },
+ "https://aspiralhealing.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 421
+ },
+ "https://www.armewellness.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://armewellness.com/",
+  "ms": 589
+ },
+ "https://www.lashesandesthetics.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 509
+ },
+ "https://chanailspachattanooga.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 146
+ },
+ "https://envyspanails.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 758
+ },
+ "https://the-facial-room-salon-spa.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 558
+ },
+ "https://www.tatianalaykam.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 168
+ },
+ "http://thenailroombearden.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1623
+ },
+ "https://wrightswaxco.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 494
+ },
+ "https://nail-trix-maryville.edan.io/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 88
+ },
+ "https://elegantsknnbeautybar.as.me/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://elegantsknnbeautybar.as.me/schedule/c37bf4a3",
+  "ms": 1121
+ },
+ "https://curatemedspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 131
+ },
+ "https://www.glotanning.com/location/hixson-tn/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1294
+ },
+ "https://skinpharm.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 437
+ },
+ "https://removery.com/tattoo-removal/locations/tn/knoxville/bearden-hills/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 2688
+ },
+ "https://palmbeachtan.com/locations/tn/bartlett-stage-road": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 459
+ },
+ "https://westendnailbarnashville.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1217
+ },
+ "https://www.merlenormanstudio.com/tn/elizabethton/mn-10067/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 547
+ },
+ "https://beautifulnailstn.localsearch.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 864
+ },
+ "https://kingnailsspatn.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1964
+ },
+ "https://www.bendsoap.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 387
+ },
+ "http://www.statebeautystores.com/20101/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 250
+ },
+ "http://mitchellssalonspa.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 59
+ },
+ "https://www.theerasure.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 841
+ },
+ "https://www.topnails.org/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 516
+ },
+ "https://www.ulta.com/stores/kingsport-tn-372": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 320
+ },
+ "https://stores.saloncentric.com/tn/chattanooga/2205": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 373
+ },
+ "https://www.ulta.com/stores/cookeville-tn-1199": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 488
+ },
+ "http://sequoianailsclinton.com/": {
+  "status": "error",
+  "error": "UND_ERR_CONNECT_TIMEOUT",
+  "ms": 10394
+ },
+ "https://www.southofnewyorksalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 141
+ },
+ "https://casablancanailbartn.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 51
+ },
+ "https://5thnailspaknoxvilletn.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1844
+ },
+ "https://www.ulta.com/stores/smyrna-tn-1201": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 619
+ },
+ "https://www.ulta.com/stores/chattanooga-tn-308": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 467
+ },
+ "https://jclaresnailsalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 222
+ },
+ "https://luxenailbarinc.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1839
+ },
+ "https://www.ulta.com/stores/dyersburg-tn-1644": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 610
+ },
+ "http://inkgallerytattoo.net/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 78
+ },
+ "https://www.ulta.com/stores/clarksville-tn-733": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 341
+ },
+ "https://head2toemassage.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 226
+ },
+ "https://www.thecomfortzone.co/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 102
+ },
+ "http://murfreesborohealingmassage.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 122
+ },
+ "https://www.jinxprooftattooemporium.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 140
+ },
+ "https://thebristoltattooco.dudaone.com/home": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://thebristoltattooco.dudaone.com/",
+  "ms": 460
+ },
+ "https://www.knoxvillemassagespas.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 314
+ },
+ "https://www.zennailspa.com/zen-nail-spa-hamilton-place-chattanooga": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1549
+ },
+ "https://riversidetattoo.club/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 346
+ },
+ "http://sunnymassage.net/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "http://www.sunnymassage.net/",
+  "ms": 768
+ },
+ "https://wakespa.com/knoxville-tn-spa-massage/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 245
+ },
+ "https://bigdaddysviciouscolorstattoos.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 112
+ },
+ "https://www.helmassageandwellness.com/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 553
+ },
+ "https://www.reposemt.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://reposemt.com/",
+  "ms": 741
+ },
+ "https://serendipitywellnesstn.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 416
+ },
+ "https://www.elitetattoocompanyknoxville.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 279
+ },
+ "https://oasismassageandspa.net/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://sacredsagespa.com/",
+  "ms": 701
+ },
+ "https://rosemassageandspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 328
+ },
+ "https://www.nowornevergallery.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 377
+ },
+ "https://www.goldcrosstattooco.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 352
+ },
+ "https://olivbodybar.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 392
+ },
+ "https://locations.massageenvy.com/tennessee/knoxville/9450-s-northshore-dr.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 725
+ },
+ "http://westartstattoostudio.weebly.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 359
+ },
+ "https://www.tattoosunrise.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 152
+ },
+ "https://laughingkoffintattoo.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 340
+ },
+ "https://www.c1hmassage.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 134
+ },
+ "https://locations.massageenvy.com/tennessee/alcoa/258-hamilton-crossing-drive.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 667
+ },
+ "https://hhtattoonashville.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 256
+ },
+ "https://threeoakswellness.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 733
+ },
+ "https://www.studio617tattoos.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 267
+ },
+ "https://inkdoctordoodle.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 865
+ },
+ "https://www.tattootechnique97.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 268
+ },
+ "http://www.tattoo.com/dennis-sullivan-tattoos": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 392
+ },
+ "https://iloveyou.tattoo/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 629
+ },
+ "https://www.sursamassageandwellness.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 818
+ },
+ "https://trilogymemphis.com/": {
+  "status": "error",
+  "error": "UND_ERR_SOCKET",
+  "ms": 281
+ },
+ "https://www.passionfishtattoostudio.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 166
+ },
+ "https://dark-raine-tattoo-studio-llc-105288.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 832
+ },
+ "https://locations.massageenvy.com/tennessee/chattanooga/2100-hamilton-place-blvd.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 358
+ },
+ "https://hard-knox-tattoo.mapsite.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 965
+ },
+ "https://mysite.vagaro.com/harmonymassageclarksville/home": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1193
+ },
+ "https://www.wabisabi.clinic/": {
+  "status": "error",
+  "error": "TimeoutError",
+  "ms": 15001
+ }
+}

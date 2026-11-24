@@ -1,0 +1,656 @@
+{
+ "state": "TN",
+ "census_places": 501,
+ "places_covered": 40,
+ "place_coverage_pct": 8,
+ "census_counties": 95,
+ "counties_covered": 29,
+ "counties_uncovered": [
+  "Bedford County",
+  "Benton County",
+  "Bledsoe County",
+  "Campbell County",
+  "Cannon County",
+  "Carroll County",
+  "Chester County",
+  "Claiborne County",
+  "Clay County",
+  "Cocke County",
+  "Crockett County",
+  "Cumberland County",
+  "DeKalb County",
+  "Decatur County",
+  "Dickson County",
+  "Fayette County",
+  "Fentress County",
+  "Gibson County",
+  "Giles County",
+  "Grainger County",
+  "Grundy County",
+  "Hamblen County",
+  "Hancock County",
+  "Hardeman County",
+  "Haywood County",
+  "Henderson County",
+  "Henry County",
+  "Hickman County",
+  "Houston County",
+  "Humphreys County",
+  "Jackson County",
+  "Jefferson County",
+  "Johnson County",
+  "Lake County",
+  "Lauderdale County",
+  "Lewis County",
+  "Lincoln County",
+  "Loudon County",
+  "Macon County",
+  "Marion County",
+  "Marshall County",
+  "Maury County",
+  "McNairy County",
+  "Meigs County",
+  "Monroe County",
+  "Moore County",
+  "Morgan County",
+  "Obion County",
+  "Overton County",
+  "Perry County",
+  "Pickett County",
+  "Polk County",
+  "Rhea County",
+  "Scott County",
+  "Sequatchie County",
+  "Smith County",
+  "Stewart County",
+  "Tipton County",
+  "Trousdale County",
+  "Unicoi County",
+  "Union County",
+  "Van Buren County",
+  "Warren County",
+  "Wayne County",
+  "Weakley County",
+  "White County"
+ ],
+ "communities_outside_census_places": [
+  {
+   "city": "Nashville",
+   "shops": 18
+  },
+  {
+   "city": "Nashville-Davidson Metropolitan Government (Balance)",
+   "shops": 6
+  },
+  {
+   "city": "Antioch",
+   "shops": 2
+  },
+  {
+   "city": "Cordova",
+   "shops": 2
+  },
+  {
+   "city": "Hixson",
+   "shops": 2
+  },
+  {
+   "city": "Piney Flats",
+   "shops": 1
+  },
+  {
+   "city": "Hermitage",
+   "shops": 1
+  },
+  {
+   "city": "Bellevue",
+   "shops": 1
+  }
+ ],
+ "top_covered_places": [
+  {
+   "name": "Knoxville",
+   "shops": 41
+  },
+  {
+   "name": "Chattanooga",
+   "shops": 21
+  },
+  {
+   "name": "Johnson City",
+   "shops": 11
+  },
+  {
+   "name": "Clarksville",
+   "shops": 10
+  },
+  {
+   "name": "Oak Ridge",
+   "shops": 7
+  },
+  {
+   "name": "Alcoa",
+   "shops": 5
+  },
+  {
+   "name": "Franklin",
+   "shops": 5
+  },
+  {
+   "name": "Kingsport",
+   "shops": 5
+  },
+  {
+   "name": "Cleveland",
+   "shops": 4
+  },
+  {
+   "name": "Cookeville",
+   "shops": 4
+  },
+  {
+   "name": "Maryville",
+   "shops": 4
+  },
+  {
+   "name": "Bristol",
+   "shops": 3
+  },
+  {
+   "name": "Memphis",
+   "shops": 3
+  },
+  {
+   "name": "Clinton",
+   "shops": 2
+  },
+  {
+   "name": "Tullahoma",
+   "shops": 2
+  },
+  {
+   "name": "Elizabethton",
+   "shops": 2
+  },
+  {
+   "name": "Athens",
+   "shops": 2
+  },
+  {
+   "name": "Gallatin",
+   "shops": 2
+  },
+  {
+   "name": "Hendersonville",
+   "shops": 2
+  },
+  {
+   "name": "Jackson",
+   "shops": 2
+  },
+  {
+   "name": "Savannah",
+   "shops": 2
+  },
+  {
+   "name": "Springfield",
+   "shops": 1
+  },
+  {
+   "name": "Red Bank",
+   "shops": 1
+  },
+  {
+   "name": "Arlington",
+   "shops": 1
+  },
+  {
+   "name": "Ooltewah",
+   "shops": 1
+  },
+  {
+   "name": "Germantown",
+   "shops": 1
+  },
+  {
+   "name": "Ashland City",
+   "shops": 1
+  },
+  {
+   "name": "Brentwood",
+   "shops": 1
+  },
+  {
+   "name": "Mount Juliet",
+   "shops": 1
+  },
+  {
+   "name": "Rogersville",
+   "shops": 1
+  },
+  {
+   "name": "Murfreesboro",
+   "shops": 1
+  },
+  {
+   "name": "Sevierville",
+   "shops": 1
+  },
+  {
+   "name": "Greeneville",
+   "shops": 1
+  },
+  {
+   "name": "Collegedale",
+   "shops": 1
+  },
+  {
+   "name": "Bartlett",
+   "shops": 1
+  },
+  {
+   "name": "Goodlettsville",
+   "shops": 1
+  },
+  {
+   "name": "Lawrenceburg",
+   "shops": 1
+  },
+  {
+   "name": "Smyrna",
+   "shops": 1
+  },
+  {
+   "name": "Dyersburg",
+   "shops": 1
+  },
+  {
+   "name": "Ethridge",
+   "shops": 1
+  }
+ ],
+ "uncovered_places_with_held_candidates": [
+  {
+   "name": "East Ridge",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 7
+  },
+  {
+   "name": "Halls",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 6
+  },
+  {
+   "name": "Atoka",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Carthage",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Gatlinburg",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Martin",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Oakland",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Union City",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Dickson",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "New Tazewell",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Pigeon Forge",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Shelbyville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Smithville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Columbia",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Covington",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Farragut",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Jellico",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "La Follette",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "McKenzie",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "South Fulton",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Watertown",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Adamsville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Alamo",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Collinwood",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Crossville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Dyer",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Henderson",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Jacksboro",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Lebanon",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Loudon",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Millington",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Rockwood",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Rocky Top",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Signal Mountain",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Sneedville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Tellico Village",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Unionville",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Baxter",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Bolivar",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Burns",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Decherd",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Dover",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Dunlap",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Erin",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Fairview",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Fayetteville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Grand Junction",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Harriman",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Jamestown",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Karns",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Kingston",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Lenoir City",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Lexington",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Lookout Mountain",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "McMinnville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Morristown",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Mountain City",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Newbern",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Nolensville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Obion",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Ocoee",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Paris",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Piperton",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Pulaski",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Red Boiling Springs",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Ripley",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Roan Mountain",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Rossville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Rutherford",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Soddy-Daisy",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Somerville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Spring City",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Trenton",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Trezevant",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Troy",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "White House",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  }
+ ],
+ "uncovered_places_without_candidates": 385,
+ "source": "U.S. Census Bureau 2020 place-by-county and county code files"
+}
