@@ -1,0 +1,28 @@
+[
+ {
+  "name": "Ulta Beauty",
+  "city": "Pottstown",
+  "state": "PA",
+  "street_address": "290 Upland Square Drive",
+  "zip_code": "19464",
+  "county": "",
+  "categories": [
+   "stylist"
+  ],
+  "website_url": "https://www.ulta.com/stores/pottstown-pa-1395",
+  "phone": "(484) 644-2066",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/node/6793314422",
+  "source_external_id": "osm:node/6793314422",
+  "license_number": null,
+  "latitude": 40.266736,
+  "longitude": -75.6549795,
+  "operational_status": "verified",
+  "checked_at": "2026-11-24",
+  "raw_name": "Ulta Beauty",
+  "website_candidate": "https://www.ulta.com/stores/pottstown-pa-1395",
+  "website_source_url": "",
+  "reason": "duplicate_candidate",
+  "duplicate_of": "osm:node/5759336323"
+ }
+]
