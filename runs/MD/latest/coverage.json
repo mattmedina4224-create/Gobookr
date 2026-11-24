@@ -1,0 +1,753 @@
+{
+ "state": "MD",
+ "census_places": 532,
+ "places_covered": 91,
+ "place_coverage_pct": 17.1,
+ "census_counties": 24,
+ "counties_covered": 22,
+ "counties_uncovered": [
+  "Kent County",
+  "Somerset County"
+ ],
+ "communities_outside_census_places": [
+  {
+   "city": "Nottingham",
+   "shops": 10
+  },
+  {
+   "city": "Forest Hill",
+   "shops": 5
+  },
+  {
+   "city": "Clarksville",
+   "shops": 4
+  },
+  {
+   "city": "Halethorpe",
+   "shops": 2
+  },
+  {
+   "city": "Linthicum Heights",
+   "shops": 2
+  },
+  {
+   "city": "Loch Raven",
+   "shops": 2
+  },
+  {
+   "city": "Mount Washington",
+   "shops": 1
+  },
+  {
+   "city": "Phoenix",
+   "shops": 1
+  },
+  {
+   "city": "Belcamp",
+   "shops": 1
+  },
+  {
+   "city": "Churchville",
+   "shops": 1
+  },
+  {
+   "city": "Glenwood",
+   "shops": 1
+  },
+  {
+   "city": "Govans",
+   "shops": 1
+  },
+  {
+   "city": "Joppa",
+   "shops": 1
+  },
+  {
+   "city": "Sandy Spring",
+   "shops": 1
+  },
+  {
+   "city": "Hanover",
+   "shops": 1
+  },
+  {
+   "city": "Raspeburg",
+   "shops": 1
+  },
+  {
+   "city": "Conowingo",
+   "shops": 1
+  }
+ ],
+ "top_covered_places": [
+  {
+   "name": "Bel Air",
+   "shops": 46
+  },
+  {
+   "name": "Baltimore",
+   "shops": 43
+  },
+  {
+   "name": "Glen Burnie",
+   "shops": 17
+  },
+  {
+   "name": "Rockville",
+   "shops": 12
+  },
+  {
+   "name": "Lutherville",
+   "shops": 11
+  },
+  {
+   "name": "Laurel",
+   "shops": 10
+  },
+  {
+   "name": "Ellicott City",
+   "shops": 10
+  },
+  {
+   "name": "Annapolis",
+   "shops": 9
+  },
+  {
+   "name": "Silver Spring",
+   "shops": 9
+  },
+  {
+   "name": "Columbia",
+   "shops": 8
+  },
+  {
+   "name": "Edgewood",
+   "shops": 7
+  },
+  {
+   "name": "Frederick",
+   "shops": 7
+  },
+  {
+   "name": "Pasadena",
+   "shops": 7
+  },
+  {
+   "name": "Abingdon",
+   "shops": 6
+  },
+  {
+   "name": "Westminster",
+   "shops": 6
+  },
+  {
+   "name": "Prince Frederick",
+   "shops": 5
+  },
+  {
+   "name": "College Park",
+   "shops": 5
+  },
+  {
+   "name": "Perry Hall",
+   "shops": 5
+  },
+  {
+   "name": "Gaithersburg",
+   "shops": 5
+  },
+  {
+   "name": "Bethesda",
+   "shops": 5
+  },
+  {
+   "name": "Hagerstown",
+   "shops": 5
+  },
+  {
+   "name": "Fallston",
+   "shops": 4
+  },
+  {
+   "name": "Edgewater",
+   "shops": 4
+  },
+  {
+   "name": "Hyattsville",
+   "shops": 4
+  },
+  {
+   "name": "Perryville",
+   "shops": 4
+  },
+  {
+   "name": "Lusby",
+   "shops": 3
+  },
+  {
+   "name": "Riverdale Park",
+   "shops": 3
+  },
+  {
+   "name": "Parkville",
+   "shops": 3
+  },
+  {
+   "name": "Eldersburg",
+   "shops": 3
+  },
+  {
+   "name": "Ilchester",
+   "shops": 3
+  },
+  {
+   "name": "North East",
+   "shops": 3
+  },
+  {
+   "name": "Aberdeen",
+   "shops": 3
+  },
+  {
+   "name": "Cockeysville",
+   "shops": 3
+  },
+  {
+   "name": "Waldorf",
+   "shops": 3
+  },
+  {
+   "name": "Oakland",
+   "shops": 3
+  },
+  {
+   "name": "Elkton",
+   "shops": 3
+  },
+  {
+   "name": "White Marsh",
+   "shops": 3
+  },
+  {
+   "name": "Potomac",
+   "shops": 3
+  },
+  {
+   "name": "Berlin",
+   "shops": 2
+  },
+  {
+   "name": "Denton",
+   "shops": 2
+  }
+ ],
+ "uncovered_places_with_held_candidates": [
+  {
+   "name": "Essex",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 32
+  },
+  {
+   "name": "Middle River",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 18
+  },
+  {
+   "name": "Carney",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 11
+  },
+  {
+   "name": "Severna Park",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 10
+  },
+  {
+   "name": "Mount Airy",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 9
+  },
+  {
+   "name": "Urbana",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 8
+  },
+  {
+   "name": "Crofton",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 7
+  },
+  {
+   "name": "Wheaton",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 7
+  },
+  {
+   "name": "Clarksburg",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 6
+  },
+  {
+   "name": "Fort Washington",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Kettering",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Reisterstown",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Woodlawn",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Burtonsville",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Capitol Heights",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Colesville",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Damascus",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Deale",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Frostburg",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Glenn Dale",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Maryland City",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Savage",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Suitland",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Westernport",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Aspen Hill",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Brunswick",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Chesapeake Beach",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Chillum",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Friendship Heights Village",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Garrison",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Langley Park",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Pocomoke City",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Poolesville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Randallstown",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Thurmont",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Adelphi",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Arnold",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Ashton-Sandy Spring",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Bel Air North",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Brandywine",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Burnt Mills",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Camp Springs",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Fruitland",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Glenarden",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Jarrettsville",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Jefferson",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Kemp Mill",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "La Plata",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Leonardtown",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Linthicum",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Milford Mill",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Morningside",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Mountain Lake Park",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "North Kensington",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Queenstown",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Redland",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Wildewood",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Bowleys Quarters",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Brooklyn Park",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Cabin John",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Calverton",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Chester",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Chestertown",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Chevy Chase",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Clinton",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Cloverly",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Colmar Manor",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Crownsville",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Eckhart Mines",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Ellerslie",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Green Valley",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Halfway",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Hebron",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Highland",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Hillandale",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Huntingtown",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Hurlock",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Lake Shore",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Leisure World",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Martin's Additions",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Midland",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Mount Rainier",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "National Harbor",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "New Market",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Ocean Pines",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Owings",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Oxon Hill",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Pleasant Hills",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Preston",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Queensland",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Seabrook",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Shady Side",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "South Laurel",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "St. Michaels",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Stevensville",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Taneytown",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Union Bridge",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Upper Marlboro",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Vienna",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "West Ocean City",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "White Oak",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  }
+ ],
+ "uncovered_places_without_candidates": 340,
+ "source": "U.S. Census Bureau 2020 place-by-county and county code files"
+}

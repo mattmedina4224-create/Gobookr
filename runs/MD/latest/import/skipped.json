@@ -1,0 +1,80 @@
+[
+ {
+  "name": "Great Clips",
+  "city": "Bel Air",
+  "state": "MD",
+  "street_address": "630 Marketplace Drive",
+  "zip_code": "21014",
+  "county": "",
+  "categories": [
+   "stylist"
+  ],
+  "website_url": "https://salons.greatclips.com/us/md/bel-air/630-marketplace-drive",
+  "phone": "(410) 638-8840",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/node/6720104026",
+  "source_external_id": "osm:node/6720104026",
+  "license_number": null,
+  "latitude": 39.5233497,
+  "longitude": -76.3530078,
+  "operational_status": "verified",
+  "checked_at": "2026-11-24",
+  "raw_name": "Great Clips",
+  "website_candidate": "https://salons.greatclips.com/us/md/bel-air/630-marketplace-drive",
+  "website_source_url": "",
+  "reason": "duplicate_candidate",
+  "duplicate_of": "osm:node/6486894339"
+ },
+ {
+  "name": "Great Clips",
+  "city": "Glen Burnie",
+  "state": "MD",
+  "street_address": "6711 Ritchie Highway",
+  "zip_code": "21061",
+  "county": "",
+  "categories": [
+   "stylist"
+  ],
+  "website_url": "https://salons.greatclips.com/us/md/glen-burnie/6711-ritchie-highway",
+  "phone": "(410) 760-5550",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/node/12046540951",
+  "source_external_id": "osm:node/12046540951",
+  "license_number": null,
+  "latitude": 39.1908378,
+  "longitude": -76.6109418,
+  "operational_status": "verified",
+  "checked_at": "2026-11-24",
+  "raw_name": "Great Clips",
+  "website_candidate": "https://salons.greatclips.com/us/md/glen-burnie/6711-ritchie-highway",
+  "website_source_url": "",
+  "reason": "duplicate_candidate",
+  "duplicate_of": "osm:node/11879969490"
+ },
+ {
+  "name": "Old Line Barbers",
+  "city": "Bel Air",
+  "state": "MD",
+  "street_address": "12 West Pennsylvania Avenue",
+  "zip_code": "21014",
+  "county": "",
+  "categories": [
+   "barber"
+  ],
+  "website_url": "https://www.oldlinebarbers.com/",
+  "phone": "(410) 838-2415",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/way/705789344",
+  "source_external_id": "osm:way/705789344",
+  "license_number": null,
+  "latitude": 39.5364466,
+  "longitude": -76.3500589,
+  "operational_status": "verified",
+  "checked_at": "2026-11-24",
+  "raw_name": "Old Line Barbers",
+  "website_candidate": "https://www.oldlinebarbers.com/",
+  "website_source_url": "",
+  "reason": "duplicate_candidate",
+  "duplicate_of": "osm:node/6513878012"
+ }
+]
