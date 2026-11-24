@@ -172,6 +172,8 @@ module.exports = function (router) {
 
     try {
       let subscriptionId;
+      // Business Pro has its own endpoint (/business-pro/stripe/webhook); never let it touch professional or team billing.
+      if (require('../lib/business-pro').isBusinessProObject(object) || require('../lib/business-pro').isBusinessProObject(object.subscription_details) || require('../lib/business-pro').isBusinessProObject(object.parent && object.parent.subscription_details)) return json(ctx.res, 200, { received: true, ignored: 'business_pro' });
       if (event.type === 'checkout.session.completed') subscriptionId = object.subscription;
       else if (event.type.startsWith('customer.subscription.')) subscriptionId = object.id;
       else if (event.type === 'invoice.paid' || event.type === 'invoice.payment_failed') {
@@ -181,6 +183,7 @@ module.exports = function (router) {
       if (subscriptionId) {
         // Retrieve current state so delayed invoices cannot undo a trial or cancellation.
         const subscription = event.type === 'customer.subscription.deleted' ? object : await retrieveSubscription(subscriptionId);
+        if (require('../lib/business-pro').isBusinessProObject(subscription)) return json(ctx.res, 200, { received: true, ignored: 'business_pro' });
         const status = normalizedSubscriptionStatus(subscription.status);
         const item = subscription.items && subscription.items.data && subscription.items.data[0];
         const periodEnd = unixToSqlite(subscription.current_period_end || (item && item.current_period_end));

@@ -60,8 +60,10 @@ function dashboardData(ctx, shop, extra = {}) {
   return { csrf: ctx.session?.csrf_token || '', profile, team, pendingInvites, completion, suggestedStep, sponsorship: sponsorshipEnabled(), inviteLinks: [], ...extra };
 }
 function render(ctx, shop, shops, { tab, step, flash, status = 200, extra } = {}) {
-  const data = dashboardData(ctx, shop, extra);
-  const t = View.TABS.some(([id]) => id === tab) ? tab : 'overview';
+  const career = process.env.CAREER_STUDIO_ENABLED === '1';
+  let t = View.TABS.some(([id]) => id === tab) ? tab : 'overview';
+  if (!career && (t === 'hiring' || t === 'pro')) t = 'overview';
+  const data = dashboardData(ctx, shop, { ...(career ? require('./career').dashboardExtras(ctx, shop, t) : {}), ...extra });
   const s = Number(step) >= 1 && Number(step) <= 6 ? Number(step) : null;
   send(ctx.res, layout({ title: `${shop.name} · Business dashboard`, currentUser: ctx.currentUser, session: ctx.session, robots: 'noindex,nofollow',
     flash: flash || flashFromQuery(ctx.query), body: View.page({ shop, shops, tab: t, step: s, data }) }), status);
@@ -135,6 +137,8 @@ function move(table, shopId, id, dir) {
 }
 
 module.exports = function (router) {
+  module.exports.render = render;
+  module.exports.owner = owner;
   router.get('/dashboard/shop', async (ctx) => {
     if (sponsorshipEnabled() && ['basics', 'profile'].includes(ctx.query?.setup)) {
       const o = owner(ctx); if (!o) return;
