@@ -1,27 +1,27 @@
 {
  "state": "NY",
  "census_places": 1285,
- "places_covered": 735,
- "place_coverage_pct": 57.2,
+ "places_covered": 737,
+ "place_coverage_pct": 57.4,
  "census_counties": 62,
  "counties_covered": 62,
  "counties_uncovered": [],
  "communities_outside_census_places": [
   {
    "city": "Brooklyn",
-   "shops": 1917
+   "shops": 1927
   },
   {
    "city": "Bronx",
-   "shops": 1023
+   "shops": 1024
   },
   {
    "city": "Staten Island",
-   "shops": 477
+   "shops": 478
   },
   {
    "city": "Flushing",
-   "shops": 396
+   "shops": 397
   },
   {
    "city": "Astoria",
@@ -29,7 +29,7 @@
   },
   {
    "city": "Jamaica",
-   "shops": 143
+   "shops": 144
   },
   {
    "city": "Jackson Heights",
@@ -41,26 +41,26 @@
   },
   {
    "city": "Amherst",
-   "shops": 84
+   "shops": 86
   },
   {
    "city": "Ridgewood",
-   "shops": 80
+   "shops": 81
   },
   {
    "city": "Woodside",
-   "shops": 74
+   "shops": 76
   },
   {
    "city": "Forest Hills",
    "shops": 69
   },
   {
-   "city": "Elmhurst",
-   "shops": 67
+   "city": "Long Island City",
+   "shops": 68
   },
   {
-   "city": "Long Island City",
+   "city": "Elmhurst",
    "shops": 67
   },
   {
@@ -69,14 +69,14 @@
   },
   {
    "city": "Clifton Park",
-   "shops": 54
-  },
-  {
-   "city": "Whitestone",
-   "shops": 49
+   "shops": 56
   },
   {
    "city": "South Richmond Hill",
+   "shops": 50
+  },
+  {
+   "city": "Whitestone",
    "shops": 49
   },
   {
@@ -88,15 +88,19 @@
    "shops": 39
   },
   {
-   "city": "Richmond Hill",
-   "shops": 34
-  },
-  {
    "city": "Woodhaven",
    "shops": 34
   },
   {
+   "city": "Richmond Hill",
+   "shops": 33
+  },
+  {
    "city": "Maspeth",
+   "shops": 33
+  },
+  {
+   "city": "Vestal",
    "shops": 33
   },
   {
@@ -104,15 +108,11 @@
    "shops": 33
   },
   {
-   "city": "Vestal",
-   "shops": 32
+   "city": "Cicero",
+   "shops": 30
   },
   {
    "city": "Queensbury",
-   "shops": 29
-  },
-  {
-   "city": "Cicero",
    "shops": 29
   },
   {
@@ -184,15 +184,15 @@
    "shops": 15
   },
   {
+   "city": "Laurelton",
+   "shops": 14
+  },
+  {
    "city": "Rosedale",
    "shops": 14
   },
   {
    "city": "Kew Gardens",
-   "shops": 13
-  },
-  {
-   "city": "Laurelton",
    "shops": 13
   },
   {
@@ -272,10 +272,6 @@
    "shops": 7
   },
   {
-   "city": "Ballston Lake",
-   "shops": 7
-  },
-  {
    "city": "Castleton",
    "shops": 6
   },
@@ -285,6 +281,10 @@
   },
   {
    "city": "Clay",
+   "shops": 6
+  },
+  {
+   "city": "Ballston Lake",
    "shops": 6
   },
   {
@@ -1100,38 +1100,38 @@
    "shops": 1
   },
   {
-   "city": "Bearsville",
-   "shops": 1
-  },
-  {
    "city": "Bayberry",
    "shops": 1
   },
   {
    "city": "Greenburgh",
    "shops": 1
+  },
+  {
+   "city": "Bearsville",
+   "shops": 1
   }
  ],
  "top_covered_places": [
   {
    "name": "New York",
-   "shops": 2171
+   "shops": 2290
   },
   {
    "name": "Rochester",
-   "shops": 448
+   "shops": 449
   },
   {
    "name": "Buffalo",
-   "shops": 262
+   "shops": 269
   },
   {
    "name": "Albany",
-   "shops": 176
+   "shops": 178
   },
   {
    "name": "Syracuse",
-   "shops": 170
+   "shops": 172
   },
   {
    "name": "White Plains",
@@ -1155,7 +1155,7 @@
   },
   {
    "name": "Middletown",
-   "shops": 101
+   "shops": 102
   },
   {
    "name": "Latham",
@@ -1163,7 +1163,7 @@
   },
   {
    "name": "Saratoga Springs",
-   "shops": 81
+   "shops": 85
   },
   {
    "name": "Massapequa",
@@ -1171,7 +1171,7 @@
   },
   {
    "name": "Liverpool",
-   "shops": 78
+   "shops": 79
   },
   {
    "name": "Huntington",
@@ -1179,7 +1179,7 @@
   },
   {
    "name": "Webster",
-   "shops": 73
+   "shops": 72
   },
   {
    "name": "Great Neck",
@@ -1203,7 +1203,7 @@
   },
   {
    "name": "East Meadow",
-   "shops": 65
+   "shops": 66
   },
   {
    "name": "Nanuet",
@@ -1215,7 +1215,11 @@
   },
   {
    "name": "Huntington Station",
-   "shops": 57
+   "shops": 58
+  },
+  {
+   "name": "West Seneca",
+   "shops": 56
   },
   {
    "name": "Tonawanda",
@@ -1224,10 +1228,6 @@
   {
    "name": "Hicksville",
    "shops": 56
-  },
-  {
-   "name": "West Seneca",
-   "shops": 55
   },
   {
    "name": "Westbury",
@@ -1262,15 +1262,15 @@
    "shops": 50
   },
   {
-   "name": "Kingston",
-   "shops": 50
-  },
-  {
    "name": "Scarsdale",
    "shops": 50
   },
   {
    "name": "New Hartford",
+   "shops": 49
+  },
+  {
+   "name": "Kingston",
    "shops": 49
   }
  ],
@@ -1278,16 +1278,16 @@
   {
    "name": "Brighton",
    "type": "CENSUS DESIGNATED PLACE",
-   "held_candidates": 15
+   "held_candidates": 12
   },
   {
-   "name": "Herricks",
-   "type": "CENSUS DESIGNATED PLACE",
-   "held_candidates": 5
-  },
-  {
-   "name": "Manorhaven",
+   "name": "Heuvelton",
    "type": "INCORPORATED PLACE",
+   "held_candidates": 6
+  },
+  {
+   "name": "Westmere",
+   "type": "CENSUS DESIGNATED PLACE",
    "held_candidates": 5
   },
   {
@@ -1296,12 +1296,17 @@
    "held_candidates": 4
   },
   {
-   "name": "Heuvelton",
+   "name": "Manorhaven",
    "type": "INCORPORATED PLACE",
    "held_candidates": 4
   },
   {
    "name": "Mechanicstown",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Red Oaks Mill",
    "type": "CENSUS DESIGNATED PLACE",
    "held_candidates": 4
   },
@@ -1316,18 +1321,13 @@
    "held_candidates": 4
   },
   {
-   "name": "Westmere",
-   "type": "CENSUS DESIGNATED PLACE",
-   "held_candidates": 4
-  },
-  {
    "name": "Colton",
    "type": "CENSUS DESIGNATED PLACE",
    "held_candidates": 3
   },
   {
-   "name": "Corfu",
-   "type": "INCORPORATED PLACE",
+   "name": "Gardnertown",
+   "type": "CENSUS DESIGNATED PLACE",
    "held_candidates": 3
   },
   {
@@ -1337,6 +1337,11 @@
   },
   {
    "name": "Balmville",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Barnum Island",
    "type": "CENSUS DESIGNATED PLACE",
    "held_candidates": 2
   },
@@ -1366,13 +1371,13 @@
    "held_candidates": 2
   },
   {
-   "name": "Freeville",
+   "name": "Flower Hill",
    "type": "INCORPORATED PLACE",
    "held_candidates": 2
   },
   {
-   "name": "Gardnertown",
-   "type": "CENSUS DESIGNATED PLACE",
+   "name": "Freeville",
+   "type": "INCORPORATED PLACE",
    "held_candidates": 2
   },
   {
@@ -1391,7 +1396,17 @@
    "held_candidates": 2
   },
   {
+   "name": "Herricks",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
    "name": "Lincoln Park",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Lincolndale",
    "type": "CENSUS DESIGNATED PLACE",
    "held_candidates": 2
   },
@@ -1413,6 +1428,11 @@
   {
    "name": "Philmont",
    "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Scotchtown",
+   "type": "CENSUS DESIGNATED PLACE",
    "held_candidates": 2
   },
   {
@@ -1441,6 +1461,11 @@
    "held_candidates": 2
   },
   {
+   "name": "Accord",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
    "name": "Adams Center",
    "type": "CENSUS DESIGNATED PLACE",
    "held_candidates": 1
@@ -1456,11 +1481,6 @@
    "held_candidates": 1
   },
   {
-   "name": "Altmar",
-   "type": "CENSUS DESIGNATED PLACE",
-   "held_candidates": 1
-  },
-  {
    "name": "Arlington",
    "type": "CENSUS DESIGNATED PLACE",
    "held_candidates": 1
@@ -1472,6 +1492,11 @@
   },
   {
    "name": "Barryville",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Bellerose Terrace",
    "type": "CENSUS DESIGNATED PLACE",
    "held_candidates": 1
   },
@@ -1511,11 +1536,6 @@
    "held_candidates": 1
   },
   {
-   "name": "Crompond",
-   "type": "CENSUS DESIGNATED PLACE",
-   "held_candidates": 1
-  },
-  {
    "name": "DeKalb Junction",
    "type": "CENSUS DESIGNATED PLACE",
    "held_candidates": 1
@@ -1526,17 +1546,22 @@
    "held_candidates": 1
   },
   {
+   "name": "East Shoreham",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
    "name": "Fairview",
    "type": "CENSUS DESIGNATED PLACE",
    "held_candidates": 1
   },
   {
-   "name": "Flower Hill",
-   "type": "INCORPORATED PLACE",
+   "name": "Fly Creek",
+   "type": "CENSUS DESIGNATED PLACE",
    "held_candidates": 1
   },
   {
-   "name": "Fly Creek",
+   "name": "Freedom Plains",
    "type": "CENSUS DESIGNATED PLACE",
    "held_candidates": 1
   },
@@ -1581,6 +1606,11 @@
    "held_candidates": 1
   },
   {
+   "name": "Lakeland",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
    "name": "Lakeview",
    "type": "CENSUS DESIGNATED PLACE",
    "held_candidates": 1
@@ -1591,7 +1621,7 @@
    "held_candidates": 1
   },
   {
-   "name": "Lincolndale",
+   "name": "Lyncourt",
    "type": "CENSUS DESIGNATED PLACE",
    "held_candidates": 1
   },
@@ -1631,6 +1661,11 @@
    "held_candidates": 1
   },
   {
+   "name": "Orange Lake",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
    "name": "Palenville",
    "type": "CENSUS DESIGNATED PLACE",
    "held_candidates": 1
@@ -1651,22 +1686,12 @@
    "held_candidates": 1
   },
   {
-   "name": "Red Oaks Mill",
-   "type": "CENSUS DESIGNATED PLACE",
-   "held_candidates": 1
-  },
-  {
    "name": "Rhinecliff",
    "type": "CENSUS DESIGNATED PLACE",
    "held_candidates": 1
   },
   {
    "name": "Schroon Lake",
-   "type": "CENSUS DESIGNATED PLACE",
-   "held_candidates": 1
-  },
-  {
-   "name": "Scotchtown",
    "type": "CENSUS DESIGNATED PLACE",
    "held_candidates": 1
   },
@@ -1721,6 +1746,11 @@
    "held_candidates": 1
   },
   {
+   "name": "University Gardens",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
    "name": "Waddington",
    "type": "INCORPORATED PLACE",
    "held_candidates": 1
@@ -1751,6 +1781,6 @@
    "held_candidates": 1
   }
  ],
- "uncovered_places_without_candidates": 455,
+ "uncovered_places_without_candidates": 447,
  "source": "U.S. Census Bureau 2020 place-by-county and county code files"
 }

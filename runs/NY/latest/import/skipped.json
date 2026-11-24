@@ -1104,7 +1104,7 @@
   "categories": [
    "eyebrow_technician"
   ],
-  "website_url": "",
+  "website_url": "https://www.perfectbrowsnyc.com/",
   "phone": "",
   "source_name": "New York DOS Appearance Enhancement & Barber Business License",
   "source_url": "https://data.ny.gov/d/y3u4-jbgh",
@@ -1115,7 +1115,7 @@
   "operational_status": "verified",
   "checked_at": "2026-11-24",
   "raw_name": "perfect brows nyc",
-  "website_candidate": "",
+  "website_candidate": "https://www.perfectbrowsnyc.com/",
   "website_source_url": "",
   "reason": "duplicate_candidate",
   "duplicate_of": "nydos:AEB-21-00883"
@@ -1677,7 +1677,7 @@
   "categories": [
    "eyebrow_technician"
   ],
-  "website_url": "",
+  "website_url": "https://www.perfectbrowsnyc.com/",
   "phone": "",
   "source_name": "New York DOS Appearance Enhancement & Barber Business License",
   "source_url": "https://data.ny.gov/d/y3u4-jbgh",
@@ -1688,7 +1688,7 @@
   "operational_status": "verified",
   "checked_at": "2026-11-24",
   "raw_name": "perfect  brows nyc",
-  "website_candidate": "",
+  "website_candidate": "https://www.perfectbrowsnyc.com/",
   "website_source_url": "",
   "reason": "duplicate_candidate",
   "duplicate_of": "nydos:AEB-18-01640"
@@ -3837,7 +3837,7 @@
   "categories": [
    "eyebrow_technician"
   ],
-  "website_url": "",
+  "website_url": "https://www.perfectbrowsnyc.com/",
   "phone": "",
   "source_name": "New York DOS Appearance Enhancement & Barber Business License",
   "source_url": "https://data.ny.gov/d/y3u4-jbgh",
@@ -3848,7 +3848,7 @@
   "operational_status": "verified",
   "checked_at": "2026-11-24",
   "raw_name": "PERFECT BROWS NYC",
-  "website_candidate": "",
+  "website_candidate": "https://www.perfectbrowsnyc.com/",
   "website_source_url": "",
   "reason": "duplicate_candidate",
   "duplicate_of": "nydos:AEB-19-01301"
@@ -3967,8 +3967,8 @@
   "categories": [
    "stylist"
   ],
-  "website_url": "",
-  "phone": "",
+  "website_url": "https://www.supercuts.com/locations/nearme/haircut/NY/WEBSTER/900-HOLT-RD/82453",
+  "phone": "(585) 872-7600",
   "source_name": "New York DOS Appearance Enhancement & Barber Business License",
   "source_url": "https://data.ny.gov/d/y3u4-jbgh",
   "source_external_id": "nydos:AEB-19-00788",
@@ -3978,8 +3978,8 @@
   "operational_status": "verified",
   "checked_at": "2026-11-24",
   "raw_name": "Supercuts",
-  "website_candidate": "",
-  "website_source_url": "",
+  "website_candidate": "https://www.supercuts.com/locations/nearme/haircut/NY/WEBSTER/900-HOLT-RD/82453",
+  "website_source_url": "https://www.openstreetmap.org/node/13381704974",
   "reason": "duplicate_candidate",
   "duplicate_of": "nydos:AEB-19-00747"
  },
@@ -4019,7 +4019,7 @@
   "categories": [
    "stylist"
   ],
-  "website_url": "",
+  "website_url": "https://www.supercuts.com/locations/nearme/haircut/NY/ROCHESTER/737-MAIDEN-LANE/83210",
   "phone": "",
   "source_name": "New York DOS Appearance Enhancement & Barber Business License",
   "source_url": "https://data.ny.gov/d/y3u4-jbgh",
@@ -4030,7 +4030,7 @@
   "operational_status": "verified",
   "checked_at": "2026-11-24",
   "raw_name": "Supercuts",
-  "website_candidate": "",
+  "website_candidate": "http://supercuts.com/locations/nearme/haircut/NY/ROCHESTER/737-MAIDEN-LANE/83210",
   "website_source_url": "",
   "reason": "duplicate_candidate",
   "duplicate_of": "nydos:AEB-19-02336"
@@ -8128,6 +8128,32 @@
   "duplicate_of": "nydos:AEB-23-00819"
  },
  {
+  "name": "Little Lion Salon",
+  "city": "New York",
+  "state": "NY",
+  "street_address": "",
+  "zip_code": "",
+  "county": "Kings",
+  "categories": [
+   "stylist"
+  ],
+  "website_url": "https://littlelionsalon.com/",
+  "phone": "(718) 369-0762",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/node/5642678609",
+  "source_external_id": "osm:node/5642678609",
+  "license_number": null,
+  "latitude": 40.6741374,
+  "longitude": -73.9852817,
+  "operational_status": "verified",
+  "checked_at": "2026-11-24",
+  "raw_name": "Little Lion Salon",
+  "website_candidate": "https://littlelionsalon.com/",
+  "website_source_url": "",
+  "reason": "duplicate_candidate",
+  "duplicate_of": "osm:node/2568207245"
+ },
+ {
   "name": "Prospect Cut & Shave",
   "city": "Brooklyn",
   "state": "NY",
@@ -8195,8 +8221,8 @@
   "source_url": "https://www.openstreetmap.org/node/5946568110",
   "source_external_id": "osm:node/5946568110",
   "license_number": null,
-  "latitude": 42.4958563,
-  "longitude": -78.690375,
+  "latitude": 42.4957959,
+  "longitude": -78.6903913,
   "operational_status": "verified",
   "checked_at": "2026-11-24",
   "raw_name": "Root 39 Salon and Spa",
@@ -8310,6 +8336,58 @@
   "duplicate_of": "nydos:AEB-19-00896"
  },
  {
+  "name": "Atomic Barbershop & Salon",
+  "city": "Tonawanda",
+  "state": "NY",
+  "street_address": "57 Main Street",
+  "zip_code": "14150",
+  "county": "",
+  "categories": [
+   "barber"
+  ],
+  "website_url": "https://www.hairbyatomic.com/",
+  "phone": "(716) 389-2230",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/node/7399782757",
+  "source_external_id": "osm:node/7399782757",
+  "license_number": null,
+  "latitude": 43.0191744,
+  "longitude": -78.8782091,
+  "operational_status": "verified",
+  "checked_at": "2026-11-24",
+  "raw_name": "Atomic Barbershop & Salon",
+  "website_candidate": "https://www.hairbyatomic.com/",
+  "website_source_url": "",
+  "reason": "duplicate_candidate",
+  "duplicate_of": "nydos:AEB-26-01597"
+ },
+ {
+  "name": "Pugsly's Barbershop",
+  "city": "Kingston",
+  "state": "NY",
+  "street_address": "3 Main Street",
+  "zip_code": "12401",
+  "county": "",
+  "categories": [
+   "barber"
+  ],
+  "website_url": "https://www.pugslysbarbershop.com/",
+  "phone": "(845) 331-2229",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/node/7782475240",
+  "source_external_id": "osm:node/7782475240",
+  "license_number": null,
+  "latitude": 41.9333377,
+  "longitude": -74.01673,
+  "operational_status": "verified",
+  "checked_at": "2026-11-24",
+  "raw_name": "Pugsly's Barbershop",
+  "website_candidate": "http://www.pugslysbarbershop.com/",
+  "website_source_url": "",
+  "reason": "duplicate_candidate",
+  "duplicate_of": "nydos:18PU4062468"
+ },
+ {
   "name": "Èti Hair Studio",
   "city": "New York",
   "state": "NY",
@@ -8414,6 +8492,32 @@
   "duplicate_of": "nydos:21CL1213170"
  },
  {
+  "name": "Salon 109",
+  "city": "Albany",
+  "state": "NY",
+  "street_address": "109 State Street",
+  "zip_code": "12207",
+  "county": "",
+  "categories": [
+   "stylist"
+  ],
+  "website_url": "https://www.salon-109.com/",
+  "phone": "(518) 463-7161",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/node/8399598228",
+  "source_external_id": "osm:node/8399598228",
+  "license_number": null,
+  "latitude": 42.6510377,
+  "longitude": -73.7545207,
+  "operational_status": "verified",
+  "checked_at": "2026-11-24",
+  "raw_name": "Salon 109",
+  "website_candidate": "https://www.salon-109.com/",
+  "website_source_url": "",
+  "reason": "duplicate_candidate",
+  "duplicate_of": "nydos:AEB-21-00051"
+ },
+ {
   "name": "Tribe Hair Lounge",
   "city": "Ballston Spa",
   "state": "NY",
@@ -8466,6 +8570,32 @@
   "duplicate_of": "nydos:BSO-19-00510"
  },
  {
+  "name": "Headspace Salon",
+  "city": "Saugerties",
+  "state": "NY",
+  "street_address": "103 Partition Street",
+  "zip_code": "12477",
+  "county": "",
+  "categories": [
+   "stylist"
+  ],
+  "website_url": "https://www.headspacesaugerties.com/",
+  "phone": "(845) 247-3924",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/node/8446198390",
+  "source_external_id": "osm:node/8446198390",
+  "license_number": null,
+  "latitude": 42.0769995,
+  "longitude": -73.9519026,
+  "operational_status": "verified",
+  "checked_at": "2026-11-24",
+  "raw_name": "Headspace Salon",
+  "website_candidate": "https://www.headspacesaugerties.com/",
+  "website_source_url": "",
+  "reason": "duplicate_candidate",
+  "duplicate_of": "nydos:AEB-25-02518"
+ },
+ {
   "name": "Harlem Natural Hair Salon",
   "city": "New York",
   "state": "NY",
@@ -8490,6 +8620,110 @@
   "website_source_url": "",
   "reason": "duplicate_candidate",
   "duplicate_of": "nydos:21HA1362157"
+ },
+ {
+  "name": "Lupinetti's Hair Styling",
+  "city": "Honeoye Falls",
+  "state": "NY",
+  "street_address": "11 East Street",
+  "zip_code": "14472",
+  "county": "",
+  "categories": [
+   "stylist"
+  ],
+  "website_url": "https://lupinettishairstyling.com/",
+  "phone": "(585) 582-6313",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/node/8785927563",
+  "source_external_id": "osm:node/8785927563",
+  "license_number": null,
+  "latitude": 42.9523086,
+  "longitude": -77.5905163,
+  "operational_status": "verified",
+  "checked_at": "2026-11-24",
+  "raw_name": "Lupinetti's Hair Styling",
+  "website_candidate": "http://www.lupinettishairstyling.net/",
+  "website_source_url": "",
+  "reason": "duplicate_candidate",
+  "duplicate_of": "nydos:21LU1433758"
+ },
+ {
+  "name": "Christine Cordey Salon",
+  "city": "Nyack",
+  "state": "NY",
+  "street_address": "66 South Broadway",
+  "zip_code": "10960",
+  "county": "",
+  "categories": [
+   "stylist"
+  ],
+  "website_url": "https://christinecordeysalon.com/",
+  "phone": "(845) 675-7950",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/node/8788942424",
+  "source_external_id": "osm:node/8788942424",
+  "license_number": null,
+  "latitude": 41.0883293,
+  "longitude": -73.9191574,
+  "operational_status": "verified",
+  "checked_at": "2026-11-24",
+  "raw_name": "Christine Cordey Salon",
+  "website_candidate": "https://christinecordeysalon.com/",
+  "website_source_url": "",
+  "reason": "duplicate_candidate",
+  "duplicate_of": "nydos:AEB-25-01108"
+ },
+ {
+  "name": "D.S.Z. Barbers",
+  "city": "Nyack",
+  "state": "NY",
+  "street_address": "140 Main Street",
+  "zip_code": "10960",
+  "county": "",
+  "categories": [
+   "barber"
+  ],
+  "website_url": "https://www.dszbarbersinc.com/",
+  "phone": "(845) 348-1500",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/node/8788943454",
+  "source_external_id": "osm:node/8788943454",
+  "license_number": null,
+  "latitude": 41.0916631,
+  "longitude": -73.9217084,
+  "operational_status": "verified",
+  "checked_at": "2026-11-24",
+  "raw_name": "D.S.Z. Barbers",
+  "website_candidate": "https://www.dszbarbersinc.com/",
+  "website_source_url": "",
+  "reason": "duplicate_candidate",
+  "duplicate_of": "nydos:BSO-24-00154"
+ },
+ {
+  "name": "Barber Care &",
+  "city": "Nyack",
+  "state": "NY",
+  "street_address": "95 Main Street",
+  "zip_code": "10960",
+  "county": "",
+  "categories": [
+   "barber"
+  ],
+  "website_url": "https://barbercare.co/",
+  "phone": "(845) 366-5328",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/node/8788944139",
+  "source_external_id": "osm:node/8788944139",
+  "license_number": null,
+  "latitude": 41.0910814,
+  "longitude": -73.9192798,
+  "operational_status": "verified",
+  "checked_at": "2026-11-24",
+  "raw_name": "Barber Care & Co.",
+  "website_candidate": "https://www.barbercare.co/",
+  "website_source_url": "",
+  "reason": "duplicate_candidate",
+  "duplicate_of": "nydos:BSO-19-00402"
  },
  {
   "name": "The Bright Beauty",
@@ -8648,6 +8882,32 @@
   "duplicate_of": "nydos:21TO1405058"
  },
  {
+  "name": "A & G Hair Salon",
+  "city": "New York",
+  "state": "NY",
+  "street_address": "1586 1st Avenue",
+  "zip_code": "10028",
+  "county": "New York",
+  "categories": [
+   "stylist"
+  ],
+  "website_url": "https://anghairsalon.com/",
+  "phone": "(212) 472-3504",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/node/9690757652",
+  "source_external_id": "osm:node/9690757652",
+  "license_number": null,
+  "latitude": 40.7745739,
+  "longitude": -73.9508204,
+  "operational_status": "verified",
+  "checked_at": "2026-11-24",
+  "raw_name": "A & G Hair Salon",
+  "website_candidate": "https://anghairsalon.com/",
+  "website_source_url": "",
+  "reason": "duplicate_candidate",
+  "duplicate_of": "nydos:AEB-19-00092"
+ },
+ {
   "name": "Supercuts",
   "city": "Tonawanda",
   "state": "NY",
@@ -8683,7 +8943,7 @@
   "categories": [
    "barber"
   ],
-  "website_url": "https://barbershopartistry.square.site/?utm_id=97758_v0_s00_e0_tv0",
+  "website_url": "https://barbershopartistry.square.site/",
   "phone": "(716) 908-6593",
   "source_name": "OpenStreetMap contributors",
   "source_url": "https://www.openstreetmap.org/node/9802611176",
@@ -8694,7 +8954,7 @@
   "operational_status": "verified",
   "checked_at": "2026-11-24",
   "raw_name": "Barber Shop Artistry",
-  "website_candidate": "https://barbershopartistry.square.site/?utm_id=97758_v0_s00_e0_tv0",
+  "website_candidate": "https://barbershopartistry.square.site/",
   "website_source_url": "",
   "reason": "duplicate_candidate",
   "duplicate_of": "nydos:BSO-23-00002"
@@ -8735,7 +8995,7 @@
   "categories": [
    "stylist"
   ],
-  "website_url": "https://lhkw.app.link/TIpeAwrUZXb?_p=c51529c79f1c6cf7fc1c86ff",
+  "website_url": "https://lhkw.app.link/TIpeAwrUZXb?_p=c21429c39e037af7ea0389ff",
   "phone": "(518) 636-9865",
   "source_name": "OpenStreetMap contributors",
   "source_url": "https://www.openstreetmap.org/node/10016233764",
@@ -8908,6 +9168,32 @@
   "duplicate_of": "nydos:AEB-23-01554"
  },
  {
+  "name": "Supercuts",
+  "city": "Rochester",
+  "state": "NY",
+  "street_address": "737 Maiden Lane",
+  "zip_code": "14615",
+  "county": "",
+  "categories": [
+   "stylist"
+  ],
+  "website_url": "https://www.supercuts.com/locations/nearme/haircut/NY/ROCHESTER/737-MAIDEN-LANE/83210",
+  "phone": "(304) 455-9700",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/node/13383327887",
+  "source_external_id": "osm:node/13383327887",
+  "license_number": null,
+  "latitude": 43.2233301,
+  "longitude": -77.6615884,
+  "operational_status": "verified",
+  "checked_at": "2026-11-24",
+  "raw_name": "Supercuts",
+  "website_candidate": "http://supercuts.com/locations/nearme/haircut/NY/ROCHESTER/737-MAIDEN-LANE/83210",
+  "website_source_url": "",
+  "reason": "duplicate_candidate",
+  "duplicate_of": "nydos:AEB-19-00799"
+ },
+ {
   "name": "Sorelle Salon",
   "city": "Lancaster",
   "state": "NY",
@@ -8932,6 +9218,84 @@
   "website_source_url": "",
   "reason": "duplicate_candidate",
   "duplicate_of": "nydos:AEB-25-00500"
+ },
+ {
+  "name": "Salon Eleganza",
+  "city": "Rochester",
+  "state": "NY",
+  "street_address": "1424 Buffalo Rd",
+  "zip_code": "14624",
+  "county": "",
+  "categories": [
+   "stylist"
+  ],
+  "website_url": "https://www.saloneleganza.com/",
+  "phone": "(585) 328-5220",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/node/14127562427",
+  "source_external_id": "osm:node/14127562427",
+  "license_number": null,
+  "latitude": 43.1501844,
+  "longitude": -77.6890807,
+  "operational_status": "verified",
+  "checked_at": "2026-11-24",
+  "raw_name": "Salon Eleganza",
+  "website_candidate": "https://saloneleganza.com/",
+  "website_source_url": "",
+  "reason": "duplicate_candidate",
+  "duplicate_of": "nydos:21SA1252079"
+ },
+ {
+  "name": "Hall of Fame Barber shop",
+  "city": "Baldwinsville",
+  "state": "NY",
+  "street_address": "2265 Downer Street",
+  "zip_code": "13027",
+  "county": "",
+  "categories": [
+   "barber"
+  ],
+  "website_url": "https://halloffamecny.com/stores/baldwinsville/",
+  "phone": "(315) 500-2337",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/node/14174754903",
+  "source_external_id": "osm:node/14174754903",
+  "license_number": null,
+  "latitude": 43.151824,
+  "longitude": -76.3512346,
+  "operational_status": "verified",
+  "checked_at": "2026-11-24",
+  "raw_name": "Hall of Fame Barber shop",
+  "website_candidate": "https://halloffamecny.com/stores/baldwinsville/",
+  "website_source_url": "",
+  "reason": "duplicate_candidate",
+  "duplicate_of": "nydos:BSO-19-00061"
+ },
+ {
+  "name": "Manzanilla Hair Studio",
+  "city": "New York",
+  "state": "NY",
+  "street_address": "26 Canal Street",
+  "zip_code": "10002",
+  "county": "New York",
+  "categories": [
+   "stylist"
+  ],
+  "website_url": "https://www.manzanillales.com/",
+  "phone": "(646) 771-9309",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/node/14389460299",
+  "source_external_id": "osm:node/14389460299",
+  "license_number": null,
+  "latitude": 40.7143108,
+  "longitude": -73.9903882,
+  "operational_status": "verified",
+  "checked_at": "2026-11-24",
+  "raw_name": "Manzanilla Hair Studio",
+  "website_candidate": "https://www.manzanillales.com/",
+  "website_source_url": "",
+  "reason": "duplicate_candidate",
+  "duplicate_of": "nydos:AEB-20-01628"
  },
  {
   "name": "Joya Salon",
@@ -9064,6 +9428,32 @@
   "duplicate_of": "nydos:AEB-20-01099"
  },
  {
+  "name": "4ever Lash",
+  "city": "New York",
+  "state": "NY",
+  "street_address": "481 3rd Avenue",
+  "zip_code": "10016",
+  "county": "New York",
+  "categories": [
+   "eyelash_technician"
+  ],
+  "website_url": "https://4everlash.nyc/",
+  "phone": "(646) 368-9980",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/node/2709389140",
+  "source_external_id": "osm:node/2709389140",
+  "license_number": null,
+  "latitude": 40.7446387,
+  "longitude": -73.9785738,
+  "operational_status": "verified",
+  "checked_at": "2026-11-24",
+  "raw_name": "4ever Lash",
+  "website_candidate": "https://4everlash.nyc/",
+  "website_source_url": "",
+  "reason": "duplicate_candidate",
+  "duplicate_of": "nydos:AEB-24-01473"
+ },
+ {
   "name": "QQ Nails & Spa",
   "city": "New York",
   "state": "NY",
@@ -9088,6 +9478,58 @@
   "website_source_url": "",
   "reason": "duplicate_candidate",
   "duplicate_of": "nydos:AEB-24-01457"
+ },
+ {
+  "name": "Allure Day Spa & Hair Design",
+  "city": "New York",
+  "state": "NY",
+  "street_address": "139 East 55th Street",
+  "zip_code": "10022",
+  "county": "New York",
+  "categories": [
+   "stylist"
+  ],
+  "website_url": "https://alluredayspa.com/",
+  "phone": "(212) 644-5500",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/node/2715447670",
+  "source_external_id": "osm:node/2715447670",
+  "license_number": null,
+  "latitude": 40.7595441,
+  "longitude": -73.9696135,
+  "operational_status": "verified",
+  "checked_at": "2026-11-24",
+  "raw_name": "Allure Day Spa & Hair Design",
+  "website_candidate": "https://alluredayspa.com/",
+  "website_source_url": "",
+  "reason": "duplicate_candidate",
+  "duplicate_of": "nydos:21AL1396235"
+ },
+ {
+  "name": "Blossom Brows III",
+  "city": "New York",
+  "state": "NY",
+  "street_address": "1467 2nd Avenue",
+  "zip_code": "10021",
+  "county": "New York",
+  "categories": [
+   "eyebrow_technician"
+  ],
+  "website_url": "https://www.blossombrows.com/",
+  "phone": "(212) 470-4876",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/node/2723968411",
+  "source_external_id": "osm:node/2723968411",
+  "license_number": null,
+  "latitude": 40.7716883,
+  "longitude": -73.9564753,
+  "operational_status": "verified",
+  "checked_at": "2026-11-24",
+  "raw_name": "Blossom Brows III",
+  "website_candidate": "https://www.blossombrows.com/",
+  "website_source_url": "",
+  "reason": "duplicate_candidate",
+  "duplicate_of": "nydos:AEB-25-02224"
  },
  {
   "name": "European Wax Center",
@@ -9168,6 +9610,58 @@
   "duplicate_of": "nydos:21TK1388594"
  },
  {
+  "name": "Rocky Greco's",
+  "city": "Pittsford",
+  "state": "NY",
+  "street_address": "19 South Main Street",
+  "zip_code": "14534",
+  "county": "",
+  "categories": [
+   "stylist"
+  ],
+  "website_url": "https://rockygreco.com/",
+  "phone": "(585) 218-9120",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/node/3234452153",
+  "source_external_id": "osm:node/3234452153",
+  "license_number": null,
+  "latitude": 43.0902961,
+  "longitude": -77.5158367,
+  "operational_status": "verified",
+  "checked_at": "2026-11-24",
+  "raw_name": "Rocky Greco's",
+  "website_candidate": "https://rockygreco.com/",
+  "website_source_url": "",
+  "reason": "duplicate_candidate",
+  "duplicate_of": "nydos:AEB-15-02707"
+ },
+ {
+  "name": "Perfect Brows",
+  "city": "New York",
+  "state": "NY",
+  "street_address": "880 9th Avenue",
+  "zip_code": "10019",
+  "county": "",
+  "categories": [
+   "eyebrow_technician"
+  ],
+  "website_url": "https://www.perfectbrowsnyc.com/",
+  "phone": "(212) 713-0055",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/node/3785215440",
+  "source_external_id": "osm:node/3785215440",
+  "license_number": null,
+  "latitude": 40.7680247,
+  "longitude": -73.9854145,
+  "operational_status": "verified",
+  "checked_at": "2026-11-24",
+  "raw_name": "Perfect Brows",
+  "website_candidate": "https://www.perfectbrowsnyc.com/",
+  "website_source_url": "",
+  "reason": "duplicate_candidate",
+  "duplicate_of": "nydos:21PE1389045"
+ },
+ {
   "name": "K & L Nails",
   "city": "Massapequa",
   "state": "NY",
@@ -9192,6 +9686,110 @@
   "website_source_url": "",
   "reason": "duplicate_candidate",
   "duplicate_of": "nydos:AEB-26-02718"
+ },
+ {
+  "name": "Rhinebeck Spa Nails",
+  "city": "Rhinebeck",
+  "state": "NY",
+  "street_address": "6565 Spring Brook Ave",
+  "zip_code": "12572",
+  "county": "",
+  "categories": [
+   "nail_technician"
+  ],
+  "website_url": "https://laghanemultispecialityhospital.com/doctors/",
+  "phone": "(845) 516-4091",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/node/4592150753",
+  "source_external_id": "osm:node/4592150753",
+  "license_number": null,
+  "latitude": 41.937261,
+  "longitude": -73.91003,
+  "operational_status": "verified",
+  "checked_at": "2026-11-24",
+  "raw_name": "Rhinebeck Spa Nails",
+  "website_candidate": "https://www.rhinebeckspaandnails.com/",
+  "website_source_url": "",
+  "reason": "duplicate_candidate",
+  "duplicate_of": "nydos:AEB-25-03203"
+ },
+ {
+  "name": "Lash Loft",
+  "city": "New York",
+  "state": "NY",
+  "street_address": "34 East 20th Street",
+  "zip_code": "10003",
+  "county": "",
+  "categories": [
+   "eyelash_technician"
+  ],
+  "website_url": "https://www.thelashloft.com/",
+  "phone": "",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/node/5778910956",
+  "source_external_id": "osm:node/5778910956",
+  "license_number": null,
+  "latitude": 40.7385961,
+  "longitude": -73.9887619,
+  "operational_status": "verified",
+  "checked_at": "2026-11-24",
+  "raw_name": "Lash Loft",
+  "website_candidate": "https://thelashloft.com/",
+  "website_source_url": "",
+  "reason": "duplicate_candidate",
+  "duplicate_of": "nydos:21TH1534861"
+ },
+ {
+  "name": "Perfect Brows NYC",
+  "city": "New York",
+  "state": "NY",
+  "street_address": "1163 2nd Avenue",
+  "zip_code": "10065",
+  "county": "New York",
+  "categories": [
+   "eyebrow_technician"
+  ],
+  "website_url": "https://www.perfectbrowsnyc.com/",
+  "phone": "(212) 319-4130",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/node/6206637825",
+  "source_external_id": "osm:node/6206637825",
+  "license_number": null,
+  "latitude": 40.7620974,
+  "longitude": -73.9634799,
+  "operational_status": "verified",
+  "checked_at": "2026-11-24",
+  "raw_name": "Perfect Brows NYC",
+  "website_candidate": "https://www.perfectbrowsnyc.com/",
+  "website_source_url": "",
+  "reason": "duplicate_candidate",
+  "duplicate_of": "nydos:AEB-21-00883"
+ },
+ {
+  "name": "Iconic Hair Salon",
+  "city": "Rhinebeck",
+  "state": "NY",
+  "street_address": "7 W Market St",
+  "zip_code": "12572",
+  "county": "",
+  "categories": [
+   "stylist"
+  ],
+  "website_url": "http://www.iconic-hairsalon.com/",
+  "phone": "(845) 876-8900",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/node/6334952175",
+  "source_external_id": "osm:node/6334952175",
+  "license_number": null,
+  "latitude": 41.9270627,
+  "longitude": -73.9151493,
+  "operational_status": "verified",
+  "checked_at": "2026-11-24",
+  "raw_name": "Iconic Hair Salon",
+  "website_candidate": "http://www.iconic-hairsalon.com/",
+  "website_source_url": "",
+  "reason": "duplicate_candidate",
+  "duplicate_of": "osm:node/3265942593"
  },
  {
   "name": "QQ Nails & Spa",
@@ -9244,6 +9842,32 @@
   "website_source_url": "",
   "reason": "duplicate_candidate",
   "duplicate_of": "nydos:AEB-17-01117"
+ },
+ {
+  "name": "QQ Nails & Spa",
+  "city": "New York",
+  "state": "NY",
+  "street_address": "249 8th Avenue",
+  "zip_code": "10011",
+  "county": "New York",
+  "categories": [
+   "nail_technician"
+  ],
+  "website_url": "https://www.qqnailspa.com/",
+  "phone": "(212) 807-0268",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/node/7680594071",
+  "source_external_id": "osm:node/7680594071",
+  "license_number": null,
+  "latitude": 40.7450247,
+  "longitude": -73.9989294,
+  "operational_status": "verified",
+  "checked_at": "2026-11-24",
+  "raw_name": "QQ Nails & Spa",
+  "website_candidate": "https://www.qqnailspa.com/",
+  "website_source_url": "",
+  "reason": "duplicate_candidate",
+  "duplicate_of": "nydos:AEB-24-02725"
  },
  {
   "name": "New Style Nails",
@@ -9325,6 +9949,32 @@
  },
  {
   "name": "Ulta Beauty",
+  "city": "Rochester",
+  "state": "NY",
+  "street_address": "720 Jefferson Road",
+  "zip_code": "14623",
+  "county": "",
+  "categories": [
+   "stylist"
+  ],
+  "website_url": "https://www.ulta.com/stores/rochester-ny-319",
+  "phone": "(585) 292-1250",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/node/9197988839",
+  "source_external_id": "osm:node/9197988839",
+  "license_number": null,
+  "latitude": 43.0883781,
+  "longitude": -77.6245194,
+  "operational_status": "verified",
+  "checked_at": "2026-11-24",
+  "raw_name": "Ulta Beauty",
+  "website_candidate": "https://www.ulta.com/stores/rochester-ny-319",
+  "website_source_url": "",
+  "reason": "duplicate_candidate",
+  "duplicate_of": "nydos:AEB-15-01887"
+ },
+ {
+  "name": "Ulta Beauty",
   "city": "New York",
   "state": "NY",
   "street_address": "51 West 34th Street",
@@ -9402,6 +10052,32 @@
   "duplicate_of": "nydos:AEB-20-02004"
  },
  {
+  "name": "Ardona Beauty Salon",
+  "city": "New York",
+  "state": "NY",
+  "street_address": "2578 Broadway",
+  "zip_code": "10025",
+  "county": "",
+  "categories": [
+   "stylist"
+  ],
+  "website_url": "https://www.ardonabeautysalon.com/",
+  "phone": "(718) 433-9837",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/node/11442900428",
+  "source_external_id": "osm:node/11442900428",
+  "license_number": null,
+  "latitude": 40.7954591,
+  "longitude": -73.9708461,
+  "operational_status": "verified",
+  "checked_at": "2026-11-24",
+  "raw_name": "Ardona Beauty Salon",
+  "website_candidate": "https://www.ardonabeautysalon.com/",
+  "website_source_url": "",
+  "reason": "duplicate_candidate",
+  "duplicate_of": "nydos:AEB-24-01059"
+ },
+ {
   "name": "Perfection Nail Spa IV",
   "city": "Syracuse",
   "state": "NY",
@@ -9426,6 +10102,32 @@
   "website_source_url": "",
   "reason": "duplicate_candidate",
   "duplicate_of": "nydos:AEB-26-00315"
+ },
+ {
+  "name": "Savor Beauty",
+  "city": "New York",
+  "state": "NY",
+  "street_address": "448 Columbus Avenue",
+  "zip_code": "10024",
+  "county": "",
+  "categories": [
+   "stylist"
+  ],
+  "website_url": "https://www.savorbeauty.com/",
+  "phone": "(212) 390-1231",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/node/12024393752",
+  "source_external_id": "osm:node/12024393752",
+  "license_number": null,
+  "latitude": 40.7836991,
+  "longitude": -73.9744411,
+  "operational_status": "verified",
+  "checked_at": "2026-11-24",
+  "raw_name": "Savor Beauty",
+  "website_candidate": "https://www.savorbeauty.com/",
+  "website_source_url": "",
+  "reason": "duplicate_candidate",
+  "duplicate_of": "nydos:AEB-17-00474"
  },
  {
   "name": "135 Serenity Nail & Spa",
@@ -9480,6 +10182,32 @@
   "duplicate_of": "nydos:AEB-24-00982"
  },
  {
+  "name": "Beautiful Brows",
+  "city": "Bronx",
+  "state": "NY",
+  "street_address": "49 Hugh J. Grant Circle",
+  "zip_code": "10462",
+  "county": "",
+  "categories": [
+   "eyebrow_technician"
+  ],
+  "website_url": "https://bbrows.wixsite.com/website",
+  "phone": "(347) 810-0697",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/node/12464782376",
+  "source_external_id": "osm:node/12464782376",
+  "license_number": null,
+  "latitude": 40.8334938,
+  "longitude": -73.8602789,
+  "operational_status": "verified",
+  "checked_at": "2026-11-24",
+  "raw_name": "Beautiful Brows",
+  "website_candidate": "https://bbrows.wixsite.com/website",
+  "website_source_url": "",
+  "reason": "duplicate_candidate",
+  "duplicate_of": "nydos:AEB-24-00667"
+ },
+ {
   "name": "Lee Nails & Beauty Spa",
   "city": "West Seneca",
   "state": "NY",
@@ -9504,5 +10232,31 @@
   "website_source_url": "",
   "reason": "duplicate_candidate",
   "duplicate_of": "nydos:AEB-25-01638"
+ },
+ {
+  "name": "Lunara Glow Beauty Salon",
+  "city": "Astoria",
+  "state": "NY",
+  "street_address": "38-02 Broadway",
+  "zip_code": "11103",
+  "county": "",
+  "categories": [
+   "stylist"
+  ],
+  "website_url": "https://lunaraglowsalon.com/",
+  "phone": "(347) 242-4252",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/node/14158747442",
+  "source_external_id": "osm:node/14158747442",
+  "license_number": null,
+  "latitude": 40.759072,
+  "longitude": -73.919832,
+  "operational_status": "verified",
+  "checked_at": "2026-11-24",
+  "raw_name": "Lunara Glow Beauty Salon",
+  "website_candidate": "https://lunaraglowsalon.com/",
+  "website_source_url": "",
+  "reason": "duplicate_candidate",
+  "duplicate_of": "nydos:AEB-26-01730"
  }
 ]

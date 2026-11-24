@@ -2,7 +2,7 @@
  "state": "NY",
  "state_name": "New York",
  "wave": 2,
- "created_at": "2026-11-24T17:45:45.193Z",
+ "created_at": "2026-11-24T21:36:28.972Z",
  "staging_only": true,
  "sources": [
   {
@@ -13,18 +13,17 @@
   },
   {
    "name": "OpenStreetMap (Overpass)",
-   "url": "https://overpass.private.coffee/api/interpreter",
-   "status": "partial",
-   "records": 5115,
-   "parts_ok": 3,
-   "parts_total": 4,
-   "error": "https://overpass-api.de/api/interpreter [nwr[\"shop\"=\"hairdresser\"](area.a);nwr[\"c]: HTTP 502 https://overpass-api.de/api/interpreter | https://overpass-api.de/api/interpreter [nwr[\"shop\"~\"^(beauty|nails|barber|cosmet]: HTTP 502 https://overpass-api.de/api/interpreter | https://overpass.private.coffee/api/interpreter [nwr[\"shop\"~\"^(beauty|nails|barber|cosmet]: The operation was aborted due to timeout | https://overpass.kumi.systems/api/interpreter [nwr[\"shop\"~\"^(beauty|nails|barber|cosmet]: The operation was aborted due to timeout | https://overpass-api.de/api/interpreter [nwr[\"shop\"~\"^(beauty|nails|barber|cosmet]: HTTP 502 https://overpass-api.de/api/interpreter | https://overpass.private.coffee/api/interpreter [nwr[\"shop\"~\"^(beauty|nails|barber|cosmet]: HTTP 502 https://overpass.private.coffee/api/interpreter | https://overpass.kumi.systems/api/interpreter [nwr[\"shop\"~\"^(beauty|nails|barber|cosmet]: The operation was aborted due to timeout"
+   "url": "https://overpass-api.de/api/interpreter",
+   "status": "processed",
+   "records": 6772,
+   "parts_ok": 4,
+   "parts_total": 4
   },
   {
    "name": "U.S. Census Geocoder (place containing map point)",
    "url": "https://geocoding.geo.census.gov/",
    "status": "processed",
-   "records": 3011
+   "records": 3846
   }
  ],
  "license_records_scanned": 27582,
@@ -64,39 +63,31 @@
  ],
  "license_type_lookup": [],
  "census_city_lookup": {
-  "attempted": 3130,
-  "filled": 3011,
+  "attempted": 4000,
+  "filled": 3846,
   "failed": 0
  },
- "mapped_beauty_places": 5115,
- "overpass_endpoint": "https://overpass.private.coffee/api/interpreter",
- "total_candidates": 31479,
- "with_websites": 971,
+ "mapped_beauty_places": 6772,
+ "overpass_endpoint": "https://overpass-api.de/api/interpreter",
+ "total_candidates": 32979,
+ "with_websites": 1391,
  "category_counts": {
   "shop_category_review": 8924,
-  "barber": 3670,
-  "hair": 10079,
-  "nails": 6031,
-  "lashes": 457,
-  "waxing": 408,
-  "brows": 274,
-  "skincare": 673,
-  "massage": 450,
-  "spray_tanning": 92,
-  "salon_suites": 36,
-  "makeup": 87,
-  "tattoo": 292,
+  "barber": 3694,
+  "hair": 10913,
+  "nails": 6269,
+  "lashes": 512,
+  "waxing": 455,
+  "brows": 339,
+  "skincare": 738,
+  "massage": 446,
+  "spray_tanning": 96,
+  "salon_suites": 38,
+  "makeup": 271,
+  "tattoo": 278,
   "permanent_makeup": 6
  },
- "errors": [
-  "osm: https://overpass-api.de/api/interpreter [nwr[\"shop\"=\"hairdresser\"](area.a);nwr[\"c]: HTTP 502 https://overpass-api.de/api/interpreter",
-  "osm: https://overpass-api.de/api/interpreter [nwr[\"shop\"~\"^(beauty|nails|barber|cosmet]: HTTP 502 https://overpass-api.de/api/interpreter",
-  "osm: https://overpass.private.coffee/api/interpreter [nwr[\"shop\"~\"^(beauty|nails|barber|cosmet]: The operation was aborted due to timeout",
-  "osm: https://overpass.kumi.systems/api/interpreter [nwr[\"shop\"~\"^(beauty|nails|barber|cosmet]: The operation was aborted due to timeout",
-  "osm: https://overpass-api.de/api/interpreter [nwr[\"shop\"~\"^(beauty|nails|barber|cosmet]: HTTP 502 https://overpass-api.de/api/interpreter",
-  "osm: https://overpass.private.coffee/api/interpreter [nwr[\"shop\"~\"^(beauty|nails|barber|cosmet]: HTTP 502 https://overpass.private.coffee/api/interpreter",
-  "osm: https://overpass.kumi.systems/api/interpreter [nwr[\"shop\"~\"^(beauty|nails|barber|cosmet]: The operation was aborted due to timeout"
- ],
+ "errors": [],
  "note": "A license record or map listing alone does not prove a business is open. The importer publishes only rows that meet its rules; the rest are held.",
  "attribution": "OpenStreetMap data © OpenStreetMap contributors (ODbL, https://www.openstreetmap.org/copyright). Licensing data from the listed state open-data portals."
 }
