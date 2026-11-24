@@ -1,0 +1,602 @@
+{
+ "state": "MA",
+ "census_places": 248,
+ "places_covered": 73,
+ "place_coverage_pct": 29.4,
+ "census_counties": 14,
+ "counties_covered": 11,
+ "counties_uncovered": [
+  "Dukes County",
+  "Franklin County",
+  "Nantucket County"
+ ],
+ "communities_outside_census_places": [
+  {
+   "city": "Acton",
+   "shops": 5
+  },
+  {
+   "city": "Allston",
+   "shops": 5
+  },
+  {
+   "city": "Dorchester",
+   "shops": 3
+  },
+  {
+   "city": "Watertown",
+   "shops": 3
+  },
+  {
+   "city": "Tyngsboro",
+   "shops": 2
+  },
+  {
+   "city": "Jamaica Plain",
+   "shops": 2
+  },
+  {
+   "city": "Wareham",
+   "shops": 2
+  },
+  {
+   "city": "Charlestown",
+   "shops": 2
+  },
+  {
+   "city": "North Andover",
+   "shops": 2
+  },
+  {
+   "city": "Seekonk",
+   "shops": 2
+  },
+  {
+   "city": "Braintree",
+   "shops": 2
+  },
+  {
+   "city": "Millbury",
+   "shops": 2
+  },
+  {
+   "city": "Tyngsborough",
+   "shops": 1
+  },
+  {
+   "city": "North Billerica",
+   "shops": 1
+  },
+  {
+   "city": "South Hadley",
+   "shops": 1
+  },
+  {
+   "city": "Easthampton",
+   "shops": 1
+  },
+  {
+   "city": "Auburndale",
+   "shops": 1
+  },
+  {
+   "city": "Wenham",
+   "shops": 1
+  },
+  {
+   "city": "Littleton",
+   "shops": 1
+  },
+  {
+   "city": "Chelmsford",
+   "shops": 1
+  },
+  {
+   "city": "Foxboro",
+   "shops": 1
+  },
+  {
+   "city": "Chestnut Hill",
+   "shops": 1
+  },
+  {
+   "city": "West Newton",
+   "shops": 1
+  },
+  {
+   "city": "North Amherst",
+   "shops": 1
+  },
+  {
+   "city": "Roslindale",
+   "shops": 1
+  },
+  {
+   "city": "Shrewsbury",
+   "shops": 1
+  },
+  {
+   "city": "Norfolk",
+   "shops": 1
+  },
+  {
+   "city": "Canton",
+   "shops": 1
+  },
+  {
+   "city": "Stoughton",
+   "shops": 1
+  },
+  {
+   "city": "Weymouth",
+   "shops": 1
+  },
+  {
+   "city": "North Easton",
+   "shops": 1
+  },
+  {
+   "city": "Westwood",
+   "shops": 1
+  },
+  {
+   "city": "Needham Heights",
+   "shops": 1
+  },
+  {
+   "city": "Hadley",
+   "shops": 1
+  }
+ ],
+ "top_covered_places": [
+  {
+   "name": "Boston",
+   "shops": 60
+  },
+  {
+   "name": "Cambridge",
+   "shops": 19
+  },
+  {
+   "name": "Somerville",
+   "shops": 9
+  },
+  {
+   "name": "Medford",
+   "shops": 9
+  },
+  {
+   "name": "Woburn",
+   "shops": 8
+  },
+  {
+   "name": "Brookline",
+   "shops": 8
+  },
+  {
+   "name": "Burlington",
+   "shops": 7
+  },
+  {
+   "name": "Provincetown",
+   "shops": 6
+  },
+  {
+   "name": "Melrose",
+   "shops": 5
+  },
+  {
+   "name": "Reading",
+   "shops": 5
+  },
+  {
+   "name": "Stoneham",
+   "shops": 5
+  },
+  {
+   "name": "Everett",
+   "shops": 5
+  },
+  {
+   "name": "Malden",
+   "shops": 4
+  },
+  {
+   "name": "Lexington",
+   "shops": 4
+  },
+  {
+   "name": "Ayer",
+   "shops": 4
+  },
+  {
+   "name": "Wakefield",
+   "shops": 4
+  },
+  {
+   "name": "Randolph Town",
+   "shops": 4
+  },
+  {
+   "name": "Arlington",
+   "shops": 4
+  },
+  {
+   "name": "Worcester",
+   "shops": 4
+  },
+  {
+   "name": "Quincy",
+   "shops": 3
+  },
+  {
+   "name": "Peabody",
+   "shops": 3
+  },
+  {
+   "name": "Buzzards Bay",
+   "shops": 3
+  },
+  {
+   "name": "Salem",
+   "shops": 3
+  },
+  {
+   "name": "Saugus",
+   "shops": 3
+  },
+  {
+   "name": "Weymouth Town",
+   "shops": 3
+  },
+  {
+   "name": "Teaticket",
+   "shops": 3
+  },
+  {
+   "name": "Hudson",
+   "shops": 2
+  },
+  {
+   "name": "Braintree Town",
+   "shops": 2
+  },
+  {
+   "name": "Wellesley",
+   "shops": 2
+  },
+  {
+   "name": "Needham",
+   "shops": 2
+  },
+  {
+   "name": "Lynn",
+   "shops": 2
+  },
+  {
+   "name": "West Chatham",
+   "shops": 2
+  },
+  {
+   "name": "Waltham",
+   "shops": 2
+  },
+  {
+   "name": "Lynnfield",
+   "shops": 2
+  },
+  {
+   "name": "Framingham",
+   "shops": 2
+  },
+  {
+   "name": "Newton",
+   "shops": 2
+  },
+  {
+   "name": "Longmeadow",
+   "shops": 2
+  },
+  {
+   "name": "Dedham",
+   "shops": 2
+  },
+  {
+   "name": "Great Barrington",
+   "shops": 2
+  },
+  {
+   "name": "Fall River",
+   "shops": 2
+  }
+ ],
+ "uncovered_places_with_held_candidates": [
+  {
+   "name": "Fitchburg",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 51
+  },
+  {
+   "name": "Gardner",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 23
+  },
+  {
+   "name": "Westfield",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 19
+  },
+  {
+   "name": "Maynard",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 16
+  },
+  {
+   "name": "Lowell",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 15
+  },
+  {
+   "name": "Athol",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 11
+  },
+  {
+   "name": "Norwood",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 10
+  },
+  {
+   "name": "Belmont",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 9
+  },
+  {
+   "name": "Barnstable Town",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 7
+  },
+  {
+   "name": "Pittsfield",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 7
+  },
+  {
+   "name": "Attleboro",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Haverhill",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Bliss Corner",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Bridgewater Town",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Plymouth",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Ware",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "East Pepperell",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Gloucester",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Groton",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Milford",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Rutland",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Smith Mills",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Taunton",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Topsfield",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "West Concord",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Whitinsville",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Winchendon",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Baldwinville",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Franklin Town",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Holbrook",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Somerset",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Wareham Center",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "West Yarmouth",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Barre",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Chicopee",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Falmouth",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Greenfield",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Hanscom AFB",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Harwich Port",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Hull",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Huntington",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Littleton Common",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Mansfield Center",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Milton",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "North Adams",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "North Attleborough Town",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Oak Bluffs",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Palmer Town",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Salisbury",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Sharon",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "South Deerfield",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Southbridge Town",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Townsend",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Upton",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Vineyard Haven",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Williamstown",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Winthrop Town",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  }
+ ],
+ "uncovered_places_without_candidates": 118,
+ "source": "U.S. Census Bureau 2020 place-by-county and county code files"
+}

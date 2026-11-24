@@ -1,0 +1,55 @@
+[
+ {
+  "name": "Salon Volition",
+  "city": "Wenham",
+  "state": "MA",
+  "street_address": "300 Main Street",
+  "zip_code": "01984",
+  "county": "",
+  "categories": [
+   "stylist"
+  ],
+  "website_url": "https://salonvolition.com/at-300/",
+  "phone": "(978) 468-9540",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/node/13874412162",
+  "source_external_id": "osm:node/13874412162",
+  "license_number": null,
+  "latitude": 42.6094664,
+  "longitude": -70.8750838,
+  "operational_status": "verified",
+  "checked_at": "2026-11-24",
+  "raw_name": "Salon Volition",
+  "website_candidate": "https://salonvolition.com/at-300/",
+  "website_source_url": "",
+  "reason": "duplicate_candidate",
+  "duplicate_of": "osm:node/13874410179"
+ },
+ {
+  "name": "Jennifer’s Nail & Skin Salon",
+  "city": "Boston",
+  "state": "MA",
+  "street_address": "161 Newbury Street",
+  "zip_code": "02116",
+  "county": "",
+  "categories": [
+   "nail_technician",
+   "esthetician"
+  ],
+  "website_url": "https://www.jennifersnailsalon.com/",
+  "phone": "(617) 266-7777",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/node/7770903365",
+  "source_external_id": "osm:node/7770903365",
+  "license_number": null,
+  "latitude": 42.3508185,
+  "longitude": -71.0786907,
+  "operational_status": "verified",
+  "checked_at": "2026-11-24",
+  "raw_name": "Jennifer’s Nail & Skin Salon",
+  "website_candidate": "http://www.jennifersnailsalon.com/",
+  "website_source_url": "",
+  "reason": "duplicate_candidate",
+  "duplicate_of": "osm:node/7757221202"
+ }
+]
