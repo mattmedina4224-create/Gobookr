@@ -1,0 +1,2418 @@
+{
+ "http://anuesalon.net/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 8
+ },
+ "http://egolabinc.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 35
+ },
+ "https://chieflandmerlenorman.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 114
+ },
+ "https://www.supercuts.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 118
+ },
+ "https://www.vlvtsalon.com/": {
+  "status": "error",
+  "error": "CERT_HAS_EXPIRED",
+  "ms": 180
+ },
+ "http://finleyandphillips.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 184
+ },
+ "https://www.beachhairaffair.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://beachhairaffair.com/",
+  "ms": 82
+ },
+ "https://www.mancaveformen.com/": {
+  "status": "live",
+  "http_status": 202,
+  "ms": 178
+ },
+ "https://www.greatclips.com/salons/637": {
+  "status": "dead",
+  "http_status": 404,
+  "final_url": "https://salons.greatclips.com/salons/637",
+  "ms": 402
+ },
+ "http://www.capellisbeauty.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 11
+ },
+ "http://salonmetrohair.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 6
+ },
+ "http://rachelsfamilyhairsalon.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 10
+ },
+ "https://www.supercuts.com/locations/fl/winter-springs/red-willow-shopping-plaza-haircuts-80435.html": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.supercuts.com/locations/nearme/haircut/fl/winter-springs/red/80435",
+  "ms": 91
+ },
+ "https://www.michelinassalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 398
+ },
+ "https://www.vagaro.com/JAnthonySalon": {
+  "status": "dead",
+  "http_status": 404,
+  "final_url": "https://www.vagaro.com/PageNotFound.aspx",
+  "ms": 745
+ },
+ "https://wigvillaonline.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.wigvillaonline.com/",
+  "ms": 756
+ },
+ "https://www.thesalon1.net/oldsmar/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 145
+ },
+ "https://www.prielsalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 47
+ },
+ "https://windermerespa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 46
+ },
+ "https://sportclips.com/us-fl-westmelbourne-fl220": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 263
+ },
+ "https://www.volusiamall.net/store/signature_cuts": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 447
+ },
+ "https://www.salonzion.com/": {
+  "status": "error",
+  "error": "ECONNRESET",
+  "ms": 20
+ },
+ "https://relaxateuropa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 61
+ },
+ "http://www.fleurdelissaloninc.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 122
+ },
+ "https://royalehairboutique.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.royalehairboutique.com/",
+  "ms": 91
+ },
+ "https://carliescuttingedgesalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 44
+ },
+ "https://www.elegantsalonnaples.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 66
+ },
+ "https://hairesteem.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 74
+ },
+ "http://mymasterbarber.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 25
+ },
+ "https://salonlofts.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 139
+ },
+ "https://square.site/book/2WES8KWWJ3RBE/perfect-cut-s-barbershop-corp-lakeland-fl": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 563
+ },
+ "https://ediesstylingcenter.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1585
+ },
+ "https://sportclips.com/us-fl-melbourne-fl208": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 36
+ },
+ "https://voguehairstudiocapecoral.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 114
+ },
+ "https://salonsararo.com/": {
+  "status": "live",
+  "http_status": 202,
+  "ms": 148
+ },
+ "https://www.studiocabello.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://rejuvsalonbarber.com/",
+  "ms": 1294
+ },
+ "https://www.ropsalons.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://ropsalons.com/",
+  "ms": 572
+ },
+ "https://hairlooksalon.com/": {
+  "status": "error",
+  "error": "ERR_TLS_CERT_ALTNAME_INVALID",
+  "ms": 87
+ },
+ "https://espinosahairdressing.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.espinosahairdressing.com/",
+  "ms": 321
+ },
+ "https://shesheon5th.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.shesheon5th.com/",
+  "ms": 108
+ },
+ "https://www.simply-colour.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 244
+ },
+ "https://www.greatclips.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 40
+ },
+ "https://www.cherises.com/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 310
+ },
+ "https://cuttin-up.edan.io/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 33
+ },
+ "https://locations.haircuttery.com/fl/gainesville/3912-sw-archer-rd-unit-20.html": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 252
+ },
+ "https://vmzbeautystudio.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 63
+ },
+ "https://www.thebackroomsalon.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 8
+ },
+ "https://timelesshaircuts.booksy.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://lhkw.app.link/gusuWrFAgYb?_p=c30a33c3860065f0fc1a8b",
+  "ms": 373
+ },
+ "https://www.hairrenovationsalon.com/": {
+  "status": "error",
+  "error": "CERT_HAS_EXPIRED",
+  "ms": 71
+ },
+ "https://lachicstylz.net/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 207
+ },
+ "https://locations.haircuttery.com/fl/port-orange/3841-south-nova-road.html": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 55
+ },
+ "https://www.cherryblowdrybar.com/brandon-fl/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 151
+ },
+ "https://www.beautifulhaircolorstudios.com/port-orange-pavilion": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 127
+ },
+ "https://mgrbarberlounge.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 577
+ },
+ "https://studio78unisexhairsalon.com/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 141
+ },
+ "https://locations.haircuttery.com/fl/daytona-beach/2664-lpga-boulevard.html": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 354
+ },
+ "https://locations.haircuttery.com/fl/lithia/5624-fishhawk-crossing-blvd.html": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 42
+ },
+ "https://salonsbyjc.com/location/florida-valrico-lithia-crossing/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 405
+ },
+ "https://dejavuhairdesignct.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.dejavuhairdesignct.com/",
+  "ms": 525
+ },
+ "https://www.bananassalonforkids.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 94
+ },
+ "https://www.xspreshun.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://xspreshun.com/",
+  "ms": 910
+ },
+ "https://clovesalon.com/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 54
+ },
+ "https://www.kaiandcosalon.com/": {
+  "status": "dead",
+  "error": "EAI_AGAIN",
+  "ms": 592
+ },
+ "https://www.mysalonsuite.com/suntree/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 376
+ },
+ "https://square.site/book/6V2P59YFP3K62/final-touch-fort-myers-fl": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 373
+ },
+ "https://www.kates-kuts.com/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 479
+ },
+ "https://getsquire.com/booking/book/twincutz-daniels-parkway-fort-meyers": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 37
+ },
+ "https://www.tidychap.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 156
+ },
+ "https://www.universalorlando.com/web/en/us/things-to-do/shopping/darkmoor-monster-makeup-experience": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 146
+ },
+ "https://studiojen.glossgenius.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://glossgenius.com/",
+  "ms": 916
+ },
+ "https://www.themasterbarberexperience.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://themasterbarberexperience.com/",
+  "ms": 98
+ },
+ "https://salons.greatclips.com/us/fl/wesley-chapel/5416-bruce-b-downs-blvd": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 111
+ },
+ "http://salon.greatclips.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 37
+ },
+ "https://salons.greatclips.com/us/fl/bradenton/7321-52nd-place-e": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 67
+ },
+ "https://www.newyorkhair.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://newyorkhair.com/",
+  "ms": 112
+ },
+ "https://prestigebarbershop.com/locations/lakenona/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 108
+ },
+ "https://bellisimosalonftmyers.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 104
+ },
+ "https://pioneerscuts.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 44
+ },
+ "https://www.floydsbarbershop.com/locations/florida/orlando/mills-ave": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 227
+ },
+ "https://salons.greatclips.com/us/fl/port-charlotte/4265-tamiami-trail": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 49
+ },
+ "https://www.hammerandcobarbershop.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 176
+ },
+ "https://www.fioreandela.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 159
+ },
+ "https://disneyworld.disney.go.com/events-tours/magic-kingdom/pirates-league/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 4095
+ },
+ "https://disneyworld.disney.go.com/shops/disney-springs/bibbidi-bobbidi-boutique-marketplace/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 3787
+ },
+ "https://www.loveyourhair.today/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://loveyourhair.today/",
+  "ms": 443
+ },
+ "https://www.michaelethyn.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1465
+ },
+ "https://www.revolutionhaircotpa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 366
+ },
+ "https://hausofhairnaples.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1525
+ },
+ "https://kingdomfamilybarbershopspringhill.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 133
+ },
+ "https://app.greatclips.com/salon/0639/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 119
+ },
+ "https://the-boulevard-salon.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.ocalaboulevard.com/",
+  "ms": 575
+ },
+ "https://www.lionsbarbershoporlandofl.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 132
+ },
+ "https://nicosbarbershop.godaddysites.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 41
+ },
+ "https://kut-doctors-inc.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 681
+ },
+ "https://salonlofts.com/gabby_rogers": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 358
+ },
+ "https://randyshaircutsformen.com/": {
+  "status": "error",
+  "error": "ECONNRESET",
+  "ms": 24
+ },
+ "https://booksy.com/en-us/689664_s-todd-barbershop_barber-shop_134766_kissimmee#ba_s=aalma_1": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://booksy.com/en-us/689664_s-todd-barbershop_barber-shop_134766_kissimmee",
+  "ms": 507
+ },
+ "https://www.katprestonthebarber.com/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 486
+ },
+ "https://mensgroomroom.webflow.io/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 211
+ },
+ "https://belleairbarber.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 63
+ },
+ "https://zazusalons.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.zazusalons.com/",
+  "ms": 126
+ },
+ "https://www.yourfavoritesalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 129
+ },
+ "https://thetonsoriumbyjuliet.com/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 199
+ },
+ "http://passionsforhairsalon.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 5
+ },
+ "https://levelupcelebration.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 63
+ },
+ "https://booksy.com/en-us/141892_pjbarber_barber-shop_15755_riverview": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://booksy.com/en-us/141892_house-of-legends-barbershop_barber-shop_15755_riverview",
+  "ms": 1130
+ },
+ "https://salons.greatclips.com/us/fl/clearwater/23690-us-hwy-19-n": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 62
+ },
+ "https://nourishstpete.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 44
+ },
+ "https://www.lisayourstylist.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 832
+ },
+ "http://www.innovationssalonnaples.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 148
+ },
+ "https://www.shop25eighh.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 53
+ },
+ "https://matossalonbarbershop.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 649
+ },
+ "https://www.jacasbarbershop.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 72
+ },
+ "https://luxehairdesign.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 30
+ },
+ "https://wernercoiffeurcelebration.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 883
+ },
+ "https://linktr.ee/goldheadbarbershop": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 44
+ },
+ "https://jaithabarber.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 411
+ },
+ "https://www.vagaro.com/rcsbarbershop": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://mysite.vagaro.com/rcsbarbershop",
+  "ms": 1237
+ },
+ "https://www.luieluxestudio.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 907
+ },
+ "https://www.cherishingbeauty.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 654
+ },
+ "http://freshcutsbarbershop.us/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://booksy.com/en-us/425382_fresh-cuts-barbershop_barber-shop_15631_palm-bay",
+  "ms": 1063
+ },
+ "https://headlinesbarberstampabay.com/northdale": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://headlinesbarbers.com/location/6a18dd983af0510ba9358c66",
+  "ms": 635
+ },
+ "https://www.yolobarber.com/users/sign_up": {
+  "status": "live",
+  "http_status": 202,
+  "ms": 40
+ },
+ "https://mainstreetbarbershopdaytonabeach.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 154
+ },
+ "https://championsbarberstudio.booksy.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://lhkw.app.link/Mx6ssLx3PRb?_p=c30a33c3860065f0fc1a8b",
+  "ms": 358
+ },
+ "https://asbarbershopllc.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 389
+ },
+ "https://www.salonrawpalmharbor.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://expireddomains.com/domain/salonrawpalmharbor.com?utm_source=redi",
+  "ms": 89
+ },
+ "https://www.ben.salon/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 332
+ },
+ "https://booksy.com/en-us/957958_bertoblendz_barber-shop_119797_st-petersburg": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 598
+ },
+ "https://locations.haircuttery.com/fl/apopka/554-s--hunt-club-boulevard.html": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 67
+ },
+ "https://bareology.org/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.bareology.org/",
+  "ms": 965
+ },
+ "http://mosgaragesalonexperience.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.mosgaragesalonexperience.com/",
+  "ms": 152
+ },
+ "https://disneyworld.disney.go.com/shops/magic-kingdom/harmony-barber-shop/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 230
+ },
+ "https://five-star-barberhsop-largo.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 829
+ },
+ "https://www.guillermossalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 168
+ },
+ "https://www.zoomtan.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 41
+ },
+ "https://www.haircuttery.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 120
+ },
+ "https://www.harborcitysalon.com/home": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 250
+ },
+ "http://www.nailcountrytallahassee.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 11
+ },
+ "https://www.ulta.com/stores/orlando-fl-152": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 202
+ },
+ "https://www.ulta.com/stores/clearwater-fl-531": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 200
+ },
+ "https://sportclips.com/us-fl-melbourne-fl226": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 258
+ },
+ "https://www.classynailstallahassee.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 24
+ },
+ "http://www.elshaddaiskincaredayspa.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 25
+ },
+ "https://aacardi.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 41
+ },
+ "https://www.thelanespa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 80
+ },
+ "https://booksy.com/en-us/102223_clubhouse-cuts-barbershop_barber-shop_15626_melbourne": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 468
+ },
+ "http://www.lildivasanddudes.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 12
+ },
+ "https://www.jconsalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://jconsalon.com/",
+  "ms": 327
+ },
+ "https://www.extensionking.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://extensionking.com/",
+  "ms": 89
+ },
+ "http://www.verbenaproducts.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://wellingtongrove.com/",
+  "ms": 184
+ },
+ "http://www.tallybrowstudio.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.tallybrowstudio.com/",
+  "ms": 249
+ },
+ "http://www.zervossalon.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 25
+ },
+ "https://www.aveda.com/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 71
+ },
+ "http://www.salonnicholasfl.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 12
+ },
+ "https://profilesnails.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 86
+ },
+ "https://luxenailbarfortwaltonbeach.com/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 153
+ },
+ "https://www.ulta.com/stores/jacksonville-fl-377": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 175
+ },
+ "https://sephora.com/happening/stores/miami-beach-lincoln-road": {
+  "status": "blocked",
+  "http_status": 403,
+  "final_url": "https://www.sephora.com/happening/stores/miami-beach-lincoln-road",
+  "ms": 70
+ },
+ "https://millenniumatmidtown.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 316
+ },
+ "https://locations.waxcenter.com/fl/largo/largo-0184.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 704
+ },
+ "http://oceanebeautystorelocations.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 10
+ },
+ "https://gablesnailsonponce.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 67
+ },
+ "https://locations.waxcenter.com/fl/tallahassee/tallahassee-0505.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 424
+ },
+ "https://www.edinnails.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 19
+ },
+ "http://alteregofl.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 6
+ },
+ "https://www.adorecosmetics.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 168
+ },
+ "https://brilliancenewyork.com/lincoln-road-miami-beach-fl/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.brilliancenewyork.com/blogs/hair-blog/lincoln-road-miami-beach-fl",
+  "ms": 363
+ },
+ "https://www.ulta.com/stores/west-melbourne-fl-363": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 189
+ },
+ "https://courtyardhairetc.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 58
+ },
+ "https://www.salonhotheads.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 262
+ },
+ "http://mcmahansalon.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 11
+ },
+ "https://elegantnailswinterpark.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 10
+ },
+ "https://www.maccosmetics.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 927
+ },
+ "http://riverviewnailsalon.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 6
+ },
+ "https://www.venusnailspafl.net/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 11
+ },
+ "http://queennailsfl.net/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 9
+ },
+ "https://locations.waxcenter.com/fl/boyntonbeach/boynton-beach-boynton-town-center-0333.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 393
+ },
+ "https://strawberryblondeshair.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 11
+ },
+ "https://www.merlenorman.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.merlenorman.com/homepage",
+  "ms": 199
+ },
+ "https://www.kikocosmetics.com/en-us/utils/store-locator.html?q=33139": {
+  "status": "dead",
+  "http_status": 404,
+  "final_url": "https://us.kikocosmetics.com/utils/store-locator.html?q=33139",
+  "ms": 1047
+ },
+ "https://www.keybiscayneunisex.net/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 24
+ },
+ "https://www.latinofamilybeauty.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 6
+ },
+ "http://jtnailspakissimmee.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://expireddomains.com/domain/jtnailspakissimmee.com?utm_source=redi",
+  "ms": 54
+ },
+ "https://www.merlenormansoutherncharm.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 695
+ },
+ "http://oasissalonspa1.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://oasissalonspa1.com/Default.asp",
+  "ms": 368
+ },
+ "https://www.ilovebabalu.com/": {
+  "status": "error",
+  "error": "EHOSTUNREACH",
+  "ms": 1324
+ },
+ "https://www.jennysbrows.com/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 123
+ },
+ "https://www.ulta.com/stores/sarasota-fl-1196": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 233
+ },
+ "https://hamiltonpalmbeach.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 56
+ },
+ "https://www.ulta.com/stores/pompano-beach-fl-1358": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 180
+ },
+ "http://sublimenailspa.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 8
+ },
+ "https://www.redbamboomedispa.com/": {
+  "status": "live",
+  "http_status": 202,
+  "ms": 268
+ },
+ "http://permanentmakeupbynellienovillo.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 5
+ },
+ "https://www.eyecandyqueen.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 6
+ },
+ "http://www.facialexpressionsfl.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 6
+ },
+ "http://miko-co-salonspa.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 10
+ },
+ "https://jardinbleu.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 27
+ },
+ "https://www.sephora.com/happening/stores/tallahassee-governors-square-mall": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 82
+ },
+ "https://www.volusiamall.net/store/lee_nails_spa": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 659
+ },
+ "https://www.ulta.com/stores/tallahassee-fl-679": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 186
+ },
+ "https://unikwax.com/studio-locations/miramar/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 50
+ },
+ "http://salonocean.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://oceanbeautystyle.com/",
+  "ms": 577
+ },
+ "https://moonandstarsspa.com/": {
+  "status": "error",
+  "error": "ECONNRESET",
+  "ms": 27
+ },
+ "https://www.marykay.com/nahrens": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 728
+ },
+ "https://www.ulta.com/stores/miami-fl-1077": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 215
+ },
+ "https://www.inscapebeautysalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 63
+ },
+ "https://www.ulta.com/stores/pembroke-pines-fl-161": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 163
+ },
+ "https://www.idalmisbeauty.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 11
+ },
+ "https://www.blancassalonnailbar.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 6
+ },
+ "https://www.gatheraluxurysalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 60
+ },
+ "https://www.ulta.com/stores/davie-fl-581": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 210
+ },
+ "https://www.lateliersecrets.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 70
+ },
+ "https://www.ulta.com/stores/north-miami-beach-fl-1347": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 170
+ },
+ "https://www.ulta.com/stores/aventura-fl-448": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 169
+ },
+ "https://dekalash.com/find-a-studio/florida/the-palms-miami/": {
+  "status": "live",
+  "http_status": 202,
+  "ms": 255
+ },
+ "https://idolnailsandspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1731
+ },
+ "https://hijasdediosbeautysalonspa.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 10
+ },
+ "https://stpetesaltworks.com/": {
+  "status": "error",
+  "error": "ERR_TLS_CERT_ALTNAME_INVALID",
+  "ms": 130
+ },
+ "https://qnailspamiami.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 202
+ },
+ "https://taospamiami.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 76
+ },
+ "https://www.royalbeautyspa.com/": {
+  "status": "blocked",
+  "http_status": 403,
+  "final_url": "https://www.hugedomains.com/domain_profile.cfm?d=royalbeautyspa.com",
+  "ms": 37
+ },
+ "https://www.myunitysalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://myunitysalon.com/",
+  "ms": 1098
+ },
+ "https://www.ulta.com/stores/miami-fl-160": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 277
+ },
+ "https://clubnailsandspa.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 11
+ },
+ "http://glohairlounge.com/": {
+  "status": "error",
+  "error": "UND_ERR_CONNECT_TIMEOUT",
+  "ms": 10289
+ },
+ "https://www.ulta.com/stores/pinecrest-fl-1348": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 204
+ },
+ "https://viivwellnesshaus.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 138
+ },
+ "http://tlcnailsandspafl.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 23
+ },
+ "http://linanailsflordia.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 6
+ },
+ "https://blessingnails.bukkii.io/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 340
+ },
+ "https://www.nailsflorida.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 417
+ },
+ "https://www.ulta.com/stores/st-augustine-fl-717": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 407
+ },
+ "https://mychoicehair.com/locations/pompano-beach-fl-m008a/": {
+  "status": "error",
+  "error": "ECONNRESET",
+  "ms": 34
+ },
+ "https://www.idealimage.com/locations/florida/kendall": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://idealimage.com/",
+  "ms": 1281
+ },
+ "https://kokybeautysupply.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 781
+ },
+ "https://www.ulta.com/stores/winter-garden-fl-229": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 181
+ },
+ "https://thehairtiki.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://hairtiki.glossgenius.com/",
+  "ms": 425
+ },
+ "https://venetiansalon.com/mission-bay/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 284
+ },
+ "https://www.ulta.com/stores/yulee-fl-1202": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 162
+ },
+ "https://www.ulta.com/stores/titusville-fl-1155": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 163
+ },
+ "https://voguesalon209.wixsite.com/website": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 68
+ },
+ "https://www.elegantdominicanbeautysalon.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 11
+ },
+ "http://evergreendayspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 21
+ },
+ "https://www.ulta.com/stores/port-orange-fl-364": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 188
+ },
+ "https://www.ulta.com/stores/winter-springs-fl-1482": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 158
+ },
+ "https://www.bathandbodyworks.com/": {
+  "status": "error",
+  "http_status": 307,
+  "ms": 103
+ },
+ "https://www.maximeyeslashes.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 23
+ },
+ "https://venetiansalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 104
+ },
+ "https://www.ulta.com/stores/winter-park-fl-215": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 168
+ },
+ "https://bluewaternails.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 3409
+ },
+ "https://aventuramall.com/shops/morphe/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 533
+ },
+ "https://miamibeachbum.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 168
+ },
+ "https://www.ulta.com/stores/viera-fl-1012": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 190
+ },
+ "https://www.ulta.com/stores/jacksonville-beach-fl-1010": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 204
+ },
+ "https://www.ulta.com/stores/davenport-fl-1526": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 172
+ },
+ "https://www.kironspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 54
+ },
+ "https://www.ulta.com/stores/delray-beach-fl-731": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 210
+ },
+ "https://refugesalonbeautylounge.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 31
+ },
+ "https://aventuramall.com/shops/sephora/?location=LL669": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1425
+ },
+ "https://www.spamiamibeach.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 71
+ },
+ "https://fountainofbeauty.net/": {
+  "status": "dead",
+  "error": "EAI_AGAIN",
+  "ms": 580
+ },
+ "https://pinchapenny.com/stores/bradenton-fl-217": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 58
+ },
+ "https://www.medspaon5th.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 66
+ },
+ "https://www.ulta.com/stores/brandon-fl-437": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 169
+ },
+ "https://www.ulta.com/stores/lakeland-fl-746": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 152
+ },
+ "https://www.newmeclinics.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 385
+ },
+ "https://adriennemichelle.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1452
+ },
+ "https://www.naplessoap.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 505
+ },
+ "https://www.ulta.com/stores/orlando-fl-706": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 172
+ },
+ "http://meenasclassictouch.com/wordpress/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1581
+ },
+ "https://www.premiumoutlets.com/outlet/orlando-international/stores/cosmetic-company": {
+  "status": "error",
+  "http_status": 307,
+  "ms": 66
+ },
+ "http://www.thenailnook.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://mysite.vagaro.com/thenailnookpalmetto",
+  "ms": 1684
+ },
+ "https://www.ulta.com/stores/altamonte-springs-fl-753": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 154
+ },
+ "http://vanitymiami.com/": {
+  "status": "error",
+  "error": "EHOSTUNREACH",
+  "ms": 6321
+ },
+ "https://citynailstally.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 161
+ },
+ "https://www.ulta.com/stores/kissimmee-fl-1326": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 171
+ },
+ "https://phoenixnailbargnv.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 164
+ },
+ "https://www.bbstudiossalon.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 19
+ },
+ "https://anailsspaapopka.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 202
+ },
+ "https://il.ink/Nailsbyarisha": {
+  "status": "dead",
+  "error": "EAI_AGAIN",
+  "ms": 423
+ },
+ "http://www.fancinails.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 297
+ },
+ "https://thebeautyparlorfl.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://classfunc.com/",
+  "ms": 1101
+ },
+ "https://www.salon31daytona.com/shop/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 6
+ },
+ "https://www.lashespro.online/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 501
+ },
+ "https://bamboonailspamiami.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://mrh24hrsmedicalcenter.com/about-us/",
+  "ms": 3647
+ },
+ "https://www.afterglowtanning.net/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 64
+ },
+ "https://www.imagineyounew.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 87
+ },
+ "https://mmnailsportorange.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 143
+ },
+ "https://www.paintnailbar.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 63
+ },
+ "https://www.kutshairsalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 86
+ },
+ "https://www.volusiamall.net/store/bath__body_works": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 510
+ },
+ "https://aventuraesthetics.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 90
+ },
+ "https://www.newportbeachsideresort.com/aveda-spa-and-salon/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 145
+ },
+ "http://nailspabk.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.nailspabk.com/",
+  "ms": 237
+ },
+ "https://skynail.net/": {
+  "status": "blocked",
+  "http_status": 403,
+  "final_url": "https://www.skynail.net/",
+  "ms": 123
+ },
+ "https://www.volusiamall.net/store/brow_art_": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 436
+ },
+ "https://locations.waxcenter.com/fl/tampa/tampa-downtown-0456.html": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://locations.waxcenter.com/fl/tampa/",
+  "ms": 97
+ },
+ "https://nailcarefl.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 7
+ },
+ "https://illuminationshairnailspa.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 6
+ },
+ "https://www.volusiamall.net/store/candyland_kids_spa": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 633
+ },
+ "https://davincihairsalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 117
+ },
+ "https://www.thepavilionatportorange.com/store/venus_nail_and_spa": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1337
+ },
+ "https://www.braziliansilhouette.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 67
+ },
+ "https://trendynailstally.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 11
+ },
+ "https://5goldnails.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 14
+ },
+ "https://www.ulta.com/stores/west-palm-beach-fl-781": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 188
+ },
+ "https://lee-nails-lashes-llc.business.site/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 621
+ },
+ "https://athleticcuts.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 68
+ },
+ "https://notoriouspermanentmakeup.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 93
+ },
+ "https://407nailsalon.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 22
+ },
+ "https://www.salonlucent.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 97
+ },
+ "https://dimpleswaxingspa.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 26
+ },
+ "https://www.spa-hair-group.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 37
+ },
+ "https://macflorida.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.macflorida.com/",
+  "ms": 106
+ },
+ "https://www.pearlsbeautybarsalon.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 8
+ },
+ "https://nouveauhealthandwellness.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 61
+ },
+ "https://venusnailspa.net/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 200
+ },
+ "https://www.sephora.com/happening/stores/the-avenue-viera": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 302
+ },
+ "https://thelaserloungespa.com/sarasota": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 751
+ },
+ "https://santarosabeachnailsalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://ipar4d89.com/",
+  "ms": 1310
+ },
+ "https://thelunasalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.thelunasalon.com/",
+  "ms": 806
+ },
+ "https://detoxspa1.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1747
+ },
+ "https://alluraaesthetics.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 250
+ },
+ "https://www.ulta.com/stores/fort-walton-beach-fl-1458": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 187
+ },
+ "https://calisbeautysupply.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://calisbeautysupply.com/cgi-sys/suspendedpage.cgi",
+  "ms": 615
+ },
+ "https://www.ulta.com/stores/tampa-fl-1627": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 184
+ },
+ "https://predireparis.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 464
+ },
+ "https://blushrockbeauty.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 181
+ },
+ "https://www.ulta.com/stores/wellington-fl-247": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 226
+ },
+ "https://tampanails.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 74
+ },
+ "https://www.ulta.com/stores/lakeland-fl-763": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 168
+ },
+ "https://royalnailsnlashes.com/": {
+  "status": "error",
+  "error": "ERR_TLS_CERT_ALTNAME_INVALID",
+  "ms": 114
+ },
+ "https://www.ulta.com/stores/orlando-fl-1388": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 162
+ },
+ "https://gulfbreezefl.buffcitysoap.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://buffcitysoap.com/pages/stores/gulf-breeze-fl",
+  "ms": 219
+ },
+ "https://www.ulta.com/stores/pensacola-fl-596": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 197
+ },
+ "https://vnnailspafortmyers.com/": {
+  "status": "blocked",
+  "http_status": 403,
+  "final_url": "https://thekasilofmercantile.com/",
+  "ms": 135
+ },
+ "https://www.beginanewmed.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 54
+ },
+ "https://www.ulta.com/stores/naples-fl-1128": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 172
+ },
+ "https://pmu-culture.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 461
+ },
+ "https://www.dukaneebeautysupply.com/": {
+  "status": "error",
+  "http_status": 500,
+  "ms": 145
+ },
+ "https://excellentbeautytouch.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.excellentbeautytouch.com/",
+  "ms": 498
+ },
+ "https://www.ulta.com/stores/panama-city-beach-fl-1349": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 168
+ },
+ "https://luxynailsandspafl.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 62
+ },
+ "https://myaffinitymedspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 317
+ },
+ "http://epicdowntown.com/": {
+  "status": "blocked",
+  "http_status": 403,
+  "final_url": "https://www.hugedomains.com/domain_profile.cfm?d=epicdowntown.com",
+  "ms": 47
+ },
+ "https://www.luxebeautyglowbar.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 742
+ },
+ "https://www.skinritualist.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://skinritualist.com/",
+  "ms": 5289
+ },
+ "https://www.ulta.com/stores/homestead-fl-1401": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 149
+ },
+ "https://www.ulta.com/stores/miami-fl-1647": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 207
+ },
+ "http://kennedysbarberclub.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 449
+ },
+ "https://www.beautydivinebar.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 983
+ },
+ "https://glowvitamedspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://thecushionatelier.co.uk/products/larisa-blue-coral/",
+  "ms": 1699
+ },
+ "https://www.tangeroutlet.com/palmbeach/maps#/profile?location=14979": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.tanger.com/palmbeach/map",
+  "ms": 9838
+ },
+ "https://www.gauthier.salon/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 84
+ },
+ "https://skinique-spa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1138
+ },
+ "https://www.ulta.com/stores/parrish-fl-1737": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 174
+ },
+ "https://tspamelbourne.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.tspamelbourne.com/",
+  "ms": 313
+ },
+ "https://tipsysalonbarboyntonbeach.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 424
+ },
+ "https://venetiansalon.com/renaissance-commons/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 294
+ },
+ "https://www.divinebeautydayspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://divinebeauty.myaestheticrecord.com/online-booking",
+  "ms": 449
+ },
+ "https://sarasotapremieraesthetics.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 486
+ },
+ "https://salonchezshea.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 62
+ },
+ "https://www.noirethenailbarlakenona.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 152
+ },
+ "https://www.pristinespas.com/": {
+  "status": "blocked",
+  "http_status": 429,
+  "ms": 48
+ },
+ "https://www.fantasticnails.com/": {
+  "status": "error",
+  "error": "UND_ERR_CONNECT_TIMEOUT",
+  "ms": 10074
+ },
+ "https://spaatrosencentre.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1701
+ },
+ "https://www.kristineliza.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1122
+ },
+ "https://bestnailsportcharlotte.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 25
+ },
+ "https://leespanailscelebration.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 69
+ },
+ "https://www.soakmate.co/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.soakmate.com/",
+  "ms": 277
+ },
+ "https://www.everglownailsalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 152
+ },
+ "https://tandehealth.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 491
+ },
+ "https://miamibeachlaserandaesthetics.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 107
+ },
+ "https://growandglow.studio/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 2803
+ },
+ "https://www.organicnailslakenona.com/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 2880
+ },
+ "https://floridafloatspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 46
+ },
+ "https://www.sephora.com/happening/stores/uptown-boca": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 315
+ },
+ "https://sapphirenailbarlargo.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 99
+ },
+ "https://nailpassion-plantation.com/": {
+  "status": "error",
+  "error": "TimeoutError",
+  "ms": 15001
+ },
+ "https://atenaa-beauty-concept.zoca.ai/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://atenaa.com/",
+  "ms": 151
+ },
+ "https://dabeautybars.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.dabeautybars.com/",
+  "ms": 177
+ },
+ "https://www.ulta.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 32
+ },
+ "https://soaptreebeauty.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 176
+ },
+ "https://www.lashonomy.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 61
+ },
+ "https://www.tangeroutlet.com/palmbeach/maps#/profile?location=14999": {
+  "status": "error",
+  "error": "TimeoutError",
+  "ms": 15001
+ },
+ "https://www.tangeroutlet.com/palmbeach/maps#/profile?location=14912": {
+  "status": "error",
+  "error": "TimeoutError",
+  "ms": 14999
+ },
+ "https://millefioriskincare.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 174
+ },
+ "https://1stchoicebeauty.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 175
+ },
+ "https://theparlordowntown.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.theparlordowntown.com/",
+  "ms": 234
+ },
+ "https://www.tangeroutlet.com/palmbeach/maps#/profile?location=15000": {
+  "status": "error",
+  "error": "TimeoutError",
+  "ms": 15000
+ },
+ "https://alluraaesthetics.com/dania-beach/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 312
+ },
+ "https://alluraaesthetics.com/boca-raton/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 279
+ },
+ "https://booksy.com/en-us/1207154_instyle-nail-spa-celebration_nail-salon_134766_kissimmee": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 612
+ },
+ "https://www.nouvellelashes.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 77
+ },
+ "https://stan.store/Diepretty": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 162
+ },
+ "https://www.thebronzelily.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 111
+ },
+ "https://shopjencare.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 492
+ },
+ "https://www.transformfl.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 69
+ },
+ "https://www.bazannieves.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 419
+ },
+ "https://alluraaesthetics.com/wellington/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 673
+ },
+ "https://mocnailspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 152
+ },
+ "https://thepermanentmakeupstudios.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 767
+ },
+ "https://www.heavenlyaestheticstudio.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://heavenlyaestheticstudio.com/",
+  "ms": 127
+ },
+ "https://alistnailsfl2.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 580
+ },
+ "https://renewbeautyservicesboutique.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 67
+ },
+ "https://facetheworldesthetics.com/": {
+  "status": "dead",
+  "error": "EAI_AGAIN",
+  "ms": 476
+ },
+ "https://www.bypia.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 124
+ },
+ "https://boujeenailbarfl.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1420
+ },
+ "https://heightenedaesthetics.com/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 74
+ },
+ "https://www.magickmoonnails.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 366
+ },
+ "https://synomaticnails.as.me/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://synomaticnails.as.me/schedule/881e99e0",
+  "ms": 844
+ },
+ "https://diamondnailbarfl.us/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 70
+ },
+ "https://nailedbymaria1.as.me/schedule/5875253e": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 503
+ },
+ "https://www.laaesthetic.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 172
+ },
+ "https://crazenailsspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 914
+ },
+ "https://www.loft804.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 430
+ },
+ "https://leenailscelebrationpointfl.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1179
+ },
+ "https://www.emeraldmcspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 144
+ },
+ "https://www.estheticartspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 71
+ },
+ "https://shop.healthandlight.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 316
+ },
+ "https://annas-nails-spa-llc.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 786
+ },
+ "https://www.essenceofhealthnaples.com/": {
+  "status": "live",
+  "http_status": 202,
+  "ms": 289
+ },
+ "https://www.beautifulyoubyjess.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.beautifulyoubyjess.com/index.html",
+  "ms": 300
+ },
+ "https://www.glowaestheticsbar.com/": {
+  "status": "error",
+  "error": "UND_ERR_CONNECT_TIMEOUT",
+  "ms": 10097
+ },
+ "https://nailslab.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 78
+ },
+ "https://www.kokybeautysupply.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://kokybeautysupply.com/",
+  "ms": 853
+ },
+ "https://www.jbeautyspa.online/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 363
+ },
+ "https://floridanailsllcverobeach.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 363
+ },
+ "https://prettynailsspa2.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1204
+ },
+ "https://babcockranch.theaestheticsloungeandspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 169
+ },
+ "https://www.barepeachwax.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 64
+ },
+ "https://lasermefl.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 153
+ },
+ "https://studio-neilin.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 726
+ },
+ "https://www.balancedbeautyfl.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 163
+ },
+ "https://aplusnailwinterpark.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 67
+ },
+ "https://www.skinwithesther.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 463
+ },
+ "https://nailvibelargo.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 374
+ },
+ "https://www.vintagelashes.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 644
+ },
+ "https://bellachicbeautysalon.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 603
+ },
+ "https://bodywrapingygmedspa.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 408
+ },
+ "https://www.ulta.com/stores/palm-coast-fl-1099": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 206
+ },
+ "https://www.ulta.com/stores/estero-fl-200": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 174
+ },
+ "https://www.ulta.com/stores/jacksonville-fl-295": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 187
+ },
+ "https://www.enl239.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 964
+ },
+ "https://bartramnails.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 23
+ },
+ "https://www.celebrationaestheticcenter.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://celebrationaestheticcenter.com/en",
+  "ms": 453
+ },
+ "https://nailtalkinpensacola.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 170
+ },
+ "https://taowellnessmedspa.com/": {
+  "status": "live",
+  "http_status": 202,
+  "ms": 169
+ },
+ "https://tampahappyfootspa.com/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 295
+ },
+ "https://arielshausofbeauty.as.me/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://arielshausofbeauty.as.me/schedule/861f00be",
+  "ms": 928
+ },
+ "https://disneyworld.disney.go.com/shops/disney-springs/set-the-bar/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://disneyworld.disney.go.com/shops/disney-springs/",
+  "ms": 411
+ },
+ "https://www.reviveskincareclinic.com/": {
+  "status": "live",
+  "http_status": 202,
+  "ms": 166
+ },
+ "https://www.ulta.com/stores/pembroke-pines-fl-1373": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 180
+ },
+ "https://www.ulta.com/stores/jacksonville-fl-685": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 425
+ },
+ "https://www.ulta.com/stores/dania-beach-fl-1372": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 392
+ },
+ "https://www.ulta.com/stores/daytona-beach-fl-1325": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 374
+ },
+ "https://www.ulta.com/stores/panama-city-fl-1365": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 163
+ },
+ "https://www.ulta.com/stores/wesley-chapel-fl-253": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 209
+ },
+ "https://bamboonailsorlando.wixsite.com/bamboonailsspa": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 35
+ },
+ "https://www.ulta.com/stores/trinity-fl-1335": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 382
+ },
+ "https://addisonnailsviera.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 73
+ },
+ "https://www.viomedspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://viomedspa.com/",
+  "ms": 642
+ },
+ "https://www.ulta.com/stores/tampa-fl-153": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 209
+ },
+ "https://www.ulta.com/stores/seminole-fl-1211": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 316
+ },
+ "https://www.ulta.com/stores/oldsmar-fl-1378": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 183
+ },
+ "https://absolutely-natural.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.absolutely-natural.com/",
+  "ms": 403
+ },
+ "https://www.idealimage.com/locations/florida/st-petersburg": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://idealimage.com/",
+  "ms": 1489
+ }
+}

@@ -1,0 +1,28 @@
+[
+ {
+  "name": "Sport Clips",
+  "city": "Melbourne",
+  "state": "FL",
+  "street_address": "4846 North Wickham Road",
+  "zip_code": "32940",
+  "county": "",
+  "categories": [
+   "barber"
+  ],
+  "website_url": "https://sportclips.com/us-fl-melbourne-fl226",
+  "phone": "(321) 341-9190",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/way/1535717479",
+  "source_external_id": "osm:way/1535717479",
+  "license_number": null,
+  "latitude": 28.1874562,
+  "longitude": -80.6726924,
+  "operational_status": "verified",
+  "checked_at": "2026-11-24",
+  "raw_name": "Sport Clips",
+  "website_candidate": "https://sportclips.com/us-fl-melbourne-fl226",
+  "website_source_url": "",
+  "reason": "duplicate_candidate",
+  "duplicate_of": "osm:node/7573131368"
+ }
+]
