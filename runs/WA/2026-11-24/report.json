@@ -1,0 +1,57 @@
+{
+ "state": "WA",
+ "state_name": "Washington",
+ "wave": 3,
+ "created_at": "2026-11-24T22:11:45.359Z",
+ "staging_only": true,
+ "sources": [
+  {
+   "name": "OpenStreetMap (Overpass)",
+   "url": "https://overpass.private.coffee/api/interpreter",
+   "status": "processed",
+   "records": 4402,
+   "parts_ok": 4,
+   "parts_total": 4
+  },
+  {
+   "name": "U.S. Census Geocoder (place containing map point)",
+   "url": "https://geocoding.geo.census.gov/",
+   "status": "processed",
+   "records": 2180
+  }
+ ],
+ "license_records_scanned": 0,
+ "licensed_active_candidates": 0,
+ "license_dropped": null,
+ "license_fields": null,
+ "license_shop_types": [],
+ "license_type_counts": [],
+ "license_type_lookup": [],
+ "census_city_lookup": {
+  "attempted": 2213,
+  "filled": 2180,
+  "failed": 0
+ },
+ "mapped_beauty_places": 4402,
+ "overpass_endpoint": "https://overpass.private.coffee/api/interpreter",
+ "total_candidates": 4122,
+ "with_websites": 788,
+ "category_counts": {
+  "barber": 359,
+  "hair": 1826,
+  "nails": 815,
+  "waxing": 57,
+  "salon_suites": 5,
+  "brows": 19,
+  "tattoo": 290,
+  "skincare": 76,
+  "spray_tanning": 83,
+  "lashes": 62,
+  "makeup": 57,
+  "massage": 472,
+  "permanent_makeup": 1
+ },
+ "errors": [],
+ "note": "A license record or map listing alone does not prove a business is open. The importer publishes only rows that meet its rules; the rest are held.",
+ "attribution": "OpenStreetMap data © OpenStreetMap contributors (ODbL, https://www.openstreetmap.org/copyright). Licensing data from the listed state open-data portals."
+}

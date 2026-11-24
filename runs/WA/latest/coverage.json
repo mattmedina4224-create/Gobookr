@@ -1,0 +1,882 @@
+{
+ "state": "WA",
+ "census_places": 636,
+ "places_covered": 75,
+ "place_coverage_pct": 11.8,
+ "census_counties": 39,
+ "counties_covered": 17,
+ "counties_uncovered": [
+  "Adams County",
+  "Asotin County",
+  "Chelan County",
+  "Columbia County",
+  "Douglas County",
+  "Ferry County",
+  "Franklin County",
+  "Garfield County",
+  "Jefferson County",
+  "Kittitas County",
+  "Klickitat County",
+  "Lewis County",
+  "Lincoln County",
+  "Mason County",
+  "Okanogan County",
+  "Pend Oreille County",
+  "San Juan County",
+  "Skamania County",
+  "Stevens County",
+  "Wahkiakum County",
+  "Walla Walla County",
+  "Whitman County"
+ ],
+ "communities_outside_census_places": [
+  {
+   "city": "Meridian",
+   "shops": 1
+  },
+  {
+   "city": "Lopez Island",
+   "shops": 1
+  },
+  {
+   "city": "Sivlerdale",
+   "shops": 1
+  }
+ ],
+ "top_covered_places": [
+  {
+   "name": "Seattle",
+   "shops": 236
+  },
+  {
+   "name": "Vancouver",
+   "shops": 57
+  },
+  {
+   "name": "Bellingham",
+   "shops": 35
+  },
+  {
+   "name": "Bremerton",
+   "shops": 24
+  },
+  {
+   "name": "Kirkland",
+   "shops": 23
+  },
+  {
+   "name": "Bellevue",
+   "shops": 21
+  },
+  {
+   "name": "Redmond",
+   "shops": 13
+  },
+  {
+   "name": "Lynnwood",
+   "shops": 10
+  },
+  {
+   "name": "Renton",
+   "shops": 9
+  },
+  {
+   "name": "Mount Vernon",
+   "shops": 9
+  },
+  {
+   "name": "Tacoma",
+   "shops": 9
+  },
+  {
+   "name": "Camas",
+   "shops": 8
+  },
+  {
+   "name": "Silverdale",
+   "shops": 7
+  },
+  {
+   "name": "Everett",
+   "shops": 7
+  },
+  {
+   "name": "Issaquah",
+   "shops": 6
+  },
+  {
+   "name": "Puyallup",
+   "shops": 6
+  },
+  {
+   "name": "Burlington",
+   "shops": 6
+  },
+  {
+   "name": "Kent",
+   "shops": 6
+  },
+  {
+   "name": "South Hill",
+   "shops": 5
+  },
+  {
+   "name": "Woodinville",
+   "shops": 4
+  },
+  {
+   "name": "Bainbridge Island",
+   "shops": 4
+  },
+  {
+   "name": "Shoreline",
+   "shops": 4
+  },
+  {
+   "name": "Lacey",
+   "shops": 4
+  },
+  {
+   "name": "Spokane",
+   "shops": 4
+  },
+  {
+   "name": "Burien",
+   "shops": 3
+  },
+  {
+   "name": "Tumwater",
+   "shops": 3
+  },
+  {
+   "name": "Tukwila",
+   "shops": 3
+  },
+  {
+   "name": "Covington",
+   "shops": 3
+  },
+  {
+   "name": "Olympia",
+   "shops": 3
+  },
+  {
+   "name": "Spokane Valley",
+   "shops": 3
+  },
+  {
+   "name": "Washougal",
+   "shops": 3
+  },
+  {
+   "name": "Des Moines",
+   "shops": 2
+  },
+  {
+   "name": "Sequim",
+   "shops": 2
+  },
+  {
+   "name": "Edmonds",
+   "shops": 2
+  },
+  {
+   "name": "Bothell",
+   "shops": 2
+  },
+  {
+   "name": "Sammamish",
+   "shops": 2
+  },
+  {
+   "name": "Longview",
+   "shops": 2
+  },
+  {
+   "name": "Marysville",
+   "shops": 2
+  },
+  {
+   "name": "Port Angeles",
+   "shops": 2
+  },
+  {
+   "name": "Poulsbo",
+   "shops": 2
+  }
+ ],
+ "uncovered_places_with_held_candidates": [
+  {
+   "name": "Maple Valley",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 40
+  },
+  {
+   "name": "University Place",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 39
+  },
+  {
+   "name": "Enumclaw",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 32
+  },
+  {
+   "name": "Sumner",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 28
+  },
+  {
+   "name": "Graham",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 18
+  },
+  {
+   "name": "Bonney Lake",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 17
+  },
+  {
+   "name": "Mukilteo",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 15
+  },
+  {
+   "name": "Richland",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 15
+  },
+  {
+   "name": "Salmon Creek",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 15
+  },
+  {
+   "name": "Shelton",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 14
+  },
+  {
+   "name": "Woodland",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 12
+  },
+  {
+   "name": "Aberdeen",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 11
+  },
+  {
+   "name": "Chehalis",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 11
+  },
+  {
+   "name": "Yakima",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 11
+  },
+  {
+   "name": "Eatonville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 10
+  },
+  {
+   "name": "SeaTac",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 10
+  },
+  {
+   "name": "Wenatchee",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 10
+  },
+  {
+   "name": "Centralia",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 9
+  },
+  {
+   "name": "Fairwood",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 9
+  },
+  {
+   "name": "Ferndale",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 9
+  },
+  {
+   "name": "Port Townsend",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 9
+  },
+  {
+   "name": "Fircrest",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 8
+  },
+  {
+   "name": "Mercer Island",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 8
+  },
+  {
+   "name": "Pasco",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 8
+  },
+  {
+   "name": "Snoqualmie",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 8
+  },
+  {
+   "name": "Belfair",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 7
+  },
+  {
+   "name": "Kingston",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 7
+  },
+  {
+   "name": "Langley",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 7
+  },
+  {
+   "name": "Mount Vista",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 7
+  },
+  {
+   "name": "Normandy Park",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 7
+  },
+  {
+   "name": "Yelm",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 7
+  },
+  {
+   "name": "Ellensburg",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 6
+  },
+  {
+   "name": "Forks",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 6
+  },
+  {
+   "name": "Montesano",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 6
+  },
+  {
+   "name": "Bryn Mawr-Skyway",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Elma",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Fife",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Kelso",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "La Center",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Mill Creek",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Black Diamond",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Blaine",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Buckley",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Edgewood",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Goldendale",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Lake Tapps",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Orting",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Alderwood Manor",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Country Homes",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "East Wenatchee",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Everson",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Five Corners",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Hoquiam",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Kalama",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Mossyrock",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Newcastle",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Packwood",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Rochester",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Union Hill-Novelty Hill",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Airway Heights",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Birch Bay",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Carnation",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Chelan",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Cheney",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Chewelah",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Colville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Coupeville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Fall City",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Felida",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Freeland",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Gold Bar",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Granite Falls",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "La Conner",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Lake Stickney",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "McCleary",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Mill Creek East",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Orchards",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Parkwood",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Rainier",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Ritzville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Ruston",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Spanaway",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Sultan",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Tenino",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Toledo",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Walla Walla",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Ashford",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Bangor Base",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Cathcart",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Clallam Bay",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Clover Creek",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Cohassett Beach",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "College Place",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Cosmopolis",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Darrington",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Dollars Corner",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Eastmont",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Friday Harbor",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Grand Mound",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Grayland",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Hoodsport",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Larch Way",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Leavenworth",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Liberty Lake",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Manchester",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Maple Falls",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Martha Lake",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Morton",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Napavine",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Neah Bay",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "North Lynnwood",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "North Puyallup",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Pacific Beach",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Parkland",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Port Angeles East",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Prosser",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Purdy",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Ravensdale",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Ronald",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Roslyn",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Silvana",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "South Bend",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Steilacoom",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Stevenson",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Sumas",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Tonasket",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Trout Lake",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Twisp",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Vader",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Wauna",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "West Richland",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "White Salmon",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Winlock",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Wollochet",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  }
+ ],
+ "uncovered_places_without_candidates": 427,
+ "source": "U.S. Census Bureau 2020 place-by-county and county code files"
+}
