@@ -3101,7 +3101,7 @@
   "name": "Ulta Beauty",
   "city": "Saint George",
   "state": "UT",
-  "street_address": "15 South River Road",
+  "street_address": "15 S River Rd",
   "zip_code": "84790",
   "county": "",
   "categories": [
@@ -3601,6 +3601,30 @@
   "checked_at": "2026-11-24",
   "raw_name": "Float Spa 19",
   "website_candidate": "https://www.floatspa19.com/",
+  "website_source_url": ""
+ },
+ {
+  "name": "Ulta Beauty",
+  "city": "West Valley City",
+  "state": "UT",
+  "street_address": "3579 South Constitution Boulevard",
+  "zip_code": "84119",
+  "county": "",
+  "categories": [
+   "stylist"
+  ],
+  "website_url": "https://www.ulta.com/stores/west-valley-city-ut-1062",
+  "phone": "(801) 966-0135",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/node/9645848669",
+  "source_external_id": "osm:node/9645848669",
+  "license_number": null,
+  "latitude": 40.6949285,
+  "longitude": -111.95585,
+  "operational_status": "verified",
+  "checked_at": "2026-11-24",
+  "raw_name": "Ulta Beauty",
+  "website_candidate": "https://www.ulta.com/stores/west-valley-city-ut-1062",
   "website_source_url": ""
  },
  {
@@ -4219,7 +4243,7 @@
   "source_url": "https://www.openstreetmap.org/node/12174340564",
   "source_external_id": "osm:node/12174340564",
   "license_number": null,
-  "latitude": 40.3776578,
+  "latitude": 40.3776546,
   "longitude": -111.7940107,
   "operational_status": "verified",
   "checked_at": "2026-11-24",
@@ -4806,127 +4830,6 @@
   "website_source_url": ""
  },
  {
-  "name": "European Wax Center",
-  "city": "American Fork",
-  "state": "UT",
-  "street_address": "945 West 500 North",
-  "zip_code": "84003",
-  "county": "",
-  "categories": [
-   "waxing_specialist"
-  ],
-  "website_url": "https://locations.waxcenter.com/ut/americanfork/facial-waxing-american-fork-0292.html",
-  "phone": "(385) 498-4980",
-  "source_name": "OpenStreetMap contributors",
-  "source_url": "https://www.openstreetmap.org/node/14108481016",
-  "source_external_id": "osm:node/14108481016",
-  "license_number": null,
-  "latitude": 40.3878631,
-  "longitude": -111.8230899,
-  "operational_status": "verified",
-  "checked_at": "2026-11-24",
-  "raw_name": "European Wax Center",
-  "website_candidate": "https://locations.waxcenter.com/ut/americanfork/facial-waxing-american-fork-0292.html",
-  "website_source_url": ""
- },
- {
-  "name": "Sun Haven",
-  "city": "Pleasant Grove",
-  "state": "UT",
-  "street_address": "238 East State Street",
-  "zip_code": "84062",
-  "county": "",
-  "categories": [
-   "spray_tan_specialist"
-  ],
-  "website_url": "https://www.sunhaventanbeauty.com/",
-  "phone": "(801) 701-0045",
-  "source_name": "OpenStreetMap contributors",
-  "source_url": "https://www.openstreetmap.org/node/14181895294",
-  "source_external_id": "osm:node/14181895294",
-  "license_number": null,
-  "latitude": 40.3565221,
-  "longitude": -111.7380157,
-  "operational_status": "verified",
-  "checked_at": "2026-11-24",
-  "raw_name": "Sun Haven",
-  "website_candidate": "https://www.sunhaventanbeauty.com/",
-  "website_source_url": ""
- },
- {
-  "name": "Beaches Tanning + Spa",
-  "city": "Orem",
-  "state": "UT",
-  "street_address": "1549 North State Street",
-  "zip_code": "84057",
-  "county": "",
-  "categories": [
-   "spray_tan_specialist"
-  ],
-  "website_url": "https://www.beachestanningandspa.com/tanning-salon-locations/north-orem",
-  "phone": "(801) 701-0246",
-  "source_name": "OpenStreetMap contributors",
-  "source_url": "https://www.openstreetmap.org/node/14185376396",
-  "source_external_id": "osm:node/14185376396",
-  "license_number": null,
-  "latitude": 40.3254661,
-  "longitude": -111.7084073,
-  "operational_status": "verified",
-  "checked_at": "2026-11-24",
-  "raw_name": "Beaches Tanning + Spa",
-  "website_candidate": "https://www.beachestanningandspa.com/tanning-salon-locations/north-orem",
-  "website_source_url": ""
- },
- {
-  "name": "Synchronicities",
-  "city": "Sandy",
-  "state": "UT",
-  "street_address": "9419 South Union Square",
-  "zip_code": "",
-  "county": "",
-  "categories": [
-   "stylist"
-  ],
-  "website_url": "https://www.synchronicities1111.com/",
-  "phone": "",
-  "source_name": "OpenStreetMap contributors",
-  "source_url": "https://www.openstreetmap.org/node/14190398054",
-  "source_external_id": "osm:node/14190398054",
-  "license_number": null,
-  "latitude": 40.5803027,
-  "longitude": -111.8732563,
-  "operational_status": "verified",
-  "checked_at": "2026-11-24",
-  "raw_name": "Synchronicities",
-  "website_candidate": "https://www.synchronicities1111.com/",
-  "website_source_url": ""
- },
- {
-  "name": "Silver Nails & Lash",
-  "city": "Pleasant Grove",
-  "state": "UT",
-  "street_address": "318 East State Street",
-  "zip_code": "84062",
-  "county": "",
-  "categories": [
-   "nail_technician",
-   "eyelash_technician"
-  ],
-  "website_url": "https://www.silvernailsandlashpleasantgrove.com/",
-  "phone": "(801) 899-2752",
-  "source_name": "OpenStreetMap contributors",
-  "source_url": "https://www.openstreetmap.org/node/14197145310",
-  "source_external_id": "osm:node/14197145310",
-  "license_number": null,
-  "latitude": 40.3539205,
-  "longitude": -111.7362251,
-  "operational_status": "verified",
-  "checked_at": "2026-11-24",
-  "raw_name": "Silver Nails & Lash",
-  "website_candidate": "https://www.silvernailsandlashpleasantgrove.com/",
-  "website_source_url": ""
- },
- {
   "name": "Ulta Beauty",
   "city": "Riverton",
   "state": "UT",
@@ -4984,7 +4887,7 @@
   "categories": [
    "esthetician"
   ],
-  "website_url": "https://beautifulumedspa.com/american-fork/",
+  "website_url": "https://beautifulumedspa.com/",
   "phone": "(385) 438-3909",
   "source_name": "OpenStreetMap contributors",
   "source_url": "https://www.openstreetmap.org/way/1254363842",
@@ -4995,7 +4898,7 @@
   "operational_status": "verified",
   "checked_at": "2026-11-24",
   "raw_name": "Beautiful U Med Spa",
-  "website_candidate": "https://beautifulumedspa.com/american-fork/",
+  "website_candidate": "https://beautifulumedspa.com/",
   "website_source_url": ""
  },
  {
@@ -5212,30 +5115,6 @@
   "checked_at": "2026-11-24",
   "raw_name": "Palm Beach Tan",
   "website_candidate": "https://palmbeachtan.com/locations/ut/saratoga-springs-utah-73",
-  "website_source_url": ""
- },
- {
-  "name": "Ulta Beauty",
-  "city": "West Valley City",
-  "state": "UT",
-  "street_address": "3579 South Constitution Boulevard",
-  "zip_code": "84119",
-  "county": "",
-  "categories": [
-   "stylist"
-  ],
-  "website_url": "https://www.ulta.com/stores/west-valley-city-ut-1062",
-  "phone": "(801) 966-0135",
-  "source_name": "OpenStreetMap contributors",
-  "source_url": "https://www.openstreetmap.org/way/1550953311",
-  "source_external_id": "osm:way/1550953311",
-  "license_number": null,
-  "latitude": 40.6949593,
-  "longitude": -111.9557753,
-  "operational_status": "verified",
-  "checked_at": "2026-11-24",
-  "raw_name": "Ulta Beauty",
-  "website_candidate": "https://www.ulta.com/stores/west-valley-city-ut-1062",
   "website_source_url": ""
  },
  {
@@ -5889,6 +5768,54 @@
   "website_source_url": ""
  },
  {
+  "name": "Elite Spa Utah",
+  "city": "Salt Lake City",
+  "state": "UT",
+  "street_address": "1136 South State Street",
+  "zip_code": "84111",
+  "county": "Salt Lake",
+  "categories": [
+   "massage_therapist"
+  ],
+  "website_url": "https://elitespautah.com/",
+  "phone": "(801) 839-8880",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/node/14170820201",
+  "source_external_id": "osm:node/14170820201",
+  "license_number": null,
+  "latitude": 40.7442613,
+  "longitude": -111.8885524,
+  "operational_status": "verified",
+  "checked_at": "2026-11-24",
+  "raw_name": "Elite Spa Utah",
+  "website_candidate": "http://elitespautah.com/",
+  "website_source_url": ""
+ },
+ {
+  "name": "Gayles Healing Pathways Massage",
+  "city": "Moab",
+  "state": "UT",
+  "street_address": "2471 US 191",
+  "zip_code": "84532",
+  "county": "",
+  "categories": [
+   "massage_therapist"
+  ],
+  "website_url": "https://www.healingpathwaysmassageut.com/",
+  "phone": "(435) 260-7185",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/node/14237671839",
+  "source_external_id": "osm:node/14237671839",
+  "license_number": null,
+  "latitude": 38.5358288,
+  "longitude": -109.5098925,
+  "operational_status": "verified",
+  "checked_at": "2026-11-24",
+  "raw_name": "Gayles Healing Pathways Massage",
+  "website_candidate": "https://www.healingpathwaysmassageut.com/",
+  "website_source_url": ""
+ },
+ {
   "name": "Osy Tattoo",
   "city": "Salt Lake City",
   "state": "UT",
@@ -5958,6 +5885,103 @@
   "checked_at": "2026-11-24",
   "raw_name": "Fika Reflexology",
   "website_candidate": "https://www.fikareflexbar.com/saratoga-springs",
+  "website_source_url": ""
+ },
+ {
+  "name": "European Wax Center",
+  "city": "American Fork",
+  "state": "UT",
+  "street_address": "945 West 500 North",
+  "zip_code": "84003",
+  "county": "",
+  "categories": [
+   "waxing_specialist"
+  ],
+  "website_url": "https://locations.waxcenter.com/ut/americanfork/facial-waxing-american-fork-0292.html",
+  "phone": "(385) 498-4980",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/node/14108481016",
+  "source_external_id": "osm:node/14108481016",
+  "license_number": null,
+  "latitude": 40.3878631,
+  "longitude": -111.8230899,
+  "operational_status": "verified",
+  "checked_at": "2026-11-24",
+  "raw_name": "European Wax Center",
+  "website_candidate": "https://locations.waxcenter.com/ut/americanfork/facial-waxing-american-fork-0292.html",
+  "website_source_url": ""
+ },
+ {
+  "name": "Sun Haven",
+  "city": "Pleasant Grove",
+  "state": "UT",
+  "street_address": "238 East State Street",
+  "zip_code": "84062",
+  "county": "",
+  "categories": [
+   "spray_tan_specialist"
+  ],
+  "website_url": "https://www.sunhaventanbeauty.com/",
+  "phone": "(801) 701-0045",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/node/14181895294",
+  "source_external_id": "osm:node/14181895294",
+  "license_number": null,
+  "latitude": 40.3565221,
+  "longitude": -111.7380157,
+  "operational_status": "verified",
+  "checked_at": "2026-11-24",
+  "raw_name": "Sun Haven",
+  "website_candidate": "https://www.sunhaventanbeauty.com/",
+  "website_source_url": ""
+ },
+ {
+  "name": "Beaches Tanning + Spa",
+  "city": "Orem",
+  "state": "UT",
+  "street_address": "1549 North State Street",
+  "zip_code": "84057",
+  "county": "",
+  "categories": [
+   "spray_tan_specialist"
+  ],
+  "website_url": "https://www.beachestanningandspa.com/tanning-salon-locations/north-orem",
+  "phone": "(801) 701-0246",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/node/14185376396",
+  "source_external_id": "osm:node/14185376396",
+  "license_number": null,
+  "latitude": 40.3254661,
+  "longitude": -111.7084073,
+  "operational_status": "verified",
+  "checked_at": "2026-11-24",
+  "raw_name": "Beaches Tanning + Spa",
+  "website_candidate": "https://www.beachestanningandspa.com/tanning-salon-locations/north-orem",
+  "website_source_url": ""
+ },
+ {
+  "name": "Silver Nails & Lash",
+  "city": "Pleasant Grove",
+  "state": "UT",
+  "street_address": "318 East State Street",
+  "zip_code": "84062",
+  "county": "",
+  "categories": [
+   "nail_technician",
+   "eyelash_technician"
+  ],
+  "website_url": "https://www.silvernailsandlashpleasantgrove.com/",
+  "phone": "(801) 899-2752",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/node/14197145310",
+  "source_external_id": "osm:node/14197145310",
+  "license_number": null,
+  "latitude": 40.3539205,
+  "longitude": -111.7362251,
+  "operational_status": "verified",
+  "checked_at": "2026-11-24",
+  "raw_name": "Silver Nails & Lash",
+  "website_candidate": "https://www.silvernailsandlashpleasantgrove.com/",
   "website_source_url": ""
  }
 ]

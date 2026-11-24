@@ -1,10 +1,10 @@
 {
  "state": "UT",
  "census_places": 332,
- "places_covered": 43,
- "place_coverage_pct": 13,
+ "places_covered": 44,
+ "place_coverage_pct": 13.3,
  "census_counties": 29,
- "counties_covered": 12,
+ "counties_covered": 13,
  "counties_uncovered": [
   "Beaver County",
   "Box Elder County",
@@ -13,7 +13,6 @@
   "Duchesne County",
   "Emery County",
   "Garfield County",
-  "Grand County",
   "Juab County",
   "Kane County",
   "Millard County",
@@ -37,7 +36,7 @@
  "top_covered_places": [
   {
    "name": "Salt Lake City",
-   "shops": 52
+   "shops": 53
   },
   {
    "name": "American Fork",
@@ -96,10 +95,6 @@
    "shops": 5
   },
   {
-   "name": "Sandy",
-   "shops": 4
-  },
-  {
    "name": "Centerville",
    "shops": 4
   },
@@ -114,6 +109,10 @@
   {
    "name": "Midvale",
    "shops": 4
+  },
+  {
+   "name": "Sandy",
+   "shops": 3
   },
   {
    "name": "Herriman",
@@ -205,17 +204,17 @@
   {
    "name": "Holladay",
    "type": "INCORPORATED PLACE",
-   "held_candidates": 15
-  },
-  {
-   "name": "South Salt Lake",
-   "type": "INCORPORATED PLACE",
    "held_candidates": 14
   },
   {
    "name": "Park City",
    "type": "INCORPORATED PLACE",
-   "held_candidates": 11
+   "held_candidates": 10
+  },
+  {
+   "name": "South Salt Lake",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 10
   },
   {
    "name": "Washington",
@@ -243,6 +242,11 @@
    "held_candidates": 5
   },
   {
+   "name": "Richfield",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
    "name": "Syracuse",
    "type": "INCORPORATED PLACE",
    "held_candidates": 4
@@ -258,22 +262,12 @@
    "held_candidates": 3
   },
   {
-   "name": "Moab",
-   "type": "INCORPORATED PLACE",
-   "held_candidates": 3
-  },
-  {
    "name": "North Ogden",
    "type": "INCORPORATED PLACE",
    "held_candidates": 3
   },
   {
    "name": "Perry",
-   "type": "INCORPORATED PLACE",
-   "held_candidates": 3
-  },
-  {
-   "name": "Richfield",
    "type": "INCORPORATED PLACE",
    "held_candidates": 3
   },
