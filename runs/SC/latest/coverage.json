@@ -1,0 +1,505 @@
+{
+ "state": "SC",
+ "census_places": 472,
+ "places_covered": 25,
+ "place_coverage_pct": 5.3,
+ "census_counties": 46,
+ "counties_covered": 17,
+ "counties_uncovered": [
+  "Abbeville County",
+  "Allendale County",
+  "Bamberg County",
+  "Barnwell County",
+  "Calhoun County",
+  "Cherokee County",
+  "Chester County",
+  "Chesterfield County",
+  "Clarendon County",
+  "Colleton County",
+  "Darlington County",
+  "Dillon County",
+  "Edgefield County",
+  "Fairfield County",
+  "Florence County",
+  "Georgetown County",
+  "Hampton County",
+  "Jasper County",
+  "Kershaw County",
+  "Lancaster County",
+  "Laurens County",
+  "Lee County",
+  "Marion County",
+  "Marlboro County",
+  "McCormick County",
+  "Newberry County",
+  "Orangeburg County",
+  "Saluda County",
+  "Williamsburg County"
+ ],
+ "communities_outside_census_places": [
+  {
+   "city": "Franklin",
+   "shops": 1
+  },
+  {
+   "city": "Indian Land",
+   "shops": 1
+  }
+ ],
+ "top_covered_places": [
+  {
+   "name": "Greenville",
+   "shops": 28
+  },
+  {
+   "name": "Charleston",
+   "shops": 18
+  },
+  {
+   "name": "Columbia",
+   "shops": 16
+  },
+  {
+   "name": "Mount Pleasant",
+   "shops": 14
+  },
+  {
+   "name": "Spartanburg",
+   "shops": 9
+  },
+  {
+   "name": "Greer",
+   "shops": 4
+  },
+  {
+   "name": "Lexington",
+   "shops": 4
+  },
+  {
+   "name": "Myrtle Beach",
+   "shops": 3
+  },
+  {
+   "name": "North Myrtle Beach",
+   "shops": 3
+  },
+  {
+   "name": "Beaufort",
+   "shops": 3
+  },
+  {
+   "name": "Clemson",
+   "shops": 2
+  },
+  {
+   "name": "Summerville",
+   "shops": 2
+  },
+  {
+   "name": "Easley",
+   "shops": 2
+  },
+  {
+   "name": "Simpsonville",
+   "shops": 2
+  },
+  {
+   "name": "Mauldin",
+   "shops": 2
+  },
+  {
+   "name": "Travelers Rest",
+   "shops": 1
+  },
+  {
+   "name": "Seneca",
+   "shops": 1
+  },
+  {
+   "name": "Hilton Head Island",
+   "shops": 1
+  },
+  {
+   "name": "Aiken",
+   "shops": 1
+  },
+  {
+   "name": "Piedmont",
+   "shops": 1
+  },
+  {
+   "name": "Rock Hill",
+   "shops": 1
+  },
+  {
+   "name": "Irmo",
+   "shops": 1
+  },
+  {
+   "name": "Greenwood",
+   "shops": 1
+  },
+  {
+   "name": "Sumter",
+   "shops": 1
+  },
+  {
+   "name": "Union",
+   "shops": 1
+  }
+ ],
+ "uncovered_places_with_held_candidates": [
+  {
+   "name": "North Charleston",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 25
+  },
+  {
+   "name": "Goose Creek",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 13
+  },
+  {
+   "name": "Dentsville",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 7
+  },
+  {
+   "name": "Lancaster",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 7
+  },
+  {
+   "name": "Manning",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 6
+  },
+  {
+   "name": "Woodruff",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 6
+  },
+  {
+   "name": "Barnwell",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Boiling Springs",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Duncan",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Taylors",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Batesburg-Leesville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Garden City",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Laurens",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Lyman",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "St. Andrews",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Surfside Beach",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "West Columbia",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Florence",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Fort Mill",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Hampton",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Honea Path",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Murrells Inlet",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "North Augusta",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Anderson",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Camden",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Cayce",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Denmark",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Fountain Inn",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Hanahan",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Inman",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Ladson",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Lake City",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Landrum",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Oak Grove",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Orangeburg",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Pickens",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Ware Shoals",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Arial",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Bamberg",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Belton",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Bishopville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Blackville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Bluffton",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Carolina Forest",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Central",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Chesnee",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Graniteville",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Jenkinsville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Lake Murray of Richland",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Lakewood",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Litchfield Beach",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Little River",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Loris",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Marion",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Moncks Corner",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Newberry",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Ninety Six",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Northlake",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Olanta",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Parker",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Pawleys Island",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Pelzer",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Port Royal",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Powdersville",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Seven Oaks",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Turbeville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Walterboro",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "White Knoll",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Woodfield",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "York",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  }
+ ],
+ "uncovered_places_without_candidates": 377,
+ "source": "U.S. Census Bureau 2020 place-by-county and county code files"
+}

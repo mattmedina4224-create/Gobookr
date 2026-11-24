@@ -1,0 +1,933 @@
+{
+ "https://www.verbbeauty.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 326
+ },
+ "https://www.riverfallsspa.com/": {
+  "status": "error",
+  "error": "UND_ERR_SOCKET",
+  "ms": 353
+ },
+ "https://www.southerncouturemakeup.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 483
+ },
+ "https://www.avedacharleston.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 605
+ },
+ "https://greenvillesc.spaviadayspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://spaviadayspa.com/locations/greenville-sc/",
+  "ms": 621
+ },
+ "https://www.bluemercury.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://bluemercury.com/",
+  "ms": 673
+ },
+ "https://www.thebrowningstudio.net/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 229
+ },
+ "https://sweathouz.com/augusta-road-book-now/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 92
+ },
+ "https://riobodywax.com/": {
+  "status": "error",
+  "error": "ETIMEDOUT",
+  "ms": 808
+ },
+ "http://princessnailssc.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 39
+ },
+ "http://sunrisenailspa.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 10
+ },
+ "https://salonsbyjc.com/location/south-carolina-greenville/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 566
+ },
+ "https://magicnailsandbeauty.com/": {
+  "status": "error",
+  "error": "ECONNRESET",
+  "ms": 65
+ },
+ "https://www.lashbardowntown.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 388
+ },
+ "https://www.so2spa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://hyde.salon/",
+  "ms": 503
+ },
+ "https://www.ulta.com/stores/spartanburg-sc-609": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1156
+ },
+ "https://shopgreenridge.com/directory/general/polished-at-greenridge/": {
+  "status": "error",
+  "http_status": 502,
+  "ms": 509
+ },
+ "https://www.purebalancefloatspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://purebalancefloatspa.com/",
+  "ms": 289
+ },
+ "https://www.ulta.com/stores/myrtle-beach-sc-276": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 824
+ },
+ "https://www.buffcitysoap.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://buffcitysoap.com/",
+  "ms": 464
+ },
+ "https://driftgreenville.com/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 246
+ },
+ "https://brazilianwaxandspabyclaudia.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 297
+ },
+ "https://lavishnailsgreersc.com//": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://lavishnailsgreersc.com/",
+  "ms": 711
+ },
+ "https://hollywood-nails-duncan.edan.io/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 76
+ },
+ "https://www.ulta.com/stores/mt-pleasant-sc-201": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 266
+ },
+ "https://www.morrisjeanandfriends.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 25
+ },
+ "https://www.ulta.com/stores/columbia-sc-462": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 610
+ },
+ "https://www.nicetobekneadedmassagesc.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 31
+ },
+ "https://www.luxurynailsspasc.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 25
+ },
+ "https://www.elitemedspaandlaser.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 376
+ },
+ "https://www.ulta.com/stores/greenville-sc-192": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1357
+ },
+ "https://palmbeachtan.com/locations/SC/Cherrydale": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://palmbeachtan.com/locations/sc/cherrydale",
+  "ms": 944
+ },
+ "https://happynailsnorthmyrtlebeach.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 136
+ },
+ "https://solarnailsspartanburg.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 57
+ },
+ "https://www.ulta.com/stores/seneca-sc-1307": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 567
+ },
+ "https://balancemassageandspa.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 30
+ },
+ "https://www.modavitasalonspa.com/": {
+  "status": "error",
+  "http_status": 502,
+  "ms": 346
+ },
+ "https://sheilaselectrolysis.com/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 331
+ },
+ "https://revivedaesthetics.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://thepushmed.com/",
+  "ms": 1974
+ },
+ "https://www.about-face.biz/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 300
+ },
+ "https://www.ulta.com/stores/greer-sc-1407": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 617
+ },
+ "https://www.queenbspasc.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 12
+ },
+ "https://www.backto30.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://backto30.com/",
+  "ms": 367
+ },
+ "http://makeupbysri.com/": {
+  "status": "error",
+  "http_status": 500,
+  "ms": 607
+ },
+ "https://greenville.woodhousespas.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://locations.woodhousespas.com/south-carolina/greenville/1025-woodruff-rd/",
+  "ms": 649
+ },
+ "https://www.ulta.com/stores/easley-sc-1621": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 287
+ },
+ "https://www.greenpapayasalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 191
+ },
+ "https://dripworx.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1889
+ },
+ "https://www.vagaro.com/us03/jeanmariesbrazilianbodywax": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1251
+ },
+ "https://mychicmd.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 222
+ },
+ "https://libertenails.com/": {
+  "status": "error",
+  "error": "ETIMEDOUT",
+  "ms": 603
+ },
+ "https://lavishnailspasimpsonville.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 483
+ },
+ "https://www.evolvegvl.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 284
+ },
+ "https://mimosanailspa.com/": {
+  "status": "error",
+  "error": "ETIMEDOUT",
+  "ms": 601
+ },
+ "http://thilenailbar.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 26
+ },
+ "https://nailcareatthecave.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.nailcareatthecave.com/",
+  "ms": 282
+ },
+ "https://www.ulta.com/stores/lexington-sc-1263": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 271
+ },
+ "https://vintagehairstudio.us/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 2091
+ },
+ "https://locations.waxcenter.com/sc/greenville/greenville-0875.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 700
+ },
+ "https://lvnailloungeandspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 379
+ },
+ "https://palmbeachtan.com/locations/SC/Lexington-851-US-378": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://palmbeachtan.com/locations/sc/lexington-851-us-378",
+  "ms": 584
+ },
+ "https://www.spableudayspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 370
+ },
+ "https://www.platinumglo.online/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://thefranciscoguide.com/generic/platinum-glo-yoni-and-beauty-bar/",
+  "ms": 474
+ },
+ "https://www.skinbydaek.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 251
+ },
+ "https://www.salon-surreal.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1262
+ },
+ "https://website--685107733141894206361-nailsalon.business.site/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 1074
+ },
+ "https://orchardnailspasc.com/": {
+  "status": "dead",
+  "error": "EAI_AGAIN",
+  "ms": 5562
+ },
+ "https://amodnailspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1668
+ },
+ "https://www.lovethebeautystudio.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 1390
+ },
+ "https://www.ulta.com/stores/greenville-sc-1427": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 582
+ },
+ "https://www.sparklenailspasc.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1556
+ },
+ "https://kutenail.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 364
+ },
+ "https://www.artofaestheticsmedspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1129
+ },
+ "https://www.otanisstudios.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 460
+ },
+ "https://alphanailspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 573
+ },
+ "https://almarose.com/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 194
+ },
+ "https://www.barebeautyloft.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 592
+ },
+ "http://elitedesignnails.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 120
+ },
+ "https://ultratantoday.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://palmbeachtan.com/",
+  "ms": 751
+ },
+ "http://www.barebeautyinstitute.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.barebeautyinstitute.com/",
+  "ms": 703
+ },
+ "https://nailbarsc.com/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 265
+ },
+ "https://www.thealtarspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 235
+ },
+ "https://www.lespahiltonhead.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 508
+ },
+ "https://palmbeachtan.com/locations/SC/Village-at-Sandhill": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://palmbeachtan.com/locations/sc/village-at-sandhill",
+  "ms": 806
+ },
+ "https://www.ulta.com/stores/north-myrtle-beach-sc-1019": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 287
+ },
+ "https://caskay-esthetics.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 718
+ },
+ "https://www.ulta.com/stores/summerville-sc-425": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 257
+ },
+ "https://palmbeachtan.com/locations/SC/North-Myrtle": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://palmbeachtan.com/locations/sc/north-myrtle",
+  "ms": 553
+ },
+ "https://flashnailsc.com/contact": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://flashnailsc.com/wp-content/uploads/2024/10/contact.jpg",
+  "ms": 1026
+ },
+ "https://thecinziaspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 538
+ },
+ "https://minktotal.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 263
+ },
+ "https://thebeautiqueskinco.com/?y_source=1_MjMwNTk1OTEtNzE1LWxvY2F0aW9uLndlYnNpdGU%3D": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://spaashton.com/?y_source=1_MjMwNTk1OTEtNzE1LWxvY2F0aW9uLndlYnNpdGU%3D",
+  "ms": 367
+ },
+ "https://www.mesalonanddayspa.com/": {
+  "status": "blocked",
+  "http_status": 403,
+  "final_url": "https://www.dreezyworld.com/",
+  "ms": 4615
+ },
+ "https://spaazure.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 200
+ },
+ "https://charlestonplace.com/spa-wellness": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 129
+ },
+ "https://www.dannonkcollard.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 205
+ },
+ "https://www.bellelina.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 287
+ },
+ "https://www.eastbaynailspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 235
+ },
+ "https://www.pinkdotbeautybar.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 541
+ },
+ "https://www.sephora.com/happening/stores/charleston-king-street": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 259
+ },
+ "https://thenowmassage.com/downtown-greenville/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.thenowmassage.com/boutique/downtown-greenville",
+  "ms": 1551
+ },
+ "https://thenailplacechs.com/": {
+  "status": "error",
+  "error": "ERR_SSL_SSL/TLS_ALERT_HANDSHAKE_FAILURE",
+  "ms": 262
+ },
+ "https://stores.bluemercury.com/sc/charleston/34797": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://stores.bluemercury.com/",
+  "ms": 611
+ },
+ "https://www.francismarionhotel.com/the-spa-of-charleston/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 265
+ },
+ "https://cosbar.com/pages/store-events-cos-bar-charleston": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 483
+ },
+ "https://www.saltspaandyoga.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 131
+ },
+ "https://www.earthlingdayspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 899
+ },
+ "https://aloeveracosmetics.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 2901
+ },
+ "https://venusnailsspacolumbia.com/": {
+  "status": "dead",
+  "error": "EAI_AGAIN",
+  "ms": 10230
+ },
+ "https://www.studiorylee.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 5785
+ },
+ "https://gopronails.com/": {
+  "status": "error",
+  "error": "UND_ERR_SOCKET",
+  "ms": 5877
+ },
+ "https://www.skinlabchs.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.mtpleasantdermatology.com/",
+  "ms": 6207
+ },
+ "https://luxia.hayven.ai/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 550
+ },
+ "https://commoncitizensalon.com/": {
+  "status": "error",
+  "error": "UND_ERR_SOCKET",
+  "ms": 5948
+ },
+ "https://www.tressessalonstudio.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 141
+ },
+ "https://www.restore.com/locations/sc-mt-pleasant-north-sc012": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 107
+ },
+ "https://www.blinkcharleston.com/": {
+  "status": "error",
+  "error": "UND_ERR_SOCKET",
+  "ms": 4855
+ },
+ "https://locations.woodhousespas.com/dir/sc/charleston/10-westedge-st.": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 291
+ },
+ "https://www.pure-electrolysis.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 378
+ },
+ "https://modernnailsmountpleasant.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 506
+ },
+ "https://freecoatnails.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 385
+ },
+ "https://amazingnailsspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 216
+ },
+ "https://majesticnailscharleston.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 228
+ },
+ "https://palmbeachtan.com/locations/SC/The-Market-Oakland": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://palmbeachtan.com/locations/sc/the-market-oakland",
+  "ms": 999
+ },
+ "https://soltwellness.com/": {
+  "status": "error",
+  "error": "UND_ERR_SOCKET",
+  "ms": 385
+ },
+ "https://thebestnailbar.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 132
+ },
+ "https://lanailsunlimited.com/": {
+  "status": "error",
+  "error": "ETIMEDOUT",
+  "ms": 726
+ },
+ "https://ovme.com/pages/patriots-plaza-mt-pleasant-sc": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 285
+ },
+ "https://nailssodepcharleston.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 403
+ },
+ "https://www.restore.com/locations/sc-south-mt-pleasant-sc004": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 26
+ },
+ "https://www.waxingthecity.com/locations/w137/us/sc/mount-pleasant": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.waxingthecity.com/locations/w137/us/sc/mount-pleasant/",
+  "ms": 497
+ },
+ "https://www.skynchic.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 501
+ },
+ "https://alchemywest.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 94
+ },
+ "https://www.radiantrays.co/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1286
+ },
+ "http://phenixsalonsuites-sc.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 2316
+ },
+ "https://www.ulta.com/stores/rock-hill-sc-737": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 268
+ },
+ "https://stylishnails2114.com/": {
+  "status": "dead",
+  "error": "EAI_AGAIN",
+  "ms": 8202
+ },
+ "https://exquisitenailsaiken.com/": {
+  "status": "error",
+  "error": "UND_ERR_CONNECT_TIMEOUT",
+  "ms": 10444
+ },
+ "https://www.oasedayspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 163
+ },
+ "https://www.spaataryaplace.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 27
+ },
+ "https://www.ulta.com/stores/columbia-sc-207": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 667
+ },
+ "https://grandnailslexington.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 27
+ },
+ "https://noirethenailbarmountpleasant.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1209
+ },
+ "https://pureonmain.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.pureonmain.com/",
+  "ms": 499
+ },
+ "https://www.ulta.com/stores/myrtle-beach-sc-1034": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 439
+ },
+ "https://theaolifestyle.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.theaolifestyle.com/",
+  "ms": 635
+ },
+ "https://www.eatatbasil.com/columbia/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://eatatbasil.com/columbia/?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAcGRvZgJmZGlkFlEr3jjhGrRVNCXf7slSbBJCJoQ36J1zcnRjBmFwcF9pZA8xMjQwMjQ1NzQyODc0MTQAAaftl4AxxQK9k40Rgh6v1oaHBPzu7I7zEL-tOIRWi-NoTyfA-uGjtYzSsCF-NQ_aem_ODLWS9v7tuP6AooqtwYhEQ",
+  "ms": 742
+ },
+ "https://naturalfarmacy.net/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 99
+ },
+ "https://www.ulta.com/stores/greenwood-sc-1002": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 362
+ },
+ "https://palmbeachtan.com/locations/SC/Irmo-Saint-Andrews-Road": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://palmbeachtan.com/locations/sc/irmo-saint-andrews-road",
+  "ms": 584
+ },
+ "https://www.ulta.com/stores/indian-land-sc-1352": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 327
+ },
+ "http://advancemassagesc.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 69
+ },
+ "https://www.ulta.com/stores/sumter-sc-1569": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 550
+ },
+ "https://handandstone.com/locations/lexington-2/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 191
+ },
+ "https://maynailsalonandspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 395
+ },
+ "https://www.trudieharris.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 150
+ },
+ "https://www.trilogysalon-spa.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 27
+ },
+ "https://www.recklesshearttattoo.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 341
+ },
+ "https://www.handandstonegreenville.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "http://handandstone.com/locations/greenville/",
+  "ms": 744
+ },
+ "https://www.handandstonegreer.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "http://handandstone.com/locations/greer/",
+  "ms": 402
+ },
+ "https://www.blindtigertattoo.co/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 110
+ },
+ "https://simplymassagegreenville.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 331
+ },
+ "https://www.copperfinchtattoo.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 237
+ },
+ "https://www.ouchstudios.com/": {
+  "status": "blocked",
+  "http_status": 403,
+  "final_url": "https://www.hugedomains.com/domain_profile.cfm?d=ouchstudios.com",
+  "ms": 337
+ },
+ "https://www.lotusmassagegreenville.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 151
+ },
+ "https://inkslingersgreer.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 116
+ },
+ "http://bangssalonbeaufort.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "http://www.bangssalonbeaufort.com/",
+  "ms": 1720
+ },
+ "https://rawbodypiercing.com/": {
+  "status": "error",
+  "error": "UND_ERR_SOCKET",
+  "ms": 424
+ },
+ "https://www.beaufortmassagetherapy.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 144
+ },
+ "https://www.effervescenceyogaspasc.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 10
+ },
+ "https://greenvillefitnessrehab.com/": {
+  "status": "error",
+  "http_status": 502,
+  "ms": 217
+ },
+ "https://square.site/book/1D5XD81CV00Q5/truth-n-art-tattoo-and-art-gallery-spartanburg-sc": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 255
+ },
+ "https://oceantidesmassagestudio.massagetherapy.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 88
+ },
+ "https://inksclusivetattoostudio.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 393
+ },
+ "https://new-lotus-therapy.business.site/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 915
+ },
+ "https://www.exquisitenailsfranklin.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://exquisitenailsfranklin.com/",
+  "ms": 2928
+ },
+ "https://purplelotusbodyart.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 514
+ },
+ "https://www.totalitymed.com/location/downtown-charleston": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.totalitymed.com/location/downtown-charleston/",
+  "ms": 5448
+ },
+ "https://www.mainstreetstudiotattoo.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://mainstreetstudiotattoo.com/",
+  "ms": 3390
+ }
+}
