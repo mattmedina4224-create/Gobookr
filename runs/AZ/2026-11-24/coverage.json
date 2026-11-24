@@ -1,16 +1,15 @@
 {
  "state": "AZ",
  "census_places": 464,
- "places_covered": 26,
- "place_coverage_pct": 5.6,
+ "places_covered": 35,
+ "place_coverage_pct": 7.5,
  "census_counties": 15,
- "counties_covered": 10,
+ "counties_covered": 11,
  "counties_uncovered": [
   "Gila County",
   "Greenlee County",
   "La Paz County",
-  "Navajo County",
-  "Santa Cruz County"
+  "Navajo County"
  ],
  "communities_outside_census_places": [
   {
@@ -21,79 +20,115 @@
  "top_covered_places": [
   {
    "name": "Phoenix",
-   "shops": 20
+   "shops": 46
   },
   {
    "name": "Tucson",
-   "shops": 17
+   "shops": 29
   },
   {
    "name": "Scottsdale",
-   "shops": 13
+   "shops": 19
   },
   {
    "name": "Mesa",
-   "shops": 10
-  },
-  {
-   "name": "Chandler",
-   "shops": 7
+   "shops": 15
   },
   {
    "name": "Surprise",
-   "shops": 7
+   "shops": 11
+  },
+  {
+   "name": "Chandler",
+   "shops": 9
   },
   {
    "name": "Tempe",
-   "shops": 5
+   "shops": 8
   },
   {
-   "name": "Prescott",
-   "shops": 5
+   "name": "Oro Valley",
+   "shops": 7
   },
   {
-   "name": "Apache Junction",
-   "shops": 4
-  },
-  {
-   "name": "Peoria",
-   "shops": 4
+   "name": "Glendale",
+   "shops": 6
   },
   {
    "name": "Gilbert",
+   "shops": 6
+  },
+  {
+   "name": "Prescott",
+   "shops": 6
+  },
+  {
+   "name": "Apache Junction",
+   "shops": 5
+  },
+  {
+   "name": "Peoria",
+   "shops": 5
+  },
+  {
+   "name": "Queen Creek",
    "shops": 4
   },
   {
    "name": "Flagstaff",
-   "shops": 3
+   "shops": 4
   },
   {
-   "name": "Queen Creek",
-   "shops": 3
+   "name": "Yuma",
+   "shops": 4
   },
   {
    "name": "Sedona",
    "shops": 3
   },
   {
-   "name": "Avondale",
-   "shops": 3
-  },
-  {
-   "name": "Yuma",
-   "shops": 3
-  },
-  {
-   "name": "Glendale",
+   "name": "Cave Creek",
    "shops": 2
   },
   {
-   "name": "Oro Valley",
+   "name": "Goodyear",
+   "shops": 2
+  },
+  {
+   "name": "Safford",
+   "shops": 2
+  },
+  {
+   "name": "Sierra Vista",
    "shops": 2
   },
   {
    "name": "Casa Grande",
    "shops": 2
+  },
+  {
+   "name": "Avondale",
+   "shops": 2
+  },
+  {
+   "name": "Prescott Valley",
+   "shops": 1
+  },
+  {
+   "name": "Nogales",
+   "shops": 1
+  },
+  {
+   "name": "Buckeye",
+   "shops": 1
+  },
+  {
+   "name": "Green Valley",
+   "shops": 1
+  },
+  {
+   "name": "Willcox",
+   "shops": 1
   },
   {
    "name": "Bullhead City",
@@ -104,7 +139,11 @@
    "shops": 1
   },
   {
-   "name": "Sierra Vista",
+   "name": "Anthem",
+   "shops": 1
+  },
+  {
+   "name": "San Tan Valley",
    "shops": 1
   },
   {
@@ -118,61 +157,82 @@
   {
    "name": "Cottonwood",
    "shops": 1
-  },
-  {
-   "name": "Safford",
-   "shops": 1
   }
  ],
  "uncovered_places_with_held_candidates": [
   {
-   "name": "San Tan Valley",
-   "type": "CENSUS DESIGNATED PLACE",
-   "held_candidates": 10
-  },
-  {
    "name": "Carefree",
    "type": "INCORPORATED PLACE",
-   "held_candidates": 7
-  },
-  {
-   "name": "Casas Adobes",
-   "type": "CENSUS DESIGNATED PLACE",
-   "held_candidates": 6
-  },
-  {
-   "name": "Goodyear",
-   "type": "INCORPORATED PLACE",
-   "held_candidates": 6
+   "held_candidates": 14
   },
   {
    "name": "Marana",
    "type": "INCORPORATED PLACE",
-   "held_candidates": 6
+   "held_candidates": 10
   },
   {
    "name": "Fountain Hills",
    "type": "INCORPORATED PLACE",
-   "held_candidates": 5
+   "held_candidates": 9
   },
   {
-   "name": "Buckeye",
-   "type": "INCORPORATED PLACE",
-   "held_candidates": 3
-  },
-  {
-   "name": "Catalina Foothills",
+   "name": "Casas Adobes",
    "type": "CENSUS DESIGNATED PLACE",
-   "held_candidates": 3
+   "held_candidates": 8
+  },
+  {
+   "name": "Lake Havasu City",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
   },
   {
    "name": "Page",
    "type": "INCORPORATED PLACE",
-   "held_candidates": 3
+   "held_candidates": 5
+  },
+  {
+   "name": "Catalina Foothills",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Coolidge",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Globe",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Kingman",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Show Low",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Tolleson",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
   },
   {
    "name": "Wickenburg",
    "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Sun City West",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Sun Lakes",
+   "type": "CENSUS DESIGNATED PLACE",
    "held_candidates": 3
   },
   {
@@ -181,53 +241,38 @@
    "held_candidates": 2
   },
   {
-   "name": "Coolidge",
-   "type": "INCORPORATED PLACE",
-   "held_candidates": 2
-  },
-  {
    "name": "Fort Mohave",
    "type": "CENSUS DESIGNATED PLACE",
    "held_candidates": 2
   },
   {
-   "name": "Kingman",
+   "name": "St. Johns",
    "type": "INCORPORATED PLACE",
    "held_candidates": 2
   },
   {
-   "name": "Lake Havasu City",
-   "type": "INCORPORATED PLACE",
-   "held_candidates": 2
-  },
-  {
-   "name": "Prescott Valley",
-   "type": "INCORPORATED PLACE",
-   "held_candidates": 2
-  },
-  {
-   "name": "Sun Lakes",
+   "name": "Tuba City",
    "type": "CENSUS DESIGNATED PLACE",
    "held_candidates": 2
   },
   {
-   "name": "Tolleson",
-   "type": "INCORPORATED PLACE",
+   "name": "Village of Oak Creek (Big Park)",
+   "type": "CENSUS DESIGNATED PLACE",
    "held_candidates": 2
   },
   {
-   "name": "Willcox",
-   "type": "INCORPORATED PLACE",
-   "held_candidates": 2
-  },
-  {
-   "name": "Benson",
+   "name": "Chino Valley",
    "type": "INCORPORATED PLACE",
    "held_candidates": 1
   },
   {
-   "name": "Cave Creek",
-   "type": "INCORPORATED PLACE",
+   "name": "Drexel Heights",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Flowing Wells",
+   "type": "CENSUS DESIGNATED PLACE",
    "held_candidates": 1
   },
   {
@@ -236,8 +281,8 @@
    "held_candidates": 1
   },
   {
-   "name": "Green Valley",
-   "type": "CENSUS DESIGNATED PLACE",
+   "name": "Guadalupe",
+   "type": "INCORPORATED PLACE",
    "held_candidates": 1
   },
   {
@@ -246,12 +291,22 @@
    "held_candidates": 1
   },
   {
-   "name": "Nogales",
-   "type": "INCORPORATED PLACE",
+   "name": "Meadview",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Oracle",
+   "type": "CENSUS DESIGNATED PLACE",
    "held_candidates": 1
   },
   {
    "name": "Paradise Valley",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Patagonia",
    "type": "INCORPORATED PLACE",
    "held_candidates": 1
   },
@@ -261,13 +316,18 @@
    "held_candidates": 1
   },
   {
-   "name": "St. Johns",
+   "name": "San Manuel",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "South Tucson",
    "type": "INCORPORATED PLACE",
    "held_candidates": 1
   },
   {
-   "name": "Village of Oak Creek (Big Park)",
-   "type": "CENSUS DESIGNATED PLACE",
+   "name": "Tombstone",
+   "type": "INCORPORATED PLACE",
    "held_candidates": 1
   },
   {
@@ -276,6 +336,6 @@
    "held_candidates": 1
   }
  ],
- "uncovered_places_without_candidates": 408,
+ "uncovered_places_without_candidates": 394,
  "source": "U.S. Census Bureau 2020 place-by-county and county code files"
 }

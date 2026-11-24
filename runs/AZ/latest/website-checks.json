@@ -1,92 +1,594 @@
 {
- "http://tipsntoesnailspa.com/": {
+ "http://www.angelsweetgelato.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 27
+ },
+ "https://haircutmeneastmesaaz.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 70
+ },
+ "https://www.beautysalontreatments.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 170
+ },
+ "http://www.arizonahairco.com/": {
+  "status": "error",
+  "error": "UND_ERR_SOCKET",
+  "ms": 172
+ },
+ "https://www.fantasticsams.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 286
+ },
+ "https://barberboard.az.gov/": {
+  "status": "blocked",
+  "http_status": 403,
+  "final_url": "https://bcb.az.gov/",
+  "ms": 376
+ },
+ "https://www.costcutters.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 344
+ },
+ "https://www.vantaggiohair.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 385
+ },
+ "https://salons.greatclips.com/us/az/queen-creek/21582-s-ellsworth-loop-rd?utm_source=google&utm_medium=organic&utm_campaign=gmb": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 429
+ },
+ "https://www.smartstyle.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 293
+ },
+ "https://www.supercuts.com/locations/az/mesa/falcon-view-plaza-haircuts-8627.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 307
+ },
+ "https://haircutmenjohnsonranchaz.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 165
+ },
+ "https://salons.greatclips.com/us/az/gilbert/6466-s-higley-rd": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 244
+ },
+ "https://www.sherryandcompanysalon.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 53
+ },
+ "https://bishops.co/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 158
+ },
+ "https://www.supercuts.com/locations/az/cave-creek/walmart-shopping-center-haircuts-82430.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 6
+ },
+ "https://www.greatclips.com/salons/1572": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://salons.greatclips.com/us/az/mesa/550-w-baseline-rd",
+  "ms": 421
+ },
+ "https://www.parkavenueblowdry.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 433
+ },
+ "https://freshcutshs.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 797
+ },
+ "https://www.greatclips.com/salons/0913": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://salons.greatclips.com/us/az/apache-junction/95-s-idaho-rd",
+  "ms": 550
+ },
+ "https://salons.greatclips.com/us/az/oro-valley/10515-n-oracle-rd": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 22
+ },
+ "https://www.supercuts.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 6
+ },
+ "https://www.floydsbarbershop.com/tempe/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.floydsbarbershop.com/locations/arizona/phoenix/tempe",
+  "ms": 302
+ },
+ "https://saltysbarbershop.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 150
+ },
+ "https://salons.greatclips.com/us/az/prescott-valley/3298-n-glassford-hill-rd": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 53
+ },
+ "https://squareup.com/appointments/book/78TBGN2N4FJM2/angels-house-of-fades": {
+  "status": "dead",
+  "http_status": 404,
+  "final_url": "https://app.squareup.com/appointments/book/78TBGN2N4FJM2/angels-house-of-fades",
+  "ms": 228
+ },
+ "https://www.twotonebarbershop.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 86
+ },
+ "https://www.foothillsbarbers.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 125
+ },
+ "https://rooseveltbarbershop.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 145
+ },
+ "https://salons.greatclips.com/us/az/gilbert/4099-e-williams-field-rd?utm_source=google&utm_medium=organic&utm_campaign=gmb": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 80
+ },
+ "https://app.greatclips.com/salon/1545": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://app.greatclips.com/salon/1545/",
+  "ms": 389
+ },
+ "https://www.supercuts.com/locations/az/surprise/frys-shopping-center-haircuts-82333.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 156
+ },
+ "https://www.supercuts.com/locations/nearme/haircut/AZ/PHOENIX/2805-W-AGUA-FRIA-FWY-STE-2B/81658": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 146
+ },
+ "https://www.mysalonsuite.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 100
+ },
+ "https://optima-hair-tanning.business.site/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 885
+ },
+ "https://countryclipperbarbershop.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://muse.ai/s/website-gxw5xitx0ywxdau/_cf6acoqYVj12N345wbQppR1wOFCj7fRK1I_crib2-I",
+  "ms": 1130
+ },
+ "https://ladyandwolf.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.ladyandwolf.com/",
+  "ms": 356
+ },
+ "https://www.arcanehairparlour.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 115
+ },
+ "https://sassystreakshair.com/": {
   "status": "dead",
   "error": "ENOTFOUND",
   "ms": 48
  },
- "https://regalnails.com/": {
+ "https://sunvillage.org/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 355
+ },
+ "https://www.vagaro.com/locdart": {
+  "status": "dead",
+  "http_status": 404,
+  "final_url": "https://www.vagaro.com/PageNotFound.aspx",
+  "ms": 646
+ },
+ "https://www.supercuts.com/locations/nearme/haircut/AZ/Phoenix/Bell-Towne-Centre/82956": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 11
+ },
+ "https://salons.greatclips.com/us/az/phoenix/749-e-bell-rd": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 91
+ },
+ "https://www.greatclips.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 310
+ },
+ "https://www.warfieldhairbar.com/": {
   "status": "live",
   "http_status": 200,
   "ms": 180
  },
+ "https://www.hairtreatmentsphoenix.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1492
+ },
+ "https://sportclips.com/us-az-surprise-az136": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 491
+ },
+ "https://www.rookiefreshbarbershop.com/book-online": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 122
+ },
+ "https://salons.greatclips.com/us/az/goodyear/17650-w-elliot-rd": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 95
+ },
+ "https://vbarbershop.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 456
+ },
+ "https://www.mensloungebarbershop.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 191
+ },
+ "https://thebeautydistrict.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 182
+ },
+ "https://www.sportclips.com/us-az-phoenix-az131": {
+  "status": "error",
+  "error": "ETIMEDOUT",
+  "ms": 603
+ },
+ "https://www.haircutsarefun.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://haircutsarefun.com/",
+  "ms": 434
+ },
+ "https://havvensalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.havvensalon.com/",
+  "ms": 551
+ },
+ "https://www.sportclips.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 319
+ },
+ "http://ashleyshairanddesign.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 64
+ },
+ "https://salons.greatclips.com/us/az/safford/775-s-20th-ave": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 114
+ },
+ "https://thebluedaisydayspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.thebluedaisydayspa.com/",
+  "ms": 269
+ },
+ "https://bighousebarbershopcg.com/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 245
+ },
+ "https://hairflix-barbershop.business.site/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 855
+ },
+ "https://www.touchoftodaysalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 412
+ },
+ "https://belleviesalons.com/salon-suite-rentals-west-chandler/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 521
+ },
+ "https://www.barbershopjack.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 183
+ },
+ "https://www.stravaganzzahairdressers.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 2253
+ },
+ "https://theurbanshave.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 241
+ },
+ "https://alexbarbershopnogalesaz.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://usaha-prediksi.beauty/usaha-prediksi-jitu-togel-hongkong-pools-senin-01-januari-2024/",
+  "ms": 949
+ },
+ "https://popsbarber.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.popsbarber.com/",
+  "ms": 341
+ },
+ "https://www.presidiohair.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 231
+ },
+ "https://www.roguesalonllc.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 377
+ },
+ "https://www.castsalonandspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://castsalon.com/",
+  "ms": 525
+ },
+ "https://vbarbershop.com/pages/location/cadence-eastmark": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 265
+ },
+ "https://famosocutz.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 121
+ },
+ "https://indielocks.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 118
+ },
+ "https://www.michaelangelthebarber.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 202
+ },
+ "https://outkastbarbershop.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 360
+ },
+ "https://suedesalonstudios.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 146
+ },
+ "https://salons.greatclips.com/us/az/phoenix/4312-e-cactus-rd": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 78
+ },
+ "https://square.site/book/B3XPVZ7C8BDM5/xavier-s-barber-shop-yuma-az": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 404
+ },
+ "https://willo-root-salon.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 401
+ },
+ "https://www.styleseat.com/m/v/sheilabraun": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 396
+ },
+ "https://www.solasalonstudios.com/locations/tucson-east-broadway": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 484
+ },
+ "https://lestudiosalon.com/": {
+  "status": "error",
+  "error": "UND_ERR_SOCKET",
+  "ms": 86
+ },
+ "https://www.costcutters.com/locations/az/oro-valley/canada-hills-marketplace-haircuts-15912.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 106
+ },
+ "https://www.costcutters.com/locations/az/tucson/ventana-village-haircuts-62027.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 181
+ },
+ "https://www.bocutzbarberacademy.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 290
+ },
+ "https://www.reformsalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 165
+ },
+ "https://www.sportclipsinc.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 200
+ },
+ "http://www.themensroombarbershop.yolasite.com/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 146
+ },
+ "http://tipsntoesnailspa.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 32
+ },
+ "https://pikassobarbershop.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.pikassobarbershop.com/",
+  "ms": 1121
+ },
  "https://www.barenecessitywaxspa.com/": {
   "status": "error",
   "error": "ERR_TLS_CERT_ALTNAME_INVALID",
-  "ms": 221
+  "ms": 149
  },
- "https://www.biagonailspa2.com/": {
-  "status": "dead",
-  "error": "ENOTFOUND",
-  "ms": 93
- },
- "https://www.ulta.com/stores/scottsdale-az-33": {
+ "https://booksy.com/en-us/1167309_visionz-barbershop_barber-shop_14704_gilbert": {
   "status": "live",
   "http_status": 200,
-  "ms": 333
+  "final_url": "https://booksy.com/en-us/1167309_million-dollar-barber-co_barber-shop_14704_gilbert",
+  "ms": 1129
  },
- "https://www.bloomingnailsandspa.net/": {
-  "status": "dead",
-  "error": "ENOTFOUND",
-  "ms": 124
- },
- "https://locations.waxcenter.com/az/gilbert/gilbert-san-tan-village-0032.html": {
+ "https://regalnails.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 400
+  "ms": 295
  },
  "http://nizhonispa.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://nizhonispa.com/",
-  "ms": 448
+  "ms": 233
+ },
+ "https://marsylbarbershop1.business.site/?utm_source=gmb&utm_medium=referral": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 778
+ },
+ "https://n2nailspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 196
+ },
+ "https://www.ulta.com/stores/scottsdale-az-33": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 610
+ },
+ "https://www.biagonailspa2.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 176
+ },
+ "https://www.bloomingnailsandspa.net/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 69
  },
  "https://www.divanailsandlashaz.com/": {
   "status": "dead",
   "error": "ENOTFOUND",
-  "ms": 217
- },
- "https://palacenailsspagilbert.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 535
+  "ms": 104
  },
  "https://www.orchidnailandspa.net/": {
   "status": "dead",
   "error": "ENOTFOUND",
-  "ms": 196
+  "ms": 83
  },
  "http://www.cynthiabranson.skincaretherapy.net/": {
   "status": "dead",
   "http_status": 404,
-  "ms": 257
- },
- "https://vanessalashesandnails.com/": {
-  "status": "dead",
-  "error": "ENOTFOUND",
-  "ms": 259
+  "ms": 114
  },
  "http://www.twistedherb.com/": {
   "status": "blocked",
   "http_status": 403,
   "final_url": "https://domains.atom.com/lpd/name/TwistedHerb.com",
-  "ms": 671
+  "ms": 311
  },
- "https://locations.waxcenter.com/az/mesa/mesa-gilbert-0035.html": {
+ "https://palacenailsspagilbert.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 46
+  "ms": 438
  },
- "http://mdssalon.com/": {
-  "status": "live",
-  "http_status": 200,
-  "final_url": "https://mdssalon.com/",
-  "ms": 526
+ "https://vanessalashesandnails.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 27
  },
  "http://luxurynailbar.net/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://www.luxurynailbar.net/",
-  "ms": 1056
+  "ms": 719
+ },
+ "http://mdssalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://mdssalon.com/",
+  "ms": 231
+ },
+ "https://sheartea.se/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1244
+ },
+ "https://juansbarbershopsv.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 2348
+ },
+ "http://cosmonailsmesa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 290
+ },
+ "https://www.loillife.com/": {
+  "status": "error",
+  "http_status": 423,
+  "ms": 178
+ },
+ "https://locations.waxcenter.com/az/gilbert/gilbert-san-tan-village-0032.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 796
+ },
+ "https://locations.waxcenter.com/az/mesa/mesa-gilbert-0035.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 264
  },
  "https://locations.waxcenter.com/az/queencreek/queen-creek-0786.html": {
   "status": "live",
@@ -96,812 +598,865 @@
  "https://locations.waxcenter.com/az/tempe/tempe-tempe-marketplace-0141.html": {
   "status": "live",
   "http_status": 200,
-  "ms": 91
- },
- "http://cosmonailsmesa.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 503
- },
- "https://www.loillife.com/": {
-  "status": "error",
-  "http_status": 423,
-  "ms": 339
- },
- "https://www.bramasolesalon.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 103
+  "ms": 173
  },
  "https://www.ulta.com/stores/flagstaff-az-1630": {
   "status": "live",
   "http_status": 200,
-  "ms": 562
+  "ms": 511
+ },
+ "https://locations.waxcenter.com/az/mesa/mesa-red-mountain-0257.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 351
+ },
+ "https://www.bramasolesalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 447
  },
  "https://www.oneupnails.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 422
+  "ms": 566
+ },
+ "https://www.ulta.com/stores/peoria-az-47": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 712
  },
  "https://www.grandmarthair.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 103
+  "ms": 407
+ },
+ "http://www.mmdhair.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 224
+ },
+ "https://goldcanyonnails.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 42
+ },
+ "https://modishnailsspa.nailssalondirect.com/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 268
  },
  "https://palmbeachtan.com/locations/AZ/Scottsdale-North-Northsight-Boulevard": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://palmbeachtan.com/locations/az/scottsdale-north-northsight-boulevard",
-  "ms": 1038
- },
- "https://www.ulta.com/stores/peoria-az-47": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 563
- },
- "https://locations.waxcenter.com/az/mesa/mesa-red-mountain-0257.html": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 587
- },
- "http://www.mmdhair.com/": {
-  "status": "dead",
-  "error": "ENOTFOUND",
-  "ms": 72
- },
- "https://goldcanyonnails.com/": {
-  "status": "dead",
-  "error": "ENOTFOUND",
-  "ms": 146
- },
- "https://www.bathandbodyworks.com/?cm_mmc=local_BBW02508": {
-  "status": "error",
-  "http_status": 307,
-  "ms": 132
- },
- "https://modishnailsspa.nailssalondirect.com/": {
-  "status": "dead",
-  "http_status": 404,
-  "ms": 358
+  "ms": 1369
  },
  "http://lisacockrellrn.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://www.intoxicatinginjections.com/",
-  "ms": 403
+  "ms": 624
  },
  "https://www.herjazziness.com/": {
   "status": "dead",
   "error": "ENOTFOUND",
-  "ms": 64
+  "ms": 47
  },
  "https://www.ulta.com/stores/chandler-az-434": {
   "status": "live",
   "http_status": 200,
-  "ms": 207
- },
- "https://sedonanewdayspa.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 1014
+  "ms": 298
  },
  "https://thenburger.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 588
+  "ms": 573
  },
- "https://www.kohls.com/sale-event/sephora-at-kohls.jsp": {
-  "status": "blocked",
-  "http_status": 403,
-  "ms": 60
+ "https://sedonanewdayspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1261
  },
  "https://www.ulta.com/stores/oro-valley-az-355": {
   "status": "live",
   "http_status": 200,
-  "ms": 343
+  "ms": 469
  },
- "https://locations.waxcenter.com/az/surprise/surprise-waddell-and-303-0464.html": {
+ "https://www.kohls.com/sale-event/sephora-at-kohls.jsp": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 68
+ },
+ "https://lynnsnails.org/": {
   "status": "live",
   "http_status": 200,
-  "ms": 43
+  "ms": 410
  },
  "https://vien-nail.edan.io/": {
   "status": "blocked",
   "http_status": 403,
   "ms": 56
  },
- "https://www.ulta.com/stores/casa-grande-az-296": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 272
- },
  "https://nailtouchsurprise.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 435
+  "ms": 365
+ },
+ "https://www.ulta.com/stores/casa-grande-az-296": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 477
  },
  "https://www.bathandbodyworks.com/": {
   "status": "error",
   "http_status": 307,
-  "ms": 62
+  "ms": 80
  },
- "https://www.justteazzinmesa.com/": {
+ "https://locations.waxcenter.com/az/surprise/surprise-waddell-and-303-0464.html": {
   "status": "live",
   "http_status": 200,
-  "ms": 158
- },
- "https://lynnsnails.org/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 702
- },
- "https://classynailsandspaphoenix.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 418
- },
- "https://spatasticbluenails.com/": {
-  "status": "dead",
-  "error": "ENOTFOUND",
-  "ms": 46
- },
- "https://blissaesthetics.org/": {
-  "status": "dead",
-  "error": "ENOTFOUND",
-  "ms": 17
- },
- "https://vinanailsspa.com/": {
-  "status": "dead",
-  "error": "ENOTFOUND",
-  "ms": 70
- },
- "https://valleynails-az.com/": {
-  "status": "dead",
-  "error": "ENOTFOUND",
-  "ms": 25
+  "ms": 389
  },
  "https://www.lomalaser.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://lomalaser.com/",
-  "ms": 1976
+  "ms": 1919
+ },
+ "https://www.justteazzinmesa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 142
+ },
+ "https://spatasticbluenails.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 49
+ },
+ "https://classynailsandspaphoenix.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 388
+ },
+ "https://blissaesthetics.org/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 40
+ },
+ "https://vinanailsspa.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 34
+ },
+ "https://valleynails-az.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 90
  },
  "https://vnnailsinc.com/": {
   "status": "dead",
   "error": "ENOTFOUND",
-  "ms": 47
+  "ms": 93
  },
  "https://sassinailschandler.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 341
- },
- "https://locations.waxcenter.com/az/avondale/avondale-gateway-pavilions-1115.html": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 395
+  "ms": 276
  },
  "https://aftershavebarbershopaz.com/": {
   "status": "error",
   "http_status": 503,
-  "ms": 733
- },
- "http://prescottnailsandspa.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 243
- },
- "https://www.vagaro.com/moodbeautystudio": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 1051
+  "ms": 626
  },
  "https://www.bathandbodyworks/": {
   "status": "dead",
   "error": "ENOTFOUND",
-  "ms": 144
+  "ms": 8
  },
  "https://salonorozco.godaddysites.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 260
+  "ms": 159
+ },
+ "http://prescottnailsandspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 299
  },
  "https://hdbrowskinrx.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 249
- },
- "https://n2nailspa.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 3445
+  "ms": 174
  },
  "https://www.amazinglashstudio.com/studios/az/phoenix/norterra": {
   "status": "blocked",
   "http_status": 403,
-  "ms": 241
- },
- "https://herbalnailsandspahappyvalley.com/": {
-  "status": "live",
-  "http_status": 200,
-  "final_url": "https://www.herbalnailsandspahappyvalley.com/",
-  "ms": 487
+  "ms": 84
  },
  "https://www.restore.com/locations/az-phoenix-norterra-az013": {
   "status": "live",
   "http_status": 200,
-  "ms": 303
- },
- "https://www.sephora.com/": {
-  "status": "blocked",
-  "http_status": 403,
-  "ms": 250
- },
- "https://www.solasalonstudios.com/locations/deer-valley-town-center": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 505
+  "ms": 274
  },
  "https://www.saltandsoundaz.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://saltandsoundaz.com/",
-  "ms": 610
+  "ms": 305
  },
- "https://hormonezonemedspa.com/": {
+ "https://www.solasalonstudios.com/locations/deer-valley-town-center": {
   "status": "live",
   "http_status": 200,
-  "final_url": "https://hormone-zone.com/",
-  "ms": 560
+  "ms": 283
  },
- "https://skinsight-by-kellie.square.site/": {
-  "status": "dead",
-  "http_status": 404,
-  "ms": 111
+ "https://www.sephora.com/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 128
  },
  "https://ziba-beauty.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://www.ziba-beauty.com/",
-  "ms": 615
+  "ms": 263
+ },
+ "https://herbalnailsandspahappyvalley.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.herbalnailsandspahappyvalley.com/",
+  "ms": 798
+ },
+ "https://hormonezonemedspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://hormone-zone.com/",
+  "ms": 371
+ },
+ "https://skinsight-by-kellie.square.site/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 149
  },
  "https://whishbody.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 254
+  "ms": 237
  },
- "https://www.m3vnailbar.com/": {
+ "https://www.vagaro.com/moodbeautystudio": {
   "status": "live",
   "http_status": 200,
-  "ms": 208
- },
- "https://primpandblow.com/locations/phoenix-location/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 389
- },
- "https://www.makabeauty.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 206
- },
- "https://finaltouchspa.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 379
- },
- "https://www.braziliantouchmedspa.com/": {
-  "status": "live",
-  "http_status": 200,
-  "final_url": "https://braziliantouchmedspa.com/",
-  "ms": 564
+  "ms": 1885
  },
  "https://levoguenailsandspa.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://levoguenailsandspa.com/index",
-  "ms": 789
+  "ms": 560
+ },
+ "https://primpandblow.com/locations/phoenix-location/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 320
+ },
+ "https://www.makabeauty.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 37
+ },
+ "https://www.m3vnailbar.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 163
  },
  "https://nailzonetucsonn.wixsite.com/": {
   "status": "dead",
   "http_status": 404,
-  "ms": 193
- },
- "https://yourbrowbar.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 123
- },
- "https://www.ulta.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 1325
- },
- "https://www.skinfixstudios.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 110
+  "ms": 178
  },
  "https://lashedwithloyalty.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 265
+  "ms": 211
+ },
+ "https://finaltouchspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 320
+ },
+ "https://www.braziliantouchmedspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://braziliantouchmedspa.com/",
+  "ms": 753
+ },
+ "https://yourbrowbar.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 122
+ },
+ "https://www.ulta.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1589
+ },
+ "https://www.skinfixstudios.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 86
  },
  "https://amorenaillounge.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 302
+  "ms": 272
  },
  "https://omgnailbar.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 215
- },
- "https://www.salonblissful.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 306
+  "ms": 181
  },
  "https://www.sedonabluesage.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 244
+  "ms": 183
  },
  "https://www.ericshairrremoval.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 297
+  "ms": 211
  },
  "https://allaboutmeaz.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 304
+  "ms": 149
  },
- "https://venetiannaillounge.com/": {
+ "https://www.radiantlashboutique.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 193
+  "ms": 419
+ },
+ "https://www.salonblissful.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 495
  },
  "https://finessesalonaz.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://www.finessesalonaz.com/",
-  "ms": 405
+  "ms": 220
  },
  "https://bigtimebeautiful.love/": {
   "status": "error",
   "error": "ECONNRESET",
-  "ms": 191
- },
- "https://www.radiantlashboutique.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 684
+  "ms": 95
  },
  "https://www.amazinglashstudio.com/studios/az/surprise/surprise": {
   "status": "live",
   "http_status": 200,
-  "ms": 434
+  "ms": 153
+ },
+ "https://venetiannaillounge.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 229
  },
  "https://www.allseasonsfoothills.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 742
+  "ms": 447
  },
- "https://www.ulta.com/stores/tucson-az-199": {
+ "http://anthemnailsandspabysarahaz.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 314
+  "final_url": "https://anthemnailsandspabysarahaz.com/",
+  "ms": 229
  },
  "https://xonailloungeavondale.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 522
- },
- "https://www.ulta.com/stores/queen-creek-az-356": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 527
- },
- "https://imagensalonspa.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 126
- },
- "https://www.ulta.com/stores/mesa-az-225": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 689
- },
- "https://www.ulta.com/stores/surprise-az-176": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 361
- },
- "https://www.ulta.com/stores/glendale-az-1753": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 251
- },
- "https://www.skincareextraordinaire.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 137
+  "ms": 386
  },
  "https://lashes-by-tash-109910.square.site/": {
   "status": "live",
   "http_status": 200,
-  "ms": 964
+  "ms": 560
+ },
+ "https://peachnails7308.simplepos.us/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 444
+ },
+ "https://tracysnailstucson.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 403
+ },
+ "https://www.hiltonphoenixresortatthepeak.com/spa": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 464
+ },
+ "http://www.btbeautyaz.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://btbeautyaz.com/",
+  "ms": 808
+ },
+ "https://www.3jnails.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 189
+ },
+ "http://blu-cactus-nails-site.lovable.app/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 258
+ },
+ "http://polishmeprettynailbar1.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 248
+ },
+ "https://sacred-arches-threading-beauty-emporium.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 368
+ },
+ "https://radiantdayspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 582
+ },
+ "https://outlawbeautybar.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 130
+ },
+ "https://tucsoncolorspecialist.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1149
+ },
+ "https://www.ulta.com/stores/tucson-az-199": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 277
+ },
+ "https://www.ulta.com/stores/mesa-az-225": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 590
+ },
+ "https://www.ulta.com/stores/queen-creek-az-356": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 479
+ },
+ "https://imagensalonspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 86
+ },
+ "https://www.ulta.com/stores/surprise-az-176": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 318
  },
  "https://www.ulta.com/stores/sierra-vista-az-1472": {
   "status": "live",
   "http_status": 200,
-  "ms": 415
+  "ms": 328
+ },
+ "https://www.skincareextraordinaire.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 145
+ },
+ "https://www.ulta.com/stores/glendale-az-1753": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 570
+ },
+ "https://www.glamwright.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1576
  },
  "https://www.ulta.com/stores/gilbert-az-183": {
   "status": "live",
   "http_status": 200,
-  "ms": 268
- },
- "https://www.ulta.com/stores/peoria-az-228": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 453
- },
- "https://www.ulta.com/stores/tempe-az-185": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 470
+  "ms": 302
  },
  "https://www.ulta.com/stores/scottsdale-az-77": {
   "status": "live",
   "http_status": 200,
-  "ms": 362
+  "ms": 270
+ },
+ "http://ulta.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.ulta.com/",
+  "ms": 2108
+ },
+ "https://www.ulta.com/stores/peoria-az-228": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 596
+ },
+ "https://www.ulta.com/stores/tempe-az-185": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 572
  },
  "https://www.ulta.com/stores/mesa-az-1399": {
   "status": "live",
   "http_status": 200,
-  "ms": 358
- },
- "https://www.jjbeautyinstitute.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 274
+  "ms": 254
  },
  "https://www.ulta.com/stores/chandler-az-99": {
   "status": "live",
   "http_status": 200,
-  "ms": 290
+  "ms": 274
  },
- "https://yumaschoolofbeauty.com/": {
+ "https://www.jjbeautyinstitute.com/": {
   "status": "live",
   "http_status": 200,
-  "final_url": "https://pozzuolitourism.com/come-arrivare/",
-  "ms": 1071
+  "ms": 343
  },
  "https://www.ulta.com/stores/phoenix-az-1620": {
   "status": "live",
   "http_status": 200,
-  "ms": 328
- },
- "https://www.ulta.com/stores/gilbert-az-354": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 297
+  "ms": 216
  },
  "https://www.ulta.com/stores/surprise-az-1591": {
   "status": "live",
   "http_status": 200,
-  "ms": 274
+  "ms": 235
+ },
+ "https://www.ulta.com/stores/gilbert-az-354": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 254
  },
  "https://www.ulta.com/stores/phoenix-az-108": {
   "status": "live",
   "http_status": 200,
-  "ms": 222
- },
- "https://www.ulta.com/stores/avondale-az-1132": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 262
- },
- "https://www.massageenvy.com/clinics/AZ/Superstition-Gateway.aspx": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 93
+  "ms": 275
  },
  "https://palmbeachtan.com/locations/AZ/Scottsdale-North-Scottsdale-Road": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://palmbeachtan.com/locations/az/scottsdale-north-scottsdale-road",
-  "ms": 947
- },
- "https://prestigenailsandlashbyvickyphoenix.com/": {
-  "status": "error",
-  "http_status": 503,
-  "ms": 306
+  "ms": 846
  },
  "https://oro-nails-llc.business.site/": {
   "status": "dead",
   "http_status": 404,
-  "ms": 770
+  "ms": 758
+ },
+ "https://www.ulta.com/stores/avondale-az-1132": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 278
  },
  "https://selectnailsspa.com/": {
   "status": "error",
   "error": "UND_ERR_SOCKET",
-  "ms": 382
+  "ms": 331
  },
- "https://locations.massageenvy.com/arizona/queen-creek/21582-s-ellsworth-loop.html": {
+ "https://www.massageenvy.com/clinics/AZ/Superstition-Gateway.aspx": {
   "status": "live",
   "http_status": 200,
-  "ms": 124
+  "ms": 94
  },
- "http://ink4lifeaz.com/": {
-  "status": "dead",
-  "error": "ENOTFOUND",
-  "ms": 135
+ "https://prestigenailsandlashbyvickyphoenix.com/": {
+  "status": "error",
+  "http_status": 503,
+  "ms": 329
  },
  "https://reinkarnatetattoo.com/": {
   "status": "blocked",
   "http_status": 403,
-  "ms": 229
+  "ms": 89
  },
- "https://www.thirdeyebodyart.com/": {
-  "status": "error",
-  "error": "UNABLE_TO_GET_ISSUER_CERT_LOCALLY",
-  "ms": 108
- },
- "https://www.dreamspa9898.com/": {
+ "http://ink4lifeaz.com/": {
   "status": "dead",
   "error": "ENOTFOUND",
-  "ms": 102
+  "ms": 25
  },
  "https://www.grandmajesticwesttattoo.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 290
+  "ms": 211
  },
- "https://nbgad2022.wixsite.com/wonder-foot-spa-az": {
-  "status": "dead",
-  "http_status": 404,
-  "ms": 125
- },
- "https://www.massage90210chandler.com/": {
+ "https://campbellnailspa.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 110
+  "ms": 458
  },
- "https://elementsmassage.com/chandler-west": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 330
+ "https://www.thirdeyebodyart.com/": {
+  "status": "error",
+  "error": "UNABLE_TO_GET_ISSUER_CERT_LOCALLY",
+  "ms": 66
  },
  "http://www.bitofbliss.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://bitofbliss.com/",
-  "ms": 445
+  "ms": 370
+ },
+ "https://elementsmassage.com/chandler-west": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 276
+ },
+ "https://www.dreamspa9898.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 47
+ },
+ "https://locations.massageenvy.com/arizona/queen-creek/21582-s-ellsworth-loop.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 479
+ },
+ "https://nbgad2022.wixsite.com/wonder-foot-spa-az": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 132
+ },
+ "https://www.massage90210chandler.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 141
  },
  "https://massagecare.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 126
- },
- "https://locations.massageenvy.com/arizona/glendale/8110-west-bell-road.html": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 76
+  "ms": 175
  },
  "http://jerometattoocompany.com/": {
   "status": "dead",
   "error": "ENOTFOUND",
-  "ms": 88
- },
- "https://campbellnailspa.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 801
- },
- "https://www.radatattattoo.com/": {
-  "status": "error",
-  "error": "ERR_TLS_CERT_ALTNAME_INVALID",
-  "ms": 258
+  "ms": 105
  },
  "https://newlinead.wixsite.com/superrelaxspa": {
   "status": "live",
   "http_status": 200,
-  "ms": 165
+  "ms": 65
+ },
+ "https://www.radatattattoo.com/": {
+  "status": "error",
+  "error": "ERR_TLS_CERT_ALTNAME_INVALID",
+  "ms": 348
+ },
+ "https://chiang-mai-massage.business.site/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 254
+ },
+ "https://locations.massageenvy.com/arizona/glendale/8110-west-bell-road.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 390
+ },
+ "https://newlinead.wixsite.com/magichandsmassage": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 25
  },
  "http://www.istaristudios.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 304
+  "ms": 302
  },
  "https://massageyc.wixsite.com/85284": {
   "status": "live",
   "http_status": 200,
-  "ms": 62
+  "ms": 76
  },
  "https://namti.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 281
+  "ms": 215
  },
  "https://rubsmassage.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 159
+  "ms": 149
  },
  "https://www.bam25zt.com/": {
   "status": "dead",
   "error": "ENOTFOUND",
-  "ms": 122
+  "ms": 116
+ },
+ "https://elementsmassage.com/happy-valley": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 89
  },
  "https://www.redarttattoopiercing.studio/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://redarttattoopiercing.studio/",
-  "ms": 293
- },
- "https://chiang-mai-massage.business.site/": {
-  "status": "dead",
-  "http_status": 404,
-  "ms": 755
- },
- "https://elementsmassage.com/happy-valley": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 107
+  "ms": 444
  },
  "https://www.serenehealingmassage.com/": {
-  "status": "error",
-  "error": "ECONNRESET",
-  "ms": 120
- },
- "https://newlinead.wixsite.com/magichandsmassage": {
   "status": "live",
   "http_status": 200,
-  "ms": 626
+  "final_url": "https://serenehealingmassage.com/",
+  "ms": 301
  },
  "https://infinity-reflexology.business.site/": {
   "status": "dead",
   "http_status": 404,
-  "ms": 849
- },
- "https://fuchsiaspa.com/high-street/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 220
- },
- "https://www.mirrorgalleryflagstaff.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 347
- },
- "https://locations.massageenvy.com/arizona/tempe/315-west-elliot-road.html": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 41
+  "ms": 837
  },
  "https://skinspirit.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://www.skinspirit.com/",
-  "ms": 483
+  "ms": 470
  },
- "https://lotustucson.com/": {
+ "https://fuchsiaspa.com/high-street/": {
   "status": "live",
   "http_status": 200,
-  "ms": 738
+  "ms": 134
  },
- "https://bamboomassage9.wordpress.com/contact-us/": {
-  "status": "dead",
-  "http_status": 410,
-  "ms": 368
+ "https://www.mirrorgalleryflagstaff.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 192
  },
  "https://rubsmassage.com/locations-rubs-massage/store/718-w-calle-arroyo-sur-ste-no-100-sahuarita-az-85614/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://rubsmassage.com/locations/sahuarita",
-  "ms": 544
+  "ms": 227
  },
- "https://www.seaofinktattoo.com/": {
+ "https://locations.massageenvy.com/arizona/tempe/315-west-elliot-road.html": {
   "status": "live",
   "http_status": 200,
-  "ms": 178
+  "ms": 321
+ },
+ "https://lotustucson.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 709
+ },
+ "https://itouchdayspa.net/": {
+  "status": "error",
+  "error": "UND_ERR_CONNECT_TIMEOUT",
+  "ms": 10215
  },
  "https://mybodyworkz.com/south-scottsdale/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://mybodyworkz.com/",
-  "ms": 1571
+  "ms": 1340
+ },
+ "https://bamboomassage9.wordpress.com/contact-us/": {
+  "status": "dead",
+  "http_status": 410,
+  "ms": 75
  },
  "http://enchanteddragontattoos.com/enchanteddragonspeedway.htm": {
   "status": "dead",
   "http_status": 404,
   "final_url": "https://enchanteddragontattoos.com/enchanteddragonspeedway.htm",
-  "ms": 728
+  "ms": 306
  },
- "https://locations.massageenvy.com/arizona/yuma/2377-s-22nd-drive.html": {
+ "https://www.seaofinktattoo.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 52
- },
- "https://serenitylounges.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 256
+  "ms": 204
  },
  "https://www.holistichealingsedona.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 319
- },
- "https://www.continentalspatucson.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 346
- },
- "https://truthintrialtattoo.com/": {
-  "status": "error",
-  "error": "ECONNRESET",
-  "ms": 120
- },
- "https://www.prismwellnessaz.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 558
+  "ms": 269
  },
  "https://purephoenix.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://www.purephoenix.com/",
-  "ms": 1116
+  "ms": 381
  },
- "https://www.bestmassageintucson.com/": {
+ "https://www.bathandbodyworks.com/?cm_mmc=local_BBW02508": {
+  "status": "error",
+  "error": "UND_ERR_CONNECT_TIMEOUT",
+  "ms": 10062
+ },
+ "https://locations.massageenvy.com/arizona/yuma/2377-s-22nd-drive.html": {
   "status": "live",
   "http_status": 200,
-  "ms": 404
+  "ms": 336
  },
- "https://sacredarttattoostudio.com/": {
+ "https://serenitylounges.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 280
+  "ms": 550
  },
- "https://bluelotusmassagetucson.com/": {
+ "https://truthintrialtattoo.com/": {
+  "status": "error",
+  "error": "ECONNRESET",
+  "ms": 127
+ },
+ "https://www.continentalspatucson.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 482
+  "ms": 386
+ },
+ "https://www.prismwellnessaz.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 316
  },
  "https://oldtownetattootucson.com/home": {
   "status": "live",
   "http_status": 200,
-  "ms": 1424
+  "ms": 720
+ },
+ "https://www.bestmassageintucson.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 379
+ },
+ "https://sacredarttattoostudio.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 429
+ },
+ "https://bluelotusmassagetucson.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 512
  },
  "https://tucsonsupermassage.com/": {
   "status": "error",
   "error": "ECONNRESET",
-  "ms": 283
+  "ms": 276
  },
- "https://itouchdayspa.net/": {
-  "status": "error",
-  "error": "UND_ERR_CONNECT_TIMEOUT",
-  "ms": 10273
+ "https://greenspringaesthetics.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 539
  },
  "https://goldenruletattoo.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 1585
+  "ms": 1265
  },
  "http://briscoestattooshop.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 894
+  "ms": 1291
  },
  "https://www.goldenruletattoo.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://goldenruletattoo.com/",
-  "ms": 1822
+  "ms": 2103
  },
  "https://luxenailandspa.com/": {
   "status": "error",
@@ -911,6 +1466,6 @@
  "https://blackmagictattooaz.com/": {
   "status": "dead",
   "error": "EAI_AGAIN",
-  "ms": 10009
+  "ms": 9982
  }
 }
