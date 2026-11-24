@@ -1,10 +1,10 @@
 {
  "state": "UT",
  "census_places": 332,
- "places_covered": 44,
- "place_coverage_pct": 13.3,
+ "places_covered": 43,
+ "place_coverage_pct": 13,
  "census_counties": 29,
- "counties_covered": 13,
+ "counties_covered": 12,
  "counties_uncovered": [
   "Beaver County",
   "Box Elder County",
@@ -13,6 +13,7 @@
   "Duchesne County",
   "Emery County",
   "Garfield County",
+  "Grand County",
   "Juab County",
   "Kane County",
   "Millard County",
@@ -36,7 +37,7 @@
  "top_covered_places": [
   {
    "name": "Salt Lake City",
-   "shops": 53
+   "shops": 52
   },
   {
    "name": "American Fork",
@@ -242,11 +243,6 @@
    "held_candidates": 5
   },
   {
-   "name": "Richfield",
-   "type": "INCORPORATED PLACE",
-   "held_candidates": 4
-  },
-  {
    "name": "Syracuse",
    "type": "INCORPORATED PLACE",
    "held_candidates": 4
@@ -262,12 +258,22 @@
    "held_candidates": 3
   },
   {
+   "name": "Moab",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
    "name": "North Ogden",
    "type": "INCORPORATED PLACE",
    "held_candidates": 3
   },
   {
    "name": "Perry",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Richfield",
    "type": "INCORPORATED PLACE",
    "held_candidates": 3
   },
