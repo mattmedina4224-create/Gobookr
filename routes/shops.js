@@ -29,7 +29,8 @@ module.exports = function (router) {
     const full = claimed && (mode === 'preview' || Boolean(shop.profile_published_at));
     // Professionals see where they stand with a claimed business (request to join, invited, on the team).
     const relationship = claimed && ctx.currentUser?.role === 'pro' ? ShopProfile.teamRelationship(ctx.currentUser, shop.id) : null;
-    const body = renderProfile({ shop, profile, listedPros, mode, canEdit: isOwner, relationship, csrf: ctx.session?.csrf_token || '' });
+    const hiring = claimed && mode !== 'preview' && process.env.CAREER_STUDIO_ENABLED === '1' ? require('./career').publicShopHiring(ctx, shop) : '';
+    const body = renderProfile({ shop, profile, listedPros, mode, canEdit: isOwner, relationship, csrf: ctx.session?.csrf_token || '', hiring });
     const shopUrl = 'https://gobookr.com/shop/' + shop.id;
     send(ctx.res, layout({
       title: shop.name + (shop.city ? ' · ' + shop.city + ', ' + shop.state : ''),
