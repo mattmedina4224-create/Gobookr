@@ -1,0 +1,963 @@
+{
+ "state": "VA",
+ "census_places": 667,
+ "places_covered": 88,
+ "place_coverage_pct": 13.2,
+ "census_counties": 133,
+ "counties_covered": 56,
+ "counties_uncovered": [
+  "Alleghany County",
+  "Amelia County",
+  "Appomattox County",
+  "Bath County",
+  "Bland County",
+  "Botetourt County",
+  "Bristol city",
+  "Brunswick County",
+  "Buchanan County",
+  "Buckingham County",
+  "Buena Vista city",
+  "Carroll County",
+  "Charles City County",
+  "Charlotte County",
+  "Clarke County",
+  "Covington city",
+  "Craig County",
+  "Cumberland County",
+  "Dickenson County",
+  "Dinwiddie County",
+  "Emporia city",
+  "Essex County",
+  "Floyd County",
+  "Fluvanna County",
+  "Franklin city",
+  "Frederick County",
+  "Giles County",
+  "Goochland County",
+  "Grayson County",
+  "Greene County",
+  "Greensville County",
+  "Halifax County",
+  "Henry County",
+  "Highland County",
+  "Hopewell city",
+  "James City County",
+  "King and Queen County",
+  "Lancaster County",
+  "Lee County",
+  "Louisa County",
+  "Lunenburg County",
+  "Madison County",
+  "Manassas Park city",
+  "Martinsville city",
+  "Middlesex County",
+  "Nelson County",
+  "New Kent County",
+  "Northampton County",
+  "Northumberland County",
+  "Norton city",
+  "Nottoway County",
+  "Orange County",
+  "Page County",
+  "Patrick County",
+  "Pittsylvania County",
+  "Prince Edward County",
+  "Prince George County",
+  "Pulaski County",
+  "Rappahannock County",
+  "Richmond County",
+  "Roanoke County",
+  "Rockbridge County",
+  "Rockingham County",
+  "Russell County",
+  "Scott County",
+  "Shenandoah County",
+  "Southampton County",
+  "Spotsylvania County",
+  "Stafford County",
+  "Surry County",
+  "Sussex County",
+  "Tazewell County",
+  "Warren County",
+  "Washington County",
+  "Westmoreland County",
+  "Wise County",
+  "Wythe County"
+ ],
+ "communities_outside_census_places": [
+  {
+   "city": "Henrico",
+   "shops": 7
+  },
+  {
+   "city": "Hayes",
+   "shops": 3
+  },
+  {
+   "city": "Tysons Corner",
+   "shops": 1
+  },
+  {
+   "city": "Gloucester",
+   "shops": 1
+  },
+  {
+   "city": "Arlington Arlington",
+   "shops": 1
+  },
+  {
+   "city": "Stafford",
+   "shops": 1
+  },
+  {
+   "city": "Dulles",
+   "shops": 1
+  }
+ ],
+ "top_covered_places": [
+  {
+   "name": "Richmond",
+   "shops": 38
+  },
+  {
+   "name": "Arlington",
+   "shops": 37
+  },
+  {
+   "name": "Alexandria",
+   "shops": 24
+  },
+  {
+   "name": "Leesburg",
+   "shops": 17
+  },
+  {
+   "name": "Virginia Beach",
+   "shops": 16
+  },
+  {
+   "name": "Charlottesville",
+   "shops": 15
+  },
+  {
+   "name": "Lynchburg",
+   "shops": 14
+  },
+  {
+   "name": "Ashburn",
+   "shops": 13
+  },
+  {
+   "name": "Falls Church",
+   "shops": 13
+  },
+  {
+   "name": "Glen Allen",
+   "shops": 12
+  },
+  {
+   "name": "Newport News",
+   "shops": 11
+  },
+  {
+   "name": "Fredericksburg",
+   "shops": 11
+  },
+  {
+   "name": "Blacksburg",
+   "shops": 9
+  },
+  {
+   "name": "Reston",
+   "shops": 9
+  },
+  {
+   "name": "Fairfax",
+   "shops": 6
+  },
+  {
+   "name": "Williamsburg",
+   "shops": 6
+  },
+  {
+   "name": "Chesapeake",
+   "shops": 4
+  },
+  {
+   "name": "Suffolk",
+   "shops": 4
+  },
+  {
+   "name": "Norfolk",
+   "shops": 4
+  },
+  {
+   "name": "Salem",
+   "shops": 4
+  },
+  {
+   "name": "Sterling",
+   "shops": 4
+  },
+  {
+   "name": "Waynesboro",
+   "shops": 4
+  },
+  {
+   "name": "Springfield",
+   "shops": 4
+  },
+  {
+   "name": "Centreville",
+   "shops": 3
+  },
+  {
+   "name": "Mechanicsville",
+   "shops": 3
+  },
+  {
+   "name": "Manassas",
+   "shops": 3
+  },
+  {
+   "name": "Herndon",
+   "shops": 3
+  },
+  {
+   "name": "Hampton",
+   "shops": 3
+  },
+  {
+   "name": "Roanoke",
+   "shops": 3
+  },
+  {
+   "name": "Staunton",
+   "shops": 3
+  },
+  {
+   "name": "Gainesville",
+   "shops": 3
+  },
+  {
+   "name": "Great Falls",
+   "shops": 2
+  },
+  {
+   "name": "Chester",
+   "shops": 2
+  },
+  {
+   "name": "Yorktown",
+   "shops": 2
+  },
+  {
+   "name": "Purcellville",
+   "shops": 2
+  },
+  {
+   "name": "Galax",
+   "shops": 2
+  },
+  {
+   "name": "Smithfield",
+   "shops": 2
+  },
+  {
+   "name": "Vienna",
+   "shops": 2
+  },
+  {
+   "name": "Brambleton",
+   "shops": 2
+  },
+  {
+   "name": "Christiansburg",
+   "shops": 2
+  }
+ ],
+ "uncovered_places_with_held_candidates": [
+  {
+   "name": "Ashland",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 21
+  },
+  {
+   "name": "Dumfries",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 19
+  },
+  {
+   "name": "Lakeside",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 12
+  },
+  {
+   "name": "Bristol",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 11
+  },
+  {
+   "name": "Dale City",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 9
+  },
+  {
+   "name": "Lorton",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 9
+  },
+  {
+   "name": "Merrifield",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 9
+  },
+  {
+   "name": "Burke",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 8
+  },
+  {
+   "name": "Carrollton",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 8
+  },
+  {
+   "name": "Farmville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 8
+  },
+  {
+   "name": "Laurel",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 8
+  },
+  {
+   "name": "Luray",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 8
+  },
+  {
+   "name": "Manchester",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 8
+  },
+  {
+   "name": "Woodstock",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 8
+  },
+  {
+   "name": "Abingdon",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 7
+  },
+  {
+   "name": "Big Stone Gap",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 7
+  },
+  {
+   "name": "Crosspointe",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 7
+  },
+  {
+   "name": "Chatham",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 6
+  },
+  {
+   "name": "Dumbarton",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 6
+  },
+  {
+   "name": "Emporia",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 6
+  },
+  {
+   "name": "Brookneal",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Cherry Hill",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "County Center",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Front Royal",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Lebanon",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Linton Hall",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Meadowbrook",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Richlands",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Rio",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Wytheville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Belmont",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "East Highland Park",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Exmore",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Hopewell",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Remington",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Spotsylvania Courthouse",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Bull Run",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Crewe",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Goochland",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Gretna",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Grundy",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Huntington",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Kingstowne",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Manassas Park",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Montrose",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Pennington Gap",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Pound",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "South Boston",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "South Riding",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Strasburg",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Stuarts Draft",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Timberlake",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "University Center",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Vinton",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Wise",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Belle Haven",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Berryville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Bluefield",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Chincoteague",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Clarksville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Dublin",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Dulles Town Center",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Dunn Loring",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Fairfax Station",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Franklin",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Hayfield",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Idylwood",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Innovation",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Keysville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Kilmarnock",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "La Crosse",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Lovettsville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Montclair",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "One Loudoun",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Pulaski",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Rich Creek",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Short Pump",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Woodlake",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Aldie",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Amherst",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Bealeton",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Bridgewater",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Cana",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Cape Charles",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Cascades",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Cave Spring",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Charlotte Court House",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Cheriton",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Chilhowie",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Clifton",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Colonial Beach",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Covington",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Dahlgren",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Dayton",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Elkton",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Fair Oaks",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Floyd",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Fort Hunt",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Gasburg",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Groveton",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Haysi",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Hot Springs",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Ivor",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Jarratt",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Lake of the Woods",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Loch Lomond",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Louisa",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Lowes Island",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Madison",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Marshall",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Martinsville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "McKenney",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Meadows of Dan",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Moneta",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Mount Crawford",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Narrows",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "New Castle",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "New Kent",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Nokesville",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Oak Hall",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Oakton",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Painter",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Pearisburg",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Ravensworth",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Ruckersville",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Rural Retreat",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Saltville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Saluda",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Shenandoah",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Stephens City",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Sudley",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Sugarland Run",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "The Plains",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Verona",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Victoria",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Warsaw",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  }
+ ],
+ "uncovered_places_without_candidates": 443,
+ "source": "U.S. Census Bureau 2020 place-by-county and county code files"
+}

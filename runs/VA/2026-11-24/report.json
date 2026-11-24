@@ -1,0 +1,56 @@
+{
+ "state": "VA",
+ "state_name": "Virginia",
+ "wave": 3,
+ "created_at": "2026-11-24T21:54:43.417Z",
+ "staging_only": true,
+ "sources": [
+  {
+   "name": "OpenStreetMap (Overpass)",
+   "url": "https://overpass-api.de/api/interpreter",
+   "status": "processed",
+   "records": 2750,
+   "parts_ok": 4,
+   "parts_total": 4
+  },
+  {
+   "name": "U.S. Census Geocoder (place containing map point)",
+   "url": "https://geocoding.geo.census.gov/",
+   "status": "processed",
+   "records": 944
+  }
+ ],
+ "license_records_scanned": 0,
+ "licensed_active_candidates": 0,
+ "license_dropped": null,
+ "license_fields": null,
+ "license_shop_types": [],
+ "license_type_counts": [],
+ "license_type_lookup": [],
+ "census_city_lookup": {
+  "attempted": 1093,
+  "filled": 944,
+  "failed": 0
+ },
+ "mapped_beauty_places": 2750,
+ "overpass_endpoint": "https://overpass-api.de/api/interpreter",
+ "total_candidates": 2563,
+ "with_websites": 490,
+ "category_counts": {
+  "barber": 368,
+  "hair": 1097,
+  "nails": 648,
+  "waxing": 16,
+  "salon_suites": 8,
+  "lashes": 7,
+  "brows": 13,
+  "makeup": 4,
+  "spray_tanning": 60,
+  "tattoo": 110,
+  "massage": 198,
+  "skincare": 34
+ },
+ "errors": [],
+ "note": "A license record or map listing alone does not prove a business is open. The importer publishes only rows that meet its rules; the rest are held.",
+ "attribution": "OpenStreetMap data © OpenStreetMap contributors (ODbL, https://www.openstreetmap.org/copyright). Licensing data from the listed state open-data portals."
+}
