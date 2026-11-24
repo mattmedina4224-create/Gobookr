@@ -113,6 +113,12 @@ function plan(candidates, { state, existing = [], checks = {}, checkedAt }) {
     seen.set(key, row);
     publish.push(row);
   }
+  // One license number on two different locations is ambiguous (which address is current?): hold both.
+  const licenseUse = new Map();
+  for (const r of publish) if (r.license_number) licenseUse.set(r.license_number, (licenseUse.get(r.license_number) || 0) + 1);
+  for (let i = publish.length - 1; i >= 0; i--) {
+    if (publish[i].license_number && licenseUse.get(publish[i].license_number) > 1) review.push({ ...publish.splice(i, 1)[0], reason: 'license_number_on_multiple_locations' });
+  }
   // One website on two differently named businesses is a source error (e.g. a copied booking link): drop it.
   const owners = new Map();
   for (const r of publish) if (r.website_url) { const k = r.website_url.replace(/\/+$/, '').toLowerCase(); if (!owners.has(k)) owners.set(k, new Set()); owners.get(k).add(matchKey(r.name)); }

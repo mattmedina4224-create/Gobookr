@@ -175,7 +175,8 @@ async function execute(op, rawSql, args) {
   if (cacheable) {
     const cached = getCachedRead(key);
     if (cached !== undefined) return cached;
-  } else if (op === 'run') {
+  } else if (op === 'run' || /\b(INSERT|UPDATE|DELETE)\b/i.test(sql)) {
+    // Writes issued through get/all (... RETURNING) invalidate cached reads as well.
     readCache.clear();
   }
 
