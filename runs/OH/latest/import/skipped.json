@@ -1,0 +1,80 @@
+[
+ {
+  "name": "Great Clips",
+  "city": "Zanesville",
+  "state": "OH",
+  "street_address": "143 North Maysville Avenue",
+  "zip_code": "43701",
+  "county": "",
+  "categories": [
+   "stylist"
+  ],
+  "website_url": "https://salons.greatclips.com/us/oh/zanesville/143b-north-maysville-pike",
+  "phone": "(740) 588-9900",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/node/9611545366",
+  "source_external_id": "osm:node/9611545366",
+  "license_number": null,
+  "latitude": 39.9085445,
+  "longitude": -82.0187157,
+  "operational_status": "verified",
+  "checked_at": "2026-11-24",
+  "raw_name": "Great Clips",
+  "website_candidate": "https://salons.greatclips.com/us/oh/zanesville/143b-north-maysville-pike",
+  "website_source_url": "",
+  "reason": "duplicate_candidate",
+  "duplicate_of": "osm:node/9434695824"
+ },
+ {
+  "name": "Great Clips",
+  "city": "Cincinnati",
+  "state": "OH",
+  "street_address": "4530 Eastgate Boulevard",
+  "zip_code": "45245",
+  "county": "",
+  "categories": [
+   "stylist"
+  ],
+  "website_url": "https://salons.greatclips.com/us/oh/cincinnati/4530-eastgate-blvd?",
+  "phone": "(513) 943-1500",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/node/12548292381",
+  "source_external_id": "osm:node/12548292381",
+  "license_number": null,
+  "latitude": 39.1034687,
+  "longitude": -84.2716762,
+  "operational_status": "verified",
+  "checked_at": "2026-11-24",
+  "raw_name": "Great Clips",
+  "website_candidate": "https://salons.greatclips.com/us/oh/cincinnati/4530-eastgate-blvd?",
+  "website_source_url": "",
+  "reason": "duplicate_candidate",
+  "duplicate_of": "osm:node/12316416405"
+ },
+ {
+  "name": "Hawaiian TanFastic",
+  "city": "Zanesville",
+  "state": "OH",
+  "street_address": "141 North Maysville Avenue",
+  "zip_code": "43701",
+  "county": "",
+  "categories": [
+   "spray_tan_specialist"
+  ],
+  "website_url": "https://www.hawaiiantanfastic.com/",
+  "phone": "(740) 487-4025",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/node/9611545368",
+  "source_external_id": "osm:node/9611545368",
+  "license_number": null,
+  "latitude": 39.9084563,
+  "longitude": -82.0187626,
+  "operational_status": "verified",
+  "checked_at": "2026-11-24",
+  "raw_name": "Hawaiian TanFastic",
+  "website_candidate": "https://www.hawaiiantanfastic.com/",
+  "website_source_url": "",
+  "reason": "duplicate_candidate",
+  "duplicate_of": "osm:node/9559102032"
+ }
+]

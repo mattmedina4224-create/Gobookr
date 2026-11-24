@@ -1,0 +1,56 @@
+{
+ "state": "OH",
+ "state_name": "Ohio",
+ "wave": 4,
+ "created_at": "2026-11-24T22:32:13.444Z",
+ "staging_only": true,
+ "sources": [
+  {
+   "name": "OpenStreetMap (Overpass)",
+   "url": "https://overpass.kumi.systems/api/interpreter",
+   "status": "processed",
+   "records": 3060,
+   "parts_ok": 4,
+   "parts_total": 4
+  },
+  {
+   "name": "U.S. Census Geocoder (place containing map point)",
+   "url": "https://geocoding.geo.census.gov/",
+   "status": "processed",
+   "records": 1064
+  }
+ ],
+ "license_records_scanned": 0,
+ "licensed_active_candidates": 0,
+ "license_dropped": null,
+ "license_fields": null,
+ "license_shop_types": [],
+ "license_type_counts": [],
+ "license_type_lookup": [],
+ "census_city_lookup": {
+  "attempted": 1224,
+  "filled": 1064,
+  "failed": 0
+ },
+ "mapped_beauty_places": 3060,
+ "overpass_endpoint": "https://overpass.kumi.systems/api/interpreter",
+ "total_candidates": 2747,
+ "with_websites": 506,
+ "category_counts": {
+  "hair": 1298,
+  "barber": 308,
+  "spray_tanning": 112,
+  "nails": 523,
+  "makeup": 76,
+  "salon_suites": 6,
+  "waxing": 21,
+  "brows": 20,
+  "massage": 126,
+  "skincare": 50,
+  "lashes": 14,
+  "tattoo": 193
+ },
+ "errors": [],
+ "note": "A license record or map listing alone does not prove a business is open. The importer publishes only rows that meet its rules; the rest are held.",
+ "attribution": "OpenStreetMap data © OpenStreetMap contributors (ODbL, https://www.openstreetmap.org/copyright). Licensing data from the listed state open-data portals."
+}
