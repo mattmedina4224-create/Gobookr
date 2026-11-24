@@ -1,0 +1,181 @@
+{
+ "state": "NV",
+ "census_places": 133,
+ "places_covered": 13,
+ "place_coverage_pct": 9.8,
+ "census_counties": 17,
+ "counties_covered": 5,
+ "counties_uncovered": [
+  "Carson City",
+  "Churchill County",
+  "Esmeralda County",
+  "Eureka County",
+  "Humboldt County",
+  "Lander County",
+  "Lincoln County",
+  "Lyon County",
+  "Mineral County",
+  "Pershing County",
+  "Storey County",
+  "White Pine County"
+ ],
+ "communities_outside_census_places": [
+  {
+   "city": "Carson City",
+   "shops": 2
+  }
+ ],
+ "top_covered_places": [
+  {
+   "name": "Las Vegas",
+   "shops": 67
+  },
+  {
+   "name": "Henderson",
+   "shops": 29
+  },
+  {
+   "name": "Reno",
+   "shops": 14
+  },
+  {
+   "name": "Sparks",
+   "shops": 6
+  },
+  {
+   "name": "Paradise",
+   "shops": 5
+  },
+  {
+   "name": "North Las Vegas",
+   "shops": 3
+  },
+  {
+   "name": "Spring Valley",
+   "shops": 3
+  },
+  {
+   "name": "Pahrump",
+   "shops": 2
+  },
+  {
+   "name": "Elko",
+   "shops": 2
+  },
+  {
+   "name": "Boulder City",
+   "shops": 1
+  },
+  {
+   "name": "Mesquite",
+   "shops": 1
+  },
+  {
+   "name": "Enterprise",
+   "shops": 1
+  },
+  {
+   "name": "Stateline",
+   "shops": 1
+  }
+ ],
+ "uncovered_places_with_held_candidates": [
+  {
+   "name": "Winnemucca",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 10
+  },
+  {
+   "name": "Sunrise Manor",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 9
+  },
+  {
+   "name": "Gardnerville",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 8
+  },
+  {
+   "name": "Ely",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Indian Hills",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Winchester",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Caliente",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Fernley",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Laughlin",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Battle Mountain",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Hawthorne",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Incline Village",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Spring Creek",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Sun Valley",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Fallon",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Panaca",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Pioche",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Round Hill Village",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Tonopah",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  }
+ ],
+ "uncovered_places_without_candidates": 101,
+ "source": "U.S. Census Bureau 2020 place-by-county and county code files"
+}

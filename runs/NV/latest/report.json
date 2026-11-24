@@ -2,14 +2,14 @@
  "state": "NV",
  "state_name": "Nevada",
  "wave": 1,
- "created_at": "2026-11-20T06:49:38.891Z",
+ "created_at": "2026-11-24T17:14:16.024Z",
  "staging_only": true,
  "sources": [
   {
    "name": "OpenStreetMap (Overpass)",
    "url": "https://overpass.kumi.systems/api/interpreter",
    "status": "processed",
-   "records": 783,
+   "records": 786,
    "parts_ok": 4,
    "parts_total": 4
   },
@@ -17,7 +17,7 @@
    "name": "U.S. Census Geocoder (place containing map point)",
    "url": "https://geocoding.geo.census.gov/",
    "status": "processed",
-   "records": 297
+   "records": 303
   }
  ],
  "license_records_scanned": 0,
@@ -28,18 +28,18 @@
  "license_type_counts": [],
  "license_type_lookup": [],
  "census_city_lookup": {
-  "attempted": 298,
-  "filled": 297,
+  "attempted": 304,
+  "filled": 303,
   "failed": 0
  },
- "mapped_beauty_places": 783,
+ "mapped_beauty_places": 786,
  "overpass_endpoint": "https://overpass.kumi.systems/api/interpreter",
- "total_candidates": 724,
- "with_websites": 174,
+ "total_candidates": 725,
+ "with_websites": 171,
  "category_counts": {
-  "hair": 281,
-  "barber": 47,
-  "nails": 159,
+  "hair": 282,
+  "barber": 49,
+  "nails": 160,
   "salon_suites": 5,
   "waxing": 11,
   "lashes": 8,
@@ -47,7 +47,7 @@
   "spray_tanning": 20,
   "skincare": 26,
   "brows": 13,
-  "massage": 55,
+  "massage": 52,
   "permanent_makeup": 1,
   "tattoo": 53
  },
