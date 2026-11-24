@@ -1,0 +1,28 @@
+[
+ {
+  "name": "Soaps and Such",
+  "city": "Alpena",
+  "state": "MI",
+  "street_address": "133 East Chisholm Street",
+  "zip_code": "49707",
+  "county": "",
+  "categories": [
+   "stylist"
+  ],
+  "website_url": "https://soapsandsuchalpena.com/",
+  "phone": "(989) 340-1299",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/way/1238385751",
+  "source_external_id": "osm:way/1238385751",
+  "license_number": null,
+  "latitude": 45.0616792,
+  "longitude": -83.4322457,
+  "operational_status": "verified",
+  "checked_at": "2026-11-24",
+  "raw_name": "Soaps and Such",
+  "website_candidate": "http://soapsandsuchalpena.com/",
+  "website_source_url": "",
+  "reason": "duplicate_candidate",
+  "duplicate_of": "osm:node/10025769407"
+ }
+]

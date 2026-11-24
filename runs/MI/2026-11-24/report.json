@@ -1,0 +1,65 @@
+{
+ "state": "MI",
+ "state_name": "Michigan",
+ "wave": 4,
+ "created_at": "2026-11-24T22:45:11.364Z",
+ "staging_only": true,
+ "sources": [
+  {
+   "name": "OpenStreetMap (Overpass)",
+   "url": "https://overpass-api.de/api/interpreter",
+   "status": "partial",
+   "records": 2287,
+   "parts_ok": 3,
+   "parts_total": 4,
+   "error": "https://overpass-api.de/api/interpreter [nwr[\"beauty\"~\"^(nails|tanning|eyelash|ey]: HTTP 504 https://overpass-api.de/api/interpreter | https://overpass.private.coffee/api/interpreter [nwr[\"beauty\"~\"^(nails|tanning|eyelash|ey]: HTTP 502 https://overpass.private.coffee/api/interpreter | https://overpass.kumi.systems/api/interpreter [nwr[\"beauty\"~\"^(nails|tanning|eyelash|ey]: HTTP 504 https://overpass.kumi.systems/api/interpreter | https://overpass-api.de/api/interpreter [nwr[\"beauty\"~\"^(nails|tanning|eyelash|ey]: HTTP 502 https://overpass-api.de/api/interpreter | https://overpass.private.coffee/api/interpreter [nwr[\"beauty\"~\"^(nails|tanning|eyelash|ey]: HTTP 504 https://overpass.private.coffee/api/interpreter | https://overpass.kumi.systems/api/interpreter [nwr[\"beauty\"~\"^(nails|tanning|eyelash|ey]: HTTP 502 https://overpass.kumi.systems/api/interpreter"
+  },
+  {
+   "name": "U.S. Census Geocoder (place containing map point)",
+   "url": "https://geocoding.geo.census.gov/",
+   "status": "processed",
+   "records": 760
+  }
+ ],
+ "license_records_scanned": 0,
+ "licensed_active_candidates": 0,
+ "license_dropped": null,
+ "license_fields": null,
+ "license_shop_types": [],
+ "license_type_counts": [],
+ "license_type_lookup": [],
+ "census_city_lookup": {
+  "attempted": 930,
+  "filled": 760,
+  "failed": 0
+ },
+ "mapped_beauty_places": 2287,
+ "overpass_endpoint": "https://overpass-api.de/api/interpreter",
+ "total_candidates": 2133,
+ "with_websites": 490,
+ "category_counts": {
+  "hair": 1068,
+  "nails": 367,
+  "barber": 223,
+  "spray_tanning": 68,
+  "skincare": 50,
+  "salon_suites": 13,
+  "waxing": 11,
+  "makeup": 53,
+  "lashes": 23,
+  "permanent_makeup": 2,
+  "brows": 11,
+  "massage": 117,
+  "tattoo": 127
+ },
+ "errors": [
+  "osm: https://overpass-api.de/api/interpreter [nwr[\"beauty\"~\"^(nails|tanning|eyelash|ey]: HTTP 504 https://overpass-api.de/api/interpreter",
+  "osm: https://overpass.private.coffee/api/interpreter [nwr[\"beauty\"~\"^(nails|tanning|eyelash|ey]: HTTP 502 https://overpass.private.coffee/api/interpreter",
+  "osm: https://overpass.kumi.systems/api/interpreter [nwr[\"beauty\"~\"^(nails|tanning|eyelash|ey]: HTTP 504 https://overpass.kumi.systems/api/interpreter",
+  "osm: https://overpass-api.de/api/interpreter [nwr[\"beauty\"~\"^(nails|tanning|eyelash|ey]: HTTP 502 https://overpass-api.de/api/interpreter",
+  "osm: https://overpass.private.coffee/api/interpreter [nwr[\"beauty\"~\"^(nails|tanning|eyelash|ey]: HTTP 504 https://overpass.private.coffee/api/interpreter",
+  "osm: https://overpass.kumi.systems/api/interpreter [nwr[\"beauty\"~\"^(nails|tanning|eyelash|ey]: HTTP 502 https://overpass.kumi.systems/api/interpreter"
+ ],
+ "note": "A license record or map listing alone does not prove a business is open. The importer publishes only rows that meet its rules; the rest are held.",
+ "attribution": "OpenStreetMap data © OpenStreetMap contributors (ODbL, https://www.openstreetmap.org/copyright). Licensing data from the listed state open-data portals."
+}

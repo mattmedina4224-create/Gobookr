@@ -1,0 +1,905 @@
+{
+ "state": "MI",
+ "census_places": 743,
+ "places_covered": 107,
+ "place_coverage_pct": 14.4,
+ "census_counties": 83,
+ "counties_covered": 45,
+ "counties_uncovered": [
+  "Alcona County",
+  "Alger County",
+  "Antrim County",
+  "Arenac County",
+  "Baraga County",
+  "Barry County",
+  "Benzie County",
+  "Branch County",
+  "Charlevoix County",
+  "Chippewa County",
+  "Clare County",
+  "Crawford County",
+  "Dickinson County",
+  "Gladwin County",
+  "Gogebic County",
+  "Gratiot County",
+  "Hillsdale County",
+  "Huron County",
+  "Ionia County",
+  "Iron County",
+  "Kalkaska County",
+  "Lake County",
+  "Luce County",
+  "Manistee County",
+  "Mecosta County",
+  "Menominee County",
+  "Missaukee County",
+  "Montcalm County",
+  "Montmorency County",
+  "Newaygo County",
+  "Oceana County",
+  "Ontonagon County",
+  "Osceola County",
+  "Oscoda County",
+  "Roscommon County",
+  "Sanilac County",
+  "Schoolcraft County",
+  "Tuscola County"
+ ],
+ "communities_outside_census_places": [
+  {
+   "city": "Clinton Township",
+   "shops": 7
+  },
+  {
+   "city": "Shelby Township",
+   "shops": 4
+  },
+  {
+   "city": "Shelby Charter Twp",
+   "shops": 2
+  },
+  {
+   "city": "Clarkston",
+   "shops": 1
+  },
+  {
+   "city": "Macomb",
+   "shops": 1
+  },
+  {
+   "city": "Canton Township",
+   "shops": 1
+  },
+  {
+   "city": "West Bloomfield Township",
+   "shops": 1
+  },
+  {
+   "city": "Harrison Township",
+   "shops": 1
+  },
+  {
+   "city": "Milford Charter Twp",
+   "shops": 1
+  },
+  {
+   "city": "Canton",
+   "shops": 1
+  },
+  {
+   "city": "White Lake",
+   "shops": 1
+  }
+ ],
+ "top_covered_places": [
+  {
+   "name": "Ann Arbor",
+   "shops": 28
+  },
+  {
+   "name": "Sterling Heights",
+   "shops": 20
+  },
+  {
+   "name": "Grand Rapids",
+   "shops": 19
+  },
+  {
+   "name": "Detroit",
+   "shops": 12
+  },
+  {
+   "name": "Okemos",
+   "shops": 12
+  },
+  {
+   "name": "Traverse City",
+   "shops": 10
+  },
+  {
+   "name": "Alpena",
+   "shops": 10
+  },
+  {
+   "name": "Lansing",
+   "shops": 9
+  },
+  {
+   "name": "Holland",
+   "shops": 9
+  },
+  {
+   "name": "Gaylord",
+   "shops": 9
+  },
+  {
+   "name": "Cheboygan",
+   "shops": 7
+  },
+  {
+   "name": "Fraser",
+   "shops": 7
+  },
+  {
+   "name": "Novi",
+   "shops": 6
+  },
+  {
+   "name": "Ferndale",
+   "shops": 6
+  },
+  {
+   "name": "Royal Oak",
+   "shops": 6
+  },
+  {
+   "name": "Wyandotte",
+   "shops": 6
+  },
+  {
+   "name": "Northville",
+   "shops": 6
+  },
+  {
+   "name": "Farmington Hills",
+   "shops": 5
+  },
+  {
+   "name": "Birmingham",
+   "shops": 5
+  },
+  {
+   "name": "Grandville",
+   "shops": 5
+  },
+  {
+   "name": "Petoskey",
+   "shops": 4
+  },
+  {
+   "name": "Livonia",
+   "shops": 4
+  },
+  {
+   "name": "Warren",
+   "shops": 4
+  },
+  {
+   "name": "Blissfield",
+   "shops": 4
+  },
+  {
+   "name": "Troy",
+   "shops": 4
+  },
+  {
+   "name": "Saginaw",
+   "shops": 3
+  },
+  {
+   "name": "Dearborn",
+   "shops": 3
+  },
+  {
+   "name": "Taylor",
+   "shops": 3
+  },
+  {
+   "name": "St. Clair Shores",
+   "shops": 3
+  },
+  {
+   "name": "Eastpointe",
+   "shops": 3
+  },
+  {
+   "name": "Ypsilanti",
+   "shops": 3
+  },
+  {
+   "name": "Muskegon",
+   "shops": 3
+  },
+  {
+   "name": "Westland",
+   "shops": 3
+  },
+  {
+   "name": "Clawson",
+   "shops": 3
+  },
+  {
+   "name": "Saline",
+   "shops": 2
+  },
+  {
+   "name": "Madison Heights",
+   "shops": 2
+  },
+  {
+   "name": "Waverly",
+   "shops": 2
+  },
+  {
+   "name": "Hudsonville",
+   "shops": 2
+  },
+  {
+   "name": "Fenton",
+   "shops": 2
+  },
+  {
+   "name": "Southgate",
+   "shops": 2
+  }
+ ],
+ "uncovered_places_with_held_candidates": [
+  {
+   "name": "Kalamazoo",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 18
+  },
+  {
+   "name": "Riverview",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 15
+  },
+  {
+   "name": "Hastings",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 12
+  },
+  {
+   "name": "East Lansing",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 9
+  },
+  {
+   "name": "Monroe",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 9
+  },
+  {
+   "name": "Albion",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 8
+  },
+  {
+   "name": "Sault Ste. Marie",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 7
+  },
+  {
+   "name": "Whitehall",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 7
+  },
+  {
+   "name": "Auburn Hills",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 6
+  },
+  {
+   "name": "Garden City",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 6
+  },
+  {
+   "name": "Inkster",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 6
+  },
+  {
+   "name": "Montague",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 6
+  },
+  {
+   "name": "Southfield",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 6
+  },
+  {
+   "name": "Holly",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Milford",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Oak Park",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Romulus",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Wayne",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Douglas",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Mio",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Bad Axe",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Birch Run",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Charlotte",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Clio",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Comstock Park",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Cutlerville",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Davison",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Dimondale",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Edgemont Park",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Grand Ledge",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Hillsdale",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Indian River",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Keego Harbor",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Lathrup Village",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Morenci",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Orchard Lake Village",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Oxford",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Pigeon",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Plainwell",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Rochester",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Atlanta",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Bay City",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Bellaire",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Breckenridge",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Burton",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Capac",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Comstock Northwest",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Ecorse",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Flushing",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Franklin",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Grayling",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Gwinn",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Harrison",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Hillman",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Howell",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Ishpeming",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Ithaca",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Leslie",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "New Buffalo",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Norton Shores",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Rapid City",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Roosevelt Park",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Roseville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Sebewaing",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Standish",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Algonac",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Alma",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Argentine",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Bay View",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Beal City",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Beaverton",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Bessemer",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Beverly Hills",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Big Rapids",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Brooklyn",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Byron Center",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Caledonia",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Calumet",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Carson City",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Caseville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Cassopolis",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Center Line",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Clinton",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Coldwater",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Coleman",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Deerfield",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Dorr",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Durand",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Elkton",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Fife Lake",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Forest Hills",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Fremont",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Grand Haven",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Greenville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Hamtramck",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Harvey",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Huntington Woods",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Imlay City",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Ionia",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Ironwood",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Kalkaska",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Kinde",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Lincoln",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Linden",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Manistee",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Manistique",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Menominee",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Metamora",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Michigan Center",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Milan",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Millington",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Mount Clemens",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Newaygo",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Onekama",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Ontonagon",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Ortonville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Ossineke",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Petersburg",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Port Austin",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Portland",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Potterville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Richmond",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Scottville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "St. Johns",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Suttons Bay",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Sylvan Lake",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Tecumseh",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Trowbridge Park",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Yale",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  }
+ ],
+ "uncovered_places_without_candidates": 507,
+ "source": "U.S. Census Bureau 2020 place-by-county and county code files"
+}
