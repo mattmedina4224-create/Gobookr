@@ -1,0 +1,1158 @@
+{
+ "https://haircutmencommercialfishersin.com/Home.html": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 179
+ },
+ "https://salons.greatclips.com/us/in/fishers/7268-fishers-crossing-dr": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 196
+ },
+ "http://www.justteasinhair.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 210
+ },
+ "http://krispykutzbarbershop.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 77
+ },
+ "http://hairvolution.net/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 71
+ },
+ "http://www.sugarinfishers.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 269
+ },
+ "https://salons.greatclips.com/us/in/indianapolis/1077-broad-ripple-ave": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 272
+ },
+ "https://salons.greatclips.com/us/in/carmel/2001-e-greyhound-pass": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 94
+ },
+ "https://www.fantasticsams.com/pages/FindASalon/findsalondetail.aspx?SalonId=7388": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 319
+ },
+ "http://www.wildhorseshairsalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 321
+ },
+ "https://www.greatclips.com/salons/1266": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://salons.greatclips.com/us/in/bloomington/264-n-jacob-dr",
+  "ms": 390
+ },
+ "http://stylesbydarceyandco.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 77
+ },
+ "http://bluemoonhairplace.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 86
+ },
+ "http://alldolleduphairstudio.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 58
+ },
+ "https://sportclips.com/us-in-fortwayne-in402": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 103
+ },
+ "https://salons.greatclips.com/us/in/noblesville/14753-hazel-dell-crossing": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 16
+ },
+ "http://hellobeautifulbrownsburg.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 77
+ },
+ "https://haircutmenclarksvillein.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 89
+ },
+ "https://mattsbarbershop01.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 125
+ },
+ "https://haircutmenvalparaisoin.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 109
+ },
+ "https://www.shinetwentynine.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 141
+ },
+ "https://www.greatclips.com/salons/7748": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://salons.greatclips.com/us/in/terre-haute/5504-e-new-margaret-dr",
+  "ms": 248
+ },
+ "https://www.cloud9indy.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 239
+ },
+ "https://salons.greatclips.com/us/in/valparaiso/2710-laporte-ave": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 95
+ },
+ "https://salons.greatclips.com/us/in/mccordsville/6861-w-broadway": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 42
+ },
+ "https://www.fantasticsams.com/about/regions/louisville-ky/fantastic-sams-scottsburg": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.fantasticsams.com/salons/fantastic-sams-scottsburg",
+  "ms": 243
+ },
+ "https://vsaloncp.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 103
+ },
+ "https://locations.haircuttery.com/in/valparaiso/2620-laporte-ave-ste-120.html": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 263
+ },
+ "https://salons.greatclips.com/us/in/bloomington/115-s-state-road-46": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 164
+ },
+ "https://www.concretebarber.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://sites.google.com/view/goshenbarbershop/home/",
+  "ms": 615
+ },
+ "https://salonchichair.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 136
+ },
+ "https://insocietyofbeauty.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 209
+ },
+ "https://www.mdgsalons.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 88
+ },
+ "https://salons.greatclips.com/us/in/bedford/3338-john-williams-blvd": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 15
+ },
+ "https://stadlersbarbershop.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 824
+ },
+ "https://salons.greatclips.com/us/in/carmel/11503-springmill-rd": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 75
+ },
+ "https://square.site/book/MAPR74VNAJNSZ/joe-s-barber-shop-winfield-winfield-in": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 314
+ },
+ "https://www.cosmotiquesalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://cosmotiquesalon.com/",
+  "ms": 431
+ },
+ "https://salons.greatclips.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 43
+ },
+ "https://fantasticsams.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.fantasticsams.com/",
+  "ms": 148
+ },
+ "https://www.theregionsbarbershop.com/location/a6b793ba-8734-4fb6-8888-d8046028be06": {
+  "status": "blocked",
+  "http_status": 429,
+  "ms": 189
+ },
+ "https://salons.greatclips.com/us/in/floyds-knobs/100-lafollette-station-s": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 194
+ },
+ "https://www.theblownawayexperience.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://theblownawayexperience.com/",
+  "ms": 362
+ },
+ "https://fasteddieslaporte.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1288
+ },
+ "https://goglo.shop/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 9
+ },
+ "https://www.blackorchidbarbers.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 144
+ },
+ "https://kkbbsalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1450
+ },
+ "https://locations.haircuttery.com/in/munster/7944-calumet-ave": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.haircuttery.com/locations/in/munster/7944-calumet-ave",
+  "ms": 301
+ },
+ "https://www.tangledupindy.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 164
+ },
+ "https://sportclips.com/us-in-schererville-in602": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 256
+ },
+ "https://www.fulcrumbarbershop.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 977
+ },
+ "https://emsalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.emsalon.com/",
+  "ms": 479
+ },
+ "https://theexecutivebarbershop.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 325
+ },
+ "https://app.greatclips.com/salon/4122/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 336
+ },
+ "https://usmalehair.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://hairtherapyofgoshen.com/",
+  "ms": 2469
+ },
+ "https://michaelwarrenssalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "http://www.importantlocalbusinesses.com/",
+  "ms": 381
+ },
+ "https://hazebeautybar.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 96
+ },
+ "https://www.thestationhair.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 122
+ },
+ "https://nicecolor.glossgenius.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 814
+ },
+ "https://www.barberdengoshen.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 93
+ },
+ "https://nobadhaircut.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 208
+ },
+ "https://www.top-knotbridal.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 299
+ },
+ "https://www.theregionsbarbershop.com/": {
+  "status": "blocked",
+  "http_status": 429,
+  "ms": 22
+ },
+ "https://book.squareup.com/appointments/a3o0p69dma683h/location/L541A8TWFA9CE/services": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 170
+ },
+ "http://leesbarberlounge.booksy.com/a/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://lhkw.app.link/GYKOGztoN1b?_p=c11335dc9a0360eee61990f8ee",
+  "ms": 1256
+ },
+ "https://www.midoubeauty.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1063
+ },
+ "https://www.rubyshaircompany.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 3648
+ },
+ "https://booksy.com/en-us/567766_clippers-barbershop-danville_barber-shop_19607_danville": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 700
+ },
+ "https://beautyextrema.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1781
+ },
+ "https://salons.greatclips.com/us/in/jeffersonville/2784-meijer-dr": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 44
+ },
+ "https://www.ehdsalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 170
+ },
+ "https://app.greatclips.com/salon/2974/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 69
+ },
+ "https://rosebeautique.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 864
+ },
+ "https://www.bernadettesbarbershops.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 103
+ },
+ "https://salons.greatclips.com/us/in/frankfort/2484-e-wabash-st": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 16
+ },
+ "https://shear-envious.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 616
+ },
+ "http://www.thirdstreetbarbers.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 137
+ },
+ "https://salons.greatclips.com/us/in/lebanon/2456-n-lebanon-st": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 32
+ },
+ "https://www.haircuttery.com/locations/in/schererville/1690-us-highway-41": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 158
+ },
+ "https://dot.cards/grandeurbarbershop": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 336
+ },
+ "https://www.wildhorseshairsalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 116
+ },
+ "http://www.saloncapellani.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.saloncapellani.com/",
+  "ms": 335
+ },
+ "https://www.classycutssalon.net/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 119
+ },
+ "https://www.downtownhairstudiolowell.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 124
+ },
+ "https://wilsonsbarbershop.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.wilsonsbarbershop.com/",
+  "ms": 261
+ },
+ "https://booksy.com/en-us/1280466_angelbarberstudio_barber-shop_19578_noblesville": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 550
+ },
+ "https://indulge-beauty-salon-llc.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 975
+ },
+ "https://www.thelocallather.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 184
+ },
+ "https://elevatedbarbercompany.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 38
+ },
+ "https://loveshairspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.loveshairspa.com/",
+  "ms": 552
+ },
+ "https://bens-barber-shop.business.site/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 549
+ },
+ "https://locations.waxcenter.com/in/noblesville/noblesville-hamilton-town-center-0650.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 208
+ },
+ "https://www.bodyreflectionsfrenchlick.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 276
+ },
+ "https://sportclips.com/us-in-camby-in128": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 354
+ },
+ "http://www.dreamweaversalon.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 86
+ },
+ "https://the-regions-barber-shop.business.site/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 540
+ },
+ "https://www.backalleybarberclub.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 893
+ },
+ "https://suntancity.com/tan-salon-locations/indiana-indianapolis-in-indianapolis-clearwater/": {
+  "status": "dead",
+  "http_status": 404,
+  "final_url": "https://www.suntancity.com/tan-salon-locations/indiana-indianapolis-in-indianapolis-clearwater",
+  "ms": 293
+ },
+ "https://www.hilliaryandcompany.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 44
+ },
+ "https://www.ulta.com/stores/carmel-in-642": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 222
+ },
+ "http://the-nail-spa.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 45
+ },
+ "http://clipzonesalon.com/": {
+  "status": "dead",
+  "http_status": 404,
+  "final_url": "http://www.clipzonesalon.com/",
+  "ms": 218
+ },
+ "https://www.royalspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://royalspa.com/",
+  "ms": 307
+ },
+ "http://dandjnails.net/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 61
+ },
+ "https://www.sephora.com/happening/stores/clay-terrace": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 103
+ },
+ "https://www.ulta.com/stores/noblesville-in-315": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 530
+ },
+ "https://www.nikkinail.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://nikkinail.com/",
+  "ms": 241
+ },
+ "http://www.bathandbodyworks.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 394
+ },
+ "https://handandstone.com/spa/store/carmel": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://handandstone.com/locations/carmel/",
+  "ms": 495
+ },
+ "https://suntancity.com/tanning-salon-locations/indiana-noblesville-in-noblesville-west/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.suntancity.com/find-a-salon/indiana/noblesville/cumberland-road",
+  "ms": 453
+ },
+ "https://locations.waxcenter.com/in/carmel/carmel-0192.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 448
+ },
+ "https://www.bronzesol.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 151
+ },
+ "https://permavibestudio.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.permavibestudio.com/",
+  "ms": 387
+ },
+ "https://suntancity.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.suntancity.com/",
+  "ms": 183
+ },
+ "https://sugarnailscrownpoint.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 356
+ },
+ "https://www.ulta.com/stores/fort-wayne-in-1682": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 174
+ },
+ "https://www.ulta.com/stores/goshen-in-1272": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 166
+ },
+ "https://noblewestnails.weebly.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 227
+ },
+ "https://www.manemusesalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://manemusesalon.com/",
+  "ms": 6751
+ },
+ "https://beauty-max-studio.edan.io/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 112
+ },
+ "https://jociesbeautyschool.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 39
+ },
+ "https://renovaaesthetics.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 63
+ },
+ "https://wax-that-monkey.myshopify.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 132
+ },
+ "https://www.bathandbodyworks.com/": {
+  "status": "error",
+  "http_status": 307,
+  "ms": 113
+ },
+ "https://fahrenheitlp.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 93
+ },
+ "https://www.oliveleafbloomington.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://oliveleafbloomington.com/",
+  "ms": 577
+ },
+ "https://palmbeachtan.com/locations/IN/Terre-Haute-South-State-Road": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://palmbeachtan.com/locations/in/terre-haute-south-state-road",
+  "ms": 783
+ },
+ "https://www.ulta.com/stores/valparaiso-in-1632": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 168
+ },
+ "https://www.bestprosintown.com/in/indianapolis/dj-beauty-supply-/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 90
+ },
+ "https://solspatan.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 104
+ },
+ "https://www.starnailsllc.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 99
+ },
+ "https://www.musemedspas.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 80
+ },
+ "https://www.suntancity.com/find-a-salon/indiana/bloomington/state-hwy-46-bypass": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 467
+ },
+ "https://www.fresha.com/a/lumi-lasers-and-aesthetics-crown-point-10751-randolph-street-l0qvpams": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 38
+ },
+ "https://www.broadrippletan.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 340
+ },
+ "https://www.ulta.com/stores/plainfield-in-211": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 168
+ },
+ "https://www.calinailsfortwayne.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://euira.org/",
+  "ms": 2042
+ },
+ "https://ktnailsalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1570
+ },
+ "https://ulta.com/stores/jasper-in-1722": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.ulta.com/stores/jasper-in-1722",
+  "ms": 260
+ },
+ "https://glitterbeautysupply.hair/": {
+  "status": "error",
+  "error": "ERR_SSL_SSL/TLS_ALERT_HANDSHAKE_FAILURE",
+  "ms": 149
+ },
+ "http://www.divanails-newcastle.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 157
+ },
+ "https://relaxatselah.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.relaxatselah.com/",
+  "ms": 243
+ },
+ "https://www.ulta.com/stores/highland-in-384": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 209
+ },
+ "https://mycitynailbar.com/": {
+  "status": "error",
+  "error": "UND_ERR_SOCKET",
+  "ms": 155
+ },
+ "https://www.ulta.com/stores/muncie-in-716": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 259
+ },
+ "https://palmbeachtan.com/locations/IN/Plainfield-Plainfield-Commons-Drive": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://palmbeachtan.com/locations/in/plainfield-plainfield-commons-drive",
+  "ms": 533
+ },
+ "https://www.vanis.net/locations": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 65
+ },
+ "https://www.ulta.com/stores/whitestown-in-1437": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 273
+ },
+ "https://www.salonttan.com/about": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 64
+ },
+ "https://www.therefinery-spa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 115
+ },
+ "https://www.suntancity.com/find-a-salon/indiana/franklin/morton-street": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 374
+ },
+ "https://palmbeachtan.com/locations/in/newburgh-bell-oaks-drive": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 366
+ },
+ "https://www.neatfreakk.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.facnakd.com/",
+  "ms": 427
+ },
+ "https://enduring.glossgenius.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 519
+ },
+ "https://www.luxury-spa-nails.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 473
+ },
+ "https://slickkittywax.glossgenius.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 783
+ },
+ "https://www.pureconceptssalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://pureconceptssalon.com/",
+  "ms": 2952
+ },
+ "http://hermanasspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.hermanasspa.com/",
+  "ms": 859
+ },
+ "https://glowaestheticmd.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 173
+ },
+ "https://zola.glossgenius.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1068
+ },
+ "https://www.mysunsationaltans.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 52
+ },
+ "https://www.luxestheticslab.com/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 134
+ },
+ "http://sarahlstudio.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.sarahlstudio.com/",
+  "ms": 866
+ },
+ "https://www.laseraway.com/locations/in/schererville-shops-on-main/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 73
+ },
+ "https://locality.com/place/silky-nails-frankfort-in": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 127
+ },
+ "http://www.skinremedystudio.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://skinremedystudio.com/",
+  "ms": 149
+ },
+ "https://locations.waxcenter.com/in/merrillville/merrillville-merrillville-plaza-1012.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 465
+ },
+ "https://www.beautynbeyondbymadison.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 441
+ },
+ "https://www.ulta.com/stores/bloomington-in-1081": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 156
+ },
+ "https://www.ulta.com/stores/michigan-city-in-1016": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 169
+ },
+ "https://www.ulta.com/stores/fort-wayne-in-1008": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 163
+ },
+ "https://ote.beauty/home": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 280
+ },
+ "https://www.nikkissalonth.com/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 108
+ },
+ "https://www.exoticnailsshelby.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 624
+ },
+ "https://b-beauty-101433.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 775
+ },
+ "https://www.modabeautybar.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 112
+ },
+ "https://www.atotaltanbedford.com/": {
+  "status": "error",
+  "http_status": 500,
+  "ms": 66
+ },
+ "https://www.merlenorman.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.merlenorman.com/homepage",
+  "ms": 244
+ },
+ "https://www.ulta.com/stores/evansville-in-514": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 278
+ },
+ "https://www.salon-rogue.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 212
+ },
+ "https://modernnailslebanon.net/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 634
+ },
+ "https://footwellness.weebly.com/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 202
+ },
+ "https://www.massageenvy.com/clinics/IN/Fishers.aspx": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 382
+ },
+ "https://www.solasalonstudios.com/locations/fort-wayne": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 497
+ },
+ "https://poshlaporte.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.poshlaporte.com/",
+  "ms": 696
+ },
+ "https://charmed-salon.business.site/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 803
+ },
+ "https://www.touchstonewellness.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 166
+ },
+ "http://www.thetattoolady.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 291
+ },
+ "https://locations.massageenvy.com/indiana/avon/10960-e-us-hwy-36.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 72
+ },
+ "https://genuinetattooco.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 88
+ },
+ "https://locations.massageenvy.com/indiana/terre-haute/4432-s--us-hwy-41.html": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://locations.massageenvy.com/index.html",
+  "ms": 426
+ },
+ "https://www.inktime.org/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 257
+ },
+ "https://locations.massageenvy.com/indiana/west-lafayette/500-sagamore-parkway-w.html": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://locations.massageenvy.com/index.html",
+  "ms": 325
+ },
+ "https://www.massageheights.com/carmel/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 149
+ },
+ "https://www.medusainkstudio.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 182
+ },
+ "https://serendipityprovince.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 150
+ },
+ "https://www.addisonedge.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 165
+ },
+ "https://big-lews-tattoos.square.site/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 287
+ },
+ "https://www.takeactionwarsaw.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1133
+ },
+ "https://lafatattoo.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 176
+ },
+ "https://alteredimagetattoos.com/": {
+  "status": "error",
+  "error": "ECONNRESET",
+  "ms": 49
+ },
+ "https://www.jjsspabrownsburg.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 113
+ },
+ "https://square.site/book/LY1ECHBGTZASB/fit-massage-and-ce-provider-newburgh-in": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 582
+ },
+ "http://www.cutrageous.com/": {
+  "status": "error",
+  "error": "UND_ERR_CONNECT_TIMEOUT",
+  "ms": 10217
+ },
+ "https://www.massagebook.com/therapists/IndyHolisticMassage": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 486
+ },
+ "https://oasisspaindy.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 62
+ },
+ "https://statictattooreviews.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "http://www.importantlocalbusinesses.com/",
+  "ms": 151
+ },
+ "https://nailtiquebyjennynails.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 2378
+ },
+ "https://www.evolutiontattoollc.net/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 942
+ },
+ "https://www.newalbanymassage.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 208
+ },
+ "https://www.sukhinofloatandwellness.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 96
+ },
+ "http://northcoastorganics.us/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.northcoastorganics.us/",
+  "ms": 2372
+ },
+ "https://elitetherapeuticmassageandtanning.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 127
+ },
+ "http://www.atomictattoostudio.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.atomictattoostudio.com/",
+  "ms": 648
+ },
+ "https://brownsburgink.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 845
+ },
+ "https://www.massageexperiencefw.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://massageexperiencefw.com/",
+  "ms": 386
+ },
+ "http://www.amberbananafish.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 513
+ },
+ "https://chinadolltattooandpiercing.net/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.chinadolltattooandpiercing.net/",
+  "ms": 745
+ },
+ "https://www.delainemd.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 2668
+ },
+ "https://tinarenae.glossgenius.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1487
+ },
+ "http://massageworksfw.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.massageworksfw.com/",
+  "ms": 2696
+ },
+ "http://www.palemoontattoo.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://palemoontattoo.com/",
+  "ms": 2611
+ }
+}

@@ -1,0 +1,54 @@
+[
+ {
+  "name": "Fast Eddie's",
+  "city": "Laporte",
+  "state": "IN",
+  "street_address": "1700 Lincolnway Pl",
+  "zip_code": "46350",
+  "county": "",
+  "categories": [
+   "stylist"
+  ],
+  "website_url": "https://fasteddieslaporte.com/",
+  "phone": "(219) 324-0330",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/way/494342653",
+  "source_external_id": "osm:way/494342653",
+  "license_number": null,
+  "latitude": 41.6879317,
+  "longitude": -86.8583198,
+  "operational_status": "verified",
+  "checked_at": "2026-11-24",
+  "raw_name": "Fast Eddie's",
+  "website_candidate": "https://fasteddieslaporte.com/",
+  "website_source_url": "",
+  "reason": "duplicate_candidate",
+  "duplicate_of": "osm:node/10121888682"
+ },
+ {
+  "name": "Bananafish Tattoo Parlour",
+  "city": "New Albany",
+  "state": "IN",
+  "street_address": "1945 East Elm Street",
+  "zip_code": "47150",
+  "county": "",
+  "categories": [
+   "tattoo_artist"
+  ],
+  "website_url": "http://www.amberbananafish.com/",
+  "phone": "",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/way/1579489725",
+  "source_external_id": "osm:way/1579489725",
+  "license_number": null,
+  "latitude": 38.2968257,
+  "longitude": -85.8026685,
+  "operational_status": "verified",
+  "checked_at": "2026-11-24",
+  "raw_name": "Bananafish Tattoo Parlour",
+  "website_candidate": "http://www.amberbananafish.com/",
+  "website_source_url": "",
+  "reason": "duplicate_candidate",
+  "duplicate_of": "osm:way/1090886335"
+ }
+]

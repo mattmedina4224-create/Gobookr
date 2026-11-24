@@ -1,0 +1,583 @@
+{
+ "state": "IN",
+ "census_places": 695,
+ "places_covered": 58,
+ "place_coverage_pct": 8.3,
+ "census_counties": 92,
+ "counties_covered": 34,
+ "counties_uncovered": [
+  "Bartholomew County",
+  "Benton County",
+  "Blackford County",
+  "Brown County",
+  "Carroll County",
+  "Clay County",
+  "Daviess County",
+  "DeKalb County",
+  "Dearborn County",
+  "Decatur County",
+  "Delaware County",
+  "Fayette County",
+  "Fountain County",
+  "Franklin County",
+  "Fulton County",
+  "Grant County",
+  "Greene County",
+  "Harrison County",
+  "Huntington County",
+  "Jackson County",
+  "Jasper County",
+  "Jay County",
+  "Jennings County",
+  "LaGrange County",
+  "Madison County",
+  "Marshall County",
+  "Martin County",
+  "Miami County",
+  "Montgomery County",
+  "Morgan County",
+  "Newton County",
+  "Noble County",
+  "Ohio County",
+  "Owen County",
+  "Parke County",
+  "Perry County",
+  "Pike County",
+  "Posey County",
+  "Pulaski County",
+  "Putnam County",
+  "Randolph County",
+  "Ripley County",
+  "Rush County",
+  "Spencer County",
+  "St. Joseph County",
+  "Starke County",
+  "Steuben County",
+  "Sullivan County",
+  "Switzerland County",
+  "Tipton County",
+  "Union County",
+  "Vermillion County",
+  "Wabash County",
+  "Warren County",
+  "Washington County",
+  "Wells County",
+  "White County",
+  "Whitley County"
+ ],
+ "communities_outside_census_places": [
+  {
+   "city": "Indianapolis City (Balance)",
+   "shops": 2
+  },
+  {
+   "city": "Floyds Knobs",
+   "shops": 1
+  },
+  {
+   "city": "Camby",
+   "shops": 1
+  }
+ ],
+ "top_covered_places": [
+  {
+   "name": "Indianapolis",
+   "shops": 13
+  },
+  {
+   "name": "Carmel",
+   "shops": 11
+  },
+  {
+   "name": "Bloomington",
+   "shops": 10
+  },
+  {
+   "name": "Fort Wayne",
+   "shops": 10
+  },
+  {
+   "name": "Evansville",
+   "shops": 9
+  },
+  {
+   "name": "Noblesville",
+   "shops": 8
+  },
+  {
+   "name": "La Porte",
+   "shops": 7
+  },
+  {
+   "name": "Valparaiso",
+   "shops": 6
+  },
+  {
+   "name": "Winfield",
+   "shops": 5
+  },
+  {
+   "name": "New Albany",
+   "shops": 5
+  },
+  {
+   "name": "Fishers",
+   "shops": 4
+  },
+  {
+   "name": "Terre Haute",
+   "shops": 4
+  },
+  {
+   "name": "Lafayette",
+   "shops": 4
+  },
+  {
+   "name": "Goshen",
+   "shops": 3
+  },
+  {
+   "name": "Jasper",
+   "shops": 3
+  },
+  {
+   "name": "Brownsburg",
+   "shops": 3
+  },
+  {
+   "name": "Highland",
+   "shops": 3
+  },
+  {
+   "name": "Lowell",
+   "shops": 3
+  },
+  {
+   "name": "Crown Point",
+   "shops": 3
+  },
+  {
+   "name": "Greenwood",
+   "shops": 2
+  },
+  {
+   "name": "Bedford",
+   "shops": 2
+  },
+  {
+   "name": "Schererville",
+   "shops": 2
+  },
+  {
+   "name": "Jeffersonville",
+   "shops": 2
+  },
+  {
+   "name": "Frankfort",
+   "shops": 2
+  },
+  {
+   "name": "Lebanon",
+   "shops": 2
+  },
+  {
+   "name": "Huntingburg",
+   "shops": 2
+  },
+  {
+   "name": "Avon",
+   "shops": 2
+  },
+  {
+   "name": "Vincennes",
+   "shops": 2
+  },
+  {
+   "name": "West Lafayette",
+   "shops": 2
+  },
+  {
+   "name": "Plainfield",
+   "shops": 2
+  },
+  {
+   "name": "New Castle",
+   "shops": 2
+  },
+  {
+   "name": "Newburgh",
+   "shops": 2
+  },
+  {
+   "name": "Hammond",
+   "shops": 2
+  },
+  {
+   "name": "Scottsburg",
+   "shops": 1
+  },
+  {
+   "name": "McCordsville",
+   "shops": 1
+  },
+  {
+   "name": "Richmond",
+   "shops": 1
+  },
+  {
+   "name": "Logansport",
+   "shops": 1
+  },
+  {
+   "name": "Munster",
+   "shops": 1
+  },
+  {
+   "name": "Kokomo",
+   "shops": 1
+  },
+  {
+   "name": "Chesterton",
+   "shops": 1
+  }
+ ],
+ "uncovered_places_with_held_candidates": [
+  {
+   "name": "South Bend",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 35
+  },
+  {
+   "name": "Muncie",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 26
+  },
+  {
+   "name": "Columbus",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 18
+  },
+  {
+   "name": "Mishawaka",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 14
+  },
+  {
+   "name": "Syracuse",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 10
+  },
+  {
+   "name": "Zionsville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 9
+  },
+  {
+   "name": "Auburn",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 7
+  },
+  {
+   "name": "Whiting",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 7
+  },
+  {
+   "name": "Elkhart",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 6
+  },
+  {
+   "name": "Whitestown",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 6
+  },
+  {
+   "name": "Granger",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Griffith",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Seymour",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Wabash",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Greensburg",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Hebron",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "North Manchester",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Speedway",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Tell City",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Brookville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Columbia City",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Portage",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Beech Grove",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Brazil",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Churubusco",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Crawfordsville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Greencastle",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Morgantown",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Ossian",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Rossville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Veedersburg",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Anderson",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Aurora",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Bloomfield",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Brook",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Clarksville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Clermont",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Corydon",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Dayton",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Dyer",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Fremont",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Goodland",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Kentland",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Lawrence",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Linton",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Martinsville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Metamora",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Michigantown",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Millhousen",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Morocco",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Nappanee",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "North Vernon",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Oolitic",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Palmyra",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Peru",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Plymouth",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Portland",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Rensselaer",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Roanoke",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Rushville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Salem",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Sellersburg",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Spencer",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Warren Park",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "West Terre Haute",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Westville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Winona Lake",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  }
+ ],
+ "uncovered_places_without_candidates": 570,
+ "source": "U.S. Census Bureau 2020 place-by-county and county code files"
+}
