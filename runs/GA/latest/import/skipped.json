@@ -1,0 +1,80 @@
+[
+ {
+  "name": "American Haircuts",
+  "city": "Atlanta",
+  "state": "GA",
+  "street_address": "1579 Monroe Drive Northeast",
+  "zip_code": "",
+  "county": "Fulton",
+  "categories": [
+   "stylist"
+  ],
+  "website_url": "https://americanhaircuts.com/ansley",
+  "phone": "(404) 876-7745",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/node/13475331378",
+  "source_external_id": "osm:node/13475331378",
+  "license_number": null,
+  "latitude": 33.7979892,
+  "longitude": -84.3692601,
+  "operational_status": "verified",
+  "checked_at": "2026-11-24",
+  "raw_name": "American Haircuts",
+  "website_candidate": "https://americanhaircuts.com/ansley",
+  "website_source_url": "",
+  "reason": "duplicate_candidate",
+  "duplicate_of": "osm:node/6219792285"
+ },
+ {
+  "name": "Salon Lofts",
+  "city": "Atlanta",
+  "state": "GA",
+  "street_address": "1512 Piedmont Avenue Northeast",
+  "zip_code": "",
+  "county": "Fulton",
+  "categories": [
+   "stylist"
+  ],
+  "website_url": "https://salonlofts.com/salons/ansley_square",
+  "phone": "",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/node/13474976708",
+  "source_external_id": "osm:node/13474976708",
+  "license_number": null,
+  "latitude": 33.7960944,
+  "longitude": -84.3705272,
+  "operational_status": "verified",
+  "checked_at": "2026-11-24",
+  "raw_name": "Salon Lofts",
+  "website_candidate": "https://salonlofts.com/salons/ansley_square",
+  "website_source_url": "",
+  "reason": "duplicate_candidate",
+  "duplicate_of": "osm:node/13136829388"
+ },
+ {
+  "name": "Magical Waxing",
+  "city": "Tucker",
+  "state": "GA",
+  "street_address": "4650 Hugh Howell Road",
+  "zip_code": "30084",
+  "county": "",
+  "categories": [
+   "waxing_specialist"
+  ],
+  "website_url": "https://magicalwaxing.com/locations/hugh-howell",
+  "phone": "(404) 462-7777",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/node/14307719861",
+  "source_external_id": "osm:node/14307719861",
+  "license_number": null,
+  "latitude": 33.8506072,
+  "longitude": -84.1988138,
+  "operational_status": "verified",
+  "checked_at": "2026-11-24",
+  "raw_name": "Magical Waxing",
+  "website_candidate": "https://magicalwaxing.com/locations/hugh-howell",
+  "website_source_url": "",
+  "reason": "duplicate_candidate",
+  "duplicate_of": "osm:node/9001603560"
+ }
+]

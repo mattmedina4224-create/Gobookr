@@ -1,0 +1,856 @@
+{
+ "state": "GA",
+ "census_places": 672,
+ "places_covered": 71,
+ "place_coverage_pct": 10.6,
+ "census_counties": 159,
+ "counties_covered": 36,
+ "counties_uncovered": [
+  "Appling County",
+  "Atkinson County",
+  "Bacon County",
+  "Baker County",
+  "Baldwin County",
+  "Banks County",
+  "Ben Hill County",
+  "Berrien County",
+  "Bibb County",
+  "Bleckley County",
+  "Brantley County",
+  "Brooks County",
+  "Burke County",
+  "Butts County",
+  "Calhoun County",
+  "Candler County",
+  "Carroll County",
+  "Catoosa County",
+  "Charlton County",
+  "Chattahoochee County",
+  "Chattooga County",
+  "Clarke County",
+  "Clay County",
+  "Clinch County",
+  "Coffee County",
+  "Cook County",
+  "Coweta County",
+  "Crawford County",
+  "Crisp County",
+  "Dade County",
+  "Dawson County",
+  "Decatur County",
+  "Dodge County",
+  "Dooly County",
+  "Early County",
+  "Echols County",
+  "Effingham County",
+  "Elbert County",
+  "Emanuel County",
+  "Evans County",
+  "Fannin County",
+  "Franklin County",
+  "Glascock County",
+  "Gordon County",
+  "Grady County",
+  "Greene County",
+  "Habersham County",
+  "Hancock County",
+  "Haralson County",
+  "Harris County",
+  "Hart County",
+  "Heard County",
+  "Houston County",
+  "Irwin County",
+  "Jasper County",
+  "Jeff Davis County",
+  "Jefferson County",
+  "Jenkins County",
+  "Johnson County",
+  "Jones County",
+  "Lamar County",
+  "Lanier County",
+  "Laurens County",
+  "Lee County",
+  "Lincoln County",
+  "Long County",
+  "Lumpkin County",
+  "Macon County",
+  "Madison County",
+  "Marion County",
+  "McDuffie County",
+  "McIntosh County",
+  "Meriwether County",
+  "Miller County",
+  "Mitchell County",
+  "Monroe County",
+  "Montgomery County",
+  "Morgan County",
+  "Murray County",
+  "Oconee County",
+  "Oglethorpe County",
+  "Paulding County",
+  "Peach County",
+  "Pike County",
+  "Polk County",
+  "Pulaski County",
+  "Putnam County",
+  "Quitman County",
+  "Rabun County",
+  "Randolph County",
+  "Rockdale County",
+  "Schley County",
+  "Screven County",
+  "Seminole County",
+  "Spalding County",
+  "Stephens County",
+  "Stewart County",
+  "Sumter County",
+  "Talbot County",
+  "Taliaferro County",
+  "Tattnall County",
+  "Taylor County",
+  "Telfair County",
+  "Terrell County",
+  "Tift County",
+  "Toombs County",
+  "Towns County",
+  "Treutlen County",
+  "Troup County",
+  "Turner County",
+  "Twiggs County",
+  "Union County",
+  "Upson County",
+  "Walker County",
+  "Warren County",
+  "Washington County",
+  "Wayne County",
+  "Webster County",
+  "Wheeler County",
+  "White County",
+  "Wilcox County",
+  "Wilkes County",
+  "Wilkinson County"
+ ],
+ "communities_outside_census_places": [
+  {
+   "city": "Athens",
+   "shops": 8
+  },
+  {
+   "city": "Augusta",
+   "shops": 3
+  },
+  {
+   "city": "Macon",
+   "shops": 1
+  },
+  {
+   "city": "Athens-Clarke County Unified Government (Balance)",
+   "shops": 1
+  },
+  {
+   "city": "Cummin",
+   "shops": 1
+  }
+ ],
+ "top_covered_places": [
+  {
+   "name": "Atlanta",
+   "shops": 79
+  },
+  {
+   "name": "Marietta",
+   "shops": 65
+  },
+  {
+   "name": "Kennesaw",
+   "shops": 23
+  },
+  {
+   "name": "Woodstock",
+   "shops": 13
+  },
+  {
+   "name": "Savannah",
+   "shops": 13
+  },
+  {
+   "name": "Alpharetta",
+   "shops": 9
+  },
+  {
+   "name": "Smyrna",
+   "shops": 7
+  },
+  {
+   "name": "Buford",
+   "shops": 7
+  },
+  {
+   "name": "Cumming",
+   "shops": 7
+  },
+  {
+   "name": "Valdosta",
+   "shops": 7
+  },
+  {
+   "name": "Evans",
+   "shops": 6
+  },
+  {
+   "name": "Pooler",
+   "shops": 6
+  },
+  {
+   "name": "Vinings",
+   "shops": 5
+  },
+  {
+   "name": "Roswell",
+   "shops": 5
+  },
+  {
+   "name": "Columbus",
+   "shops": 5
+  },
+  {
+   "name": "Snellville",
+   "shops": 5
+  },
+  {
+   "name": "Dunwoody",
+   "shops": 4
+  },
+  {
+   "name": "Braselton",
+   "shops": 4
+  },
+  {
+   "name": "Canton",
+   "shops": 4
+  },
+  {
+   "name": "Covington",
+   "shops": 4
+  },
+  {
+   "name": "Cartersville",
+   "shops": 3
+  },
+  {
+   "name": "Peachtree Corners",
+   "shops": 3
+  },
+  {
+   "name": "Grovetown",
+   "shops": 3
+  },
+  {
+   "name": "Sandy Springs",
+   "shops": 3
+  },
+  {
+   "name": "Peachtree City",
+   "shops": 3
+  },
+  {
+   "name": "Duluth",
+   "shops": 3
+  },
+  {
+   "name": "Loganville",
+   "shops": 3
+  },
+  {
+   "name": "Decatur",
+   "shops": 3
+  },
+  {
+   "name": "Jasper",
+   "shops": 2
+  },
+  {
+   "name": "McDonough",
+   "shops": 2
+  },
+  {
+   "name": "Lawrenceville",
+   "shops": 2
+  },
+  {
+   "name": "Gainesville",
+   "shops": 2
+  },
+  {
+   "name": "Remerton",
+   "shops": 2
+  },
+  {
+   "name": "Acworth",
+   "shops": 2
+  },
+  {
+   "name": "Tucker",
+   "shops": 2
+  },
+  {
+   "name": "Lithonia",
+   "shops": 2
+  },
+  {
+   "name": "Avondale Estates",
+   "shops": 2
+  },
+  {
+   "name": "North Druid Hills",
+   "shops": 1
+  },
+  {
+   "name": "Morrow",
+   "shops": 1
+  },
+  {
+   "name": "Waycross",
+   "shops": 1
+  }
+ ],
+ "uncovered_places_with_held_candidates": [
+  {
+   "name": "Fort Oglethorpe",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 18
+  },
+  {
+   "name": "Calhoun",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 16
+  },
+  {
+   "name": "Milledgeville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 16
+  },
+  {
+   "name": "Carrollton",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 15
+  },
+  {
+   "name": "Forest Park",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 10
+  },
+  {
+   "name": "Lovejoy",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 10
+  },
+  {
+   "name": "Royston",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 10
+  },
+  {
+   "name": "Austell",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 8
+  },
+  {
+   "name": "Mountain Park",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 8
+  },
+  {
+   "name": "South Fulton",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 8
+  },
+  {
+   "name": "Macon-Bibb County",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 7
+  },
+  {
+   "name": "Winder",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 7
+  },
+  {
+   "name": "Griffin",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 6
+  },
+  {
+   "name": "Folkston",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Gray",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Jonesboro",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Ringgold",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Statham",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Sugar Hill",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Bainbridge",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Bonanza",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Cordele",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Eatonton",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Fort Valley",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Hoschton",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Villa Rica",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Barnesville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Conyers",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Danielsville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Dawsonville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Donalsonville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Hiawassee",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Hiram",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Jackson",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Jefferson",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "LaFayette",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Lake Park",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Lavonia",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Lithia Springs",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Milton",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Monticello",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Pine Mountain",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Tifton",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Union City",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Cedartown",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Centerville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Chamblee",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "College Park",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Dacula",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Dahlonega",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Dallas",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Druid Hills",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "East Ellijay",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Fayetteville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Harlem",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "LaGrange",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Lake City",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Newnan",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Sandersville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Thomson",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Twin City",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Watkinsville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Arcade",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Ball Ground",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Blairsville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Blue Ridge",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Bogart",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Bremen",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Cairo",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Chatsworth",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Clarkston",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Cobbtown",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Cochran",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Colbert",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Cornelia",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Dock Junction",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Dublin",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Eton",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Forsyth",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Garden City",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Georgetown",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Greensboro",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Hahira",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Hapeville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Ila",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Jekyll Island",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Kingsland",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Ludowici",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Madison",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "McCaysville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Montgomery",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Norman Park",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Sautee-Nacoochee",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Social Circle",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Soperton",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Stonecrest",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Talbotton",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Temple",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Thomaston",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Thunderbolt",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Unadilla",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Vidalia",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Walnut Grove",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Washington",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Whitemarsh Island",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Wilmington Island",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Wrens",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  }
+ ],
+ "uncovered_places_without_candidates": 494,
+ "source": "U.S. Census Bureau 2020 place-by-county and county code files"
+}

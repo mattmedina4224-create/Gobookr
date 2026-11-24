@@ -1,0 +1,57 @@
+{
+ "state": "GA",
+ "state_name": "Georgia",
+ "wave": 2,
+ "created_at": "2026-11-24T21:47:13.249Z",
+ "staging_only": true,
+ "sources": [
+  {
+   "name": "OpenStreetMap (Overpass)",
+   "url": "https://overpass.private.coffee/api/interpreter",
+   "status": "processed",
+   "records": 2475,
+   "parts_ok": 4,
+   "parts_total": 4
+  },
+  {
+   "name": "U.S. Census Geocoder (place containing map point)",
+   "url": "https://geocoding.geo.census.gov/",
+   "status": "processed",
+   "records": 1068
+  }
+ ],
+ "license_records_scanned": 0,
+ "licensed_active_candidates": 0,
+ "license_dropped": null,
+ "license_fields": null,
+ "license_shop_types": [],
+ "license_type_counts": [],
+ "license_type_lookup": [],
+ "census_city_lookup": {
+  "attempted": 1452,
+  "filled": 1068,
+  "failed": 0
+ },
+ "mapped_beauty_places": 2475,
+ "overpass_endpoint": "https://overpass.private.coffee/api/interpreter",
+ "total_candidates": 2235,
+ "with_websites": 582,
+ "category_counts": {
+  "hair": 940,
+  "barber": 223,
+  "brows": 14,
+  "waxing": 73,
+  "salon_suites": 22,
+  "nails": 549,
+  "skincare": 69,
+  "spray_tanning": 41,
+  "makeup": 54,
+  "massage": 138,
+  "lashes": 22,
+  "tattoo": 89,
+  "permanent_makeup": 1
+ },
+ "errors": [],
+ "note": "A license record or map listing alone does not prove a business is open. The importer publishes only rows that meet its rules; the rest are held.",
+ "attribution": "OpenStreetMap data © OpenStreetMap contributors (ODbL, https://www.openstreetmap.org/copyright). Licensing data from the listed state open-data portals."
+}
