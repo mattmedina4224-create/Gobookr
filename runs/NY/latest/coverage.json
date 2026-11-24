@@ -1,15 +1,15 @@
 {
  "state": "NY",
  "census_places": 1285,
- "places_covered": 736,
- "place_coverage_pct": 57.3,
+ "places_covered": 735,
+ "place_coverage_pct": 57.2,
  "census_counties": 62,
  "counties_covered": 62,
  "counties_uncovered": [],
  "communities_outside_census_places": [
   {
    "city": "Brooklyn",
-   "shops": 1924
+   "shops": 1917
   },
   {
    "city": "Bronx",
@@ -21,15 +21,15 @@
   },
   {
    "city": "Flushing",
-   "shops": 395
+   "shops": 396
   },
   {
    "city": "Astoria",
-   "shops": 181
+   "shops": 182
   },
   {
    "city": "Jamaica",
-   "shops": 144
+   "shops": 143
   },
   {
    "city": "Jackson Heights",
@@ -37,46 +37,46 @@
   },
   {
    "city": "Corona",
-   "shops": 120
+   "shops": 121
   },
   {
    "city": "Amherst",
-   "shops": 86
+   "shops": 84
   },
   {
    "city": "Ridgewood",
-   "shops": 81
+   "shops": 80
   },
   {
    "city": "Woodside",
-   "shops": 76
+   "shops": 74
   },
   {
    "city": "Forest Hills",
    "shops": 69
   },
   {
-   "city": "Bayside",
-   "shops": 68
-  },
-  {
-   "city": "Long Island City",
-   "shops": 68
-  },
-  {
    "city": "Elmhurst",
    "shops": 67
   },
   {
-   "city": "Clifton Park",
-   "shops": 56
+   "city": "Long Island City",
+   "shops": 67
   },
   {
-   "city": "South Richmond Hill",
-   "shops": 51
+   "city": "Bayside",
+   "shops": 66
+  },
+  {
+   "city": "Clifton Park",
+   "shops": 54
   },
   {
    "city": "Whitestone",
+   "shops": 49
+  },
+  {
+   "city": "South Richmond Hill",
    "shops": 49
   },
   {
@@ -108,11 +108,11 @@
    "shops": 32
   },
   {
-   "city": "Cicero",
-   "shops": 30
+   "city": "Queensbury",
+   "shops": 29
   },
   {
-   "city": "Queensbury",
+   "city": "Cicero",
    "shops": 29
   },
   {
@@ -140,15 +140,15 @@
    "shops": 25
   },
   {
+   "city": "Fresh Meadows",
+   "shops": 24
+  },
+  {
    "city": "Saint Albans",
    "shops": 24
   },
   {
    "city": "College Point",
-   "shops": 23
-  },
-  {
-   "city": "Fresh Meadows",
    "shops": 23
   },
   {
@@ -172,6 +172,10 @@
    "shops": 17
   },
   {
+   "city": "Delmar",
+   "shops": 16
+  },
+  {
    "city": "Rockaway Park",
    "shops": 16
   },
@@ -180,19 +184,15 @@
    "shops": 15
   },
   {
-   "city": "Delmar",
-   "shops": 15
-  },
-  {
-   "city": "Laurelton",
-   "shops": 14
-  },
-  {
    "city": "Rosedale",
    "shops": 14
   },
   {
    "city": "Kew Gardens",
+   "shops": 13
+  },
+  {
+   "city": "Laurelton",
    "shops": 13
   },
   {
@@ -228,6 +228,10 @@
    "shops": 10
   },
   {
+   "city": "Glenmont",
+   "shops": 9
+  },
+  {
    "city": "Getzville",
    "shops": 9
   },
@@ -240,10 +244,6 @@
    "shops": 9
   },
   {
-   "city": "Glenmont",
-   "shops": 8
-  },
-  {
    "city": "Queens",
    "shops": 8
   },
@@ -252,11 +252,11 @@
    "shops": 8
   },
   {
-   "city": "Derby",
+   "city": "Cornwall",
    "shops": 7
   },
   {
-   "city": "Cornwall",
+   "city": "Derby",
    "shops": 7
   },
   {
@@ -316,11 +316,11 @@
    "shops": 5
   },
   {
-   "city": "North Chili",
+   "city": "S Ozone Park",
    "shops": 4
   },
   {
-   "city": "S Ozone Park",
+   "city": "North Chili",
    "shops": 4
   },
   {
@@ -332,15 +332,15 @@
    "shops": 4
   },
   {
+   "city": "Yorktown Hts",
+   "shops": 4
+  },
+  {
    "city": "Varysburg",
    "shops": 4
   },
   {
    "city": "Mendon",
-   "shops": 4
-  },
-  {
-   "city": "Yorktown Hts",
    "shops": 4
   },
   {
@@ -376,19 +376,11 @@
    "shops": 3
   },
   {
-   "city": "Central Valley",
-   "shops": 3
-  },
-  {
-   "city": "Kirkwood",
-   "shops": 3
-  },
-  {
-   "city": "Saratoga Spgs",
-   "shops": 3
-  },
-  {
    "city": "Circleville",
+   "shops": 3
+  },
+  {
+   "city": "Central Valley",
    "shops": 3
   },
   {
@@ -396,7 +388,11 @@
    "shops": 3
   },
   {
-   "city": "Cropseyville",
+   "city": "Saratoga Spgs",
+   "shops": 3
+  },
+  {
+   "city": "Kirkwood",
    "shops": 3
   },
   {
@@ -404,7 +400,7 @@
    "shops": 3
   },
   {
-   "city": "Belle Harbor",
+   "city": "Cropseyville",
    "shops": 3
   },
   {
@@ -416,7 +412,7 @@
    "shops": 3
   },
   {
-   "city": "Lake Pleasant",
+   "city": "Belle Harbor",
    "shops": 3
   },
   {
@@ -424,15 +420,7 @@
    "shops": 3
   },
   {
-   "city": "Ny",
-   "shops": 3
-  },
-  {
-   "city": "Highland Mills",
-   "shops": 3
-  },
-  {
-   "city": "Manhattan",
+   "city": "Lake Pleasant",
    "shops": 3
   },
   {
@@ -444,12 +432,28 @@
    "shops": 3
   },
   {
+   "city": "Highland Mills",
+   "shops": 3
+  },
+  {
+   "city": "Ny",
+   "shops": 3
+  },
+  {
+   "city": "Manhattan",
+   "shops": 3
+  },
+  {
    "city": "Gansevoort",
    "shops": 3
   },
   {
    "city": "Baldwin Place",
    "shops": 3
+  },
+  {
+   "city": "Huntington Sta",
+   "shops": 2
   },
   {
    "city": "Jamesville",
@@ -460,19 +464,11 @@
    "shops": 2
   },
   {
-   "city": "Huntington Sta",
-   "shops": 2
-  },
-  {
    "city": "Bullville",
    "shops": 2
   },
   {
    "city": "Henrietta",
-   "shops": 2
-  },
-  {
-   "city": "Queens Vlg",
    "shops": 2
   },
   {
@@ -485,6 +481,10 @@
   },
   {
    "city": "Prt Washingtn",
+   "shops": 2
+  },
+  {
+   "city": "Queens Vlg",
    "shops": 2
   },
   {
@@ -508,15 +508,19 @@
    "shops": 2
   },
   {
-   "city": "Minerva",
-   "shops": 2
-  },
-  {
    "city": "Byron",
    "shops": 2
   },
   {
+   "city": "Minerva",
+   "shops": 2
+  },
+  {
    "city": "Rockville Center",
+   "shops": 2
+  },
+  {
+   "city": "Boston",
    "shops": 2
   },
   {
@@ -532,7 +536,7 @@
    "shops": 2
   },
   {
-   "city": "Campbell Hall",
+   "city": "Rockville Ctr",
    "shops": 2
   },
   {
@@ -540,15 +544,11 @@
    "shops": 2
   },
   {
-   "city": "Boston",
-   "shops": 2
-  },
-  {
-   "city": "Rockville Ctr",
-   "shops": 2
-  },
-  {
    "city": "Kirkville",
+   "shops": 2
+  },
+  {
+   "city": "North Java",
    "shops": 2
   },
   {
@@ -560,19 +560,15 @@
    "shops": 2
   },
   {
-   "city": "North Java",
-   "shops": 2
-  },
-  {
    "city": "Schuyler Falls",
    "shops": 2
   },
   {
-   "city": "Springfield Gardens",
+   "city": "S Richmond Hl",
    "shops": 2
   },
   {
-   "city": "S Richmond Hl",
+   "city": "Springfield Gardens",
    "shops": 2
   },
   {
@@ -584,19 +580,7 @@
    "shops": 2
   },
   {
-   "city": "Fort Hunter",
-   "shops": 1
-  },
-  {
    "city": "Tuckahoe Plaza",
-   "shops": 1
-  },
-  {
-   "city": "Peterburgh",
-   "shops": 1
-  },
-  {
-   "city": "South Wales",
    "shops": 1
   },
   {
@@ -604,15 +588,19 @@
    "shops": 1
   },
   {
+   "city": "Fort Hunter",
+   "shops": 1
+  },
+  {
    "city": "Maine",
    "shops": 1
   },
   {
-   "city": "New Lebanon",
+   "city": "South Wales",
    "shops": 1
   },
   {
-   "city": "Arverne",
+   "city": "Peterburgh",
    "shops": 1
   },
   {
@@ -628,11 +616,7 @@
    "shops": 1
   },
   {
-   "city": "Claryville",
-   "shops": 1
-  },
-  {
-   "city": "Grand Gorge",
+   "city": "New Lebanon",
    "shops": 1
   },
   {
@@ -640,11 +624,23 @@
    "shops": 1
   },
   {
-   "city": "Mount Marion",
+   "city": "Arverne",
+   "shops": 1
+  },
+  {
+   "city": "Grand Gorge",
    "shops": 1
   },
   {
    "city": "Willet",
+   "shops": 1
+  },
+  {
+   "city": "Claryville",
+   "shops": 1
+  },
+  {
+   "city": "Mount Marion",
    "shops": 1
   },
   {
@@ -660,27 +656,7 @@
    "shops": 1
   },
   {
-   "city": "Ellenburg",
-   "shops": 1
-  },
-  {
-   "city": "Brainardsville",
-   "shops": 1
-  },
-  {
-   "city": "Breezy Point",
-   "shops": 1
-  },
-  {
-   "city": "S Richmond Hill",
-   "shops": 1
-  },
-  {
-   "city": "Wallkill, New York",
-   "shops": 1
-  },
-  {
-   "city": "Suffolk",
+   "city": "Harrisville",
    "shops": 1
   },
   {
@@ -688,27 +664,23 @@
    "shops": 1
   },
   {
-   "city": "Harrisville",
+   "city": "Ellenburg",
    "shops": 1
   },
   {
-   "city": "Clarksville",
+   "city": "Wallkill, New York",
    "shops": 1
   },
   {
-   "city": "Sand Lake",
+   "city": "S Richmond Hill",
    "shops": 1
   },
   {
-   "city": "Olivebridge",
+   "city": "Suffolk",
    "shops": 1
   },
   {
-   "city": "Chase Mills",
-   "shops": 1
-  },
-  {
-   "city": "Cincinnatus",
+   "city": "Brainardsville",
    "shops": 1
   },
   {
@@ -728,15 +700,7 @@
    "shops": 1
   },
   {
-   "city": "Moriah",
-   "shops": 1
-  },
-  {
    "city": "South Westerlo",
-   "shops": 1
-  },
-  {
-   "city": "Highland Lake",
    "shops": 1
   },
   {
@@ -744,19 +708,11 @@
    "shops": 1
   },
   {
-   "city": "Rosyln",
-   "shops": 1
-  },
-  {
-   "city": "Shushan",
-   "shops": 1
-  },
-  {
    "city": "Stuyvesant",
    "shops": 1
   },
   {
-   "city": "Brooklyn Heights",
+   "city": "Chase Mills",
    "shops": 1
   },
   {
@@ -764,7 +720,23 @@
    "shops": 1
   },
   {
-   "city": "Westtown",
+   "city": "Breezy Point",
+   "shops": 1
+  },
+  {
+   "city": "Moriah",
+   "shops": 1
+  },
+  {
+   "city": "Rosyln",
+   "shops": 1
+  },
+  {
+   "city": "Clarksville",
+   "shops": 1
+  },
+  {
+   "city": "Brooklyn Heights",
    "shops": 1
   },
   {
@@ -772,31 +744,23 @@
    "shops": 1
   },
   {
-   "city": "Forest",
-   "shops": 1
-  },
-  {
    "city": "E Rochester",
    "shops": 1
   },
   {
-   "city": "Port Wasshington",
+   "city": "Westtown",
    "shops": 1
   },
   {
-   "city": "Cortlandt Mnr",
+   "city": "Olivebridge",
    "shops": 1
   },
   {
-   "city": "St.James",
+   "city": "Sand Lake",
    "shops": 1
   },
   {
-   "city": "East Fishkill",
-   "shops": 1
-  },
-  {
-   "city": "Ssaugerties",
+   "city": "Highland Lake",
    "shops": 1
   },
   {
@@ -804,19 +768,31 @@
    "shops": 1
   },
   {
-   "city": "Castle Creek",
+   "city": "Shushan",
    "shops": 1
   },
   {
-   "city": "Shelter Island Hts",
+   "city": "East Fishkill",
    "shops": 1
   },
   {
-   "city": "Taberg",
+   "city": "Cincinnatus",
    "shops": 1
   },
   {
-   "city": "Moira",
+   "city": "Cortlandt Mnr",
+   "shops": 1
+  },
+  {
+   "city": "Ssaugerties",
+   "shops": 1
+  },
+  {
+   "city": "Forest",
+   "shops": 1
+  },
+  {
+   "city": "Port Wasshington",
    "shops": 1
   },
   {
@@ -824,23 +800,27 @@
    "shops": 1
   },
   {
+   "city": "St.James",
+   "shops": 1
+  },
+  {
+   "city": "Hector",
+   "shops": 1
+  },
+  {
+   "city": "Taberg",
+   "shops": 1
+  },
+  {
+   "city": "Shelter Island Hts",
+   "shops": 1
+  },
+  {
+   "city": "Castle Creek",
+   "shops": 1
+  },
+  {
    "city": "Appleton",
-   "shops": 1
-  },
-  {
-   "city": "Ellenburg Center",
-   "shops": 1
-  },
-  {
-   "city": "Hastings Of Hudson",
-   "shops": 1
-  },
-  {
-   "city": "Blossvale",
-   "shops": 1
-  },
-  {
-   "city": "Poughkeespie",
    "shops": 1
   },
   {
@@ -848,7 +828,23 @@
    "shops": 1
   },
   {
+   "city": "Ellenburg Center",
+   "shops": 1
+  },
+  {
    "city": "Williamsvile",
+   "shops": 1
+  },
+  {
+   "city": "Blossvale",
+   "shops": 1
+  },
+  {
+   "city": "Campbell Hall",
+   "shops": 1
+  },
+  {
+   "city": "Poughkeespie",
    "shops": 1
   },
   {
@@ -856,15 +852,7 @@
    "shops": 1
   },
   {
-   "city": "Poughkeepise",
-   "shops": 1
-  },
-  {
    "city": "Garden City S",
-   "shops": 1
-  },
-  {
-   "city": "Ricmond Hill",
    "shops": 1
   },
   {
@@ -872,7 +860,11 @@
    "shops": 1
   },
   {
-   "city": "Rexford",
+   "city": "Poughkeepise",
+   "shops": 1
+  },
+  {
+   "city": "Ricmond Hill",
    "shops": 1
   },
   {
@@ -880,39 +872,7 @@
    "shops": 1
   },
   {
-   "city": "Long Island",
-   "shops": 1
-  },
-  {
-   "city": "Patchougue",
-   "shops": 1
-  },
-  {
-   "city": "Leonardsville",
-   "shops": 1
-  },
-  {
-   "city": "Central Nyack",
-   "shops": 1
-  },
-  {
-   "city": "Jamaica Estates",
-   "shops": 1
-  },
-  {
-   "city": "Inlet",
-   "shops": 1
-  },
-  {
-   "city": "Middle Vlg",
-   "shops": 1
-  },
-  {
-   "city": "E Patchogue",
-   "shops": 1
-  },
-  {
-   "city": "Rochdale",
+   "city": "Moira",
    "shops": 1
   },
   {
@@ -920,27 +880,47 @@
    "shops": 1
   },
   {
+   "city": "Rexford",
+   "shops": 1
+  },
+  {
+   "city": "Patchougue",
+   "shops": 1
+  },
+  {
+   "city": "Hastings Of Hudson",
+   "shops": 1
+  },
+  {
    "city": "Westdale",
    "shops": 1
   },
   {
-   "city": "E Greenbush",
+   "city": "Inlet",
    "shops": 1
   },
   {
-   "city": "Guilderland Center",
+   "city": "Jamaica Estates",
    "shops": 1
   },
   {
-   "city": "Sodus Pt.",
+   "city": "E Patchogue",
    "shops": 1
   },
   {
-   "city": "Sauquoit",
+   "city": "Middle Vlg",
    "shops": 1
   },
   {
-   "city": "Nyc",
+   "city": "Leonardsville",
+   "shops": 1
+  },
+  {
+   "city": "Long Island",
+   "shops": 1
+  },
+  {
+   "city": "Central Nyack",
    "shops": 1
   },
   {
@@ -948,7 +928,11 @@
    "shops": 1
   },
   {
-   "city": "Black Creek",
+   "city": "Rochdale",
+   "shops": 1
+  },
+  {
+   "city": "E Greenbush",
    "shops": 1
   },
   {
@@ -956,7 +940,15 @@
    "shops": 1
   },
   {
-   "city": "Constable",
+   "city": "Nyc",
+   "shops": 1
+  },
+  {
+   "city": "Black Creek",
+   "shops": 1
+  },
+  {
+   "city": "Guilderland Center",
    "shops": 1
   },
   {
@@ -965,6 +957,14 @@
   },
   {
    "city": "North Bangor",
+   "shops": 1
+  },
+  {
+   "city": "Sodus Pt.",
+   "shops": 1
+  },
+  {
+   "city": "Sauquoit",
    "shops": 1
   },
   {
@@ -980,7 +980,15 @@
    "shops": 1
   },
   {
+   "city": "Warners",
+   "shops": 1
+  },
+  {
    "city": "Acra",
+   "shops": 1
+  },
+  {
+   "city": "Constable",
    "shops": 1
   },
   {
@@ -988,23 +996,7 @@
    "shops": 1
   },
   {
-   "city": "The Bronx",
-   "shops": 1
-  },
-  {
-   "city": "Warners",
-   "shops": 1
-  },
-  {
-   "city": "Chaffee",
-   "shops": 1
-  },
-  {
    "city": "Colden",
-   "shops": 1
-  },
-  {
-   "city": "Tonawada",
    "shops": 1
   },
   {
@@ -1012,7 +1004,11 @@
    "shops": 1
   },
   {
-   "city": "North Lawrence",
+   "city": "The Bronx",
+   "shops": 1
+  },
+  {
+   "city": "Chaffee",
    "shops": 1
   },
   {
@@ -1020,7 +1016,19 @@
    "shops": 1
   },
   {
+   "city": "Tonawada",
+   "shops": 1
+  },
+  {
+   "city": "North Lawrence",
+   "shops": 1
+  },
+  {
    "city": "Wawarsing",
+   "shops": 1
+  },
+  {
+   "city": "N Merrick",
    "shops": 1
   },
   {
@@ -1032,15 +1040,7 @@
    "shops": 1
   },
   {
-   "city": "N Merrick",
-   "shops": 1
-  },
-  {
    "city": "Hastings",
-   "shops": 1
-  },
-  {
-   "city": "South New Berlin",
    "shops": 1
   },
   {
@@ -1052,11 +1052,7 @@
    "shops": 1
   },
   {
-   "city": "New Yor",
-   "shops": 1
-  },
-  {
-   "city": "East Pembroke",
+   "city": "Canadaigua",
    "shops": 1
   },
   {
@@ -1064,7 +1060,15 @@
    "shops": 1
   },
   {
-   "city": "Canadaigua",
+   "city": "South New Berlin",
+   "shops": 1
+  },
+  {
+   "city": "East Pembroke",
+   "shops": 1
+  },
+  {
+   "city": "Youngsville",
    "shops": 1
   },
   {
@@ -1072,7 +1076,7 @@
    "shops": 1
   },
   {
-   "city": "Youngsville",
+   "city": "New Yor",
    "shops": 1
   },
   {
@@ -1096,50 +1100,50 @@
    "shops": 1
   },
   {
+   "city": "Bearsville",
+   "shops": 1
+  },
+  {
    "city": "Bayberry",
    "shops": 1
   },
   {
    "city": "Greenburgh",
    "shops": 1
-  },
-  {
-   "city": "Bearsville",
-   "shops": 1
   }
  ],
  "top_covered_places": [
   {
    "name": "New York",
-   "shops": 2296
+   "shops": 2171
   },
   {
    "name": "Rochester",
-   "shops": 447
+   "shops": 448
   },
   {
    "name": "Buffalo",
-   "shops": 270
+   "shops": 262
   },
   {
    "name": "Albany",
-   "shops": 178
+   "shops": 176
   },
   {
    "name": "Syracuse",
-   "shops": 172
+   "shops": 170
   },
   {
    "name": "White Plains",
-   "shops": 143
+   "shops": 142
   },
   {
    "name": "Yonkers",
-   "shops": 139
+   "shops": 140
   },
   {
    "name": "Poughkeepsie",
-   "shops": 117
+   "shops": 118
   },
   {
    "name": "Schenectady",
@@ -1159,7 +1163,7 @@
   },
   {
    "name": "Saratoga Springs",
-   "shops": 85
+   "shops": 81
   },
   {
    "name": "Massapequa",
@@ -1167,7 +1171,7 @@
   },
   {
    "name": "Liverpool",
-   "shops": 80
+   "shops": 78
   },
   {
    "name": "Huntington",
@@ -1175,7 +1179,7 @@
   },
   {
    "name": "Webster",
-   "shops": 72
+   "shops": 73
   },
   {
    "name": "Great Neck",
@@ -1186,20 +1190,20 @@
    "shops": 69
   },
   {
-   "name": "New Rochelle",
-   "shops": 68
-  },
-  {
    "name": "Smithtown",
    "shops": 68
   },
   {
-   "name": "East Meadow",
-   "shops": 66
+   "name": "New Rochelle",
+   "shops": 68
   },
   {
    "name": "Oceanside",
    "shops": 66
+  },
+  {
+   "name": "East Meadow",
+   "shops": 65
   },
   {
    "name": "Nanuet",
@@ -1207,23 +1211,23 @@
   },
   {
    "name": "Hamburg",
-   "shops": 58
+   "shops": 59
   },
   {
    "name": "Huntington Station",
-   "shops": 58
-  },
-  {
-   "name": "Hicksville",
    "shops": 57
-  },
-  {
-   "name": "West Seneca",
-   "shops": 56
   },
   {
    "name": "Tonawanda",
    "shops": 56
+  },
+  {
+   "name": "Hicksville",
+   "shops": 56
+  },
+  {
+   "name": "West Seneca",
+   "shops": 55
   },
   {
    "name": "Westbury",
@@ -1234,15 +1238,15 @@
    "shops": 53
   },
   {
-   "name": "Bay Shore",
-   "shops": 52
+   "name": "Farmingdale",
+   "shops": 53
   },
   {
    "name": "Commack",
-   "shops": 52
+   "shops": 53
   },
   {
-   "name": "Farmingdale",
+   "name": "Bay Shore",
    "shops": 52
   },
   {
@@ -1250,19 +1254,19 @@
    "shops": 51
   },
   {
-   "name": "Hempstead",
-   "shops": 50
-  },
-  {
    "name": "Port Jefferson Station",
    "shops": 50
   },
   {
-   "name": "Scarsdale",
+   "name": "Hempstead",
    "shops": 50
   },
   {
    "name": "Kingston",
+   "shops": 50
+  },
+  {
+   "name": "Scarsdale",
    "shops": 50
   },
   {
@@ -1274,16 +1278,16 @@
   {
    "name": "Brighton",
    "type": "CENSUS DESIGNATED PLACE",
-   "held_candidates": 12
+   "held_candidates": 15
   },
   {
-   "name": "Heuvelton",
-   "type": "INCORPORATED PLACE",
-   "held_candidates": 6
-  },
-  {
-   "name": "Westmere",
+   "name": "Herricks",
    "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Manorhaven",
+   "type": "INCORPORATED PLACE",
    "held_candidates": 5
   },
   {
@@ -1292,17 +1296,12 @@
    "held_candidates": 4
   },
   {
-   "name": "Manorhaven",
+   "name": "Heuvelton",
    "type": "INCORPORATED PLACE",
    "held_candidates": 4
   },
   {
    "name": "Mechanicstown",
-   "type": "CENSUS DESIGNATED PLACE",
-   "held_candidates": 4
-  },
-  {
-   "name": "Red Oaks Mill",
    "type": "CENSUS DESIGNATED PLACE",
    "held_candidates": 4
   },
@@ -1317,13 +1316,18 @@
    "held_candidates": 4
   },
   {
+   "name": "Westmere",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 4
+  },
+  {
    "name": "Colton",
    "type": "CENSUS DESIGNATED PLACE",
    "held_candidates": 3
   },
   {
-   "name": "Gardnertown",
-   "type": "CENSUS DESIGNATED PLACE",
+   "name": "Corfu",
+   "type": "INCORPORATED PLACE",
    "held_candidates": 3
   },
   {
@@ -1333,11 +1337,6 @@
   },
   {
    "name": "Balmville",
-   "type": "CENSUS DESIGNATED PLACE",
-   "held_candidates": 2
-  },
-  {
-   "name": "Barnum Island",
    "type": "CENSUS DESIGNATED PLACE",
    "held_candidates": 2
   },
@@ -1367,13 +1366,13 @@
    "held_candidates": 2
   },
   {
-   "name": "Flower Hill",
+   "name": "Freeville",
    "type": "INCORPORATED PLACE",
    "held_candidates": 2
   },
   {
-   "name": "Freeville",
-   "type": "INCORPORATED PLACE",
+   "name": "Gardnertown",
+   "type": "CENSUS DESIGNATED PLACE",
    "held_candidates": 2
   },
   {
@@ -1392,17 +1391,7 @@
    "held_candidates": 2
   },
   {
-   "name": "Herricks",
-   "type": "CENSUS DESIGNATED PLACE",
-   "held_candidates": 2
-  },
-  {
    "name": "Lincoln Park",
-   "type": "CENSUS DESIGNATED PLACE",
-   "held_candidates": 2
-  },
-  {
-   "name": "Lincolndale",
    "type": "CENSUS DESIGNATED PLACE",
    "held_candidates": 2
   },
@@ -1424,11 +1413,6 @@
   {
    "name": "Philmont",
    "type": "INCORPORATED PLACE",
-   "held_candidates": 2
-  },
-  {
-   "name": "Scotchtown",
-   "type": "CENSUS DESIGNATED PLACE",
    "held_candidates": 2
   },
   {
@@ -1457,11 +1441,6 @@
    "held_candidates": 2
   },
   {
-   "name": "Accord",
-   "type": "CENSUS DESIGNATED PLACE",
-   "held_candidates": 1
-  },
-  {
    "name": "Adams Center",
    "type": "CENSUS DESIGNATED PLACE",
    "held_candidates": 1
@@ -1477,6 +1456,11 @@
    "held_candidates": 1
   },
   {
+   "name": "Altmar",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
    "name": "Arlington",
    "type": "CENSUS DESIGNATED PLACE",
    "held_candidates": 1
@@ -1487,7 +1471,7 @@
    "held_candidates": 1
   },
   {
-   "name": "Bellerose Terrace",
+   "name": "Barryville",
    "type": "CENSUS DESIGNATED PLACE",
    "held_candidates": 1
   },
@@ -1527,6 +1511,11 @@
    "held_candidates": 1
   },
   {
+   "name": "Crompond",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
    "name": "DeKalb Junction",
    "type": "CENSUS DESIGNATED PLACE",
    "held_candidates": 1
@@ -1537,22 +1526,17 @@
    "held_candidates": 1
   },
   {
-   "name": "East Shoreham",
-   "type": "CENSUS DESIGNATED PLACE",
-   "held_candidates": 1
-  },
-  {
    "name": "Fairview",
    "type": "CENSUS DESIGNATED PLACE",
    "held_candidates": 1
   },
   {
-   "name": "Fly Creek",
-   "type": "CENSUS DESIGNATED PLACE",
+   "name": "Flower Hill",
+   "type": "INCORPORATED PLACE",
    "held_candidates": 1
   },
   {
-   "name": "Freedom Plains",
+   "name": "Fly Creek",
    "type": "CENSUS DESIGNATED PLACE",
    "held_candidates": 1
   },
@@ -1597,11 +1581,6 @@
    "held_candidates": 1
   },
   {
-   "name": "Lakeland",
-   "type": "CENSUS DESIGNATED PLACE",
-   "held_candidates": 1
-  },
-  {
    "name": "Lakeview",
    "type": "CENSUS DESIGNATED PLACE",
    "held_candidates": 1
@@ -1612,7 +1591,7 @@
    "held_candidates": 1
   },
   {
-   "name": "Lyncourt",
+   "name": "Lincolndale",
    "type": "CENSUS DESIGNATED PLACE",
    "held_candidates": 1
   },
@@ -1642,22 +1621,12 @@
    "held_candidates": 1
   },
   {
-   "name": "North Ballston Spa",
-   "type": "CENSUS DESIGNATED PLACE",
-   "held_candidates": 1
-  },
-  {
    "name": "North Bay",
    "type": "CENSUS DESIGNATED PLACE",
    "held_candidates": 1
   },
   {
    "name": "North Bellport",
-   "type": "CENSUS DESIGNATED PLACE",
-   "held_candidates": 1
-  },
-  {
-   "name": "Orange Lake",
    "type": "CENSUS DESIGNATED PLACE",
    "held_candidates": 1
   },
@@ -1682,12 +1651,22 @@
    "held_candidates": 1
   },
   {
+   "name": "Red Oaks Mill",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
    "name": "Rhinecliff",
    "type": "CENSUS DESIGNATED PLACE",
    "held_candidates": 1
   },
   {
    "name": "Schroon Lake",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Scotchtown",
    "type": "CENSUS DESIGNATED PLACE",
    "held_candidates": 1
   },
@@ -1742,11 +1721,6 @@
    "held_candidates": 1
   },
   {
-   "name": "University Gardens",
-   "type": "CENSUS DESIGNATED PLACE",
-   "held_candidates": 1
-  },
-  {
    "name": "Waddington",
    "type": "INCORPORATED PLACE",
    "held_candidates": 1
@@ -1777,6 +1751,6 @@
    "held_candidates": 1
   }
  ],
- "uncovered_places_without_candidates": 448,
+ "uncovered_places_without_candidates": 455,
  "source": "U.S. Census Bureau 2020 place-by-county and county code files"
 }
