@@ -1,0 +1,507 @@
+{
+ "state": "MO",
+ "census_places": 1081,
+ "places_covered": 27,
+ "place_coverage_pct": 2.5,
+ "census_counties": 115,
+ "counties_covered": 18,
+ "counties_uncovered": [
+  "Adair County",
+  "Andrew County",
+  "Atchison County",
+  "Audrain County",
+  "Barry County",
+  "Barton County",
+  "Bates County",
+  "Benton County",
+  "Bollinger County",
+  "Butler County",
+  "Caldwell County",
+  "Callaway County",
+  "Camden County",
+  "Cape Girardeau County",
+  "Carroll County",
+  "Carter County",
+  "Cedar County",
+  "Chariton County",
+  "Clark County",
+  "Clinton County",
+  "Cole County",
+  "Cooper County",
+  "Crawford County",
+  "Dade County",
+  "Dallas County",
+  "Daviess County",
+  "DeKalb County",
+  "Dent County",
+  "Douglas County",
+  "Dunklin County",
+  "Gasconade County",
+  "Gentry County",
+  "Grundy County",
+  "Harrison County",
+  "Henry County",
+  "Hickory County",
+  "Holt County",
+  "Howard County",
+  "Howell County",
+  "Iron County",
+  "Johnson County",
+  "Knox County",
+  "Laclede County",
+  "Lawrence County",
+  "Lewis County",
+  "Lincoln County",
+  "Linn County",
+  "Livingston County",
+  "Macon County",
+  "Madison County",
+  "Maries County",
+  "Marion County",
+  "McDonald County",
+  "Mercer County",
+  "Miller County",
+  "Mississippi County",
+  "Moniteau County",
+  "Monroe County",
+  "Montgomery County",
+  "Morgan County",
+  "New Madrid County",
+  "Nodaway County",
+  "Oregon County",
+  "Osage County",
+  "Ozark County",
+  "Pemiscot County",
+  "Perry County",
+  "Pettis County",
+  "Phelps County",
+  "Pike County",
+  "Polk County",
+  "Pulaski County",
+  "Putnam County",
+  "Ralls County",
+  "Randolph County",
+  "Ray County",
+  "Reynolds County",
+  "Ripley County",
+  "Saline County",
+  "Schuyler County",
+  "Scotland County",
+  "Scott County",
+  "Shannon County",
+  "Shelby County",
+  "St. Clair County",
+  "St. Francois County",
+  "Ste. Genevieve County",
+  "Stoddard County",
+  "Sullivan County",
+  "Texas County",
+  "Vernon County",
+  "Warren County",
+  "Washington County",
+  "Wayne County",
+  "Webster County",
+  "Worth County",
+  "Wright County"
+ ],
+ "communities_outside_census_places": [],
+ "top_covered_places": [
+  {
+   "name": "Kansas City",
+   "shops": 37
+  },
+  {
+   "name": "Springfield",
+   "shops": 4
+  },
+  {
+   "name": "Joplin",
+   "shops": 3
+  },
+  {
+   "name": "Odessa",
+   "shops": 3
+  },
+  {
+   "name": "St. Joseph",
+   "shops": 3
+  },
+  {
+   "name": "Blue Springs",
+   "shops": 3
+  },
+  {
+   "name": "St. Louis",
+   "shops": 3
+  },
+  {
+   "name": "Lee's Summit",
+   "shops": 2
+  },
+  {
+   "name": "Wentzville",
+   "shops": 2
+  },
+  {
+   "name": "Independence",
+   "shops": 1
+  },
+  {
+   "name": "Weston",
+   "shops": 1
+  },
+  {
+   "name": "Grain Valley",
+   "shops": 1
+  },
+  {
+   "name": "Riverside",
+   "shops": 1
+  },
+  {
+   "name": "Manchester",
+   "shops": 1
+  },
+  {
+   "name": "Florissant",
+   "shops": 1
+  },
+  {
+   "name": "Washington",
+   "shops": 1
+  },
+  {
+   "name": "Creve Coeur",
+   "shops": 1
+  },
+  {
+   "name": "Branson",
+   "shops": 1
+  },
+  {
+   "name": "St. Peters",
+   "shops": 1
+  },
+  {
+   "name": "O'Fallon",
+   "shops": 1
+  },
+  {
+   "name": "Liberty",
+   "shops": 1
+  },
+  {
+   "name": "Fenton",
+   "shops": 1
+  },
+  {
+   "name": "Richmond Heights",
+   "shops": 1
+  },
+  {
+   "name": "Columbia",
+   "shops": 1
+  },
+  {
+   "name": "Arnold",
+   "shops": 1
+  },
+  {
+   "name": "Belton",
+   "shops": 1
+  },
+  {
+   "name": "Brentwood",
+   "shops": 1
+  }
+ ],
+ "uncovered_places_with_held_candidates": [
+  {
+   "name": "Kearney",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 11
+  },
+  {
+   "name": "Maryville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 8
+  },
+  {
+   "name": "Gladstone",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 6
+  },
+  {
+   "name": "Holden",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Carthage",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "North Kansas City",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Platte City",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Union",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Affton",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Boonville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Crestwood",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Harrisonville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Jefferson City",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Kennett",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Maitland",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Oakville",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Olivette",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Overland",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Parkville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Peculiar",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Raytown",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "St. Ann",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Buckner",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Butler",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Chesterfield",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Chillicothe",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Clayton",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Crystal City",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Drexel",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Elsberry",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Eureka",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Fulton",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Grandview",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Hamilton",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Hannibal",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "High Ridge",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Kirksville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "La Due",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Lawson",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Louisiana",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Marshall",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Maryland Heights",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Maysville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Poplar Bluff",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Raymore",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Rock Port",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Savannah",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Shrewsbury",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Smithville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "St. Charles",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "St. Clair",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "St. James",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Town and Country",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Trenton",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Warrenton",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "West Plains",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Wildwood",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  }
+ ],
+ "uncovered_places_without_candidates": 997,
+ "source": "U.S. Census Bureau 2020 place-by-county and county code files"
+}

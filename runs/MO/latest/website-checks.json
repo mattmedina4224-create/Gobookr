@@ -1,0 +1,565 @@
+{
+ "http://saloncapellikansascity.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 22
+ },
+ "https://euphoriasalonkc.wordpress.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 70
+ },
+ "https://theorganicsalonkc.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.theorganicsalonkc.com/",
+  "ms": 186
+ },
+ "https://www.greatclips.com/salons/1010": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://salons.greatclips.com/us/mo/kansas-city/6322-n-chatham-ave",
+  "ms": 299
+ },
+ "https://www.greatclips.com/salons/1798": {
+  "status": "dead",
+  "http_status": 404,
+  "final_url": "https://salons.greatclips.com/1798",
+  "ms": 301
+ },
+ "https://www.plushlifekc.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://plushlifekc.com/",
+  "ms": 342
+ },
+ "https://revivehairkc.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 17
+ },
+ "http://silverscreensalon.com/home": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 34
+ },
+ "https://www.greatclips.com/salons/1013": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://salons.greatclips.com/us/mo/kansas-city/215c-ne-englewood-rd",
+  "ms": 381
+ },
+ "https://www.speaksalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 101
+ },
+ "https://www.midwestbarbery.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 68
+ },
+ "https://www.delphiniumsalonkc.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 84
+ },
+ "https://gumbysbarbershopkc.company.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 228
+ },
+ "http://www.wpnss.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.wpnss.com/Default.asp",
+  "ms": 518
+ },
+ "http://laflarebarbersalon.com/?utm_source=gmb&utm_medium=referral": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 11
+ },
+ "https://newurbanbarbersalon.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 11
+ },
+ "https://sportclips.com/us-mo-independence-mo902": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 67
+ },
+ "https://thesalonkc.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.thesalonkc.com/",
+  "ms": 116
+ },
+ "http://www.s-kcuts.com/": {
+  "status": "error",
+  "http_status": 402,
+  "final_url": "https://www.s-kcuts.com/",
+  "ms": 65
+ },
+ "https://pattonryanlounge.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 9
+ },
+ "https://salonongrand.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 51
+ },
+ "https://flocksalonandgallery.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.flocksalonandgallery.com/",
+  "ms": 441
+ },
+ "https://www.tressessalon.info/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 63
+ },
+ "http://goodtimesbarbershop466.resurva.com/": {
+  "status": "blocked",
+  "http_status": 403,
+  "final_url": "https://goodtimesbarbershop466.resurva.com/",
+  "ms": 123
+ },
+ "https://www.yournaturalimage.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 439
+ },
+ "https://salon529.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 115
+ },
+ "http://greenceilingsalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 89
+ },
+ "https://crispcuts.com/barbershop-independence-mo/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 1005
+ },
+ "https://salonadokc.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 52
+ },
+ "http://thesalonk.com/": {
+  "status": "blocked",
+  "http_status": 403,
+  "final_url": "https://www.hugedomains.com/domain_profile.cfm?d=thesalonk.com",
+  "ms": 43
+ },
+ "https://www.laurajerome-salon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 88
+ },
+ "https://www.firstimpressionshairsalonbelton.com/": {
+  "status": "blocked",
+  "http_status": 429,
+  "ms": 83
+ },
+ "https://www.hairpinssalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 53
+ },
+ "https://brooksidebarbershop.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://slotpragmatic2023.com/",
+  "ms": 1167
+ },
+ "https://crispcuts.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 39
+ },
+ "https://odessaaddedtouch.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 294
+ },
+ "http://www.choptops.biz/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 87
+ },
+ "https://www.buffalomane.com/downtown": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://buffalomane.com/downtown",
+  "ms": 119
+ },
+ "https://www.dreamhairnow.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 348
+ },
+ "https://theonesalonjoplin.direct.salonservicegroup.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 603
+ },
+ "https://casabellasalon.net/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 59
+ },
+ "https://booksy.com/en-us/152254_mrbjays-tonsorium-social_barber-shop_20722_kansas-city": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://booksy.com/en-us/152254_mrbjay_barber-shop_134838_kansas-city",
+  "ms": 1196
+ },
+ "https://salons.greatclips.com/us/mo/grain-valley/1060-ne-mcquerry-rd": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 59
+ },
+ "https://www.massageheights.com/mo/lees-summit/summit-fair.aspx": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 49
+ },
+ "https://vbarbershop.com/locations/joplin/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://vbarbershop.com/pages/location/joplin/",
+  "ms": 400
+ },
+ "https://goodfellastattookc.com/": {
+  "status": "dead",
+  "error": "EAI_AGAIN",
+  "ms": 233
+ },
+ "https://www.vagaro.com/thebarrelhousebarberlouge": {
+  "status": "dead",
+  "http_status": 404,
+  "final_url": "https://www.vagaro.com/PageNotFound.aspx",
+  "ms": 561
+ },
+ "https://www.evolvetattoocollective.com/": {
+  "status": "blocked",
+  "http_status": 429,
+  "ms": 62
+ },
+ "https://mercyseattattoo.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 176
+ },
+ "https://www.oldsoulstattooparlour.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 84
+ },
+ "https://www.kodymillertattoos.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 66
+ },
+ "https://kctattooclub.com/": {
+  "status": "live",
+  "http_status": 202,
+  "ms": 156
+ },
+ "https://www.eastcoastals.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://eastcoastals.com/",
+  "ms": 129
+ },
+ "https://localbeautysalons.net/explore/northeast-tattoo-supply/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 340
+ },
+ "https://diegosaenzjrbloodline.as.me/schedule.php": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://diegosaenzjrbloodline.as.me/schedule/89173bfe",
+  "ms": 689
+ },
+ "https://www.massagefe.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://massagefe.com/",
+  "ms": 82
+ },
+ "https://blake-tattoos.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 363
+ },
+ "https://shearmadnesskids.com/usa-franchise-locations-contact-info/shear-madness-haircuts-for-kids-in-north-kansas-city-mo/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://franchise.shearmadnesskids.com/northland-kansas-city-missouri",
+  "ms": 1091
+ },
+ "https://www.luxurynailswarrenton.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 32
+ },
+ "https://qnailsandspa.net/": {
+  "status": "blocked",
+  "http_status": 403,
+  "final_url": "https://www.hugedomains.com/domain_profile.cfm?d=qnailsandspa.net",
+  "ms": 37
+ },
+ "https://www.ulta.com/stores/florissant-mo-585": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 204
+ },
+ "http://tcnails.net/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 22
+ },
+ "https://www.ulta.com/stores/st-joseph-mo-725": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 212
+ },
+ "https://www.ulta.com/stores/blue-springs-mo-501": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 190
+ },
+ "https://www.ulta.com/stores/manchester-mo-294": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 349
+ },
+ "https://www.ulta.com/stores/springfield-mo-600": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 169
+ },
+ "https://www.bladessalonstc.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 9
+ },
+ "https://www.ulta.com/stores/washington-mo-742": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 212
+ },
+ "https://www.ulta.com/stores/branson-mo-634": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 216
+ },
+ "http://www.suntastictans.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.suntastictans.co/",
+  "ms": 201
+ },
+ "https://locations.waxcenter.com/mo/crevecoeur/creve-coeur-0458.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 451
+ },
+ "https://stlsuntan.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 67
+ },
+ "http://www.355nailsalon.com/introduction.html": {
+  "status": "error",
+  "error": "UND_ERR_SOCKET",
+  "ms": 85
+ },
+ "https://theglamroomkc.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 2540
+ },
+ "https://www.victoriannails.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 310
+ },
+ "http://nailprostl.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 21
+ },
+ "https://fitntanstl.com/": {
+  "status": "error",
+  "error": "CERT_HAS_EXPIRED",
+  "ms": 88
+ },
+ "https://glamdnailbar.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 611
+ },
+ "https://nailluxestlouis.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 11
+ },
+ "https://www.ulta.com/stores/liberty-mo-1156": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 187
+ },
+ "https://www.districttan.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 55
+ },
+ "https://www.ulta.com/stores/fenton-mo-582": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 233
+ },
+ "http://polishedkc.com/index.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 136
+ },
+ "https://palmbeachtan.com/locations/MO/St-Peters-Mexico-Road/": {
+  "status": "dead",
+  "http_status": 404,
+  "final_url": "https://palmbeachtan.com/locations/mo/st-peters-mexico-road",
+  "ms": 472
+ },
+ "https://envynailsandspakansas.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 216
+ },
+ "https://palmbeachtan.com/locations/MO/Springfield-East-Battlefield": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://palmbeachtan.com/locations/mo/springfield-east-battlefield",
+  "ms": 764
+ },
+ "https://whiskeybeardbarber.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 2409
+ },
+ "https://www.ulta.com/stores/st-louis-mo-1375": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 273
+ },
+ "https://www.ulta.com/stores/springfield-mo-1661": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 185
+ },
+ "https://www.sonderlush.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 78
+ },
+ "https://locality.com/place/gallery-nails-raymore-mo": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 18
+ },
+ "https://milanlasercolumbia.com/locations/columbia/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 328
+ },
+ "https://www.greattanz.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 155
+ },
+ "https://locations.waxcenter.com/mo/richmondheights/richmond-heights-0773.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 379
+ },
+ "https://loyallashstudio.glossgenius.com/about": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 368
+ },
+ "https://aspensalonandspa.com/newsite/locations/sc.html": {
+  "status": "dead",
+  "http_status": 404,
+  "final_url": "https://www.aspensalonandspa.com/newsite/locations/sc.html",
+  "ms": 68
+ },
+ "https://palmbeachtan.com/locations/MO/St-Louis-Kennerly-Road": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://palmbeachtan.com/locations/mo/st-louis-kennerly-road",
+  "ms": 562
+ },
+ "http://www.cicinailsandspakc.com/contact": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 8
+ },
+ "https://aa-nailspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://naga2000untung.com/",
+  "ms": 466
+ },
+ "https://www.ulta.com/stores/kansas-city-mo-343": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 211
+ },
+ "https://www.ulta.com/stores/brentwood-mo-654": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 237
+ },
+ "https://trendynailbarbluesprings.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 226
+ },
+ "https://www.ulta.com/stores/lees-summit-mo-553": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 302
+ },
+ "https://palmbeachtan.com/locations/mo/st-joseph-north-belt-highway": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 476
+ },
+ "http://www.tan360kc.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.tan360kc.com/",
+  "ms": 1476
+ },
+ "https://nailsspawentzville.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1596
+ },
+ "https://www.galashairquarters.com/": {
+  "status": "error",
+  "error": "UND_ERR_CONNECT_TIMEOUT",
+  "ms": 10302
+ }
+}
