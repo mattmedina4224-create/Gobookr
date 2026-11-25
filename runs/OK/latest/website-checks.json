@@ -1,0 +1,652 @@
+{
+ "https://legendsbarberstudiookc.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 236
+ },
+ "https://3130studios.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 277
+ },
+ "https://axlhair.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 358
+ },
+ "https://www.backstagehairdesigntulsa.com/": {
+  "status": "error",
+  "error": "UND_ERR_SOCKET",
+  "ms": 526
+ },
+ "https://winner.salon/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 336
+ },
+ "https://salons.greatclips.com/us/ok/catoosa/19361-robson-rd": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 337
+ },
+ "https://www.sportclipsinc.com/store/OK209": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 132
+ },
+ "https://rpscissor.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 95
+ },
+ "https://riopremierwaxing.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 774
+ },
+ "https://app.greatclips.com/salon/9242/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 212
+ },
+ "https://app.greatclips.com/salon/2767/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 283
+ },
+ "https://www.floydsbarbershop.com/locations/oklahoma/oklahoma-city": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 149
+ },
+ "https://carwinsshaveshopokc.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 76
+ },
+ "https://eitrlounge.com/locations/ok/tulsa-mens-haircuts/8931-s-yale/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 637
+ },
+ "https://rawelementssalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 999
+ },
+ "https://www.supercuts.com/locations/nearme/haircut/ok/norman/1223-alameda-st-ste-h/8711": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 68
+ },
+ "http://www.thestarlitesalon.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 35
+ },
+ "http://yourhairrocks.net/index.html": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 32
+ },
+ "https://botoxbykristen.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 457
+ },
+ "http://gossipgirlssalonspa.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 36
+ },
+ "https://tonsorialtulsa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 148
+ },
+ "https://ironrosesalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.ironrosesalon.com/",
+  "ms": 371
+ },
+ "https://jordan-skye-103719.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 889
+ },
+ "https://luxebeautyco.square.site/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 187
+ },
+ "https://app.greatclips.com/salon/8881/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 64
+ },
+ "https://www.supercuts.com/locations/nearme/haircut/OK/Tulsa/Centennial-Plaza/8966": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 11
+ },
+ "https://www.tulsahairco.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 72
+ },
+ "https://salons.greatclips.com/us/ok/midwest-city/5904-se-15th-st": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 19
+ },
+ "https://ladyjanes.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.ladyjanes.com/",
+  "ms": 1931
+ },
+ "https://placejuice.com/estetica-sinaloa-llc-4jvatgu": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 657
+ },
+ "https://francielundberg.glossgenius.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1059
+ },
+ "https://salons.greatclips.com/us/ok/tulsa/1671-s-yale-ave": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 58
+ },
+ "https://www.blendsalonokc.com/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 164
+ },
+ "https://www.taylorsherbs.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 162
+ },
+ "https://wilsonarthair.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 2219
+ },
+ "https://www.anathallodayspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://anathallodayspa.com/",
+  "ms": 250
+ },
+ "https://www.merlenormanstudio.com/mn-3529": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.merlenormanstudio.com/ok/muskogee/mn-3529/",
+  "ms": 313
+ },
+ "https://www.modishsalontulsa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1568
+ },
+ "https://www.skincareokc.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 264
+ },
+ "https://www.merlenormanstudio.com/mn-2342": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.merlenormanstudio.com/ok/edmond/mn-2342/",
+  "ms": 331
+ },
+ "https://browzshapebeautysalon.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 40
+ },
+ "https://zenaestheticsandwellness.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.zenaestheticsandwellness.com/",
+  "ms": 493
+ },
+ "https://goldensalontulsa.glossgenius.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 550
+ },
+ "https://thehairextraordinaire.com/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 93
+ },
+ "https://www.glotanning.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 144
+ },
+ "https://www.3113.studio/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 381
+ },
+ "http://mystiquefragranceok.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://mystiquefragranceok.com/",
+  "ms": 716
+ },
+ "https://www.shangrilaok.com/wellness": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 678
+ },
+ "https://www.ulta.com/stores/tulsa-ok-1113": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 289
+ },
+ "https://palmbeachtan.com/locations/OK/69th-May": {
+  "status": "dead",
+  "http_status": 404,
+  "final_url": "https://palmbeachtan.com/locations/ok/69th-may",
+  "ms": 678
+ },
+ "https://archernailbartulsa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 101
+ },
+ "https://totallytantulsa.com/": {
+  "status": "error",
+  "http_status": 526,
+  "ms": 94
+ },
+ "https://www.ulta.com/stores/oklahoma-city-ok-1731": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 564
+ },
+ "https://palmbeachtan.com/locations/OK/15th-Lewis": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://palmbeachtan.com/locations/ok/15th-lewis",
+  "ms": 1024
+ },
+ "https://serenityjenks.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 61
+ },
+ "https://www.ulta.com/stores/broken-arrow-ok-1251": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 418
+ },
+ "https://palmbeachtan.com/locations/ok/jenks": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 359
+ },
+ "https://www.ulta.com/stores/yukon-ok-1264": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 176
+ },
+ "https://www.ulta.com/stores/oklahoma-city-ok-280": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 213
+ },
+ "https://arcnailstulsa.net/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 216
+ },
+ "https://www.jaraherronsalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 144
+ },
+ "https://www.glotanning.com/location/yukon-mustang": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.glotanning.com/location/yukon-mustang-ok/",
+  "ms": 2167
+ },
+ "https://figtulsa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 556
+ },
+ "https://www.waxingthecity.com/locations/w291/us/ok/owasso/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 232
+ },
+ "https://aliveandwellok.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 295
+ },
+ "https://serenitynailscatoosa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1780
+ },
+ "https://caesarstan.net/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 2761
+ },
+ "https://www.ulta.com/stores/jenks-ok-1890": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 356
+ },
+ "https://go.bychronos.com/l/edmond-73013-tn-nail-studio-805484/a/services": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 180
+ },
+ "https://www.glotanning.com/location/south-okc/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.glotanning.com/location/south-okc-ok/",
+  "ms": 2487
+ },
+ "https://lionsalon.com/locations/classen-curve/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://lionsalon.com/locations/nichols-hills/",
+  "ms": 4660
+ },
+ "https://www.ibrowstudioedmond.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 421
+ },
+ "https://www.bellastradasalon.com/": {
+  "status": "error",
+  "error": "UND_ERR_SOCKET",
+  "ms": 181
+ },
+ "https://www.revampedowasso.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 182
+ },
+ "https://az-esthetics.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 705
+ },
+ "https://www.glotanning.com/location/tulsa/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.glotanning.com/location/tulsa-ok/",
+  "ms": 2695
+ },
+ "https://www.uniqnailbar.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://uniqnailbar.com/",
+  "ms": 402
+ },
+ "https://www.harryandsophi.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 141
+ },
+ "https://conenaillounge.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1721
+ },
+ "https://www.tangles.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://tangles.com/",
+  "ms": 575
+ },
+ "https://www.ulta.com/stores/stillwater-ok-564": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 224
+ },
+ "https://mariposaokc.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 345
+ },
+ "https://sugaring-studio.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 746
+ },
+ "http://www.glowsalonnorman.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 44
+ },
+ "https://www.glotanning.com/location/norman-west": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.glotanning.com/location/norman-west-ok/",
+  "ms": 2454
+ },
+ "https://www.ulta.com/stores/tulsa-ok-390": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 172
+ },
+ "https://infinitynailstulsa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 240
+ },
+ "https://www.ulta.com/stores/ardmore-ok-1141": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 217
+ },
+ "https://www.sweetmianailspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1225
+ },
+ "https://www.glotanning.com/location/edmond-uco": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.glotanning.com/",
+  "ms": 402
+ },
+ "https://injectableaesthetics.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.injectableaesthetics.com/",
+  "ms": 316
+ },
+ "https://www.ulta.com/stores/moore-ok-1548": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 172
+ },
+ "https://www.payless.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://payless.com/",
+  "ms": 902
+ },
+ "https://thetanneryofcoweta.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 319
+ },
+ "https://www.ulta.com/stores/lawton-ok-678": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 175
+ },
+ "https://www.chealthandwellness.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 573
+ },
+ "https://www.ulta.com/stores/muskogee-ok-1109": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 357
+ },
+ "https://www.ulta.com/stores/midwest-city-ok-357": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 163
+ },
+ "https://www.supernailsok.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 38
+ },
+ "https://blankmedspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.blankmedspa.com/",
+  "ms": 331
+ },
+ "https://www.ulta.com/stores/tulsa-ok-131": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 192
+ },
+ "https://tranquilitynailsspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 195
+ },
+ "https://www.ulta.com/stores/tulsa-ok-1403": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 225
+ },
+ "https://www.ulta.com/stores/owasso-ok-1438": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 164
+ },
+ "https://www.glotanning.com/location/yukon-mustang/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.glotanning.com/location/yukon-mustang-ok/",
+  "ms": 2249
+ },
+ "https://www.glotanning.com/location/ponca-city": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.glotanning.com/location/ponca-city-ok/",
+  "ms": 1648
+ },
+ "https://www.glotanning.com/location/nichols-hills": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.glotanning.com/location/nichols-hills-ok/",
+  "ms": 2151
+ },
+ "https://pronailsandspatulsa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 970
+ },
+ "https://q1massagenorman.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 371
+ },
+ "http://impactinktattoostudio.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.facebook.com/ImpactInkTattooStudio",
+  "ms": 750
+ },
+ "https://nbgad2022.wixsite.com/oasis-spa-ok": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 195
+ },
+ "https://locations.waxcenter.com/ok/tulsa/tulsa-0320.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 851
+ },
+ "https://avenuetattoostudio.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 131
+ },
+ "https://www.massagebook.com/biz/mindbodyawakening": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.massagebook.com/mindbodyawakening?src=external",
+  "ms": 357
+ },
+ "https://cynthiasawesome.massagetherapy.com/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 705
+ },
+ "http://tomahawktattoo.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 144
+ },
+ "https://www.glotanning.com/location/norman-east": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.glotanning.com/location/norman-east-ok/",
+  "ms": 2212
+ },
+ "https://glowmedicaltulsa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 2389
+ },
+ "https://www.anchorandrosetattoo.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 252
+ },
+ "https://spa211.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.spa211.com/",
+  "ms": 524
+ },
+ "https://relaxingspace.net/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.relaxingspace.net/",
+  "ms": 666
+ },
+ "https://219-s-perkins-rd.business.site/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 725
+ },
+ "http://www.blushnaturally.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "http://blushnaturally.com/",
+  "ms": 3694
+ },
+ "https://poncacity.massagetherapy.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://poncacitymassage.glossgenius.com/",
+  "ms": 1529
+ }
+}

@@ -1,0 +1,55 @@
+{
+ "state": "OK",
+ "state_name": "Oklahoma",
+ "wave": 6,
+ "created_at": "2026-11-25T00:18:23.266Z",
+ "staging_only": true,
+ "sources": [
+  {
+   "name": "OpenStreetMap (Overpass)",
+   "url": "https://overpass.private.coffee/api/interpreter",
+   "status": "processed",
+   "records": 776,
+   "parts_ok": 4,
+   "parts_total": 4
+  },
+  {
+   "name": "U.S. Census Geocoder (place containing map point)",
+   "url": "https://geocoding.geo.census.gov/",
+   "status": "processed",
+   "records": 324
+  }
+ ],
+ "license_records_scanned": 0,
+ "licensed_active_candidates": 0,
+ "license_dropped": null,
+ "license_fields": null,
+ "license_shop_types": [],
+ "license_type_counts": [],
+ "license_type_lookup": [],
+ "census_city_lookup": {
+  "attempted": 324,
+  "filled": 324,
+  "failed": 0
+ },
+ "mapped_beauty_places": 776,
+ "overpass_endpoint": "https://overpass.private.coffee/api/interpreter",
+ "total_candidates": 736,
+ "with_websites": 125,
+ "category_counts": {
+  "hair": 305,
+  "barber": 53,
+  "brows": 4,
+  "nails": 165,
+  "spray_tanning": 47,
+  "waxing": 7,
+  "skincare": 26,
+  "makeup": 25,
+  "lashes": 11,
+  "massage": 56,
+  "tattoo": 37
+ },
+ "errors": [],
+ "note": "A license record or map listing alone does not prove a business is open. The importer publishes only rows that meet its rules; the rest are held.",
+ "attribution": "OpenStreetMap data © OpenStreetMap contributors (ODbL, https://www.openstreetmap.org/copyright). Licensing data from the listed state open-data portals."
+}

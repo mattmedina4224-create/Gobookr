@@ -1,0 +1,449 @@
+{
+ "state": "OK",
+ "census_places": 837,
+ "places_covered": 27,
+ "place_coverage_pct": 3.2,
+ "census_counties": 77,
+ "counties_covered": 18,
+ "counties_uncovered": [
+  "Adair County",
+  "Alfalfa County",
+  "Atoka County",
+  "Beaver County",
+  "Beckham County",
+  "Blaine County",
+  "Bryan County",
+  "Caddo County",
+  "Cherokee County",
+  "Choctaw County",
+  "Cimarron County",
+  "Coal County",
+  "Cotton County",
+  "Craig County",
+  "Creek County",
+  "Custer County",
+  "Delaware County",
+  "Dewey County",
+  "Ellis County",
+  "Garvin County",
+  "Grady County",
+  "Grant County",
+  "Greer County",
+  "Harmon County",
+  "Harper County",
+  "Haskell County",
+  "Hughes County",
+  "Jackson County",
+  "Jefferson County",
+  "Kingfisher County",
+  "Kiowa County",
+  "Latimer County",
+  "Le Flore County",
+  "Lincoln County",
+  "Logan County",
+  "Love County",
+  "Major County",
+  "Mayes County",
+  "McClain County",
+  "McCurtain County",
+  "Murray County",
+  "Noble County",
+  "Nowata County",
+  "Okfuskee County",
+  "Okmulgee County",
+  "Ottawa County",
+  "Pawnee County",
+  "Pittsburg County",
+  "Pontotoc County",
+  "Pushmataha County",
+  "Roger Mills County",
+  "Seminole County",
+  "Sequoyah County",
+  "Texas County",
+  "Tillman County",
+  "Washington County",
+  "Washita County",
+  "Woods County",
+  "Woodward County"
+ ],
+ "communities_outside_census_places": [
+  {
+   "city": "Monkey Island",
+   "shops": 1
+  }
+ ],
+ "top_covered_places": [
+  {
+   "name": "Tulsa",
+   "shops": 29
+  },
+  {
+   "name": "Oklahoma City",
+   "shops": 22
+  },
+  {
+   "name": "Edmond",
+   "shops": 6
+  },
+  {
+   "name": "Norman",
+   "shops": 5
+  },
+  {
+   "name": "Owasso",
+   "shops": 4
+  },
+  {
+   "name": "Moore",
+   "shops": 3
+  },
+  {
+   "name": "Broken Arrow",
+   "shops": 3
+  },
+  {
+   "name": "Muskogee",
+   "shops": 3
+  },
+  {
+   "name": "Jenks",
+   "shops": 3
+  },
+  {
+   "name": "Stillwater",
+   "shops": 3
+  },
+  {
+   "name": "Catoosa",
+   "shops": 2
+  },
+  {
+   "name": "Midwest City",
+   "shops": 2
+  },
+  {
+   "name": "Yukon",
+   "shops": 2
+  },
+  {
+   "name": "Ponca City",
+   "shops": 2
+  },
+  {
+   "name": "Lawton",
+   "shops": 2
+  },
+  {
+   "name": "Enid",
+   "shops": 1
+  },
+  {
+   "name": "Nichols Hills",
+   "shops": 1
+  },
+  {
+   "name": "Noble",
+   "shops": 1
+  },
+  {
+   "name": "Warr Acres",
+   "shops": 1
+  },
+  {
+   "name": "Bixby",
+   "shops": 1
+  },
+  {
+   "name": "Duncan",
+   "shops": 1
+  },
+  {
+   "name": "Checotah",
+   "shops": 1
+  },
+  {
+   "name": "Marlow",
+   "shops": 1
+  },
+  {
+   "name": "Ardmore",
+   "shops": 1
+  },
+  {
+   "name": "Del City",
+   "shops": 1
+  },
+  {
+   "name": "Madill",
+   "shops": 1
+  },
+  {
+   "name": "Tishomingo",
+   "shops": 1
+  }
+ ],
+ "uncovered_places_with_held_candidates": [
+  {
+   "name": "Coweta",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 21
+  },
+  {
+   "name": "Altus",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 10
+  },
+  {
+   "name": "Durant",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 10
+  },
+  {
+   "name": "Henryetta",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 7
+  },
+  {
+   "name": "Newcastle",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 7
+  },
+  {
+   "name": "Sand Springs",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 6
+  },
+  {
+   "name": "Broken Bow",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Choctaw",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Roland",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Sapulpa",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Wagoner",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Guthrie",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Idabel",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "McAlester",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Ada",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Calera",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Elk City",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Morris",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Perkins",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Ringling",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Stigler",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Tahlequah",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Wilburton",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Allen",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Arcadia",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Atoka",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Bartlesville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Beaver",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Blanchard",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Bokchito",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Bristow",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Cheyenne",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Chickasha",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Eufaula",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Fort Gibson",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Guymon",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Haileyville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Hartshorne",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Haskell",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Hugo",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Lindsay",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Medicine Park",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Muldrow",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Paden",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Poteau",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Quinton",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Shawnee",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Skiatook",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Texanna",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Texhoma",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "The Village",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "West Siloam Springs",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  }
+ ],
+ "uncovered_places_without_candidates": 758,
+ "source": "U.S. Census Bureau 2020 place-by-county and county code files"
+}
