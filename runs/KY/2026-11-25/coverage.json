@@ -1,0 +1,638 @@
+{
+ "state": "KY",
+ "census_places": 553,
+ "places_covered": 24,
+ "place_coverage_pct": 4.3,
+ "census_counties": 120,
+ "counties_covered": 20,
+ "counties_uncovered": [
+  "Adair County",
+  "Allen County",
+  "Ballard County",
+  "Bath County",
+  "Bell County",
+  "Bourbon County",
+  "Boyle County",
+  "Bracken County",
+  "Breathitt County",
+  "Breckinridge County",
+  "Bullitt County",
+  "Butler County",
+  "Calloway County",
+  "Carlisle County",
+  "Carroll County",
+  "Carter County",
+  "Casey County",
+  "Clark County",
+  "Clay County",
+  "Clinton County",
+  "Crittenden County",
+  "Cumberland County",
+  "Edmonson County",
+  "Elliott County",
+  "Estill County",
+  "Fleming County",
+  "Floyd County",
+  "Franklin County",
+  "Fulton County",
+  "Gallatin County",
+  "Garrard County",
+  "Graves County",
+  "Grayson County",
+  "Green County",
+  "Greenup County",
+  "Hancock County",
+  "Harlan County",
+  "Harrison County",
+  "Hart County",
+  "Henderson County",
+  "Henry County",
+  "Hickman County",
+  "Jackson County",
+  "Johnson County",
+  "Knott County",
+  "Knox County",
+  "Larue County",
+  "Laurel County",
+  "Lawrence County",
+  "Lee County",
+  "Leslie County",
+  "Letcher County",
+  "Lewis County",
+  "Lincoln County",
+  "Livingston County",
+  "Logan County",
+  "Lyon County",
+  "Magoffin County",
+  "Marion County",
+  "Marshall County",
+  "Martin County",
+  "McCreary County",
+  "McLean County",
+  "Meade County",
+  "Menifee County",
+  "Mercer County",
+  "Metcalfe County",
+  "Monroe County",
+  "Montgomery County",
+  "Morgan County",
+  "Muhlenberg County",
+  "Nelson County",
+  "Nicholas County",
+  "Ohio County",
+  "Oldham County",
+  "Owen County",
+  "Owsley County",
+  "Pendleton County",
+  "Perry County",
+  "Pike County",
+  "Powell County",
+  "Robertson County",
+  "Rockcastle County",
+  "Rowan County",
+  "Russell County",
+  "Scott County",
+  "Shelby County",
+  "Simpson County",
+  "Spencer County",
+  "Taylor County",
+  "Todd County",
+  "Trigg County",
+  "Trimble County",
+  "Union County",
+  "Washington County",
+  "Wayne County",
+  "Webster County",
+  "Whitley County",
+  "Wolfe County",
+  "Woodford County"
+ ],
+ "communities_outside_census_places": [
+  {
+   "city": "Lexington",
+   "shops": 8
+  }
+ ],
+ "top_covered_places": [
+  {
+   "name": "Louisville",
+   "shops": 19
+  },
+  {
+   "name": "Elizabethtown",
+   "shops": 15
+  },
+  {
+   "name": "Radcliff",
+   "shops": 6
+  },
+  {
+   "name": "Lawrenceburg",
+   "shops": 4
+  },
+  {
+   "name": "Middletown",
+   "shops": 3
+  },
+  {
+   "name": "St. Matthews",
+   "shops": 3
+  },
+  {
+   "name": "Richmond",
+   "shops": 2
+  },
+  {
+   "name": "Somerset",
+   "shops": 2
+  },
+  {
+   "name": "Florence",
+   "shops": 2
+  },
+  {
+   "name": "Bellevue",
+   "shops": 2
+  },
+  {
+   "name": "Newport",
+   "shops": 2
+  },
+  {
+   "name": "Glasgow",
+   "shops": 1
+  },
+  {
+   "name": "Dry Ridge",
+   "shops": 1
+  },
+  {
+   "name": "Maysville",
+   "shops": 1
+  },
+  {
+   "name": "Lexington-Fayette",
+   "shops": 1
+  },
+  {
+   "name": "Madisonville",
+   "shops": 1
+  },
+  {
+   "name": "Bowling Green",
+   "shops": 1
+  },
+  {
+   "name": "Owensboro",
+   "shops": 1
+  },
+  {
+   "name": "Crescent Springs",
+   "shops": 1
+  },
+  {
+   "name": "Ashland",
+   "shops": 1
+  },
+  {
+   "name": "Princeton",
+   "shops": 1
+  },
+  {
+   "name": "Paducah",
+   "shops": 1
+  },
+  {
+   "name": "Hopkinsville",
+   "shops": 1
+  },
+  {
+   "name": "Nicholasville",
+   "shops": 1
+  }
+ ],
+ "uncovered_places_with_held_candidates": [
+  {
+   "name": "Louisville/Jefferson County metro government (balance)",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 25
+  },
+  {
+   "name": "Jeffersontown",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 9
+  },
+  {
+   "name": "Franklin",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 7
+  },
+  {
+   "name": "Dayton",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 6
+  },
+  {
+   "name": "Erlanger",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 6
+  },
+  {
+   "name": "Fort Mitchell",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 6
+  },
+  {
+   "name": "Fort Thomas",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 6
+  },
+  {
+   "name": "Covington",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Falmouth",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Hartford",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Bardstown",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Beaver Dam",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Columbia",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Georgetown",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Pikeville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Prospect",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Berea",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Blue Ridge Manor",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Corbin",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Crestview Hills",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Frankfort",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Fulton",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Independence",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Oak Grove",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Russell Springs",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Stanton",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Crestwood",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Danville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Elk Creek",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Elsmere",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Eminence",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Forest Hills",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Graymoor-Devondale",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Grayson",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Greensburg",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Henderson",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "La Grange",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Lancaster",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Lebanon",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Leitchfield",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Meadow Vale",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Murray",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Northfield",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Rolling Hills",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Shelbyville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Shepherdsville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Williamsburg",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Wilmore",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Winchester",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Alexandria",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Beattyville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Brandenburg",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Burgin",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Burlington",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Butler",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Cadiz",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Campbellsville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Carlisle",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Centertown",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Douglass Hills",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Eddyville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Elkhorn City",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Fredonia",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Hickman",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Hurstbourne Acres",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Hustonville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "London",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Lyndon",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Mayfield",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "McKee",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Middlesborough",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Monticello",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Morehead",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "New Haven",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "North Corbin",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Paris",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Providence",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Sparta",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Stanford",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Union",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Versailles",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Water Valley",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Whitesburg",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Windy Hills",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  }
+ ],
+ "uncovered_places_without_candidates": 445,
+ "source": "U.S. Census Bureau 2020 place-by-county and county code files"
+}

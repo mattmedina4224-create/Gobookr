@@ -1,0 +1,555 @@
+{
+ "https://www.fleetstreethair.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 47
+ },
+ "https://www.supercuts.com/locations/nearme/haircut/KY/LEXINGTON/83303---150-LOWRY-LN-STE-122/83303": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 177
+ },
+ "https://www.maedasalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 219
+ },
+ "https://salons.greatclips.com/us/ky/radcliff/2031-walmart-way": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 318
+ },
+ "https://novasalon.com/st-matthews-salon/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 283
+ },
+ "http://www.wardshairshop.com/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 415
+ },
+ "https://www.greatclips.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 454
+ },
+ "https://scissorsrp.com/": {
+  "status": "error",
+  "error": "ECONNRESET",
+  "ms": 243
+ },
+ "https://propsbarbershop.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 217
+ },
+ "https://salons.greatclips.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 235
+ },
+ "https://salons.greatclips.com/us/ky/dry-ridge/61-broadway-st": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 214
+ },
+ "https://www.supercuts.com/locations/nearme/haircut/ky/elizabethtown/1511-ring-rd-ste-103/81777": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 193
+ },
+ "https://beachbeautysalon.net/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.beachbeautysalon.net/",
+  "ms": 653
+ },
+ "https://www.msvalssalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 214
+ },
+ "https://salons.greatclips.com/us/ky/richmond/2055-lantern-ridge-dr": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 37
+ },
+ "https://www.cutnupbarbershop859.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 81
+ },
+ "https://www.violetmoonlou.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 67
+ },
+ "https://f-and-h-hair-braiding.cedule.app/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 74
+ },
+ "https://salons.greatclips.com/us/ky/elizabethtown/1912-n-dixie-hwy": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 30
+ },
+ "https://salon2020ky.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.salon2020ky.com/",
+  "ms": 826
+ },
+ "https://taperedhairky.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 92
+ },
+ "https://greatclips.com/salons/4876": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://salons.greatclips.com/us/ky/glasgow/2371-happy-valley-rd",
+  "ms": 694
+ },
+ "https://salondiscover.com/the-twisted-willow-barbershop-40403/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 72
+ },
+ "https://www.costcutters.com/locations/nearme/haircut/ky/madisonville/526-island-ford-rd/17122": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 124
+ },
+ "https://www.slaystationbeautystudio.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 83
+ },
+ "https://catandlousalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 535
+ },
+ "https://sportclips.com/us-ky-elizabethtown-ky107": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 503
+ },
+ "https://www.canvassalonllc.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 433
+ },
+ "https://www.hairex.com/": {
+  "status": "error",
+  "error": "ECONNREFUSED",
+  "ms": 215
+ },
+ "https://salonlofts.com/caitie_forsyth": {
+  "status": "live",
+  "http_status": 202,
+  "ms": 180
+ },
+ "http://dewordyesalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 173
+ },
+ "https://klashedonmain.glossgenius.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://glossgenius.com/",
+  "ms": 552
+ },
+ "https://sportclips.com/us-ky-bowlinggreen-ky401": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 50
+ },
+ "https://fadedhaircutsformen.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 589
+ },
+ "https://greatclips.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.greatclips.com/",
+  "ms": 89
+ },
+ "https://maneobsession.glossgenius.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 640
+ },
+ "https://www.shinersbarbershop.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 202
+ },
+ "https://laced-up-barbershop.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 732
+ },
+ "https://www.salon602.com/": {
+  "status": "error",
+  "error": "UND_ERR_SOCKET",
+  "ms": 90
+ },
+ "http://getinto-focus.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://getinto-focus.com/",
+  "ms": 431
+ },
+ "https://gopronails.com/": {
+  "status": "error",
+  "error": "UND_ERR_SOCKET",
+  "ms": 83
+ },
+ "https://salon-kd.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 755
+ },
+ "https://medspa810louisville.com/": {
+  "status": "error",
+  "error": "ECONNREFUSED",
+  "ms": 104
+ },
+ "https://booksy.com/en-us/741839_kingdom-cuts-barbershop-reggie_barber-shop_20993_elizabethtown": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 843
+ },
+ "https://beechmont-bombshelnpm.business.site/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 555
+ },
+ "https://hairbyrachelelaine.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1035
+ },
+ "https://www.bathandbodyworks.com/": {
+  "status": "error",
+  "http_status": 307,
+  "ms": 193
+ },
+ "https://novasalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 3
+ },
+ "https://www.ulta.com/stores/louisville-ky-113": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 491
+ },
+ "https://venetiansalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 479
+ },
+ "https://omagisalonspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 279
+ },
+ "https://locations.waxcenter.com/ky/louisville/louisville-middletown-0276.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 240
+ },
+ "https://majesticnailsandspa.business.site/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 408
+ },
+ "https://waxxpot.com/ky/louisville/st-matthews/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://waxxpot.com/salons/ky-louisville-st-matthews/",
+  "ms": 851
+ },
+ "https://www.cliquelouisville.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 212
+ },
+ "https://www.ulta.com/stores/ashland-ky-1444": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 638
+ },
+ "https://bgskincare.com/about-our-clinic/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 975
+ },
+ "https://lashtasticlouisville.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 211
+ },
+ "https://brendabeautysalon.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 146
+ },
+ "https://www.bodyrxlouisville.com/": {
+  "status": "error",
+  "error": "ECONNRESET",
+  "ms": 203
+ },
+ "https://www.electrolysisbysharonthomas.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 319
+ },
+ "https://palmbeachtan.com/locations/KY/Crescent-Springs-Clock-Tower-Way": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://palmbeachtan.com/locations/ky/crescent-springs-clock-tower-way",
+  "ms": 1276
+ },
+ "https://www.ulta.com/stores/newport-ky-703": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 345
+ },
+ "https://emvienailspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 296
+ },
+ "https://hinailsprincetonky.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 456
+ },
+ "https://www.westbrim.co/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 226
+ },
+ "https://www.ulta.com/stores/richmond-ky-1487": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 338
+ },
+ "https://hourglasslex.com/": {
+  "status": "error",
+  "error": "UND_ERR_SOCKET",
+  "ms": 203
+ },
+ "https://www.luxeloungemedspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 496
+ },
+ "https://cookstudioandgallery.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.hairstudioandgallery.com/",
+  "ms": 1259
+ },
+ "http://belleviemedspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://bellevietoday.com/",
+  "ms": 1882
+ },
+ "https://www.sephora.com/happening/stores/kohls-at-elizabethtown": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 244
+ },
+ "https://www.ulta.com/stores/elizabethtown-ky-1763": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 299
+ },
+ "https://luxnailsspaelizabethtown.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 380
+ },
+ "https://www.magnoliaelizabethtown.com/norms-for-men-day-spa": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 242
+ },
+ "https://701salonandspa.my.canva.site/copy-of-701-salon-and-spa": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 249
+ },
+ "https://www.aawky.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 269
+ },
+ "https://www.4estheticslounge.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 527
+ },
+ "https://nuvitalinfusion.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "http://www.importantlocalbusinesses.com/",
+  "ms": 656
+ },
+ "https://www.ulta.com/stores/lexington-ky-129": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 164
+ },
+ "https://huemedspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 484
+ },
+ "https://www.ulta.com/stores/paducah-ky-771": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 206
+ },
+ "http://jbesthetics.glossgenius.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://jbesthetics.glossgenius.com/",
+  "ms": 896
+ },
+ "https://suntancity.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.suntancity.com/",
+  "ms": 875
+ },
+ "https://angelnails.yolasite.com/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 240
+ },
+ "https://beautyobsessions.glossgenius.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1185
+ },
+ "https://www.ulta.com/stores/hopkinsville-ky-1327": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 163
+ },
+ "https://www.suntancity.com/find-a-salon/kentucky/louisville/valley-station": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 866
+ },
+ "http://charmedlifeart.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 125
+ },
+ "https://www.inkanddaggertattooco.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 161
+ },
+ "http://www.louisvillepricks.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 170
+ },
+ "https://www.prohibitionartllc.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 217
+ },
+ "https://locations.waxcenter.com/ky/louisville/louisville-central-station-0566.html": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://locations.waxcenter.com/ky/louisville/",
+  "ms": 746
+ },
+ "https://postivewave.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 244
+ },
+ "https://www.kitmassage.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 343
+ },
+ "https://www.ironorchidtattoo.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 360
+ },
+ "https://ntouchsalonspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 301
+ },
+ "https://merakionmain.as.me/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://merakionmain.as.me/schedule/7829f93a",
+  "ms": 1657
+ },
+ "https://thezenzonewellness.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 316
+ },
+ "https://www.bodyrecoverymassage.net/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 299
+ },
+ "https://www.bluegrasstattoo.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 353
+ },
+ "https://jokerzinkwell.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 297
+ },
+ "https://thepinktoadstool.squarespace.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 359
+ },
+ "http://twistedimages.net/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://twistedimages.net/",
+  "ms": 405
+ },
+ "https://sunnymassage.top888site.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 847
+ },
+ "https://www.relaxyoudeserveit.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://relaxyoudeserveit.com/",
+  "ms": 1937
+ },
+ "https://www.theowensborobarbershop.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://theowensborobarbershop.com/",
+  "ms": 5927
+ }
+}
