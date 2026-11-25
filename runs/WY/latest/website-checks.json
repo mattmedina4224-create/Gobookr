@@ -1,0 +1,62 @@
+{
+ "https://haircutmenfrontiermallcheyennewy.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 25
+ },
+ "https://www.saltriversalon.net/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 26
+ },
+ "https://www.srswsoaps.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 170
+ },
+ "https://www.smartstyle.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 206
+ },
+ "https://www.boardwalkhairdesign.com/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 271
+ },
+ "https://sportclips.com/us-wy-gillette-wy101": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 280
+ },
+ "https://www.ulta.com/stores/gillette-wy-1625": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 484
+ },
+ "https://www.frontiermall.com/store/nails_unique?location=u038": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 700
+ },
+ "https://oasistans.net/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1001
+ },
+ "https://www.ulta.com/stores/cheyenne-wy-1159": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1054
+ },
+ "https://alluresalonsv.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1262
+ },
+ "https://nailstarwy.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1981
+ }
+}

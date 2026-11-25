@@ -1,0 +1,94 @@
+{
+ "state": "WY",
+ "census_places": 204,
+ "places_covered": 3,
+ "place_coverage_pct": 1.5,
+ "census_counties": 23,
+ "counties_covered": 3,
+ "counties_uncovered": [
+  "Albany County",
+  "Big Horn County",
+  "Carbon County",
+  "Converse County",
+  "Crook County",
+  "Fremont County",
+  "Goshen County",
+  "Hot Springs County",
+  "Johnson County",
+  "Natrona County",
+  "Niobrara County",
+  "Park County",
+  "Platte County",
+  "Sheridan County",
+  "Sublette County",
+  "Sweetwater County",
+  "Teton County",
+  "Uinta County",
+  "Washakie County",
+  "Weston County"
+ ],
+ "communities_outside_census_places": [],
+ "top_covered_places": [
+  {
+   "name": "Gillette",
+   "shops": 4
+  },
+  {
+   "name": "Afton",
+   "shops": 2
+  },
+  {
+   "name": "Cheyenne",
+   "shops": 2
+  }
+ ],
+ "uncovered_places_with_held_candidates": [
+  {
+   "name": "Pinedale",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 11
+  },
+  {
+   "name": "Laramie",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Thayne",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Jackson",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Rock Springs",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Kemmerer",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Lusk",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Torrington",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Alpine",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  }
+ ],
+ "uncovered_places_without_candidates": 192,
+ "source": "U.S. Census Bureau 2020 place-by-county and county code files"
+}

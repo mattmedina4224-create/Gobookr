@@ -1,0 +1,48 @@
+{
+ "state": "WY",
+ "checked_at": "2026-11-25",
+ "candidates": 74,
+ "existing_compared": 0,
+ "publish": 8,
+ "review": 66,
+ "skipped": 0,
+ "enrich_existing": 0,
+ "publish_with_website": 8,
+ "publish_with_street": 7,
+ "publish_with_phone": 6,
+ "review_reasons": {
+  "map_only_without_website": 62,
+  "map_website_not_confirmed_live": 4
+ },
+ "skipped_reasons": {},
+ "publish_categories": {
+  "stylist": 4,
+  "barber": 1,
+  "makeup_artist": 1,
+  "spray_tan_specialist": 1,
+  "nail_technician": 1
+ },
+ "publish_sources": {
+  "OpenStreetMap contributors": 8
+ },
+ "publish_cities": {
+  "Gillette": 4,
+  "Afton": 2,
+  "Cheyenne": 2
+ },
+ "review_cities": {
+  "Gillette": 19,
+  "Pinedale": 11,
+  "Cheyenne": 9,
+  "Afton": 5,
+  "Laramie": 5,
+  "Thayne": 4,
+  "Jackson": 3,
+  "Rock Springs": 3,
+  "Lusk": 2,
+  "Kemmerer": 2,
+  "Torrington": 2,
+  "Alpine": 1
+ },
+ "batches": 1
+}
