@@ -1,0 +1,101 @@
+{
+ "state": "AK",
+ "census_places": 355,
+ "places_covered": 3,
+ "place_coverage_pct": 0.8,
+ "census_counties": 30,
+ "counties_covered": 3,
+ "counties_uncovered": [
+  "Aleutians East Borough",
+  "Aleutians West Census Area",
+  "Bethel Census Area",
+  "Bristol Bay Borough",
+  "Chugach Census Area",
+  "Copper River Census Area",
+  "Denali Borough",
+  "Dillingham Census Area",
+  "Haines Borough",
+  "Hoonah-Angoon Census Area",
+  "Juneau City and Borough",
+  "Kenai Peninsula Borough",
+  "Ketchikan Gateway Borough",
+  "Kodiak Island Borough",
+  "Kusilvak Census Area",
+  "Lake and Peninsula Borough",
+  "Matanuska-Susitna Borough",
+  "Nome Census Area",
+  "North Slope Borough",
+  "Northwest Arctic Borough",
+  "Petersburg Borough",
+  "Prince of Wales-Hyder Census Area",
+  "Skagway Municipality",
+  "Southeast Fairbanks Census Area",
+  "Wrangell City and Borough",
+  "Yakutat City and Borough",
+  "Yukon-Koyukuk Census Area"
+ ],
+ "communities_outside_census_places": [],
+ "top_covered_places": [
+  {
+   "name": "Fairbanks",
+   "shops": 3
+  },
+  {
+   "name": "Anchorage",
+   "shops": 3
+  },
+  {
+   "name": "Sitka",
+   "shops": 1
+  }
+ ],
+ "uncovered_places_with_held_candidates": [
+  {
+   "name": "Homer",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 14
+  },
+  {
+   "name": "Palmer",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Juneau",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Wasilla",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Denali Park",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Houston",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Petersburg",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Seward",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Valdez",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  }
+ ],
+ "uncovered_places_without_candidates": 343,
+ "source": "U.S. Census Bureau 2020 place-by-county and county code files"
+}

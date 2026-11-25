@@ -1,0 +1,54 @@
+{
+ "state": "AK",
+ "state_name": "Alaska",
+ "wave": 10,
+ "created_at": "2026-11-25T01:41:47.019Z",
+ "staging_only": true,
+ "sources": [
+  {
+   "name": "OpenStreetMap (Overpass)",
+   "url": "https://overpass-api.de/api/interpreter",
+   "status": "processed",
+   "records": 112,
+   "parts_ok": 4,
+   "parts_total": 4
+  },
+  {
+   "name": "U.S. Census Geocoder (place containing map point)",
+   "url": "https://geocoding.geo.census.gov/",
+   "status": "processed",
+   "records": 82
+  }
+ ],
+ "license_records_scanned": 0,
+ "licensed_active_candidates": 0,
+ "license_dropped": null,
+ "license_fields": null,
+ "license_shop_types": [],
+ "license_type_counts": [],
+ "license_type_lookup": [],
+ "census_city_lookup": {
+  "attempted": 83,
+  "filled": 82,
+  "failed": 0
+ },
+ "mapped_beauty_places": 112,
+ "overpass_endpoint": "https://overpass-api.de/api/interpreter",
+ "total_candidates": 106,
+ "with_websites": 10,
+ "category_counts": {
+  "hair": 42,
+  "barber": 19,
+  "makeup": 2,
+  "salon_suites": 1,
+  "spray_tanning": 7,
+  "nails": 15,
+  "brows": 1,
+  "lashes": 1,
+  "massage": 10,
+  "tattoo": 8
+ },
+ "errors": [],
+ "note": "A license record or map listing alone does not prove a business is open. The importer publishes only rows that meet its rules; the rest are held.",
+ "attribution": "OpenStreetMap data © OpenStreetMap contributors (ODbL, https://www.openstreetmap.org/copyright). Licensing data from the listed state open-data portals."
+}
