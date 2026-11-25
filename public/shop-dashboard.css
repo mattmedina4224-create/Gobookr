@@ -131,7 +131,7 @@
 .sd-svc-tools { padding: 0 18px 16px !important; }
 
 /* Team */
-.sd-invite { border-color: var(--gb-iris-line); background: var(--gb-iris-wash); }
+.sd-invite { border-color: var(--gb-line); background: var(--gb-white); }
 .sd-invite p { color: var(--gb-ink-2); max-width: 62ch; }
 .sd-invite textarea { margin: 6px 0 0; }
 .sd-invite .btn { margin-top: var(--gb-3); }
@@ -237,4 +237,33 @@
   .wp-dialog { margin: auto auto 0; width: 100vw; max-width: 100vw; border-radius: var(--gb-r-xl) var(--gb-r-xl) 0 0; }
   .wp-dialog-actions { flex-direction: column-reverse; }
   .wp-dialog-actions .btn { width: 100%; justify-content: center; min-height: 46px; }
+}
+
+/* ---- Dashboard shell alignment (v2): forms inside the gbd app shell ---- */
+.gbd .sd { padding-bottom: 0; }
+.gbd .sd.gbd-content { max-width: 1080px; }
+.gbd .sd-group, .gbd .sd-card, .gbd .sd-empty { border-radius: var(--gb-r-md); }
+.gbd .sd-group { padding: var(--gb-6); }
+.gbd .sd-group legend { font-size: var(--gb-h4); }
+.gbd .sd-card-quiet { background: var(--gb-cloud); }
+.gbd .sd-savebar { background: linear-gradient(to top, var(--gb-white) 72%, rgba(255, 255, 255, 0)); padding: var(--gb-4) 0 var(--gb-5); z-index: 2; }
+.gbd .sd-steps ol { margin-bottom: var(--gb-6); }
+.gbd .sd-publish h2 { margin: 0; }
+.gbd .sd-iconbtn { width: 44px; height: 44px; }
+.gbd .sd-textbtn { min-height: 44px; }
+.gbd .sd-svc-tools { margin-top: var(--gb-3); }
+@media (max-width: 1023px) {
+  .gbd .sd-savebar { position: sticky; bottom: 0; margin: 0 -16px; padding: 12px 16px calc(12px + env(safe-area-inset-bottom)); background: var(--gb-white); border-top: 1px solid var(--gb-line); }
+  .gbd .sd-savebar .btn { width: 100%; min-height: 48px; }
+}
+@media (max-width: 560px) {
+  .gbd .sd-group { padding: var(--gb-5) var(--gb-4); }
+  .gbd .sd-row, .gbd .sd-row-3 { grid-template-columns: minmax(0, 1fr); }
+  .gbd .sd-hours-row { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 6px 8px; padding: 10px 0; border-top: 1px solid var(--gb-line); }
+  .gbd .sd-hours-row > span:first-child { grid-column: 1 / -1; }
+  .gbd .sd-hours-row .sd-to { display: none; }
+  .gbd .sd-hours-row .sd-check-inline { grid-column: 1 / -1; justify-self: start; }
+  .gbd .sd-photos { grid-template-columns: minmax(0, 1fr); }
+  .gbd .sd-range { flex-wrap: wrap; } .gbd .sd-range input { width: 100%; }
+  .gbd .sd-stepnav .btn { flex: 1; }
 }

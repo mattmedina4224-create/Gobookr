@@ -10,6 +10,7 @@ const { SHOP_CATEGORY_LABELS } = require('../lib/shop-categories');
 const P = require('../lib/shop-profile');
 const View = require('../lib/shop-dashboard-view');
 const WorkplacesView = require('../lib/workplaces-view');
+const ShopAnalytics = require('../lib/shop-analytics');
 
 const sponsorshipEnabled = () => process.env.BUSINESS_TEAMS_ENABLED === '1';
 // Optional paid sponsorship (lib/business-team.js) only exists when its flag is on; loaded lazily so the free
@@ -57,13 +58,46 @@ function dashboardData(ctx, shop, extra = {}) {
   const pendingInvites = team.filter((m) => m.status === 'pending').length;
   const completion = P.completion(shop, { services: profile.services.length, photos: profile.photos.length, team: profile.team.length, pendingInvites });
   const suggestedStep = (completion.next[0] && completion.next[0].step) || 6;
-  return { csrf: ctx.session?.csrf_token || '', profile, team, pendingInvites, completion, suggestedStep, sponsorship: sponsorshipEnabled(), inviteLinks: [], ...extra };
+  const user = ctx.currentUser || {};
+  // The owner's own professional profile, for the business ↔ personal workspace switch (never its analytics).
+  let pro = null;
+  try { pro = db.prepare('SELECT id, business_name, profile_photo_url FROM pro_profiles WHERE user_id = ? ORDER BY id LIMIT 1').get(user.id) || null; } catch (_) { pro = null; }
+  return { csrf: ctx.session?.csrf_token || '', profile, team, pendingInvites, completion, suggestedStep, sponsorship: sponsorshipEnabled(), inviteLinks: [],
+    user: { email: user.email, name: user.name, role: user.role }, pro,
+    analytics: ShopAnalytics.summary(shop.id), activity: activityFor(shop, profile, team),
+    // Hiring (Business Pro) and Merch Studio are not released yet; their sections say so instead of linking nowhere.
+    flags: { hiring: false, merch: false }, ...extra };
+}
+
+// Real, dated events only: claim approval, publishing, edits, photos, services and team changes.
+function activityFor(shop, profile, team) {
+  const out = [];
+  const push = (at, iconName, text) => { if (at && Number.isFinite(new Date(at).getTime())) out.push({ at, icon: iconName, text }); };
+  try {
+    const claim = db.prepare("SELECT reviewed_at FROM shop_claims WHERE shop_id = ? AND status = 'approved' ORDER BY reviewed_at DESC NULLS LAST LIMIT 1").get(shop.id);
+    push(claim && claim.reviewed_at, 'verified', 'Ownership verified by GoBookr');
+  } catch (_) { /* claims table unavailable: skip */ }
+  push(shop.profile_published_at, 'eye', 'Page published');
+  push(shop.profile_updated_at, 'pencil', 'Business details updated');
+  const recent = (list) => list.slice().sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
+  const photos = recent(profile.photos || []);
+  if (photos.length) push(photos[0].created_at, 'image', photos.length === 1 ? '1 photo in your gallery' : `Photo added · ${photos.length} in your gallery`);
+  for (const s of recent(profile.services || []).slice(0, 3)) push(s.created_at, 'scissors', `Service added: ${s.name}`);
+  for (const m of team) {
+    const who = m.business_name || m.email;
+    if (m.status === 'accepted') push(m.accepted_at, 'users', `${who} joined your team`);
+    else if (m.status === 'pending') push(m.last_sent_at || m.invited_at, 'mail', `Invitation sent to ${m.email}`);
+    else if (m.status === 'requested') push(m.invited_at, 'users', `${who} asked to join your team`);
+    else if (m.status === 'left') push(m.ended_at, 'users', `${who} left your team`);
+    else if (m.status === 'removed') push(m.ended_at, 'users', `${who} was removed from your page`);
+  }
+  return out.sort((a, b) => new Date(b.at) - new Date(a.at)).slice(0, 12);
 }
 function render(ctx, shop, shops, { tab, step, flash, status = 200, extra } = {}) {
   const data = dashboardData(ctx, shop, extra);
   const t = View.TABS.some(([id]) => id === tab) ? tab : 'overview';
   const s = Number(step) >= 1 && Number(step) <= 6 ? Number(step) : null;
-  send(ctx.res, layout({ title: `${shop.name} · Business dashboard`, currentUser: ctx.currentUser, session: ctx.session, robots: 'noindex,nofollow',
+  send(ctx.res, layout({ title: `${shop.name} · Business dashboard`, currentUser: ctx.currentUser, session: ctx.session, robots: 'noindex,nofollow', app: 'business',
     flash: flash || flashFromQuery(ctx.query), body: View.page({ shop, shops, tab: t, step: s, data }) }), status);
 }
 

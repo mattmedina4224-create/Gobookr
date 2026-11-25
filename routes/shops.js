@@ -6,11 +6,24 @@ const { send, flashFromQuery } = require('../lib/http');
 const { escapeHtml } = require('../lib/util');
 const ShopProfile = require('../lib/shop-profile');
 const { renderProfile, structuredData, metaDescription } = require('../lib/shop-profile-view');
+const ShopAnalytics = require('../lib/shop-analytics');
 
 function shopForClaim(id) { return db.prepare('SELECT * FROM shops WHERE id = ?').get(id); }
 function pendingShopClaim(shopId, userId) { return db.prepare("SELECT id FROM shop_claims WHERE shop_id = ? AND claimant_user_id = ? AND status = 'pending' ORDER BY id DESC LIMIT 1").get(shopId, userId); }
 
 module.exports = function (router) {
+  // Counts a "Book" click, then sends the visitor to the business's own booking page.
+  router.get('/shop/:id/book', async (ctx) => {
+    const id = Number(ctx.params.id);
+    const shop = Number.isInteger(id) && id > 0 ? db.prepare('SELECT id, owner_user_id, claim_status, booking_url FROM shops WHERE id = ?').get(id) : null;
+    const booking = shop ? ShopProfile.publicUrl(shop.booking_url) : '';
+    if (!shop || !booking || !/^https?:\/\//i.test(booking)) return send(ctx.res, layout({ title: 'Booking not available', currentUser: ctx.currentUser, session: ctx.session, body: '<section class="section container"><div class="panel"><h1>Online booking is not connected</h1><p>This business has not added a booking link yet.</p></div></section>' }), 404);
+    const isOwner = Boolean(shop.claim_status === 'claimed' && ctx.currentUser && Number(shop.owner_user_id) === Number(ctx.currentUser.id));
+    ShopAnalytics.record(shop.id, 'booking_click', { req: ctx.req, isOwner });
+    ctx.res.writeHead(302, { Location: booking, 'Cache-Control': 'no-store', 'Referrer-Policy': 'strict-origin-when-cross-origin' });
+    ctx.res.end();
+  });
+
   router.get('/shop/:id', async (ctx) => {
     const id = Number(ctx.params.id);
     const shop = Number.isInteger(id) && id > 0 ? db.prepare('SELECT * FROM shops WHERE id = ?').get(id) : null;
@@ -29,6 +42,7 @@ module.exports = function (router) {
     const full = claimed && (mode === 'preview' || Boolean(shop.profile_published_at));
     // Professionals see where they stand with a claimed business (request to join, invited, on the team).
     const relationship = claimed && ctx.currentUser?.role === 'pro' ? ShopProfile.teamRelationship(ctx.currentUser, shop.id) : null;
+    if (mode !== 'preview') ShopAnalytics.record(shop.id, 'profile_view', { req: ctx.req, isOwner });
     const body = renderProfile({ shop, profile, listedPros, mode, canEdit: isOwner, relationship, csrf: ctx.session?.csrf_token || '' });
     const shopUrl = 'https://gobookr.com/shop/' + shop.id;
     send(ctx.res, layout({
