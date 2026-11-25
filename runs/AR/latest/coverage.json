@@ -1,0 +1,380 @@
+{
+ "state": "AR",
+ "census_places": 621,
+ "places_covered": 18,
+ "place_coverage_pct": 2.9,
+ "census_counties": 75,
+ "counties_covered": 14,
+ "counties_uncovered": [
+  "Arkansas County",
+  "Ashley County",
+  "Baxter County",
+  "Bradley County",
+  "Calhoun County",
+  "Chicot County",
+  "Clark County",
+  "Clay County",
+  "Cleveland County",
+  "Columbia County",
+  "Conway County",
+  "Crawford County",
+  "Crittenden County",
+  "Cross County",
+  "Dallas County",
+  "Desha County",
+  "Drew County",
+  "Franklin County",
+  "Fulton County",
+  "Grant County",
+  "Hempstead County",
+  "Hot Spring County",
+  "Howard County",
+  "Independence County",
+  "Izard County",
+  "Jackson County",
+  "Jefferson County",
+  "Johnson County",
+  "Lafayette County",
+  "Lawrence County",
+  "Lee County",
+  "Lincoln County",
+  "Little River County",
+  "Logan County",
+  "Lonoke County",
+  "Madison County",
+  "Marion County",
+  "Miller County",
+  "Monroe County",
+  "Montgomery County",
+  "Nevada County",
+  "Newton County",
+  "Ouachita County",
+  "Perry County",
+  "Phillips County",
+  "Pike County",
+  "Poinsett County",
+  "Polk County",
+  "Prairie County",
+  "Randolph County",
+  "Saline County",
+  "Scott County",
+  "Searcy County",
+  "Sevier County",
+  "Sharp County",
+  "St. Francis County",
+  "Stone County",
+  "Union County",
+  "Van Buren County",
+  "Woodruff County",
+  "Yell County"
+ ],
+ "communities_outside_census_places": [],
+ "top_covered_places": [
+  {
+   "name": "Fayetteville",
+   "shops": 18
+  },
+  {
+   "name": "Conway",
+   "shops": 14
+  },
+  {
+   "name": "North Little Rock",
+   "shops": 7
+  },
+  {
+   "name": "Rogers",
+   "shops": 5
+  },
+  {
+   "name": "Eureka Springs",
+   "shops": 3
+  },
+  {
+   "name": "Fort Smith",
+   "shops": 3
+  },
+  {
+   "name": "Harrison",
+   "shops": 2
+  },
+  {
+   "name": "Springdale",
+   "shops": 2
+  },
+  {
+   "name": "Jonesboro",
+   "shops": 2
+  },
+  {
+   "name": "Little Rock",
+   "shops": 2
+  },
+  {
+   "name": "Russellville",
+   "shops": 2
+  },
+  {
+   "name": "Jacksonville",
+   "shops": 1
+  },
+  {
+   "name": "Bentonville",
+   "shops": 1
+  },
+  {
+   "name": "Paragould",
+   "shops": 1
+  },
+  {
+   "name": "Greers Ferry",
+   "shops": 1
+  },
+  {
+   "name": "Blytheville",
+   "shops": 1
+  },
+  {
+   "name": "Searcy",
+   "shops": 1
+  },
+  {
+   "name": "Hot Springs",
+   "shops": 1
+  }
+ ],
+ "uncovered_places_with_held_candidates": [
+  {
+   "name": "Cabot",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 11
+  },
+  {
+   "name": "Arkadelphia",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 8
+  },
+  {
+   "name": "Siloam Springs",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 8
+  },
+  {
+   "name": "Van Buren",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 7
+  },
+  {
+   "name": "Atkins",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Marked Tree",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Pine Bluff",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Sherwood",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Stuttgart",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Bryant",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Charleston",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Manila",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Osceola",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Bella Vista",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Imboden",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Magnolia",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Monticello",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Pocahontas",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Texarkana",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Warren",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Alma",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Belleville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Benton",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Cave City",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Clinton",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Danville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Dover",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Farmington",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Hardy",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Hot Springs Village",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Leachville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Lead Hill",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Lepanto",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "London",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Malvern",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Marmaduke",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Marvell",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Monette",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Mountain Home",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Mountain View",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Paris",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Pottsville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Sheridan",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Sulphur Springs",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Wabbaseka",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Waldron",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  }
+ ],
+ "uncovered_places_without_candidates": 557,
+ "source": "U.S. Census Bureau 2020 place-by-county and county code files"
+}

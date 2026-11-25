@@ -1,0 +1,554 @@
+{
+ "http://www.barbertician.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 46
+ },
+ "https://www.foxandsparrowsalon.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 200
+ },
+ "https://haircutmenshilohfayettevillear.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 244
+ },
+ "https://www.thebeautyloftbooking.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 67
+ },
+ "https://www.deadswankysalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 359
+ },
+ "https://aboveacut.com/": {
+  "status": "error",
+  "error": "ECONNRESET",
+  "ms": 49
+ },
+ "http://eclipsesalonarkansas.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 10
+ },
+ "https://salons.greatclips.com/us/ar/fayetteville/1261-n-steamboat-dr": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 375
+ },
+ "https://salons.greatclips.com/us/ar/jacksonville/2070-john-harden-dr": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 49
+ },
+ "https://salons.greatclips.com/us/ar/north-little-rock/2605-mccain-blvd": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 65
+ },
+ "http://www.freshairsalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.freshairsalon.com/",
+  "ms": 522
+ },
+ "https://www.mastercuts.com/locations/ar/fayetteville/mastercuts-northwest-arkansas-mall-haircuts-316.html": {
+  "status": "error",
+  "error": "ERR_TLS_CERT_ALTNAME_INVALID",
+  "ms": 442
+ },
+ "https://thebearandbarber.wixsite.com/bearbarber": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 55
+ },
+ "https://www.hudsonhawk.com/locations/bentonville/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 68
+ },
+ "https://salons.greatclips.com/us/ar/little-rock/10300-n-rodney-parham-rd?utm_source=google&utm_medium=organic&utm_campaign=gmb": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 347
+ },
+ "https://salons.greatclips.com/us/ar/paragould/1731-w-kingshighway?utm_source=google&utm_medium=organic&utm_campaign=gmb": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 82
+ },
+ "https://linktr.ee/BeardedBuffalo": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 91
+ },
+ "https://thegentsplace.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 164
+ },
+ "https://salons.greatclips.com/us/ar/conway/467-elsinger-blvd": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 150
+ },
+ "https://www.mattsuppercuts.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 197
+ },
+ "https://www.customdesignhair.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 765
+ },
+ "https://sportclips.com/us-ar-conway-ar102": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 227
+ },
+ "https://www.supercuts.com/locations/ar/fayetteville/spring-creek-centre-haircuts-80320.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 217
+ },
+ "http://missionsbarbercollege.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 450
+ },
+ "https://solangesalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1047
+ },
+ "https://ballfadedit.booksy.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://lhkw.app.link/dInNO79mFYb?_p=c40a35c69e1c65f3e7038ffae9",
+  "ms": 777
+ },
+ "https://dreamhousenwa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 265
+ },
+ "http://www.robertjamessalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 478
+ },
+ "https://conwayhairsalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 778
+ },
+ "https://haircutmenparkavenuelittlerockar.com/?utm_source=SOCi&utm_medium=GMB": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 44
+ },
+ "https://mysite.vagaro.com/salonlavishandlashbar": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 657
+ },
+ "http://www.leenailsco.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 80
+ },
+ "https://refugehaircompany.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 739
+ },
+ "http://www.vanity-calls.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 273
+ },
+ "https://the-bungalow-salon.business.site/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 589
+ },
+ "https://www.clips-hairstudio.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 38
+ },
+ "http://nunailsfayetteville.com/": {
+  "status": "blocked",
+  "http_status": 403,
+  "final_url": "https://www.hugedomains.com/domain_profile.cfm?d=nunailsfayetteville.com",
+  "ms": 223
+ },
+ "https://www.milksugarbath.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 244
+ },
+ "https://the-cottage-beauty-salon.business.site/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 629
+ },
+ "http://janewhitecosmetics.org/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 175
+ },
+ "https://www.spa810.com/fayetteville-college-marketplace/": {
+  "status": "error",
+  "error": "ERR_SSL_SSL/TLS_ALERT_HANDSHAKE_FAILURE",
+  "ms": 100
+ },
+ "https://www.pamperedprincessar.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 97
+ },
+ "https://naturalnailsfayetteville.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 222
+ },
+ "https://mividaskin.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 704
+ },
+ "https://locations.waxcenter.com/ar/rogers/rogers-0789.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 165
+ },
+ "https://www.ulta.com/stores/fayetteville-ar-417": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 573
+ },
+ "http://scarletbeautyar.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 54
+ },
+ "https://www.haircoutureboutique.com/": {
+  "status": "error",
+  "http_status": 402,
+  "ms": 105
+ },
+ "https://www.ulta.com/stores/rogers-ar-419": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 397
+ },
+ "https://bonitabrowbar.com/blogs/locations/northwest-mall-ar": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 110
+ },
+ "https://palmbeachtan.com/locations/AR/Fayetteville-Citizens-Drive/": {
+  "status": "dead",
+  "http_status": 404,
+  "final_url": "https://palmbeachtan.com/locations/ar/fayetteville-citizens-drive",
+  "ms": 569
+ },
+ "https://www.glitz-hair-collection.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1109
+ },
+ "https://palmbeachtan.com/locations/AR/Fayetteville-Martin-Luther-King-Boulevard/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://palmbeachtan.com/locations/ar/fayetteville-martin-luther-king-boulevard",
+  "ms": 891
+ },
+ "https://www.therapods.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 252
+ },
+ "http://jessthreadingbeautysalon.net/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 72
+ },
+ "https://www.bathandbodyworks.com/": {
+  "status": "error",
+  "http_status": 307,
+  "ms": 114
+ },
+ "https://rejuvenatedmedspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 97
+ },
+ "https://www.merlenormanstudio.com/ar/fayetteville/mn-3202/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 327
+ },
+ "https://website--192271696693690475128-nailsalon.business.site/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 616
+ },
+ "https://arkansaslaserandskincare.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.arkansaslaserandskincare.com/",
+  "ms": 242
+ },
+ "https://www.conwaymedspa.com/": {
+  "status": "error",
+  "error": "ECONNRESET",
+  "ms": 54
+ },
+ "https://www.mzpipspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 435
+ },
+ "https://thespaah.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 86
+ },
+ "https://www.iconicbeautynwa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 509
+ },
+ "https://oasishairandtan.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.oasishairandtan.com/",
+  "ms": 614
+ },
+ "https://www.spa1905.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 114
+ },
+ "https://antonynailsbar.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 107
+ },
+ "https://suchnessspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 182
+ },
+ "https://palmbeachtan.com/locations/AR/Conway-Dave-Ward-Drive": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://palmbeachtan.com/locations/ar/conway-dave-ward-drive",
+  "ms": 532
+ },
+ "https://www.merlenormanstudio.com/ar/conway/mn-9832/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 32
+ },
+ "https://luxnailbarar.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 194
+ },
+ "https://bybrwnsgr.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 463
+ },
+ "https://www.fancynailspaconway.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 70
+ },
+ "https://thebasicbeespa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 589
+ },
+ "https://www.pinnaclehillspromenade.com/en/directory/pinnacle-nail-spa-26612.html": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.pinnaclehillspromenade.com/en/",
+  "ms": 1217
+ },
+ "https://www.nwaelectrolysis.com/": {
+  "status": "error",
+  "error": "UND_ERR_SOCKET",
+  "ms": 190
+ },
+ "https://locations.waxcenter.com/ar/conway/conway-dave-ward-drive-1069.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 10
+ },
+ "https://tlnailsloungeconway.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 189
+ },
+ "https://annaeyebrowthreading.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1399
+ },
+ "https://www.buffyswellness.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 70
+ },
+ "https://www.solacedayspa.net/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 96
+ },
+ "http://www.beautyworld1.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 106
+ },
+ "https://www.ulta.com/stores/conway-ar-665": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 190
+ },
+ "https://www.ulta.com/stores/fort-smith-ar-236": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 348
+ },
+ "https://estheticsbytori.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 734
+ },
+ "https://www.ulta.com/stores/north-little-rock-ar-780": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 58
+ },
+ "https://milanlaser.com/locations/ar/conway/975-s-amity-rd": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1025
+ },
+ "https://www.ulta.com/stores/searcy-ar-1262": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 214
+ },
+ "https://pinkythreadingandwaxingsalon.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 69
+ },
+ "https://palmbeachtan.com/locations/AR/Russellville-North-Arkansas-Avenue": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://palmbeachtan.com/locations/ar/russellville-north-arkansas-avenue",
+  "ms": 507
+ },
+ "https://kingnailsandspanorthlittlerock.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 184
+ },
+ "http://www.icehousetattoo.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 42
+ },
+ "https://www.highnoontattoo.net/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 59
+ },
+ "https://floatspaus.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 62
+ },
+ "https://bodywellnessar.com/": {
+  "status": "error",
+  "error": "ECONNRESET",
+  "ms": 50
+ },
+ "https://www.fayettevillemassage.com/": {
+  "status": "error",
+  "error": "ECONNRESET",
+  "ms": 183
+ },
+ "https://www.ulta.com/stores/little-rock-ar-610": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 424
+ },
+ "https://locations.massageenvy.com/arkansas/conway/1040-south-amity-rd.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 133
+ },
+ "https://www.stigmainktattoo.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 179
+ },
+ "https://www.aperfectimage.org/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 466
+ },
+ "http://brainstormtattoo.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 44
+ },
+ "https://www.zachturnerwellness.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 82
+ },
+ "http://23xbr3wm1vcuc10x.vistaprintdigital.com/": {
+  "status": "dead",
+  "http_status": 404,
+  "final_url": "https://renderrush.digital.vistaprint.io/s/23xbr3wm1vcuc10x",
+  "ms": 181
+ },
+ "https://chicnailslr.com/": {
+  "status": "error",
+  "http_status": 526,
+  "ms": 801
+ },
+ "https://www.massagebook.com/therapists/the-body-balance/services/inhouse": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 356
+ },
+ "https://www.fortsmithtan.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 4989
+ },
+ "https://starnail.com/": {
+  "status": "error",
+  "error": "UND_ERR_CONNECT_TIMEOUT",
+  "ms": 10222
+ },
+ "https://beautynwa.com/campus-locations/fayetteville": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://beautynwa.com/fayetteville-campus/",
+  "ms": 11667
+ }
+}
