@@ -1,0 +1,212 @@
+{
+ "https://prestigesalonandspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 248
+ },
+ "https://www.greatclips.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 316
+ },
+ "https://www.artistrysalonsd.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 677
+ },
+ "https://multiculturalbarbershop.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 561
+ },
+ "http://www.nvstudiosalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 785
+ },
+ "https://www.blacksheepparlour.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 335
+ },
+ "https://www.regissalons.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.signaturestyle.com/regissalon",
+  "ms": 1140
+ },
+ "https://www.therevivalstudio.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 185
+ },
+ "https://shop.saloninteractive.com/store/icapellihairsalon": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1322
+ },
+ "https://6throne.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 234
+ },
+ "https://adamandevestylingsalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1439
+ },
+ "https://salondesoleil.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1481
+ },
+ "https://www.edifysalon.org/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 164
+ },
+ "https://hairbykaceybrown.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.hairbykaceybrown.co/",
+  "ms": 898
+ },
+ "https://www.thehcresort.com/salon": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 224
+ },
+ "https://blusalonspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1447
+ },
+ "http://www.spa2000sd.net/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 643
+ },
+ "https://salon-mb.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 922
+ },
+ "http://lereveluxurystudios.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.lereveluxurystudios.com/",
+  "ms": 1020
+ },
+ "https://altardstudio.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1698
+ },
+ "https://oscarnailsspasd.com/": {
+  "status": "error",
+  "error": "UNABLE_TO_GET_ISSUER_CERT_LOCALLY",
+  "ms": 231
+ },
+ "https://www.thenaturalapothecary.co/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 438
+ },
+ "https://www.ulta.com/stores/sioux-falls-sd-1594": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1054
+ },
+ "https://sprucesalonandspal.wixsite.com/my-site": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 152
+ },
+ "https://www.ulta.com/stores/sioux-falls-sd-674": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1346
+ },
+ "https://www.beautysocietyco.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 442
+ },
+ "https://www.apexinktattoo.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 113
+ },
+ "https://www.ulta.com/stores/rapid-city-sd-719": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1287
+ },
+ "https://www.vishnubunnytattoo.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 150
+ },
+ "https://alienandco.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 186
+ },
+ "https://outlawtats.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 358
+ },
+ "https://my-business-100054-107191.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 745
+ },
+ "https://margie-reginelli.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 647
+ },
+ "https://nailsbyjennytd.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 2241
+ },
+ "https://www.ap10nailbar.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 461
+ },
+ "https://www.stressreliefspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 546
+ },
+ "https://yearroundbrown.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1722
+ },
+ "https://www.whitebuffalo.studio/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 999
+ },
+ "https://gracefultouch.org/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1064
+ },
+ "http://northernhillscollective.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.northernhillscollective.com/",
+  "ms": 1519
+ },
+ "https://flawlesssalon.mysalononline.com/booking": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://flawlesssalon.mysalononline.com/Unavailable/NotFound",
+  "ms": 1064
+ }
+}

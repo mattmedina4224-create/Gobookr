@@ -1,0 +1,55 @@
+{
+ "state": "SD",
+ "state_name": "South Dakota",
+ "wave": 10,
+ "created_at": "2026-11-25T01:22:22.431Z",
+ "staging_only": true,
+ "sources": [
+  {
+   "name": "OpenStreetMap (Overpass)",
+   "url": "https://overpass-api.de/api/interpreter",
+   "status": "processed",
+   "records": 208,
+   "parts_ok": 4,
+   "parts_total": 4
+  },
+  {
+   "name": "U.S. Census Geocoder (place containing map point)",
+   "url": "https://geocoding.geo.census.gov/",
+   "status": "processed",
+   "records": 84
+  }
+ ],
+ "license_records_scanned": 0,
+ "licensed_active_candidates": 0,
+ "license_dropped": null,
+ "license_fields": null,
+ "license_shop_types": [],
+ "license_type_counts": [],
+ "license_type_lookup": [],
+ "census_city_lookup": {
+  "attempted": 85,
+  "filled": 84,
+  "failed": 0
+ },
+ "mapped_beauty_places": 208,
+ "overpass_endpoint": "https://overpass-api.de/api/interpreter",
+ "total_candidates": 196,
+ "with_websites": 43,
+ "category_counts": {
+  "hair": 103,
+  "barber": 15,
+  "brows": 3,
+  "waxing": 1,
+  "nails": 28,
+  "permanent_makeup": 1,
+  "spray_tanning": 4,
+  "massage": 17,
+  "makeup": 5,
+  "skincare": 3,
+  "tattoo": 16
+ },
+ "errors": [],
+ "note": "A license record or map listing alone does not prove a business is open. The importer publishes only rows that meet its rules; the rest are held.",
+ "attribution": "OpenStreetMap data © OpenStreetMap contributors (ODbL, https://www.openstreetmap.org/copyright). Licensing data from the listed state open-data portals."
+}

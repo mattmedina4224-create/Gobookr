@@ -1,0 +1,209 @@
+{
+ "state": "SD",
+ "census_places": 484,
+ "places_covered": 13,
+ "place_coverage_pct": 2.7,
+ "census_counties": 66,
+ "counties_covered": 11,
+ "counties_uncovered": [
+  "Aurora County",
+  "Beadle County",
+  "Bennett County",
+  "Bon Homme County",
+  "Brule County",
+  "Buffalo County",
+  "Butte County",
+  "Campbell County",
+  "Charles Mix County",
+  "Clark County",
+  "Clay County",
+  "Corson County",
+  "Custer County",
+  "Day County",
+  "Deuel County",
+  "Dewey County",
+  "Douglas County",
+  "Edmunds County",
+  "Fall River County",
+  "Faulk County",
+  "Grant County",
+  "Gregory County",
+  "Haakon County",
+  "Hamlin County",
+  "Hand County",
+  "Hanson County",
+  "Harding County",
+  "Hughes County",
+  "Hyde County",
+  "Jackson County",
+  "Jerauld County",
+  "Jones County",
+  "Kingsbury County",
+  "Lake County",
+  "Lyman County",
+  "Marshall County",
+  "McCook County",
+  "McPherson County",
+  "Mellette County",
+  "Miner County",
+  "Moody County",
+  "Oglala Lakota County",
+  "Perkins County",
+  "Potter County",
+  "Roberts County",
+  "Sanborn County",
+  "Spink County",
+  "Stanley County",
+  "Sully County",
+  "Todd County",
+  "Turner County",
+  "Union County",
+  "Walworth County",
+  "Yankton County",
+  "Ziebach County"
+ ],
+ "communities_outside_census_places": [],
+ "top_covered_places": [
+  {
+   "name": "Rapid City",
+   "shops": 11
+  },
+  {
+   "name": "Sioux Falls",
+   "shops": 10
+  },
+  {
+   "name": "Mitchell",
+   "shops": 2
+  },
+  {
+   "name": "Brookings",
+   "shops": 2
+  },
+  {
+   "name": "Aberdeen",
+   "shops": 1
+  },
+  {
+   "name": "Baltic",
+   "shops": 1
+  },
+  {
+   "name": "Brandon",
+   "shops": 1
+  },
+  {
+   "name": "Parkston",
+   "shops": 1
+  },
+  {
+   "name": "Watertown",
+   "shops": 1
+  },
+  {
+   "name": "Colome",
+   "shops": 1
+  },
+  {
+   "name": "Sturgis",
+   "shops": 1
+  },
+  {
+   "name": "Deadwood",
+   "shops": 1
+  },
+  {
+   "name": "Freeman",
+   "shops": 1
+  }
+ ],
+ "uncovered_places_with_held_candidates": [
+  {
+   "name": "Milbank",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 8
+  },
+  {
+   "name": "Vermillion",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 8
+  },
+  {
+   "name": "Belle Fourche",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 7
+  },
+  {
+   "name": "Spearfish",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Groton",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Yankton",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Madison",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Pierre",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Chamberlain",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Garretson",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Alcester",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Gregory",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Lake Norden",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Lake Preston",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Lemmon",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Miller",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Warner",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  }
+ ],
+ "uncovered_places_without_candidates": 454,
+ "source": "U.S. Census Bureau 2020 place-by-county and county code files"
+}
