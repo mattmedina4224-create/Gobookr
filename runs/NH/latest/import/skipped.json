@@ -1,0 +1,54 @@
+[
+ {
+  "name": "Supercuts",
+  "city": "Concord",
+  "state": "NH",
+  "street_address": "374 Loudon Road",
+  "zip_code": "03301",
+  "county": "",
+  "categories": [
+   "stylist"
+  ],
+  "website_url": "https://www.supercuts.com/locations/nh/concord/heights-courtyard-haircuts-80776.html",
+  "phone": "(603) 225-0300",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/node/8109654904",
+  "source_external_id": "osm:node/8109654904",
+  "license_number": null,
+  "latitude": 43.2308662,
+  "longitude": -71.4784417,
+  "operational_status": "verified",
+  "checked_at": "2026-11-25",
+  "raw_name": "Supercuts",
+  "website_candidate": "https://www.supercuts.com/locations/nh/concord/heights-courtyard-haircuts-80776.html",
+  "website_source_url": "",
+  "reason": "duplicate_candidate",
+  "duplicate_of": "osm:node/6950010392"
+ },
+ {
+  "name": "Supercuts",
+  "city": "Nashua",
+  "state": "NH",
+  "street_address": "300 Main Street",
+  "zip_code": "03060",
+  "county": "",
+  "categories": [
+   "stylist"
+  ],
+  "website_url": "https://www.supercuts.com/locations/nh/nashua/main-street-marketplace-haircuts-80366.html",
+  "phone": "(603) 594-8545",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/way/204875441",
+  "source_external_id": "osm:way/204875441",
+  "license_number": null,
+  "latitude": 42.7525459,
+  "longitude": -71.4611535,
+  "operational_status": "verified",
+  "checked_at": "2026-11-25",
+  "raw_name": "Supercuts",
+  "website_candidate": "https://www.supercuts.com/locations/nh/nashua/main-street-marketplace-haircuts-80366.html",
+  "website_source_url": "",
+  "reason": "duplicate_candidate",
+  "duplicate_of": "osm:way/159265428"
+ }
+]
