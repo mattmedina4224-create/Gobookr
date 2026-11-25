@@ -1,0 +1,421 @@
+{
+ "https://www.supercuts.com/locations/nearme/haircut/HI/HONOLULU/662-KEEAUMOKU-ST/83361": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 248
+ },
+ "https://www.supercuts.com/locations/hi/mililani/the-gateway-at-mililani-mauka-haircuts-90942.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 258
+ },
+ "https://www.supercuts.com/locations/nearme/haircut/HI/AIEA/99-115-AIEA-HEIGHTS-DRIVE-120/83344": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 364
+ },
+ "http://www.bravosalonhawaii.com/index.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 390
+ },
+ "https://thecutleryhnl.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.thecutleryhnl.com/",
+  "ms": 487
+ },
+ "https://salons.greatclips.com/us/hi/pearl-city/1000-kamehameha-hwy": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 506
+ },
+ "https://www.hifadebarbershop.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 524
+ },
+ "https://www.supercuts.com/locations/nearme/haircut/HI/Pearl-City/Pearl-City-Gateway/83365?location=96782": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 278
+ },
+ "https://www.supercuts.com/locations/nearme/haircut/HI/WAIPAHU/94-1235-KA-UKA-BLVD-STE-F/83359": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 329
+ },
+ "https://www.tigereyemaui.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 404
+ },
+ "https://www.hawaiikaibarber.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 450
+ },
+ "https://www.berniescuts.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 860
+ },
+ "https://www.salons10.com/US/Honolulu/175605059131302/Salon-Kai": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 427
+ },
+ "https://hair-maui.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 441
+ },
+ "https://www.topgunbabershop.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 732
+ },
+ "https://www.4thavenuefresh.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 350
+ },
+ "https://www.jvsalonhnl.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 354
+ },
+ "https://kekoa-camat.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 839
+ },
+ "https://www.sksalon808.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 452
+ },
+ "https://the-buzz-honolulu.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 576
+ },
+ "https://hukilausalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 191
+ },
+ "https://soho-hawaii.com/tenpo/koorina_eng.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 916
+ },
+ "https://www.supercuts.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 88
+ },
+ "https://jennysbarberhairstylingaiea.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 361
+ },
+ "https://oak-salon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 278
+ },
+ "https://beautyilluminator.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 561
+ },
+ "https://makeupbybev.com/": {
+  "status": "error",
+  "error": "ERR_SSL_TLSV1_ALERT_INTERNAL_ERROR",
+  "ms": 324
+ },
+ "https://joshuaokuda.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1163
+ },
+ "https://www.mauimassageandwellness.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 394
+ },
+ "https://www.luxeestheticsbyceline.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 362
+ },
+ "http://www.dashingdivashawaii.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 365
+ },
+ "http://cosmodayspamaui.com/": {
+  "status": "blocked",
+  "http_status": 403,
+  "final_url": "https://cosmodayspamaui.com/",
+  "ms": 783
+ },
+ "https://www.ulta.com/stores/kailua-hi-1457": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 858
+ },
+ "http://naildesignmililani.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://expireddomains.com/domain/naildesignmililani.com?utm_source=redi",
+  "ms": 566
+ },
+ "https://serenenailshonolulu.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 421
+ },
+ "https://gmilashnailshilo.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 327
+ },
+ "https://selinaspabeauty.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.selinaspabeauty.com/",
+  "ms": 601
+ },
+ "https://locations.waxcenter.com/hi/pearlcity/pearl-city-0538.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 856
+ },
+ "https://www.ulta.com/stores/pearl-city-hi-1454": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 509
+ },
+ "https://barebeautifulesthetics.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 367
+ },
+ "https://miminailssalonhi.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 360
+ },
+ "https://briobeauty.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 867
+ },
+ "https://baehawaii.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1044
+ },
+ "https://www.indulgexhi.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1228
+ },
+ "https://nailsdesignwahiawahawaii.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 606
+ },
+ "https://www.sephora.com/happening/stores/honolulu-kalakaua": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 199
+ },
+ "https://www.ahskincare.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1047
+ },
+ "https://creativenailshonolulu.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 308
+ },
+ "https://marshanadalinsalonandspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "http://www.marshanadalin.com/",
+  "ms": 2866
+ },
+ "https://www.professionail.com/home/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 2435
+ },
+ "https://honolulu-wellness.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1002
+ },
+ "https://www.naturalhealinghawaii.com/": {
+  "status": "error",
+  "error": "UND_ERR_SOCKET",
+  "ms": 196
+ },
+ "http://www.zensationsspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.zensationsspa.com/",
+  "ms": 3484
+ },
+ "https://hechawaii.com/": {
+  "status": "error",
+  "error": "UND_ERR_SOCKET",
+  "ms": 260
+ },
+ "https://rockstarhawaii.com/": {
+  "status": "error",
+  "error": "UND_ERR_SOCKET",
+  "ms": 278
+ },
+ "https://lapurewaikiki.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 844
+ },
+ "https://www.ahimsatattoos.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 408
+ },
+ "https://mauimassagespa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 527
+ },
+ "https://sastattoo.ink/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 367
+ },
+ "https://www.honuatherapy.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 754
+ },
+ "https://www.sacredartwaikiki.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 625
+ },
+ "https://hanaioriginals.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 970
+ },
+ "https://waikikimassageandfootspa.com/": {
+  "status": "error",
+  "http_status": 502,
+  "ms": 570
+ },
+ "http://www.soulsignaturetattoo.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.soulsignaturetattoo.com/",
+  "ms": 1445
+ },
+ "https://www.pureblisshawaii.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 713
+ },
+ "https://locations.massageenvy.com/hawaii/pearl-city/1000-kamehameha-hwy-222.html": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://locations.massageenvy.com/index.html",
+  "ms": 1416
+ },
+ "https://www.marriott.com/en-us/hotels/oggxr-the-resort-at-kapalua-bay-maui/experiences/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1026
+ },
+ "https://midpacifictattoo.com/": {
+  "status": "error",
+  "error": "UND_ERR_SOCKET",
+  "ms": 675
+ },
+ "https://www.skinfactorytattoo.com/tattoo-shops-waikiki/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1579
+ },
+ "https://aphinyathaimassage.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 755
+ },
+ "https://www.tnt.ink/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 487
+ },
+ "https://www.bungalowguchi.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 928
+ },
+ "https://bodyharmonyhilo.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 646
+ },
+ "https://southseas-tattoo.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 615
+ },
+ "https://www.asanaspawaikiki.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 769
+ },
+ "https://www.blackcattattoohonolulu.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 718
+ },
+ "https://banyantreetattoo.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 431
+ },
+ "https://halenuitattoos.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 724
+ },
+ "https://www.elevatehealthy.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://elevatehealthy.com/",
+  "ms": 4323
+ },
+ "https://jenmathaimassage.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 2939
+ },
+ "https://olaspahilo.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 3614
+ },
+ "http://resorts.disney.go.com/aulani-hawaii-resort/spa-fitness/": {
+  "status": "error",
+  "error": "TimeoutError",
+  "ms": 15002
+ }
+}

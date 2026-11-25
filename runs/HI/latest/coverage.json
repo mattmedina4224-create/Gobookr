@@ -1,0 +1,230 @@
+{
+ "state": "HI",
+ "census_places": 161,
+ "places_covered": 20,
+ "place_coverage_pct": 12.4,
+ "census_counties": 5,
+ "counties_covered": 4,
+ "counties_uncovered": [
+  "Kalawao County"
+ ],
+ "communities_outside_census_places": [
+  {
+   "city": "Honolulu",
+   "shops": 17
+  },
+  {
+   "city": "Mililani",
+   "shops": 3
+  },
+  {
+   "city": "Kailua-Kona",
+   "shops": 1
+  },
+  {
+   "city": "Kamuela",
+   "shops": 1
+  }
+ ],
+ "top_covered_places": [
+  {
+   "name": "Aiea",
+   "shops": 10
+  },
+  {
+   "name": "Hilo",
+   "shops": 7
+  },
+  {
+   "name": "Pearl City",
+   "shops": 5
+  },
+  {
+   "name": "Lahaina",
+   "shops": 4
+  },
+  {
+   "name": "Laie",
+   "shops": 2
+  },
+  {
+   "name": "Waipahu",
+   "shops": 2
+  },
+  {
+   "name": "Makawao",
+   "shops": 2
+  },
+  {
+   "name": "Kapolei",
+   "shops": 2
+  },
+  {
+   "name": "Lihue",
+   "shops": 1
+  },
+  {
+   "name": "Wailuku",
+   "shops": 1
+  },
+  {
+   "name": "Waianae",
+   "shops": 1
+  },
+  {
+   "name": "Ewa Beach",
+   "shops": 1
+  },
+  {
+   "name": "Pukalani",
+   "shops": 1
+  },
+  {
+   "name": "Kailua",
+   "shops": 1
+  },
+  {
+   "name": "Wahiawa",
+   "shops": 1
+  },
+  {
+   "name": "Kihei",
+   "shops": 1
+  },
+  {
+   "name": "Kapaa",
+   "shops": 1
+  },
+  {
+   "name": "Urban Honolulu",
+   "shops": 1
+  },
+  {
+   "name": "Hawi",
+   "shops": 1
+  },
+  {
+   "name": "Waialua",
+   "shops": 1
+  }
+ ],
+ "uncovered_places_with_held_candidates": [
+  {
+   "name": "East Honolulu",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 6
+  },
+  {
+   "name": "Haleiwa",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Kaneohe",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Paia",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Waimea",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Koloa",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Halawa",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Kapalua",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Waikoloa Beach Resort",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Captain Cook",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Honokaa",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Honomu",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Kahului",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Kalaheo",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Kealakekua",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Ko Olina",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Maili",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Mililani Town",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Napili-Honokowai",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Olinda",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Poipu",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Princeville",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Waimalu",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  }
+ ],
+ "uncovered_places_without_candidates": 118,
+ "source": "U.S. Census Bureau 2020 place-by-county and county code files"
+}
