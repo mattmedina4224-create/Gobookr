@@ -1,0 +1,382 @@
+{
+ "https://www.avalonsuitesomaha.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 145
+ },
+ "https://www.darkhorseomaha.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 386
+ },
+ "https://sisulincoln.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 542
+ },
+ "http://www.hairworxfs.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 587
+ },
+ "https://www.dennisondahlman.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 324
+ },
+ "https://www.sportclips.com/us-ne-lincoln-ne201": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 775
+ },
+ "https://www.queenbbeautybarllc.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 85
+ },
+ "https://www.scissorsscotch.com/book-omaha": {
+  "status": "dead",
+  "http_status": 404,
+  "final_url": "https://scissorsscotch.com/book-omaha",
+  "ms": 870
+ },
+ "https://www.supercuts.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 303
+ },
+ "https://www.sbi-omaha.com/sw/swchannel/homepage/internet/schomepage.asp?traffictype=Direct": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 938
+ },
+ "http://www.hairmasterssalon.com/salondetail/default.asp?salonid=60930": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "http://www.hairmasterssalon.com/",
+  "ms": 954
+ },
+ "https://www.supercuts.com/locations/nearme/haircut/ne/columbus/the/80333": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 174
+ },
+ "https://dundeebarber.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.dundeebarber.com/",
+  "ms": 585
+ },
+ "https://crosscutsomaha.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://expireddomains.com/domain/crosscutsomaha.com?utm_source=redi",
+  "ms": 1060
+ },
+ "https://app.greatclips.com/salon/7764/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 340
+ },
+ "https://kokosbraidingsalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 344
+ },
+ "https://culture-cutz.com/contact-us": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 312
+ },
+ "https://book.squareup.com/appointments/4cb6aba7-8f16-419d-853b-9e2c56ee2ac7/location/BMY5TBHC3GG62": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 288
+ },
+ "https://www.sportclips.com/us-ne-lincoln-ne203": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 549
+ },
+ "https://goodlifegroomingformen.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://expireddomains.com/domain/goodlifegroomingformen.com?utm_source=redi",
+  "ms": 978
+ },
+ "https://leblancsalons.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 314
+ },
+ "https://app.greatclips.com/salon/9142/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 343
+ },
+ "https://www.costcutters.com/locations/nearme/haircut/ne/lincoln/233-n-48th-st-ste-s/17646": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 465
+ },
+ "https://www.fadytimesbarbershop.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 232
+ },
+ "https://salons.greatclips.com/us/ne/lincoln/8320-northwoods-dr": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 669
+ },
+ "http://rainsalonomaha.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 251
+ },
+ "https://salons.greatclips.com/us/ne/lincoln/2601-jamie-ln": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 930
+ },
+ "https://issalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 353
+ },
+ "https://app.greatclips.com/salon/3605/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 74
+ },
+ "https://www.fouronetwohair.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 259
+ },
+ "https://www.bathandbodyworks.com/": {
+  "status": "error",
+  "http_status": 307,
+  "ms": 150
+ },
+ "https://jg3-barber.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1006
+ },
+ "https://kbhousenails.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 261
+ },
+ "https://newera-barbershop.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 503
+ },
+ "http://hairloomomaha.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 154
+ },
+ "https://www.maxtan.net/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 539
+ },
+ "https://www.kanwanailsandspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 382
+ },
+ "https://palmbeachtan.com/locations/NE/15th-Cornhusker-South-15th-Street": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://palmbeachtan.com/locations/ne/15th-cornhusker-south-15th-street",
+  "ms": 804
+ },
+ "https://www.bluedoorsalonandspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 270
+ },
+ "https://www.thehairloungelincoln.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1234
+ },
+ "https://www.ulta.com/stores/omaha-ne-264": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 676
+ },
+ "https://www.oliverandtate.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 234
+ },
+ "https://palmbeachtan.com/locations/NE/Cornhusker-27th-Cornhusker-Highway": {
+  "status": "dead",
+  "http_status": 404,
+  "final_url": "https://palmbeachtan.com/locations/ne/cornhusker-27th-cornhusker-highway",
+  "ms": 451
+ },
+ "http://worldnailslincoln.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 97
+ },
+ "https://suntancity.com/find-a-salon/nebraska/lincoln/27th-street": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.suntancity.com/find-a-salon/nebraska/lincoln/27th-street",
+  "ms": 740
+ },
+ "https://studio25salonandspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 225
+ },
+ "https://loisbeautylounge.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 200
+ },
+ "https://www.ulta.com/stores/lincoln-ne-535": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 352
+ },
+ "https://www.trueskinspa.org/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 226
+ },
+ "https://tipsntoesnailspalincoln.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 454
+ },
+ "https://www.suntancity.com/find-a-salon/nebraska/lincoln/o-street?salonId=145": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 441
+ },
+ "https://west-coast-cutz.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 2191
+ },
+ "https://www.phenomenaldayspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 153
+ },
+ "http://www.theantidotesalon.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 164
+ },
+ "https://www.merlenorman.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.merlenorman.com/homepage",
+  "ms": 796
+ },
+ "https://www.merlenormanstudio.com/ne/lincoln/mn-7125/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 623
+ },
+ "https://www.ulta.com/stores/gretna-ne-1270": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 178
+ },
+ "https://toxic-beauty-by-chandra-morris.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 389
+ },
+ "https://palmbeachtan.com/locations/NE/42nd-Dodge-Dodge-Street": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://palmbeachtan.com/locations/ne/42nd-dodge-dodge-street",
+  "ms": 458
+ },
+ "https://www.ulta.com/stores/papillion-ne-292": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 516
+ },
+ "http://hotnails.unaux.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 377
+ },
+ "https://locations.massageenvy.com/nebraska/lincoln/6005-o-street.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 318
+ },
+ "https://www.mojostattooing.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 421
+ },
+ "https://www.eyecandyomaha.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 111
+ },
+ "https://www.tattoopricequotes.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 344
+ },
+ "https://www.akneadedtouchmassage.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 79
+ },
+ "https://inklinkomaha.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 244
+ },
+ "https://www.scarletraventattoo.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 96
+ },
+ "https://edisontattoo.net/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 262
+ },
+ "https://osmt.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1226
+ },
+ "https://maicasnailsandspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 2278
+ },
+ "https://blacksquirreltattoo.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 2359
+ },
+ "https://lincolnnailspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 5195
+ },
+ "https://sportclips.com/us-ne-lincoln-ne202": {
+  "status": "error",
+  "error": "UND_ERR_CONNECT_TIMEOUT",
+  "ms": 10125
+ }
+}

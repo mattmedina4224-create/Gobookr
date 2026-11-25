@@ -1,0 +1,28 @@
+[
+ {
+  "name": "Max Tan",
+  "city": "Lincoln",
+  "state": "NE",
+  "street_address": "233 North 48th Street",
+  "zip_code": "68504",
+  "county": "",
+  "categories": [
+   "spray_tan_specialist"
+  ],
+  "website_url": "https://www.maxtan.net/",
+  "phone": "(402) 464-6644",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/node/11504792814",
+  "source_external_id": "osm:node/11504792814",
+  "license_number": null,
+  "latitude": 40.8141255,
+  "longitude": -96.6555166,
+  "operational_status": "verified",
+  "checked_at": "2026-11-25",
+  "raw_name": "Max Tan",
+  "website_candidate": "https://www.maxtan.net/",
+  "website_source_url": "",
+  "reason": "duplicate_candidate",
+  "duplicate_of": "osm:node/6250120298"
+ }
+]
