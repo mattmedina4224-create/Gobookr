@@ -1,0 +1,381 @@
+{
+ "state": "WV",
+ "census_places": 439,
+ "places_covered": 9,
+ "place_coverage_pct": 2.1,
+ "census_counties": 55,
+ "counties_covered": 7,
+ "counties_uncovered": [
+  "Barbour County",
+  "Boone County",
+  "Braxton County",
+  "Cabell County",
+  "Calhoun County",
+  "Clay County",
+  "Doddridge County",
+  "Fayette County",
+  "Gilmer County",
+  "Grant County",
+  "Greenbrier County",
+  "Hampshire County",
+  "Hancock County",
+  "Hardy County",
+  "Jackson County",
+  "Jefferson County",
+  "Lewis County",
+  "Lincoln County",
+  "Logan County",
+  "Marion County",
+  "Marshall County",
+  "Mason County",
+  "McDowell County",
+  "Mercer County",
+  "Mineral County",
+  "Mingo County",
+  "Monroe County",
+  "Morgan County",
+  "Nicholas County",
+  "Ohio County",
+  "Pendleton County",
+  "Pleasants County",
+  "Pocahontas County",
+  "Preston County",
+  "Putnam County",
+  "Randolph County",
+  "Ritchie County",
+  "Roane County",
+  "Summers County",
+  "Taylor County",
+  "Tucker County",
+  "Tyler County",
+  "Upshur County",
+  "Wayne County",
+  "Webster County",
+  "Wetzel County",
+  "Wirt County",
+  "Wyoming County"
+ ],
+ "communities_outside_census_places": [
+  {
+   "city": "Ranson",
+   "shops": 1
+  }
+ ],
+ "top_covered_places": [
+  {
+   "name": "Morgantown",
+   "shops": 5
+  },
+  {
+   "name": "Martinsburg",
+   "shops": 2
+  },
+  {
+   "name": "Parkersburg",
+   "shops": 2
+  },
+  {
+   "name": "Charleston",
+   "shops": 2
+  },
+  {
+   "name": "Vienna",
+   "shops": 2
+  },
+  {
+   "name": "Wellsburg",
+   "shops": 1
+  },
+  {
+   "name": "Bridgeport",
+   "shops": 1
+  },
+  {
+   "name": "Beckley",
+   "shops": 1
+  },
+  {
+   "name": "Westover",
+   "shops": 1
+  }
+ ],
+ "uncovered_places_with_held_candidates": [
+  {
+   "name": "Huntington",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 31
+  },
+  {
+   "name": "Barboursville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 15
+  },
+  {
+   "name": "South Charleston",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 15
+  },
+  {
+   "name": "Clarksburg",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 9
+  },
+  {
+   "name": "Wheeling",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 7
+  },
+  {
+   "name": "Glenville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Nutter Fort",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Ceredo",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Kenova",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Buckhannon",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Charles Town",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Milton",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "St. Albans",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Summersville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Bath (Berkeley Springs)",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Chester",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Elkins",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Mineralwells",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Pea Ridge",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Richwood",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Romney",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Star City",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Sutton",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Teays Valley",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Weston",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Williamstown",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Anmoore",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Beaver",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Cheat Lake",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Cross Lanes",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Davis",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Elkview",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Fairmont",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Falling Waters",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Fort Ashby",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Gallipolis Ferry",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Granville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Hinton",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Hurricane",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Jane Lew",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Keyser",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Malden",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Mannington",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Nitro",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Parsons",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Petersburg",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Peterstown",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Point Pleasant",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Ripley",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Shepherdstown",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Smithers",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Spencer",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "War",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Welch",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Whitesville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  }
+ ],
+ "uncovered_places_without_candidates": 375,
+ "source": "U.S. Census Bureau 2020 place-by-county and county code files"
+}

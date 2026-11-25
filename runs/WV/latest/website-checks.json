@@ -1,0 +1,146 @@
+{
+ "https://familycutswv.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 98
+ },
+ "https://hairworks.biz/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 245
+ },
+ "https://nikkivisions.com/": {
+  "status": "error",
+  "error": "ECONNRESET",
+  "ms": 318
+ },
+ "https://cristalloblusalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 342
+ },
+ "https://www.fresha.com/a/jacquis-parkersburg-1707-saint-marys-avenue-dmkdpbuh": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.fresha.com/",
+  "ms": 345
+ },
+ "https://salty-cuts--erobertandrews2.replit.app/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 462
+ },
+ "https://www.tommysbarbershop.com/haircut-services": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 494
+ },
+ "https://www.euforiawv.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 217
+ },
+ "http://www.mackadoos.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 327
+ },
+ "https://danyalebrooke.setmore.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 597
+ },
+ "https://wvcsbc.net/": {
+  "status": "error",
+  "error": "ERR_SSL_TLSV1_ALERT_INTERNAL_ERROR",
+  "ms": 307
+ },
+ "https://lavishsalonwv.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 239
+ },
+ "https://www.ulta.com/stores/bridgeport-wv-1179": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 476
+ },
+ "https://www.ulta.com/stores/vienna-wv-1321": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 365
+ },
+ "https://www.ulta.com/stores/charleston-wv-561": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 616
+ },
+ "https://groomtherapyrio.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1012
+ },
+ "https://imaginemedispas.com/": {
+  "status": "error",
+  "error": "UND_ERR_SOCKET",
+  "ms": 249
+ },
+ "https://www.ulta.com/stores/beckley-wv-749": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 448
+ },
+ "https://wildzerostudios.com/home.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 262
+ },
+ "https://www.ulta.com/stores/martinsburg-wv-633": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 471
+ },
+ "https://drawinattention.com/": {
+  "status": "blocked",
+  "http_status": 403,
+  "final_url": "https://www.hugedomains.com/domain_profile.cfm?d=drawinattention.com",
+  "ms": 365
+ },
+ "https://locations.waxcenter.com/wv/morgantown/morgantown-0589.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 828
+ },
+ "https://www.chasehyson.com/the-mindbody-center": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 407
+ },
+ "https://www.routinekneads.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 276
+ },
+ "http://bodylogicclinic.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "http://www.bodylogicclinic.com/",
+  "ms": 482
+ },
+ "https://goodbyehorsesmorgantown.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://infolunastop1.com/",
+  "ms": 594
+ },
+ "https://boomtowntattoowv.business.site/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 905
+ },
+ "https://www.theglowroom.vip/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 639
+ }
+}
