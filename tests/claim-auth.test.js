@@ -93,14 +93,15 @@ function app(options = {}) {
     return token;
   };
   auth.getSessionUser = req => state.sessions.get(String(req.headers.cookie || '').split('=')[1]) || null;
-  const common = { '../db': db, '../lib/http': httpHelpers, '../lib/util': require('../lib/util'), '../lib/layout': require('../lib/layout'), '../lib/pro-categories': require('../lib/pro-categories') };
+  const admin = load('lib/admin.js', { '../db': db, './http': httpHelpers });
+  const layout = load('lib/layout.js', { '../db': db, './util': require('../lib/util'), './admin': admin });
+  const common = { '../db': db, '../lib/http': httpHelpers, '../lib/util': require('../lib/util'), '../lib/layout': layout, '../lib/pro-categories': require('../lib/pro-categories') };
   common['../lib/claims'] = load('lib/claims.js', { '../db': db, './http': httpHelpers });
   const authRoute = load('routes/auth.js', { ...common, '../lib/auth': auth, './onboarding': () => {}, './pro-entry': load('routes/pro-entry.js', common) }, {
     process: {env: {BUSINESS_TEAMS_ENABLED:options.businessTeams?'1':''}},
     fetch: async () => { if (options.claimOnly) throw new Error('Claim signup must not geocode'); return { ok: true, json: async () => [] }; },
   });
   const claimRoute = load('routes/claim.js', common);
-  const admin = load('lib/admin.js', { '../db': db, './http': httpHelpers });
   const adminRoute = load('routes/admin.js', { ...common, '../lib/admin': admin }, { process: { env: { ADMIN_EMAIL: 'owner@example.test' } } });
   const googleRoute = load('routes/google.js', { '../db': db, '../lib/auth': auth, '../lib/http': httpHelpers }, {
     process: { env: { GOOGLE_CLIENT_ID: 'test-client' } },
