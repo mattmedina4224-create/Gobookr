@@ -1,0 +1,456 @@
+{
+ "state": "MS",
+ "census_places": 427,
+ "places_covered": 15,
+ "place_coverage_pct": 3.5,
+ "census_counties": 82,
+ "counties_covered": 13,
+ "counties_uncovered": [
+  "Adams County",
+  "Alcorn County",
+  "Amite County",
+  "Attala County",
+  "Benton County",
+  "Bolivar County",
+  "Calhoun County",
+  "Carroll County",
+  "Chickasaw County",
+  "Choctaw County",
+  "Claiborne County",
+  "Clarke County",
+  "Coahoma County",
+  "Copiah County",
+  "Covington County",
+  "Franklin County",
+  "George County",
+  "Greene County",
+  "Grenada County",
+  "Hancock County",
+  "Holmes County",
+  "Humphreys County",
+  "Issaquena County",
+  "Itawamba County",
+  "Jasper County",
+  "Jefferson County",
+  "Jefferson Davis County",
+  "Jones County",
+  "Kemper County",
+  "Lawrence County",
+  "Leake County",
+  "Lee County",
+  "Leflore County",
+  "Lincoln County",
+  "Marion County",
+  "Marshall County",
+  "Monroe County",
+  "Montgomery County",
+  "Neshoba County",
+  "Newton County",
+  "Noxubee County",
+  "Panola County",
+  "Pearl River County",
+  "Perry County",
+  "Pike County",
+  "Pontotoc County",
+  "Prentiss County",
+  "Quitman County",
+  "Scott County",
+  "Sharkey County",
+  "Simpson County",
+  "Smith County",
+  "Stone County",
+  "Sunflower County",
+  "Tallahatchie County",
+  "Tate County",
+  "Tippah County",
+  "Tishomingo County",
+  "Tunica County",
+  "Union County",
+  "Walthall County",
+  "Warren County",
+  "Washington County",
+  "Wayne County",
+  "Webster County",
+  "Wilkinson County",
+  "Winston County",
+  "Yalobusha County",
+  "Yazoo County"
+ ],
+ "communities_outside_census_places": [],
+ "top_covered_places": [
+  {
+   "name": "Hattiesburg",
+   "shops": 4
+  },
+  {
+   "name": "Starkville",
+   "shops": 4
+  },
+  {
+   "name": "West Point",
+   "shops": 2
+  },
+  {
+   "name": "Jackson",
+   "shops": 2
+  },
+  {
+   "name": "Ridgeland",
+   "shops": 1
+  },
+  {
+   "name": "Horn Lake",
+   "shops": 1
+  },
+  {
+   "name": "Clinton",
+   "shops": 1
+  },
+  {
+   "name": "Madison",
+   "shops": 1
+  },
+  {
+   "name": "Oxford",
+   "shops": 1
+  },
+  {
+   "name": "Meridian",
+   "shops": 1
+  },
+  {
+   "name": "Columbus",
+   "shops": 1
+  },
+  {
+   "name": "Raymond",
+   "shops": 1
+  },
+  {
+   "name": "Ocean Springs",
+   "shops": 1
+  },
+  {
+   "name": "D'Iberville",
+   "shops": 1
+  },
+  {
+   "name": "Southaven",
+   "shops": 1
+  }
+ ],
+ "uncovered_places_with_held_candidates": [
+  {
+   "name": "Flowood",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 18
+  },
+  {
+   "name": "Pontotoc",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 17
+  },
+  {
+   "name": "New Albany",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 13
+  },
+  {
+   "name": "Ripley",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 10
+  },
+  {
+   "name": "Houston",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 9
+  },
+  {
+   "name": "Cleveland",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 7
+  },
+  {
+   "name": "Calhoun City",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 6
+  },
+  {
+   "name": "Florence",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 6
+  },
+  {
+   "name": "Richland",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 6
+  },
+  {
+   "name": "Brookhaven",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Gulfport",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Pascagoula",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Picayune",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Wiggins",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Greenwood",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Monticello",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Pearl",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Walnut",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Biloxi",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Brandon",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Bruce",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Byram",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Ecru",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Ellisville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Amory",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Batesville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Caledonia",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Edwards",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Laurel",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Sumrall",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Tupelo",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Vardaman",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Vicksburg",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Wesson",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Belmont",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Blue Springs",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Clarksdale",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Collins",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Derma",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Falkner",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Forest",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Greenville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Gulf Hills",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Heidelberg",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Louisville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "McComb",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Mississippi State",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Myrtle",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "New Hamilton",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "New Hebron",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "New Houlka",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Okolona",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Olive Branch",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Philadelphia",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Prentiss",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Richton",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Senatobia",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Shelby",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Sherman",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "St. Martin",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Winona",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Yazoo City",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  }
+ ],
+ "uncovered_places_without_candidates": 350,
+ "source": "U.S. Census Bureau 2020 place-by-county and county code files"
+}
