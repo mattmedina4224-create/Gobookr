@@ -1,0 +1,496 @@
+{
+ "state": "KS",
+ "census_places": 740,
+ "places_covered": 26,
+ "place_coverage_pct": 3.5,
+ "census_counties": 105,
+ "counties_covered": 20,
+ "counties_uncovered": [
+  "Allen County",
+  "Anderson County",
+  "Barber County",
+  "Barton County",
+  "Brown County",
+  "Butler County",
+  "Chase County",
+  "Chautauqua County",
+  "Cherokee County",
+  "Cheyenne County",
+  "Clark County",
+  "Clay County",
+  "Cloud County",
+  "Coffey County",
+  "Comanche County",
+  "Cowley County",
+  "Crawford County",
+  "Decatur County",
+  "Dickinson County",
+  "Doniphan County",
+  "Edwards County",
+  "Elk County",
+  "Ellsworth County",
+  "Geary County",
+  "Gove County",
+  "Graham County",
+  "Gray County",
+  "Greeley County",
+  "Greenwood County",
+  "Hamilton County",
+  "Harper County",
+  "Harvey County",
+  "Haskell County",
+  "Hodgeman County",
+  "Jackson County",
+  "Jefferson County",
+  "Jewell County",
+  "Kearny County",
+  "Kingman County",
+  "Kiowa County",
+  "Labette County",
+  "Lane County",
+  "Lincoln County",
+  "Linn County",
+  "Logan County",
+  "Marion County",
+  "Marshall County",
+  "Meade County",
+  "Miami County",
+  "Mitchell County",
+  "Montgomery County",
+  "Morris County",
+  "Morton County",
+  "Nemaha County",
+  "Neosho County",
+  "Ness County",
+  "Norton County",
+  "Osage County",
+  "Osborne County",
+  "Ottawa County",
+  "Pawnee County",
+  "Phillips County",
+  "Pratt County",
+  "Rawlins County",
+  "Republic County",
+  "Rice County",
+  "Rooks County",
+  "Rush County",
+  "Russell County",
+  "Scott County",
+  "Seward County",
+  "Sheridan County",
+  "Sherman County",
+  "Smith County",
+  "Stafford County",
+  "Stanton County",
+  "Stevens County",
+  "Sumner County",
+  "Thomas County",
+  "Trego County",
+  "Wallace County",
+  "Washington County",
+  "Wichita County",
+  "Wilson County",
+  "Woodson County"
+ ],
+ "communities_outside_census_places": [],
+ "top_covered_places": [
+  {
+   "name": "Lawrence",
+   "shops": 32
+  },
+  {
+   "name": "Overland Park",
+   "shops": 14
+  },
+  {
+   "name": "Topeka",
+   "shops": 11
+  },
+  {
+   "name": "Wichita",
+   "shops": 8
+  },
+  {
+   "name": "Lenexa",
+   "shops": 7
+  },
+  {
+   "name": "Olathe",
+   "shops": 7
+  },
+  {
+   "name": "Manhattan",
+   "shops": 4
+  },
+  {
+   "name": "Shawnee",
+   "shops": 4
+  },
+  {
+   "name": "Hutchinson",
+   "shops": 4
+  },
+  {
+   "name": "Hays",
+   "shops": 3
+  },
+  {
+   "name": "Kansas City",
+   "shops": 2
+  },
+  {
+   "name": "Garden City",
+   "shops": 2
+  },
+  {
+   "name": "Leawood",
+   "shops": 2
+  },
+  {
+   "name": "McPherson",
+   "shops": 1
+  },
+  {
+   "name": "Gardner",
+   "shops": 1
+  },
+  {
+   "name": "Prairie Village",
+   "shops": 1
+  },
+  {
+   "name": "Wamego",
+   "shops": 1
+  },
+  {
+   "name": "Ottawa",
+   "shops": 1
+  },
+  {
+   "name": "Fort Scott",
+   "shops": 1
+  },
+  {
+   "name": "Ulysses",
+   "shops": 1
+  },
+  {
+   "name": "Dodge City",
+   "shops": 1
+  },
+  {
+   "name": "Leavenworth",
+   "shops": 1
+  },
+  {
+   "name": "Salina",
+   "shops": 1
+  },
+  {
+   "name": "Atchison",
+   "shops": 1
+  },
+  {
+   "name": "Derby",
+   "shops": 1
+  },
+  {
+   "name": "Emporia",
+   "shops": 1
+  }
+ ],
+ "uncovered_places_with_held_candidates": [
+  {
+   "name": "Arkansas City",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 6
+  },
+  {
+   "name": "Mission",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Paola",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Phillipsburg",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Hiawatha",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Hillsboro",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Merriam",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Newton",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "De Soto",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Junction City",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Lansing",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Abilene",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Belleville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Coldwater",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Concordia",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Hoisington",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Lincoln Center",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Marysville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Ransom",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Valley Center",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Augusta",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Axtell",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Basehor",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Bonner Springs",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Burrton",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Caldwell",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Chapman",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Cherryvale",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Cottonwood Falls",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Downs",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Ellis",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Eskridge",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Eudora",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Fowler",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Frontenac",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Garnett",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Haviland",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Holcomb",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Independence",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Ingalls",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Lincolnville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Mankato",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Oakley",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Ogden",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Osage City",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Osawatomie",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Oxford",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Parsons",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Riley",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Scott City",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Silver Lake",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Spearville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Tescott",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Troy",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Waverly",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Wellington",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Westwood",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Winona",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  }
+ ],
+ "uncovered_places_without_candidates": 656,
+ "source": "U.S. Census Bureau 2020 place-by-county and county code files"
+}

@@ -1,0 +1,28 @@
+[
+ {
+  "name": "Great Clips",
+  "city": "Olathe",
+  "state": "KS",
+  "street_address": "18114 West 119th Street",
+  "zip_code": "66061",
+  "county": "",
+  "categories": [
+   "stylist"
+  ],
+  "website_url": "https://salons.greatclips.com/us/ks/olathe/18114-w-119th-st",
+  "phone": "(913) 780-2100",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/way/1008406804",
+  "source_external_id": "osm:way/1008406804",
+  "license_number": null,
+  "latitude": 38.9131012,
+  "longitude": -94.7952442,
+  "operational_status": "verified",
+  "checked_at": "2026-11-25",
+  "raw_name": "Great Clips",
+  "website_candidate": "https://salons.greatclips.com/us/ks/olathe/18114-w-119th-st",
+  "website_source_url": "",
+  "reason": "duplicate_candidate",
+  "duplicate_of": "osm:way/1007094514"
+ }
+]

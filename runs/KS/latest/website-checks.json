@@ -1,0 +1,796 @@
+{
+ "http://www.creativehairlines.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 113
+ },
+ "http://thehairemporiumabilene.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 121
+ },
+ "https://www.greatclips.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 215
+ },
+ "https://www.hairkrafters.com/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 349
+ },
+ "https://www.luxetopeka.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 338
+ },
+ "https://salons.greatclips.com/us/ks/lawrence/4801-bauer-farm-dr": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 465
+ },
+ "https://www.integritysalonandspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://integritysalonandspa.com/",
+  "ms": 540
+ },
+ "https://haircutmenlawrenceks.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 124
+ },
+ "https://www.hairslingers.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://hairslingers.com/",
+  "ms": 592
+ },
+ "https://www.salonlunamidwest.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 295
+ },
+ "https://salons.greatclips.com/us/ks/lawrence/3514-clinton-pkwy": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 42
+ },
+ "https://parexsalonce.com/locations/college-village.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 589
+ },
+ "https://salons.greatclips.com/us/ks/overland-park/10154-w-119th-st": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 237
+ },
+ "https://www.supercuts.com/locations/ks/topeka/west-ridge-plaza-haircuts-82883.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 143
+ },
+ "https://salons.greatclips.com/us/ks/hays/4315-vine-st": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 87
+ },
+ "http://www.thehairmill-ks.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 108
+ },
+ "https://salons.greatclips.com/us/ks/topeka/2919-sw-wanamaker-rd": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 63
+ },
+ "https://paisleyandstripe.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.paisleyandstripe.com/",
+  "ms": 488
+ },
+ "https://www.supercuts.com/locations/ks/lawrence/hyvee-shops-haircuts-82886.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 8
+ },
+ "https://www.salonbrandsbeauty.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 316
+ },
+ "https://salons.greatclips.com/us/ks/lawrence/520-w-23rd-st": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 19
+ },
+ "https://www.volume-studio.net/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 243
+ },
+ "https://www.silverclipperlawrence.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 320
+ },
+ "https://www.zhairacademy.com/contact-lawrence/": {
+  "status": "error",
+  "error": "UND_ERR_SOCKET",
+  "ms": 252
+ },
+ "https://www.kutzfamilyhaircare.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.enduranceenvironmental.com/privacy-policy",
+  "ms": 1248
+ },
+ "https://www.trilogyhaircompany.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 157
+ },
+ "https://sdimarco.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1376
+ },
+ "https://albinbarbershop.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 156
+ },
+ "https://louandcosalon.com/": {
+  "status": "error",
+  "error": "UND_ERR_SOCKET",
+  "ms": 288
+ },
+ "https://www.bijinsalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 375
+ },
+ "https://estetica-d-pelos.poi.place/": {
+  "status": "blocked",
+  "http_status": 403,
+  "final_url": "https://estetica-d-pelos.edan.io/",
+  "ms": 545
+ },
+ "http://www.colorstudioonline.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://anewthinghb.net/",
+  "ms": 1286
+ },
+ "http://norms-barbershop.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 315
+ },
+ "https://www.wamegofamilyhaircutters.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 197
+ },
+ "https://haircutmen6thandwakarusalawrenceks.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 56
+ },
+ "https://www.thesalonlawrence.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 183
+ },
+ "https://salons.greatclips.com/us/ks/wichita/8641-west-13th-st-n": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 78
+ },
+ "https://app.greatclips.com/salon/2089/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 167
+ },
+ "https://www.fantasticsams.com/about/regions/kansas-city-mo/fantastic-sams-kansas-city-ks": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.fantasticsams.com/salons/fantastic-sams-kansas-city-ks",
+  "ms": 192
+ },
+ "https://www.themaneonmainstreetsalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.jessithestylistllc.com/",
+  "ms": 816
+ },
+ "https://sportclips.com/us-ks-topeka-ks301": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 144
+ },
+ "https://www.ericfishersalon.com/": {
+  "status": "error",
+  "error": "UND_ERR_SOCKET",
+  "ms": 210
+ },
+ "https://saloncitrinelawrence.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1224
+ },
+ "https://hareandcrow.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 189
+ },
+ "https://curlupanddyeottawaks.glossgenius.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 500
+ },
+ "https://redefinebarbershop.glossgenius.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://glossgenius.com/",
+  "ms": 522
+ },
+ "https://the-wright-hair-salon.business.site/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 697
+ },
+ "https://hometownbarbershop.schedulista.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 385
+ },
+ "https://rizosbarberstudio.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 293
+ },
+ "https://thehairport.webs.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 72
+ },
+ "https://www.manehaussalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 172
+ },
+ "https://www.imagessalon.org/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 147
+ },
+ "https://www.herringbonebarbers.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 182
+ },
+ "https://square.site/book/0Y3E9EAAWDMCZ/salon-memoir-llc-wichita-ks": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 451
+ },
+ "https://kcbarber.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 209
+ },
+ "https://haircutmenwestvillageolatheks.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 20
+ },
+ "https://www.beautynailhairsalons.com/US/Hays/845230535512818/Studio8---Deb-Fall---Full-Service-Salon": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 114
+ },
+ "https://salons.greatclips.com/us/ks/olathe/18114-w-119th-st": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 21
+ },
+ "https://www.salonexpose.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 362
+ },
+ "https://ash-orchid-hair-studio.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 613
+ },
+ "https://salons.greatclips.com/us/ks/olathe/1068-west-santa-fe": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 60
+ },
+ "https://stylemeuphair.salon/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 692
+ },
+ "https://salons.greatclips.com/us/ks/overland-park/8069-w-159th-st": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 47
+ },
+ "https://salons.greatclips.com/us/ks/leavenworth/1110-w-eisenhower-rd": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 82
+ },
+ "https://salons.greatclips.com/us/ks/kansas-city/10814-parallel-pkwy": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 57
+ },
+ "https://salons.greatclips.com/us/ks/lenexa/19609-w-101st-st": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 103
+ },
+ "https://hairsalonlawrence.com/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 145
+ },
+ "http://www.buffalomane.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "http://buffalomane.com/",
+  "ms": 746
+ },
+ "https://scissorsscotch.com/locations/ks/lenexa/lenexa-city-center/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 356
+ },
+ "https://salons.greatclips.com/us/ks/lenexa/14904-w-87th-st-pkwy": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 441
+ },
+ "https://www.gravitywellnessspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 592
+ },
+ "https://locations.waxcenter.com/ks/leawood/leawood-0187.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 687
+ },
+ "https://thewarehouzsalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 949
+ },
+ "https://salon5thirty5.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://theperfectsalon.com/",
+  "ms": 1538
+ },
+ "https://www.ulta.com/stores/manhattan-ks-1306": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1008
+ },
+ "https://www.mysticsalonandspa.net/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 45
+ },
+ "https://lillianphillips.avonrepresentative.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.avon.com/?rep=lillianphillips",
+  "ms": 1812
+ },
+ "https://www.bathandbodyworks.com/": {
+  "status": "error",
+  "http_status": 307,
+  "ms": 172
+ },
+ "http://www.salonspice.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.salonspice.com/Default.asp",
+  "ms": 1671
+ },
+ "https://www.ulta.com/stores/overland-park-ks-641": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1392
+ },
+ "https://happy-nails-spa.edan.io/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 274
+ },
+ "https://nailcitilawrence.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 471
+ },
+ "https://www.nailworldtopeka.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 345
+ },
+ "https://www.beautybrands.com/store-locator/lawrence.do": {
+  "status": "error",
+  "http_status": 400,
+  "ms": 222
+ },
+ "https://nailartslawrence.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 395
+ },
+ "https://www.egossalonanddayspa.net/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 109
+ },
+ "https://midwestfloat.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 24
+ },
+ "https://www.solasalonstudios.com/locations/topeka": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 560
+ },
+ "https://www.infinitytopeka.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 399
+ },
+ "https://www.suntancity.com/find-a-salon/kansas/lawrence/iowa-street/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 686
+ },
+ "https://www.ulta.com/stores/topeka-ks-1443": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 293
+ },
+ "https://www.ultimatetanlawrence.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 527
+ },
+ "https://perfectbrowbar.com/stores/wanamaker-south-shopping-center/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 767
+ },
+ "https://www.ulta.com/stores/lawrence-ks-1190": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 699
+ },
+ "https://kctan.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 462
+ },
+ "http://www.bellasalontopeka.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 871
+ },
+ "https://www.ulta.com/stores/wichita-ks-472": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 339
+ },
+ "https://lerevenailsolathe.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 395
+ },
+ "https://trishasstudio24.business.site/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 624
+ },
+ "https://milanlaserlawrence.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 617
+ },
+ "https://www.salonlotuslawrence.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 553
+ },
+ "https://www.adornedgold.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 510
+ },
+ "https://www.atrevive.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 588
+ },
+ "https://lovebeaumonde.com/west/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://beaumondewestspa.com/",
+  "ms": 855
+ },
+ "https://lawrencenailsalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 257
+ },
+ "https://salonmission.net/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 203
+ },
+ "https://minksprolashes.com/": {
+  "status": "error",
+  "error": "ECONNRESET",
+  "ms": 138
+ },
+ "https://www.essentiasalonandspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 202
+ },
+ "https://www.ulta.com/stores/derby-ks-1502": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 626
+ },
+ "https://sokomedspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 514
+ },
+ "https://www.sensoraspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 442
+ },
+ "http://www.kctan.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://kctan.com/",
+  "ms": 702
+ },
+ "https://www.milagromidwesternspa.com/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 244
+ },
+ "https://www.aspirewellnesshutch.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 250
+ },
+ "https://milanlaser.com/locations/mo/kansas-city/18577-east-151st-st": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 673
+ },
+ "https://www.thephoeniciansalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 379
+ },
+ "https://www.beautybrands.com/store-locator/topeka.do": {
+  "status": "error",
+  "http_status": 400,
+  "ms": 12
+ },
+ "https://www.browart23.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 2877
+ },
+ "https://www.sunfusionmhk.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 304
+ },
+ "https://completeglow.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://bodyshopspa.info/",
+  "ms": 1356
+ },
+ "https://solariumsunsprayspa.com/solarium-shawnee/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 138
+ },
+ "https://www.fit-massage-studio.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1022
+ },
+ "https://www.suntancity.com/find-a-salon/kansas/Shawnee/mission-parkway?salonId=307": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 243
+ },
+ "https://beautybydesignstudios.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 183
+ },
+ "https://recreatingrays.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 191
+ },
+ "https://angelnails-waxolathe.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 316
+ },
+ "https://www.ulta.com/stores/garden-city-ks-525": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 636
+ },
+ "http://bellanailsnow.com/": {
+  "status": "dead",
+  "error": "EAI_AGAIN",
+  "ms": 2199
+ },
+ "https://luvmynails.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 2290
+ },
+ "https://electricsuntanning.net/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 592
+ },
+ "https://www.manhattansyndicate.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 423
+ },
+ "https://nbgad2022.wixsite.com/sunshine-massage-ks": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 160
+ },
+ "http://www.platinumsalonandspa-kc.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 2583
+ },
+ "https://www.poshnailsop.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 2860
+ },
+ "https://locations.massageenvy.com/kansas/topeka/2130-sw-wanamaker-road.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 220
+ },
+ "https://www.stylesbyayre.com/": {
+  "status": "dead",
+  "error": "EAI_AGAIN",
+  "ms": 10019
+ },
+ "https://maymassageks.wix.com/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 229
+ },
+ "https://locations.massageenvy.com/kansas/lawrence/4931-w-6th-street.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 126
+ },
+ "https://www.sunjoymassage.us/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 155
+ },
+ "https://healing-hands-llc.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 242
+ },
+ "http://www.glacenails.net/index.html": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.glacenails.net/index.html",
+  "ms": 3665
+ },
+ "https://www.stemhairandbody.com/": {
+  "status": "error",
+  "error": "UND_ERR_CONNECT_TIMEOUT",
+  "ms": 10417
+ },
+ "https://www.olathemassage.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 45
+ },
+ "https://www.millertattoo.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 241
+ },
+ "https://www.massagebook.com/Olathe~Massage~FullFocusMassageTherapy": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 144
+ },
+ "https://www.lavitabelladayspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 289
+ },
+ "https://www.sanomassage.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1390
+ },
+ "https://lawrencethaimassage.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1420
+ },
+ "https://ginasmassage.business.site/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 640
+ },
+ "https://risingphoenix.massagetherapy.com/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 326
+ },
+ "https://www.lawrencetattoo.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1611
+ },
+ "https://massageluxe.com/locations/overland-park-ks/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 906
+ },
+ "https://www.intouchtherapeuticmassageop.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://intouchtherapeuticmassageop.com/",
+  "ms": 1682
+ },
+ "https://redfivetattoo.ink/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://red5tattoo.ink/",
+  "ms": 2465
+ },
+ "https://www.watsonsbarbershop.com/": {
+  "status": "error",
+  "error": "TimeoutError",
+  "ms": 15000
+ }
+}
