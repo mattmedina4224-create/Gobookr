@@ -1,0 +1,66 @@
+{
+ "state": "ND",
+ "checked_at": "2026-11-25",
+ "candidates": 110,
+ "existing_compared": 0,
+ "publish": 16,
+ "review": 94,
+ "skipped": 0,
+ "enrich_existing": 0,
+ "publish_with_website": 16,
+ "publish_with_street": 15,
+ "publish_with_phone": 15,
+ "review_reasons": {
+  "map_only_without_website": 87,
+  "map_website_not_confirmed_live": 5,
+  "school_or_training_facility": 2
+ },
+ "skipped_reasons": {},
+ "publish_categories": {
+  "barber": 1,
+  "stylist": 7,
+  "nail_technician": 2,
+  "waxing_specialist": 1,
+  "massage_therapist": 2,
+  "tattoo_artist": 3
+ },
+ "publish_sources": {
+  "OpenStreetMap contributors": 16
+ },
+ "publish_cities": {
+  "Fargo": 6,
+  "Bismarck": 4,
+  "Dickinson": 2,
+  "Williston": 1,
+  "Grand Forks": 1,
+  "Langdon": 1,
+  "West Fargo": 1
+ },
+ "review_cities": {
+  "Fargo": 35,
+  "Dickinson": 13,
+  "Minot": 8,
+  "Grand Forks": 5,
+  "Bismarck": 5,
+  "West Fargo": 3,
+  "Mandan": 3,
+  "Williston": 3,
+  "Valley City": 3,
+  "Devils Lake": 2,
+  "Rolla": 1,
+  "Beach": 1,
+  "Glen Ullin": 1,
+  "Cogswell": 1,
+  "Finley": 1,
+  "Mcclusky": 1,
+  "Tolna": 1,
+  "Mayville": 1,
+  "Forman": 1,
+  "Lakota": 1,
+  "Kulm": 1,
+  "Lidgerwood": 1,
+  "Jamestown": 1,
+  "Grafton": 1
+ },
+ "batches": 1
+}

@@ -1,0 +1,54 @@
+{
+ "state": "ND",
+ "state_name": "North Dakota",
+ "wave": 10,
+ "created_at": "2026-11-25T01:28:39.680Z",
+ "staging_only": true,
+ "sources": [
+  {
+   "name": "OpenStreetMap (Overpass)",
+   "url": "https://overpass.kumi.systems/api/interpreter",
+   "status": "processed",
+   "records": 117,
+   "parts_ok": 4,
+   "parts_total": 4
+  },
+  {
+   "name": "U.S. Census Geocoder (place containing map point)",
+   "url": "https://geocoding.geo.census.gov/",
+   "status": "processed",
+   "records": 70
+  }
+ ],
+ "license_records_scanned": 0,
+ "licensed_active_candidates": 0,
+ "license_dropped": null,
+ "license_fields": null,
+ "license_shop_types": [],
+ "license_type_counts": [],
+ "license_type_lookup": [],
+ "census_city_lookup": {
+  "attempted": 70,
+  "filled": 70,
+  "failed": 0
+ },
+ "mapped_beauty_places": 117,
+ "overpass_endpoint": "https://overpass.kumi.systems/api/interpreter",
+ "total_candidates": 110,
+ "with_websites": 21,
+ "category_counts": {
+  "hair": 58,
+  "barber": 10,
+  "salon_suites": 2,
+  "nails": 15,
+  "makeup": 1,
+  "spray_tanning": 3,
+  "skincare": 2,
+  "lashes": 2,
+  "tattoo": 8,
+  "massage": 9
+ },
+ "errors": [],
+ "note": "A license record or map listing alone does not prove a business is open. The importer publishes only rows that meet its rules; the rest are held.",
+ "attribution": "OpenStreetMap data © OpenStreetMap contributors (ODbL, https://www.openstreetmap.org/copyright). Licensing data from the listed state open-data portals."
+}

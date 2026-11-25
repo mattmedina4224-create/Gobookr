@@ -1,0 +1,182 @@
+{
+ "state": "ND",
+ "census_places": 406,
+ "places_covered": 7,
+ "place_coverage_pct": 1.7,
+ "census_counties": 53,
+ "counties_covered": 6,
+ "counties_uncovered": [
+  "Adams County",
+  "Barnes County",
+  "Benson County",
+  "Billings County",
+  "Bottineau County",
+  "Bowman County",
+  "Burke County",
+  "Dickey County",
+  "Divide County",
+  "Dunn County",
+  "Eddy County",
+  "Emmons County",
+  "Foster County",
+  "Golden Valley County",
+  "Grant County",
+  "Griggs County",
+  "Hettinger County",
+  "Kidder County",
+  "LaMoure County",
+  "Logan County",
+  "McHenry County",
+  "McIntosh County",
+  "McKenzie County",
+  "McLean County",
+  "Mercer County",
+  "Morton County",
+  "Mountrail County",
+  "Nelson County",
+  "Oliver County",
+  "Pembina County",
+  "Pierce County",
+  "Ramsey County",
+  "Ransom County",
+  "Renville County",
+  "Richland County",
+  "Rolette County",
+  "Sargent County",
+  "Sheridan County",
+  "Sioux County",
+  "Slope County",
+  "Steele County",
+  "Stutsman County",
+  "Towner County",
+  "Traill County",
+  "Walsh County",
+  "Ward County",
+  "Wells County"
+ ],
+ "communities_outside_census_places": [],
+ "top_covered_places": [
+  {
+   "name": "Fargo",
+   "shops": 6
+  },
+  {
+   "name": "Bismarck",
+   "shops": 4
+  },
+  {
+   "name": "Dickinson",
+   "shops": 2
+  },
+  {
+   "name": "Williston",
+   "shops": 1
+  },
+  {
+   "name": "Grand Forks",
+   "shops": 1
+  },
+  {
+   "name": "Langdon",
+   "shops": 1
+  },
+  {
+   "name": "West Fargo",
+   "shops": 1
+  }
+ ],
+ "uncovered_places_with_held_candidates": [
+  {
+   "name": "Minot",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 8
+  },
+  {
+   "name": "Mandan",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Valley City",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Devils Lake",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Beach",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Cogswell",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Finley",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Forman",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Glen Ullin",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Grafton",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Jamestown",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Kulm",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Lakota",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Lidgerwood",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Mayville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "McClusky",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Rolla",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Tolna",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  }
+ ],
+ "uncovered_places_without_candidates": 381,
+ "source": "U.S. Census Bureau 2020 place-by-county and county code files"
+}

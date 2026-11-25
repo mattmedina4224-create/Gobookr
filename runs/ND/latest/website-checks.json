@@ -1,0 +1,110 @@
+{
+ "https://www.menshairco.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 122
+ },
+ "https://haircutmenbismarcknd.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 184
+ },
+ "https://gratitudespaandsalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 287
+ },
+ "https://www.jasonsbarbershopnd.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 433
+ },
+ "https://www.poshfargo.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 451
+ },
+ "https://getcut.me/": {
+  "status": "dead",
+  "error": "EAI_AGAIN",
+  "ms": 530
+ },
+ "https://www.nailtiquend.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 418
+ },
+ "https://costcutters.com/locations/nd/bismarck/civic-plaza-haircuts-16818.html": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.costcutters.com/locations/nd/bismarck/civic-plaza-haircuts-16818.html",
+  "ms": 631
+ },
+ "https://suntanasalons.com/": {
+  "status": "error",
+  "error": "UND_ERR_SOCKET",
+  "ms": 484
+ },
+ "https://www.waxingthecity.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 427
+ },
+ "https://naileditlangdon.wixsite.com/website": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 358
+ },
+ "https://www.ulta.com/stores/bismarck-nd-1005": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 715
+ },
+ "https://www.ulta.com/stores/fargo-nd-465": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 532
+ },
+ "http://michaeljaystattoo.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 424
+ },
+ "https://www.dakotadreamtattoos.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 298
+ },
+ "https://beautybar.mysalononline.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://beautybar.mysalononline.com/Error/CookiesDisabled",
+  "ms": 1270
+ },
+ "https://www.inthefleshnd.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 437
+ },
+ "https://everlastingmassage.biz/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1003
+ },
+ "https://luxspafargo.com/": {
+  "status": "error",
+  "error": "ECONNREFUSED",
+  "ms": 1260
+ },
+ "https://www.fargomassage.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1308
+ },
+ "https://www.nocoasttattoo.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://nocoasttattoo.com/",
+  "ms": 2778
+ }
+}
