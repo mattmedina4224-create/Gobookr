@@ -1,0 +1,53 @@
+{
+ "state": "ME",
+ "checked_at": "2026-11-25",
+ "candidates": 29,
+ "existing_compared": 0,
+ "publish": 3,
+ "review": 26,
+ "skipped": 0,
+ "enrich_existing": 0,
+ "publish_with_website": 3,
+ "publish_with_street": 2,
+ "publish_with_phone": 2,
+ "review_reasons": {
+  "map_only_without_website": 22,
+  "map_website_not_confirmed_live": 2,
+  "missing_city": 2
+ },
+ "skipped_reasons": {},
+ "publish_categories": {
+  "stylist": 2,
+  "nail_technician": 1
+ },
+ "publish_sources": {
+  "OpenStreetMap contributors": 3
+ },
+ "publish_cities": {
+  "Kittery": 1,
+  "Brunswick": 1,
+  "Augusta": 1
+ },
+ "review_cities": {
+  "Kittery": 2,
+  "Augusta": 2,
+  "South Portland": 2,
+  "(no city)": 2,
+  "Springvale": 2,
+  "Oakland": 2,
+  "Presque Isle": 2,
+  "Belfast": 1,
+  "Biddeford": 1,
+  "Auburn": 1,
+  "Westbrook": 1,
+  "Saco": 1,
+  "Bangor": 1,
+  "Ellsworth": 1,
+  "Old Town": 1,
+  "Brunswick": 1,
+  "Fort Kent": 1,
+  "Boothbay Harbor": 1,
+  "Topsham": 1
+ },
+ "batches": 1
+}

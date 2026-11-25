@@ -1,0 +1,27 @@
+{
+ "http://tcnailsme.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 8
+ },
+ "https://le-nails-old-town.edan.io/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 54
+ },
+ "https://leosnailspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 61
+ },
+ "http://www.rootsspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 162
+ },
+ "https://www.ulta.com/stores/augusta-me-412": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 491
+ }
+}

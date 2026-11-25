@@ -1,0 +1,66 @@
+{
+ "state": "ME",
+ "state_name": "Maine",
+ "wave": 8,
+ "created_at": "2026-11-25T01:13:17.728Z",
+ "staging_only": true,
+ "sources": [
+  {
+   "name": "OpenStreetMap (Overpass)",
+   "url": "https://overpass.kumi.systems/api/interpreter",
+   "status": "partial",
+   "records": 29,
+   "parts_ok": 2,
+   "parts_total": 4,
+   "error": "https://overpass-api.de/api/interpreter [nwr[\"shop\"=\"hairdresser\"](area.a);nwr[\"c]: fetch failed | https://overpass.private.coffee/api/interpreter [nwr[\"shop\"=\"hairdresser\"](area.a);nwr[\"c]: The operation was aborted due to timeout | https://overpass.kumi.systems/api/interpreter [nwr[\"shop\"=\"hairdresser\"](area.a);nwr[\"c]: HTTP 504 https://overpass.kumi.systems/api/interpreter | https://overpass-api.de/api/interpreter [nwr[\"shop\"=\"hairdresser\"](area.a);nwr[\"c]: fetch failed | https://overpass.private.coffee/api/interpreter [nwr[\"shop\"=\"hairdresser\"](area.a);nwr[\"c]: HTTP 504 https://overpass.private.coffee/api/interpreter | https://overpass.kumi.systems/api/interpreter [nwr[\"shop\"=\"hairdresser\"](area.a);nwr[\"c]: HTTP 504 https://overpass.kumi.systems/api/interpreter | https://overpass-api.de/api/interpreter [nwr[\"shop\"~\"^(beauty|nails|barber|cosmet]: fetch failed | https://overpass.private.coffee/api/interpreter [nwr[\"shop\"~\"^(beauty|nails|barber|cosmet]: The operation was aborted due to timeout | https://overpass-api.de/api/interpreter [nwr[\"shop\"~\"^(tattoo|massage)$\"](area.a)]: fetch failed | https://overpass.private.coffee/api/interpreter [nwr[\"shop\"~\"^(tattoo|massage)$\"](area.a)]: HTTP 504 https://overpass.private.coffee/api/interpreter | https://overpass.kumi.systems/api/interpreter [nwr[\"shop\"~\"^(tattoo|massage)$\"](area.a)]: HTTP 504 https://overpass.kumi.systems/api/interpreter | https://overpass-api.de/api/interpreter [nwr[\"shop\"~\"^(tattoo|massage)$\"](area.a)]: fetch failed | https://overpass.private.coffee/api/interpreter [nwr[\"shop\"~\"^(tattoo|massage)$\"](area.a)]: The operation was aborted due to timeout | https://overpass.kumi.systems/api/interpreter [nwr[\"shop\"~\"^(tattoo|massage)$\"](area.a)]: HTTP 504 https://overpass.kumi.systems/api/interpreter | https://overpass-api.de/api/interpreter [nwr[\"beauty\"~\"^(nails|tanning|eyelash|ey]: fetch failed"
+  },
+  {
+   "name": "U.S. Census Geocoder (place containing map point)",
+   "url": "https://geocoding.geo.census.gov/",
+   "status": "processed",
+   "records": 7
+  }
+ ],
+ "license_records_scanned": 0,
+ "licensed_active_candidates": 0,
+ "license_dropped": null,
+ "license_fields": null,
+ "license_shop_types": [],
+ "license_type_counts": [],
+ "license_type_lookup": [],
+ "census_city_lookup": {
+  "attempted": 9,
+  "filled": 7,
+  "failed": 0
+ },
+ "mapped_beauty_places": 29,
+ "overpass_endpoint": "https://overpass.kumi.systems/api/interpreter",
+ "total_candidates": 29,
+ "with_websites": 5,
+ "category_counts": {
+  "makeup": 1,
+  "hair": 2,
+  "spray_tanning": 6,
+  "nails": 19,
+  "skincare": 1
+ },
+ "errors": [
+  "osm: https://overpass-api.de/api/interpreter [nwr[\"shop\"=\"hairdresser\"](area.a);nwr[\"c]: fetch failed",
+  "osm: https://overpass.private.coffee/api/interpreter [nwr[\"shop\"=\"hairdresser\"](area.a);nwr[\"c]: The operation was aborted due to timeout",
+  "osm: https://overpass.kumi.systems/api/interpreter [nwr[\"shop\"=\"hairdresser\"](area.a);nwr[\"c]: HTTP 504 https://overpass.kumi.systems/api/interpreter",
+  "osm: https://overpass-api.de/api/interpreter [nwr[\"shop\"=\"hairdresser\"](area.a);nwr[\"c]: fetch failed",
+  "osm: https://overpass.private.coffee/api/interpreter [nwr[\"shop\"=\"hairdresser\"](area.a);nwr[\"c]: HTTP 504 https://overpass.private.coffee/api/interpreter",
+  "osm: https://overpass.kumi.systems/api/interpreter [nwr[\"shop\"=\"hairdresser\"](area.a);nwr[\"c]: HTTP 504 https://overpass.kumi.systems/api/interpreter",
+  "osm: https://overpass-api.de/api/interpreter [nwr[\"shop\"~\"^(beauty|nails|barber|cosmet]: fetch failed",
+  "osm: https://overpass.private.coffee/api/interpreter [nwr[\"shop\"~\"^(beauty|nails|barber|cosmet]: The operation was aborted due to timeout",
+  "osm: https://overpass-api.de/api/interpreter [nwr[\"shop\"~\"^(tattoo|massage)$\"](area.a)]: fetch failed",
+  "osm: https://overpass.private.coffee/api/interpreter [nwr[\"shop\"~\"^(tattoo|massage)$\"](area.a)]: HTTP 504 https://overpass.private.coffee/api/interpreter",
+  "osm: https://overpass.kumi.systems/api/interpreter [nwr[\"shop\"~\"^(tattoo|massage)$\"](area.a)]: HTTP 504 https://overpass.kumi.systems/api/interpreter",
+  "osm: https://overpass-api.de/api/interpreter [nwr[\"shop\"~\"^(tattoo|massage)$\"](area.a)]: fetch failed",
+  "osm: https://overpass.private.coffee/api/interpreter [nwr[\"shop\"~\"^(tattoo|massage)$\"](area.a)]: The operation was aborted due to timeout",
+  "osm: https://overpass.kumi.systems/api/interpreter [nwr[\"shop\"~\"^(tattoo|massage)$\"](area.a)]: HTTP 504 https://overpass.kumi.systems/api/interpreter",
+  "osm: https://overpass-api.de/api/interpreter [nwr[\"beauty\"~\"^(nails|tanning|eyelash|ey]: fetch failed"
+ ],
+ "note": "A license record or map listing alone does not prove a business is open. The importer publishes only rows that meet its rules; the rest are held.",
+ "attribution": "OpenStreetMap data © OpenStreetMap contributors (ODbL, https://www.openstreetmap.org/copyright). Licensing data from the listed state open-data portals."
+}

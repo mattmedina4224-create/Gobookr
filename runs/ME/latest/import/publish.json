@@ -1,0 +1,74 @@
+[
+ {
+  "name": "Roots Salon",
+  "city": "Kittery",
+  "state": "ME",
+  "street_address": "",
+  "zip_code": "",
+  "county": "York",
+  "categories": [
+   "stylist"
+  ],
+  "website_url": "http://www.rootsspa.com/",
+  "phone": "",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/node/13741726424",
+  "source_external_id": "osm:node/13741726424",
+  "license_number": null,
+  "latitude": 43.0993415,
+  "longitude": -70.7449197,
+  "operational_status": "verified",
+  "checked_at": "2026-11-25",
+  "raw_name": "Roots Salon",
+  "website_candidate": "http://www.rootsspa.com/",
+  "website_source_url": ""
+ },
+ {
+  "name": "Leo’s Nails Spa",
+  "city": "Brunswick",
+  "state": "ME",
+  "street_address": "82 Maine Street",
+  "zip_code": "04011",
+  "county": "",
+  "categories": [
+   "nail_technician"
+  ],
+  "website_url": "https://leosnailspa.com/",
+  "phone": "(207) 406-2321",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/node/11316181654",
+  "source_external_id": "osm:node/11316181654",
+  "license_number": null,
+  "latitude": 43.9168481,
+  "longitude": -69.9663709,
+  "operational_status": "verified",
+  "checked_at": "2026-11-25",
+  "raw_name": "Leo’s Nails Spa",
+  "website_candidate": "https://leosnailspa.com/",
+  "website_source_url": ""
+ },
+ {
+  "name": "Ulta Beauty",
+  "city": "Augusta",
+  "state": "ME",
+  "street_address": "8 Stephen King Drive",
+  "zip_code": "04330",
+  "county": "",
+  "categories": [
+   "stylist"
+  ],
+  "website_url": "https://www.ulta.com/stores/augusta-me-412",
+  "phone": "(207) 629-5422",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/way/886546443",
+  "source_external_id": "osm:way/886546443",
+  "license_number": null,
+  "latitude": 44.3448284,
+  "longitude": -69.7870837,
+  "operational_status": "verified",
+  "checked_at": "2026-11-25",
+  "raw_name": "Ulta Beauty",
+  "website_candidate": "https://www.ulta.com/stores/augusta-me-412",
+  "website_source_url": ""
+ }
+]
