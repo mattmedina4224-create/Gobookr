@@ -1,0 +1,135 @@
+{
+ "http://ruesaintpaulsalon.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 13
+ },
+ "http://www.salonsalonwinooski.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 90
+ },
+ "https://christianroysalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 163
+ },
+ "https://www.rapunzelinc.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 173
+ },
+ "http://www.saloncruz.com/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 326
+ },
+ "https://app.salonrunner.com/customer/login.htm": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 337
+ },
+ "https://www.scouthairdesign.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 340
+ },
+ "https://greenmountainclippers.com/": {
+  "status": "error",
+  "error": "ECONNRESET",
+  "ms": 108
+ },
+ "https://www.urbansalonteam.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://urbansalonteam.com/",
+  "ms": 517
+ },
+ "https://thebarbertodd.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 168
+ },
+ "https://www.tulipandtonic.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 144
+ },
+ "https://www.supercuts.com/locations/nearme/haircut/vt/essex/lowes-plaza-haircuts/83305": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 313
+ },
+ "https://www.ouellettesdohair.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 114
+ },
+ "https://www.kimmckinstry.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 188
+ },
+ "http://luxburlington.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 135
+ },
+ "http://www.mensroomvt.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 452
+ },
+ "https://salonvermont.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 738
+ },
+ "https://www.jubilancesalon.com/": {
+  "status": "error",
+  "error": "UND_ERR_SOCKET",
+  "ms": 462
+ },
+ "https://www.hairrepublicvt.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 139
+ },
+ "https://www.nailspaandtanning.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 83
+ },
+ "https://equinoxhealingtherapies.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 252
+ },
+ "https://www.salonvermont.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://salonvermont.com/",
+  "ms": 1253
+ },
+ "https://www.lakeshorehair.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 547
+ },
+ "https://booking.gocheckin.net/v2/12747": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 536
+ },
+ "https://valshairtrends.com/": {
+  "status": "error",
+  "error": "ECONNREFUSED",
+  "ms": 1527
+ },
+ "https://www.vagaro.com/roninmenssalon": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://mysite.vagaro.com/roninmenssalon",
+  "ms": 2223
+ }
+}

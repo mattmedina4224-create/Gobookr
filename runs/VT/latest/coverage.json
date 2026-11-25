@@ -1,0 +1,165 @@
+{
+ "state": "VT",
+ "census_places": 180,
+ "places_covered": 9,
+ "place_coverage_pct": 5,
+ "census_counties": 14,
+ "counties_covered": 6,
+ "counties_uncovered": [
+  "Caledonia County",
+  "Essex County",
+  "Franklin County",
+  "Grand Isle County",
+  "Orange County",
+  "Orleans County",
+  "Rutland County",
+  "Windham County"
+ ],
+ "communities_outside_census_places": [
+  {
+   "city": "Williston",
+   "shops": 1
+  },
+  {
+   "city": "Colchester",
+   "shops": 1
+  }
+ ],
+ "top_covered_places": [
+  {
+   "name": "Burlington",
+   "shops": 4
+  },
+  {
+   "name": "White River Junction",
+   "shops": 4
+  },
+  {
+   "name": "South Burlington",
+   "shops": 3
+  },
+  {
+   "name": "Montpelier",
+   "shops": 1
+  },
+  {
+   "name": "Essex Junction",
+   "shops": 1
+  },
+  {
+   "name": "Middlebury",
+   "shops": 1
+  },
+  {
+   "name": "Stowe",
+   "shops": 1
+  },
+  {
+   "name": "Manchester Center",
+   "shops": 1
+  },
+  {
+   "name": "Milton",
+   "shops": 1
+  }
+ ],
+ "uncovered_places_with_held_candidates": [
+  {
+   "name": "Barre",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Brattleboro",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Bennington",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Johnson",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Norwich",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Quechee",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Rutland",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Vergennes",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Waterbury",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Derby Line",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Hartland",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "North Clarendon",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Northfield",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Proctorsville",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Shelburne",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Springfield",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "St. Johnsbury",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Windsor",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Winooski",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  }
+ ],
+ "uncovered_places_without_candidates": 152,
+ "source": "U.S. Census Bureau 2020 place-by-county and county code files"
+}

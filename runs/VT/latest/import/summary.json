@@ -1,0 +1,72 @@
+{
+ "state": "VT",
+ "checked_at": "2026-11-25",
+ "candidates": 100,
+ "existing_compared": 0,
+ "publish": 19,
+ "review": 81,
+ "skipped": 0,
+ "enrich_existing": 0,
+ "publish_with_website": 19,
+ "publish_with_street": 19,
+ "publish_with_phone": 12,
+ "review_reasons": {
+  "map_only_without_website": 71,
+  "map_website_not_confirmed_live": 7,
+  "missing_city": 3
+ },
+ "skipped_reasons": {},
+ "publish_categories": {
+  "stylist": 15,
+  "barber": 2,
+  "massage_therapist": 1,
+  "nail_technician": 1
+ },
+ "publish_sources": {
+  "OpenStreetMap contributors": 19
+ },
+ "publish_cities": {
+  "Burlington": 4,
+  "White River Junction": 4,
+  "South Burlington": 3,
+  "Williston": 1,
+  "Montpelier": 1,
+  "Essex Junction": 1,
+  "Middlebury": 1,
+  "Stowe": 1,
+  "Colchester": 1,
+  "Manchester Center": 1,
+  "Milton": 1
+ },
+ "review_cities": {
+  "Burlington": 15,
+  "South Burlington": 13,
+  "Montpelier": 6,
+  "Barre": 5,
+  "Essex Junction": 4,
+  "Brattleboro": 4,
+  "Middlebury": 3,
+  "(no city)": 3,
+  "Rutland": 2,
+  "Waterbury": 2,
+  "Norwich": 2,
+  "Johnson": 2,
+  "Quechee": 2,
+  "Milton": 2,
+  "Vergennes": 2,
+  "Bennington": 2,
+  "Derby Line": 1,
+  "Windsor": 1,
+  "Winooski": 1,
+  "Hartland": 1,
+  "White River Junction": 1,
+  "St. Johnsbury": 1,
+  "Northfield": 1,
+  "North Clarendon": 1,
+  "Proctorsville": 1,
+  "Shelburne": 1,
+  "Springfield": 1,
+  "Williston": 1
+ },
+ "batches": 1
+}
