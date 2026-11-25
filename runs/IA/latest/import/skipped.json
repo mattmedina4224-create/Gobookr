@@ -1,0 +1,28 @@
+[
+ {
+  "name": "Ulta Beauty",
+  "city": "West Des Moines",
+  "state": "IA",
+  "street_address": "4100 University Avenue",
+  "zip_code": "50266",
+  "county": "",
+  "categories": [
+   "stylist"
+  ],
+  "website_url": "https://www.ulta.com/stores/west-des-moines-ia-1451",
+  "phone": "(515) 207-5536",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/node/12243887320",
+  "source_external_id": "osm:node/12243887320",
+  "license_number": null,
+  "latitude": 41.599157,
+  "longitude": -93.7588075,
+  "operational_status": "verified",
+  "checked_at": "2026-11-25",
+  "raw_name": "Ulta Beauty",
+  "website_candidate": "https://www.ulta.com/stores/west-des-moines-ia-1451",
+  "website_source_url": "",
+  "reason": "duplicate_candidate",
+  "duplicate_of": "osm:node/3036238698"
+ }
+]

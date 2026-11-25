@@ -1,0 +1,628 @@
+{
+ "state": "IA",
+ "census_places": 1028,
+ "places_covered": 41,
+ "place_coverage_pct": 4,
+ "census_counties": 99,
+ "counties_covered": 28,
+ "counties_uncovered": [
+  "Adair County",
+  "Adams County",
+  "Appanoose County",
+  "Audubon County",
+  "Benton County",
+  "Boone County",
+  "Bremer County",
+  "Butler County",
+  "Calhoun County",
+  "Cedar County",
+  "Cerro Gordo County",
+  "Cherokee County",
+  "Chickasaw County",
+  "Clarke County",
+  "Clinton County",
+  "Davis County",
+  "Decatur County",
+  "Delaware County",
+  "Des Moines County",
+  "Emmet County",
+  "Fayette County",
+  "Floyd County",
+  "Fremont County",
+  "Greene County",
+  "Grundy County",
+  "Guthrie County",
+  "Hamilton County",
+  "Hancock County",
+  "Hardin County",
+  "Harrison County",
+  "Henry County",
+  "Howard County",
+  "Humboldt County",
+  "Ida County",
+  "Iowa County",
+  "Jackson County",
+  "Jasper County",
+  "Jones County",
+  "Keokuk County",
+  "Kossuth County",
+  "Lee County",
+  "Louisa County",
+  "Lucas County",
+  "Lyon County",
+  "Marion County",
+  "Marshall County",
+  "Mills County",
+  "Mitchell County",
+  "Monona County",
+  "Monroe County",
+  "Montgomery County",
+  "Muscatine County",
+  "O'Brien County",
+  "Osceola County",
+  "Page County",
+  "Palo Alto County",
+  "Pocahontas County",
+  "Ringgold County",
+  "Sac County",
+  "Sioux County",
+  "Tama County",
+  "Taylor County",
+  "Van Buren County",
+  "Wapello County",
+  "Washington County",
+  "Wayne County",
+  "Webster County",
+  "Winnebago County",
+  "Winneshiek County",
+  "Worth County",
+  "Wright County"
+ ],
+ "communities_outside_census_places": [
+  {
+   "city": "Clintion",
+   "shops": 1
+  }
+ ],
+ "top_covered_places": [
+  {
+   "name": "Cedar Rapids",
+   "shops": 20
+  },
+  {
+   "name": "Des Moines",
+   "shops": 17
+  },
+  {
+   "name": "Marion",
+   "shops": 13
+  },
+  {
+   "name": "West Des Moines",
+   "shops": 9
+  },
+  {
+   "name": "Ankeny",
+   "shops": 9
+  },
+  {
+   "name": "Ames",
+   "shops": 5
+  },
+  {
+   "name": "Urbandale",
+   "shops": 4
+  },
+  {
+   "name": "Coralville",
+   "shops": 4
+  },
+  {
+   "name": "Dubuque",
+   "shops": 4
+  },
+  {
+   "name": "Cedar Falls",
+   "shops": 4
+  },
+  {
+   "name": "Davenport",
+   "shops": 3
+  },
+  {
+   "name": "Mount Vernon",
+   "shops": 2
+  },
+  {
+   "name": "Council Bluffs",
+   "shops": 2
+  },
+  {
+   "name": "Altoona",
+   "shops": 2
+  },
+  {
+   "name": "Bettendorf",
+   "shops": 2
+  },
+  {
+   "name": "Sioux City",
+   "shops": 2
+  },
+  {
+   "name": "Iowa City",
+   "shops": 2
+  },
+  {
+   "name": "Clive",
+   "shops": 2
+  },
+  {
+   "name": "Creston",
+   "shops": 1
+  },
+  {
+   "name": "Solon",
+   "shops": 1
+  },
+  {
+   "name": "Oskaloosa",
+   "shops": 1
+  },
+  {
+   "name": "Grinnell",
+   "shops": 1
+  },
+  {
+   "name": "Winterset",
+   "shops": 1
+  },
+  {
+   "name": "Spencer",
+   "shops": 1
+  },
+  {
+   "name": "Johnston",
+   "shops": 1
+  },
+  {
+   "name": "Carroll",
+   "shops": 1
+  },
+  {
+   "name": "Storm Lake",
+   "shops": 1
+  },
+  {
+   "name": "Griswold",
+   "shops": 1
+  },
+  {
+   "name": "Harlan",
+   "shops": 1
+  },
+  {
+   "name": "Spirit Lake",
+   "shops": 1
+  },
+  {
+   "name": "Le Claire",
+   "shops": 1
+  },
+  {
+   "name": "Waterloo",
+   "shops": 1
+  },
+  {
+   "name": "Carlisle",
+   "shops": 1
+  },
+  {
+   "name": "Lansing",
+   "shops": 1
+  },
+  {
+   "name": "Denison",
+   "shops": 1
+  },
+  {
+   "name": "Fairfield",
+   "shops": 1
+  },
+  {
+   "name": "North Liberty",
+   "shops": 1
+  },
+  {
+   "name": "Milford",
+   "shops": 1
+  },
+  {
+   "name": "Independence",
+   "shops": 1
+  },
+  {
+   "name": "Volga",
+   "shops": 1
+  }
+ ],
+ "uncovered_places_with_held_candidates": [
+  {
+   "name": "Ottumwa",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 10
+  },
+  {
+   "name": "Burlington",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 7
+  },
+  {
+   "name": "Hiawatha",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 6
+  },
+  {
+   "name": "Mason City",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 6
+  },
+  {
+   "name": "Polk City",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 6
+  },
+  {
+   "name": "Sheldon",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 6
+  },
+  {
+   "name": "Waverly",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 6
+  },
+  {
+   "name": "Bellevue",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Grimes",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Keokuk",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Orange City",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Osceola",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Chariton",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Clarinda",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Exira",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Hartley",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Indianola",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Knoxville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Nevada",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Newton",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Pella",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Perry",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Sioux Center",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Tripoli",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Center Point",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Cherokee",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "DeWitt",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Epworth",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Fort Madison",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Glenwood",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Malvern",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Monroe",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Waukee",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Windsor Heights",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Afton",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Algona",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Aplington",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Armstrong",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Arnolds Park",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Asbury",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Bernard",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Bondurant",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Central City",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Clear Lake",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Corning",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Decorah",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Delhi",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Dunlap",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Earlville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Ely",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Granger",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Greene",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Greenfield",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Huxley",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Ireton",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Lamoni",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Leon",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Manchester",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Maquoketa",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Marshalltown",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Mount Pleasant",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Moville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "New Hampton",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Osage",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Parkersburg",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Peosta",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Rock Valley",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Sabula",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Sibley",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "St. Lucas",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Van Horne",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Wadena",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Webster City",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "West Burlington",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "West Point",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  }
+ ],
+ "uncovered_places_without_candidates": 912,
+ "source": "U.S. Census Bureau 2020 place-by-county and county code files"
+}
