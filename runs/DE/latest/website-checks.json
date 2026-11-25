@@ -1,0 +1,297 @@
+{
+ "https://www.twistedhairdesign.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 209
+ },
+ "https://salonbyanthonynewark.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 224
+ },
+ "https://usmalemodernbarbershop.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 359
+ },
+ "https://amstelbarbershop.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 412
+ },
+ "https://locations.haircuttery.com/de/bear/1009-governors-place-building-10": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.haircuttery.com/locations/de/bear/1009-governors-place-building-10",
+  "ms": 645
+ },
+ "https://millcreekbarbershop.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 625
+ },
+ "https://sportclips.com/us-de-newark-de102": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 453
+ },
+ "https://salons.greatclips.com/us/de/milford/646-n-dupont-blvd": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 465
+ },
+ "https://salons.greatclips.com/us/de/wilmington/4235-concord-pike": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 691
+ },
+ "https://www.viviansstyle.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 150
+ },
+ "https://salons.greatclips.com/us/de/newark/212-suburban-dr": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 111
+ },
+ "https://locations.haircuttery.com/de/newark/3164-fashion-center-boulevard": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.haircuttery.com/locations/de/newark/3164-fashion-center-boulevard",
+  "ms": 449
+ },
+ "https://locations.haircuttery.com/de/wilmington/5607-concord-pike": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.haircuttery.com/locations/de/wilmington/5607-concord-pike",
+  "ms": 221
+ },
+ "https://salononsavannah.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 105
+ },
+ "https://salons.greatclips.com/us/de/camden/121-n-main-st": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 13
+ },
+ "https://locations.haircuttery.com/de/middletown/659-middletown-warwick-road": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.haircuttery.com/locations/de/middletown/659-middletown-warwick-road",
+  "ms": 73
+ },
+ "https://thealchemyofhair.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 244
+ },
+ "https://www.supercuts.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 138
+ },
+ "https://www.supercuts.com/locations/nearme/haircut/de/bear/1233-quintillo-dr/82223": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 159
+ },
+ "https://renedelynhairdesigns.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 217
+ },
+ "https://bretts-world-of-barbering.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 325
+ },
+ "http://ispanails.net/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 42
+ },
+ "https://www.elaynejamessalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 895
+ },
+ "https://newtrendhairsalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1286
+ },
+ "http://perfectnailsde.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 64
+ },
+ "https://www.maureenssalonandspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 186
+ },
+ "https://www.sephora.com/happening/stores/newark": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 110
+ },
+ "https://www.jsbarbershopde.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 331
+ },
+ "https://www.bluepalmtanning.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://bluepalmtanning.com/",
+  "ms": 109
+ },
+ "https://www.bathandbodyworks.com/": {
+  "status": "error",
+  "http_status": 307,
+  "ms": 98
+ },
+ "https://www.salonh2olewes.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://salonh2olewes.com/",
+  "ms": 1042
+ },
+ "https://www.ulta.com/stores/newark-de-1036": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 230
+ },
+ "https://locations.waxcenter.com/de/newark/newark-christiana-fashion-center-0804.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 213
+ },
+ "https://btantanningsalons.net/locations/b-tan-kirkwood-hwy/": {
+  "status": "error",
+  "error": "ERR_SSL_TLSV1_ALERT_INTERNAL_ERROR",
+  "ms": 545
+ },
+ "https://pagave.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 813
+ },
+ "https://oanhsnails.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 57
+ },
+ "https://www.mysalonsuite.com/wilmington": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.mysalonsuite.com/wilmington/",
+  "ms": 582
+ },
+ "https://www.ulta.com/stores/wilmington-de-86": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 669
+ },
+ "https://handandstone.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 170
+ },
+ "https://www.trendzscb.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1299
+ },
+ "https://1401bell.com/": {
+  "status": "error",
+  "error": "ERR_TLS_CERT_ALTNAME_INVALID",
+  "ms": 208
+ },
+ "https://www.suntaninc.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 193
+ },
+ "https://www.lush.com/us/en_us/shops/lush-cosmetics-christiana-mall?id=US673": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 99
+ },
+ "https://freshfacedskincare.com/": {
+  "status": "error",
+  "error": "UND_ERR_SOCKET",
+  "ms": 98
+ },
+ "https://stores.maccosmetics.com/us/de/newark/715-christiana-mall-drive": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 199
+ },
+ "http://independenttattoo.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 87
+ },
+ "https://barefootonthebeachspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.barefootonthebeachspa.com/",
+  "ms": 376
+ },
+ "https://handandstone.com/locations/north-wilmington-brandywine/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 87
+ },
+ "https://handandstone.com/locations/wilmington-kirkwood-highway/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 99
+ },
+ "https://buffcitysoap.com/pages/stores/wilmington-de": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 287
+ },
+ "https://www.ulta.com/stores/rehoboth-beach-de-1691": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 453
+ },
+ "https://locations.massageenvy.com/delaware/newark/3148-fashion-center-blvd..html": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://locations.massageenvy.com/delaware/newark/3148-fashion-center-blvd-.html",
+  "ms": 240
+ },
+ "https://locations.waxcenter.com/de/wilmington/wilmington-0355.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 726
+ },
+ "https://locations.massageenvy.com/delaware/wilmington/5615-concord-pike.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 402
+ },
+ "https://bellebeautenailsincwilmington.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1950
+ },
+ "https://www.bethanymassage.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.bethanymassage.com/cgi-sys/suspendedpage.cgi",
+  "ms": 1027
+ },
+ "https://healthyfootcaredelaware.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 2677
+ }
+}

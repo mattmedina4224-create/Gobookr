@@ -1,0 +1,148 @@
+{
+ "state": "DE",
+ "census_places": 79,
+ "places_covered": 13,
+ "place_coverage_pct": 16.5,
+ "census_counties": 3,
+ "counties_covered": 3,
+ "counties_uncovered": [],
+ "communities_outside_census_places": [],
+ "top_covered_places": [
+  {
+   "name": "Newark",
+   "shops": 12
+  },
+  {
+   "name": "Wilmington",
+   "shops": 10
+  },
+  {
+   "name": "Middletown",
+   "shops": 4
+  },
+  {
+   "name": "Lewes",
+   "shops": 4
+  },
+  {
+   "name": "Bear",
+   "shops": 2
+  },
+  {
+   "name": "Milford",
+   "shops": 2
+  },
+  {
+   "name": "Dover",
+   "shops": 2
+  },
+  {
+   "name": "Rehoboth Beach",
+   "shops": 2
+  },
+  {
+   "name": "Dagsboro",
+   "shops": 1
+  },
+  {
+   "name": "Camden",
+   "shops": 1
+  },
+  {
+   "name": "Pike Creek Valley",
+   "shops": 1
+  },
+  {
+   "name": "Selbyville",
+   "shops": 1
+  },
+  {
+   "name": "Hockessin",
+   "shops": 1
+  }
+ ],
+ "uncovered_places_with_held_candidates": [
+  {
+   "name": "New Castle",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 13
+  },
+  {
+   "name": "Millsboro",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 7
+  },
+  {
+   "name": "Fenwick Island",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Georgetown",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Newport",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Seaford",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Bridgeville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Delmar",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Millville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "North Star",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Pike Creek",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Bethany Beach",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Brookside",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Greenwood",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Milton",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Wilmington Manor",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  }
+ ],
+ "uncovered_places_without_candidates": 50,
+ "source": "U.S. Census Bureau 2020 place-by-county and county code files"
+}
