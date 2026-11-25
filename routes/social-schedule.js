@@ -28,11 +28,7 @@ module.exports = function (router) {
     const days = schedule?.weekdays || ['mon','tue','wed','thu','fri'];
     const time = String(schedule?.local_time || '08:00').slice(0,5);
     const timezone = schedule?.timezone || 'America/Denver';
-    const nav = dashboardNav('social', [
-      { key:'overview', label:'Overview', href:'/dashboard/pro' },
-      { key:'marketing', label:'Marketing Center', href:'/dashboard/pro/marketing' },
-      { key:'social', label:'Social connections', href:'/dashboard/pro/social' },
-    ]);
+    const nav = dashboardNav('social', require('../lib/pro-dashboard-view').PRO_NAV_ITEMS);
     const csrf = `<input type="hidden" name="_csrf" value="${e(ctx.session.csrf_token)}">`;
     const dayBoxes = DAYS.map(([key,label]) => `<label class="social-schedule-day"><input type="checkbox" name="day_${key}" value="1"${checked(days.includes(key))}> ${e(label.slice(0,3))}</label>`).join('');
     const zones = ZONES.map(zone => `<option value="${e(zone)}"${zone===timezone?' selected':''}>${e(zone.replace('America/','').replace('_',' '))}</option>`).join('');

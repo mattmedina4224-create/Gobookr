@@ -60,7 +60,7 @@ module.exports = function(router) {
     const updates = db.prepare(`WITH updates AS (SELECT * FROM pro_updates WHERE pro_id = ? ORDER BY id DESC LIMIT 30)
       SELECT u.*, pi.image_url FROM updates u LEFT JOIN portfolio_items pi ON pi.id = u.portfolio_item_id AND pi.pro_id = u.pro_id ORDER BY u.id DESC`).all(profile.id);
     const publishable = isProPubliclyVisible(profile.id);
-    const nav = dashboardNav('updates', [{key:'overview',label:'Overview',href:'/dashboard/pro'}, {key:'updates',label:'Updates',href:'/dashboard/pro/updates'}, {key:'marketing',label:'Marketing Center',href:'/dashboard/pro/marketing'}, {key:'portfolio',label:'Portfolio',href:'/dashboard/pro/portfolio'}]);
+    const nav = dashboardNav('updates', require('../lib/pro-dashboard-view').PRO_NAV_ITEMS);
     const body = `<link rel="stylesheet" href="/following.css"><section class="section container pro-dashboard"><div class="dash-layout">${nav}<div class="pro-main">
       <h1>Updates for your followers</h1><p>Share fresh work, news, or a reason to book. Posts appear on your GoBookr profile and in your followers’ feed.</p><p class="muted">${currentFollowers(profile.id)} followers · follower identities stay private.</p>
       ${publishable ? '' : '<div class="panel"><p>Your profile must be public before you can publish updates.</p><a href="/dashboard/pro/onboarding?step=resume">Review your setup</a> · <a href="/dashboard/pro/billing">Review your plan</a></div>'}

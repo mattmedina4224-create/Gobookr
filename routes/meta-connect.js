@@ -24,7 +24,7 @@ module.exports=function(router){
     const connection=db.prepare('WITH connection AS (SELECT page_id,page_name,instagram_id,expires_at,connected_at FROM meta_connections WHERE pro_id = ? AND user_id = ?) SELECT * FROM connection').get(profile.id,ctx.currentUser.id);
     let available=null; if(meta.canConnect(profile.id))try{available=choices(profile,ctx);}catch(_){/* no raw token errors */}
     const csrf=`<input type="hidden" name="_csrf" value="${e(ctx.session.csrf_token)}">`;
-    const nav=dashboardNav('social',[{key:'overview',label:'Overview',href:'/dashboard/pro'},{key:'marketing',label:'Marketing Center',href:'/dashboard/pro/marketing'},{key:'social',label:'Social connections',href:PATH}]);
+    const nav=dashboardNav('social',require('../lib/pro-dashboard-view').PRO_NAV_ITEMS);
     const valid=connection&&new Date(connection.expires_at).getTime()>Date.now();
     const body=`<section class="section container pro-dashboard"><div class="dash-layout">${nav}<div class="pro-main"><h1>Facebook &amp; Instagram connections</h1><p>Connect an authorized Facebook Page and its linked Instagram account. Choose the destination yourself; GoBookr never asks for your social password.</p>
       <div class="panel"><h2>Connection foundation · testing only</h2><p>Automatic publishing is not enabled yet. We must finish real-account tests and Meta approval before launch. <a href="/dashboard/pro/marketing">Assisted Story sharing works now.</a></p></div>

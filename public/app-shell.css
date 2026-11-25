@@ -46,12 +46,41 @@ body.gb-app .gb-flash { max-width: none; padding: 12px 20px 0; }
   .gb-apphead-brand span { display: none; }
 }
 
-/* Personal pro dashboard pages inside the app frame: same sidebar language as the business dashboard. */
+/* Personal pro dashboard pages inside the app frame: same sidebar language as the business dashboard.
+   (gobookr-ui.css sets .dash-nav with !important, so these use the same weight with a more specific selector.) */
 body.gb-app .pro-dashboard, body.gb-app section.section.container:has(> .dash-layout) { padding-top: 28px; }
-body.gb-app .dash-nav { border: 0; background: none; padding: 0; top: calc(var(--gb-header-h) + 20px); }
-body.gb-app .dash-nav a { display: flex; align-items: center; gap: 10px; min-height: 38px; padding: 8px 12px; border-radius: var(--gb-r-sm); color: var(--gb-ink-2); font-size: var(--gb-text-sm); font-weight: 500; }
-body.gb-app .dash-nav a svg { color: var(--gb-ink-3); }
-body.gb-app .dash-nav a:hover { background: var(--gb-cloud); color: var(--gb-midnight); }
-body.gb-app .dash-nav a.active { background: var(--gb-white); color: var(--gb-midnight); box-shadow: 0 0 0 1px var(--gb-line), var(--gb-shadow-1); }
+body.gb-app .dash-nav { border: 0 !important; background: none !important; padding: 0 !important; top: calc(var(--gb-header-h) + 20px) !important; }
+body.gb-app .dash-nav a { gap: 10px; min-height: 40px; padding: 8px 12px !important; color: var(--gb-ink-2) !important; font-size: var(--gb-text-sm); font-weight: 500 !important; }
+body.gb-app .dash-nav a svg { color: var(--gb-ink-3); flex: 0 0 auto; }
+body.gb-app .dash-nav a:hover { background: var(--gb-cloud) !important; color: var(--gb-midnight) !important; }
+body.gb-app .dash-nav a.active { background: var(--gb-white) !important; color: var(--gb-midnight) !important; box-shadow: 0 0 0 1px var(--gb-line), var(--gb-shadow-1); }
 body.gb-app .dash-nav a.active svg { color: var(--gb-iris); }
-body.gb-app .pro-nav-label { padding: 0 12px; font-size: var(--gb-text-xs); font-weight: 600; color: var(--gb-ink-3); }
+body.gb-app .pro-nav-label { padding: 0 12px; font-size: var(--gb-text-xs); font-weight: 600; color: var(--gb-ink-3); letter-spacing: 0; text-transform: none; }
+
+/* Phones: ☰ in the app header opens the pro navigation as a slide-out menu (public/app-shell.js). */
+.gb-app-menubtn, .gb-app-drawer-head, .gb-app-scrim { display: none; }
+@media (max-width: 860px) {
+  html.gb-has-drawer .gb-app-menubtn { display: inline-grid; place-items: center; width: 44px; height: 44px; margin-left: -6px; border: 0; border-radius: var(--gb-r-sm);
+    background: none; color: var(--gb-midnight); cursor: pointer; flex: 0 0 auto; }
+  html.gb-has-drawer .gb-app-menubtn:focus-visible, .gb-app-drawer-close:focus-visible { outline: none; box-shadow: var(--gb-ring); }
+  html.gb-has-drawer body.gb-app .dash-nav { position: fixed !important; z-index: 1001; top: 0 !important; left: 0; bottom: 0; width: min(86vw, 320px);
+    display: block !important; overflow-x: hidden; overflow-y: auto; overscroll-behavior: contain; padding: 0 12px 28px !important;
+    background: #F5F6FA !important; box-shadow: var(--gb-shadow-float) !important; border-radius: 0 !important;
+    transform: translateX(-102%); visibility: hidden; transition: transform .24s var(--gb-ease), visibility .24s; }
+  html.gb-has-drawer body.gb-app .dash-nav.is-open { transform: none; visibility: visible; }
+  html.gb-has-drawer .gb-app-drawer-head { display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 1;
+    margin: 0 -12px 16px; padding: 6px 6px 6px 20px; min-height: 56px; background: #F5F6FA; border-bottom: 1px solid var(--gb-line); font-weight: 600; color: var(--gb-midnight); }
+  .gb-app-drawer-close { display: inline-grid; place-items: center; width: 44px; height: 44px; border: 0; border-radius: var(--gb-r-sm); background: none; color: var(--gb-midnight); cursor: pointer; }
+  html.gb-has-drawer body.gb-app .dash-nav a { min-height: 48px; font-size: var(--gb-text-md); white-space: normal; margin: 0 0 2px !important; }
+  html.gb-has-drawer body.gb-app .dash-nav svg { width: 20px; height: 20px; }
+  html.gb-has-drawer body.gb-app .pro-nav-label { display: block; margin: 0 0 6px; }
+  /* Workspace switch shows as a full card inside the menu, not a chip. */
+  html.gb-has-drawer body.gb-app .pro-dash-nav .gbd-ws { display: block; margin: 0 0 16px; }
+  html.gb-has-drawer body.gb-app .pro-dash-nav .gbd-ws-current { display: flex; }
+  html.gb-has-drawer body.gb-app .pro-dash-nav .gbd-ws-switch { border: 0; border-top: 1px solid var(--gb-line); border-radius: 0; background: none; min-height: 52px; }
+  html.gb-has-drawer body.gb-app .pro-dash-nav .gbd-ws-switch small { display: inline; }
+  .gb-app-scrim:not([hidden]) { display: block; position: fixed; inset: 0; z-index: 1000; background: rgba(16, 24, 40, .4); }
+  body.gb-locked { overflow: hidden; }
+  html.gb-has-drawer body.gb-app .dash-layout { gap: 0 !important; }
+}
+@media (prefers-reduced-motion: reduce) { html.gb-has-drawer body.gb-app .dash-nav { transition: none; } }
