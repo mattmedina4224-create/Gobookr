@@ -1,0 +1,267 @@
+{
+ "state": "ID",
+ "census_places": 237,
+ "places_covered": 15,
+ "place_coverage_pct": 6.3,
+ "census_counties": 44,
+ "counties_covered": 13,
+ "counties_uncovered": [
+  "Adams County",
+  "Bear Lake County",
+  "Benewah County",
+  "Bingham County",
+  "Boise County",
+  "Boundary County",
+  "Butte County",
+  "Camas County",
+  "Caribou County",
+  "Cassia County",
+  "Clark County",
+  "Clearwater County",
+  "Custer County",
+  "Elmore County",
+  "Franklin County",
+  "Fremont County",
+  "Gem County",
+  "Gooding County",
+  "Idaho County",
+  "Jefferson County",
+  "Lemhi County",
+  "Lewis County",
+  "Lincoln County",
+  "Madison County",
+  "Minidoka County",
+  "Oneida County",
+  "Owyhee County",
+  "Payette County",
+  "Teton County",
+  "Valley County",
+  "Washington County"
+ ],
+ "communities_outside_census_places": [
+  {
+   "city": "Boise",
+   "shops": 18
+  },
+  {
+   "city": "Ppocatello",
+   "shops": 1
+  }
+ ],
+ "top_covered_places": [
+  {
+   "name": "Meridian",
+   "shops": 16
+  },
+  {
+   "name": "Coeur d'Alene",
+   "shops": 12
+  },
+  {
+   "name": "Nampa",
+   "shops": 6
+  },
+  {
+   "name": "Lewiston",
+   "shops": 3
+  },
+  {
+   "name": "Idaho Falls",
+   "shops": 2
+  },
+  {
+   "name": "Pocatello",
+   "shops": 1
+  },
+  {
+   "name": "Jerome",
+   "shops": 1
+  },
+  {
+   "name": "Twin Falls",
+   "shops": 1
+  },
+  {
+   "name": "Ammon",
+   "shops": 1
+  },
+  {
+   "name": "Moscow",
+   "shops": 1
+  },
+  {
+   "name": "Sandpoint",
+   "shops": 1
+  },
+  {
+   "name": "Ketchum",
+   "shops": 1
+  },
+  {
+   "name": "Boise City",
+   "shops": 1
+  },
+  {
+   "name": "Priest River",
+   "shops": 1
+  },
+  {
+   "name": "Kellogg",
+   "shops": 1
+  }
+ ],
+ "uncovered_places_with_held_candidates": [
+  {
+   "name": "Post Falls",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 23
+  },
+  {
+   "name": "Hayden",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 20
+  },
+  {
+   "name": "Eagle",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 12
+  },
+  {
+   "name": "Caldwell",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 9
+  },
+  {
+   "name": "Middleton",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 9
+  },
+  {
+   "name": "Rathdrum",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 8
+  },
+  {
+   "name": "Kuna",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 7
+  },
+  {
+   "name": "Rexburg",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 7
+  },
+  {
+   "name": "Blackfoot",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 6
+  },
+  {
+   "name": "Dalton Gardens",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 6
+  },
+  {
+   "name": "Montpelier",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "New Plymouth",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Star",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Fruitland",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Garden City",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Grangeville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Parker",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Wallace",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "American Falls",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Ashton",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Bonners Ferry",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Burley",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Cascade",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Emmett",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "McCall",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Osburn",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Preston",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Rigby",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Shelley",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Spirit Lake",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  }
+ ],
+ "uncovered_places_without_candidates": 192,
+ "source": "U.S. Census Bureau 2020 place-by-county and county code files"
+}

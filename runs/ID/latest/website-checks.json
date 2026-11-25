@@ -1,0 +1,477 @@
+{
+ "https://www.supercuts.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 146
+ },
+ "https://www.lillysfullservicesalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 263
+ },
+ "https://www.supercuts.com/locations/nearme/haircut/id/meridian/750-s-progress-dr-ste-115/80502": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 270
+ },
+ "https://www.supercuts.com/locations/id/boise/marketplace-shopping-center-haircuts-80017.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 299
+ },
+ "https://xpressionssaloninc.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 322
+ },
+ "https://www.thelionsdensalon.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 335
+ },
+ "https://www.bestboisebarbers.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 460
+ },
+ "https://www.collectivecoboise.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 390
+ },
+ "https://cool-cuts.edan.io/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 600
+ },
+ "https://www.urbanrootsmeridian.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 350
+ },
+ "https://mariaofstaghaircare.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 593
+ },
+ "https://www.greatclips.com/salons/7704": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://salons.greatclips.com/us/id/pocatello/4100-n-yellowstone-ave",
+  "ms": 1028
+ },
+ "https://www.supercuts.com/locations/nearme/haircut/id/coeur-d%27alene/2834-n-ramsey-rd-ste-107/81089": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 45
+ },
+ "https://www.supercuts.com/locations/nearme/haircut/ID/Boise/Village-Shopping-Center/8139": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 752
+ },
+ "https://www.manestylingstudio.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 482
+ },
+ "https://salons.greatclips.com/us/id/coeur-d-alene/3522-n-government-way": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 69
+ },
+ "https://www.supercuts.com/checkin/81928": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 13
+ },
+ "https://www.theextensionandcolorcompany.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 157
+ },
+ "https://www.greatclips.com/salons/7703": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://salons.greatclips.com/us/id/pocatello/802-yellowstone-avenue",
+  "ms": 1311
+ },
+ "https://salons.greatclips.com/us/id/nampa/181-e-maine-ave": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 256
+ },
+ "https://square.site/book/EFC1QKE78YEEK/barclay-hill-meridian-id": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 551
+ },
+ "https://sportclips.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 391
+ },
+ "https://sportclips.com/us-id-southmeridianpromenade-id111": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 253
+ },
+ "https://www.obsidiansalon208.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://obsidiansalon208.com/",
+  "ms": 310
+ },
+ "https://vbarbershop.com/locations/ten-mile-creek-meridian/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://vbarbershop.com/pages/location/ten-mile-crossing",
+  "ms": 850
+ },
+ "https://thebarbershopcda.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 305
+ },
+ "https://themanshops.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 307
+ },
+ "https://seloncda.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.seloncda.com/",
+  "ms": 490
+ },
+ "https://lena-109119.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 807
+ },
+ "https://geminismcmxciii.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 223
+ },
+ "https://www.pigmenthairsalon.com/": {
+  "status": "error",
+  "error": "ERR_SSL_SSL/TLS_ALERT_HANDSHAKE_FAILURE",
+  "ms": 221
+ },
+ "https://www.sagebeautyandco.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 511
+ },
+ "https://www.lfty.xyz/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 572
+ },
+ "https://theelectricchairsalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 310
+ },
+ "http://www.diamondnailsid.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 126
+ },
+ "https://square.site/book/0TWYZFH8RV683/renewed-aethetics-twin-falls-id": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 87
+ },
+ "https://www.ulta.com/stores/meridian-id-1269": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 326
+ },
+ "https://www.ulta.com/stores/twin-falls-id-1044": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 714
+ },
+ "https://theomnisuites.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 49
+ },
+ "https://www.haircutsarefun.com/location/boise-id": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://haircutsarefun.com/location/boise-id/",
+  "ms": 2815
+ },
+ "http://imperiumbarbershopcda.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.imperiumbarbershopcda.com/",
+  "ms": 1172
+ },
+ "https://palmbeachtan.com/locations/ID/Boise-South-Broadway": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://palmbeachtan.com/locations/id/boise-south-broadway-avenue",
+  "ms": 932
+ },
+ "https://www.oilstudioskincare.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 219
+ },
+ "https://locations.waxcenter.com/id/meridian/meridian-0275.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 367
+ },
+ "https://evanshairstylingcollege.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 2453
+ },
+ "https://www.spaurbana.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 194
+ },
+ "https://www.solasalonstudios.com/locations/owyhee": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 568
+ },
+ "https://www.electricraystanning.com/boise": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 164
+ },
+ "https://kubiti.wordpress.com/nail-trends/?q=fina+beauty": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://kubiti.org/nail-trends/?q=fina+beauty",
+  "ms": 1275
+ },
+ "https://www.ulta.com/stores/boise-id-574": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 238
+ },
+ "https://www.ulta.com/stores/ammon-id-1123": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 102
+ },
+ "https://www.nailsplusmeridianidaho.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 306
+ },
+ "https://www.mspaboise.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 388
+ },
+ "https://reservations.waxcenter.com/webstoreNew/services/d3d8ac20-9782-42c8-955a-f33353c26c54": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 532
+ },
+ "https://boiseskinsolutions.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 445
+ },
+ "https://www.encoreskinboutique.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 253
+ },
+ "https://www.slickrocktanningspa.com/": {
+  "status": "error",
+  "error": "UND_ERR_SOCKET",
+  "ms": 148
+ },
+ "https://www.electricraystanning.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 29
+ },
+ "https://palmbeachtan.com/locations/ID/Meridian-Country-Terrace-Way": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://palmbeachtan.com/locations/id/meridian-country-terrace-way",
+  "ms": 496
+ },
+ "https://www.luxebeautyandbrowbar.com/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 236
+ },
+ "https://vagaro.com/skylinebarbershop": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.vagaro.com/skylinebarbershop",
+  "ms": 2291
+ },
+ "https://magicalfootspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 236
+ },
+ "https://coolnailandwax.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 318
+ },
+ "https://signatureaesthetics.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 296
+ },
+ "https://www.ulta.com/stores/coeur-dalene-id-592": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 587
+ },
+ "https://www.radiantwaxing.com/id-meridian": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.radiantwaxing.com/id-meridian/",
+  "ms": 1044
+ },
+ "https://www.ulta.com/stores/moscow-id-1235": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 574
+ },
+ "https://www.boiserefillery.com/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 118
+ },
+ "https://www.brow4u.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 65
+ },
+ "https://thewellstonespa.com/": {
+  "status": "error",
+  "error": "UNABLE_TO_GET_ISSUER_CERT_LOCALLY",
+  "ms": 245
+ },
+ "https://www.suntanvalley.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 665
+ },
+ "https://myuhfr.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 53
+ },
+ "https://www.ulta.com/stores/nampa-id-460": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 568
+ },
+ "https://skinandtox.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 484
+ },
+ "https://grit-glam.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 823
+ },
+ "http://balancewellnessspa.com/": {
+  "status": "dead",
+  "error": "EAI_AGAIN",
+  "ms": 408
+ },
+ "https://www.skindeceptions.com/": {
+  "status": "error",
+  "error": "ECONNREFUSED",
+  "ms": 278
+ },
+ "https://adtcda.com/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 347
+ },
+ "https://www.lotustouchtm.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://lotustouchtm.com/",
+  "ms": 518
+ },
+ "https://mcnabbstattooandfineart.com/": {
+  "status": "error",
+  "error": "UND_ERR_SOCKET",
+  "ms": 125
+ },
+ "https://elementsmassage.com/coeur-d-alene": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 282
+ },
+ "https://riversedgetherapeuticmassage.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 231
+ },
+ "https://burntheboatstattoo.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 756
+ },
+ "https://www.tendingtoes.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 2658
+ },
+ "https://www.blackandgraystudio.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 98
+ },
+ "https://www.bodyworksnw.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 503
+ },
+ "https://massagespapro.com/": {
+  "status": "error",
+  "error": "UNABLE_TO_GET_ISSUER_CERT_LOCALLY",
+  "ms": 263
+ },
+ "https://www.blackcatboise.com/": {
+  "status": "error",
+  "error": "UNABLE_TO_GET_ISSUER_CERT_LOCALLY",
+  "ms": 351
+ },
+ "https://annanailsnspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 2180
+ },
+ "https://silvervalleytattoo.org/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.silvervalleytattoo.org/",
+  "ms": 1358
+ },
+ "https://bevibrantmedspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 4660
+ },
+ "https://www.massageandskincaresolutions.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://massageandskincaresolutions.com/",
+  "ms": 7635
+ }
+}
