@@ -1,0 +1,28 @@
+[
+ {
+  "name": "Neroli Salon & Spa",
+  "city": "Milwaukee",
+  "state": "WI",
+  "street_address": "327 East Saint Paul Avenue",
+  "zip_code": "53202",
+  "county": "",
+  "categories": [
+   "stylist"
+  ],
+  "website_url": "http://www.nerolispa.com/location/downtown/",
+  "phone": "(414) 319-7559",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/node/5583388542",
+  "source_external_id": "osm:node/5583388542",
+  "license_number": null,
+  "latitude": 43.034981,
+  "longitude": -87.9065768,
+  "operational_status": "verified",
+  "checked_at": "2026-11-25",
+  "raw_name": "Neroli Salon & Spa",
+  "website_candidate": "http://www.nerolispa.com/location/downtown/",
+  "website_source_url": "",
+  "reason": "duplicate_candidate",
+  "duplicate_of": "osm:node/1938373853"
+ }
+]

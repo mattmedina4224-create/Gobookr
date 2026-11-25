@@ -1,0 +1,790 @@
+{
+ "state": "WI",
+ "census_places": 800,
+ "places_covered": 74,
+ "place_coverage_pct": 9.3,
+ "census_counties": 72,
+ "counties_covered": 38,
+ "counties_uncovered": [
+  "Adams County",
+  "Ashland County",
+  "Buffalo County",
+  "Burnett County",
+  "Clark County",
+  "Columbia County",
+  "Crawford County",
+  "Door County",
+  "Douglas County",
+  "Florence County",
+  "Fond du Lac County",
+  "Forest County",
+  "Green Lake County",
+  "Iowa County",
+  "Iron County",
+  "Jackson County",
+  "Juneau County",
+  "Lafayette County",
+  "Langlade County",
+  "Marquette County",
+  "Menominee County",
+  "Monroe County",
+  "Oneida County",
+  "Pepin County",
+  "Pierce County",
+  "Price County",
+  "Richland County",
+  "Rusk County",
+  "Shawano County",
+  "Taylor County",
+  "Trempealeau County",
+  "Vernon County",
+  "Waushara County",
+  "Wood County"
+ ],
+ "communities_outside_census_places": [
+  {
+   "city": "Greenville",
+   "shops": 1
+  },
+  {
+   "city": "Salem",
+   "shops": 1
+  }
+ ],
+ "top_covered_places": [
+  {
+   "name": "Milwaukee",
+   "shops": 70
+  },
+  {
+   "name": "Wauwatosa",
+   "shops": 24
+  },
+  {
+   "name": "Madison",
+   "shops": 16
+  },
+  {
+   "name": "Hudson",
+   "shops": 13
+  },
+  {
+   "name": "Greenfield",
+   "shops": 8
+  },
+  {
+   "name": "Green Bay",
+   "shops": 7
+  },
+  {
+   "name": "Pleasant Prairie",
+   "shops": 6
+  },
+  {
+   "name": "Shorewood",
+   "shops": 5
+  },
+  {
+   "name": "Mount Pleasant",
+   "shops": 4
+  },
+  {
+   "name": "Eau Claire",
+   "shops": 4
+  },
+  {
+   "name": "Oconomowoc",
+   "shops": 4
+  },
+  {
+   "name": "Menomonie",
+   "shops": 4
+  },
+  {
+   "name": "Mosinee",
+   "shops": 4
+  },
+  {
+   "name": "Bellevue",
+   "shops": 3
+  },
+  {
+   "name": "West Milwaukee",
+   "shops": 3
+  },
+  {
+   "name": "Neenah",
+   "shops": 3
+  },
+  {
+   "name": "New Berlin",
+   "shops": 3
+  },
+  {
+   "name": "Manitowoc",
+   "shops": 3
+  },
+  {
+   "name": "Marinette",
+   "shops": 2
+  },
+  {
+   "name": "Stevens Point",
+   "shops": 2
+  },
+  {
+   "name": "Waukesha",
+   "shops": 2
+  },
+  {
+   "name": "Brookfield",
+   "shops": 2
+  },
+  {
+   "name": "Wausau",
+   "shops": 2
+  },
+  {
+   "name": "St. Croix Falls",
+   "shops": 2
+  },
+  {
+   "name": "Oshkosh",
+   "shops": 2
+  },
+  {
+   "name": "Onalaska",
+   "shops": 2
+  },
+  {
+   "name": "Menomonee Falls",
+   "shops": 2
+  },
+  {
+   "name": "Fox Point",
+   "shops": 2
+  },
+  {
+   "name": "Appleton",
+   "shops": 2
+  },
+  {
+   "name": "Fitchburg",
+   "shops": 2
+  },
+  {
+   "name": "Delavan",
+   "shops": 2
+  },
+  {
+   "name": "Verona",
+   "shops": 2
+  },
+  {
+   "name": "Racine",
+   "shops": 2
+  },
+  {
+   "name": "Glendale",
+   "shops": 2
+  },
+  {
+   "name": "East Troy",
+   "shops": 2
+  },
+  {
+   "name": "Tomahawk",
+   "shops": 2
+  },
+  {
+   "name": "Platteville",
+   "shops": 1
+  },
+  {
+   "name": "Monroe",
+   "shops": 1
+  },
+  {
+   "name": "Sheboygan Falls",
+   "shops": 1
+  },
+  {
+   "name": "Evansville",
+   "shops": 1
+  }
+ ],
+ "uncovered_places_with_held_candidates": [
+  {
+   "name": "Ashwaubenon",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 17
+  },
+  {
+   "name": "Franklin",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 17
+  },
+  {
+   "name": "Wisconsin Rapids",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 10
+  },
+  {
+   "name": "Ashland",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 6
+  },
+  {
+   "name": "Beloit",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 6
+  },
+  {
+   "name": "Richland Center",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 6
+  },
+  {
+   "name": "St. Francis",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 6
+  },
+  {
+   "name": "Union Grove",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 6
+  },
+  {
+   "name": "Waunakee",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 6
+  },
+  {
+   "name": "Wind Lake",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 6
+  },
+  {
+   "name": "Brillion",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Burlington",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Marshfield",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Superior",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Columbus",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Delafield",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Hartland",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Ripon",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "South Milwaukee",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Walworth",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Wisconsin Dells",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Allouez",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Amery",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Crivitz",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Denmark",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "La Crosse",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "McFarland",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Monona",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Plymouth",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "River Falls",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Sheboygan",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Winneconne",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Bangor",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Bayside",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Boyd",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Bristol",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Caledonia",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Hartford",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Holmen",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Horicon",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Jefferson",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Johnson Creek",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Mondovi",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "New Richmond",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Paddock Lake",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Peshtigo",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Phillips",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Rhinelander",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Rothschild",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Shorewood Hills",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Slinger",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Somerset",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Star Prairie",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Valders",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Adams",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Black River Falls",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Blanchardville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Brodhead",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Butternut",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Cassville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Cedarburg",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Chetek",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Clam Lake",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Cochrane",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Colfax",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Cudahy",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Dallas",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Darlington",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Eagle",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Elkhorn",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Fond du Lac",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Fox Crossing",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Genoa",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Kimberly",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Knapp",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Kohler",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "La Farge",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Ladysmith",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Lake Hallie",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Lake Mills",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Marathon City",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Menasha",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Milton",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Minocqua",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Minong",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Mishicot",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Montello",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Mount Horeb",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Muskego",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Nashotah",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Oregon",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Pewaukee",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Potosi",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Poynette",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Reedsville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Solon Springs",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "South Wayne",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Sparta",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Stanley",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Sturtevant",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Three Lakes",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Tomah",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Van Dyne",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Viroqua",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Waupun",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "West Baraboo",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Weston",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Whitefish Bay",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Whitelaw",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Whitewater",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Whiting",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Williams Bay",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Windsor",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Yorkville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  }
+ ],
+ "uncovered_places_without_candidates": 612,
+ "source": "U.S. Census Bureau 2020 place-by-county and county code files"
+}
