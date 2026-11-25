@@ -1,0 +1,67 @@
+{
+ "state": "LA",
+ "state_name": "Louisiana",
+ "wave": 6,
+ "created_at": "2026-11-25T00:17:55.462Z",
+ "staging_only": true,
+ "sources": [
+  {
+   "name": "OpenStreetMap (Overpass)",
+   "url": "https://overpass.private.coffee/api/interpreter",
+   "status": "partial",
+   "records": 659,
+   "parts_ok": 3,
+   "parts_total": 4,
+   "error": "https://overpass-api.de/api/interpreter [nwr[\"shop\"=\"hairdresser\"](area.a);nwr[\"c]: HTTP 502 https://overpass-api.de/api/interpreter | https://overpass-api.de/api/interpreter [nwr[\"shop\"~\"^(tattoo|massage)$\"](area.a)]: HTTP 502 https://overpass-api.de/api/interpreter | https://overpass-api.de/api/interpreter [nwr[\"beauty\"~\"^(nails|tanning|eyelash|ey]: HTTP 502 https://overpass-api.de/api/interpreter | https://overpass.private.coffee/api/interpreter [nwr[\"beauty\"~\"^(nails|tanning|eyelash|ey]: HTTP 504 https://overpass.private.coffee/api/interpreter | https://overpass.kumi.systems/api/interpreter [nwr[\"beauty\"~\"^(nails|tanning|eyelash|ey]: HTTP 504 https://overpass.kumi.systems/api/interpreter | https://overpass-api.de/api/interpreter [nwr[\"beauty\"~\"^(nails|tanning|eyelash|ey]: HTTP 502 https://overpass-api.de/api/interpreter | https://overpass.private.coffee/api/interpreter [nwr[\"beauty\"~\"^(nails|tanning|eyelash|ey]: HTTP 502 https://overpass.private.coffee/api/interpreter | https://overpass.kumi.systems/api/interpreter [nwr[\"beauty\"~\"^(nails|tanning|eyelash|ey]: HTTP 502 https://overpass.kumi.systems/api/interpreter"
+  },
+  {
+   "name": "U.S. Census Geocoder (place containing map point)",
+   "url": "https://geocoding.geo.census.gov/",
+   "status": "processed",
+   "records": 309
+  }
+ ],
+ "license_records_scanned": 0,
+ "licensed_active_candidates": 0,
+ "license_dropped": null,
+ "license_fields": null,
+ "license_shop_types": [],
+ "license_type_counts": [],
+ "license_type_lookup": [],
+ "census_city_lookup": {
+  "attempted": 323,
+  "filled": 309,
+  "failed": 0
+ },
+ "mapped_beauty_places": 659,
+ "overpass_endpoint": "https://overpass.private.coffee/api/interpreter",
+ "total_candidates": 611,
+ "with_websites": 114,
+ "category_counts": {
+  "hair": 244,
+  "barber": 53,
+  "permanent_makeup": 1,
+  "salon_suites": 6,
+  "massage": 27,
+  "waxing": 13,
+  "nails": 188,
+  "makeup": 21,
+  "brows": 4,
+  "lashes": 6,
+  "skincare": 8,
+  "spray_tanning": 13,
+  "tattoo": 27
+ },
+ "errors": [
+  "osm: https://overpass-api.de/api/interpreter [nwr[\"shop\"=\"hairdresser\"](area.a);nwr[\"c]: HTTP 502 https://overpass-api.de/api/interpreter",
+  "osm: https://overpass-api.de/api/interpreter [nwr[\"shop\"~\"^(tattoo|massage)$\"](area.a)]: HTTP 502 https://overpass-api.de/api/interpreter",
+  "osm: https://overpass-api.de/api/interpreter [nwr[\"beauty\"~\"^(nails|tanning|eyelash|ey]: HTTP 502 https://overpass-api.de/api/interpreter",
+  "osm: https://overpass.private.coffee/api/interpreter [nwr[\"beauty\"~\"^(nails|tanning|eyelash|ey]: HTTP 504 https://overpass.private.coffee/api/interpreter",
+  "osm: https://overpass.kumi.systems/api/interpreter [nwr[\"beauty\"~\"^(nails|tanning|eyelash|ey]: HTTP 504 https://overpass.kumi.systems/api/interpreter",
+  "osm: https://overpass-api.de/api/interpreter [nwr[\"beauty\"~\"^(nails|tanning|eyelash|ey]: HTTP 502 https://overpass-api.de/api/interpreter",
+  "osm: https://overpass.private.coffee/api/interpreter [nwr[\"beauty\"~\"^(nails|tanning|eyelash|ey]: HTTP 502 https://overpass.private.coffee/api/interpreter",
+  "osm: https://overpass.kumi.systems/api/interpreter [nwr[\"beauty\"~\"^(nails|tanning|eyelash|ey]: HTTP 502 https://overpass.kumi.systems/api/interpreter"
+ ],
+ "note": "A license record or map listing alone does not prove a business is open. The importer publishes only rows that meet its rules; the rest are held.",
+ "attribution": "OpenStreetMap data © OpenStreetMap contributors (ODbL, https://www.openstreetmap.org/copyright). Licensing data from the listed state open-data portals."
+}

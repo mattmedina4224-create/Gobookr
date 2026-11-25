@@ -1,0 +1,587 @@
+{
+ "https://www.monacoiffeur.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 270
+ },
+ "https://www.salonlindsay.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 307
+ },
+ "https://flawless-hair-salon-permanent-makeup.lakecharlesdirect.us/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 433
+ },
+ "https://www.colourssalonla.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 482
+ },
+ "https://salonjeffreyscott.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 558
+ },
+ "https://www.littleblackbrush.net/about": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 551
+ },
+ "https://modernmenbarbershop.com/": {
+  "status": "dead",
+  "error": "EAI_AGAIN",
+  "ms": 1029
+ },
+ "https://www.garrettnealstudio.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 678
+ },
+ "https://parisparker.com/locations/perkins-rowe/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 686
+ },
+ "https://aidangillformen.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.aidangillformen.com/",
+  "ms": 1330
+ },
+ "https://www.journeymenbarbershop.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 408
+ },
+ "https://www.salonchateauinc.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 769
+ },
+ "http://just4himhaircutlounge.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.just4himhaircuts.com/",
+  "ms": 1620
+ },
+ "https://l-renee-salon.ueniweb.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 560
+ },
+ "https://austin-3000.hub.biz/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 780
+ },
+ "https://www.fantasticsams.com/about/regions/shreveport-la/fantastic-sams-bossier-city-la": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.fantasticsams.com/salons/fantastic-sams-bossier-city-la",
+  "ms": 726
+ },
+ "https://hotlocksbr.com/": {
+  "status": "error",
+  "error": "ERR_TLS_CERT_ALTNAME_INVALID",
+  "ms": 397
+ },
+ "https://www.hairclub.com/locations/la/baton-rouge/hair-loss-clinic-262/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.hairclub.com/locations/",
+  "ms": 1678
+ },
+ "https://phorest.com/book/salons/serenityspaatmassageworks#/": {
+  "status": "dead",
+  "http_status": 404,
+  "final_url": "https://phorest.com/book/salons/serenityspaatmassageworks",
+  "ms": 451
+ },
+ "https://sportclips.com/us-la-covington-la603": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 412
+ },
+ "https://www.draftpicksbarbershop.net/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 92
+ },
+ "https://hair-by-becca.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 944
+ },
+ "https://www.mysalonsuite.com/baton-rouge/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 516
+ },
+ "https://www.mylabikini.com/location/baton-rouge": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://bareandsol.skin/",
+  "ms": 729
+ },
+ "https://www.just4himhaircuts.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 37
+ },
+ "https://his-and-hers-barber-and-beauty.business.site/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 850
+ },
+ "https://sportclips.com/us-la-metairie-la604": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 525
+ },
+ "https://teri-mcnabb-wheat.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 543
+ },
+ "https://www.saloncheveux.org/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.thevelvetchairsalon.com/",
+  "ms": 1689
+ },
+ "https://www.sportsmanswestmonroe.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://sportsmanswestmonroe.com/",
+  "ms": 2814
+ },
+ "https://www.juicedphc.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 281
+ },
+ "https://www.southernrootslafayette.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 587
+ },
+ "https://www.brooksandcompany.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 576
+ },
+ "https://sportclips.com/us-la-sulphur-la401": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 388
+ },
+ "https://glusalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 357
+ },
+ "https://cedric-the-loc-therapist.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 957
+ },
+ "https://www.bigmikedabarber.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 518
+ },
+ "https://www.fresha.com/a/amberleys-aveda-concept-salon-ruston-206-west-mississippi-avenue-dci1rkyc/booking?menu=true": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 289
+ },
+ "https://www.johnjaybeauty.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 449
+ },
+ "https://devi-divine.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 517
+ },
+ "http://www.lux-salonblends.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 236
+ },
+ "https://www.hsuhair.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://hsuhair.com/",
+  "ms": 530
+ },
+ "https://hairsavagejess.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 759
+ },
+ "http://oasisnailspala.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 73
+ },
+ "http://heartmynailsla.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 117
+ },
+ "https://salon-hue.business.site/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 769
+ },
+ "https://riversidespano.com/": {
+  "status": "error",
+  "http_status": 502,
+  "ms": 648
+ },
+ "https://www.twsalonnola.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 179
+ },
+ "https://three-corners-styling-barber-shop.business.site/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 838
+ },
+ "https://avalonnailspametairie.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 385
+ },
+ "https://www.ulta.com/stores/harahan-la-529": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 589
+ },
+ "https://www.ulta.com/stores/baton-rouge-la-1439": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 278
+ },
+ "https://www.awesomesalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 282
+ },
+ "https://www.tanthehotspot.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 48
+ },
+ "https://orangenailspala.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 316
+ },
+ "https://www.bluemercury.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://bluemercury.com/",
+  "ms": 683
+ },
+ "https://haircutnow.com/barber/imagez-grooming/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 2177
+ },
+ "https://www.ulta.com/stores/alexandria-la-1015": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 333
+ },
+ "https://venetiansalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 327
+ },
+ "https://palmbeachtan.com/locations/LA/Prairieville-Ultima-Plaza-Boulevard": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://palmbeachtan.com/locations/la/prairieville-ultima-plaza-boulevard",
+  "ms": 695
+ },
+ "https://locations.waxcenter.com/la/batonrouge/baton-rouge-perkins-rowe-0952.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 503
+ },
+ "https://www.zanellaswaxbar.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 339
+ },
+ "https://www.bumblelane.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 542
+ },
+ "https://dermila.com/": {
+  "status": "error",
+  "error": "ERR_SSL_SSL/TLS_ALERT_HANDSHAKE_FAILURE",
+  "ms": 239
+ },
+ "http://neubody.com/": {
+  "status": "blocked",
+  "http_status": 403,
+  "final_url": "https://www.hugedomains.com/domain_profile.cfm?d=neubody.com",
+  "ms": 601
+ },
+ "https://www.baileysbeautybar.co/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 207
+ },
+ "https://www.beautynailhairsalons.com/US/Monroe/215193512166449/Signature-Nails-and-Beauty": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 396
+ },
+ "https://www.nails2000.com/": {
+  "status": "error",
+  "error": "ERR_TLS_CERT_ALTNAME_INVALID",
+  "ms": 678
+ },
+ "https://www.sugarandbronze.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.sugbr.com/",
+  "ms": 930
+ },
+ "https://www.instabeautynola.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 457
+ },
+ "https://creativeconceptsllc.net/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 250
+ },
+ "https://www.glamarieous.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 651
+ },
+ "https://www.ulta.com/stores/new-orleans-la-699": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 203
+ },
+ "https://icatchersbr.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 2438
+ },
+ "https://sassy-nail.edan.io/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 198
+ },
+ "https://www.ulta.com/stores/denham-springs-la-463": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 219
+ },
+ "https://luxornailandspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 387
+ },
+ "https://frederickhairstudio.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.frederickhairstudio.com/",
+  "ms": 943
+ },
+ "https://vtvnailsandspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 221
+ },
+ "https://palmbeachtan.com/locations/la/towne-center-la": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 368
+ },
+ "http://www.classynails.net/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 578
+ },
+ "https://app.acuityscheduling.com/schedule/3dc73164": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 403
+ },
+ "https://www.katiemalonemakeup.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 204
+ },
+ "https://diva-hair-beauty-supply.business.site/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 920
+ },
+ "https://www.asttanning.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 255
+ },
+ "https://www.nudewaxandhairbar.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 258
+ },
+ "https://color-me-perfect.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 794
+ },
+ "https://nemonailsmetairie.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1598
+ },
+ "https://www.blushbeautynola.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 154
+ },
+ "https://www.pureglowwaxing.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 562
+ },
+ "http://www.zazabatonrouge.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 132
+ },
+ "https://www.dndbeautybar.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 887
+ },
+ "https://www.bellesbeauxspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 181
+ },
+ "https://www.ulta.com/stores/ruston-la-1518": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 237
+ },
+ "https://www.voodouxtattoux.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 283
+ },
+ "https://bflawless-esthetic.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 925
+ },
+ "https://massage4lifenow.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 785
+ },
+ "https://sittingprettylashden.as.me/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://sittingprettylashden.as.me/schedule/850bd4f8",
+  "ms": 1147
+ },
+ "http://www.voodoux.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 279
+ },
+ "https://locations.woodhousespas.com/dir/la/new-orleans/4030-canal-st": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://locations.woodhousespas.com/louisiana/new-orleans/4030-canal-st/",
+  "ms": 508
+ },
+ "http://www.catahoulatattoo.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 304
+ },
+ "http://www.copperheadtattoo.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://copperheadtattoo.com/home.html",
+  "ms": 807
+ },
+ "https://crestcoast.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 321
+ },
+ "https://bigeasyhealthspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1400
+ },
+ "https://movebetterbodyworks.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.movebetterbodyworks.com/",
+  "ms": 293
+ },
+ "https://www.malcolmstattoosandpiercings.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 203
+ },
+ "https://www.lapalmeraspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 632
+ },
+ "https://www.colddeserttattoo.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 277
+ },
+ "https://tattoos-by-spriggs.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 697
+ },
+ "https://www.skinworkstattooshop.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://skinworkstattooshop.com/",
+  "ms": 605
+ },
+ "https://definelashco.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.definelashco.com/",
+  "ms": 3057
+ },
+ "https://adorenails.us/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 3835
+ },
+ "https://bronier.com/": {
+  "status": "error",
+  "error": "TimeoutError",
+  "ms": 15001
+ }
+}

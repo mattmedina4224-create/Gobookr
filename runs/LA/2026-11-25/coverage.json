@@ -1,0 +1,376 @@
+{
+ "state": "LA",
+ "census_places": 488,
+ "places_covered": 27,
+ "place_coverage_pct": 5.5,
+ "census_counties": 64,
+ "counties_covered": 18,
+ "counties_uncovered": [
+  "Acadia Parish",
+  "Allen Parish",
+  "Assumption Parish",
+  "Avoyelles Parish",
+  "Beauregard Parish",
+  "Bienville Parish",
+  "Caldwell Parish",
+  "Cameron Parish",
+  "Catahoula Parish",
+  "Claiborne Parish",
+  "Concordia Parish",
+  "De Soto Parish",
+  "East Carroll Parish",
+  "East Feliciana Parish",
+  "Evangeline Parish",
+  "Franklin Parish",
+  "Grant Parish",
+  "Iberia Parish",
+  "Iberville Parish",
+  "Jackson Parish",
+  "Jefferson Davis Parish",
+  "LaSalle Parish",
+  "Lafourche Parish",
+  "Madison Parish",
+  "Morehouse Parish",
+  "Natchitoches Parish",
+  "Plaquemines Parish",
+  "Pointe Coupee Parish",
+  "Red River Parish",
+  "Richland Parish",
+  "Sabine Parish",
+  "St. Bernard Parish",
+  "St. Helena Parish",
+  "St. James Parish",
+  "St. Landry Parish",
+  "St. Martin Parish",
+  "St. Mary Parish",
+  "Tensas Parish",
+  "Union Parish",
+  "Vernon Parish",
+  "Washington Parish",
+  "Webster Parish",
+  "West Baton Rouge Parish",
+  "West Carroll Parish",
+  "West Feliciana Parish",
+  "Winn Parish"
+ ],
+ "communities_outside_census_places": [
+  {
+   "city": "St. George",
+   "shops": 8
+  }
+ ],
+ "top_covered_places": [
+  {
+   "name": "Baton Rouge",
+   "shops": 15
+  },
+  {
+   "name": "Metairie",
+   "shops": 11
+  },
+  {
+   "name": "New Orleans",
+   "shops": 9
+  },
+  {
+   "name": "Monroe",
+   "shops": 5
+  },
+  {
+   "name": "West Monroe",
+   "shops": 4
+  },
+  {
+   "name": "Sulphur",
+   "shops": 4
+  },
+  {
+   "name": "Bossier City",
+   "shops": 3
+  },
+  {
+   "name": "Covington",
+   "shops": 2
+  },
+  {
+   "name": "Lafayette",
+   "shops": 2
+  },
+  {
+   "name": "Kenner",
+   "shops": 2
+  },
+  {
+   "name": "Ruston",
+   "shops": 2
+  },
+  {
+   "name": "Destrehan",
+   "shops": 2
+  },
+  {
+   "name": "Lake Charles",
+   "shops": 1
+  },
+  {
+   "name": "Laplace",
+   "shops": 1
+  },
+  {
+   "name": "Hammond",
+   "shops": 1
+  },
+  {
+   "name": "Slidell",
+   "shops": 1
+  },
+  {
+   "name": "Shreveport",
+   "shops": 1
+  },
+  {
+   "name": "Elmwood",
+   "shops": 1
+  },
+  {
+   "name": "Prairieville",
+   "shops": 1
+  },
+  {
+   "name": "Alexandria",
+   "shops": 1
+  },
+  {
+   "name": "Denham Springs",
+   "shops": 1
+  },
+  {
+   "name": "Luling",
+   "shops": 1
+  },
+  {
+   "name": "Harvey",
+   "shops": 1
+  },
+  {
+   "name": "Baker",
+   "shops": 1
+  },
+  {
+   "name": "Houma",
+   "shops": 1
+  },
+  {
+   "name": "Abbeville",
+   "shops": 1
+  },
+  {
+   "name": "Gretna",
+   "shops": 1
+  }
+ ],
+ "uncovered_places_with_held_candidates": [
+  {
+   "name": "Natchitoches",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 14
+  },
+  {
+   "name": "Mandeville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Belle Chasse",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Harahan",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Boutte",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Carencro",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Leesville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "New Iberia",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Thibodaux",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Westwego",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Arcadia",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Basile",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Central",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Estelle",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Jefferson",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Moss Bluff",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Addis",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Avondale",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Brusly",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Chalmette",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "DeQuincy",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Dry Prong",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Eunice",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Farmerville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Grambling",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Haughton",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Jennings",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Longville",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Marrero",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Minden",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Pineville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Plaquemine",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "River Ridge",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "St. Francisville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Stonewall",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Timberlane",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Vivian",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Westlake",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Winnsboro",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Youngsville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  }
+ ],
+ "uncovered_places_without_candidates": 421,
+ "source": "U.S. Census Bureau 2020 place-by-county and county code files"
+}
