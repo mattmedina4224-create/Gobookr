@@ -97,7 +97,7 @@ function app(options = {}) {
   const layout = load('lib/layout.js', { '../db': db, './util': require('../lib/util'), './admin': admin });
   const common = { '../db': db, '../lib/http': httpHelpers, '../lib/util': require('../lib/util'), '../lib/layout': layout, '../lib/pro-categories': require('../lib/pro-categories') };
   common['../lib/claims'] = load('lib/claims.js', { '../db': db, './http': httpHelpers });
-  const authRoute = load('routes/auth.js', { ...common, '../lib/auth': auth, './onboarding': () => {}, './pro-entry': load('routes/pro-entry.js', common) }, {
+  const authRoute = load('routes/auth.js', { ...common, '../lib/password-reset': require('../lib/password-reset'), '../lib/rate-limit': require('../lib/rate-limit'), '../lib/auth': auth, './onboarding': () => {}, './pro-entry': load('routes/pro-entry.js', common) }, {
     process: {env: {BUSINESS_TEAMS_ENABLED:options.businessTeams?'1':''}},
     fetch: async () => { if (options.claimOnly) throw new Error('Claim signup must not geocode'); return { ok: true, json: async () => [] }; },
   });

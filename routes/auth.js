@@ -15,6 +15,8 @@ const {
 const { escapeHtml, initialsFrom } = require('../lib/util');
 const { requireClaimProfile } = require('../lib/claims');
 const { PROFESSIONAL_CATEGORIES: PRO_CATEGORIES } = require('../lib/pro-categories');
+const { createPasswordReset } = require('../lib/password-reset');
+const { clientAddress } = require('../lib/rate-limit');
 
 async function geocodeBusinessAddress({ street, city, state, zip }) {
   const query = [street, city, state, zip, 'USA'].filter(Boolean).join(', ');
@@ -48,6 +50,8 @@ function passwordField({ minlength = '', name = 'password', label = 'Password' }
 function resetTokenHash(token) {
   return crypto.createHash('sha256').update(String(token || '')).digest('hex');
 }
+
+const passwordReset = createPasswordReset({ db, tokenHash: resetTokenHash });
 
 function validEmail(value) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(String(value || ''));
@@ -88,19 +92,14 @@ module.exports = function (router) {
   });
 
   router.post('/forgot-password', async (ctx) => {
-    const email = String(ctx.body.email || '').trim().toLowerCase();
-    db.prepare("DELETE FROM password_reset_tokens WHERE expires_at <= datetime('now') OR used_at IS NOT NULL").run();
-    const user = email ? db.prepare('SELECT id FROM users WHERE email = ?').get(email) : null;
-    if (user) {
-      db.prepare('DELETE FROM password_reset_tokens WHERE user_id = ?').run(user.id);
-      const rawToken = crypto.randomBytes(32).toString('hex');
-      const tokenHash = resetTokenHash(rawToken);
-      db.prepare("INSERT INTO password_reset_tokens (user_id, token_hash, expires_at) VALUES (?, ?, datetime('now','+1 hour'))").run(user.id, tokenHash);
-      const resetPath = '/reset-password?token=' + encodeURIComponent(rawToken);
-      if (process.env.NODE_ENV !== 'production') console.log('[GoBookr password reset]', resetPath);
-      // Production email delivery will send resetPath through the configured email provider.
+    db.prepare("DELETE FROM password_reset_tokens WHERE expires_at <= CURRENT_TIMESTAMP OR used_at IS NOT NULL").run();
+    try {
+      await passwordReset.request(ctx.body.email, clientAddress(ctx.req));
+    } catch (err) {
+      console.error('[password-reset] request failed', String(err && err.name || 'Error'));
     }
-    redirect(ctx.res, '/forgot-password?success=' + encodeURIComponent("If an account exists for that email, we've sent password reset instructions."));
+    // Same response whether or not the account exists, was rate-limited, or delivery failed.
+    redirect(ctx.res, '/forgot-password?success=' + encodeURIComponent("If an account exists for that email, we've sent password reset instructions. The link expires in 1 hour."));
   });
 
   router.get('/reset-password', async (ctx) => {
