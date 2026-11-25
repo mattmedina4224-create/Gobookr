@@ -1,0 +1,56 @@
+{
+ "state": "CT",
+ "state_name": "Connecticut",
+ "wave": 8,
+ "created_at": "2026-11-25T00:35:43.377Z",
+ "staging_only": true,
+ "sources": [
+  {
+   "name": "OpenStreetMap (Overpass)",
+   "url": "https://overpass-api.de/api/interpreter",
+   "status": "processed",
+   "records": 1164,
+   "parts_ok": 4,
+   "parts_total": 4
+  },
+  {
+   "name": "U.S. Census Geocoder (place containing map point)",
+   "url": "https://geocoding.geo.census.gov/",
+   "status": "processed",
+   "records": 450
+  }
+ ],
+ "license_records_scanned": 0,
+ "licensed_active_candidates": 0,
+ "license_dropped": null,
+ "license_fields": null,
+ "license_shop_types": [],
+ "license_type_counts": [],
+ "license_type_lookup": [],
+ "census_city_lookup": {
+  "attempted": 599,
+  "filled": 450,
+  "failed": 0
+ },
+ "mapped_beauty_places": 1164,
+ "overpass_endpoint": "https://overpass-api.de/api/interpreter",
+ "total_candidates": 1104,
+ "with_websites": 214,
+ "category_counts": {
+  "hair": 541,
+  "barber": 130,
+  "nails": 248,
+  "makeup": 19,
+  "salon_suites": 1,
+  "waxing": 17,
+  "spray_tanning": 17,
+  "massage": 58,
+  "skincare": 22,
+  "brows": 3,
+  "lashes": 7,
+  "tattoo": 41
+ },
+ "errors": [],
+ "note": "A license record or map listing alone does not prove a business is open. The importer publishes only rows that meet its rules; the rest are held.",
+ "attribution": "OpenStreetMap data © OpenStreetMap contributors (ODbL, https://www.openstreetmap.org/copyright). Licensing data from the listed state open-data portals."
+}
