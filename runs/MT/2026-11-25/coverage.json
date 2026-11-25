@@ -1,0 +1,268 @@
+{
+ "state": "MT",
+ "census_places": 496,
+ "places_covered": 8,
+ "place_coverage_pct": 1.6,
+ "census_counties": 56,
+ "counties_covered": 7,
+ "counties_uncovered": [
+  "Beaverhead County",
+  "Big Horn County",
+  "Blaine County",
+  "Broadwater County",
+  "Carbon County",
+  "Carter County",
+  "Chouteau County",
+  "Daniels County",
+  "Dawson County",
+  "Deer Lodge County",
+  "Fallon County",
+  "Fergus County",
+  "Garfield County",
+  "Glacier County",
+  "Golden Valley County",
+  "Granite County",
+  "Hill County",
+  "Jefferson County",
+  "Judith Basin County",
+  "Lake County",
+  "Liberty County",
+  "Lincoln County",
+  "Madison County",
+  "McCone County",
+  "Meagher County",
+  "Mineral County",
+  "Musselshell County",
+  "Park County",
+  "Petroleum County",
+  "Phillips County",
+  "Pondera County",
+  "Powder River County",
+  "Powell County",
+  "Prairie County",
+  "Ravalli County",
+  "Richland County",
+  "Roosevelt County",
+  "Rosebud County",
+  "Sanders County",
+  "Sheridan County",
+  "Silver Bow County",
+  "Stillwater County",
+  "Sweet Grass County",
+  "Teton County",
+  "Toole County",
+  "Treasure County",
+  "Valley County",
+  "Wheatland County",
+  "Wibaux County"
+ ],
+ "communities_outside_census_places": [
+  {
+   "city": "Butte",
+   "shops": 2
+  }
+ ],
+ "top_covered_places": [
+  {
+   "name": "Billings",
+   "shops": 5
+  },
+  {
+   "name": "Kalispell",
+   "shops": 4
+  },
+  {
+   "name": "Bozeman",
+   "shops": 4
+  },
+  {
+   "name": "Missoula",
+   "shops": 3
+  },
+  {
+   "name": "Helena",
+   "shops": 3
+  },
+  {
+   "name": "Great Falls",
+   "shops": 2
+  },
+  {
+   "name": "Miles City",
+   "shops": 1
+  },
+  {
+   "name": "Whitefish",
+   "shops": 1
+  }
+ ],
+ "uncovered_places_with_held_candidates": [
+  {
+   "name": "Laurel",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 9
+  },
+  {
+   "name": "Hamilton",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 8
+  },
+  {
+   "name": "Red Lodge",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 6
+  },
+  {
+   "name": "Fort Benton",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Libby",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Lewistown",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Livingston",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Lolo",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Butte-Silver Bow (balance)",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Evergreen",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Four Corners",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Absarokee",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Baker",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Big Sky",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Choteau",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Forsyth",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Frenchtown",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Helena Valley West Central",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Lockwood",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Troy",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Belgrade",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Big Timber",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Bigfork",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Black Eagle",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Corvallis",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "East Missoula",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Ennis",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Gardiner",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Helena Valley Northwest",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Jordan",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Sheridan",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Stevensville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Townsend",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  }
+ ],
+ "uncovered_places_without_candidates": 455,
+ "source": "U.S. Census Bureau 2020 place-by-county and county code files"
+}

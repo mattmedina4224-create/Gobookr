@@ -1,0 +1,186 @@
+{
+ "https://angelinasbeautyspot.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 40
+ },
+ "https://salon-21-mt.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 88
+ },
+ "https://www.fabriksalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 413
+ },
+ "https://www.puravida406.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 34
+ },
+ "https://www.compassbarber.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://compassbarber.com/",
+  "ms": 674
+ },
+ "https://www.ulta.com/stores/great-falls-mt-1342": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 578
+ },
+ "https://www.bookrachaelb.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 645
+ },
+ "https://www.ulta.com/stores/helena-mt-667": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 258
+ },
+ "http://www.bigspringspa.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 114
+ },
+ "https://cozykalispell.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 43
+ },
+ "https://twenty-20-barber.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 828
+ },
+ "https://www.ulta.com/stores/missoula-mt-764": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 247
+ },
+ "https://www.thewillowsalonmt.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 195
+ },
+ "https://www.ulta.com/stores/kalispell-mt-1061": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 265
+ },
+ "https://tortitudesalon.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1029
+ },
+ "https://laylathreading.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 161
+ },
+ "https://www.montage.com/bigsky/spa/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 131
+ },
+ "https://glovebeauty.shop/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 295
+ },
+ "https://whitevelvet.us/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 91
+ },
+ "https://www.mtbeachwaves.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 232
+ },
+ "https://sagelodge.com/montana-spa-resort/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 153
+ },
+ "https://naturalbeautybymary.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.naturalbeautybymary.com/",
+  "ms": 446
+ },
+ "https://massageonbroadwaymissoula.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 156
+ },
+ "https://www.artifactiontattoo.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 90
+ },
+ "https://www.ulta.com/stores/billings-mt-691": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 334
+ },
+ "http://www.vmmassage.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 223
+ },
+ "https://www.ulta.com/stores/bozeman-mt-449": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 568
+ },
+ "https://www.luxadornment.net/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 200
+ },
+ "https://aspiremassagewhitefish.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.aspiremassagewhitefish.com/",
+  "ms": 327
+ },
+ "https://innerpeacebzn.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 260
+ },
+ "https://lj-sunshine-massage.business.site/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 679
+ },
+ "https://www.tattoosindicate.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 535
+ },
+ "http://www.artisticbarbering.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "http://artisticbarbering.com/",
+  "ms": 2377
+ },
+ "https://www.vagaro.com/svfdwyj": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 2398
+ },
+ "https://billingsmassagetherapists.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 2944
+ },
+ "https://uniqueaddiction.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 6827
+ }
+}
