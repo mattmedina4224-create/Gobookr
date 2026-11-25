@@ -1,0 +1,237 @@
+{
+ "http://lecreatifsalon.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 94
+ },
+ "https://www.jaclynnkatehairextensionsri.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 147
+ },
+ "https://www.supercuts.com/locations/ri/cranston/garden-city-center-haircuts-83050.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 308
+ },
+ "https://www.vintagebarberri.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 326
+ },
+ "https://www.hairloomcoiffure.com/": {
+  "status": "error",
+  "error": "ECONNREFUSED",
+  "ms": 334
+ },
+ "https://thedapperbarbershop.squarespace.com/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 343
+ },
+ "https://highlightssalonri.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 400
+ },
+ "https://www.supercuts.com/locations/nearme/haircut/RI/WAKEFIELD/160-OLD-TOWER-HILL-RD./83044": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 108
+ },
+ "https://strandssalonri.com/": {
+  "status": "error",
+  "error": "UND_ERR_SOCKET",
+  "ms": 393
+ },
+ "https://fivestarsbarbershop.net/": {
+  "status": "error",
+  "error": "UND_ERR_SOCKET",
+  "ms": 314
+ },
+ "https://audaciaconsultatio.wixstudio.com/my-site-1": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 230
+ },
+ "https://atomicsalon401.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 341
+ },
+ "https://www.kennethcote.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.amrbeautybar.com/",
+  "ms": 802
+ },
+ "https://barbershop.blismo.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 384
+ },
+ "https://www.caitlinjdoris.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 503
+ },
+ "https://www.1010studiospvd.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 306
+ },
+ "https://www.chartreusestudiori.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 508
+ },
+ "https://www.perfectlynailedri.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 319
+ },
+ "https://heirbahn.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.heirbahn.com/",
+  "ms": 702
+ },
+ "https://www.naturallynailseg.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 308
+ },
+ "https://www.salonsena.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 825
+ },
+ "https://www.superiortanningkingston.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 370
+ },
+ "https://leesnailsalon.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 511
+ },
+ "https://locations.waxcenter.com/ri/eastgreenwich/east-greenwich-0677.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 586
+ },
+ "https://seafoamtradingco.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 741
+ },
+ "https://laboutiquenails.com/": {
+  "status": "error",
+  "error": "ERR_SSL_TLSV1_ALERT_INTERNAL_ERROR",
+  "ms": 665
+ },
+ "https://www.ulta.com/stores/smithfield-ri-724": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 943
+ },
+ "https://www.nailzonesalonspa.com/": {
+  "status": "blocked",
+  "http_status": 401,
+  "final_url": "http://ww547.nailzonesalonspa.com/?tkn=19vnMT3S",
+  "ms": 1142
+ },
+ "https://alluramedesthetics.com/": {
+  "status": "error",
+  "error": "UND_ERR_SOCKET",
+  "ms": 346
+ },
+ "https://locations.waxcenter.com/ri/cranston/cranston-0300.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 980
+ },
+ "https://www.spacitron.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 375
+ },
+ "http://www.stupathreading.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 352
+ },
+ "http://caseytattoori.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 243
+ },
+ "http://shimmersalonanddayspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://shimmersalonanddayspa.com/Default.asp",
+  "ms": 1550
+ },
+ "https://www.ulta.com/stores/middletown-ri-1359": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 562
+ },
+ "https://roseperfectnailsandspa.net/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 628
+ },
+ "https://providencetattoo.com/home.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 498
+ },
+ "https://www.sundanceri.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 565
+ },
+ "https://www.angelscollectiveri.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 376
+ },
+ "https://genaobeautystudio.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 523
+ },
+ "https://www.ironliontattoo.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 613
+ },
+ "https://locations.massageenvy.com/rhode-island/east-greenwich/1000-division-st.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 909
+ },
+ "https://www.bellevuebodywork.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 529
+ },
+ "https://www.hotelviking.com/spa": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 501
+ },
+ "https://shrinetattoos.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 555
+ },
+ "https://wellnessrisingllc.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://drcelestend.com/",
+  "ms": 3018
+ }
+}

@@ -1,0 +1,91 @@
+{
+ "state": "RI",
+ "census_places": 36,
+ "places_covered": 7,
+ "place_coverage_pct": 19.4,
+ "census_counties": 5,
+ "counties_covered": 4,
+ "counties_uncovered": [
+  "Bristol County"
+ ],
+ "communities_outside_census_places": [
+  {
+   "city": "East Greenwich",
+   "shops": 8
+  },
+  {
+   "city": "Wakefield",
+   "shops": 1
+  },
+  {
+   "city": "Narragansett",
+   "shops": 1
+  },
+  {
+   "city": "North Providence",
+   "shops": 1
+  },
+  {
+   "city": "Smithfield",
+   "shops": 1
+  },
+  {
+   "city": "Middletown",
+   "shops": 1
+  }
+ ],
+ "top_covered_places": [
+  {
+   "name": "Providence",
+   "shops": 6
+  },
+  {
+   "name": "Cranston",
+   "shops": 4
+  },
+  {
+   "name": "Newport",
+   "shops": 3
+  },
+  {
+   "name": "Warwick",
+   "shops": 1
+  },
+  {
+   "name": "Pawtucket",
+   "shops": 1
+  },
+  {
+   "name": "Kingston",
+   "shops": 1
+  },
+  {
+   "name": "East Providence",
+   "shops": 1
+  }
+ ],
+ "uncovered_places_with_held_candidates": [
+  {
+   "name": "Newport East",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Central Falls",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Westerly",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Woonsocket",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  }
+ ],
+ "uncovered_places_without_candidates": 25,
+ "source": "U.S. Census Bureau 2020 place-by-county and county code files"
+}
