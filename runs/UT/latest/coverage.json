@@ -26,7 +26,7 @@
  "communities_outside_census_places": [
   {
    "city": "Saratoga Spring",
-   "shops": 6
+   "shops": 4
   },
   {
    "city": "Kearns",
@@ -59,11 +59,11 @@
    "shops": 9
   },
   {
-   "name": "West Valley City",
-   "shops": 9
+   "name": "Murray",
+   "shops": 8
   },
   {
-   "name": "Murray",
+   "name": "West Valley City",
    "shops": 8
   },
   {
@@ -71,12 +71,12 @@
    "shops": 8
   },
   {
-   "name": "Draper",
+   "name": "Saratoga Springs",
    "shops": 7
   },
   {
-   "name": "Saratoga Springs",
-   "shops": 7
+   "name": "Draper",
+   "shops": 6
   },
   {
    "name": "Taylorsville",
@@ -95,15 +95,15 @@
    "shops": 5
   },
   {
+   "name": "Riverton",
+   "shops": 5
+  },
+  {
    "name": "Centerville",
    "shops": 4
   },
   {
    "name": "South Jordan",
-   "shops": 4
-  },
-  {
-   "name": "Riverton",
    "shops": 4
   },
   {
@@ -224,7 +224,7 @@
   {
    "name": "Price",
    "type": "INCORPORATED PLACE",
-   "held_candidates": 7
+   "held_candidates": 6
   },
   {
    "name": "South Ogden",
