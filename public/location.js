@@ -2,7 +2,7 @@
 
 (() => {
   // Keep one GoBookr brand icon everywhere: browser tabs and the site header.
-  const brandHref = '/gobookr-mark-2026.svg?v=iris-1';
+  const brandHref = '/gobookr-mark-2026.svg?v=peach-1';
   document.querySelectorAll('link[rel*="icon"]').forEach((link) => link.remove());
 
   const icon = document.createElement('link');

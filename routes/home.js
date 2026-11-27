@@ -105,21 +105,11 @@ module.exports = function (router) {
         </ul>
       </div>
 
-      <div class="gb-mosaic" aria-hidden="true">
-        <div class="gb-mosaic-weekdays"><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span></div>
-        <div class="gb-mosaic-grid">
-          <div class="gb-mosaic-cell m-a"><img src="/images/category-barber-v1.webp" alt="" width="720" height="720" fetchpriority="high" decoding="async" /><span class="gb-mosaic-label">Barbers</span></div>
-          <div class="gb-mosaic-cell is-day m-b">2</div>
-          <div class="gb-mosaic-cell m-c"><img src="/images/category-nails-stock-v2.webp" alt="" width="720" height="480" decoding="async" /><span class="gb-mosaic-label">Nails</span></div>
-          <div class="gb-mosaic-cell is-booked m-d"><span class="gb-day">9</span><div><strong>Skin fade</strong><span class="gb-booked-time">Booked, 2:30 PM</span></div></div>
-          <div class="gb-mosaic-cell is-day m-e">10</div>
-          <div class="gb-mosaic-cell m-f"><img src="/images/category-lashes-stock-v1.webp" alt="" width="720" height="720" decoding="async" /><span class="gb-mosaic-label">Brows</span></div>
-          <div class="gb-mosaic-cell m-g"><img src="/images/category-hair-v1.webp" alt="" width="720" height="720" decoding="async" /><span class="gb-mosaic-label">Color</span></div>
-          <div class="gb-mosaic-cell is-day m-h">17</div>
-          <div class="gb-mosaic-cell is-day m-i">22</div>
-          <div class="gb-mosaic-cell m-j"><img src="/images/category-massage-stock-v1.webp" alt="" width="720" height="480" decoding="async" /><span class="gb-mosaic-label">Massage</span></div>
-          <div class="gb-mosaic-cell m-k"><img src="/images/category-tattoos-stock-v1.webp" alt="" width="720" height="481" decoding="async" /><span class="gb-mosaic-label">Tattoo</span></div>
-        </div>
+      <div class="gb-collage" aria-hidden="true">
+        <figure class="gb-collage-main"><img src="/images/category-hair-v1.webp" alt="" width="720" height="720" fetchpriority="high" decoding="async" /></figure>
+        <figure class="gb-collage-top"><img src="/images/category-barber-v1.webp" alt="" width="720" height="720" decoding="async" /></figure>
+        <figure class="gb-collage-bottom"><img src="/images/category-nails-stock-v2.webp" alt="" width="720" height="480" decoding="async" /></figure>
+        <div class="gb-collage-chip"><span class="gb-collage-dot"></span><div><strong>Skin fade</strong><span>Booked for 2:30 PM</span></div></div>
       </div>
     </div>
   </section>
@@ -202,7 +192,7 @@ module.exports = function (router) {
           <form class="home-claim-form" method="GET" action="/search" data-no-radius>
             <input type="hidden" name="type" value="professionals" />
             <input class="home-claim-input" type="search" name="q" maxlength="100" placeholder="Search your name or business" aria-label="Search your professional profile" />
-            <button class="home-claim-button btn gb-dark" type="submit">Find &amp; claim my profile</button>
+            <button class="home-claim-button btn" type="submit">Find &amp; claim my profile</button>
           </form>
           <div class="gb-claim-divider">or</div>
           <div class="home-pro-entry-actions">

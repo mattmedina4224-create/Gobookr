@@ -54,7 +54,7 @@ body.gb-app .dash-nav a { gap: 10px; min-height: 40px; padding: 8px 12px !import
 body.gb-app .dash-nav a svg { color: var(--gb-ink-3); flex: 0 0 auto; }
 body.gb-app .dash-nav a:hover { background: var(--gb-cloud) !important; color: var(--gb-midnight) !important; }
 body.gb-app .dash-nav a.active { background: var(--gb-white) !important; color: var(--gb-midnight) !important; box-shadow: 0 0 0 1px var(--gb-line), var(--gb-shadow-1); }
-body.gb-app .dash-nav a.active svg { color: var(--gb-iris); }
+body.gb-app .dash-nav a.active svg { color: var(--gb-iris-ink); }
 body.gb-app .pro-nav-label { padding: 0 12px; font-size: var(--gb-text-xs); font-weight: 600; color: var(--gb-ink-3); letter-spacing: 0; text-transform: none; }
 
 /* Phones: ☰ in the app header opens the pro navigation as a slide-out menu (public/app-shell.js). */
