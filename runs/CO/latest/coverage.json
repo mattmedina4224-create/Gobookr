@@ -1,8 +1,8 @@
 {
  "state": "CO",
  "census_places": 479,
- "places_covered": 190,
- "place_coverage_pct": 39.7,
+ "places_covered": 188,
+ "place_coverage_pct": 39.2,
  "census_counties": 64,
  "counties_covered": 57,
  "counties_uncovered": [
@@ -59,23 +59,23 @@
   },
   {
    "name": "Colorado Springs",
-   "shops": 544
+   "shops": 543
   },
   {
    "name": "Aurora",
-   "shops": 255
+   "shops": 257
   },
   {
    "name": "Fort Collins",
-   "shops": 209
+   "shops": 208
   },
   {
    "name": "Grand Junction",
-   "shops": 185
+   "shops": 184
   },
   {
    "name": "Lakewood",
-   "shops": 156
+   "shops": 159
   },
   {
    "name": "Littleton",
@@ -91,7 +91,7 @@
   },
   {
    "name": "Centennial",
-   "shops": 120
+   "shops": 119
   },
   {
    "name": "Loveland",
@@ -99,15 +99,15 @@
   },
   {
    "name": "Arvada",
-   "shops": 111
+   "shops": 109
   },
   {
    "name": "Thornton",
-   "shops": 103
+   "shops": 104
   },
   {
    "name": "Pueblo",
-   "shops": 96
+   "shops": 97
   },
   {
    "name": "Parker",
@@ -115,7 +115,7 @@
   },
   {
    "name": "Longmont",
-   "shops": 89
+   "shops": 91
   },
   {
    "name": "Greeley",
@@ -171,50 +171,55 @@
   },
   {
    "name": "Golden",
-   "shops": 30
+   "shops": 29
   },
   {
    "name": "Louisville",
-   "shops": 29
+   "shops": 28
   },
   {
    "name": "Windsor",
    "shops": 28
   },
   {
+   "name": "Pueblo West",
+   "shops": 23
+  },
+  {
    "name": "Evergreen",
    "shops": 23
   },
   {
-   "name": "Pueblo West",
-   "shops": 22
-  },
-  {
    "name": "Commerce City",
-   "shops": 21
+   "shops": 20
   },
   {
    "name": "Johnstown",
    "shops": 20
   },
   {
-   "name": "Monument",
-   "shops": 19
-  },
-  {
    "name": "Delta",
    "shops": 19
   },
   {
-   "name": "Steamboat Springs",
+   "name": "Cañon City",
    "shops": 18
   },
   {
-   "name": "Cañon City",
-   "shops": 18
+   "name": "Monument",
+   "shops": 17
+  },
+  {
+   "name": "Salida",
+   "shops": 17
   }
  ],
  "uncovered_places_with_held_candidates": [
+  {
+   "name": "Ken Caryl",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 10
+  },
   {
    "name": "Applewood",
    "type": "CENSUS DESIGNATED PLACE",
@@ -371,6 +376,6 @@
    "held_candidates": 1
   }
  ],
- "uncovered_places_without_candidates": 258,
+ "uncovered_places_without_candidates": 259,
  "source": "U.S. Census Bureau 2020 place-by-county and county code files"
 }
