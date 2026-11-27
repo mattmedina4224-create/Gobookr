@@ -1,622 +1,892 @@
 {
- "http://www.9031salon.com/": {
+ "http://www.tziganeosborne.com/": {
   "status": "dead",
   "error": "ENOTFOUND",
-  "ms": 55
+  "ms": 82
  },
- "https://www.perfectnailslv.com/": {
+ "http://elyellabeautysalon.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 145
+ },
+ "https://laesteticabeautysalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 157
+ },
+ "https://haircutmensparksnv.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 334
+ },
+ "https://www.greatclips.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 371
+ },
+ "https://www.bohemehairlounge.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 268
+ },
+ "https://www.supercuts.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 377
+ },
+ "https://originaldivaextensions.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 501
+ },
+ "http://www.hairbyjacki.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.hairbyjacki.com/",
+  "ms": 684
+ },
+ "https://www.tribesalonreno.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 403
+ },
+ "https://www.beautifulbeardedman.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://beautifulbeardedman.com/",
+  "ms": 806
+ },
+ "https://getahaircutlv.com/": {
+  "status": "error",
+  "error": "CERT_HAS_EXPIRED",
+  "ms": 552
+ },
+ "https://xpressionsalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 523
+ },
+ "https://www.giannachristinesalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 403
+ },
+ "https://phenixsalonsuites.com/store/las-vegas-blue-diamond/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 376
+ },
+ "https://www.heydaybarberco.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 354
+ },
+ "https://www.franksbarbershopbc.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 381
+ },
+ "https://lasvegasbarbershopnv.business.site/": {
   "status": "dead",
   "http_status": 404,
-  "ms": 255
+  "ms": 847
  },
- "https://www.chromenailbar.com/": {
+ "https://salons.greatclips.com/us/nv/henderson/126-n-stephanie-st": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 517
+ },
+ "https://775barber.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 548
+ },
+ "https://mixtixsalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 535
+ },
+ "https://cutshaveartists.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 531
+ },
+ "http://modesalonlv.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 464
+ },
+ "https://dhairsalons.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 390
+ },
+ "https://shysbarbershop.resurva.com/book": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 396
+ },
+ "https://www.supercuts.com/locations/nearme/haircut/nv/las-vegas/7995-blue-diamond-rd-ste-103/81265": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 50
+ },
+ "https://theblendedcraft.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 432
+ },
+ "https://salons.greatclips.com/us/nv/henderson/771-e-horizon-dr": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 484
+ },
+ "https://midtowncurls.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1174
+ },
+ "https://salons.greatclips.com/us/nv/las-vegas/8090-blue-diamond-rd": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 76
+ },
+ "https://exclamationssalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 758
+ },
+ "https://salons.greatclips.com/us/nv/las-vegas/10620-southern-highlands-pkwy": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 567
+ },
+ "https://www.membercuts.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 571
+ },
+ "https://sportclips.com/us-nv-northlasvegas-nv108": {
   "status": "live",
   "http_status": 200,
   "ms": 385
  },
+ "https://local.snipits.com/las-vegas-nv-mountains-edge": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 784
+ },
+ "https://www.sagebrushsalonhenderson.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://sagebrushsalonhenderson.com/",
+  "ms": 700
+ },
+ "https://immaculateblendz.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 576
+ },
+ "https://square.site/book/5XBEZT6XGDRQA/diamond-hair-henderson-nv": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 874
+ },
+ "https://champion-haircuts.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 353
+ },
+ "https://booksy.com/en-us/148637_fadelife-fade-shop-capt-fades_barber-shop_29331_sparks#ba_s=seo": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://booksy.com/en-us/148637_fadelife-fade-shop-capt-fades_barber-shop_29331_sparks",
+  "ms": 968
+ },
+ "https://theblade702.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 150
+ },
+ "https://resurrectedbarbershop.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1356
+ },
+ "https://friendlybarberhaircut.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 318
+ },
+ "https://lauren-coulter.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 610
+ },
+ "http://mystiquehairstudiolv.net/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 89
+ },
+ "https://midtownredsalon.com/": {
+  "status": "error",
+  "error": "UND_ERR_SOCKET",
+  "ms": 356
+ },
+ "https://lasvegashairrestoration.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 482
+ },
+ "https://www.alejandrothebarber.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 730
+ },
+ "http://www.9031salon.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 448
+ },
+ "https://www.perfectnailslv.com/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 511
+ },
+ "https://exclusivexpremium.setmore.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1832
+ },
+ "https://www.chromenailbar.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 441
+ },
+ "https://www.ulta.com/stores/las-vegas-nv-1254": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 701
+ },
  "https://www.bombshellnailandspa.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 468
- },
- "https://thenailloungelasvegas.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 153
- },
- "https://www.pacificsuntanning.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 168
- },
- "https://getnailed247.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 389
- },
- "http://www.beyondnails.net/": {
-  "status": "live",
-  "http_status": 200,
-  "final_url": "https://www.beyondnails.net/",
-  "ms": 703
+  "ms": 431
  },
  "http://www.nailstorylv.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://nailstorylv.com/",
-  "ms": 715
+  "ms": 1207
+ },
+ "http://www.beyondnails.net/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.beyondnails.net/",
+  "ms": 947
  },
  "https://www.ulta.com/stores/las-vegas-nv-757": {
   "status": "live",
   "http_status": 200,
-  "ms": 665
+  "ms": 920
+ },
+ "https://getnailed247.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 834
+ },
+ "https://www.pacificsuntanning.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 653
  },
  "https://soswaxlv.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 238
+  "ms": 413
  },
- "https://www.ulta.com/stores/las-vegas-nv-1254": {
+ "https://thenailloungelasvegas.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 814
- },
- "https://www.eyetactics.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 301
+  "ms": 817
  },
  "https://www.modlashstudio.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 1161
+  "ms": 1811
+ },
+ "https://greyartistry.com/": {
+  "status": "error",
+  "error": "ERR_TLS_CERT_ALTNAME_INVALID",
+  "ms": 516
  },
  "https://www.ulta.com/stores/reno-nv-1534": {
   "status": "live",
   "http_status": 200,
-  "ms": 574
+  "ms": 411
  },
- "https://sunsationsparksreno.com/": {
+ "https://www.eyetactics.com/": {
   "status": "live",
   "http_status": 200,
-  "final_url": "https://www.sunsationsparksreno.com/",
-  "ms": 588
+  "ms": 400
+ },
+ "https://www.pinkporcupinebb.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 628
  },
  "https://relaxnailspalasvegas.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 528
+  "ms": 557
  },
- "https://www.hellosugar.salon/nv-henderson-greenvalley": {
-  "status": "blocked",
-  "http_status": 429,
+ "https://kingladynailsspa.com/": {
+  "status": "live",
+  "http_status": 200,
   "ms": 385
  },
  "https://www.ulta.com/stores/reno-nv-1167": {
   "status": "live",
   "http_status": 200,
-  "ms": 848
+  "ms": 859
+ },
+ "https://www.hellosugar.salon/nv-henderson-greenvalley": {
+  "status": "blocked",
+  "http_status": 429,
+  "ms": 611
+ },
+ "https://sunsationsparksreno.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.sunsationsparksreno.com/",
+  "ms": 1141
  },
  "https://firstchoicenails.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 468
+  "ms": 743
  },
  "https://beautynails2.com/": {
   "status": "error",
   "error": "UNABLE_TO_GET_ISSUER_CERT_LOCALLY",
-  "ms": 401
- },
- "https://elysiannailbarvegas.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 383
+  "ms": 579
  },
  "https://www.ulta.com/stores/reno-nv-1166": {
   "status": "live",
   "http_status": 200,
-  "ms": 239
- },
- "https://locations.waxcenter.com/nv/reno/reno-0299.html": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 447
+  "ms": 224
  },
  "https://love-4-nails-spa.business.site/": {
   "status": "dead",
   "http_status": 404,
-  "ms": 905
+  "ms": 1055
  },
- "https://www.lush.com/us/en_us/shops/lush-cosmetics-district-at-green-valley?id=US499": {
-  "status": "blocked",
-  "http_status": 403,
-  "ms": 91
- },
- "https://foxynailnv.com/": {
+ "https://elysiannailbarvegas.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 228
+  "ms": 677
+ },
+ "https://locations.waxcenter.com/nv/reno/reno-0299.html": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 593
  },
  "https://starnails-sunset.business.site/": {
   "status": "dead",
   "http_status": 404,
-  "ms": 903
+  "ms": 1089
  },
- "https://www.pinkporcupinebb.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 1612
+ "https://www.lush.com/us/en_us/shops/lush-cosmetics-district-at-green-valley?id=US499": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 281
+ },
+ "https://foxynailnv.com/": {
+  "status": "blocked",
+  "http_status": 403,
+  "ms": 422
  },
  "https://venicenailloungelasvegas.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://www.venicenailloungelasvegas.com/",
-  "ms": 1612
+  "ms": 2176
  },
- "https://luxelasheslv.com/": {
+ "https://www.eyebrowsrus.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 359
+  "ms": 829
  },
  "https://www.exhaal.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://exhaal.com/",
-  "ms": 445
+  "ms": 880
  },
- "https://www.eyebrowsrus.com/": {
+ "https://luxelasheslv.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 710
+  "ms": 803
+ },
+ "https://reiwatakiyausa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 912
  },
  "https://sunsetnailslounge.com/home/": {
   "status": "dead",
   "http_status": 404,
   "final_url": "https://www.sunsetnailslounge.com/home/",
-  "ms": 607
- },
- "https://bouldercitysoap.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 366
- },
- "https://www.sbdcollections.com/": {
-  "status": "live",
-  "http_status": 200,
-  "final_url": "https://acc4d.net/",
-  "ms": 1222
+  "ms": 846
  },
  "https://plumbandpine.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://www.plumbandpine.com/",
-  "ms": 501
+  "ms": 704
+ },
+ "https://letstanlasvegas.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 760
+ },
+ "https://www.sbdcollections.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://acc4d.net/",
+  "ms": 1876
  },
  "http://perfect4unv.com/": {
   "status": "dead",
   "error": "ENOTFOUND",
-  "ms": 60
+  "ms": 158
  },
  "https://palmbeachtan.com/locations/NV/Las-Vegas-South-Rainbow-Boulevard": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://palmbeachtan.com/locations/nv/las-vegas-south-rainbow-boulevard",
-  "ms": 1052
- },
- "https://letstanlasvegas.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 937
+  "ms": 1634
  },
  "https://plushbeautylv.com/": {
   "status": "error",
   "error": "ECONNRESET",
-  "ms": 119
+  "ms": 402
+ },
+ "https://www.kritieyebrowthreading.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 132
  },
  "https://www.slnailspa.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 197
- },
- "https://lvnailsspahenderson.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 872
+  "ms": 113
  },
  "https://www.nailsnv.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://nailsnv.com/",
-  "ms": 966
+  "ms": 1291
  },
- "https://www.kritieyebrowthreading.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 500
- },
- "https://pearlskinstudio.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 244
- },
- "https://nevadanailslashstudio.com/": {
+ "http://www.salonchocolat.com/": {
   "status": "dead",
-  "error": "ENOTFOUND",
-  "ms": 40
+  "error": "EAI_AGAIN",
+  "ms": 10049
  },
  "https://www.edgybrowsstudio.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 1098
+  "ms": 1349
  },
  "https://hollywoodnailshenderson.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 644
+  "ms": 373
  },
- "https://southernhighlandsnails.com/": {
+ "https://nevadanailslashstudio.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 28
+ },
+ "https://jbnailspareno.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 352
+  "ms": 1683
+ },
+ "https://pearlskinstudio.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 211
  },
  "https://www.a-1nails.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 526
+  "ms": 78
  },
- "https://www.sweetnailsvegas.com/": {
+ "https://southernhighlandsnails.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 314
+  "ms": 166
  },
  "https://www.khinaeyebrow.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://khinaeyebrow.com/",
-  "ms": 2132
+  "ms": 2057
  },
- "https://www.samaeyebrows.com/": {
+ "https://lvnailsspahenderson.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 928
+  "ms": 2237
+ },
+ "https://www.sweetnailsvegas.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 234
  },
  "https://www.glamparlor.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 175
+  "ms": 102
  },
  "https://inailloungelasvegas.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 337
- },
- "https://professionailslv.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 356
+  "ms": 168
  },
  "https://soswaxlv.com/waxing-services-blue-diamond/": {
   "status": "live",
   "http_status": 200,
-  "ms": 210
+  "ms": 40
+ },
+ "https://professionailslv.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 163
  },
  "https://fantasticnailspalv.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 320
+  "ms": 171
+ },
+ "https://www.samaeyebrows.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 819
+ },
+ "https://bloomsalonandspalv.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 296
+ },
+ "https://anaviaesthetics.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 95
+ },
+ "https://www.skindeeplv.com/": {
+  "status": "error",
+  "error": "ECONNREFUSED",
+  "ms": 128
  },
  "http://gsalonme.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://gsalonspa.com/locations/mountains-edge/",
-  "ms": 601
+  "ms": 710
  },
- "https://bloomsalonandspalv.com/": {
+ "https://kmnailsandlashes.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 130
- },
- "https://www.vialaserlv.com/": {
-  "status": "live",
-  "http_status": 200,
-  "final_url": "https://vialaserlv.com/",
-  "ms": 401
- },
- "https://anaviaesthetics.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 167
- },
- "https://www.skindeeplv.com/": {
-  "status": "dead",
-  "error": "ENOTFOUND",
-  "ms": 30
- },
- "https://abuzzsalonsuites.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 109
- },
- "https://bodyheattanning.com/": {
-  "status": "live",
-  "http_status": 200,
-  "final_url": "https://palmbeachtan.com/locations/nv",
-  "ms": 2734
+  "ms": 168
  },
  "https://www.mysalonsuite.com/mountainsedge": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://www.mysalonsuite.com/mountainsedge/",
-  "ms": 787
+  "ms": 683
  },
- "https://kmnailsandlashes.com/": {
+ "https://mynucanvas.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 343
+  "ms": 187
  },
  "http://thenailroom2023.booksy.com/": {
   "status": "live",
   "http_status": 200,
-  "final_url": "https://lhkw.app.link/bGQBTxT8h3b?_p=c11335dc990a66eee01f8ae3e9b4b8",
-  "ms": 767
+  "final_url": "https://lhkw.app.link/bGQBTxT8h3b?_p=c61c29c39d067af1e31590ffecb4",
+  "ms": 726
  },
  "https://nailsense.hub.biz/": {
   "status": "blocked",
   "http_status": 403,
-  "ms": 86
+  "ms": 48
  },
- "https://www.trueavedasalonslv.com/": {
+ "https://bodyheattanning.com/": {
   "status": "live",
   "http_status": 200,
-  "final_url": "https://gacorslotonline.net/m/index.php",
-  "ms": 2254
+  "final_url": "https://palmbeachtan.com/locations/nv",
+  "ms": 2353
  },
- "https://www.ulta.com/stores/henderson-nv-1097": {
+ "https://evolvebodywellness.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 245
+  "ms": 90
  },
  "http://www.dazzlingnailsandspa.com/": {
   "status": "dead",
   "http_status": 404,
   "final_url": "https://www.dazzlingnailsandspa.com/",
-  "ms": 173
- },
- "https://mynucanvas.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 396
+  "ms": 174
  },
  "https://themakeupshack.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 245
- },
- "https://aharmonynailspa.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 206
+  "ms": 217
  },
  "https://www.queenbeezbeauty.com/": {
   "status": "live",
   "http_status": 200,
   "ms": 164
  },
- "https://evolvebodywellness.com/": {
+ "https://plushroyaltymassagespa.weebly.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 256
+  "ms": 166
+ },
+ "https://aharmonynailspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 376
+ },
+ "https://www.diptithreading.com/": {
+  "status": "error",
+  "http_status": 521,
+  "ms": 179
+ },
+ "https://www.ulta.com/stores/henderson-nv-1097": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 583
  },
  "https://www.enrichprp.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 179
+  "ms": 124
  },
- "https://www.ulta.com/stores/las-vegas-nv-227": {
+ "https://www.amethystaestheticslv.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 286
+  "final_url": "http://nv-opal-horizon-llc-ulp7y.zensmb.com/",
+  "ms": 368
  },
- "https://www.ulta.com/stores/henderson-nv-1191": {
+ "https://inglotcosmetics.com/en/": {
   "status": "live",
   "http_status": 200,
-  "ms": 292
+  "ms": 419
  },
  "https://www.ulta.com/stores/carson-city-nv-647": {
   "status": "live",
   "http_status": 200,
-  "ms": 544
- },
- "https://nabnailbar.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 123
+  "ms": 715
  },
  "https://www.aztecsecret.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://aztecsecret.com/",
-  "ms": 1514
+  "ms": 1633
+ },
+ "https://www.ulta.com/stores/las-vegas-nv-227": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 675
+ },
+ "https://nabnailbar.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 112
  },
  "https://www.ulta.com/stores/elko-nv-1236": {
   "status": "live",
   "http_status": 200,
-  "ms": 403
+  "ms": 420
  },
- "https://www.ulta.com/stores/sparks-nv-203": {
+ "https://www.ulta.com/stores/henderson-nv-1191": {
   "status": "live",
   "http_status": 200,
-  "ms": 282
- },
- "https://jbnailspareno.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 4972
+  "ms": 833
  },
  "https://www.ctrosesalon.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 167
- },
- "https://professornailsspa.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 286
- },
- "https://inglotcosmetics.com/en/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 1019
+  "ms": 96
  },
  "https://www.ulta.com/stores/las-vegas-nv-1161": {
   "status": "live",
   "http_status": 200,
-  "ms": 332
+  "ms": 565
+ },
+ "https://www.ulta.com/stores/sparks-nv-203": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 682
+ },
+ "https://www.spoiledlaser.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 148
+ },
+ "https://professornailsspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 848
  },
  "https://soswaxlv.com/waxing-services-aliante/": {
   "status": "live",
   "http_status": 200,
-  "ms": 57
- },
- "https://www.sharpshopvegas.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 125
- },
- "http://www.besttattooshopsdirectory.com/in-las-vegas/": {
-  "status": "dead",
-  "error": "ENOTFOUND",
-  "ms": 70
+  "ms": 42
  },
  "https://vegasbeautysupply.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://www.vegasbeautysupply.com/",
-  "ms": 312
+  "ms": 523
+ },
+ "https://www.sharpshopvegas.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 184
+ },
+ "https://www.trueavedasalonslv.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://shopunlirice.com/product/sakura-rice/",
+  "ms": 3730
+ },
+ "https://nursiecosmeticsbeauty-spa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 439
+ },
+ "https://abuzzsalonsuites.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 63
+ },
+ "http://www.besttattooshopsdirectory.com/in-las-vegas/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 38
  },
  "https://www.loam-wellness.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 178
+  "ms": 112
  },
  "https://www.skinfactorytattoo.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 229
+  "ms": 175
  },
- "https://www.spoiledlaser.com/": {
+ "https://zenmassageusa.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 409
- },
- "https://allntattoo.com/": {
-  "status": "error",
-  "error": "CERT_HAS_EXPIRED",
-  "ms": 222
+  "ms": 57
  },
  "http://jujumassagefootspa.top/": {
   "status": "dead",
   "error": "ENOTFOUND",
   "ms": 17
  },
- "https://zenmassageusa.com/": {
+ "https://www.vialaserlv.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 211
+  "final_url": "https://vialaserlv.com/",
+  "ms": 353
+ },
+ "https://allntattoo.com/": {
+  "status": "error",
+  "error": "CERT_HAS_EXPIRED",
+  "ms": 228
+ },
+ "https://www.ulta.com/stores/las-vegas-nv-1117": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 395
+ },
+ "https://www.southlaketattoo.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 90
+ },
+ "https://21fcmassage.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 173
+ },
+ "https://www.bluediamondthaispa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 179
+ },
+ "https://www.thaimassagepro.vegas/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 274
  },
  "https://www.thelashlounge.com/nv-reno-summit/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://www.thelashlounge.com/locations/nv/reno/the-summit-reno/",
-  "ms": 945
- },
- "https://www.thaimassagepro.vegas/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 202
- },
- "https://www.southlaketattoo.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 165
- },
- "https://www.ulta.com/stores/las-vegas-nv-1117": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 575
- },
- "https://www.bluediamondthaispa.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 137
+  "ms": 1471
  },
  "https://yesspa4.wordpress.com/": {
   "status": "dead",
   "http_status": 410,
-  "ms": 106
+  "ms": 69
+ },
+ "https://www.revolutiontattooparlor.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 206
  },
  "https://nv-float.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://nvfloatcom.wordpress.com/",
-  "ms": 200
- },
- "https://21fcmassage.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 362
- },
- "https://www.revolutiontattooparlor.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 228
- },
- "https://www.innervisionstattoo.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 170
- },
- "https://tibetspamassage.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 170
- },
- "https://inkbybritt.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 235
+  "ms": 272
  },
  "https://www.blvdtattoo-lasvegas.com/": {
   "status": "dead",
   "http_status": 404,
-  "ms": 270
+  "ms": 182
  },
  "https://workofarttattoo.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://www.workofarttattoo.com/",
-  "ms": 534
+  "ms": 364
+ },
+ "https://inkbybritt.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 648
+ },
+ "https://koolsvilletattoolv.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 658
  },
  "https://relaxthaimassage.care/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://www.relaxthaimassage.care/",
-  "ms": 729
- },
- "https://koolsvilletattoolv.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 888
+  "ms": 814
  },
  "https://www.pantryproductsnv.com/": {
   "status": "error",
   "error": "UND_ERR_CONNECT_TIMEOUT",
-  "ms": 10275
- },
- "https://www.veloralasvegas.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 3297
+  "ms": 10314
  },
  "https://nailstarhenderson.com/": {
   "status": "error",

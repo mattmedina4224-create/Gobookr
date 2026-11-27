@@ -22,37 +22,49 @@
  "communities_outside_census_places": [
   {
    "city": "Carson City",
-   "shops": 1
+   "shops": 2
   }
  ],
  "top_covered_places": [
   {
    "name": "Las Vegas",
-   "shops": 53
+   "shops": 68
   },
   {
    "name": "Henderson",
-   "shops": 20
+   "shops": 31
   },
   {
    "name": "Reno",
-   "shops": 9
+   "shops": 13
   },
   {
    "name": "Sparks",
-   "shops": 4
+   "shops": 6
+  },
+  {
+   "name": "Paradise",
+   "shops": 5
+  },
+  {
+   "name": "North Las Vegas",
+   "shops": 3
   },
   {
    "name": "Spring Valley",
    "shops": 3
   },
   {
+   "name": "Pahrump",
+   "shops": 2
+  },
+  {
    "name": "Elko",
    "shops": 2
   },
   {
-   "name": "Paradise",
-   "shops": 2
+   "name": "Boulder City",
+   "shops": 1
   },
   {
    "name": "Mesquite",
@@ -63,41 +75,34 @@
    "shops": 1
   },
   {
-   "name": "Boulder City",
-   "shops": 1
-  },
-  {
-   "name": "Pahrump",
-   "shops": 1
-  },
-  {
-   "name": "North Las Vegas",
-   "shops": 1
-  },
-  {
    "name": "Stateline",
    "shops": 1
   }
  ],
  "uncovered_places_with_held_candidates": [
   {
-   "name": "Sunrise Manor",
-   "type": "CENSUS DESIGNATED PLACE",
-   "held_candidates": 7
-  },
-  {
    "name": "Winnemucca",
    "type": "INCORPORATED PLACE",
-   "held_candidates": 7
+   "held_candidates": 10
+  },
+  {
+   "name": "Sunrise Manor",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 9
   },
   {
    "name": "Gardnerville",
    "type": "CENSUS DESIGNATED PLACE",
-   "held_candidates": 5
+   "held_candidates": 8
   },
   {
    "name": "Ely",
    "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Indian Hills",
+   "type": "CENSUS DESIGNATED PLACE",
    "held_candidates": 4
   },
   {
@@ -106,18 +111,23 @@
    "held_candidates": 4
   },
   {
+   "name": "Caliente",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
    "name": "Fernley",
    "type": "INCORPORATED PLACE",
    "held_candidates": 3
   },
   {
-   "name": "Indian Hills",
+   "name": "Laughlin",
    "type": "CENSUS DESIGNATED PLACE",
    "held_candidates": 3
   },
   {
-   "name": "Caliente",
-   "type": "INCORPORATED PLACE",
+   "name": "Battle Mountain",
+   "type": "CENSUS DESIGNATED PLACE",
    "held_candidates": 2
   },
   {
@@ -126,18 +136,23 @@
    "held_candidates": 2
   },
   {
-   "name": "Battle Mountain",
-   "type": "CENSUS DESIGNATED PLACE",
-   "held_candidates": 1
-  },
-  {
    "name": "Incline Village",
    "type": "CENSUS DESIGNATED PLACE",
-   "held_candidates": 1
+   "held_candidates": 2
   },
   {
-   "name": "Laughlin",
+   "name": "Spring Creek",
    "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Sun Valley",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Fallon",
+   "type": "INCORPORATED PLACE",
    "held_candidates": 1
   },
   {
@@ -156,21 +171,11 @@
    "held_candidates": 1
   },
   {
-   "name": "Spring Creek",
-   "type": "CENSUS DESIGNATED PLACE",
-   "held_candidates": 1
-  },
-  {
-   "name": "Sun Valley",
-   "type": "CENSUS DESIGNATED PLACE",
-   "held_candidates": 1
-  },
-  {
    "name": "Tonopah",
    "type": "CENSUS DESIGNATED PLACE",
    "held_candidates": 1
   }
  ],
- "uncovered_places_without_candidates": 102,
+ "uncovered_places_without_candidates": 101,
  "source": "U.S. Census Bureau 2020 place-by-county and county code files"
 }
