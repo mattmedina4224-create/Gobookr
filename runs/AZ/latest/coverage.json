@@ -20,15 +20,15 @@
  "top_covered_places": [
   {
    "name": "Phoenix",
-   "shops": 46
+   "shops": 48
   },
   {
    "name": "Tucson",
-   "shops": 29
+   "shops": 36
   },
   {
    "name": "Scottsdale",
-   "shops": 19
+   "shops": 21
   },
   {
    "name": "Mesa",
@@ -39,15 +39,19 @@
    "shops": 11
   },
   {
+   "name": "Tempe",
+   "shops": 9
+  },
+  {
    "name": "Chandler",
    "shops": 9
   },
   {
-   "name": "Tempe",
-   "shops": 8
+   "name": "Gilbert",
+   "shops": 7
   },
   {
-   "name": "Oro Valley",
+   "name": "Prescott",
    "shops": 7
   },
   {
@@ -55,11 +59,7 @@
    "shops": 6
   },
   {
-   "name": "Gilbert",
-   "shops": 6
-  },
-  {
-   "name": "Prescott",
+   "name": "Oro Valley",
    "shops": 6
   },
   {
@@ -71,11 +71,11 @@
    "shops": 5
   },
   {
-   "name": "Queen Creek",
-   "shops": 4
+   "name": "Flagstaff",
+   "shops": 5
   },
   {
-   "name": "Flagstaff",
+   "name": "Queen Creek",
    "shops": 4
   },
   {
@@ -83,7 +83,15 @@
    "shops": 4
   },
   {
+   "name": "Anthem",
+   "shops": 3
+  },
+  {
    "name": "Sedona",
+   "shops": 3
+  },
+  {
+   "name": "Avondale",
    "shops": 3
   },
   {
@@ -104,10 +112,6 @@
   },
   {
    "name": "Casa Grande",
-   "shops": 2
-  },
-  {
-   "name": "Avondale",
    "shops": 2
   },
   {
@@ -139,10 +143,6 @@
    "shops": 1
   },
   {
-   "name": "Anthem",
-   "shops": 1
-  },
-  {
    "name": "San Tan Valley",
    "shops": 1
   },
@@ -171,13 +171,13 @@
    "held_candidates": 10
   },
   {
-   "name": "Fountain Hills",
-   "type": "INCORPORATED PLACE",
-   "held_candidates": 9
-  },
-  {
    "name": "Casas Adobes",
    "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 8
+  },
+  {
+   "name": "Fountain Hills",
+   "type": "INCORPORATED PLACE",
    "held_candidates": 8
   },
   {
@@ -286,7 +286,17 @@
    "held_candidates": 1
   },
   {
+   "name": "Heber-Overgaard",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
    "name": "Jerome",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Maricopa",
    "type": "INCORPORATED PLACE",
    "held_candidates": 1
   },
@@ -336,6 +346,6 @@
    "held_candidates": 1
   }
  ],
- "uncovered_places_without_candidates": 394,
+ "uncovered_places_without_candidates": 392,
  "source": "U.S. Census Bureau 2020 place-by-county and county code files"
 }

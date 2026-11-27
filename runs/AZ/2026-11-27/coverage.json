@@ -1,0 +1,351 @@
+{
+ "state": "AZ",
+ "census_places": 464,
+ "places_covered": 35,
+ "place_coverage_pct": 7.5,
+ "census_counties": 15,
+ "counties_covered": 11,
+ "counties_uncovered": [
+  "Gila County",
+  "Greenlee County",
+  "La Paz County",
+  "Navajo County"
+ ],
+ "communities_outside_census_places": [
+  {
+   "city": "Peoria;Glendale",
+   "shops": 1
+  }
+ ],
+ "top_covered_places": [
+  {
+   "name": "Phoenix",
+   "shops": 48
+  },
+  {
+   "name": "Tucson",
+   "shops": 36
+  },
+  {
+   "name": "Scottsdale",
+   "shops": 21
+  },
+  {
+   "name": "Mesa",
+   "shops": 15
+  },
+  {
+   "name": "Surprise",
+   "shops": 11
+  },
+  {
+   "name": "Tempe",
+   "shops": 9
+  },
+  {
+   "name": "Chandler",
+   "shops": 9
+  },
+  {
+   "name": "Gilbert",
+   "shops": 7
+  },
+  {
+   "name": "Prescott",
+   "shops": 7
+  },
+  {
+   "name": "Glendale",
+   "shops": 6
+  },
+  {
+   "name": "Oro Valley",
+   "shops": 6
+  },
+  {
+   "name": "Apache Junction",
+   "shops": 5
+  },
+  {
+   "name": "Peoria",
+   "shops": 5
+  },
+  {
+   "name": "Flagstaff",
+   "shops": 5
+  },
+  {
+   "name": "Queen Creek",
+   "shops": 4
+  },
+  {
+   "name": "Yuma",
+   "shops": 4
+  },
+  {
+   "name": "Anthem",
+   "shops": 3
+  },
+  {
+   "name": "Sedona",
+   "shops": 3
+  },
+  {
+   "name": "Avondale",
+   "shops": 3
+  },
+  {
+   "name": "Cave Creek",
+   "shops": 2
+  },
+  {
+   "name": "Goodyear",
+   "shops": 2
+  },
+  {
+   "name": "Safford",
+   "shops": 2
+  },
+  {
+   "name": "Sierra Vista",
+   "shops": 2
+  },
+  {
+   "name": "Casa Grande",
+   "shops": 2
+  },
+  {
+   "name": "Prescott Valley",
+   "shops": 1
+  },
+  {
+   "name": "Nogales",
+   "shops": 1
+  },
+  {
+   "name": "Buckeye",
+   "shops": 1
+  },
+  {
+   "name": "Green Valley",
+   "shops": 1
+  },
+  {
+   "name": "Willcox",
+   "shops": 1
+  },
+  {
+   "name": "Bullhead City",
+   "shops": 1
+  },
+  {
+   "name": "Sun City",
+   "shops": 1
+  },
+  {
+   "name": "San Tan Valley",
+   "shops": 1
+  },
+  {
+   "name": "Litchfield Park",
+   "shops": 1
+  },
+  {
+   "name": "Sahuarita",
+   "shops": 1
+  },
+  {
+   "name": "Cottonwood",
+   "shops": 1
+  }
+ ],
+ "uncovered_places_with_held_candidates": [
+  {
+   "name": "Carefree",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 14
+  },
+  {
+   "name": "Marana",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 10
+  },
+  {
+   "name": "Casas Adobes",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 8
+  },
+  {
+   "name": "Fountain Hills",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 8
+  },
+  {
+   "name": "Lake Havasu City",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Page",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 5
+  },
+  {
+   "name": "Catalina Foothills",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Coolidge",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Globe",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Kingman",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Show Low",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Tolleson",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Wickenburg",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Sun City West",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Sun Lakes",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Catalina",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Fort Mohave",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "St. Johns",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Tuba City",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Village of Oak Creek (Big Park)",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Chino Valley",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Drexel Heights",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Flowing Wells",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Gold Canyon",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Guadalupe",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Heber-Overgaard",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Jerome",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Maricopa",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Meadview",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Oracle",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Paradise Valley",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Patagonia",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Quartzsite",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "San Manuel",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "South Tucson",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Tombstone",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Youngtown",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  }
+ ],
+ "uncovered_places_without_candidates": 392,
+ "source": "U.S. Census Bureau 2020 place-by-county and county code files"
+}

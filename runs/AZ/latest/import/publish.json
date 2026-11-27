@@ -18,7 +18,7 @@
   "latitude": 33.4500438,
   "longitude": -112.0721359,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Strawberry Blonde Salon",
   "website_candidate": "https://www.beautysalontreatments.com/",
   "website_source_url": ""
@@ -33,7 +33,7 @@
   "categories": [
    "stylist"
   ],
-  "website_url": "https://salons.greatclips.com/us/az/queen-creek/21582-s-ellsworth-loop-rd?utm_source=google&utm_medium=organic&utm_campaign=gmb",
+  "website_url": "https://salons.greatclips.com/us/az/queen-creek/21582-s-ellsworth-loop-rd",
   "phone": "(480) 882-9006",
   "source_name": "OpenStreetMap contributors",
   "source_url": "https://www.openstreetmap.org/node/2279247698",
@@ -42,9 +42,9 @@
   "latitude": 33.2525042,
   "longitude": -111.6382796,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Great Clips",
-  "website_candidate": "https://salons.greatclips.com/us/az/queen-creek/21582-s-ellsworth-loop-rd?utm_source=google&utm_medium=organic&utm_campaign=gmb",
+  "website_candidate": "https://salons.greatclips.com/us/az/queen-creek/21582-s-ellsworth-loop-rd",
   "website_source_url": ""
  },
  {
@@ -66,7 +66,7 @@
   "latitude": 33.7117484,
   "longitude": -112.094315,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Vantaggio Hair",
   "website_candidate": "https://www.vantaggiohair.com/",
   "website_source_url": ""
@@ -90,7 +90,7 @@
   "latitude": 33.5513916,
   "longitude": -112.183198,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Fantastic Sams",
   "website_candidate": "https://www.fantasticsams.com/",
   "website_source_url": ""
@@ -114,7 +114,7 @@
   "latitude": 32.3067339,
   "longitude": -111.0093929,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Cost Cutters",
   "website_candidate": "https://www.costcutters.com/",
   "website_source_url": ""
@@ -138,7 +138,7 @@
   "latitude": 33.5232789,
   "longitude": -112.2012274,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Fresh Cuts",
   "website_candidate": "https://freshcutshs.com/",
   "website_source_url": ""
@@ -162,7 +162,7 @@
   "latitude": 33.5516308,
   "longitude": -112.180331,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "SmartStyle",
   "website_candidate": "https://www.smartstyle.com/",
   "website_source_url": ""
@@ -186,7 +186,7 @@
   "latitude": 33.4503853,
   "longitude": -111.7036571,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Supercuts",
   "website_candidate": "https://www.supercuts.com/locations/az/mesa/falcon-view-plaza-haircuts-8627.html",
   "website_source_url": ""
@@ -210,7 +210,7 @@
   "latitude": 33.380456,
   "longitude": -111.8426925,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Great Clips",
   "website_candidate": "https://www.greatclips.com/salons/1572",
   "website_source_url": ""
@@ -234,7 +234,7 @@
   "latitude": 33.4142068,
   "longitude": -111.5449393,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Great Clips",
   "website_candidate": "https://www.greatclips.com/salons/0913",
   "website_source_url": ""
@@ -258,7 +258,7 @@
   "latitude": 33.2327425,
   "longitude": -111.7214845,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Great Clips",
   "website_candidate": "https://salons.greatclips.com/us/az/gilbert/6466-s-higley-rd",
   "website_source_url": ""
@@ -282,7 +282,7 @@
   "latitude": 33.5104883,
   "longitude": -112.0110742,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Park Avenue Salon & Blow Dry Suite 16",
   "website_candidate": "https://www.parkavenueblowdry.com/",
   "website_source_url": ""
@@ -306,7 +306,7 @@
   "latitude": 33.611377,
   "longitude": -112.1101557,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Glamour Empire Barber & Beauty",
   "website_candidate": "https://www.hairtreatmentsphoenix.com/",
   "website_source_url": ""
@@ -330,7 +330,7 @@
   "latitude": 33.4173735,
   "longitude": -111.9260535,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Bishops",
   "website_candidate": "https://bishops.co/",
   "website_source_url": ""
@@ -354,7 +354,7 @@
   "latitude": 33.7962987,
   "longitude": -111.964601,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Supercuts",
   "website_candidate": "https://www.supercuts.com/locations/az/cave-creek/walmart-shopping-center-haircuts-82430.html",
   "website_source_url": ""
@@ -378,7 +378,7 @@
   "latitude": 33.3800877,
   "longitude": -111.9279549,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Floyd's 99 Barbershop",
   "website_candidate": "https://www.floydsbarbershop.com/tempe/",
   "website_source_url": ""
@@ -402,7 +402,7 @@
   "latitude": 33.3988447,
   "longitude": -111.858224,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Stravaganzza hair dressers",
   "website_candidate": "https://www.stravaganzzahairdressers.com/",
   "website_source_url": ""
@@ -426,7 +426,7 @@
   "latitude": 32.398066,
   "longitude": -110.960782,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Great Clips",
   "website_candidate": "https://salons.greatclips.com/us/az/oro-valley/10515-n-oracle-rd",
   "website_source_url": ""
@@ -450,7 +450,7 @@
   "latitude": 33.5692608,
   "longitude": -111.8886772,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Supercuts",
   "website_candidate": "https://www.supercuts.com/",
   "website_source_url": ""
@@ -474,7 +474,7 @@
   "latitude": 33.6392724,
   "longitude": -112.2301364,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Great Clips",
   "website_candidate": "https://app.greatclips.com/salon/1545",
   "website_source_url": ""
@@ -498,7 +498,7 @@
   "latitude": 34.5668455,
   "longitude": -112.4826413,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Saltys American Barber Shop",
   "website_candidate": "https://saltysbarbershop.com/",
   "website_source_url": ""
@@ -522,7 +522,7 @@
   "latitude": 34.5905047,
   "longitude": -112.3414221,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Great Clips",
   "website_candidate": "https://salons.greatclips.com/us/az/prescott-valley/3298-n-glassford-hill-rd",
   "website_source_url": ""
@@ -546,7 +546,7 @@
   "latitude": 33.6809897,
   "longitude": -112.23968,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Supercuts",
   "website_candidate": "https://www.supercuts.com/",
   "website_source_url": ""
@@ -570,7 +570,7 @@
   "latitude": 32.3377785,
   "longitude": -111.0300433,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Foothills Barbers",
   "website_candidate": "https://www.foothillsbarbers.com/",
   "website_source_url": ""
@@ -594,7 +594,7 @@
   "latitude": 33.4588324,
   "longitude": -112.0659833,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Roosevelt Barber Shop",
   "website_candidate": "https://rooseveltbarbershop.com/",
   "website_source_url": ""
@@ -609,7 +609,7 @@
   "categories": [
    "stylist"
   ],
-  "website_url": "https://salons.greatclips.com/us/az/gilbert/4099-e-williams-field-rd?utm_source=google&utm_medium=organic&utm_campaign=gmb",
+  "website_url": "https://salons.greatclips.com/us/az/gilbert/4099-e-williams-field-rd",
   "phone": "(480) 265-8297",
   "source_name": "OpenStreetMap contributors",
   "source_url": "https://www.openstreetmap.org/node/9866735932",
@@ -618,9 +618,9 @@
   "latitude": 33.30499,
   "longitude": -111.7014498,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Great Clips",
-  "website_candidate": "https://salons.greatclips.com/us/az/gilbert/4099-e-williams-field-rd?utm_source=google&utm_medium=organic&utm_campaign=gmb",
+  "website_candidate": "https://salons.greatclips.com/us/az/gilbert/4099-e-williams-field-rd",
   "website_source_url": ""
  },
  {
@@ -642,7 +642,7 @@
   "latitude": 33.610935,
   "longitude": -112.3607828,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Supercuts",
   "website_candidate": "https://www.supercuts.com/locations/az/surprise/frys-shopping-center-haircuts-82333.html",
   "website_source_url": ""
@@ -666,7 +666,7 @@
   "latitude": 33.6675757,
   "longitude": -112.1200651,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Supercuts",
   "website_candidate": "https://www.supercuts.com/locations/nearme/haircut/AZ/PHOENIX/2805-W-AGUA-FRIA-FWY-STE-2B/81658",
   "website_source_url": ""
@@ -690,7 +690,7 @@
   "latitude": 33.4951394,
   "longitude": -111.9288078,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Lady+Wolf Salon",
   "website_candidate": "https://ladyandwolf.com/",
   "website_source_url": ""
@@ -715,7 +715,7 @@
   "latitude": 33.6422957,
   "longitude": -112.367042,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Hair Salon & Barber",
   "website_candidate": "https://sunvillage.org/",
   "website_source_url": ""
@@ -739,7 +739,7 @@
   "latitude": 33.43967,
   "longitude": -112.4218,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "My Salon Suite",
   "website_candidate": "https://www.mysalonsuite.com/",
   "website_source_url": ""
@@ -763,7 +763,7 @@
   "latitude": 33.6380051,
   "longitude": -112.4155725,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Sport Clips",
   "website_candidate": "https://sportclips.com/us-az-surprise-az136",
   "website_source_url": ""
@@ -787,7 +787,7 @@
   "latitude": 33.4553919,
   "longitude": -112.0695227,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Arcane Hair Parlour",
   "website_candidate": "https://www.arcanehairparlour.com/",
   "website_source_url": ""
@@ -811,7 +811,7 @@
   "latitude": 33.6982558,
   "longitude": -112.4103194,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Great Clips",
   "website_candidate": "https://www.greatclips.com/",
   "website_source_url": ""
@@ -835,7 +835,7 @@
   "latitude": 33.678003,
   "longitude": -111.9786867,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "V's Barbershop Desert Ridge",
   "website_candidate": "https://vbarbershop.com/",
   "website_source_url": ""
@@ -859,7 +859,7 @@
   "latitude": 33.4891528,
   "longitude": -111.9301768,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Warfield Hair Bar",
   "website_candidate": "https://www.warfieldhairbar.com/",
   "website_source_url": ""
@@ -883,7 +883,7 @@
   "latitude": 33.6384857,
   "longitude": -112.0680845,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Supercuts",
   "website_candidate": "https://www.supercuts.com/locations/nearme/haircut/AZ/Phoenix/Bell-Towne-Centre/82956",
   "website_source_url": ""
@@ -907,7 +907,7 @@
   "latitude": 33.6391778,
   "longitude": -112.0632825,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Great Clips",
   "website_candidate": "https://salons.greatclips.com/us/az/phoenix/749-e-bell-rd",
   "website_source_url": ""
@@ -931,7 +931,7 @@
   "latitude": 33.4940811,
   "longitude": -112.2881443,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "RookieFresh Barbershop",
   "website_candidate": "https://www.rookiefreshbarbershop.com/book-online",
   "website_source_url": ""
@@ -955,7 +955,7 @@
   "latitude": 32.3900052,
   "longitude": -110.9632625,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Havven Salon",
   "website_candidate": "https://havvensalon.com/",
   "website_source_url": ""
@@ -979,7 +979,7 @@
   "latitude": 33.357454,
   "longitude": -112.4289116,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Great Clips",
   "website_candidate": "https://salons.greatclips.com/us/az/goodyear/17650-w-elliot-rd",
   "website_source_url": ""
@@ -1003,7 +1003,7 @@
   "latitude": 33.7087497,
   "longitude": -112.1141904,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Mens Lounge Barbershop",
   "website_candidate": "https://www.mensloungebarbershop.com/",
   "website_source_url": ""
@@ -1027,7 +1027,7 @@
   "latitude": 33.7146209,
   "longitude": -112.1121013,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Cookie Cutters Hair for Kids",
   "website_candidate": "https://www.haircutsarefun.com/",
   "website_source_url": ""
@@ -1051,7 +1051,7 @@
   "latitude": 33.7151483,
   "longitude": -112.1124508,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "The Beauty District",
   "website_candidate": "https://thebeautydistrict.com/",
   "website_source_url": ""
@@ -1075,7 +1075,7 @@
   "latitude": 31.3817537,
   "longitude": -110.9462283,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Alex Barber Shop",
   "website_candidate": "https://alexbarbershopnogalesaz.com/",
   "website_source_url": ""
@@ -1099,33 +1099,9 @@
   "latitude": 33.2778579,
   "longitude": -111.8591976,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Sport Clips",
   "website_candidate": "https://www.sportclips.com/",
-  "website_source_url": ""
- },
- {
-  "name": "Touch of Today Salon",
-  "city": "Phoenix",
-  "state": "AZ",
-  "street_address": "4312 West Cactus Road",
-  "zip_code": "85304",
-  "county": "",
-  "categories": [
-   "stylist"
-  ],
-  "website_url": "https://www.touchoftodaysalon.com/",
-  "phone": "(602) 843-8418",
-  "source_name": "OpenStreetMap contributors",
-  "source_url": "https://www.openstreetmap.org/node/12490323057",
-  "source_external_id": "osm:node/12490323057",
-  "license_number": null,
-  "latitude": 33.597254,
-  "longitude": -112.1518426,
-  "operational_status": "verified",
-  "checked_at": "2026-11-24",
-  "raw_name": "Touch of Today Salon",
-  "website_candidate": "https://www.touchoftodaysalon.com/",
   "website_source_url": ""
  },
  {
@@ -1147,7 +1123,7 @@
   "latitude": 33.4954785,
   "longitude": -112.512096,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "The Blue Daisy Day Spa Salon Boutique",
   "website_candidate": "https://thebluedaisydayspa.com/",
   "website_source_url": ""
@@ -1171,7 +1147,7 @@
   "latitude": 32.8317813,
   "longitude": -109.7326353,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Great Clips",
   "website_candidate": "https://salons.greatclips.com/us/az/safford/775-s-20th-ave",
   "website_source_url": ""
@@ -1195,7 +1171,7 @@
   "latitude": 33.6760334,
   "longitude": -111.9660622,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Cast Salon",
   "website_candidate": "https://www.castsalonandspa.com/",
   "website_source_url": ""
@@ -1219,7 +1195,7 @@
   "latitude": 33.675608,
   "longitude": -111.9638228,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Barbershop Jack",
   "website_candidate": "https://www.barbershopjack.com/",
   "website_source_url": ""
@@ -1243,7 +1219,7 @@
   "latitude": 31.552468,
   "longitude": -110.2994307,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Juan's Barbershop",
   "website_candidate": "https://juansbarbershopsv.com/",
   "website_source_url": ""
@@ -1267,33 +1243,9 @@
   "latitude": 33.5737799,
   "longitude": -112.0655806,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Pop's Barbershop",
   "website_candidate": "https://popsbarber.com/",
-  "website_source_url": ""
- },
- {
-  "name": "Rogue Salon",
-  "city": "Tucson",
-  "state": "AZ",
-  "street_address": "4420 East Speedway Boulevard",
-  "zip_code": "85712",
-  "county": "",
-  "categories": [
-   "stylist"
-  ],
-  "website_url": "https://www.roguesalonllc.com/",
-  "phone": "(520) 388-0767",
-  "source_name": "OpenStreetMap contributors",
-  "source_url": "https://www.openstreetmap.org/node/13143749407",
-  "source_external_id": "osm:node/13143749407",
-  "license_number": null,
-  "latitude": 32.23597,
-  "longitude": -110.8982865,
-  "operational_status": "verified",
-  "checked_at": "2026-11-24",
-  "raw_name": "Rogue Salon",
-  "website_candidate": "https://www.roguesalonllc.com/",
   "website_source_url": ""
  },
  {
@@ -1315,7 +1267,7 @@
   "latitude": 35.1923273,
   "longitude": -111.6626365,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "The Urban Shave",
   "website_candidate": "https://theurbanshave.com/",
   "website_source_url": ""
@@ -1339,7 +1291,7 @@
   "latitude": 32.2365886,
   "longitude": -110.9081938,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Presidio Hair",
   "website_candidate": "https://www.presidiohair.com/",
   "website_source_url": ""
@@ -1363,7 +1315,7 @@
   "latitude": 33.3210127,
   "longitude": -111.6327738,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "V's Barbershop",
   "website_candidate": "https://vbarbershop.com/pages/location/cadence-eastmark",
   "website_source_url": ""
@@ -1387,7 +1339,7 @@
   "latitude": 33.509491,
   "longitude": -112.0612206,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Pikasso Barber Shop",
   "website_candidate": "https://pikassobarbershop.com/",
   "website_source_url": ""
@@ -1411,7 +1363,7 @@
   "latitude": 33.584682,
   "longitude": -111.8302091,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "OutKast Barbershop",
   "website_candidate": "https://outkastbarbershop.com/",
   "website_source_url": ""
@@ -1435,7 +1387,7 @@
   "latitude": 31.8687488,
   "longitude": -110.9938855,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Famoso Cutz Barber Studio",
   "website_candidate": "https://famosocutz.com/",
   "website_source_url": ""
@@ -1459,7 +1411,7 @@
   "latitude": 33.4981673,
   "longitude": -111.925058,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Indielocks",
   "website_candidate": "https://indielocks.com/",
   "website_source_url": ""
@@ -1483,7 +1435,7 @@
   "latitude": 33.422319,
   "longitude": -111.7371258,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Visionz Barbershop",
   "website_candidate": "https://booksy.com/en-us/1167309_visionz-barbershop_barber-shop_14704_gilbert",
   "website_source_url": ""
@@ -1507,7 +1459,7 @@
   "latitude": 32.7060585,
   "longitude": -114.6244391,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Xavier's Barber Shop",
   "website_candidate": "https://square.site/book/B3XPVZ7C8BDM5/xavier-s-barber-shop-yuma-az",
   "website_source_url": ""
@@ -1531,7 +1483,7 @@
   "latitude": 32.2220055,
   "longitude": -110.8670128,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Sola Salons",
   "website_candidate": "https://www.solasalonstudios.com/locations/tucson-east-broadway",
   "website_source_url": ""
@@ -1555,7 +1507,7 @@
   "latitude": 33.4741756,
   "longitude": -112.0742634,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Willo and Root",
   "website_candidate": "https://willo-root-salon.square.site/",
   "website_source_url": ""
@@ -1579,9 +1531,33 @@
   "latitude": 33.4994291,
   "longitude": -111.9238305,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Salon Suede",
   "website_candidate": "https://suedesalonstudios.com/",
+  "website_source_url": ""
+ },
+ {
+  "name": "Stylistics",
+  "city": "Phoenix",
+  "state": "AZ",
+  "street_address": "6115 North 7th Street",
+  "zip_code": "85014",
+  "county": "",
+  "categories": [
+   "stylist"
+  ],
+  "website_url": "https://www.stylistics.net/",
+  "phone": "(602) 234-3381",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/node/13719113301",
+  "source_external_id": "osm:node/13719113301",
+  "license_number": null,
+  "latitude": 33.5262282,
+  "longitude": -112.0646367,
+  "operational_status": "verified",
+  "checked_at": "2026-11-27",
+  "raw_name": "Stylistics, Inc.",
+  "website_candidate": "https://www.stylistics.net/",
   "website_source_url": ""
  },
  {
@@ -1603,9 +1579,419 @@
   "latitude": 33.5993314,
   "longitude": -111.9894861,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Great Clips",
   "website_candidate": "https://salons.greatclips.com/us/az/phoenix/4312-e-cactus-rd",
+  "website_source_url": ""
+ },
+ {
+  "name": "Kopper Blonde Company at Salon Lofts",
+  "city": "Scottsdale",
+  "state": "AZ",
+  "street_address": "15323 North Scottsdale Road",
+  "zip_code": "85254",
+  "county": "",
+  "categories": [
+   "stylist"
+  ],
+  "website_url": "https://www.kopperblondeco.com/",
+  "phone": "(602) 791-2979",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/node/14059003794",
+  "source_external_id": "osm:node/14059003794",
+  "license_number": null,
+  "latitude": 33.6255658,
+  "longitude": -111.9239224,
+  "operational_status": "verified",
+  "checked_at": "2026-11-27",
+  "raw_name": "Kopper Blonde Company at Salon Lofts",
+  "website_candidate": "https://www.kopperblondeco.com/",
+  "website_source_url": ""
+ },
+ {
+  "name": "Cutters Cottage",
+  "city": "Phoenix",
+  "state": "AZ",
+  "street_address": "4607 East Thomas Road",
+  "zip_code": "85018",
+  "county": "",
+  "categories": [
+   "stylist"
+  ],
+  "website_url": "https://www.cutterscottage.com/",
+  "phone": "(602) 840-7542",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/node/14108187724",
+  "source_external_id": "osm:node/14108187724",
+  "license_number": null,
+  "latitude": 33.4795911,
+  "longitude": -111.9820895,
+  "operational_status": "verified",
+  "checked_at": "2026-11-27",
+  "raw_name": "Cutters Cottage",
+  "website_candidate": "http://www.cutterscottage.com/",
+  "website_source_url": ""
+ },
+ {
+  "name": "Cost Cutters",
+  "city": "Anthem",
+  "state": "AZ",
+  "street_address": "39508 North Daisy Mountain Dr",
+  "zip_code": "85086",
+  "county": "",
+  "categories": [
+   "stylist"
+  ],
+  "website_url": "https://www.costcutters.com/locations/nearme/haircut/az/anthem/39506-n-daisy-mountain-dr-124/15929",
+  "phone": "(623) 551-6669",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/node/14121387977",
+  "source_external_id": "osm:node/14121387977",
+  "license_number": null,
+  "latitude": 33.8447327,
+  "longitude": -112.1345985,
+  "operational_status": "verified",
+  "checked_at": "2026-11-27",
+  "raw_name": "Cost Cutters",
+  "website_candidate": "https://www.costcutters.com/locations/nearme/haircut/az/anthem/39506-n-daisy-mountain-dr-124/15929",
+  "website_source_url": ""
+ },
+ {
+  "name": "Supercuts",
+  "city": "Anthem",
+  "state": "AZ",
+  "street_address": "3636 West Anthem Way",
+  "zip_code": "85086",
+  "county": "",
+  "categories": [
+   "stylist"
+  ],
+  "website_url": "https://www.supercuts.com/locations/nearme/haircut/az/phoenix/3636-w-anthem-way/82332",
+  "phone": "(623) 551-5614",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/node/14121470109",
+  "source_external_id": "osm:node/14121470109",
+  "license_number": null,
+  "latitude": 33.8666632,
+  "longitude": -112.1367931,
+  "operational_status": "verified",
+  "checked_at": "2026-11-27",
+  "raw_name": "Supercuts",
+  "website_candidate": "https://www.supercuts.com/locations/nearme/haircut/az/phoenix/3636-w-anthem-way/82332",
+  "website_source_url": ""
+ },
+ {
+  "name": "El Continental Barber Shop",
+  "city": "Tucson",
+  "state": "AZ",
+  "street_address": "3015 East Speedway Boulevard",
+  "zip_code": "85716",
+  "county": "",
+  "categories": [
+   "barber"
+  ],
+  "website_url": "https://www.elcontinentalbarbers.com/",
+  "phone": "(520) 795-1981",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/node/14130480888",
+  "source_external_id": "osm:node/14130480888",
+  "license_number": null,
+  "latitude": 32.236422,
+  "longitude": -110.9274374,
+  "operational_status": "verified",
+  "checked_at": "2026-11-27",
+  "raw_name": "El Continental Barber Shop",
+  "website_candidate": "https://www.elcontinentalbarbers.com/",
+  "website_source_url": ""
+ },
+ {
+  "name": "Cost Cutters",
+  "city": "Tucson",
+  "state": "AZ",
+  "street_address": "120 South Houghton Road",
+  "zip_code": "85748",
+  "county": "",
+  "categories": [
+   "stylist"
+  ],
+  "website_url": "https://www.costcutters.com/locations/nearme/haircut/az/tucson/120-s-houghton-rd-ste-102/15572",
+  "phone": "(520) 751-7454",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/node/14158784807",
+  "source_external_id": "osm:node/14158784807",
+  "license_number": null,
+  "latitude": 32.2194347,
+  "longitude": -110.7739227,
+  "operational_status": "verified",
+  "checked_at": "2026-11-27",
+  "raw_name": "Cost Cutters",
+  "website_candidate": "https://www.costcutters.com/locations/nearme/haircut/az/tucson/120-s-houghton-rd-ste-102/15572",
+  "website_source_url": ""
+ },
+ {
+  "name": "Glenn Royce Salon",
+  "city": "Tucson",
+  "state": "AZ",
+  "street_address": "50 South Houghton Road",
+  "zip_code": "85748",
+  "county": "",
+  "categories": [
+   "stylist"
+  ],
+  "website_url": "http://glennroycesalon.com/",
+  "phone": "(520) 546-7871",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/node/14158784811",
+  "source_external_id": "osm:node/14158784811",
+  "license_number": null,
+  "latitude": 32.2204217,
+  "longitude": -110.7741879,
+  "operational_status": "verified",
+  "checked_at": "2026-11-27",
+  "raw_name": "Glenn Royce Salon",
+  "website_candidate": "http://glennroycesalon.com/",
+  "website_source_url": ""
+ },
+ {
+  "name": "Gentlemen's Cutz",
+  "city": "Tucson",
+  "state": "AZ",
+  "street_address": "60 North Harrison Road",
+  "zip_code": "85748",
+  "county": "",
+  "categories": [
+   "stylist"
+  ],
+  "website_url": "https://mytucsonbarber.com/",
+  "phone": "(520) 886-6696",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/node/14158784823",
+  "source_external_id": "osm:node/14158784823",
+  "license_number": null,
+  "latitude": 32.2221486,
+  "longitude": -110.7878656,
+  "operational_status": "verified",
+  "checked_at": "2026-11-27",
+  "raw_name": "Gentlemen's Cutz",
+  "website_candidate": "https://mytucsonbarber.com/",
+  "website_source_url": ""
+ },
+ {
+  "name": "Supercuts",
+  "city": "Tucson",
+  "state": "AZ",
+  "street_address": "9505 East Broadway Boulevard",
+  "zip_code": "85748",
+  "county": "",
+  "categories": [
+   "stylist"
+  ],
+  "website_url": "https://www.supercuts.com/locations/nearme/haircut/az/tucson/9505-e-broadway-blvd-ste-101/8623",
+  "phone": "(520) 751-2002",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/node/14158784826",
+  "source_external_id": "osm:node/14158784826",
+  "license_number": null,
+  "latitude": 32.221313,
+  "longitude": -110.78922,
+  "operational_status": "verified",
+  "checked_at": "2026-11-27",
+  "raw_name": "Supercuts",
+  "website_candidate": "https://www.supercuts.com/locations/nearme/haircut/az/tucson/9505-e-broadway-blvd-ste-101/8623",
+  "website_source_url": ""
+ },
+ {
+  "name": "Great Clips",
+  "city": "Tucson",
+  "state": "AZ",
+  "street_address": "8804 East Broadway Boulevard",
+  "zip_code": "85710",
+  "county": "",
+  "categories": [
+   "stylist"
+  ],
+  "website_url": "https://salons.greatclips.com/us/az/tucson/8804-e-broadway-blvd",
+  "phone": "(520) 885-0259",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/node/14158784914",
+  "source_external_id": "osm:node/14158784914",
+  "license_number": null,
+  "latitude": 32.2195913,
+  "longitude": -110.8046937,
+  "operational_status": "verified",
+  "checked_at": "2026-11-27",
+  "raw_name": "Great Clips",
+  "website_candidate": "https://salons.greatclips.com/us/az/tucson/8804-e-broadway-blvd",
+  "website_source_url": ""
+ },
+ {
+  "name": "LuvieStyles",
+  "city": "Scottsdale",
+  "state": "AZ",
+  "street_address": "2923 North 67th Place",
+  "zip_code": "85251",
+  "county": "",
+  "categories": [
+   "stylist"
+  ],
+  "website_url": "https://luviestyles.square.site/",
+  "phone": "(480) 529-8146",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/node/14159923960",
+  "source_external_id": "osm:node/14159923960",
+  "license_number": null,
+  "latitude": 33.4811463,
+  "longitude": -111.9355728,
+  "operational_status": "verified",
+  "checked_at": "2026-11-27",
+  "raw_name": "LuvieStyles",
+  "website_candidate": "https://luviestyles.square.site/",
+  "website_source_url": ""
+ },
+ {
+  "name": "II Sons for Men",
+  "city": "Tucson",
+  "state": "AZ",
+  "street_address": "8407 East Broadway Boulevard",
+  "zip_code": "85710",
+  "county": "",
+  "categories": [
+   "stylist"
+  ],
+  "website_url": "https://2sonsformen.com/",
+  "phone": "(520) 751-4200",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/node/14161836017",
+  "source_external_id": "osm:node/14161836017",
+  "license_number": null,
+  "latitude": 32.2213497,
+  "longitude": -110.8132361,
+  "operational_status": "verified",
+  "checked_at": "2026-11-27",
+  "raw_name": "II Sons for Men",
+  "website_candidate": "https://2sonsformen.com/",
+  "website_source_url": ""
+ },
+ {
+  "name": "A & B Barbershop",
+  "city": "Tempe",
+  "state": "AZ",
+  "street_address": "1713 East Guadalupe Road",
+  "zip_code": "85283",
+  "county": "Maricopa",
+  "categories": [
+   "barber"
+  ],
+  "website_url": "https://abbarbershop.com/",
+  "phone": "(480) 491-2669",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/node/14178688301",
+  "source_external_id": "osm:node/14178688301",
+  "license_number": null,
+  "latitude": 33.3633316,
+  "longitude": -111.9126225,
+  "operational_status": "verified",
+  "checked_at": "2026-11-27",
+  "raw_name": "A & B Barbershop",
+  "website_candidate": "http://abbarbershop.com/",
+  "website_source_url": ""
+ },
+ {
+  "name": "Mindful Barbershop",
+  "city": "Tucson",
+  "state": "AZ",
+  "street_address": "8250 East Broadway Boulevard",
+  "zip_code": "85710",
+  "county": "",
+  "categories": [
+   "barber"
+  ],
+  "website_url": "https://www.mindfulbarbershop.com/",
+  "phone": "(520) 475-1295",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/node/14201687645",
+  "source_external_id": "osm:node/14201687645",
+  "license_number": null,
+  "latitude": 32.2206222,
+  "longitude": -110.8159703,
+  "operational_status": "verified",
+  "checked_at": "2026-11-27",
+  "raw_name": "Mindful Barbershop",
+  "website_candidate": "https://www.mindfulbarbershop.com/",
+  "website_source_url": ""
+ },
+ {
+  "name": "Surgeon Cuts Barbershop",
+  "city": "Flagstaff",
+  "state": "AZ",
+  "street_address": "2700 South Woodlands Village Boulevard",
+  "zip_code": "86001",
+  "county": "",
+  "categories": [
+   "barber",
+   "stylist"
+  ],
+  "website_url": "https://surgeoncutsbarbershop.com/",
+  "phone": "(928) 405-2958",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/node/14210279009",
+  "source_external_id": "osm:node/14210279009",
+  "license_number": null,
+  "latitude": 35.1766444,
+  "longitude": -111.6664387,
+  "operational_status": "verified",
+  "checked_at": "2026-11-27",
+  "raw_name": "Surgeon Cuts Barbershop",
+  "website_candidate": "https://surgeoncutsbarbershop.com/",
+  "website_source_url": ""
+ },
+ {
+  "name": "Surgeon Cuts Barbershop",
+  "city": "Prescott",
+  "state": "AZ",
+  "street_address": "1201 West Iron Springs Road",
+  "zip_code": "86305",
+  "county": "",
+  "categories": [
+   "barber",
+   "stylist"
+  ],
+  "website_url": "https://surgeoncutsbarbershop.com/",
+  "phone": "(928) 421-6830",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/node/14212654049",
+  "source_external_id": "osm:node/14212654049",
+  "license_number": null,
+  "latitude": 34.5606154,
+  "longitude": -112.485843,
+  "operational_status": "verified",
+  "checked_at": "2026-11-27",
+  "raw_name": "Surgeon Cuts Barbershop",
+  "website_candidate": "https://surgeoncutsbarbershop.com/",
+  "website_source_url": ""
+ },
+ {
+  "name": "Rio Salon Suites",
+  "city": "Phoenix",
+  "state": "AZ",
+  "street_address": "101 North 1st Avenue",
+  "zip_code": "",
+  "county": "Maricopa",
+  "categories": [
+   "stylist"
+  ],
+  "website_url": "https://www.riosalonsuitesphx.com/",
+  "phone": "",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/node/14378755673",
+  "source_external_id": "osm:node/14378755673",
+  "license_number": null,
+  "latitude": 33.4495002,
+  "longitude": -112.0745631,
+  "operational_status": "verified",
+  "checked_at": "2026-11-27",
+  "raw_name": "Rio Salon Suites",
+  "website_candidate": "https://riosalonsuites.com/",
   "website_source_url": ""
  },
  {
@@ -1627,7 +2013,7 @@
   "latitude": 32.3067459,
   "longitude": -110.8456392,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Cost Cutters",
   "website_candidate": "https://www.costcutters.com/locations/az/tucson/ventana-village-haircuts-62027.html",
   "website_source_url": ""
@@ -1651,7 +2037,7 @@
   "latitude": 32.3960273,
   "longitude": -110.9939894,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Cost Cutters",
   "website_candidate": "https://www.costcutters.com/locations/az/oro-valley/canada-hills-marketplace-haircuts-15912.html",
   "website_source_url": ""
@@ -1675,7 +2061,7 @@
   "latitude": 32.3970729,
   "longitude": -110.9604183,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Reform Salon",
   "website_candidate": "https://www.reformsalon.com/",
   "website_source_url": ""
@@ -1699,7 +2085,7 @@
   "latitude": 32.2537736,
   "longitude": -109.8338772,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Shear Tease",
   "website_candidate": "https://sheartea.se/",
   "website_source_url": ""
@@ -1723,7 +2109,7 @@
   "latitude": 33.7999177,
   "longitude": -112.1261676,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Fantastic Sams",
   "website_candidate": "https://www.fantasticsams.com/",
   "website_source_url": ""
@@ -1747,7 +2133,7 @@
   "latitude": 33.7990635,
   "longitude": -112.1311453,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Sport Clips",
   "website_candidate": "https://www.sportclipsinc.com/",
   "website_source_url": ""
@@ -1771,7 +2157,7 @@
   "latitude": 33.5375487,
   "longitude": -111.8876565,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Ulta Beauty",
   "website_candidate": "https://www.ulta.com/stores/scottsdale-az-33",
   "website_source_url": ""
@@ -1795,7 +2181,7 @@
   "latitude": 33.4136489,
   "longitude": -111.574773,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Regal Nails",
   "website_candidate": "https://regalnails.com/",
   "website_source_url": ""
@@ -1819,7 +2205,7 @@
   "latitude": 33.4166434,
   "longitude": -111.5478344,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Nizhóní Spa",
   "website_candidate": "http://nizhonispa.com/",
   "website_source_url": ""
@@ -1843,7 +2229,7 @@
   "latitude": 33.670385,
   "longitude": -112.2383581,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Luxury Nail Bar",
   "website_candidate": "http://luxurynailbar.net/",
   "website_source_url": ""
@@ -1867,7 +2253,7 @@
   "latitude": 33.3206716,
   "longitude": -111.6856482,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "N2 Nail Spa",
   "website_candidate": "https://n2nailspa.com/",
   "website_source_url": ""
@@ -1891,7 +2277,7 @@
   "latitude": 33.2995279,
   "longitude": -111.7436715,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "European Wax Center",
   "website_candidate": "https://locations.waxcenter.com/az/gilbert/gilbert-san-tan-village-0032.html",
   "website_source_url": ""
@@ -1915,7 +2301,7 @@
   "latitude": 33.232744,
   "longitude": -111.7214137,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Palace Nails & Spa",
   "website_candidate": "https://palacenailsspagilbert.com/",
   "website_source_url": ""
@@ -1939,7 +2325,7 @@
   "latitude": 33.6975628,
   "longitude": -111.9156632,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Millennium Day Spa & Salon",
   "website_candidate": "http://mdssalon.com/",
   "website_source_url": ""
@@ -1963,7 +2349,7 @@
   "latitude": 33.6186858,
   "longitude": -111.89644,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Palm Beach Tan",
   "website_candidate": "https://palmbeachtan.com/locations/AZ/Scottsdale-North-Northsight-Boulevard",
   "website_source_url": ""
@@ -1987,7 +2373,7 @@
   "latitude": 33.4165767,
   "longitude": -111.6344865,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Cosmo Nails",
   "website_candidate": "http://cosmonailsmesa.com/",
   "website_source_url": ""
@@ -2011,7 +2397,7 @@
   "latitude": 35.1848672,
   "longitude": -111.6592804,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Ulta Beauty",
   "website_candidate": "https://www.ulta.com/stores/flagstaff-az-1630",
   "website_source_url": ""
@@ -2035,9 +2421,33 @@
   "latitude": 33.3810871,
   "longitude": -111.7572078,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "European Wax Center",
   "website_candidate": "https://locations.waxcenter.com/az/mesa/mesa-gilbert-0035.html",
+  "website_source_url": ""
+ },
+ {
+  "name": "Artist Nails Lounge Gilbert",
+  "city": "Gilbert",
+  "state": "AZ",
+  "street_address": "1939 East Baseline Road",
+  "zip_code": "85233",
+  "county": "",
+  "categories": [
+   "nail_technician"
+  ],
+  "website_url": "https://artistnaillounge.com/",
+  "phone": "(480) 219-6689",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/node/7596559971",
+  "source_external_id": "osm:node/7596559971",
+  "license_number": null,
+  "latitude": 33.3771834,
+  "longitude": -111.789434,
+  "operational_status": "verified",
+  "checked_at": "2026-11-27",
+  "raw_name": "Artist Nails Lounge Gilbert",
+  "website_candidate": "https://artistnailslounge.com/",
   "website_source_url": ""
  },
  {
@@ -2059,7 +2469,7 @@
   "latitude": 33.2556868,
   "longitude": -111.636629,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "European Wax Center",
   "website_candidate": "https://locations.waxcenter.com/az/queencreek/queen-creek-0786.html",
   "website_source_url": ""
@@ -2083,7 +2493,7 @@
   "latitude": 33.4323781,
   "longitude": -111.9024035,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "European Wax Center",
   "website_candidate": "https://locations.waxcenter.com/az/tempe/tempe-tempe-marketplace-0141.html",
   "website_source_url": ""
@@ -2107,7 +2517,7 @@
   "latitude": 35.1081494,
   "longitude": -114.6018951,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "One Up Nails",
   "website_candidate": "https://www.oneupnails.com/",
   "website_source_url": ""
@@ -2131,7 +2541,7 @@
   "latitude": 33.4504707,
   "longitude": -111.6817101,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "European Wax Center",
   "website_candidate": "https://locations.waxcenter.com/az/mesa/mesa-red-mountain-0257.html",
   "website_source_url": ""
@@ -2155,7 +2565,7 @@
   "latitude": 33.6370688,
   "longitude": -112.2235535,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Ulta Beauty",
   "website_candidate": "https://www.ulta.com/stores/peoria-az-47",
   "website_source_url": ""
@@ -2179,7 +2589,7 @@
   "latitude": 33.5683725,
   "longitude": -111.8881057,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Loma Skin & Laser",
   "website_candidate": "https://www.lomalaser.com/",
   "website_source_url": ""
@@ -2203,7 +2613,7 @@
   "latitude": 34.5667592,
   "longitude": -112.4825073,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Bramasole",
   "website_candidate": "https://www.bramasolesalon.com/",
   "website_source_url": ""
@@ -2227,7 +2637,7 @@
   "latitude": 34.8622846,
   "longitude": -111.8131526,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Sedona's New Day Spa",
   "website_candidate": "https://sedonanewdayspa.com/",
   "website_source_url": ""
@@ -2251,7 +2661,7 @@
   "latitude": 33.5099574,
   "longitude": -112.1326309,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Grand Mart - Hair Store",
   "website_candidate": "https://www.grandmarthair.com/",
   "website_source_url": ""
@@ -2275,7 +2685,7 @@
   "latitude": 33.4608906,
   "longitude": -112.0714724,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Intoxicating Injections",
   "website_candidate": "http://lisacockrellrn.com/",
   "website_source_url": ""
@@ -2299,7 +2709,7 @@
   "latitude": 33.5385695,
   "longitude": -112.2579202,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Saguaro Nails Bar",
   "website_candidate": "https://thenburger.com/",
   "website_source_url": ""
@@ -2323,7 +2733,7 @@
   "latitude": 33.3183073,
   "longitude": -111.9667483,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Ulta Beauty",
   "website_candidate": "https://www.ulta.com/stores/chandler-az-434",
   "website_source_url": ""
@@ -2347,7 +2757,7 @@
   "latitude": 32.4221045,
   "longitude": -110.9383956,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Ulta Beauty",
   "website_candidate": "https://www.ulta.com/stores/oro-valley-az-355",
   "website_source_url": ""
@@ -2371,7 +2781,7 @@
   "latitude": 33.5865566,
   "longitude": -111.8364765,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Lynn's Nails & Spa",
   "website_candidate": "https://lynnsnails.org/",
   "website_source_url": ""
@@ -2395,7 +2805,7 @@
   "latitude": 33.6109375,
   "longitude": -112.3607019,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Nail Touch",
   "website_candidate": "https://nailtouchsurprise.com/",
   "website_source_url": ""
@@ -2419,7 +2829,7 @@
   "latitude": 32.8839117,
   "longitude": -111.681954,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Ulta Beauty",
   "website_candidate": "https://www.ulta.com/stores/casa-grande-az-296",
   "website_source_url": ""
@@ -2443,7 +2853,7 @@
   "latitude": 33.6381617,
   "longitude": -112.415572,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Mood Beauty Studio",
   "website_candidate": "https://www.vagaro.com/moodbeautystudio",
   "website_source_url": ""
@@ -2464,10 +2874,10 @@
   "source_url": "https://www.openstreetmap.org/node/11045720134",
   "source_external_id": "osm:node/11045720134",
   "license_number": null,
-  "latitude": 33.6084459,
-  "longitude": -112.4150486,
+  "latitude": 33.6084828,
+  "longitude": -112.4150607,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "European Wax Center",
   "website_candidate": "https://locations.waxcenter.com/az/surprise/surprise-waddell-and-303-0464.html",
   "website_source_url": ""
@@ -2491,7 +2901,7 @@
   "latitude": 33.6666786,
   "longitude": -112.1233096,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Classy Nails & Spa",
   "website_candidate": "https://classynailsandspaphoenix.com/",
   "website_source_url": ""
@@ -2515,9 +2925,33 @@
   "latitude": 33.4149767,
   "longitude": -111.7273901,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Just Teazzin",
   "website_candidate": "https://www.justteazzinmesa.com/",
+  "website_source_url": ""
+ },
+ {
+  "name": "European Wax Center",
+  "city": "Avondale",
+  "state": "AZ",
+  "street_address": "10110 West McDowell Road",
+  "zip_code": "85392",
+  "county": "",
+  "categories": [
+   "waxing_specialist"
+  ],
+  "website_url": "https://locations.waxcenter.com/az/avondale/avondale-gateway-pavilions-1115.html",
+  "phone": "",
+  "source_name": "OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/node/11372117159",
+  "source_external_id": "osm:node/11372117159",
+  "license_number": null,
+  "latitude": 33.4652957,
+  "longitude": -112.2773076,
+  "operational_status": "verified",
+  "checked_at": "2026-11-27",
+  "raw_name": "European Wax Center",
+  "website_candidate": "https://locations.waxcenter.com/az/avondale/avondale-gateway-pavilions-1115.html",
   "website_source_url": ""
  },
  {
@@ -2539,7 +2973,7 @@
   "latitude": 33.2773994,
   "longitude": -111.8571804,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Sassi Nails Chandler",
   "website_candidate": "https://sassinailschandler.com/",
   "website_source_url": ""
@@ -2563,7 +2997,7 @@
   "latitude": 34.6004055,
   "longitude": -112.4568911,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Prescott Nails & Spa",
   "website_candidate": "http://prescottnailsandspa.com/",
   "website_source_url": ""
@@ -2587,7 +3021,7 @@
   "latitude": 33.7087575,
   "longitude": -112.1145329,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Herbal Nails & Spa at Happy Valley",
   "website_candidate": "https://herbalnailsandspahappyvalley.com/",
   "website_source_url": ""
@@ -2611,7 +3045,7 @@
   "latitude": 33.2611641,
   "longitude": -111.8567411,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Salon Orozco",
   "website_candidate": "https://salonorozco.godaddysites.com/",
   "website_source_url": ""
@@ -2636,7 +3070,7 @@
   "latitude": 33.2613223,
   "longitude": -111.8571596,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "HD Brow & SkinRX",
   "website_candidate": "https://hdbrowskinrx.com/",
   "website_source_url": ""
@@ -2660,7 +3094,7 @@
   "latitude": 33.7141146,
   "longitude": -112.1115739,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Restore Hyper Wellness",
   "website_candidate": "https://www.restore.com/locations/az-phoenix-norterra-az013",
   "website_source_url": ""
@@ -2684,7 +3118,7 @@
   "latitude": 33.7087482,
   "longitude": -112.110191,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Ulta Beauty",
   "website_candidate": "https://www.ulta.com/",
   "website_source_url": ""
@@ -2708,7 +3142,7 @@
   "latitude": 32.8772374,
   "longitude": -111.7294115,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Salt & Sound",
   "website_candidate": "https://www.saltandsoundaz.com/",
   "website_source_url": ""
@@ -2732,7 +3166,7 @@
   "latitude": 33.6664527,
   "longitude": -112.1199156,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Sola Salons",
   "website_candidate": "https://www.solasalonstudios.com/locations/deer-valley-town-center",
   "website_source_url": ""
@@ -2756,7 +3190,7 @@
   "latitude": 34.5540847,
   "longitude": -112.4703159,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "The Hormone Zone Med Spa",
   "website_candidate": "https://hormonezonemedspa.com/",
   "website_source_url": ""
@@ -2782,7 +3216,7 @@
   "latitude": 33.5986812,
   "longitude": -111.9861901,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Ziba Beauty - Eyebrow Threading - Kids Cut- Men’s Haircut",
   "website_candidate": "https://ziba-beauty.com/",
   "website_source_url": ""
@@ -2803,10 +3237,10 @@
   "source_url": "https://www.openstreetmap.org/node/12850067824",
   "source_external_id": "osm:node/12850067824",
   "license_number": null,
-  "latitude": 32.6991142,
-  "longitude": -114.6251622,
+  "latitude": 32.6991557,
+  "longitude": -114.6250713,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Le Vogue Nails and Spa",
   "website_candidate": "https://levoguenailsandspa.com/",
   "website_source_url": ""
@@ -2830,7 +3264,7 @@
   "latitude": 33.6274938,
   "longitude": -111.9150324,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Whish",
   "website_candidate": "https://whishbody.com/",
   "website_source_url": ""
@@ -2854,7 +3288,7 @@
   "latitude": 33.6755807,
   "longitude": -111.9651162,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Brazillian Touch MedSpa",
   "website_candidate": "https://www.braziliantouchmedspa.com/",
   "website_source_url": ""
@@ -2878,7 +3312,7 @@
   "latitude": 33.6757453,
   "longitude": -111.9642877,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Primp and Blow",
   "website_candidate": "https://primpandblow.com/locations/phoenix-location/",
   "website_source_url": ""
@@ -2902,7 +3336,7 @@
   "latitude": 33.6755934,
   "longitude": -111.9637694,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "M3V The Nail Bar",
   "website_candidate": "https://www.m3vnailbar.com/",
   "website_source_url": ""
@@ -2926,7 +3360,7 @@
   "latitude": 32.2220528,
   "longitude": -110.9163154,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Final Touch Nail Spa",
   "website_candidate": "https://finaltouchspa.com/",
   "website_source_url": ""
@@ -2950,7 +3384,7 @@
   "latitude": 32.2365674,
   "longitude": -110.9084406,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "MAKA Beauty Systems",
   "website_candidate": "https://www.makabeauty.com/",
   "website_source_url": ""
@@ -2974,7 +3408,7 @@
   "latitude": 32.2365718,
   "longitude": -110.9083352,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Lashed with Loyalty",
   "website_candidate": "https://lashedwithloyalty.com/",
   "website_source_url": ""
@@ -2998,7 +3432,7 @@
   "latitude": 32.2552248,
   "longitude": -110.9441799,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Amore Nail Lounge",
   "website_candidate": "https://amorenaillounge.com/",
   "website_source_url": ""
@@ -3022,7 +3456,7 @@
   "latitude": 33.5024764,
   "longitude": -112.0468223,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Your Brow Bar",
   "website_candidate": "https://yourbrowbar.com/",
   "website_source_url": ""
@@ -3046,7 +3480,7 @@
   "latitude": 33.7086804,
   "longitude": -112.2354861,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Salon Blissful Med Spa",
   "website_candidate": "https://www.salonblissful.com/",
   "website_source_url": ""
@@ -3070,7 +3504,7 @@
   "latitude": 33.494496,
   "longitude": -111.9177395,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "SkinFix Studios",
   "website_candidate": "https://www.skinfixstudios.com/",
   "website_source_url": ""
@@ -3094,7 +3528,7 @@
   "latitude": 33.4947284,
   "longitude": -111.9178468,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Radiant Lash Boutique",
   "website_candidate": "https://www.radiantlashboutique.com/",
   "website_source_url": ""
@@ -3118,7 +3552,7 @@
   "latitude": 33.3351109,
   "longitude": -111.9269955,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "OMG! Nail Bar",
   "website_candidate": "https://omgnailbar.com/",
   "website_source_url": ""
@@ -3142,7 +3576,7 @@
   "latitude": 35.2057977,
   "longitude": -111.6422024,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Eric's Electrolysis",
   "website_candidate": "https://www.ericshairrremoval.com/",
   "website_source_url": ""
@@ -3166,7 +3600,7 @@
   "latitude": 34.8617915,
   "longitude": -111.8038667,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Blue Sage Day Spa",
   "website_candidate": "https://www.sedonabluesage.com/",
   "website_source_url": ""
@@ -3190,7 +3624,7 @@
   "latitude": 33.7967089,
   "longitude": -112.1195389,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "All About Me Medical Aesthetics",
   "website_candidate": "https://allaboutmeaz.com/",
   "website_source_url": ""
@@ -3214,7 +3648,7 @@
   "latitude": 33.6075693,
   "longitude": -112.2690518,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Finesse Beauty Salon",
   "website_candidate": "https://finessesalonaz.com/",
   "website_source_url": ""
@@ -3238,7 +3672,7 @@
   "latitude": 32.6570447,
   "longitude": -114.410241,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "All Seasons Beauty Bar",
   "website_candidate": "https://www.allseasonsfoothills.com/",
   "website_source_url": ""
@@ -3262,7 +3696,7 @@
   "latitude": 33.6369316,
   "longitude": -112.3712718,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Amazing Lash Studio",
   "website_candidate": "https://www.amazinglashstudio.com/studios/az/surprise/surprise",
   "website_source_url": ""
@@ -3286,7 +3720,7 @@
   "latitude": 33.6370138,
   "longitude": -112.3714026,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Venetian Nail Lounge",
   "website_candidate": "https://venetiannaillounge.com/",
   "website_source_url": ""
@@ -3310,7 +3744,7 @@
   "latitude": 33.4528205,
   "longitude": -112.3055209,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "XO Nail Lounge",
   "website_candidate": "https://xonailloungeavondale.com/",
   "website_source_url": ""
@@ -3334,7 +3768,7 @@
   "latitude": 32.2251942,
   "longitude": -110.8524748,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Ethereal Esthetics",
   "website_candidate": "https://lashes-by-tash-109910.square.site/",
   "website_source_url": ""
@@ -3358,7 +3792,7 @@
   "latitude": 33.4795907,
   "longitude": -111.9821837,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Be Transformed Beauty, LLC",
   "website_candidate": "http://www.btbeautyaz.com/",
   "website_source_url": ""
@@ -3382,7 +3816,7 @@
   "latitude": 33.844124,
   "longitude": -112.1331494,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Anthem Nails and Spa",
   "website_candidate": "http://anthemnailsandspabysarahaz.com/",
   "website_source_url": ""
@@ -3406,7 +3840,7 @@
   "latitude": 32.2365076,
   "longitude": -110.9341447,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Peach Nails",
   "website_candidate": "https://peachnails7308.simplepos.us/",
   "website_source_url": ""
@@ -3430,7 +3864,7 @@
   "latitude": 33.5489002,
   "longitude": -112.0453512,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Spa & Fitness at The Peak",
   "website_candidate": "https://www.hiltonphoenixresortatthepeak.com/spa",
   "website_source_url": ""
@@ -3454,7 +3888,7 @@
   "latitude": 32.2193151,
   "longitude": -110.7720384,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Tracy's Nails",
   "website_candidate": "https://tracysnailstucson.com/",
   "website_source_url": ""
@@ -3478,7 +3912,7 @@
   "latitude": 32.2202324,
   "longitude": -110.7739316,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Desert Beauty Salon & Spa",
   "website_candidate": "https://tucsoncolorspecialist.com/",
   "website_source_url": ""
@@ -3502,7 +3936,7 @@
   "latitude": 32.2215148,
   "longitude": -110.805017,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "3J Nails",
   "website_candidate": "https://www.3jnails.com/",
   "website_source_url": ""
@@ -3526,7 +3960,7 @@
   "latitude": 33.3621343,
   "longitude": -111.9126259,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Polish Me Pretty Nail Bar",
   "website_candidate": "http://polishmeprettynailbar1.com/",
   "website_source_url": ""
@@ -3550,7 +3984,7 @@
   "latitude": 32.2198045,
   "longitude": -110.816332,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Radiant Day Spa",
   "website_candidate": "https://radiantdayspa.com/",
   "website_source_url": ""
@@ -3574,7 +4008,7 @@
   "latitude": 33.1813557,
   "longitude": -111.5800829,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Ulta Beauty",
   "website_candidate": "http://ulta.com/",
   "website_source_url": ""
@@ -3598,7 +4032,7 @@
   "latitude": 32.2209454,
   "longitude": -110.8776467,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Sacred Arches Threading Beauty Emporium",
   "website_candidate": "https://sacred-arches-threading-beauty-emporium.square.site/",
   "website_source_url": ""
@@ -3622,7 +4056,7 @@
   "latitude": 33.521877,
   "longitude": -112.064588,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "GlamWright Medical Boutique",
   "website_candidate": "https://www.glamwright.com/",
   "website_source_url": ""
@@ -3646,7 +4080,7 @@
   "latitude": 33.8336746,
   "longitude": -111.9380887,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Outlaw Beauty Bar",
   "website_candidate": "https://outlawbeautybar.com/",
   "website_source_url": ""
@@ -3670,7 +4104,7 @@
   "latitude": 33.3848627,
   "longitude": -111.6015049,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Ulta Beauty",
   "website_candidate": "https://www.ulta.com/stores/mesa-az-225",
   "website_source_url": ""
@@ -3694,7 +4128,7 @@
   "latitude": 33.256594,
   "longitude": -111.6424011,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Ulta Beauty",
   "website_candidate": "https://www.ulta.com/stores/queen-creek-az-356",
   "website_source_url": ""
@@ -3718,7 +4152,7 @@
   "latitude": 32.2848203,
   "longitude": -110.9749012,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Ulta Beauty",
   "website_candidate": "https://www.ulta.com/stores/tucson-az-199",
   "website_source_url": ""
@@ -3742,7 +4176,7 @@
   "latitude": 33.6366918,
   "longitude": -112.3508131,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Ulta Beauty",
   "website_candidate": "https://www.ulta.com/stores/surprise-az-176",
   "website_source_url": ""
@@ -3766,7 +4200,7 @@
   "latitude": 32.3981041,
   "longitude": -110.9643966,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Imagen Salon and Day Spa",
   "website_candidate": "https://imagensalonspa.com/",
   "website_source_url": ""
@@ -3790,7 +4224,7 @@
   "latitude": 33.5543703,
   "longitude": -112.2587418,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Ulta Beauty",
   "website_candidate": "https://www.ulta.com/stores/glendale-az-1753",
   "website_source_url": ""
@@ -3814,7 +4248,7 @@
   "latitude": 31.5595679,
   "longitude": -110.2548245,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Ulta Beauty",
   "website_candidate": "https://www.ulta.com/stores/sierra-vista-az-1472",
   "website_source_url": ""
@@ -3838,7 +4272,7 @@
   "latitude": 33.4872287,
   "longitude": -112.3508951,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "The Skincare Extraordinaire",
   "website_candidate": "https://www.skincareextraordinaire.com/",
   "website_source_url": ""
@@ -3862,7 +4296,7 @@
   "latitude": 33.7143839,
   "longitude": -112.2764849,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Ulta Beauty",
   "website_candidate": "https://www.ulta.com/stores/peoria-az-228",
   "website_source_url": ""
@@ -3886,7 +4320,7 @@
   "latitude": 33.4317911,
   "longitude": -111.908285,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Ulta Beauty",
   "website_candidate": "https://www.ulta.com/stores/tempe-az-185",
   "website_source_url": ""
@@ -3910,7 +4344,7 @@
   "latitude": 33.2994276,
   "longitude": -111.7416805,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Ulta Beauty",
   "website_candidate": "https://www.ulta.com/stores/gilbert-az-183",
   "website_source_url": ""
@@ -3934,7 +4368,7 @@
   "latitude": 33.633721,
   "longitude": -111.9222745,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Ulta Beauty",
   "website_candidate": "https://www.ulta.com/stores/scottsdale-az-77",
   "website_source_url": ""
@@ -3955,10 +4389,10 @@
   "source_url": "https://www.openstreetmap.org/way/920552427",
   "source_external_id": "osm:way/920552427",
   "license_number": null,
-  "latitude": 33.392018,
-  "longitude": -111.6904033,
+  "latitude": 33.3918442,
+  "longitude": -111.6902665,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Ulta Beauty",
   "website_candidate": "https://www.ulta.com/stores/mesa-az-1399",
   "website_source_url": ""
@@ -3982,7 +4416,7 @@
   "latitude": 33.468388,
   "longitude": -111.9257502,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Palm Beach Tan",
   "website_candidate": "https://palmbeachtan.com/locations/AZ/Scottsdale-North-Scottsdale-Road",
   "website_source_url": ""
@@ -4006,7 +4440,7 @@
   "latitude": 33.3078346,
   "longitude": -111.8879762,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Ulta Beauty",
   "website_candidate": "https://www.ulta.com/stores/chandler-az-99",
   "website_source_url": ""
@@ -4030,7 +4464,7 @@
   "latitude": 33.3795002,
   "longitude": -112.0363248,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Ulta Beauty",
   "website_candidate": "https://www.ulta.com/stores/phoenix-az-1620",
   "website_source_url": ""
@@ -4054,7 +4488,7 @@
   "latitude": 33.3771297,
   "longitude": -111.8126417,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Ulta Beauty",
   "website_candidate": "https://www.ulta.com/stores/gilbert-az-354",
   "website_source_url": ""
@@ -4078,7 +4512,7 @@
   "latitude": 33.6068066,
   "longitude": -112.416599,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Ulta Beauty",
   "website_candidate": "https://www.ulta.com/stores/surprise-az-1591",
   "website_source_url": ""
@@ -4102,7 +4536,7 @@
   "latitude": 33.678423,
   "longitude": -111.9737856,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Ulta Beauty",
   "website_candidate": "https://www.ulta.com/stores/phoenix-az-108",
   "website_source_url": ""
@@ -4126,7 +4560,7 @@
   "latitude": 33.4674317,
   "longitude": -112.2761397,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Ulta Beauty",
   "website_candidate": "https://www.ulta.com/stores/avondale-az-1132",
   "website_source_url": ""
@@ -4150,7 +4584,7 @@
   "latitude": 32.2524204,
   "longitude": -110.9443834,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Campbell Spa & Nails by Vicky",
   "website_candidate": "https://campbellnailspa.com/",
   "website_source_url": ""
@@ -4174,7 +4608,7 @@
   "latitude": 33.3802583,
   "longitude": -111.6026015,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Massage Envy",
   "website_candidate": "https://www.massageenvy.com/clinics/AZ/Superstition-Gateway.aspx",
   "website_source_url": ""
@@ -4198,7 +4632,7 @@
   "latitude": 33.2523919,
   "longitude": -111.638281,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Massage Envy",
   "website_candidate": "https://locations.massageenvy.com/arizona/queen-creek/21582-s-ellsworth-loop.html",
   "website_source_url": ""
@@ -4222,7 +4656,7 @@
   "latitude": 33.4157083,
   "longitude": -111.5580473,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "A Bit of Bliss Day Spa",
   "website_candidate": "http://www.bitofbliss.com/",
   "website_source_url": ""
@@ -4246,7 +4680,7 @@
   "latitude": 33.4990587,
   "longitude": -111.9271028,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Grand Majestic West Tattoo",
   "website_candidate": "https://www.grandmajesticwesttattoo.com/",
   "website_source_url": ""
@@ -4270,7 +4704,7 @@
   "latitude": 33.3179214,
   "longitude": -111.967252,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Elements Massage",
   "website_candidate": "https://elementsmassage.com/chandler-west",
   "website_source_url": ""
@@ -4294,7 +4728,7 @@
   "latitude": 33.3344234,
   "longitude": -111.845786,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Massage 90210",
   "website_candidate": "https://www.massage90210chandler.com/",
   "website_source_url": ""
@@ -4318,7 +4752,7 @@
   "latitude": 33.4063501,
   "longitude": -111.545325,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Massage Care",
   "website_candidate": "https://massagecare.com/",
   "website_source_url": ""
@@ -4342,7 +4776,7 @@
   "latitude": 33.640216,
   "longitude": -112.2314195,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Massage Envy",
   "website_candidate": "https://locations.massageenvy.com/arizona/glendale/8110-west-bell-road.html",
   "website_source_url": ""
@@ -4366,7 +4800,7 @@
   "latitude": 32.2221748,
   "longitude": -110.9676566,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Istari Studios",
   "website_candidate": "http://www.istaristudios.com/",
   "website_source_url": ""
@@ -4390,7 +4824,7 @@
   "latitude": 34.5602148,
   "longitude": -112.4855264,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Super Relax Massage",
   "website_candidate": "https://newlinead.wixsite.com/superrelaxspa",
   "website_source_url": ""
@@ -4414,7 +4848,7 @@
   "latitude": 34.8630565,
   "longitude": -111.811005,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Namti Spa",
   "website_candidate": "https://namti.com/",
   "website_source_url": ""
@@ -4438,7 +4872,7 @@
   "latitude": 33.4753598,
   "longitude": -111.925442,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "BodyWorkz - Chiropractic, Acupuncture, and Massage",
   "website_candidate": "https://mybodyworkz.com/south-scottsdale/",
   "website_source_url": ""
@@ -4462,7 +4896,7 @@
   "latitude": 34.5452512,
   "longitude": -112.4519147,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Magic Hands Massage",
   "website_candidate": "https://newlinead.wixsite.com/magichandsmassage",
   "website_source_url": ""
@@ -4486,7 +4920,7 @@
   "latitude": 33.3330003,
   "longitude": -111.9482021,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Massage YC",
   "website_candidate": "https://massageyc.wixsite.com/85284",
   "website_source_url": ""
@@ -4510,7 +4944,7 @@
   "latitude": 32.3232341,
   "longitude": -110.9731856,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Rubs Massage Studio - Oracle",
   "website_candidate": "https://rubsmassage.com/",
   "website_source_url": ""
@@ -4534,7 +4968,7 @@
   "latitude": 33.4507844,
   "longitude": -111.7009046,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Red Art Tattoo & Piercing Studio",
   "website_candidate": "https://www.redarttattoopiercing.studio/",
   "website_source_url": ""
@@ -4558,7 +4992,7 @@
   "latitude": 33.7087531,
   "longitude": -112.1142917,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Elements Massage",
   "website_candidate": "https://elementsmassage.com/happy-valley",
   "website_source_url": ""
@@ -4582,7 +5016,7 @@
   "latitude": 33.3075998,
   "longitude": -111.8755088,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Serene Healing Massage and Reflexology",
   "website_candidate": "https://www.serenehealingmassage.com/",
   "website_source_url": ""
@@ -4606,7 +5040,7 @@
   "latitude": 33.602008,
   "longitude": -111.9817963,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "SkinSpirit Paradise Valley",
   "website_candidate": "https://skinspirit.com/",
   "website_source_url": ""
@@ -4630,7 +5064,7 @@
   "latitude": 32.3095794,
   "longitude": -110.979257,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Lotus Massage & Wellness Center",
   "website_candidate": "https://lotustucson.com/",
   "website_source_url": ""
@@ -4654,7 +5088,7 @@
   "latitude": 35.2040607,
   "longitude": -111.6483794,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Mirror Gallery",
   "website_candidate": "https://www.mirrorgalleryflagstaff.com/",
   "website_source_url": ""
@@ -4678,7 +5112,7 @@
   "latitude": 33.675782,
   "longitude": -111.9643943,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Fuchsia",
   "website_candidate": "https://fuchsiaspa.com/high-street/",
   "website_source_url": ""
@@ -4702,7 +5136,7 @@
   "latitude": 33.3487374,
   "longitude": -111.9441552,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Massage Envy",
   "website_candidate": "https://locations.massageenvy.com/arizona/tempe/315-west-elliot-road.html",
   "website_source_url": ""
@@ -4726,7 +5160,7 @@
   "latitude": 31.9131287,
   "longitude": -110.9793788,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Rubs",
   "website_candidate": "https://rubsmassage.com/locations-rubs-massage/store/718-w-calle-arroyo-sur-ste-no-100-sahuarita-az-85614/",
   "website_source_url": ""
@@ -4750,7 +5184,7 @@
   "latitude": 33.6142497,
   "longitude": -111.909168,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Pure Phoenix",
   "website_candidate": "https://purephoenix.com/",
   "website_source_url": ""
@@ -4774,7 +5208,7 @@
   "latitude": 33.4159359,
   "longitude": -111.7443774,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Sea of Ink",
   "website_candidate": "https://www.seaofinktattoo.com/",
   "website_source_url": ""
@@ -4798,7 +5232,7 @@
   "latitude": 32.223948,
   "longitude": -110.9733218,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Serenity Lounge Massage",
   "website_candidate": "https://serenitylounges.com/",
   "website_source_url": ""
@@ -4822,7 +5256,7 @@
   "latitude": 34.7083617,
   "longitude": -112.0010033,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Holistic Healing Sedona",
   "website_candidate": "https://www.holistichealingsedona.com/",
   "website_source_url": ""
@@ -4846,7 +5280,7 @@
   "latitude": 32.2359678,
   "longitude": -110.9017899,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Old Towne Tattoo",
   "website_candidate": "https://oldtownetattootucson.com/home",
   "website_source_url": ""
@@ -4870,7 +5304,7 @@
   "latitude": 32.6844432,
   "longitude": -114.6468983,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Massage Envy",
   "website_candidate": "https://locations.massageenvy.com/arizona/yuma/2377-s-22nd-drive.html",
   "website_source_url": ""
@@ -4894,7 +5328,7 @@
   "latitude": 32.2364203,
   "longitude": -110.9274903,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Continental Spa Tucson",
   "website_candidate": "https://www.continentalspatucson.com/",
   "website_source_url": ""
@@ -4918,7 +5352,7 @@
   "latitude": 32.2195323,
   "longitude": -110.8282282,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Prism Massage & Wellness",
   "website_candidate": "https://www.prismwellnessaz.com/",
   "website_source_url": ""
@@ -4942,7 +5376,7 @@
   "latitude": 33.5075876,
   "longitude": -112.0653028,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Golden Rule Tattoo",
   "website_candidate": "https://goldenruletattoo.com/",
   "website_source_url": ""
@@ -4966,7 +5400,7 @@
   "latitude": 32.2601851,
   "longitude": -110.9263979,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Peaceful Spirit Massage",
   "website_candidate": "https://www.bestmassageintucson.com/",
   "website_source_url": ""
@@ -4990,7 +5424,7 @@
   "latitude": 32.2500085,
   "longitude": -110.9298212,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Blue Lotus Massage",
   "website_candidate": "https://bluelotusmassagetucson.com/",
   "website_source_url": ""
@@ -5014,7 +5448,7 @@
   "latitude": 32.2364003,
   "longitude": -110.9308309,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Sacred Art Tattoo Studio",
   "website_candidate": "https://sacredarttattoostudio.com/",
   "website_source_url": ""
@@ -5038,7 +5472,7 @@
   "latitude": 33.4583381,
   "longitude": -112.0665521,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Golden Rule Tattoo",
   "website_candidate": "https://www.goldenruletattoo.com/",
   "website_source_url": ""
@@ -5062,33 +5496,9 @@
   "latitude": 32.8334896,
   "longitude": -109.7143949,
   "operational_status": "verified",
-  "checked_at": "2026-11-24",
+  "checked_at": "2026-11-27",
   "raw_name": "Briscoes Tattoo Shop",
   "website_candidate": "http://briscoestattooshop.com/",
-  "website_source_url": ""
- },
- {
-  "name": "Greenspring Inspire",
-  "city": "Oro Valley",
-  "state": "AZ",
-  "street_address": "10509 North Oracle Road",
-  "zip_code": "85737",
-  "county": "",
-  "categories": [
-   "esthetician"
-  ],
-  "website_url": "https://greenspringaesthetics.com/",
-  "phone": "(520) 529-9665",
-  "source_name": "OpenStreetMap contributors",
-  "source_url": "https://www.openstreetmap.org/way/1072416968",
-  "source_external_id": "osm:way/1072416968",
-  "license_number": null,
-  "latitude": 32.3971204,
-  "longitude": -110.9605691,
-  "operational_status": "verified",
-  "checked_at": "2026-11-24",
-  "raw_name": "Greenspring Inspire",
-  "website_candidate": "https://greenspringaesthetics.com/",
   "website_source_url": ""
  }
 ]
