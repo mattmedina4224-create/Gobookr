@@ -1247,23 +1247,23 @@
  "top_covered_places": [
   {
    "name": "Houston",
-   "shops": 4099
+   "shops": 4102
   },
   {
    "name": "San Antonio",
-   "shops": 2499
+   "shops": 2497
   },
   {
    "name": "Dallas",
-   "shops": 1884
+   "shops": 1892
   },
   {
    "name": "Austin",
-   "shops": 1587
+   "shops": 1588
   },
   {
    "name": "Fort Worth",
-   "shops": 1181
+   "shops": 1182
   },
   {
    "name": "El Paso",
@@ -1271,7 +1271,7 @@
   },
   {
    "name": "Plano",
-   "shops": 717
+   "shops": 722
   },
   {
    "name": "Katy",
@@ -1283,7 +1283,7 @@
   },
   {
    "name": "Frisco",
-   "shops": 603
+   "shops": 602
   },
   {
    "name": "Spring",
@@ -1319,7 +1319,7 @@
   },
   {
    "name": "Amarillo",
-   "shops": 318
+   "shops": 319
   },
   {
    "name": "Laredo",
@@ -1327,7 +1327,7 @@
   },
   {
    "name": "Richardson",
-   "shops": 293
+   "shops": 294
   },
   {
    "name": "McKinney",
@@ -1338,12 +1338,12 @@
    "shops": 265
   },
   {
-   "name": "Lewisville",
+   "name": "Rockwall",
    "shops": 258
   },
   {
-   "name": "Rockwall",
-   "shops": 257
+   "name": "Lewisville",
+   "shops": 258
   },
   {
    "name": "Brownsville",
@@ -1375,11 +1375,11 @@
   },
   {
    "name": "Midland",
-   "shops": 229
+   "shops": 228
   },
   {
    "name": "Allen",
-   "shops": 220
+   "shops": 222
   },
   {
    "name": "Pasadena",
@@ -1387,7 +1387,7 @@
   },
   {
    "name": "Georgetown",
-   "shops": 204
+   "shops": 203
   },
   {
    "name": "Abilene",

@@ -1,0 +1,1713 @@
+{
+ "state": "TX",
+ "census_places": 1837,
+ "places_covered": 927,
+ "place_coverage_pct": 50.5,
+ "census_counties": 254,
+ "counties_covered": 243,
+ "counties_uncovered": [
+  "Foard County",
+  "Hudspeth County",
+  "Jeff Davis County",
+  "Kenedy County",
+  "Kent County",
+  "King County",
+  "Loving County",
+  "McMullen County",
+  "Motley County",
+  "Roberts County",
+  "Terrell County"
+ ],
+ "communities_outside_census_places": [
+  {
+   "city": "Cypress",
+   "shops": 315
+  },
+  {
+   "city": "New Caney",
+   "shops": 70
+  },
+  {
+   "city": "Kingwood",
+   "shops": 62
+  },
+  {
+   "city": "Porter",
+   "shops": 38
+  },
+  {
+   "city": "N. Richland Hills",
+   "shops": 13
+  },
+  {
+   "city": "Flint",
+   "shops": 12
+  },
+  {
+   "city": "Mainsfield",
+   "shops": 10
+  },
+  {
+   "city": "Shenendoah",
+   "shops": 10
+  },
+  {
+   "city": "Del Valle",
+   "shops": 10
+  },
+  {
+   "city": "Horizon",
+   "shops": 9
+  },
+  {
+   "city": "San Antonio Tx",
+   "shops": 8
+  },
+  {
+   "city": "Hockley",
+   "shops": 7
+  },
+  {
+   "city": "Spicewood",
+   "shops": 6
+  },
+  {
+   "city": "Huffman",
+   "shops": 6
+  },
+  {
+   "city": "Rio Grande",
+   "shops": 5
+  },
+  {
+   "city": "Pollok",
+   "shops": 5
+  },
+  {
+   "city": "Forth Worth",
+   "shops": 5
+  },
+  {
+   "city": "Ausitn",
+   "shops": 4
+  },
+  {
+   "city": "San Antnio",
+   "shops": 4
+  },
+  {
+   "city": "San Antiono",
+   "shops": 4
+  },
+  {
+   "city": "Missouri",
+   "shops": 4
+  },
+  {
+   "city": "Haltom",
+   "shops": 4
+  },
+  {
+   "city": "Carrolton",
+   "shops": 4
+  },
+  {
+   "city": "Woodlands",
+   "shops": 4
+  },
+  {
+   "city": "Dale",
+   "shops": 4
+  },
+  {
+   "city": "Mesquite Tx",
+   "shops": 3
+  },
+  {
+   "city": "Corpus Christi Tx",
+   "shops": 3
+  },
+  {
+   "city": "Adkins",
+   "shops": 3
+  },
+  {
+   "city": "Rosenburg",
+   "shops": 3
+  },
+  {
+   "city": "Pipe Creek",
+   "shops": 3
+  },
+  {
+   "city": "Dallas Tx",
+   "shops": 3
+  },
+  {
+   "city": "Arlingotn",
+   "shops": 2
+  },
+  {
+   "city": "Grande Praire",
+   "shops": 2
+  },
+  {
+   "city": "Diana",
+   "shops": 2
+  },
+  {
+   "city": "Doucette",
+   "shops": 2
+  },
+  {
+   "city": "Dalllas",
+   "shops": 2
+  },
+  {
+   "city": "Thicket",
+   "shops": 2
+  },
+  {
+   "city": "Grulla",
+   "shops": 2
+  },
+  {
+   "city": "Lissie",
+   "shops": 2
+  },
+  {
+   "city": "Sa",
+   "shops": 2
+  },
+  {
+   "city": "Little River",
+   "shops": 2
+  },
+  {
+   "city": "Muldoon",
+   "shops": 2
+  },
+  {
+   "city": "Houstpn",
+   "shops": 2
+  },
+  {
+   "city": "El Paso Tx",
+   "shops": 2
+  },
+  {
+   "city": "Gainsville",
+   "shops": 2
+  },
+  {
+   "city": "Grand Prarie",
+   "shops": 2
+  },
+  {
+   "city": "Douglass",
+   "shops": 2
+  },
+  {
+   "city": "Houton",
+   "shops": 2
+  },
+  {
+   "city": "Browsville",
+   "shops": 2
+  },
+  {
+   "city": "Brownsville Tx",
+   "shops": 2
+  },
+  {
+   "city": "Fort Wort",
+   "shops": 2
+  },
+  {
+   "city": "Missoury City",
+   "shops": 2
+  },
+  {
+   "city": "Corpus Chrisiti",
+   "shops": 2
+  },
+  {
+   "city": "Poolville",
+   "shops": 2
+  },
+  {
+   "city": "Houston Tx",
+   "shops": 2
+  },
+  {
+   "city": "Mequite",
+   "shops": 2
+  },
+  {
+   "city": "Balch Spring",
+   "shops": 2
+  },
+  {
+   "city": "El",
+   "shops": 2
+  },
+  {
+   "city": "Corpus Christ",
+   "shops": 2
+  },
+  {
+   "city": "El Paso Texas",
+   "shops": 2
+  },
+  {
+   "city": "Georgetown Tx",
+   "shops": 2
+  },
+  {
+   "city": "Richarson",
+   "shops": 2
+  },
+  {
+   "city": "Red Oak Tx",
+   "shops": 1
+  },
+  {
+   "city": "101 N Rachal Ave",
+   "shops": 1
+  },
+  {
+   "city": "Wa",
+   "shops": 1
+  },
+  {
+   "city": "Cookville",
+   "shops": 1
+  },
+  {
+   "city": "Minden",
+   "shops": 1
+  },
+  {
+   "city": "De Berry",
+   "shops": 1
+  },
+  {
+   "city": "Montalba",
+   "shops": 1
+  },
+  {
+   "city": "Ellinger",
+   "shops": 1
+  },
+  {
+   "city": "Rainbow",
+   "shops": 1
+  },
+  {
+   "city": "Rivera",
+   "shops": 1
+  },
+  {
+   "city": "Leggett",
+   "shops": 1
+  },
+  {
+   "city": "Angelton",
+   "shops": 1
+  },
+  {
+   "city": "Academy",
+   "shops": 1
+  },
+  {
+   "city": "Guy",
+   "shops": 1
+  },
+  {
+   "city": "Larue",
+   "shops": 1
+  },
+  {
+   "city": "Big Springs",
+   "shops": 1
+  },
+  {
+   "city": "Plain",
+   "shops": 1
+  },
+  {
+   "city": "Brock",
+   "shops": 1
+  },
+  {
+   "city": "Universal",
+   "shops": 1
+  },
+  {
+   "city": "Campbellton",
+   "shops": 1
+  },
+  {
+   "city": "Chappell Hill",
+   "shops": 1
+  },
+  {
+   "city": "Staffort",
+   "shops": 1
+  },
+  {
+   "city": "San Antoniio",
+   "shops": 1
+  },
+  {
+   "city": "North Zulch",
+   "shops": 1
+  },
+  {
+   "city": "Mocity",
+   "shops": 1
+  },
+  {
+   "city": "Pentego",
+   "shops": 1
+  },
+  {
+   "city": "Port Neshes",
+   "shops": 1
+  },
+  {
+   "city": "Duncanvill",
+   "shops": 1
+  },
+  {
+   "city": "Irivng",
+   "shops": 1
+  },
+  {
+   "city": "El Campo Tx",
+   "shops": 1
+  },
+  {
+   "city": "Ftworth",
+   "shops": 1
+  },
+  {
+   "city": "Kayy",
+   "shops": 1
+  },
+  {
+   "city": "Saltillo",
+   "shops": 1
+  },
+  {
+   "city": "San Anonio",
+   "shops": 1
+  },
+  {
+   "city": "Georegtown",
+   "shops": 1
+  },
+  {
+   "city": "Bracken",
+   "shops": 1
+  },
+  {
+   "city": "Mexia  Tx",
+   "shops": 1
+  },
+  {
+   "city": "Farmeres Branch",
+   "shops": 1
+  },
+  {
+   "city": "Acton",
+   "shops": 1
+  },
+  {
+   "city": "Vuctoria",
+   "shops": 1
+  },
+  {
+   "city": "Dear Park",
+   "shops": 1
+  },
+  {
+   "city": "Kemit",
+   "shops": 1
+  },
+  {
+   "city": "Grand Pairie",
+   "shops": 1
+  },
+  {
+   "city": "Mc Kinny",
+   "shops": 1
+  },
+  {
+   "city": "Belmont",
+   "shops": 1
+  },
+  {
+   "city": "Madiosnville",
+   "shops": 1
+  },
+  {
+   "city": "Suite A",
+   "shops": 1
+  },
+  {
+   "city": "Corcicana",
+   "shops": 1
+  },
+  {
+   "city": "Brashear",
+   "shops": 1
+  },
+  {
+   "city": "Calleyville",
+   "shops": 1
+  },
+  {
+   "city": "Mcmckinney",
+   "shops": 1
+  },
+  {
+   "city": "Waxahacie",
+   "shops": 1
+  },
+  {
+   "city": "Austi",
+   "shops": 1
+  },
+  {
+   "city": "Odessax",
+   "shops": 1
+  },
+  {
+   "city": "Williamson",
+   "shops": 1
+  },
+  {
+   "city": "Atascosa",
+   "shops": 1
+  },
+  {
+   "city": "Broownsville",
+   "shops": 1
+  },
+  {
+   "city": "Plno",
+   "shops": 1
+  },
+  {
+   "city": "San Anotonio",
+   "shops": 1
+  },
+  {
+   "city": "Bandrra",
+   "shops": 1
+  },
+  {
+   "city": "Wichita",
+   "shops": 1
+  },
+  {
+   "city": "Hemestead",
+   "shops": 1
+  },
+  {
+   "city": "Crystal Beach",
+   "shops": 1
+  },
+  {
+   "city": "Ratcliff",
+   "shops": 1
+  },
+  {
+   "city": "Frenso",
+   "shops": 1
+  },
+  {
+   "city": "Texas",
+   "shops": 1
+  },
+  {
+   "city": "Cantillo",
+   "shops": 1
+  },
+  {
+   "city": "Da",
+   "shops": 1
+  },
+  {
+   "city": "Beaumont Tx",
+   "shops": 1
+  },
+  {
+   "city": "Halltom City",
+   "shops": 1
+  },
+  {
+   "city": "Plano Texas",
+   "shops": 1
+  },
+  {
+   "city": "Whiteboro",
+   "shops": 1
+  },
+  {
+   "city": "Corpus Chrisit",
+   "shops": 1
+  },
+  {
+   "city": "Corrollton",
+   "shops": 1
+  },
+  {
+   "city": "Nederalnd",
+   "shops": 1
+  },
+  {
+   "city": "Batown",
+   "shops": 1
+  },
+  {
+   "city": "Misouri",
+   "shops": 1
+  },
+  {
+   "city": "Lvg",
+   "shops": 1
+  },
+  {
+   "city": "Sunrise Beach",
+   "shops": 1
+  },
+  {
+   "city": "San Antonii",
+   "shops": 1
+  },
+  {
+   "city": "Horseshoe Bay Tx",
+   "shops": 1
+  },
+  {
+   "city": "Forreston",
+   "shops": 1
+  },
+  {
+   "city": "Ledbetter",
+   "shops": 1
+  },
+  {
+   "city": "Bronson",
+   "shops": 1
+  },
+  {
+   "city": "Eddy",
+   "shops": 1
+  },
+  {
+   "city": "San Antonio Texas",
+   "shops": 1
+  },
+  {
+   "city": "Maxwell",
+   "shops": 1
+  },
+  {
+   "city": "Austin Tx",
+   "shops": 1
+  },
+  {
+   "city": "Circle Way St",
+   "shops": 1
+  },
+  {
+   "city": "Roudrock",
+   "shops": 1
+  },
+  {
+   "city": "Princenton",
+   "shops": 1
+  },
+  {
+   "city": "Suite 182",
+   "shops": 1
+  },
+  {
+   "city": "Pharr Tx",
+   "shops": 1
+  },
+  {
+   "city": "Misson47",
+   "shops": 1
+  },
+  {
+   "city": "Fort Worh",
+   "shops": 1
+  },
+  {
+   "city": "Breckinridge",
+   "shops": 1
+  },
+  {
+   "city": "Friendwood",
+   "shops": 1
+  },
+  {
+   "city": "Weimar Tx",
+   "shops": 1
+  },
+  {
+   "city": "Travis",
+   "shops": 1
+  },
+  {
+   "city": "Alpine Tx",
+   "shops": 1
+  },
+  {
+   "city": "Fort Wroth",
+   "shops": 1
+  },
+  {
+   "city": "Westworth Vlg",
+   "shops": 1
+  },
+  {
+   "city": "Gainseville",
+   "shops": 1
+  },
+  {
+   "city": "Cedar Park Blvd D415",
+   "shops": 1
+  },
+  {
+   "city": "Cybress",
+   "shops": 1
+  },
+  {
+   "city": "Athenstx",
+   "shops": 1
+  },
+  {
+   "city": "West Tawakomi",
+   "shops": 1
+  },
+  {
+   "city": "San Elizario Tx",
+   "shops": 1
+  },
+  {
+   "city": "Greenvile",
+   "shops": 1
+  },
+  {
+   "city": "Brownsvile",
+   "shops": 1
+  },
+  {
+   "city": "Farmerville",
+   "shops": 1
+  },
+  {
+   "city": "Desto",
+   "shops": 1
+  },
+  {
+   "city": "Brownsville Texas",
+   "shops": 1
+  },
+  {
+   "city": "Mickinney",
+   "shops": 1
+  },
+  {
+   "city": "Mccoy",
+   "shops": 1
+  },
+  {
+   "city": "Pickton",
+   "shops": 1
+  },
+  {
+   "city": "La Fria",
+   "shops": 1
+  },
+  {
+   "city": "Boerne Tx",
+   "shops": 1
+  },
+  {
+   "city": "Rosenberge",
+   "shops": 1
+  },
+  {
+   "city": "Cost",
+   "shops": 1
+  },
+  {
+   "city": "West Texas City",
+   "shops": 1
+  },
+  {
+   "city": "Glen Flora",
+   "shops": 1
+  },
+  {
+   "city": "Breham",
+   "shops": 1
+  },
+  {
+   "city": "Grand Praire",
+   "shops": 1
+  },
+  {
+   "city": "Spring Valley Villag",
+   "shops": 1
+  },
+  {
+   "city": "Wiergate",
+   "shops": 1
+  },
+  {
+   "city": "Pinehust",
+   "shops": 1
+  },
+  {
+   "city": "Lakleway",
+   "shops": 1
+  },
+  {
+   "city": "Purdon",
+   "shops": 1
+  },
+  {
+   "city": "Hosuton",
+   "shops": 1
+  },
+  {
+   "city": "Texarcana",
+   "shops": 1
+  },
+  {
+   "city": "Macllen",
+   "shops": 1
+  },
+  {
+   "city": "Old River",
+   "shops": 1
+  },
+  {
+   "city": "Fort Worth Tx",
+   "shops": 1
+  },
+  {
+   "city": "The Woodland",
+   "shops": 1
+  },
+  {
+   "city": "Gainesvillee",
+   "shops": 1
+  },
+  {
+   "city": "Brookeland",
+   "shops": 1
+  },
+  {
+   "city": "Garland Tx",
+   "shops": 1
+  },
+  {
+   "city": "Klein",
+   "shops": 1
+  },
+  {
+   "city": "Magnollia",
+   "shops": 1
+  },
+  {
+   "city": "Nrh",
+   "shops": 1
+  },
+  {
+   "city": "New Braufels",
+   "shops": 1
+  },
+  {
+   "city": "San Aantonio",
+   "shops": 1
+  },
+  {
+   "city": "Wesalco",
+   "shops": 1
+  },
+  {
+   "city": "Castorville",
+   "shops": 1
+  },
+  {
+   "city": "Firsco",
+   "shops": 1
+  },
+  {
+   "city": "Ftwoth",
+   "shops": 1
+  },
+  {
+   "city": "San Angleo",
+   "shops": 1
+  },
+  {
+   "city": "Kingville",
+   "shops": 1
+  },
+  {
+   "city": "Suger Land",
+   "shops": 1
+  },
+  {
+   "city": "Grand Priaire",
+   "shops": 1
+  },
+  {
+   "city": "Alvin Tx",
+   "shops": 1
+  },
+  {
+   "city": "Logview",
+   "shops": 1
+  },
+  {
+   "city": "Soring",
+   "shops": 1
+  },
+  {
+   "city": "Brownsvillet",
+   "shops": 1
+  },
+  {
+   "city": "Mansfiled",
+   "shops": 1
+  },
+  {
+   "city": "Miland",
+   "shops": 1
+  },
+  {
+   "city": "Duncaville",
+   "shops": 1
+  },
+  {
+   "city": "Samson Park",
+   "shops": 1
+  },
+  {
+   "city": "Foth Worth",
+   "shops": 1
+  },
+  {
+   "city": "Forrest Hill",
+   "shops": 1
+  },
+  {
+   "city": "Dripping Spgs",
+   "shops": 1
+  },
+  {
+   "city": "Huntsviille",
+   "shops": 1
+  },
+  {
+   "city": "Leander5",
+   "shops": 1
+  },
+  {
+   "city": "Cleaveland",
+   "shops": 1
+  },
+  {
+   "city": "Pearsal",
+   "shops": 1
+  },
+  {
+   "city": "Ubbock",
+   "shops": 1
+  },
+  {
+   "city": "Spearman Texas",
+   "shops": 1
+  },
+  {
+   "city": "Mount Plesasant",
+   "shops": 1
+  },
+  {
+   "city": "San Anatonio",
+   "shops": 1
+  },
+  {
+   "city": "Austin Texas",
+   "shops": 1
+  },
+  {
+   "city": "Ingelside",
+   "shops": 1
+  },
+  {
+   "city": "Spearman Tx",
+   "shops": 1
+  },
+  {
+   "city": "Wolforth",
+   "shops": 1
+  },
+  {
+   "city": "R",
+   "shops": 1
+  },
+  {
+   "city": "Round Rockv",
+   "shops": 1
+  },
+  {
+   "city": "Winboro",
+   "shops": 1
+  },
+  {
+   "city": "Monttgomery",
+   "shops": 1
+  },
+  {
+   "city": "Baytwon",
+   "shops": 1
+  },
+  {
+   "city": "Killeen Texas",
+   "shops": 1
+  },
+  {
+   "city": "Gra",
+   "shops": 1
+  },
+  {
+   "city": "Alle",
+   "shops": 1
+  },
+  {
+   "city": "Hoston",
+   "shops": 1
+  },
+  {
+   "city": "Harlingnen",
+   "shops": 1
+  },
+  {
+   "city": "Grand Prarie T",
+   "shops": 1
+  },
+  {
+   "city": "Hunstville",
+   "shops": 1
+  },
+  {
+   "city": "Colony",
+   "shops": 1
+  },
+  {
+   "city": "Welington",
+   "shops": 1
+  },
+  {
+   "city": "Mkinney",
+   "shops": 1
+  },
+  {
+   "city": "Lubborck",
+   "shops": 1
+  },
+  {
+   "city": "Palmhurts",
+   "shops": 1
+  },
+  {
+   "city": "Suagr Land",
+   "shops": 1
+  },
+  {
+   "city": "Edinbueg",
+   "shops": 1
+  },
+  {
+   "city": "Georgtown",
+   "shops": 1
+  },
+  {
+   "city": "Corp Christi",
+   "shops": 1
+  },
+  {
+   "city": "San Atonio",
+   "shops": 1
+  },
+  {
+   "city": "Katry",
+   "shops": 1
+  },
+  {
+   "city": "Fort Wortht",
+   "shops": 1
+  },
+  {
+   "city": "Port Lavaca Tx",
+   "shops": 1
+  },
+  {
+   "city": "San Bernito",
+   "shops": 1
+  },
+  {
+   "city": "Pearlandd",
+   "shops": 1
+  },
+  {
+   "city": "Pflugerville Texas",
+   "shops": 1
+  },
+  {
+   "city": "Kate",
+   "shops": 1
+  },
+  {
+   "city": "Duncanville Tx",
+   "shops": 1
+  },
+  {
+   "city": "Houaton",
+   "shops": 1
+  },
+  {
+   "city": "Dalworthington",
+   "shops": 1
+  },
+  {
+   "city": "Grand Praide",
+   "shops": 1
+  },
+  {
+   "city": "Fort Woth",
+   "shops": 1
+  },
+  {
+   "city": "Chappelll Hill",
+   "shops": 1
+  },
+  {
+   "city": "Shavano Parkway",
+   "shops": 1
+  },
+  {
+   "city": "Lender",
+   "shops": 1
+  },
+  {
+   "city": "University",
+   "shops": 1
+  },
+  {
+   "city": "Ausin",
+   "shops": 1
+  },
+  {
+   "city": "13914 Galveston Rd S",
+   "shops": 1
+  },
+  {
+   "city": "Roundrock Tx",
+   "shops": 1
+  },
+  {
+   "city": "W",
+   "shops": 1
+  },
+  {
+   "city": "Belton Tx",
+   "shops": 1
+  },
+  {
+   "city": "Corpsus Christi",
+   "shops": 1
+  },
+  {
+   "city": "Ceder Park",
+   "shops": 1
+  },
+  {
+   "city": "Eulles",
+   "shops": 1
+  },
+  {
+   "city": "E Paso",
+   "shops": 1
+  },
+  {
+   "city": "Floresivlle",
+   "shops": 1
+  },
+  {
+   "city": "Lukin",
+   "shops": 1
+  },
+  {
+   "city": "Karnack",
+   "shops": 1
+  },
+  {
+   "city": "Beaumon",
+   "shops": 1
+  },
+  {
+   "city": "Coppel",
+   "shops": 1
+  },
+  {
+   "city": "Tomball Tx",
+   "shops": 1
+  },
+  {
+   "city": "Monaville",
+   "shops": 1
+  },
+  {
+   "city": "Dalas",
+   "shops": 1
+  },
+  {
+   "city": "Mclendon",
+   "shops": 1
+  },
+  {
+   "city": "Arligton",
+   "shops": 1
+  },
+  {
+   "city": "Beaumomt",
+   "shops": 1
+  },
+  {
+   "city": "Iriving",
+   "shops": 1
+  },
+  {
+   "city": "Carollton",
+   "shops": 1
+  },
+  {
+   "city": "Crsby",
+   "shops": 1
+  },
+  {
+   "city": "Baytowon",
+   "shops": 1
+  },
+  {
+   "city": "Midland Texas",
+   "shops": 1
+  },
+  {
+   "city": "Pasadena Tx",
+   "shops": 1
+  },
+  {
+   "city": "Bexar",
+   "shops": 1
+  },
+  {
+   "city": "Cedar Lake",
+   "shops": 1
+  },
+  {
+   "city": "Katyt",
+   "shops": 1
+  },
+  {
+   "city": "Mansfiel",
+   "shops": 1
+  },
+  {
+   "city": "Federal Way",
+   "shops": 1
+  },
+  {
+   "city": "Foest Hill",
+   "shops": 1
+  }
+ ],
+ "top_covered_places": [
+  {
+   "name": "Houston",
+   "shops": 4102
+  },
+  {
+   "name": "San Antonio",
+   "shops": 2497
+  },
+  {
+   "name": "Dallas",
+   "shops": 1892
+  },
+  {
+   "name": "Austin",
+   "shops": 1588
+  },
+  {
+   "name": "Fort Worth",
+   "shops": 1182
+  },
+  {
+   "name": "El Paso",
+   "shops": 862
+  },
+  {
+   "name": "Plano",
+   "shops": 722
+  },
+  {
+   "name": "Katy",
+   "shops": 635
+  },
+  {
+   "name": "Arlington",
+   "shops": 619
+  },
+  {
+   "name": "Frisco",
+   "shops": 602
+  },
+  {
+   "name": "Spring",
+   "shops": 527
+  },
+  {
+   "name": "Lubbock",
+   "shops": 445
+  },
+  {
+   "name": "Corpus Christi",
+   "shops": 398
+  },
+  {
+   "name": "McAllen",
+   "shops": 369
+  },
+  {
+   "name": "Sugar Land",
+   "shops": 345
+  },
+  {
+   "name": "Irving",
+   "shops": 342
+  },
+  {
+   "name": "Round Rock",
+   "shops": 334
+  },
+  {
+   "name": "Garland",
+   "shops": 329
+  },
+  {
+   "name": "Amarillo",
+   "shops": 319
+  },
+  {
+   "name": "Laredo",
+   "shops": 311
+  },
+  {
+   "name": "Richardson",
+   "shops": 294
+  },
+  {
+   "name": "McKinney",
+   "shops": 281
+  },
+  {
+   "name": "Southlake",
+   "shops": 265
+  },
+  {
+   "name": "Rockwall",
+   "shops": 258
+  },
+  {
+   "name": "Lewisville",
+   "shops": 258
+  },
+  {
+   "name": "Brownsville",
+   "shops": 255
+  },
+  {
+   "name": "Waco",
+   "shops": 253
+  },
+  {
+   "name": "Pearland",
+   "shops": 241
+  },
+  {
+   "name": "Tyler",
+   "shops": 237
+  },
+  {
+   "name": "Odessa",
+   "shops": 237
+  },
+  {
+   "name": "Conroe",
+   "shops": 234
+  },
+  {
+   "name": "Humble",
+   "shops": 230
+  },
+  {
+   "name": "Midland",
+   "shops": 228
+  },
+  {
+   "name": "Allen",
+   "shops": 222
+  },
+  {
+   "name": "Pasadena",
+   "shops": 217
+  },
+  {
+   "name": "Georgetown",
+   "shops": 203
+  },
+  {
+   "name": "Abilene",
+   "shops": 201
+  },
+  {
+   "name": "Mission",
+   "shops": 199
+  },
+  {
+   "name": "Mesquite",
+   "shops": 199
+  },
+  {
+   "name": "Keller",
+   "shops": 196
+  }
+ ],
+ "uncovered_places_with_held_candidates": [
+  {
+   "name": "Port O'Connor",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Tuscola",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Bangs",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Detroit",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Evant",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Jewett",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Naples",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Olton",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Palo Pinto",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "University Park",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Allison",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Amherst",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Blooming Grove",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Bolivar Peninsula",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Briarcliff",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Brushy Creek",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Carbon",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Combes",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Crowell",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Daisetta",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Damon",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Douglassville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Earth",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Fort Davis",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Fort Hood",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Gardendale",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Goldsmith",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Goodrich",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Hale Center",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Happy",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Hardin",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Hermleigh",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Hideaway",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Iredell",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Kress",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Lackland AFB",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Malone",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Marathon",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Matador",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Milford",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Nassau Bay",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Palmer",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Pecan Plantation",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Plains",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Prairie View",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Richards",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Riviera",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Rochester",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Ropesville",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Sargent",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Smiley",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Spring Valley Village",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "St. Jo",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Sundown",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Sunray",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Texline",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Umbarger",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Volente",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Welch",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "West Odessa",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  }
+ ],
+ "uncovered_places_without_candidates": 850,
+ "source": "U.S. Census Bureau 2020 place-by-county and county code files"
+}
