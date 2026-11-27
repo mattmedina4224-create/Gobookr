@@ -29,7 +29,7 @@
     }
     const canvas = document.createElement('canvas'); canvas.width = 1080; canvas.height = 1920;
     const c = canvas.getContext('2d'); if (!c) throw new Error('canvas');
-    c.fillStyle = '#101828'; c.fillRect(0, 0, 1080, 1920);
+    c.fillStyle = '#2A211B'; c.fillRect(0, 0, 1080, 1920);
     if (image) {
       const scale = Math.max(1080 / image.naturalWidth, 1920 / image.naturalHeight);
       const w = image.naturalWidth * scale, h = image.naturalHeight * scale;
@@ -39,7 +39,7 @@
       gradient.addColorStop(.55, style === 'clean' ? 'rgba(0,0,0,.7)' : 'rgba(0,0,0,.82)'); gradient.addColorStop(1, 'rgba(0,0,0,.95)');
       c.fillStyle = gradient; c.fillRect(0, 0, 1080, 1920);
     }
-    c.fillStyle = '#fff'; c.font = '700 32px sans-serif'; c.fillText('GOBOOKR', 70, 130);
+    c.fillStyle = '#fff'; c.font = '800 40px sans-serif'; c.fillText('tovara', 70, 130);
     c.font = '600 34px sans-serif'; c.fillText(String(label || '').slice(0, 60), 70, 810, 940);
     let y = 905;
     let titleFont = 68, titleLines;
@@ -52,7 +52,7 @@
     for (const line of lines) { c.fillText(line, 70, y); y += font + 12; }
     c.font = '700 28px sans-serif';
     slots.slice(0, 3).forEach((line, i) => c.fillText(String(line), 70, 1660 + i * 36, 940));
-    c.fillStyle = '#fff'; c.fillRect(70, 1780, 420, 72); c.fillStyle = '#101828'; c.font = '700 32px sans-serif'; c.fillText('Book on GoBookr', 95, 1826);
+    c.fillStyle = '#FFB27A'; c.fillRect(70, 1780, 420, 72); c.fillStyle = '#2A211B'; c.font = '700 32px sans-serif'; c.fillText('Book on Tovara', 95, 1826);
     return new Promise((resolve, reject) => { try { canvas.toBlob(blob => blob ? resolve(blob) : reject(new Error('render')), 'image/png'); } catch (_) { reject(new Error('photo')); } });
   }
 
@@ -86,7 +86,7 @@
     document.getElementById('story-download').href = objectUrl;
     document.getElementById('story-ready-preview').hidden = false;
     shareButtons().forEach(button => button.disabled = false);
-    status('Story ready. Tap Share to socials on your phone, choose the app, then add your copied GoBookr link.' + (data.slots.length > 3 ? ' The image includes your first three opening times; customers can view all posted times on GoBookr.' : ''));
+    status('Story ready. Tap Share to socials on your phone, choose the app, then add your copied Tovara link.' + (data.slots.length > 3 ? ' The image includes your first three opening times; customers can view all posted times on Tovara.' : ''));
     return blob;
   }
   async function copyText(text) {
@@ -95,7 +95,7 @@
     const success = document.execCommand('copy'); area.remove(); if (!success) throw new Error('copy');
   }
   function messageFor(error) {
-    return { photo: 'This photo could not be exported. Choose Text only or upload the photo to your GoBookr portfolio, update the preview, and try again.',
+    return { photo: 'This photo could not be exported. Choose Text only or upload the photo to your Tovara portfolio, update the preview, and try again.',
       message: 'Add your message before preparing the Story.', changed: 'Content changed. Prepare your Story again.', previewChanged: 'Choose Update preview to apply your photo or style, then prepare the Story.', length: 'This message needs more room. Shorten it before preparing your Story.' }[error?.message] || 'Could not prepare the Story. Please try again.';
   }
   let sharing = false;
@@ -107,7 +107,7 @@
     sharing = true;
     const buttons = shareButtons();
     buttons.forEach(button=>{button.disabled = true;button.setAttribute('aria-busy','true');});
-    try { await navigator.share({ files: [file], title: root.dataset.title, text: 'Openings available — book through GoBookr.' }); status('Shared to your chosen app. Add your GoBookr link there and finish posting.'); }
+    try { await navigator.share({ files: [file], title: root.dataset.title, text: 'Openings available — book through Tovara.' }); status('Shared to your chosen app. Add your Tovara link there and finish posting.'); }
     catch (err) { status(err?.name === 'AbortError' ? 'Sharing cancelled. Your prepared image is still ready.' : 'Sharing could not open. Save the image and upload it in your social app.'); }
     finally { sharing = false;buttons.forEach(button=>{button.disabled = !prepared;button.removeAttribute('aria-busy');}); }
   }
@@ -118,13 +118,13 @@
   for (const id of ['story-share-ready','story-share-ready-bottom']) document.getElementById(id)?.addEventListener('click', share);
   for (const id of ['copy', 'available_slots']) document.getElementById(id)?.addEventListener('input', invalidate);
   for (const id of ['photo', 'style']) document.getElementById(id)?.addEventListener('change', () => { previewNeedsUpdate = true; invalidate(); status('Choose Update preview to apply your photo or style, then prepare the Story.'); });
-  for (const [id, value, success] of [['story-copy-caption', ()=>inputs().message, 'Message copied. Paste it in the social app if needed.'], ['story-copy-url', ()=>root.dataset.url, 'GoBookr link copied. Add it with your social app’s link tool.']]) {
+  for (const [id, value, success] of [['story-copy-caption', ()=>inputs().message, 'Message copied. Paste it in the social app if needed.'], ['story-copy-url', ()=>root.dataset.url, 'Tovara link copied. Add it with your social app’s link tool.']]) {
     document.getElementById(id)?.addEventListener('click', async ()=> { try { await copyText(value()); status(success); } catch (_) { status('Could not copy. Select the message or tracked link in the editor and copy it manually.'); } });
   }
   const steps = {
-    instagram: ['Prepare your Story with the button below.', 'Tap Share to socials and choose Instagram.', 'Add a Link sticker with your copied GoBookr link, then publish to your Story.'],
-    facebook: ['Prepare your Story with the button below.', 'Tap Share to socials and choose Facebook.', 'Choose Story, add your GoBookr link if Facebook offers the link tool, then publish.'],
-    snapchat: ['Prepare your Story with the button below.', 'Tap Share to socials and choose Snapchat.', 'Attach your copied GoBookr link with Snapchat’s link tool, choose your Story, and publish.'],
+    instagram: ['Prepare your Story with the button below.', 'Tap Share to socials and choose Instagram.', 'Add a Link sticker with your copied Tovara link, then publish to your Story.'],
+    facebook: ['Prepare your Story with the button below.', 'Tap Share to socials and choose Facebook.', 'Choose Story, add your Tovara link if Facebook offers the link tool, then publish.'],
+    snapchat: ['Prepare your Story with the button below.', 'Tap Share to socials and choose Snapchat.', 'Attach your copied Tovara link with Snapchat’s link tool, choose your Story, and publish.'],
   };
   root.querySelectorAll('[data-story-platform]').forEach(button => button.addEventListener('click', ()=> {
     const platform = button.dataset.storyPlatform;

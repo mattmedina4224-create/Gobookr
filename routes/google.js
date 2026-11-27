@@ -65,7 +65,7 @@ module.exports = function (router) {
     if (!user) {
       const params = new URLSearchParams({
         role,
-        error: 'Google verified your account, but new-account Google signup is not enabled yet. Create your GoBookr account here, then Google sign-in can be linked later.',
+        error: 'Google verified your account, but new-account Google signup is not enabled yet. Create your Tovara account here, then Google sign-in can be linked later.',
       });
       return redirect(ctx.res, '/signup?' + params.toString());
     }

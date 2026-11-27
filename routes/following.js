@@ -35,7 +35,7 @@ module.exports = function(router) {
     const visibleIds = new Set(hydratePros(followed, { includeServices: false }).map(p => Number(p.id)));
     const total = Number(db.prepare('WITH follows AS (SELECT COUNT(*) AS total FROM customer_follows WHERE customer_id = ?) SELECT total FROM follows').get(ctx.currentUser.id).total);
     const body = `<link rel="stylesheet" href="/following.css"><section class="section container following-page">
-      <header class="following-hero"><div><p class="muted">YOUR GOBOOKR</p><h1>Following</h1><p>Fresh work and updates from professionals you follow.</p></div><a class="btn secondary" href="/search">Find professionals</a></header>
+      <header class="following-hero"><div><p class="muted">YOUR TOVARA</p><h1>Following</h1><p>Fresh work and updates from professionals you follow.</p></div><a class="btn secondary" href="/search">Find professionals</a></header>
       <nav class="following-tabs" aria-label="Customer workspace"><a href="/dashboard/customer">Favorites &amp; account</a><a href="/following" aria-current="page">Following</a></nav>
       <div class="following-layout"><main><h2>Latest updates</h2>${updates.map(p => renderUpdate(p, p)).join('') || `<div class="panel"><h3>${total ? 'You’re all caught up' : 'Make this feed yours'}</h3><p>${total ? 'No updates on this page. New posts from your followed professionals will appear here.' : 'Open a professional’s profile and choose Follow for updates. Favorites stay separate for quick access.'}</p><a class="btn secondary" href="/search">Browse professionals</a></div>`}
       ${next ? `<a class="btn secondary" href="/following?before=${next}">Older updates</a>` : ''}${before ? '<p><a href="/following">Back to newest updates</a></p>' : ''}</main>
@@ -62,12 +62,12 @@ module.exports = function(router) {
     const publishable = isProPubliclyVisible(profile.id);
     const nav = dashboardNav('updates', require('../lib/pro-dashboard-view').PRO_NAV_ITEMS);
     const body = `<link rel="stylesheet" href="/following.css"><section class="section container pro-dashboard"><div class="dash-layout">${nav}<div class="pro-main">
-      <h1>Updates for your followers</h1><p>Share fresh work, news, or a reason to book. Posts appear on your GoBookr profile and in your followers’ feed.</p><p class="muted">${currentFollowers(profile.id)} followers · follower identities stay private.</p>
+      <h1>Updates for your followers</h1><p>Share fresh work, news, or a reason to book. Posts appear on your Tovara profile and in your followers’ feed.</p><p class="muted">${currentFollowers(profile.id)} followers · follower identities stay private.</p>
       ${publishable ? '' : '<div class="panel"><p>Your profile must be public before you can publish updates.</p><a href="/dashboard/pro/onboarding?step=resume">Review your setup</a> · <a href="/dashboard/pro/billing">Review your plan</a></div>'}
       <div class="panel"><h2>Publish an update</h2><form method="POST" action="/dashboard/pro/updates"><input type="hidden" name="_csrf" value="${e(ctx.session.csrf_token)}">
       <div class="field"><label for="update-message">Your message</label><textarea id="update-message" name="message" rows="5" maxlength="1000" required placeholder="Share something your customers will want to know…"></textarea><p class="helptext">Up to 1,000 characters. Publish only content and photos you have permission to share.</p></div>
       <div class="field"><label for="update-photo">Portfolio photo (optional)</label><select id="update-photo" name="photo"><option value="">Text only</option>${photos.map(p=>`<option value="${p.id}">${e(p.caption || 'Portfolio photo #' + p.id)}</option>`).join('')}</select><a href="/dashboard/pro/portfolio">Add a new portfolio photo</a></div>
-      <button class="btn" type="submit"${publishable ? '' : ' disabled'}>Publish on GoBookr</button></form><p class="muted">This does not post to Facebook, Instagram, or Snapchat. Use <a href="/dashboard/pro/marketing">Marketing Center</a> to prepare and share a social Story.</p></div>
+      <button class="btn" type="submit"${publishable ? '' : ' disabled'}>Publish on Tovara</button></form><p class="muted">This does not post to Facebook, Instagram, or Snapchat. Use <a href="/dashboard/pro/marketing">Marketing Center</a> to prepare and share a social Story.</p></div>
       <h2>Your latest updates</h2>${updates.map(u=>`${renderUpdate(u)}<div class="update-actions"><a class="btn secondary small" href="/dashboard/pro/marketing?campaign=show-my-work&copy=${encodeURIComponent(u.message.slice(0,500))}${u.portfolio_item_id ? '&photo=' + u.portfolio_item_id : ''}">Prepare a social Story</a>${u.status === 'published' ? `<form method="POST" action="/dashboard/pro/updates/${u.id}/hide"><input type="hidden" name="_csrf" value="${e(ctx.session.csrf_token)}"><button class="btn secondary small" type="submit">Hide update</button></form>` : '<span class="muted">Hidden from customers</span>'}</div>`).join('') || '<div class="panel"><p>No updates yet. Your first post can be text only.</p></div>'}
       </div></div></section>`;
     send(ctx.res, layout({ title: 'Professional updates', currentUser: ctx.currentUser, session: ctx.session, flash: flashFromQuery(ctx.query), body }));
@@ -83,7 +83,7 @@ module.exports = function(router) {
     const posted = db.prepare("WITH recent AS (SELECT COUNT(*) AS total FROM pro_updates WHERE pro_id = ? AND created_at > CURRENT_TIMESTAMP - INTERVAL '1 day') SELECT total FROM recent").get(profile.id);
     if (Number(posted.total) >= 20) return redirect(ctx.res, '/dashboard/pro/updates?error=' + encodeURIComponent('You can publish up to 20 updates per day. Try again later.'));
     db.prepare('INSERT INTO pro_updates(pro_id, message, portfolio_item_id) VALUES (?, ?, ?)').run(profile.id, message, photo);
-    redirect(ctx.res, '/dashboard/pro/updates?success=' + encodeURIComponent('Your update is live on GoBookr.'));
+    redirect(ctx.res, '/dashboard/pro/updates?success=' + encodeURIComponent('Your update is live on Tovara.'));
   });
 
   router.post('/dashboard/pro/updates/:id/hide', async ctx => {

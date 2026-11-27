@@ -1,13 +1,13 @@
 # Task #8 — $20/month conversion flow
 
-GoBookr Professional uses one simple individual membership:
+Tovara Professional uses one simple individual membership:
 
 - 30-day free trial.
 - $20 USD per month after the trial.
 - Stripe-hosted subscription Checkout for payment setup.
 - Existing trial deadline is preserved when payment is set up early; the trial is not restarted.
 - Stripe Customer Portal handles payment-method updates, invoices, cancellation, and reactivation.
-- Webhooks synchronize subscription status back to GoBookr.
+- Webhooks synchronize subscription status back to Tovara.
 - Failed payments receive the existing 7-day grace period before the public profile is hidden.
 - Successful payment restores eligible profile visibility.
 - Business-sponsored professionals do not start a duplicate individual subscription.

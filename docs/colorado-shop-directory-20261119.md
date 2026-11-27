@@ -17,7 +17,7 @@ These counts separate discovered candidates, rows in the database, and pages ver
 | Shop pages with a ZIP code | 4,855 |
 | Shop pages missing a website | 4,311 |
 | Businesses held for review (not published) | 3,292 + 22 existing shops without a category |
-| Businesses visible on live GoBookr | 4,893 via /shop/:id and city/name search. Category search shows them once PR #299 is deployed. |
+| Businesses visible on live Tovara | 4,893 via /shop/:id and city/name search. Category search shows them once PR #299 is deployed. |
 | Failed or blocked sources | 3 (see below) |
 
 All shops are unclaimed with `owner_user_id = NULL`. No accounts, staff links, phones or emails were created.

@@ -42,7 +42,7 @@ Owner configured the isolated Preview DATABASE_URL and redeployed on October 2. 
 
 Desktop search interaction returned the two expected Fort Collins massage profiles. Rendered inspection caught legacy favorite-card height:100% applying to both profile and claim links, making the claim links overflow into the footer. Limit both links to their natural height, keep claim tap targets at 44px and position favorite controls above the claim link. No destinations or form behavior changed.
 
-Latest code deployment: https://gobookr-ij92gcuz3-mattmedina4224-7308s-projects.vercel.app (d4ac981). GitHub GoBookr checks run 736 succeeded. Desktop captures show the corrected lowercase wordmark, hidden desktop mobile-menu control, and non-overlapping search claim links (44px height). Profile → claim → signup navigation retained profile 521. Account submission and billing were not exercised in this visual pass. Green build/CI alone does not satisfy the outstanding mobile release gate.
+Latest code deployment: https://gobookr-ij92gcuz3-mattmedina4224-7308s-projects.vercel.app (d4ac981). GitHub Tovara checks run 736 succeeded. Desktop captures show the corrected lowercase wordmark, hidden desktop mobile-menu control, and non-overlapping search claim links (44px height). Profile → claim → signup navigation retained profile 521. Account submission and billing were not exercised in this visual pass. Green build/CI alone does not satisfy the outstanding mobile release gate.
 
 ## Glow upgrade
 

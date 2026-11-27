@@ -33,7 +33,7 @@ module.exports = function (router) {
     const body = `
       <section class="section container">
         <h1>License Verification</h1>
-        <p class="muted">Review professional licenses submitted to GoBookr.</p>
+        <p class="muted">Review professional licenses submitted to Tovara.</p>
         ${rows ? `<table>
           <thead><tr><th>Professional</th><th>Location</th><th>License #</th><th>State</th><th>Status</th><th>Action</th></tr></thead>
           <tbody>${rows}</tbody>
@@ -181,7 +181,7 @@ module.exports = function (router) {
       <td><strong>${escapeHtml(labels[x.outreach_status] || x.outreach_status)}</strong>${x.outreach_last_contacted_at ? '<br><span class="muted">'+escapeHtml(String(x.outreach_last_contacted_at))+'</span>' : ''}</td>
       <td><form method="POST" action="/admin/outreach/${x.id}/status" style="display:flex;gap:6px;align-items:center"><input type="hidden" name="_csrf" value="${escapeHtml(ctx.session.csrf_token)}"><select name="status" style="min-width:140px">${Object.entries(labels).map(([v,l])=>'<option value="'+v+'"'+(x.outreach_status===v?' selected':'')+'>'+l+'</option>').join('')}</select><button class="btn small" type="submit">Save</button></form></td>
     </tr>`).join('');
-    const body = `<section class="section container"><h1>Business Outreach</h1><p class="muted">Public business contact emails and GoBookr outreach progress.</p><div style="display:flex;gap:8px;flex-wrap:wrap;margin:18px 0">${tabs}</div><form method="GET" action="/admin/outreach" style="display:flex;gap:8px;max-width:520px;margin-bottom:18px"><input name="q" value="${escapeHtml(q)}" placeholder="Search business, city, or email"><button class="btn small">Search</button></form>${rows ? `<div style="overflow-x:auto"><table><thead><tr><th>Business</th><th>Email</th><th>Status</th><th>Update</th></tr></thead><tbody>${rows}</tbody></table></div>` : '<div class="panel"><p class="muted" style="margin:0;">No businesses match this filter.</p></div>'}</section>`;
+    const body = `<section class="section container"><h1>Business Outreach</h1><p class="muted">Public business contact emails and Tovara outreach progress.</p><div style="display:flex;gap:8px;flex-wrap:wrap;margin:18px 0">${tabs}</div><form method="GET" action="/admin/outreach" style="display:flex;gap:8px;max-width:520px;margin-bottom:18px"><input name="q" value="${escapeHtml(q)}" placeholder="Search business, city, or email"><button class="btn small">Search</button></form>${rows ? `<div style="overflow-x:auto"><table><thead><tr><th>Business</th><th>Email</th><th>Status</th><th>Update</th></tr></thead><tbody>${rows}</tbody></table></div>` : '<div class="panel"><p class="muted" style="margin:0;">No businesses match this filter.</p></div>'}</section>`;
     send(ctx.res, layout({title:'Business Outreach',currentUser:ctx.currentUser,session:ctx.session,body}));
   });
 

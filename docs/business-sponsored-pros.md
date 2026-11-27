@@ -1,6 +1,6 @@
 # Business-sponsored professional memberships
 
-Business accounts remain complimentary. Claimed business owners invite professional accounts by their normalized GoBookr email. Invitations appear inside GoBookr; this feature does not send external emails. Invited professionals must sign in with the matching account and accept. Business owners never acquire profile ownership or editing access.
+Business accounts remain complimentary. Claimed business owners invite professional accounts by their normalized Tovara email. Invitations appear inside Tovara; this feature does not send external emails. Invited professionals must sign in with the matching account and accept. Business owners never acquire profile ownership or editing access.
 
 ## Billing behavior
 
@@ -24,7 +24,7 @@ Also apply db/migrations/20261009065235_personal_checkout_sponsorship_fencing.sq
 
 Apply the migration before setting BUSINESS_TEAMS_ENABLED=1. The feature is disabled by default, preserving deployments that do not have the schema yet.
 
-Team tables have RLS enabled and no client role grants. GoBookr's server authenticates owners and invited professionals before accessing them. This application uses its own integer user IDs, not Supabase Auth JWT identities.
+Team tables have RLS enabled and no client role grants. Tovara's server authenticates owners and invited professionals before accessing them. This application uses its own integer user IDs, not Supabase Auth JWT identities.
 
 Preview checkout requires Stripe sandbox keys and a webhook secret. Live keys are deliberately rejected for team billing on Vercel previews. Configure the preview's APP_URL and a sandbox Stripe webhook for that exact preview before testing payments. Subscribe to checkout.session.completed, customer.subscription.created/updated/deleted, invoice.paid and invoice.payment_failed.
 

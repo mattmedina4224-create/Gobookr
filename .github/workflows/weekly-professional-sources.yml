@@ -1,4 +1,4 @@
-name: Weekly GoBookr professional source scan
+name: Weekly Tovara professional source scan
 on:
   schedule:
     - cron: '27 13 * * 1'
@@ -39,7 +39,7 @@ jobs:
             const fs = require('fs');
             const report = JSON.parse(fs.readFileSync('tmp/weekly-source-scan.json','utf8'));
             const {owner,repo}=context.repo;
-            const title='GoBookr weekly professional source scan';
+            const title='Tovara weekly professional source scan';
             const issues=await github.paginate(github.rest.issues.listForRepo,{owner,repo,state:'open',per_page:100});
             let issue=issues.find(item=>!item.pull_request&&item.title===title);
             if(!issue){
@@ -81,7 +81,7 @@ jobs:
               '',
               'Potential new structured names: '+(newNames.slice(0,30).join('; ')||'none') ,
               '',
-              '**No GoBookr profiles were imported, removed, or altered by this scan.**'
+              '**No Tovara profiles were imported, removed, or altered by this scan.**'
             ].join('\n');
             const state=Buffer.from(JSON.stringify({results:report.results.map(({id,status,content_fingerprint,schema_person_names})=>({id,status,content_fingerprint,schema_person_names}))})).toString('base64');
             await github.rest.issues.createComment({owner,repo,issue_number:issue.number,body:summary+'\n\n<!-- scan-state:'+state+' -->'});

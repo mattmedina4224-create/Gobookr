@@ -7,7 +7,7 @@ const vm = require('node:vm');
 const { Worker, MessageChannel, receiveMessageOnPort } = require('node:worker_threads');
 const { createConfirmation, configured, confirmationEmail } = require('../lib/email-confirmation');
 
-const env = { PROFILE_EMAIL_CONFIRMATION_ENABLED:'1', RESEND_API_KEY:'test-only-not-a-real-key', PROFILE_EMAIL_FROM:'GoBookr <test@example.test>', EMAIL_VERIFICATION_SECRET:'test-only-secret-with-at-least-32-characters' };
+const env = { PROFILE_EMAIL_CONFIRMATION_ENABLED:'1', RESEND_API_KEY:'test-only-not-a-real-key', PROFILE_EMAIL_FROM:'Tovara <test@example.test>', EMAIL_VERIFICATION_SECRET:'test-only-secret-with-at-least-32-characters' };
 function database() {
   const worker = new Worker(path.join(__dirname, 'helpers/claim-postgres-worker.js'));
   function call(op, sql, args = []) {

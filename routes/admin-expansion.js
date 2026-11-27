@@ -81,7 +81,7 @@ module.exports = function (router) {
 
     const body = `<section class="section container gb-expansion">
       <h1>National shop expansion</h1>
-      <p class="muted">Published, website and claimed counts are live from GoBookr. Discovery, review and coverage numbers come from each state's latest recorded run. Coverage counts Census places and counties with at least one published shop.</p>
+      <p class="muted">Published, website and claimed counts are live from Tovara. Discovery, review and coverage numbers come from each state's latest recorded run. Coverage counts Census places and counties with at least one published shop.</p>
       <dl class="gb-expansion-totals">
         <div><dt>Published shops</dt><dd>${n(totals.published)}</dd></div>
         <div><dt>With websites</dt><dd>${n(totals.with_website)}</dd></div>

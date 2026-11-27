@@ -3,7 +3,7 @@
 // Read-only discovery of public Square Appointments booking pages and visible staff.
 // Usage: node scripts/audit-square-appointments.js data/source-audits/square-az-booking-seeds.json --output=tmp/square-az.json
 // Never invents professional identity, services, booking URLs, availability or licensing.
-// Review candidate category evidence before adding to GoBookr; this script never writes to the DB.
+// Review candidate category evidence before adding to Tovara; this script never writes to the DB.
 const fs = require('node:fs');
 const path = require('node:path');
 

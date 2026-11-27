@@ -1,6 +1,6 @@
-# GoBookr design system (2026 redesign)
+# Tovara design system (2026 redesign)
 
-`public/gobookr-ui.css` is the single source of truth for GoBookr's look. It loads last on every page
+`public/gobookr-ui.css` is the single source of truth for Tovara's look. It loads last on every page
 (`lib/layout.js`), defines the tokens below, provides shared components, and remaps the legacy
 variables (`--ink`, `--brand`, `--paper`, …) so older stylesheets render on-system.
 
@@ -12,7 +12,7 @@ variables (`--ink`, `--brand`, `--paper`, …) so older stylesheets render on-sy
 - **Designed for sparse data.** Most real profiles have no photo, reviews, or services yet. Cards and
   profiles lead with a monogram and real facts (workplace, location, booking platform) and must look
   finished without imagery.
-- **One memorable element.** The homepage calendar mosaic echoes the GoBookr mark. Everything around it
+- **One memorable element.** The homepage calendar mosaic echoes the Tovara mark. Everything around it
   stays quiet.
 
 ## Tokens

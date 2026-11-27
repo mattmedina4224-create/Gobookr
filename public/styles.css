@@ -241,7 +241,7 @@ label { display: block; font-size: 0.85rem; font-weight: 600; color: var(--ink-s
 @media (max-width: 600px) { .grid-2 { grid-template-columns: 1fr; } }
 .helptext { font-size: 0.8rem; color: var(--ink-faint); margin-top: -10px; margin-bottom: 14px; }
 
-/* GoBookr official brand lockup */
+/* Tovara official brand lockup */
 .brand {
   width: 170px;
   height: 40px;
@@ -391,7 +391,7 @@ label { display: block; font-size: 0.85rem; font-weight: 600; color: var(--ink-s
 .favorite-dashboard-card { display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; }
 @media(max-width:640px) { .home-favorite-card { min-width:76vw; scroll-snap-align:start; } }
 
-/* GoBookr navy booking availability panel with high-contrast white text. */
+/* Tovara navy booking availability panel with high-contrast white text. */
 .profile-page .booking-unavailable { background:var(--gb-midnight); color:#fff; border:1px solid var(--gb-midnight); border-radius:14px; padding:14px; }
 .profile-page .booking-unavailable .muted { color:#fff; }
 

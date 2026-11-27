@@ -61,7 +61,7 @@ module.exports = function (router) {
       }
 
       const summary = `Connected Square. Found ${names.length} bookable professional${names.length === 1 ? '' : 's'}${bookingUrl ? ' and a booking link' : ''}.`;
-      return send(ctx.res, `<section class="section container"><div class="panel"><h1>Square connected</h1><p>${escapeHtml(summary)}</p>${savedBookingLink ? '<p><strong>Your Square booking link was added to your GoBookr profile.</strong></p>' : ''}${names.length ? `<h3>Bookable professionals</h3><ul>${names.map((person) => `<li>${escapeHtml(person.fullName)}</li>`).join('')}</ul>` : '<p class="muted">No bookable team members were returned.</p>'}${bookingUrl ? `<p><a class="btn secondary" href="${escapeHtml(bookingUrl)}" target="_blank" rel="noopener noreferrer">Open Square booking page</a></p>` : ''}<p><a class="btn" href="/dashboard/pro">Back to dashboard</a></p></div></section>`);
+      return send(ctx.res, `<section class="section container"><div class="panel"><h1>Square connected</h1><p>${escapeHtml(summary)}</p>${savedBookingLink ? '<p><strong>Your Square booking link was added to your Tovara profile.</strong></p>' : ''}${names.length ? `<h3>Bookable professionals</h3><ul>${names.map((person) => `<li>${escapeHtml(person.fullName)}</li>`).join('')}</ul>` : '<p class="muted">No bookable team members were returned.</p>'}${bookingUrl ? `<p><a class="btn secondary" href="${escapeHtml(bookingUrl)}" target="_blank" rel="noopener noreferrer">Open Square booking page</a></p>` : ''}<p><a class="btn" href="/dashboard/pro">Back to dashboard</a></p></div></section>`);
     } catch (err) {
       return redirect(ctx.res, '/dashboard/pro?error=' + encodeURIComponent(err.message || 'Unable to connect Square.'));
     }

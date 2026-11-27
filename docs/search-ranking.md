@@ -1,4 +1,4 @@
-# GoBookr search ranking
+# Tovara search ranking
 
 Search ranking follows a predictable hierarchy:
 

@@ -42,10 +42,10 @@ function homeCard(pro, ctx, savedIds) {
   const tags = categories.length ? categories.map((label) => `<span>${escapeHtml(label)}</span>`).join('') + extraSpecialties : '<span>Professional</span>';
   const rating = pro.rating != null
     ? `<span class="gb-rating"><span class="gb-star">${ICON.star}</span>${pro.rating} <span class="muted">(${pro.reviewCount})</span></span>`
-    : `<span class="gb-new">New on GoBookr</span>`;
+    : `<span class="gb-new">New on Tovara</span>`;
   const place = [pro.city, pro.state].filter(Boolean).join(', ');
   const sub = pro.workplace_name && pro.workplace_name !== pro.business_name ? pro.workplace_name : place;
-  return `<div class="favorite-card gb-pro-card-wrap"><a class="gb-pro-card" href="/pro/${pro.id}"><div class="gb-pro-media${photoUrl ? '' : ' gb-monogram'}">${photo}</div><div class="gb-pro-body"><h3>${escapeHtml(pro.business_name)}</h3><p class="gb-pro-sub">${escapeHtml(sub || 'GoBookr professional')}</p><div class="gb-pro-tags">${tags}</div><div class="gb-pro-foot">${rating}${place && sub !== place ? `<span>${escapeHtml(place)}</span>` : ''}</div></div></a>${favoriteControl(pro, ctx, savedIds.has(Number(pro.id)))}</div>`;
+  return `<div class="favorite-card gb-pro-card-wrap"><a class="gb-pro-card" href="/pro/${pro.id}"><div class="gb-pro-media${photoUrl ? '' : ' gb-monogram'}">${photo}</div><div class="gb-pro-body"><h3>${escapeHtml(pro.business_name)}</h3><p class="gb-pro-sub">${escapeHtml(sub || 'Tovara professional')}</p><div class="gb-pro-tags">${tags}</div><div class="gb-pro-foot">${rating}${place && sub !== place ? `<span>${escapeHtml(place)}</span>` : ''}</div></div></a>${favoriteControl(pro, ctx, savedIds.has(Number(pro.id)))}</div>`;
 }
 
 function businessCard(shop) {
@@ -98,7 +98,7 @@ module.exports = function (router) {
         <p class="gb-search-hint home-search-hint">Try a service or specialty like <a href="/search?q=Russian%20manicure">Russian manicure</a>, <a href="/search?q=skin%20fade">skin fade</a>, or <a href="/search?q=balayage">balayage</a>, then add your location.</p>
         <a class="home-openings-cta gb-openings" href="/openings"><span class="gb-live-dot" aria-hidden="true"></span><strong>Need something today?</strong><span>See appointments professionals just opened up</span></a>
 
-        <ul class="gb-hero-proof" aria-label="Why use GoBookr">
+        <ul class="gb-hero-proof" aria-label="Why use Tovara">
           <li>${ICON.check}Real local professionals</li>
           <li>${ICON.check}Book on their own scheduling site</li>
           <li>${ICON.check}Free for customers</li>
@@ -114,7 +114,7 @@ module.exports = function (router) {
     </div>
   </section>
 
-  <link rel="stylesheet" href="/specialty-search.css"><a class="specialty-search-launch" href="/search?type=professionals" data-specialty-open aria-label="Open specialty search" aria-controls="specialty-search" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.5 14L3 21l4.3-1.3A9 9 0 1 0 12 3Z" fill="currentColor"/><circle cx="8" cy="12" r="1" fill="white"/><circle cx="12" cy="12" r="1" fill="white"/><circle cx="16" cy="12" r="1" fill="white"/></svg></a><dialog id="specialty-search" aria-labelledby="specialty-search-title"><header class="specialty-chat-header"><span class="specialty-chat-avatar" aria-hidden="true">G</span><span>GoBookr<span class="specialty-chat-subtitle">Your specialty finder</span></span><button class="specialty-search-close" type="button" aria-label="Close specialty search">×</button></header><div class="specialty-chat-body"><h2 id="specialty-search-title">What specialty are you looking for?</h2><p>Tell us what you have in mind—razor fades, balayage, black and gray realism, or something else.</p><form method="GET" action="/search"><input type="hidden" name="type" value="professionals"><label class="specialty-input-label" for="specialty-query">Your specialty</label><input id="specialty-query" role="combobox" aria-autocomplete="list" aria-controls="specialty-suggestions" aria-expanded="false" autocomplete="off" name="q" type="search" maxlength="100" required placeholder="Type your specialty…"><div id="specialty-suggestions" class="specialty-suggestions" role="listbox" aria-label="Specialty suggestions" hidden></div><span id="specialty-suggestions-status" class="specialty-suggestions-status" role="status" aria-live="polite"></span><label class="specialty-input-label" for="specialty-city">City or ZIP</label><input id="specialty-city" name="city" maxlength="100" placeholder="Where are you looking?"><button class="btn" type="submit">Show matching pros <span aria-hidden="true">→</span></button></form><p class="specialty-chat-note">Find someone who specializes in your style.</p></div></dialog><script src="/specialty-search.js" defer></script><script src="/specialty-suggestions.js" defer></script><script src="/specialty-autocomplete.js" defer></script>
+  <link rel="stylesheet" href="/specialty-search.css"><a class="specialty-search-launch" href="/search?type=professionals" data-specialty-open aria-label="Open specialty search" aria-controls="specialty-search" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.5 14L3 21l4.3-1.3A9 9 0 1 0 12 3Z" fill="currentColor"/><circle cx="8" cy="12" r="1" fill="white"/><circle cx="12" cy="12" r="1" fill="white"/><circle cx="16" cy="12" r="1" fill="white"/></svg></a><dialog id="specialty-search" aria-labelledby="specialty-search-title"><header class="specialty-chat-header"><span class="specialty-chat-avatar" aria-hidden="true">G</span><span>Tovara<span class="specialty-chat-subtitle">Your specialty finder</span></span><button class="specialty-search-close" type="button" aria-label="Close specialty search">×</button></header><div class="specialty-chat-body"><h2 id="specialty-search-title">What specialty are you looking for?</h2><p>Tell us what you have in mind—razor fades, balayage, black and gray realism, or something else.</p><form method="GET" action="/search"><input type="hidden" name="type" value="professionals"><label class="specialty-input-label" for="specialty-query">Your specialty</label><input id="specialty-query" role="combobox" aria-autocomplete="list" aria-controls="specialty-suggestions" aria-expanded="false" autocomplete="off" name="q" type="search" maxlength="100" required placeholder="Type your specialty…"><div id="specialty-suggestions" class="specialty-suggestions" role="listbox" aria-label="Specialty suggestions" hidden></div><span id="specialty-suggestions-status" class="specialty-suggestions-status" role="status" aria-live="polite"></span><label class="specialty-input-label" for="specialty-city">City or ZIP</label><input id="specialty-city" name="city" maxlength="100" placeholder="Where are you looking?"><button class="btn" type="submit">Show matching pros <span aria-hidden="true">→</span></button></form><p class="specialty-chat-note">Find someone who specializes in your style.</p></div></dialog><script src="/specialty-search.js" defer></script><script src="/specialty-suggestions.js" defer></script><script src="/specialty-autocomplete.js" defer></script>
 
   <section class="gb-section" aria-labelledby="home-cats-title">
     <div class="container">
@@ -138,7 +138,7 @@ module.exports = function (router) {
 
   <section class="gb-section is-tinted" aria-labelledby="home-pros-title">
     <div class="container">
-      <div class="gb-section-head"><div><h2 id="home-pros-title">Professionals worth knowing</h2><p>Recently added to GoBookr. Open a profile to see services, location, and where to book.</p></div><a class="gb-link" href="/search?type=professionals">Browse all professionals ${ICON.arrow}</a></div>
+      <div class="gb-section-head"><div><h2 id="home-pros-title">Professionals worth knowing</h2><p>Recently added to Tovara. Open a profile to see services, location, and where to book.</p></div><a class="gb-link" href="/search?type=professionals">Browse all professionals ${ICON.arrow}</a></div>
       <div class="gb-pro-grid">${featured.map((pro) => homeCard(pro, ctx, savedIds)).join('') || '<div class="empty-state"><h3>No professionals listed yet</h3><p>Check back soon, or search a nearby city.</p></div>'}</div>
     </div>
   </section>
@@ -179,7 +179,7 @@ module.exports = function (router) {
       <div class="gb-pro-band home-pro-claim-entry">
         <div>
           <h2 id="home-pro-title">Get found by clients searching near you.</h2>
-          <p>Already listed? Find and claim your profile. Not on GoBookr yet? Create a new profile from scratch.</p>
+          <p>Already listed? Find and claim your profile. Not on Tovara yet? Create a new profile from scratch.</p>
           <ul>
             <li>${ICON.check}Keep your profile accurate and up to date</li>
             <li>${ICON.check}Send clients to the booking site you already use</li>
@@ -188,7 +188,7 @@ module.exports = function (router) {
         </div>
         <div class="gb-claim-card">
           <strong>Are you a professional?</strong>
-          <p>Search your name or business to see if you’re already on GoBookr.</p>
+          <p>Search your name or business to see if you’re already on Tovara.</p>
           <form class="home-claim-form" method="GET" action="/search" data-no-radius>
             <input type="hidden" name="type" value="professionals" />
             <input class="home-claim-input" type="search" name="q" maxlength="100" placeholder="Search your name or business" aria-label="Search your professional profile" />

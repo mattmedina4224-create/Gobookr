@@ -1,5 +1,5 @@
 'use strict';
-// GoBookr Colorado Golden List discovery: public DORA licenses + OpenStreetMap.
+// Tovara Colorado Golden List discovery: public DORA licenses + OpenStreetMap.
 // Read-only staging. No production inserts, no fabricated websites.
 const fs=require('node:fs');
 const API='https://data.colorado.gov', ID='7s5z-vewr';

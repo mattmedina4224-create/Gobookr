@@ -17,7 +17,7 @@ test('trial conversion stays $20 monthly and uses a restrained 14-day then 7-day
 });
 
 test('billing page states the 30-day trial, monthly renewal, grace period, and self-service management', () => {
-  assert.match(billing, /GoBookr Professional/);
+  assert.match(billing, /Tovara Professional/);
   assert.match(billing, /\$20 <span/);
   assert.match(billing, /Renews automatically monthly/);
   assert.match(billing, /30-day free trial/);

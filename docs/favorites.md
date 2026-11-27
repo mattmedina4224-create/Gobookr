@@ -7,7 +7,7 @@ this is not a 30-day event count. No customer list or identity endpoint is expos
 
 ## Access model
 
-GoBookr uses its own server-side sessions and BIGINT `public.users` IDs. It does not
+Tovara uses its own server-side sessions and BIGINT `public.users` IDs. It does not
 use Supabase Auth UUIDs. The server takes the customer ID from the verified session,
 requires the customer role, and applies the existing POST CSRF middleware. Requests
 set an explicit saved/unsaved state, so retries do not invert the user's intent.

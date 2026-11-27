@@ -1,6 +1,6 @@
-# GoBookr State Inventory Imports
+# Tovara State Inventory Imports
 
-GoBookr uses one national importer and separate source-verified data batches for each state.
+Tovara uses one national importer and separate source-verified data batches for each state.
 
 ## Batch layout
 
@@ -52,7 +52,7 @@ node scripts/import-unclaimed-profiles.js data/imports/CO/batch-001.json --state
 ```
 
 The importer never creates accounts. New directory inventory is always created with
-`user_id = NULL` and `claim_status = 'unclaimed'`, preserving the GoBookr claim flow.
+`user_id = NULL` and `claim_status = 'unclaimed'`, preserving the Tovara claim flow.
 
 ## Rollout strategy
 

@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 'use strict';
-// GoBookr national Golden List discovery for one state: open licensing data (when the state publishes it)
+// Tovara national Golden List discovery for one state: open licensing data (when the state publishes it)
 // + OpenStreetMap. Read-only staging; nothing here writes to a database or invents a field.
 //
 // Usage: node scripts/crawl-state-shops.js --state=AZ [--out=tmp/shops-AZ] [--skip-license] [--skip-osm]

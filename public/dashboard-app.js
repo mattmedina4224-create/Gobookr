@@ -1,4 +1,4 @@
-// GoBookr dashboard shell: mobile navigation drawer. No dependencies.
+// Tovara dashboard shell: mobile navigation drawer. No dependencies.
 (() => {
   const root = document.querySelector('[data-gbd]');
   if (!root) return;

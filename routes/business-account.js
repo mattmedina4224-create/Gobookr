@@ -51,7 +51,7 @@ module.exports = function (router) {
         </div>
 
         <div style="border-top:1px solid #e4e7ee;margin-top:30px;padding-top:24px;text-align:center;">
-          <p class="muted" style="margin:0 0 12px;font-size:16px;">Already have a GoBookr account?</p>
+          <p class="muted" style="margin:0 0 12px;font-size:16px;">Already have a Tovara account?</p>
           <a class="btn secondary" href="/login" style="min-width:180px;">Log in</a>
         </div>
       </section>`;

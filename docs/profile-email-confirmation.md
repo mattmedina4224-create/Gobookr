@@ -25,7 +25,7 @@ dependency and the confirmation page explains that delivery is unavailable.
    or authenticated Data API grants. The server's existing Postgres connection
    accesses it. No existing profiles/users are changed.
 4. Configure server-only `RESEND_API_KEY`, `PROFILE_EMAIL_FROM` (e.g.
-   `GoBookr <confirm@YOUR-VERIFIED-DOMAIN>`), and `EMAIL_VERIFICATION_SECRET`
+   `Tovara <confirm@YOUR-VERIFIED-DOMAIN>`), and `EMAIL_VERIFICATION_SECRET`
    (at least 32 random characters). Never paste keys into chat or commit them.
 5. Set `PROFILE_EMAIL_CONFIRMATION_ENABLED=1` only after configuration and the
    migration are ready; redeploy. Do not enable preview delivery with production

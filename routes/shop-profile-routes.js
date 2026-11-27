@@ -75,7 +75,7 @@ function activityFor(shop, profile, team) {
   const push = (at, iconName, text) => { if (at && Number.isFinite(new Date(at).getTime())) out.push({ at, icon: iconName, text }); };
   try {
     const claim = db.prepare("SELECT reviewed_at FROM shop_claims WHERE shop_id = ? AND status = 'approved' ORDER BY reviewed_at DESC NULLS LAST LIMIT 1").get(shop.id);
-    push(claim && claim.reviewed_at, 'verified', 'Ownership verified by GoBookr');
+    push(claim && claim.reviewed_at, 'verified', 'Ownership verified by Tovara');
   } catch (_) { /* claims table unavailable: skip */ }
   push(shop.profile_published_at, 'eye', 'Page published');
   push(shop.profile_updated_at, 'pencil', 'Business details updated');
@@ -377,15 +377,15 @@ module.exports = function (router) {
     const valid = invite && invite.status === 'pending' && new Date(invite.expires_at) > new Date() && invite.claim_status === 'claimed';
     let action;
     if (!valid) action = '<p>This invitation has expired or is no longer available. Ask the business to send you a new one.</p>';
-    else if (!user) action = `<p>Sign in with <strong>${e(invite.email)}</strong> to accept.</p><div class="sd-actions"><a class="btn" href="/login?next=${next}">Sign in</a><a class="btn secondary" href="/signup?role=pro&next=${next}">Create a professional account</a></div><p class="sd-help">Already listed on GoBookr? <a href="/search?type=professionals">Find and claim your profile</a>, then return to this link.</p>`;
+    else if (!user) action = `<p>Sign in with <strong>${e(invite.email)}</strong> to accept.</p><div class="sd-actions"><a class="btn" href="/login?next=${next}">Sign in</a><a class="btn secondary" href="/signup?role=pro&next=${next}">Create a professional account</a></div><p class="sd-help">Already listed on Tovara? <a href="/search?type=professionals">Find and claim your profile</a>, then return to this link.</p>`;
     else if (String(user.email || '').toLowerCase() !== String(invite.email).toLowerCase()) action = `<p>This invitation was sent to <strong>${e(invite.email)}</strong>, but you are signed in as ${e(user.email)}. Sign in with the invited email to accept.</p>`;
     else action = `<form method="POST" action="/team/invite/${e(token)}/accept"><input type="hidden" name="_csrf" value="${e(ctx.session?.csrf_token || '')}"><button class="btn" type="submit">Join ${e(invite.shop_name)}</button></form>
       <form method="POST" action="/team/invite/${e(token)}/decline" class="sd-inline-form"><input type="hidden" name="_csrf" value="${e(ctx.session?.csrf_token || '')}"><button class="sd-textbtn" type="submit">Decline</button></form>
-      ${user.role !== 'pro' ? '<p class="sd-help">You need a GoBookr professional profile to join. <a href="/signup?role=pro">Set one up</a> or <a href="/search?type=professionals">claim yours</a>.</p>' : ''}`;
-    send(ctx.res, layout({ title: invite ? `Join ${invite.shop_name} on GoBookr` : 'Team invitation', currentUser: user, session: ctx.session, robots: 'noindex,nofollow', flash,
+      ${user.role !== 'pro' ? '<p class="sd-help">You need a Tovara professional profile to join. <a href="/signup?role=pro">Set one up</a> or <a href="/search?type=professionals">claim yours</a>.</p>' : ''}`;
+    send(ctx.res, layout({ title: invite ? `Join ${invite.shop_name} on Tovara` : 'Team invitation', currentUser: user, session: ctx.session, robots: 'noindex,nofollow', flash,
       body: `<link rel="stylesheet" href="/shop-dashboard.css?v=1"><section class="section container sd sd-narrow"><div class="sd-card sd-invite-card"><p class="sd-crumb">Team invitation</p>
         <h1>${invite ? `Join ${e(invite.shop_name)}` : 'Team invitation'}</h1>${invite ? `<p class="sd-sub"><span>${e(invite.shop_city)}, ${e(invite.shop_state)}</span></p>` : ''}
-        <p>Joining adds you to the business’s GoBookr page, linking to your own profile and booking. It is free and does not change your GoBookr plan or billing.</p>${action}</div></section>` }), status);
+        <p>Joining adds you to the business’s Tovara page, linking to your own profile and booking. It is free and does not change your Tovara plan or billing.</p>${action}</div></section>` }), status);
   }
   router.get('/team/invite/:token', async (ctx) => invitePage(ctx, P.findInvite(ctx.params.token), { status: P.findInvite(ctx.params.token) ? 200 : 404 }));
   router.post('/team/invite/:token/accept', async (ctx) => {
@@ -410,7 +410,7 @@ module.exports = function (router) {
     const sponsored = sponsorshipFor(pro);
     let nav = '';
     try { const { dashboardNav, PRO_NAV_ITEMS } = require('../lib/pro-dashboard-view'); nav = dashboardNav('workplaces', PRO_NAV_ITEMS); } catch (_) { nav = ''; }
-    const notice = ctx.query?.sponsorship_ended ? `<div class="sd-card wp-sponsor-note" role="status"><h2>Your sponsored membership ended</h2><p class="sd-help">The business you left was paying for your GoBookr membership. Your account, profile and portfolio are unchanged and nothing has been charged. To keep Pro features after the current period, choose individual billing.</p><a class="btn small" href="/dashboard/pro/billing">Choose individual billing</a></div>` : '';
+    const notice = ctx.query?.sponsorship_ended ? `<div class="sd-card wp-sponsor-note" role="status"><h2>Your sponsored membership ended</h2><p class="sd-help">The business you left was paying for your Tovara membership. Your account, profile and portfolio are unchanged and nothing has been charged. To keep Pro features after the current period, choose individual billing.</p><a class="btn small" href="/dashboard/pro/billing">Choose individual billing</a></div>` : '';
     send(ctx.res, layout({ title: 'My workplaces', currentUser: ctx.currentUser, session: ctx.session, flash: flashFromQuery(ctx.query), robots: 'noindex,nofollow',
       body: WorkplacesView.page({ rows, csrf: ctx.session?.csrf_token || '', nav, sponsoredShopId: sponsored ? Number(sponsored.shop_id) : null, departedId: Number(ctx.query?.left) || null, notice }) }));
   });

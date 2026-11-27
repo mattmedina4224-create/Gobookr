@@ -9,7 +9,7 @@ const root = path.join(__dirname, '..');
 const server = fs.readFileSync(path.join(root, 'server.js'), 'utf8');
 const staticSitemap = fs.readFileSync(path.join(root, 'public', 'sitemap.xml'), 'utf8');
 
-test('launch SEO endpoints use the canonical GoBookr domain', () => {
+test('launch SEO endpoints use the canonical Tovara domain', () => {
   assert.match(server, /Sitemap: https:\/\/gobookr\.com\/sitemap\.xml/);
   assert.match(server, /https:\/\/gobookr\.com\/openings/);
   assert.match(server, /https:\/\/gobookr\.com\/pro\//);

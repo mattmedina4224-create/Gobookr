@@ -1,4 +1,4 @@
-/* GoBookr dashboard app shell + shared components (lib/dashboard-ui.js). Tokens from gobookr-ui.css.
+/* Tovara dashboard app shell + shared components (lib/dashboard-ui.js). Tokens from gobookr-ui.css.
    Quiet surfaces, one border weight, Iris only on interactive elements. */
 :root { --gbd-sidebar-w: 272px; --gbd-sidebar-bg: #F5F6FA; --gbd-bar-h: 56px; }
 

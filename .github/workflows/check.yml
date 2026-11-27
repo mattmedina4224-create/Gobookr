@@ -1,4 +1,4 @@
-name: GoBookr checks
+name: Tovara checks
 
 on:
   push:

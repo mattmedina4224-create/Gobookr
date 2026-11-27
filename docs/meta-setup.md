@@ -1,10 +1,10 @@
-# GoBookr Meta connection setup
+# Tovara Meta connection setup
 
 This is a tester-only authorization foundation, not a working publishing or scheduling integration. No endpoint in this release posts to social accounts. Existing assisted Story sharing stays available.
 
 ## Owner setup
 
-1. Create the GoBookr app in Meta for Developers, associated with the intended business portfolio. Select Facebook Login/Page management and linked Instagram publishing capabilities appropriate to the current Meta dashboard.
+1. Create the Tovara app in Meta for Developers, associated with the intended business portfolio. Select Facebook Login/Page management and linked Instagram publishing capabilities appropriate to the current Meta dashboard.
 2. Share only the public App ID with the implementation engineer. Put the App Secret directly into the production project's secret environment variables; never paste it or access tokens into chat, a ticket, or source control.
 3. Provide a Facebook Page you manage, linked to an Instagram Business account, for Story eligibility testing. Meta app-role testers must have access to the account they test.
 4. Register this exact OAuth redirect URI: `https://gobookr.com/integrations/meta/callback`.
@@ -21,7 +21,7 @@ All variables are server-side; none use a public-client prefix. Configure previe
 | `META_APP_SECRET` | App Secret stored as a secret in Vercel |
 | `META_GRAPH_VERSION` | Explicit supported version selected in the Meta app, such as `vN.N`; no hard-coded fallback |
 | `META_TOKEN_ENCRYPTION_KEY` | 32 random bytes encoded as 64 hex characters; store securely and retain for decrypting existing connections |
-| `META_TEST_PRO_IDS` | Comma-separated GoBookr professional profile IDs, not user IDs |
+| `META_TEST_PRO_IDS` | Comma-separated Tovara professional profile IDs, not user IDs |
 | `META_CONNECTIONS_ENABLED` | Set to `1` only after configuration review; does not enable publishing |
 | `APP_URL` | Canonical HTTPS application URL; production is `https://gobookr.com` |
 
@@ -33,7 +33,7 @@ Open `/dashboard/pro/social` while signed in as an allowlisted professional. Sta
 
 Only up to 50 Pages returned in the first provider page are offered. If the desired Page is missing, narrow the accounts authorized in Meta and reconnect. Page posting tasks and granted scopes are checked. Connection expiry uses the returned authorization lifetime conservatively; automatic refresh is not implemented. Reconnect when expired.
 
-Test cancellation, replay, wrong session, denied scopes, missing linked Instagram, expired credentials, and disconnect. Disconnect removes GoBookr's stored tokens and pending authorization data; it does not revoke Meta permissions globally. The account owner can remove GoBookr in Meta's app settings too.
+Test cancellation, replay, wrong session, denied scopes, missing linked Instagram, expired credentials, and disconnect. Disconnect removes Tovara's stored tokens and pending authorization data; it does not revoke Meta permissions globally. The account owner can remove Tovara in Meta's app settings too.
 
 ## Remaining launch work
 

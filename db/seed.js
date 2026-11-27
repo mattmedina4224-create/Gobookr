@@ -1,6 +1,6 @@
 'use strict';
 
-// Seeds GoBookr with sample pros, services, portfolio items, reviews, and a
+// Seeds Tovara with sample pros, services, portfolio items, reviews, and a
 // couple of demo accounts so the site is browsable immediately.
 //
 // Safe to re-run: it wipes and rebuilds all tables first.

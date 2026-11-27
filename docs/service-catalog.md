@@ -1,6 +1,6 @@
 # Service and specialty discovery catalog
 
-This is a growing starter vocabulary, not every possible service and not an inventory of offerings from GoBookr professionals. It contains 281 profession-specific entries (273 distinct labels), covering all eleven supported marketplace categories. Some labels appear under more than one profession.
+This is a growing starter vocabulary, not every possible service and not an inventory of offerings from Tovara professionals. It contains 281 profession-specific entries (273 distinct labels), covering all eleven supported marketplace categories. Some labels appear under more than one profession.
 
 `lib/service-catalog.js` is authoritative. `public/service-catalog.json` is its downloadable snapshot. `/specialties` displays the list and links labels to open-ended searches. Entries include services, techniques, styles, and consultation types. The catalog never writes services to pro profiles or verifies qualifications.
 

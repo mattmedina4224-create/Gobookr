@@ -1,4 +1,4 @@
-/* GoBookr business profile. Tokens come from gobookr-ui.css; nothing here hard-codes brand colors. */
+/* Tovara business profile. Tokens come from gobookr-ui.css; nothing here hard-codes brand colors. */
 .sp { --sp-gap: clamp(20px, 3vw, 40px); padding-bottom: 96px; }
 .sp h1, .sp h2, .sp h3 { font-family: var(--gb-font-display); color: var(--gb-midnight); letter-spacing: -0.015em; }
 .sp svg { width: 18px; height: 18px; flex: none; }

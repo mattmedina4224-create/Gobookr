@@ -77,7 +77,7 @@
   panel.classList.add('customer-login-card');
   const heading = panel.querySelector('h1');
   const intro = heading && heading.nextElementSibling;
-  if (heading) heading.textContent = 'Sign in to GoBookr';
+  if (heading) heading.textContent = 'Sign in to Tovara';
   if (intro && intro.matches('p')) intro.textContent = 'Save your favorite professionals and find them again anytime.';
 
   const eyebrow = document.createElement('div');
@@ -88,7 +88,7 @@
   if (!panel.querySelector('.customer-login-signup')) {
     const signup = document.createElement('div');
     signup.className = 'customer-login-signup';
-    signup.innerHTML = '<span>New to GoBookr?</span> <a href="/signup">Create a free account</a>';
+    signup.innerHTML = '<span>New to Tovara?</span> <a href="/signup">Create a free account</a>';
     panel.appendChild(signup);
   }
 

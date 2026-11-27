@@ -257,8 +257,8 @@ test('public page: unclaimed, unpublished, preview and published rendering', asy
 
     const base = await h.request('GET', '/shop/10', null);
     assert.doesNotMatch(base.body, /Haircut|Our story|Meet the team/, 'unpublished owner content stays private');
-    assert.match(base.body, /setting up its GoBookr page/);
-    assert.match((await h.request('GET', '/shop/10?preview=1', 3)).body, /setting up its GoBookr page/, 'preview is owner-only');
+    assert.match(base.body, /setting up its Tovara page/);
+    assert.match((await h.request('GET', '/shop/10?preview=1', 3)).body, /setting up its Tovara page/, 'preview is owner-only');
     const preview = await h.request('GET', '/shop/10?preview=1', 1);
     assert.match(preview.body, /<strong>Preview\.<\/strong>/); assert.match(preview.body, /robots="noindex,nofollow"/); assert.match(preview.body, /Haircut/);
 

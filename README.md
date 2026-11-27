@@ -1,10 +1,10 @@
-# GoBookr
+# Tovara
 
-GoBookr is a discovery marketplace for appointment-based personal-service professionals. Customers can search for barbers, hairstylists, colorists, nail technicians, and similar local professionals, view their GoBookr profiles, and then book directly through the professional's existing scheduling provider.
+Tovara is a discovery marketplace for appointment-based personal-service professionals. Customers can search for barbers, hairstylists, colorists, nail technicians, and similar local professionals, view their Tovara profiles, and then book directly through the professional's existing scheduling provider.
 
-The MVP deliberately keeps GoBookr as the **discovery layer**, not the scheduling system:
+The MVP deliberately keeps Tovara as the **discovery layer**, not the scheduling system:
 
-**Customer finds a pro → views the GoBookr profile → taps Book Appointment → continues to Square, Booksy, Vagaro, Fresha, GlossGenius, or another external booking page.**
+**Customer finds a pro → views the Tovara profile → taps Book Appointment → continues to Square, Booksy, Vagaro, Fresha, GlossGenius, or another external booking page.**
 
 The app is a real full-stack Node application with accounts, sessions, SQLite data, professional onboarding, portfolio uploads, location-aware discovery, license verification, and subscription foundations. It uses Node's built-in `http` server and `node:sqlite`; there is no application framework or build step.
 
@@ -55,9 +55,9 @@ Seeded accounts use the password `password123`.
 
 ### Booking model
 
-GoBookr does **not** own appointment availability or appointment scheduling in this MVP. A professional adds their existing booking URL and GoBookr sends customers there with a **Book Appointment** button.
+Tovara does **not** own appointment availability or appointment scheduling in this MVP. A professional adds their existing booking URL and Tovara sends customers there with a **Book Appointment** button.
 
-The old internal `booking_requests` database table remains only for compatibility with seeded/historical data and the older review-verification model. New customer discovery does not create GoBookr booking requests.
+The old internal `booking_requests` database table remains only for compatibility with seeded/historical data and the older review-verification model. New customer discovery does not create Tovara booking requests.
 
 ### Billing
 
@@ -161,7 +161,7 @@ Before public launch, complete and verify these items:
 
 ## Deployment note
 
-The current database lives at `data/gobookr.db`, so the simplest deployment model is a long-running Node process with a **persistent disk**. If GoBookr later moves to horizontally scaled or serverless infrastructure, move the data layer to a managed database and move portfolio files to object storage first.
+The current database lives at `data/gobookr.db`, so the simplest deployment model is a long-running Node process with a **persistent disk**. If Tovara later moves to horizontally scaled or serverless infrastructure, move the data layer to a managed database and move portfolio files to object storage first.
 
 ### Professional and business billing
 

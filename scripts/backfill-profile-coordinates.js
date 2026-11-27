@@ -26,7 +26,7 @@ async function censusGeocode(profile) {
   try {
     const params = new URLSearchParams({ address, benchmark: 'Public_AR_Current', format: 'json' });
     const response = await fetch(`${GEOCODER_URL}?${params.toString()}`, {
-      headers: { Accept: 'application/json', 'User-Agent': 'GoBookr/1.0 (https://gobookr.com)' },
+      headers: { Accept: 'application/json', 'User-Agent': 'Tovara/1.0 (https://gobookr.com)' },
       signal: AbortSignal.timeout(10000),
     });
     if (!response.ok) return { status: 'failed', reason: `http_${response.status}` };

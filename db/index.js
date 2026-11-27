@@ -1,6 +1,6 @@
 'use strict';
 
-// GoBookr production database adapter.
+// Tovara production database adapter.
 //
 // The app was originally written against Node's synchronous SQLite API. Production
 // now lives in Supabase Postgres. Database calls run on a dedicated worker thread

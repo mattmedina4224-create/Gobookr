@@ -54,7 +54,7 @@ test('an existing account gets one email from admin@gobookr.com with a 1-hour si
   assert.equal(h.mail.length, 1);
   const sent = h.mail[0];
   assert.equal(sent.url, 'https://api.resend.com/emails');
-  assert.equal(sent.body.from, 'GoBookr <admin@gobookr.com>');
+  assert.equal(sent.body.from, 'Tovara <admin@gobookr.com>');
   assert.deepEqual(sent.body.to, ['owner@example.test']);
   assert.match(sent.body.html, /https:\/\/gobookr\.com\/reset-password\?token=[a-f0-9]{64}/);
   const raw = h.linkToken();
@@ -64,7 +64,7 @@ test('an existing account gets one email from admin@gobookr.com with a 1-hour si
   assert.equal(JSON.stringify(rows).includes(raw), false, 'raw token is never stored');
   assert.match(String(JSON.stringify(rows[0].ttl)), /01:00:00|"hours":1/);
   for (const line of logs) { assert.equal(line.includes(raw), false, 'raw token never logged'); assert.equal(line.includes('owner@example.test'), false, 'recipient never logged'); }
-  assert.equal(senderFor({ PASSWORD_RESET_EMAIL_FROM: 'GoBookr <x@gobookr.com>' }), 'GoBookr <x@gobookr.com>');
+  assert.equal(senderFor({ PASSWORD_RESET_EMAIL_FROM: 'Tovara <x@gobookr.com>' }), 'Tovara <x@gobookr.com>');
 });
 
 test('unknown addresses send nothing and leave no token, but still count toward the limit', async () => {

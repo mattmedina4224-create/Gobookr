@@ -32,7 +32,7 @@ module.exports = function adminAccessRoutes(router) {
     if (!req) return notFound(ctx);
     const csrf = escapeHtml(ctx.session.csrf_token);
     const body = `<section class="section container" style="max-width:640px"><div class="panel">
-      <p class="muted">GoBookr administrator access</p><h1>Verify this account</h1>
+      <p class="muted">Tovara administrator access</p><h1>Verify this account</h1>
       <p>The project owner authorized administrator access for <strong>${escapeHtml(req.email)}</strong>. To finish, prove you control that inbox: send a one-time code to it and enter the code below. Nothing is granted until the code is verified.</p>
       <form method="POST" action="/account/admin-access/send"><input type="hidden" name="_csrf" value="${csrf}"><button class="btn secondary" type="submit">${req.codes_sent ? 'Send a new code' : 'Email me a code'}</button></form>
       <form method="POST" action="/account/admin-access/verify" style="margin-top:20px"><input type="hidden" name="_csrf" value="${csrf}">

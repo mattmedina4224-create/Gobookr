@@ -1,8 +1,8 @@
 'use strict';
 
 (() => {
-  // Keep one GoBookr brand icon everywhere: browser tabs and the site header.
-  const brandHref = '/gobookr-mark-2026.svg?v=peach-1';
+  // Keep one Tovara brand icon everywhere: browser tabs and the site header.
+  const brandHref = '/tovara-mark.svg?v=1';
   document.querySelectorAll('link[rel*="icon"]').forEach((link) => link.remove());
 
   const icon = document.createElement('link');
@@ -172,7 +172,7 @@
     const workplaceHeading = Array.from(form.querySelectorAll('h3')).find((el) => el.textContent.trim() === 'Where do you work?');
     if (workplaceHeading && workplaceHeading.parentElement) {
       const detail = workplaceHeading.parentElement.querySelector('p');
-      if (detail) detail.textContent = 'Enter the business address below. GoBookr uses it to calculate distance for nearby customers.';
+      if (detail) detail.textContent = 'Enter the business address below. Tovara uses it to calculate distance for nearby customers.';
     }
   }
 

@@ -1,8 +1,8 @@
-# GoBookr AI Operations — audit and Phase 1
+# Tovara AI Operations — audit and Phase 1
 
 Audit date: 2026-10-06 UTC / 2026-10-05 Denver.
 Audited main: e796c08aaacbcd84d87c92a673c689dc7aae83fc; GitHub compare confirmed main identical.
-This is an implementation foundation and operating proposal, not a claim that GoBookr is ready for 250,000 subscriptions or can already operate with ten humans.
+This is an implementation foundation and operating proposal, not a claim that Tovara is ready for 250,000 subscriptions or can already operate with ten humans.
 
 ## A. Existing infrastructure
 
@@ -145,7 +145,7 @@ Model selection must be revalidated at activation; model pricing/availability ch
 | 100,000 | $2,650 | $15,650 | $46,850 |
 | 250,000 | $6,550 | $39,050 | $117,050 |
 
-Variable per-pro costs: $0.026 / $0.156 / $0.468 per month, plus the shared $50. At the standard 250k scenario, $39,050 is ~0.78% of $5M gross monthly subscription revenue before all other costs. These are hypotheses, not measured GoBookr usage.
+Variable per-pro costs: $0.026 / $0.156 / $0.468 per month, plus the shared $50. At the standard 250k scenario, $39,050 is ~0.78% of $5M gross monthly subscription revenue before all other costs. These are hypotheses, not measured Tovara usage.
 
 EXCLUDED: database/queue/hosting/storage, helpdesk, email/SMS, Stripe fees, third-party registry/search/verification APIs, image/video/audio generation, salaries and taxes. Consumer support scales independently: 5M consumers x 0.5% monthly support-contact rate x 4 simple calls = 100k additional calls, ~$650 including the 30% reserve. Higher contact rates change this materially.
 

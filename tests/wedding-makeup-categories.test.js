@@ -173,7 +173,7 @@ test('global shell has keyboard navigation landmarks', () => {
   const css = read('public/styles.css');
   assert.match(layout, /class="skip-link" href="#main-content"/);
   assert.match(layout, /<main id="main-content">/);
-  assert.match(layout, /aria-label="GoBookr home"/);
+  assert.match(layout, /aria-label="Tovara home"/);
   assert.match(css, /\.skip-link:focus/);
   assert.match(css, /:focus-visible/);
 });

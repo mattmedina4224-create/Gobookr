@@ -1,6 +1,6 @@
 'use strict';
 
-// GoBookr national marketplace inventory importer.
+// Tovara national marketplace inventory importer.
 // Imports factual public listing data only. It never creates user/login accounts.
 //
 // Usage:

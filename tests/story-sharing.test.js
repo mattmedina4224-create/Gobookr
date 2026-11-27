@@ -44,11 +44,11 @@ test('changed copy invalidates every prepared share action and unsupported file 
   h.ids.copy.value='Changed';h.ids.copy.listeners.input();assert.equal(h.ids['story-ready-preview'].hidden,true);
   assert.equal(h.ids['story-share-ready'].disabled,true);assert.equal(h.ids['story-share-ready-bottom'].disabled,true);await h.api.share();assert.equal(h.shares(),0);
 });
-test('platform guides and copied GoBookr link match the selected destination',async()=>{
+test('platform guides and copied Tovara link match the selected destination',async()=>{
   const h=harness();h.platforms[2].listeners.click();assert.equal(h.platforms[2]['aria-pressed'],'true');
   assert.match(h.ids['story-sharing-steps'].children[1].textContent,/Snapchat/);
   await h.ids['story-copy-url'].listeners.click();assert.equal(h.urls[0],'https://gobookr.com/pro/1?source=marketing-show-my-work');
-  assert.match(h.ids['story-ready-status'].textContent,/GoBookr link copied/);
+  assert.match(h.ids['story-ready-status'].textContent,/Tovara link copied/);
 });
 test('share panel makes the phone-first social action obvious and escapes user content',async()=>{
   const h=harness({tainted:true});await assert.rejects(h.api.prepare(),/photo/);

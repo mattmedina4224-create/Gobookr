@@ -1,16 +1,16 @@
-# GoBookr — Codex Project Instructions
+# Tovara — Codex Project Instructions
 
 ## Product mission
-GoBookr is a marketplace/directory for appointment-based personal-service professionals. Customers browse real local professionals, evaluate profiles, and book through the professional's booking provider. Professionals can claim and manage their profiles.
+Tovara is a marketplace/directory for appointment-based personal-service professionals. Customers browse real local professionals, evaluate profiles, and book through the professional's booking provider. Professionals can claim and manage their profiles.
 
 The product owner uses ChatGPT as the project manager. Codex is the implementation engineer. Product behavior, pricing, branding, marketplace policy, and major architecture changes should follow the requirements in this repository or the task provided by the project manager; do not invent major product decisions.
 
 ## Current product direction
-- Customer-facing brand: **GoBookr** (capital G and B).
+- Customer-facing brand: **Tovara** (capital G and B).
 - Domain: `gobookr.com`.
 - Professional plan: 30-day free trial, then $20/month.
 - Primary categories: barbers, hairstylists, colorists, nail technicians, eyelash technicians, eyebrow/brow professionals, waxing specialists, tattoo artists, massage therapists, and similar appointment-based personal services.
-- GoBookr is not intended to become a broad home-services marketplace.
+- Tovara is not intended to become a broad home-services marketplace.
 - Search should support service/category, city or ZIP, professional/business name, rating, and eventually geographic radius.
 - Desired radius choices: 1, 2, 3, 4, 5, 10, 15, and 20 miles.
 
@@ -34,15 +34,15 @@ Performance is a high priority as the marketplace grows.
 - When working on performance, measure or otherwise verify the bottleneck where practical and report what changed.
 
 ## Real-professional marketplace data
-GoBookr is now populated with real professionals found from public sources. Data quality and provenance are mandatory.
+Tovara is now populated with real professionals found from public sources. Data quality and provenance are mandatory.
 
 ### Import pipeline
 The desired pipeline is:
 1. Discover a professional from an approved public source.
 2. Validate that the professional/listing appears current and factual.
-3. Check for an existing GoBookr profile before insertion.
+3. Check for an existing Tovara profile before insertion.
 4. Normalize the professional's category and location.
-5. Create an **unclaimed** profile with no fabricated GoBookr user account.
+5. Create an **unclaimed** profile with no fabricated Tovara user account.
 6. Store the public source URL/name and the date it was checked.
 7. Flag ambiguous or conflicting records for review rather than guessing.
 8. Publish only records that meet the validation rules.
@@ -51,7 +51,7 @@ The desired pipeline is:
 - Seeded/public-source profiles must use `user_id = NULL` and `claim_status = 'unclaimed'`.
 - Never create fake customer or professional accounts to represent imported professionals.
 - Never fabricate reviews, ratings, credentials, licenses, services, addresses, social accounts, booking links, photos, or biographical claims.
-- Do not copy authored bios, reviews, or copyrighted portfolio photos from third-party platforms into GoBookr unless the project explicitly has rights to do so.
+- Do not copy authored bios, reviews, or copyrighted portfolio photos from third-party platforms into Tovara unless the project explicitly has rights to do so.
 - Factual public fields such as business/professional name, city, state, business address, booking URL, and public source provenance may be stored when supported by the source.
 - Every imported listing should have `source_url`, `source_name`, and `source_checked_at` when available.
 - Check duplicates before insert. Duplicate logic should consider professional/business name, location, source URL, and other useful identifiers rather than relying on a single weak field.
@@ -82,15 +82,15 @@ When changing category behavior, keep database constraints, signup/onboarding va
 ## Claim flow
 The intended ownership flow is:
 
-`Unclaimed profile -> Claim this profile -> create/login -> verify ownership -> attach profile to user -> professional completes/edits profile -> 30-day GoBookr Professional trial starts`
+`Unclaimed profile -> Claim this profile -> create/login -> verify ownership -> attach profile to user -> professional completes/edits profile -> 30-day Tovara Professional trial starts`
 
 - Ownership verification must rely on meaningful evidence, not merely a matching name.
 - An unclaimed profile should remain publicly useful before it is claimed.
 - Claiming must not accidentally create duplicate professional profiles.
-- GoBookr needs a correction/removal/reporting path as the imported marketplace grows.
+- Tovara needs a correction/removal/reporting path as the imported marketplace grows.
 
 ## Billing rules
-- GoBookr Professional is $20/month after a 30-day free trial.
+- Tovara Professional is $20/month after a 30-day free trial.
 - Do not create real Stripe charges, subscriptions, refunds, or other financial actions without explicit authorization for that action.
 - Preserve the existing Stripe billing flow unless the task explicitly calls for changing it.
 
@@ -100,7 +100,7 @@ The intended ownership flow is:
 - Typography: Inter (UI/body) and Inter Display (headlines), self-hosted in `public/fonts/` (OFL). Sentence-case labels; no tracked ALL-CAPS eyebrows.
 - Visual direction: premium, minimal, editorial technology marketplace. Most real profiles have no photos or reviews, so every card and profile must look finished without them.
 - Existing approved homepage and mobile header should be preserved unless the task explicitly requests a redesign.
-- The approved logo/favicon concept is a Midnight square with a white calendar grid and one Iris date square (`public/gobookr-mark-2026.svg`), with the GoBookr wordmark.
+- The approved logo/favicon concept is a Midnight square with a white calendar grid and one Iris date square (`public/gobookr-mark-2026.svg`), with the Tovara wordmark.
 - Keep the favicon consistent across pages.
 - Mobile usability matters; do not treat mobile as an afterthought.
 - Avoid unrelated visual changes while fixing backend/performance issues.

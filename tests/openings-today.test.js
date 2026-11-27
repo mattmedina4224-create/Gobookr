@@ -171,7 +171,7 @@ test('opening detail can be shared natively with a clipboard fallback', () => {
   assert.match(src, /Share these openings/);
   assert.match(src, /navigator\.share/);
   assert.match(src, /navigator\.clipboard\.writeText/);
-  assert.match(src, /has openings today on GoBookr/);
+  assert.match(src, /has openings today on Tovara/);
 });
 
 test('live opening controls stay usable on mobile', () => {

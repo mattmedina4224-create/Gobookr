@@ -45,7 +45,7 @@ function requirePro(ctx) {
 
 module.exports = function (router) {
   // This route is registered before the legacy Stripe-hosted Checkout route so
-  // professionals stay on GoBookr while Stripe securely renders the payment form.
+  // professionals stay on Tovara while Stripe securely renders the payment form.
   router.post('/dashboard/pro/billing/checkout', async (ctx) => {
     const profile = requirePro(ctx);
     if (!profile) return;
@@ -83,7 +83,7 @@ module.exports = function (router) {
         <section class="section container" style="max-width:980px;">
           <div style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:18px;">
             <div>
-              <p class="muted" style="margin:0 0 5px;">GoBookr Professional</p>
+              <p class="muted" style="margin:0 0 5px;">Tovara Professional</p>
               <h1 style="margin:0;">Set up secure payment</h1>
               <p class="muted" style="margin:8px 0 0;">${subscription.status === 'trialing' && daysRemaining(subscription.trial_ends_at) > 0 ? 'Your remaining trial stays free, then $20/month.' : '$20/month, billed when you confirm checkout.'} Stripe securely handles your payment details.</p>
             </div>

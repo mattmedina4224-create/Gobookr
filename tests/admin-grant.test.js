@@ -24,7 +24,7 @@ function database() {
 }
 let shared = null;
 test.after(async () => { if (shared) await shared.close(); });
-const ENV = { RESEND_API_KEY: 're_test', ADMIN_GRANT_EMAIL_FROM: 'GoBookr <security@gobookr.test>', ADMIN_GRANT_SECRET: 'x'.repeat(40) };
+const ENV = { RESEND_API_KEY: 're_test', ADMIN_GRANT_EMAIL_FROM: 'Tovara <security@gobookr.test>', ADMIN_GRANT_SECRET: 'x'.repeat(40) };
 const ctx = { req: { headers: { 'user-agent': 'test' }, socket: { remoteAddress: '127.0.0.1' } } };
 
 function setup() {

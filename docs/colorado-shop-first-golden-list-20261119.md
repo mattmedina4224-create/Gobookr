@@ -1,10 +1,10 @@
-# GoBookr shop-first Colorado expansion — product direction
+# Tovara shop-first Colorado expansion — product direction
 
 ## Confirmed business model
 - Create free, claimable shop pages before individual professional accounts.
 - Show a real shop name, city, verified public business address where known, **official website**, phone when sourced, and source provenance.
 - A shop owner may claim a page only after meaningful verification. Ownership is not inferred from a public listing.
-- Staff/independent suite professionals create or claim **their own individual GoBookr profiles** and purchase the personal Professional plan (currently $20/month after a 30-day trial); shop ownership itself is free.
+- Staff/independent suite professionals create or claim **their own individual Tovara profiles** and purchase the personal Professional plan (currently $20/month after a 30-day trial); shop ownership itself is free.
 - Business-team paid-seat sponsorship is **optional** and must not silently replace personal subscriptions or charge shop owners for staff without explicit choice.
 - Do not fabricate employees, assign a professional to a shop without affiliation evidence, or imply salon-suite renters are the location operator's employees.
 - Support owner invitations or verified staff affiliation so an individual professional can link to a shop page. Shop page displays only confirmed affiliates when the verified-team system is active.

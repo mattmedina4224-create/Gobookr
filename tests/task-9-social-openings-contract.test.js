@@ -19,7 +19,7 @@ test('task 9 connects real openings, Story creation, native sharing, booking lin
   assert.match(view, /Share to socials/);
   assert.match(share, /navigator\.share/);
   assert.match(share, /gobookr-openings-story\.png/);
-  assert.match(share, /GoBookr link copied/);
+  assert.match(share, /Tovara link copied/);
   assert.match(pro, /Opening view → click/);
   assert.match(pro, /booking intent, not a completed appointment/);
 });

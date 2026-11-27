@@ -28,7 +28,7 @@ async function getClient() {
       application_name: 'gobookr-web',
     });
     client.on('error', (err) => {
-      console.error('GoBookr Postgres connection error', err);
+      console.error('Tovara Postgres connection error', err);
       clientPromise = null;
       readCache.clear();
     });
