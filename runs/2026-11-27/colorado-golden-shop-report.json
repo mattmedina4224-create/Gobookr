@@ -1,0 +1,1447 @@
+{
+  "created_at": "2026-11-27T21:25:41.775Z",
+  "staging_only": true,
+  "licensed_shops_scanned": 23299,
+  "licensed_active_candidates": 7369,
+  "mapped_beauty_places": 2525,
+  "total_candidates": 8247,
+  "with_websites": 869,
+  "category_counts": {
+    "hair": 2825,
+    "shop_category_review": 2242,
+    "nails": 1242,
+    "barber": 736,
+    "skincare": 460,
+    "lashes": 132,
+    "waxing": 138,
+    "brows": 54,
+    "salon_suites": 25,
+    "massage": 213,
+    "permanent_makeup": 7,
+    "spray_tanning": 4,
+    "makeup": 17,
+    "tattoo": 131,
+    "other_beauty": 21
+  },
+  "errors": [],
+  "source_fields": [
+    {
+      "name": "lastName",
+      "field": "lastname"
+    },
+    {
+      "name": "firstName",
+      "field": "firstname"
+    },
+    {
+      "name": "middleName",
+      "field": "middlename"
+    },
+    {
+      "name": "suffix",
+      "field": "suffix"
+    },
+    {
+      "name": "entityName",
+      "field": "entityname"
+    },
+    {
+      "name": "city",
+      "field": "city"
+    },
+    {
+      "name": "state",
+      "field": "state"
+    },
+    {
+      "name": "mailZipCode",
+      "field": "mailzipcode"
+    },
+    {
+      "name": "licensePrefix",
+      "field": "licensetype"
+    },
+    {
+      "name": "subCategory",
+      "field": "subcategory"
+    },
+    {
+      "name": "licenseNumber",
+      "field": "licensenumber"
+    },
+    {
+      "name": "licenseFirstIssueDate",
+      "field": "licensefirstissuedate"
+    },
+    {
+      "name": "licenseLastRenewedDate",
+      "field": "licenselastreneweddate"
+    },
+    {
+      "name": "licenseExpirationDate",
+      "field": "licenseexpirationdate"
+    },
+    {
+      "name": "licenseStatusDescription",
+      "field": "licensestatusdescription"
+    },
+    {
+      "name": "specialty",
+      "field": "specialty"
+    },
+    {
+      "name": "title",
+      "field": "title"
+    },
+    {
+      "name": "degrees",
+      "field": "degrees"
+    },
+    {
+      "name": "caseNumber",
+      "field": "casenumber"
+    },
+    {
+      "name": "programAction",
+      "field": "programaction"
+    },
+    {
+      "name": "disciplineEffectiveDate",
+      "field": "disciplineeffectivedate"
+    },
+    {
+      "name": "disciplineCompleteDate",
+      "field": "disciplinecompletedate"
+    },
+    {
+      "name": "linkToVerifyLicense",
+      "field": "linktoverifylicense"
+    },
+    {
+      "name": "linkToViewHealthcareProfile",
+      "field": "linktoviewhealthcareprofile"
+    }
+  ],
+  "dora_shop_license_types": [
+    "REG"
+  ],
+  "dora_license_type_counts": [
+    {
+      "licensetype": "AC",
+      "n": "713"
+    },
+    {
+      "licensetype": "ACA",
+      "n": "3350"
+    },
+    {
+      "licensetype": "ACB",
+      "n": "3053"
+    },
+    {
+      "licensetype": "ACC",
+      "n": "4892"
+    },
+    {
+      "licensetype": "ACD",
+      "n": "3188"
+    },
+    {
+      "licensetype": "ACU",
+      "n": "2960"
+    },
+    {
+      "licensetype": "AD",
+      "n": "30"
+    },
+    {
+      "licensetype": "ADDC",
+      "n": "850"
+    },
+    {
+      "licensetype": "AIT",
+      "n": "207"
+    },
+    {
+      "licensetype": "ANI",
+      "n": "126"
+    },
+    {
+      "licensetype": "ANT",
+      "n": "371"
+    },
+    {
+      "licensetype": "AP",
+      "n": "41580"
+    },
+    {
+      "licensetype": "APE",
+      "n": "92586"
+    },
+    {
+      "licensetype": "APN",
+      "n": "18820"
+    },
+    {
+      "licensetype": "APT",
+      "n": "59"
+    },
+    {
+      "licensetype": "ARC",
+      "n": "19013"
+    },
+    {
+      "licensetype": "AT",
+      "n": "2482"
+    },
+    {
+      "licensetype": "AUD",
+      "n": "1413"
+    },
+    {
+      "licensetype": "AV",
+      "n": "891"
+    },
+    {
+      "licensetype": "BAR",
+      "n": "9107"
+    },
+    {
+      "licensetype": "C-APN",
+      "n": "13693"
+    },
+    {
+      "licensetype": "CDR",
+      "n": "7957"
+    },
+    {
+      "licensetype": "CDRH",
+      "n": "3243"
+    },
+    {
+      "licensetype": "CDS",
+      "n": "190"
+    },
+    {
+      "licensetype": "CFY",
+      "n": "138"
+    },
+    {
+      "licensetype": "CHR",
+      "n": "8914"
+    },
+    {
+      "licensetype": "C-IV",
+      "n": "428"
+    },
+    {
+      "licensetype": "CM",
+      "n": "52"
+    },
+    {
+      "licensetype": "COR",
+      "n": "3725"
+    },
+    {
+      "licensetype": "COS",
+      "n": "77677"
+    },
+    {
+      "licensetype": "COZ",
+      "n": "25517"
+    },
+    {
+      "licensetype": "CPA",
+      "n": "39647"
+    },
+    {
+      "licensetype": "CRM",
+      "n": "90"
+    },
+    {
+      "licensetype": "CRMP",
+      "n": "12"
+    },
+    {
+      "licensetype": "C-RXN",
+      "n": "7882"
+    },
+    {
+      "licensetype": "CST",
+      "n": "5309"
+    },
+    {
+      "licensetype": "CSW",
+      "n": "17836"
+    },
+    {
+      "licensetype": "DD",
+      "n": "3783"
+    },
+    {
+      "licensetype": "DEN",
+      "n": "16055"
+    },
+    {
+      "licensetype": "DH",
+      "n": "12082"
+    },
+    {
+      "licensetype": "DOCAPN",
+      "n": "4"
+    },
+    {
+      "licensetype": "DOC-NA",
+      "n": "133"
+    },
+    {
+      "licensetype": "DOC-PN",
+      "n": "8"
+    },
+    {
+      "licensetype": "DOC-RN",
+      "n": "22"
+    },
+    {
+      "licensetype": "DOCRXN",
+      "n": "4"
+    },
+    {
+      "licensetype": "DR",
+      "n": "69491"
+    },
+    {
+      "licensetype": "DRP",
+      "n": "405"
+    },
+    {
+      "licensetype": "DT",
+      "n": "2"
+    },
+    {
+      "licensetype": "EC",
+      "n": "12587"
+    },
+    {
+      "licensetype": "ECS",
+      "n": "61"
+    },
+    {
+      "licensetype": "EL",
+      "n": "5960"
+    },
+    {
+      "licensetype": "EMB",
+      "n": "15"
+    },
+    {
+      "licensetype": "EMBP",
+      "n": "26"
+    },
+    {
+      "licensetype": "FD",
+      "n": "57"
+    },
+    {
+      "licensetype": "FDP",
+      "n": "184"
+    },
+    {
+      "licensetype": "FES",
+      "n": "286"
+    },
+    {
+      "licensetype": "FH",
+      "n": "269"
+    },
+    {
+      "licensetype": "FRM",
+      "n": "4150"
+    },
+    {
+      "licensetype": "GEN",
+      "n": "437"
+    },
+    {
+      "licensetype": "HAA",
+      "n": "108"
+    },
+    {
+      "licensetype": "HAAP",
+      "n": "359"
+    },
+    {
+      "licensetype": "HAD",
+      "n": "663"
+    },
+    {
+      "licensetype": "HAT",
+      "n": "347"
+    },
+    {
+      "licensetype": "HSP",
+      "n": "14"
+    },
+    {
+      "licensetype": "HST",
+      "n": "5063"
+    },
+    {
+      "licensetype": "IN",
+      "n": "10148"
+    },
+    {
+      "licensetype": "ITR",
+      "n": "130"
+    },
+    {
+      "licensetype": "IV",
+      "n": "12348"
+    },
+    {
+      "licensetype": "JEWP",
+      "n": "685"
+    },
+    {
+      "licensetype": "JP",
+      "n": "11963"
+    },
+    {
+      "licensetype": "JPWP",
+      "n": "192"
+    },
+    {
+      "licensetype": "JW",
+      "n": "33288"
+    },
+    {
+      "licensetype": "LA",
+      "n": "1837"
+    },
+    {
+      "licensetype": "LOCAL",
+      "n": "7702"
+    },
+    {
+      "licensetype": "LPC",
+      "n": "20834"
+    },
+    {
+      "licensetype": "LPCC",
+      "n": "12305"
+    },
+    {
+      "licensetype": "LPP",
+      "n": "637"
+    },
+    {
+      "licensetype": "LSW",
+      "n": "9577"
+    },
+    {
+      "licensetype": "LTD",
+      "n": "88"
+    },
+    {
+      "licensetype": "MAA",
+      "n": "488"
+    },
+    {
+      "licensetype": "MAN",
+      "n": "26199"
+    },
+    {
+      "licensetype": "ME",
+      "n": "13532"
+    },
+    {
+      "licensetype": "METPE",
+      "n": "2"
+    },
+    {
+      "licensetype": "MEWP",
+      "n": "261"
+    },
+    {
+      "licensetype": "MFP",
+      "n": "45"
+    },
+    {
+      "licensetype": "MFR",
+      "n": "79"
+    },
+    {
+      "licensetype": "MFT",
+      "n": "3371"
+    },
+    {
+      "licensetype": "MFTC",
+      "n": "1780"
+    },
+    {
+      "licensetype": "MI",
+      "n": "1431"
+    },
+    {
+      "licensetype": "MINS",
+      "n": "742"
+    },
+    {
+      "licensetype": "MIV",
+      "n": "122"
+    },
+    {
+      "licensetype": "MODS",
+      "n": "424"
+    },
+    {
+      "licensetype": "MP",
+      "n": "9435"
+    },
+    {
+      "licensetype": "MPTPE",
+      "n": "1"
+    },
+    {
+      "licensetype": "MPWP",
+      "n": "198"
+    },
+    {
+      "licensetype": "MSAC",
+      "n": "1"
+    },
+    {
+      "licensetype": "MSACA",
+      "n": "3"
+    },
+    {
+      "licensetype": "MSACC",
+      "n": "3"
+    },
+    {
+      "licensetype": "MSACD",
+      "n": "2"
+    },
+    {
+      "licensetype": "MSACU",
+      "n": "3"
+    },
+    {
+      "licensetype": "MSAD",
+      "n": "1"
+    },
+    {
+      "licensetype": "MSADDC",
+      "n": "1"
+    },
+    {
+      "licensetype": "MSAIT",
+      "n": "1"
+    },
+    {
+      "licensetype": "MSANI",
+      "n": "1"
+    },
+    {
+      "licensetype": "MSANT",
+      "n": "1"
+    },
+    {
+      "licensetype": "MSAPN",
+      "n": "32"
+    },
+    {
+      "licensetype": "MSAPT",
+      "n": "1"
+    },
+    {
+      "licensetype": "MSARC",
+      "n": "1"
+    },
+    {
+      "licensetype": "MSAT",
+      "n": "8"
+    },
+    {
+      "licensetype": "MSAUD",
+      "n": "4"
+    },
+    {
+      "licensetype": "MSAV",
+      "n": "1"
+    },
+    {
+      "licensetype": "MSBAR",
+      "n": "9"
+    },
+    {
+      "licensetype": "MSCHR",
+      "n": "5"
+    },
+    {
+      "licensetype": "MSCOR",
+      "n": "1"
+    },
+    {
+      "licensetype": "MSCOS",
+      "n": "75"
+    },
+    {
+      "licensetype": "MSCOZ",
+      "n": "33"
+    },
+    {
+      "licensetype": "MSCPA",
+      "n": "7"
+    },
+    {
+      "licensetype": "MSCSW",
+      "n": "57"
+    },
+    {
+      "licensetype": "MSDD",
+      "n": "1"
+    },
+    {
+      "licensetype": "MSDEN",
+      "n": "9"
+    },
+    {
+      "licensetype": "MSDH",
+      "n": "28"
+    },
+    {
+      "licensetype": "MSDR",
+      "n": "26"
+    },
+    {
+      "licensetype": "MSEL",
+      "n": "1"
+    },
+    {
+      "licensetype": "MSGEN",
+      "n": "1"
+    },
+    {
+      "licensetype": "MSHAAP",
+      "n": "1"
+    },
+    {
+      "licensetype": "MSHAD",
+      "n": "1"
+    },
+    {
+      "licensetype": "MSHST",
+      "n": "6"
+    },
+    {
+      "licensetype": "MSIN",
+      "n": "3"
+    },
+    {
+      "licensetype": "MSITR",
+      "n": "1"
+    },
+    {
+      "licensetype": "MSIV",
+      "n": "3"
+    },
+    {
+      "licensetype": "MSJP",
+      "n": "2"
+    },
+    {
+      "licensetype": "MSJW",
+      "n": "3"
+    },
+    {
+      "licensetype": "MSLA",
+      "n": "1"
+    },
+    {
+      "licensetype": "MSLOC",
+      "n": "13"
+    },
+    {
+      "licensetype": "MSLPC",
+      "n": "25"
+    },
+    {
+      "licensetype": "MSLPCC",
+      "n": "9"
+    },
+    {
+      "licensetype": "MSLPP",
+      "n": "2"
+    },
+    {
+      "licensetype": "MSLSW",
+      "n": "29"
+    },
+    {
+      "licensetype": "MSMAA",
+      "n": "3"
+    },
+    {
+      "licensetype": "MSMAN",
+      "n": "24"
+    },
+    {
+      "licensetype": "MSME",
+      "n": "1"
+    },
+    {
+      "licensetype": "MSMFP",
+      "n": "1"
+    },
+    {
+      "licensetype": "MSMFT",
+      "n": "8"
+    },
+    {
+      "licensetype": "MSMFTC",
+      "n": "2"
+    },
+    {
+      "licensetype": "MSMI",
+      "n": "1"
+    },
+    {
+      "licensetype": "MSMINS",
+      "n": "1"
+    },
+    {
+      "licensetype": "MSMIV",
+      "n": "1"
+    },
+    {
+      "licensetype": "MSMODS",
+      "n": "1"
+    },
+    {
+      "licensetype": "MSMP",
+      "n": "1"
+    },
+    {
+      "licensetype": "MSMT",
+      "n": "24"
+    },
+    {
+      "licensetype": "MSMWM",
+      "n": "1"
+    },
+    {
+      "licensetype": "MSMWR",
+      "n": "1"
+    },
+    {
+      "licensetype": "MSMWS",
+      "n": "1"
+    },
+    {
+      "licensetype": "MSNA",
+      "n": "85"
+    },
+    {
+      "licensetype": "MSND",
+      "n": "1"
+    },
+    {
+      "licensetype": "MSNHA",
+      "n": "3"
+    },
+    {
+      "licensetype": "MSNLC",
+      "n": "1"
+    },
+    {
+      "licensetype": "MSOFC",
+      "n": "1"
+    },
+    {
+      "licensetype": "MSOPT",
+      "n": "3"
+    },
+    {
+      "licensetype": "MSOT",
+      "n": "22"
+    },
+    {
+      "licensetype": "MSOTA",
+      "n": "6"
+    },
+    {
+      "licensetype": "MSOUT",
+      "n": "1"
+    },
+    {
+      "licensetype": "MSP",
+      "n": "214"
+    },
+    {
+      "licensetype": "MSPA",
+      "n": "26"
+    },
+    {
+      "licensetype": "MSPAR",
+      "n": "1"
+    },
+    {
+      "licensetype": "MSPDT",
+      "n": "1"
+    },
+    {
+      "licensetype": "MSPE",
+      "n": "3"
+    },
+    {
+      "licensetype": "MSPHA",
+      "n": "20"
+    },
+    {
+      "licensetype": "MSPHAT",
+      "n": "28"
+    },
+    {
+      "licensetype": "MSPLS",
+      "n": "1"
+    },
+    {
+      "licensetype": "MSPN",
+      "n": "49"
+    },
+    {
+      "licensetype": "MSPOD",
+      "n": "1"
+    },
+    {
+      "licensetype": "MSPP",
+      "n": "106"
+    },
+    {
+      "licensetype": "MSPRO",
+      "n": "1"
+    },
+    {
+      "licensetype": "MSPSP",
+      "n": "1"
+    },
+    {
+      "licensetype": "MSPSY",
+      "n": "11"
+    },
+    {
+      "licensetype": "MSPSYC",
+      "n": "1"
+    },
+    {
+      "licensetype": "MSPTA",
+      "n": "19"
+    },
+    {
+      "licensetype": "MSPTL",
+      "n": "45"
+    },
+    {
+      "licensetype": "MSRME",
+      "n": "1"
+    },
+    {
+      "licensetype": "MSRMT",
+      "n": "1"
+    },
+    {
+      "licensetype": "MSRN",
+      "n": "324"
+    },
+    {
+      "licensetype": "MSRP",
+      "n": "1"
+    },
+    {
+      "licensetype": "MSRTL",
+      "n": "8"
+    },
+    {
+      "licensetype": "MSRW",
+      "n": "1"
+    },
+    {
+      "licensetype": "MSRXN",
+      "n": "25"
+    },
+    {
+      "licensetype": "MSSA",
+      "n": "2"
+    },
+    {
+      "licensetype": "MSSLP",
+      "n": "34"
+    },
+    {
+      "licensetype": "MSST",
+      "n": "8"
+    },
+    {
+      "licensetype": "MSSWC",
+      "n": "4"
+    },
+    {
+      "licensetype": "MSSWP",
+      "n": "1"
+    },
+    {
+      "licensetype": "MSTL",
+      "n": "1"
+    },
+    {
+      "licensetype": "MSVET",
+      "n": "10"
+    },
+    {
+      "licensetype": "MSVT",
+      "n": "8"
+    },
+    {
+      "licensetype": "MSWI",
+      "n": "1"
+    },
+    {
+      "licensetype": "MSWP",
+      "n": "1"
+    },
+    {
+      "licensetype": "MT",
+      "n": "28813"
+    },
+    {
+      "licensetype": "MWM",
+      "n": "148"
+    },
+    {
+      "licensetype": "MWR",
+      "n": "329"
+    },
+    {
+      "licensetype": "MWS",
+      "n": "101"
+    },
+    {
+      "licensetype": "NA",
+      "n": "196698"
+    },
+    {
+      "licensetype": "ND",
+      "n": "321"
+    },
+    {
+      "licensetype": "NHA",
+      "n": "3141"
+    },
+    {
+      "licensetype": "NHATPE",
+      "n": "373"
+    },
+    {
+      "licensetype": "NLC",
+      "n": "22210"
+    },
+    {
+      "licensetype": "NMCF",
+      "n": "114"
+    },
+    {
+      "licensetype": "NMDE",
+      "n": "6"
+    },
+    {
+      "licensetype": "NMF",
+      "n": "117"
+    },
+    {
+      "licensetype": "NMIT",
+      "n": "802"
+    },
+    {
+      "licensetype": "NMTP",
+      "n": "21"
+    },
+    {
+      "licensetype": "NOF",
+      "n": "57"
+    },
+    {
+      "licensetype": "NR",
+      "n": "7"
+    },
+    {
+      "licensetype": "NRP",
+      "n": "1"
+    },
+    {
+      "licensetype": "NTO",
+      "n": "379"
+    },
+    {
+      "licensetype": "NTTB",
+      "n": "4"
+    },
+    {
+      "licensetype": "OFC",
+      "n": "147"
+    },
+    {
+      "licensetype": "OO",
+      "n": "654"
+    },
+    {
+      "licensetype": "OPT",
+      "n": "3789"
+    },
+    {
+      "licensetype": "OPV",
+      "n": "3"
+    },
+    {
+      "licensetype": "OSP",
+      "n": "3569"
+    },
+    {
+      "licensetype": "OT",
+      "n": "9079"
+    },
+    {
+      "licensetype": "OTA",
+      "n": "2015"
+    },
+    {
+      "licensetype": "OTAP",
+      "n": "12"
+    },
+    {
+      "licensetype": "OTP",
+      "n": "43"
+    },
+    {
+      "licensetype": "OUT",
+      "n": "3188"
+    },
+    {
+      "licensetype": "PA",
+      "n": "10276"
+    },
+    {
+      "licensetype": "PAR",
+      "n": "3824"
+    },
+    {
+      "licensetype": "PC",
+      "n": "5476"
+    },
+    {
+      "licensetype": "PCS",
+      "n": "143"
+    },
+    {
+      "licensetype": "PDO",
+      "n": "2172"
+    },
+    {
+      "licensetype": "PDT",
+      "n": "139"
+    },
+    {
+      "licensetype": "PDV",
+      "n": "5"
+    },
+    {
+      "licensetype": "PE",
+      "n": "63793"
+    },
+    {
+      "licensetype": "PHA",
+      "n": "19576"
+    },
+    {
+      "licensetype": "PHACS",
+      "n": "8"
+    },
+    {
+      "licensetype": "PHAT",
+      "n": "11907"
+    },
+    {
+      "licensetype": "PHATP",
+      "n": "17811"
+    },
+    {
+      "licensetype": "PI1",
+      "n": "295"
+    },
+    {
+      "licensetype": "PLS",
+      "n": "4054"
+    },
+    {
+      "licensetype": "PMT",
+      "n": "2165"
+    },
+    {
+      "licensetype": "PN",
+      "n": "50884"
+    },
+    {
+      "licensetype": "POD",
+      "n": "846"
+    },
+    {
+      "licensetype": "PRO",
+      "n": "156"
+    },
+    {
+      "licensetype": "PSLP",
+      "n": "1665"
+    },
+    {
+      "licensetype": "PSP",
+      "n": "11"
+    },
+    {
+      "licensetype": "PSY",
+      "n": "7464"
+    },
+    {
+      "licensetype": "PSYC",
+      "n": "3874"
+    },
+    {
+      "licensetype": "PSYRX",
+      "n": "12"
+    },
+    {
+      "licensetype": "PTA",
+      "n": "3970"
+    },
+    {
+      "licensetype": "PTL",
+      "n": "21706"
+    },
+    {
+      "licensetype": "PTLP",
+      "n": "461"
+    },
+    {
+      "licensetype": "PVI",
+      "n": "18"
+    },
+    {
+      "licensetype": "PVT",
+      "n": "740"
+    },
+    {
+      "licensetype": "REG",
+      "n": "23299"
+    },
+    {
+      "licensetype": "RME",
+      "n": "779"
+    },
+    {
+      "licensetype": "RMT",
+      "n": "362"
+    },
+    {
+      "licensetype": "RN",
+      "n": "240123"
+    },
+    {
+      "licensetype": "RP",
+      "n": "2649"
+    },
+    {
+      "licensetype": "RPWP",
+      "n": "66"
+    },
+    {
+      "licensetype": "RTL",
+      "n": "11356"
+    },
+    {
+      "licensetype": "RW",
+      "n": "6581"
+    },
+    {
+      "licensetype": "RWWP",
+      "n": "213"
+    },
+    {
+      "licensetype": "RXN",
+      "n": "13089"
+    },
+    {
+      "licensetype": "SA",
+      "n": "2552"
+    },
+    {
+      "licensetype": "SEC",
+      "n": "5674"
+    },
+    {
+      "licensetype": "SLP",
+      "n": "7220"
+    },
+    {
+      "licensetype": "SPDO",
+      "n": "416"
+    },
+    {
+      "licensetype": "SPN",
+      "n": "2"
+    },
+    {
+      "licensetype": "SRN",
+      "n": "138"
+    },
+    {
+      "licensetype": "ST",
+      "n": "7663"
+    },
+    {
+      "licensetype": "SWC",
+      "n": "2958"
+    },
+    {
+      "licensetype": "SWP",
+      "n": "430"
+    },
+    {
+      "licensetype": "T-ANT",
+      "n": "2"
+    },
+    {
+      "licensetype": "T-APN",
+      "n": "28"
+    },
+    {
+      "licensetype": "T-CHR",
+      "n": "10"
+    },
+    {
+      "licensetype": "TCPN",
+      "n": "7"
+    },
+    {
+      "licensetype": "TCRN",
+      "n": "60"
+    },
+    {
+      "licensetype": "T-DEN",
+      "n": "61"
+    },
+    {
+      "licensetype": "T-DH",
+      "n": "92"
+    },
+    {
+      "licensetype": "TDP",
+      "n": "55"
+    },
+    {
+      "licensetype": "T-DR",
+      "n": "5"
+    },
+    {
+      "licensetype": "TGPNP",
+      "n": "1541"
+    },
+    {
+      "licensetype": "TGRNP",
+      "n": "2542"
+    },
+    {
+      "licensetype": "TL",
+      "n": "11636"
+    },
+    {
+      "licensetype": "TLTP",
+      "n": "201"
+    },
+    {
+      "licensetype": "TMPGEN",
+      "n": "274"
+    },
+    {
+      "licensetype": "TMPMOD",
+      "n": "313"
+    },
+    {
+      "licensetype": "T-NA",
+      "n": "7659"
+    },
+    {
+      "licensetype": "TNHAP",
+      "n": "16"
+    },
+    {
+      "licensetype": "T-OPT",
+      "n": "3"
+    },
+    {
+      "licensetype": "T-OT",
+      "n": "43"
+    },
+    {
+      "licensetype": "T-OTA",
+      "n": "15"
+    },
+    {
+      "licensetype": "TPA",
+      "n": "25"
+    },
+    {
+      "licensetype": "T-PA",
+      "n": "7"
+    },
+    {
+      "licensetype": "TPDO",
+      "n": "8"
+    },
+    {
+      "licensetype": "TPLP",
+      "n": "145"
+    },
+    {
+      "licensetype": "T-PN",
+      "n": "279"
+    },
+    {
+      "licensetype": "TPNP",
+      "n": "855"
+    },
+    {
+      "licensetype": "T-POD",
+      "n": "1"
+    },
+    {
+      "licensetype": "T-PTA",
+      "n": "12"
+    },
+    {
+      "licensetype": "T-PTL",
+      "n": "5"
+    },
+    {
+      "licensetype": "TRM",
+      "n": "646"
+    },
+    {
+      "licensetype": "T-RN",
+      "n": "1108"
+    },
+    {
+      "licensetype": "TRNP",
+      "n": "5354"
+    },
+    {
+      "licensetype": "T-RTL",
+      "n": "13"
+    },
+    {
+      "licensetype": "T-SLP",
+      "n": "1"
+    },
+    {
+      "licensetype": "T-VET",
+      "n": "4"
+    },
+    {
+      "licensetype": "VET",
+      "n": "14070"
+    },
+    {
+      "licensetype": "VT",
+      "n": "4554"
+    },
+    {
+      "licensetype": "WC",
+      "n": "20"
+    },
+    {
+      "licensetype": "WHI",
+      "n": "176"
+    },
+    {
+      "licensetype": "WHO",
+      "n": "1958"
+    },
+    {
+      "licensetype": "WI",
+      "n": "15"
+    },
+    {
+      "licensetype": "WP",
+      "n": "21"
+    }
+  ],
+  "dora_license_type_lookup": [
+    {
+      "code": "BAR",
+      "text": "Barber/Cosmetology Barber BAR Individual Two Year Even 31-Mar"
+    },
+    {
+      "code": "COS",
+      "text": "Barber/Cosmetology Cosmetologist COS Individual Two Year Odd and Even 30-Apr"
+    },
+    {
+      "code": "COZ",
+      "text": "Barber/Cosmetology Esthetician COZ Individual Two Year Even 31-Mar"
+    },
+    {
+      "code": "HST",
+      "text": "Barber/Cosmetology Hair Stylist HST Individual Two Year Even 31-Mar"
+    },
+    {
+      "code": "MSBAR",
+      "text": "Barber/Cosmetology Military Spouse - Barber MSBAR Individual Two Year Even 31-Mar"
+    },
+    {
+      "code": "MSCOS",
+      "text": "Barber/Cosmetology Military Spouse - Cosmetologist MSCOS Individual Two Year Odd and Even 30-Apr"
+    },
+    {
+      "code": "MSCOZ",
+      "text": "Barber/Cosmetology Military Spouse - Esthetician MSCOZ Individual Two Year Even 31-Mar"
+    },
+    {
+      "code": "MSHST",
+      "text": "Barber/Cosmetology Military Spouse - Hair Stylist MSHST Individual Two Year Even 31-Mar"
+    },
+    {
+      "code": "MSMAN",
+      "text": "Barber/Cosmetology Military Spouse - Nail Technician MSMAN Individual Two Year Even 31-Mar"
+    },
+    {
+      "code": "MAN",
+      "text": "Barber/Cosmetology Nail Technician MAN Individual Two Year Even 31-Mar"
+    },
+    {
+      "code": "REG",
+      "text": "Barber/Cosmetology Shop Registration REG Business Two Year Odd 30-Nov"
+    },
+    {
+      "code": "MT",
+      "text": "Massage Therapists Massage Therapist MT Individual Two Year Odd 31-Jan"
+    },
+    {
+      "code": "MSMT",
+      "text": "Massage Therapists Military Spouse - Massage Therapist MSMT Individual Two Year Odd 31-Jan"
+    },
+    {
+      "code": "PMT",
+      "text": "Massage Therapists Provisional Massage Therapist (Historic Only) PMT Individual Do not renew"
+    }
+  ],
+  "overpass_endpoint": "https://overpass-api.de/api/interpreter",
+  "note": "License or OSM listing alone is not sufficient to assert current operation. Verify websites, physical location and category before publishing.",
+  "attribution": "OpenStreetMap data © OpenStreetMap contributors; ODbL applies https://www.openstreetmap.org/copyright"
+}

@@ -1,32 +1,29 @@
 {
-  "created_at": "2026-11-24T02:01:27.304Z",
+  "created_at": "2026-11-27T21:25:41.775Z",
   "staging_only": true,
-  "licensed_shops_scanned": 23292,
-  "licensed_active_candidates": 7360,
-  "mapped_beauty_places": 0,
-  "total_candidates": 6475,
-  "with_websites": 0,
+  "licensed_shops_scanned": 23299,
+  "licensed_active_candidates": 7369,
+  "mapped_beauty_places": 2525,
+  "total_candidates": 8247,
+  "with_websites": 869,
   "category_counts": {
-    "hair": 2030,
-    "shop_category_review": 2240,
-    "nails": 928,
-    "barber": 561,
-    "skincare": 394,
-    "lashes": 103,
-    "waxing": 110,
-    "brows": 43,
-    "salon_suites": 14,
-    "massage": 24,
+    "hair": 2825,
+    "shop_category_review": 2242,
+    "nails": 1242,
+    "barber": 736,
+    "skincare": 460,
+    "lashes": 132,
+    "waxing": 138,
+    "brows": 54,
+    "salon_suites": 25,
+    "massage": 213,
     "permanent_makeup": 7,
-    "spray_tanning": 2,
-    "makeup": 15,
-    "tattoo": 4
+    "spray_tanning": 4,
+    "makeup": 17,
+    "tattoo": 131,
+    "other_beauty": 21
   },
-  "errors": [
-    "fetch failed",
-    "The operation was aborted due to timeout",
-    "HTTP 504 https://overpass.private.coffee/api/interpreter"
-  ],
+  "errors": [],
   "source_fields": [
     {
       "name": "lastName",
@@ -135,7 +132,7 @@
     },
     {
       "licensetype": "ACA",
-      "n": "3349"
+      "n": "3350"
     },
     {
       "licensetype": "ACB",
@@ -147,11 +144,11 @@
     },
     {
       "licensetype": "ACD",
-      "n": "3185"
+      "n": "3188"
     },
     {
       "licensetype": "ACU",
-      "n": "2958"
+      "n": "2960"
     },
     {
       "licensetype": "AD",
@@ -159,7 +156,7 @@
     },
     {
       "licensetype": "ADDC",
-      "n": "849"
+      "n": "850"
     },
     {
       "licensetype": "AIT",
@@ -171,19 +168,19 @@
     },
     {
       "licensetype": "ANT",
-      "n": "370"
+      "n": "371"
     },
     {
       "licensetype": "AP",
-      "n": "41573"
+      "n": "41580"
     },
     {
       "licensetype": "APE",
-      "n": "92538"
+      "n": "92586"
     },
     {
       "licensetype": "APN",
-      "n": "18795"
+      "n": "18820"
     },
     {
       "licensetype": "APT",
@@ -191,11 +188,11 @@
     },
     {
       "licensetype": "ARC",
-      "n": "18998"
+      "n": "19013"
     },
     {
       "licensetype": "AT",
-      "n": "2481"
+      "n": "2482"
     },
     {
       "licensetype": "AUD",
@@ -207,19 +204,19 @@
     },
     {
       "licensetype": "BAR",
-      "n": "9100"
+      "n": "9107"
     },
     {
       "licensetype": "C-APN",
-      "n": "13661"
+      "n": "13693"
     },
     {
       "licensetype": "CDR",
-      "n": "7923"
+      "n": "7957"
     },
     {
       "licensetype": "CDRH",
-      "n": "3237"
+      "n": "3243"
     },
     {
       "licensetype": "CDS",
@@ -247,19 +244,19 @@
     },
     {
       "licensetype": "COS",
-      "n": "77648"
+      "n": "77677"
     },
     {
       "licensetype": "COZ",
-      "n": "25502"
+      "n": "25517"
     },
     {
       "licensetype": "CPA",
-      "n": "39632"
+      "n": "39647"
     },
     {
       "licensetype": "CRM",
-      "n": "89"
+      "n": "90"
     },
     {
       "licensetype": "CRMP",
@@ -267,7 +264,7 @@
     },
     {
       "licensetype": "C-RXN",
-      "n": "7855"
+      "n": "7882"
     },
     {
       "licensetype": "CST",
@@ -275,7 +272,7 @@
     },
     {
       "licensetype": "CSW",
-      "n": "17814"
+      "n": "17836"
     },
     {
       "licensetype": "DD",
@@ -283,7 +280,7 @@
     },
     {
       "licensetype": "DEN",
-      "n": "16054"
+      "n": "16055"
     },
     {
       "licensetype": "DH",
@@ -311,7 +308,7 @@
     },
     {
       "licensetype": "DR",
-      "n": "69475"
+      "n": "69491"
     },
     {
       "licensetype": "DRP",
@@ -323,7 +320,7 @@
     },
     {
       "licensetype": "EC",
-      "n": "12584"
+      "n": "12587"
     },
     {
       "licensetype": "ECS",
@@ -339,7 +336,7 @@
     },
     {
       "licensetype": "EMBP",
-      "n": "25"
+      "n": "26"
     },
     {
       "licensetype": "FD",
@@ -347,11 +344,11 @@
     },
     {
       "licensetype": "FDP",
-      "n": "179"
+      "n": "184"
     },
     {
       "licensetype": "FES",
-      "n": "285"
+      "n": "286"
     },
     {
       "licensetype": "FH",
@@ -359,7 +356,7 @@
     },
     {
       "licensetype": "FRM",
-      "n": "4147"
+      "n": "4150"
     },
     {
       "licensetype": "GEN",
@@ -391,7 +388,7 @@
     },
     {
       "licensetype": "IN",
-      "n": "10147"
+      "n": "10148"
     },
     {
       "licensetype": "ITR",
@@ -407,7 +404,7 @@
     },
     {
       "licensetype": "JP",
-      "n": "11958"
+      "n": "11963"
     },
     {
       "licensetype": "JPWP",
@@ -415,7 +412,7 @@
     },
     {
       "licensetype": "JW",
-      "n": "33271"
+      "n": "33288"
     },
     {
       "licensetype": "LA",
@@ -427,11 +424,11 @@
     },
     {
       "licensetype": "LPC",
-      "n": "20822"
+      "n": "20834"
     },
     {
       "licensetype": "LPCC",
-      "n": "12300"
+      "n": "12305"
     },
     {
       "licensetype": "LPP",
@@ -439,7 +436,7 @@
     },
     {
       "licensetype": "LSW",
-      "n": "9563"
+      "n": "9577"
     },
     {
       "licensetype": "LTD",
@@ -451,11 +448,11 @@
     },
     {
       "licensetype": "MAN",
-      "n": "26188"
+      "n": "26199"
     },
     {
       "licensetype": "ME",
-      "n": "13527"
+      "n": "13532"
     },
     {
       "licensetype": "METPE",
@@ -475,11 +472,11 @@
     },
     {
       "licensetype": "MFT",
-      "n": "3370"
+      "n": "3371"
     },
     {
       "licensetype": "MFTC",
-      "n": "1779"
+      "n": "1780"
     },
     {
       "licensetype": "MI",
@@ -499,7 +496,7 @@
     },
     {
       "licensetype": "MP",
-      "n": "9427"
+      "n": "9435"
     },
     {
       "licensetype": "MPTPE",
@@ -819,7 +816,7 @@
     },
     {
       "licensetype": "MSPP",
-      "n": "103"
+      "n": "106"
     },
     {
       "licensetype": "MSPRO",
@@ -855,7 +852,7 @@
     },
     {
       "licensetype": "MSRN",
-      "n": "323"
+      "n": "324"
     },
     {
       "licensetype": "MSRP",
@@ -915,7 +912,7 @@
     },
     {
       "licensetype": "MT",
-      "n": "28801"
+      "n": "28813"
     },
     {
       "licensetype": "MWM",
@@ -931,7 +928,7 @@
     },
     {
       "licensetype": "NA",
-      "n": "196611"
+      "n": "196698"
     },
     {
       "licensetype": "ND",
@@ -951,7 +948,7 @@
     },
     {
       "licensetype": "NMCF",
-      "n": "113"
+      "n": "114"
     },
     {
       "licensetype": "NMDE",
@@ -959,15 +956,15 @@
     },
     {
       "licensetype": "NMF",
-      "n": "116"
+      "n": "117"
     },
     {
       "licensetype": "NMIT",
-      "n": "800"
+      "n": "802"
     },
     {
       "licensetype": "NMTP",
-      "n": "18"
+      "n": "21"
     },
     {
       "licensetype": "NOF",
@@ -999,7 +996,7 @@
     },
     {
       "licensetype": "OPT",
-      "n": "3788"
+      "n": "3789"
     },
     {
       "licensetype": "OPV",
@@ -1007,11 +1004,11 @@
     },
     {
       "licensetype": "OSP",
-      "n": "3561"
+      "n": "3569"
     },
     {
       "licensetype": "OT",
-      "n": "9077"
+      "n": "9079"
     },
     {
       "licensetype": "OTA",
@@ -1031,15 +1028,15 @@
     },
     {
       "licensetype": "PA",
-      "n": "10268"
+      "n": "10276"
     },
     {
       "licensetype": "PAR",
-      "n": "3823"
+      "n": "3824"
     },
     {
       "licensetype": "PC",
-      "n": "5474"
+      "n": "5476"
     },
     {
       "licensetype": "PCS",
@@ -1047,7 +1044,7 @@
     },
     {
       "licensetype": "PDO",
-      "n": "2171"
+      "n": "2172"
     },
     {
       "licensetype": "PDT",
@@ -1059,11 +1056,11 @@
     },
     {
       "licensetype": "PE",
-      "n": "63753"
+      "n": "63793"
     },
     {
       "licensetype": "PHA",
-      "n": "19572"
+      "n": "19576"
     },
     {
       "licensetype": "PHACS",
@@ -1071,11 +1068,11 @@
     },
     {
       "licensetype": "PHAT",
-      "n": "11901"
+      "n": "11907"
     },
     {
       "licensetype": "PHATP",
-      "n": "17790"
+      "n": "17811"
     },
     {
       "licensetype": "PI1",
@@ -1091,7 +1088,7 @@
     },
     {
       "licensetype": "PN",
-      "n": "50882"
+      "n": "50884"
     },
     {
       "licensetype": "POD",
@@ -1111,11 +1108,11 @@
     },
     {
       "licensetype": "PSY",
-      "n": "7463"
+      "n": "7464"
     },
     {
       "licensetype": "PSYC",
-      "n": "3868"
+      "n": "3874"
     },
     {
       "licensetype": "PSYRX",
@@ -1123,11 +1120,11 @@
     },
     {
       "licensetype": "PTA",
-      "n": "3968"
+      "n": "3970"
     },
     {
       "licensetype": "PTL",
-      "n": "21704"
+      "n": "21706"
     },
     {
       "licensetype": "PTLP",
@@ -1135,7 +1132,7 @@
     },
     {
       "licensetype": "PVI",
-      "n": "14"
+      "n": "18"
     },
     {
       "licensetype": "PVT",
@@ -1143,11 +1140,11 @@
     },
     {
       "licensetype": "REG",
-      "n": "23292"
+      "n": "23299"
     },
     {
       "licensetype": "RME",
-      "n": "778"
+      "n": "779"
     },
     {
       "licensetype": "RMT",
@@ -1155,11 +1152,11 @@
     },
     {
       "licensetype": "RN",
-      "n": "240082"
+      "n": "240123"
     },
     {
       "licensetype": "RP",
-      "n": "2648"
+      "n": "2649"
     },
     {
       "licensetype": "RPWP",
@@ -1167,11 +1164,11 @@
     },
     {
       "licensetype": "RTL",
-      "n": "11351"
+      "n": "11356"
     },
     {
       "licensetype": "RW",
-      "n": "6579"
+      "n": "6581"
     },
     {
       "licensetype": "RWWP",
@@ -1179,7 +1176,7 @@
     },
     {
       "licensetype": "RXN",
-      "n": "13067"
+      "n": "13089"
     },
     {
       "licensetype": "SA",
@@ -1191,7 +1188,7 @@
     },
     {
       "licensetype": "SLP",
-      "n": "7216"
+      "n": "7220"
     },
     {
       "licensetype": "SPDO",
@@ -1207,11 +1204,11 @@
     },
     {
       "licensetype": "ST",
-      "n": "7662"
+      "n": "7663"
     },
     {
       "licensetype": "SWC",
-      "n": "2954"
+      "n": "2958"
     },
     {
       "licensetype": "SWP",
@@ -1263,7 +1260,7 @@
     },
     {
       "licensetype": "TL",
-      "n": "11635"
+      "n": "11636"
     },
     {
       "licensetype": "TLTP",
@@ -1275,7 +1272,7 @@
     },
     {
       "licensetype": "TMPMOD",
-      "n": "312"
+      "n": "313"
     },
     {
       "licensetype": "T-NA",
@@ -1363,7 +1360,7 @@
     },
     {
       "licensetype": "VT",
-      "n": "4553"
+      "n": "4554"
     },
     {
       "licensetype": "WC",
@@ -1375,7 +1372,7 @@
     },
     {
       "licensetype": "WHO",
-      "n": "1957"
+      "n": "1958"
     },
     {
       "licensetype": "WI",
@@ -1444,7 +1441,7 @@
       "text": "Massage Therapists Provisional Massage Therapist (Historic Only) PMT Individual Do not renew"
     }
   ],
-  "overpass_endpoint": null,
+  "overpass_endpoint": "https://overpass-api.de/api/interpreter",
   "note": "License or OSM listing alone is not sufficient to assert current operation. Verify websites, physical location and category before publishing.",
   "attribution": "OpenStreetMap data © OpenStreetMap contributors; ODbL applies https://www.openstreetmap.org/copyright"
 }
