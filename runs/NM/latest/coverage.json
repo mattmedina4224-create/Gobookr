@@ -1,10 +1,10 @@
 {
  "state": "NM",
  "census_places": 517,
- "places_covered": 5,
- "place_coverage_pct": 1,
+ "places_covered": 7,
+ "place_coverage_pct": 1.4,
  "census_counties": 33,
- "counties_covered": 5,
+ "counties_covered": 6,
  "counties_uncovered": [
   "Catron County",
   "Chaves County",
@@ -17,7 +17,6 @@
   "Guadalupe County",
   "Harding County",
   "Hidalgo County",
-  "Lea County",
   "Lincoln County",
   "Los Alamos County",
   "Luna County",
@@ -39,15 +38,23 @@
  "top_covered_places": [
   {
    "name": "Albuquerque",
-   "shops": 10
+   "shops": 35
   },
   {
    "name": "Santa Fe",
-   "shops": 6
+   "shops": 8
   },
   {
    "name": "Las Cruces",
-   "shops": 3
+   "shops": 6
+  },
+  {
+   "name": "Rio Rancho",
+   "shops": 2
+  },
+  {
+   "name": "Lovington",
+   "shops": 1
   },
   {
    "name": "Placitas",
@@ -60,9 +67,34 @@
  ],
  "uncovered_places_with_held_candidates": [
   {
+   "name": "Los Alamos",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 19
+  },
+  {
    "name": "Taos",
    "type": "INCORPORATED PLACE",
-   "held_candidates": 7
+   "held_candidates": 14
+  },
+  {
+   "name": "Truth or Consequences",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 13
+  },
+  {
+   "name": "Portales",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 9
+  },
+  {
+   "name": "Socorro",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 9
+  },
+  {
+   "name": "Farmington",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 6
   },
   {
    "name": "Gallup",
@@ -70,22 +102,27 @@
    "held_candidates": 6
   },
   {
-   "name": "Los Alamos",
-   "type": "CENSUS DESIGNATED PLACE",
-   "held_candidates": 6
-  },
-  {
-   "name": "Farmington",
+   "name": "Deming",
    "type": "INCORPORATED PLACE",
    "held_candidates": 5
   },
   {
-   "name": "Deming",
+   "name": "Corrales",
    "type": "INCORPORATED PLACE",
    "held_candidates": 4
   },
   {
-   "name": "Truth or Consequences",
+   "name": "Eldorado at Santa Fe",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Española",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 4
+  },
+  {
+   "name": "Hobbs",
    "type": "INCORPORATED PLACE",
    "held_candidates": 4
   },
@@ -95,27 +132,42 @@
    "held_candidates": 3
   },
   {
-   "name": "Eldorado at Santa Fe",
+   "name": "Bosque Farms",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Las Vegas",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Peralta",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 3
+  },
+  {
+   "name": "Alamogordo",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Artesia",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Belen",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Cannon AFB",
    "type": "CENSUS DESIGNATED PLACE",
-   "held_candidates": 3
+   "held_candidates": 2
   },
   {
-   "name": "Hobbs",
-   "type": "INCORPORATED PLACE",
-   "held_candidates": 3
-  },
-  {
-   "name": "Rio Rancho",
-   "type": "INCORPORATED PLACE",
-   "held_candidates": 3
-  },
-  {
-   "name": "Socorro",
-   "type": "INCORPORATED PLACE",
-   "held_candidates": 3
-  },
-  {
-   "name": "Española",
+   "name": "Clovis",
    "type": "INCORPORATED PLACE",
    "held_candidates": 2
   },
@@ -125,13 +177,23 @@
    "held_candidates": 2
   },
   {
-   "name": "Portales",
+   "name": "Moriarty",
    "type": "INCORPORATED PLACE",
    "held_candidates": 2
   },
   {
-   "name": "Alamogordo",
+   "name": "Raton",
    "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Roswell",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 2
+  },
+  {
+   "name": "Alcalde",
+   "type": "CENSUS DESIGNATED PLACE",
    "held_candidates": 1
   },
   {
@@ -145,12 +207,17 @@
    "held_candidates": 1
   },
   {
-   "name": "Cannon AFB",
-   "type": "CENSUS DESIGNATED PLACE",
+   "name": "Carlsbad",
+   "type": "INCORPORATED PLACE",
    "held_candidates": 1
   },
   {
-   "name": "Corrales",
+   "name": "Edgewood",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Hatch",
    "type": "INCORPORATED PLACE",
    "held_candidates": 1
   },
@@ -160,13 +227,13 @@
    "held_candidates": 1
   },
   {
-   "name": "Las Vegas",
+   "name": "Logan",
    "type": "INCORPORATED PLACE",
    "held_candidates": 1
   },
   {
-   "name": "Lovington",
-   "type": "INCORPORATED PLACE",
+   "name": "Los Chaves",
+   "type": "CENSUS DESIGNATED PLACE",
    "held_candidates": 1
   },
   {
@@ -175,17 +242,27 @@
    "held_candidates": 1
   },
   {
+   "name": "Magdalena",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
    "name": "Mesilla",
    "type": "INCORPORATED PLACE",
    "held_candidates": 1
   },
   {
-   "name": "Raton",
+   "name": "Mountainair",
    "type": "INCORPORATED PLACE",
    "held_candidates": 1
   },
   {
-   "name": "Roswell",
+   "name": "Picacho Hills",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "Rio Communities",
    "type": "INCORPORATED PLACE",
    "held_candidates": 1
   },
@@ -193,8 +270,18 @@
    "name": "Sandia Heights",
    "type": "CENSUS DESIGNATED PLACE",
    "held_candidates": 1
+  },
+  {
+   "name": "Silver City",
+   "type": "INCORPORATED PLACE",
+   "held_candidates": 1
+  },
+  {
+   "name": "White Sands",
+   "type": "CENSUS DESIGNATED PLACE",
+   "held_candidates": 1
   }
  ],
- "uncovered_places_without_candidates": 485,
+ "uncovered_places_without_candidates": 467,
  "source": "U.S. Census Bureau 2020 place-by-county and county code files"
 }

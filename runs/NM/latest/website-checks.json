@@ -1,184 +1,462 @@
 {
+ "http://ampmsalon.net/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 78
+ },
+ "https://www.cilasalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 308
+ },
+ "https://anchorandframe.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 392
+ },
+ "https://www.mastersofhairdesign.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 443
+ },
+ "https://www.robertossalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 779
+ },
+ "https://fringehairstudioabq.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 798
+ },
+ "https://rootsabq.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.rootsabq.com/",
+  "ms": 1385
+ },
+ "https://moxievo.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1236
+ },
+ "http://sanmarlesalon.net/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 2601
+ },
+ "https://christopherjamessalon.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 2596
+ },
+ "https://milosbarbershop.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 2089
+ },
+ "https://inforahairstudio.org/": {
+  "status": "error",
+  "error": "ERR_SSL_SSL/TLS_ALERT_HANDSHAKE_FAILURE",
+  "ms": 94
+ },
+ "https://www.staytraditionalbarbershop.com/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 371
+ },
+ "https://www.evohairdesign.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 130
+ },
+ "https://www.greatclips.com/salons/7741": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://salons.greatclips.com/us/nm/albuquerque/3715-las-estancias-way",
+  "ms": 3955
+ },
+ "https://salons.greatclips.com/us/nm/rio-rancho/7820-enchanted-hills-blvd-ne": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 584
+ },
+ "https://salons.greatclips.com/us": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 2643
+ },
+ "https://abqwigs.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 245
+ },
+ "https://www.jaclynsatthepromenade.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 140
+ },
+ "https://www.bbeautifulsf.com/": {
+  "status": "error",
+  "error": "CERT_HAS_EXPIRED",
+  "ms": 288
+ },
+ "https://salon.black/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 409
+ },
+ "https://shearmadnesskids.com/albuquerque-new-mexico/": {
+  "status": "dead",
+  "http_status": 404,
+  "final_url": "https://franchise.shearmadnesskids.com/albuquerque-new-mexico/",
+  "ms": 4148
+ },
+ "https://www.theindustrystudio.net/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 506
+ },
+ "https://gc-parlor.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 402
+ },
+ "https://shearaestheticssalon.square.site/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 816
+ },
+ "https://square.site/book/FESARSTXKVRG5/fringebycherylrenee-albuquerque-nm": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://fringebycherylrenee.square.site/",
+  "ms": 1170
+ },
+ "https://booksy.com/en-us/842771_barber-teclo_barber-shop_28894_albuquerque": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 652
+ },
+ "https://www.tijerashairco.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 279
+ },
+ "https://nuveabq.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 209
+ },
+ "https://markpardo.com/locations/paseo-del-norte/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 5136
+ },
+ "https://www.salondelmarsf.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 129
+ },
+ "https://www.signaturestyle.com/locations/nm/albuquerque/style-america-checker-auto-plaza-haircuts-6747.html": {
+  "status": "dead",
+  "http_status": 404,
+  "final_url": "https://www.signaturestyle.com/locations/nm/albuquerque/style-america-checker-auto-plaza-haircuts-6747",
+  "ms": 764
+ },
  "http://www.essentialslc.com/": {
   "status": "dead",
   "error": "ENOTFOUND",
-  "ms": 12
+  "ms": 119
+ },
+ "https://blessedbladesbarbershop.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.restoringlightcc.com/",
+  "ms": 1741
  },
  "https://holidaysalonsf.com/": {
   "status": "dead",
   "error": "ENOTFOUND",
-  "ms": 16
- },
- "http://serenetouchsalon.com/": {
-  "status": "dead",
-  "error": "ENOTFOUND",
-  "ms": 29
+  "ms": 104
  },
  "https://www.massageenvy.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 65
+  "ms": 266
+ },
+ "https://booksy.com/en-us/1861207_elite-cuts_barber-shop_28894_albuquerque": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://booksy.com/en-us/s/barber-shop/28894_albuquerque?do=showBusinessDeletedModal",
+  "ms": 1277
+ },
+ "https://phoenixbeautyloungenm.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.phoenixbeautyloungenm.com/",
+  "ms": 1128
  },
  "http://beautyinwellness.com/": {
   "status": "blocked",
   "http_status": 403,
-  "ms": 174
- },
- "https://www.placitasdelsalon.com/": {
-  "status": "live",
-  "http_status": 200,
-  "final_url": "https://placitasdelsalon.com/",
-  "ms": 169
- },
- "https://www.swanksalonabq.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 150
- },
- "https://markpardo.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 178
- },
- "https://utopiasantafesalon.com/": {
-  "status": "dead",
-  "error": "ENOTFOUND",
-  "ms": 46
- },
- "http://luxurynailsnm.com/": {
-  "status": "dead",
-  "error": "ENOTFOUND",
-  "ms": 52
- },
- "http://luckynailsnm.com/": {
-  "status": "dead",
-  "error": "ENOTFOUND",
-  "ms": 17
- },
- "http://happynailsalbuquerque.com/": {
-  "status": "dead",
-  "error": "ENOTFOUND",
-  "ms": 15
- },
- "https://gopronails.com/": {
-  "status": "live",
-  "http_status": 202,
-  "ms": 72
+  "ms": 406
  },
  "https://www.ulta.com/stores/albuquerque-nm-707": {
   "status": "live",
   "http_status": 200,
-  "ms": 258
+  "ms": 548
  },
- "https://magicnailslascruces.com/": {
-  "status": "dead",
-  "error": "ENOTFOUND",
-  "ms": 14
- },
- "https://sherrysugar.com/": {
+ "https://v2.waitwhile.com/welcome/mvcuts": {
   "status": "live",
   "http_status": 200,
-  "final_url": "https://www.sherrysugar.com/",
-  "ms": 236
- },
- "https://idealeyebrow.com/": {
-  "status": "dead",
-  "error": "ENOTFOUND",
-  "ms": 22
- },
- "https://www.kendraspsc.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 91
+  "final_url": "https://waitwhile.com/locations/mvcuts",
+  "ms": 1190
  },
  "https://www.ulta.com/stores/santa-fe-nm-664": {
   "status": "live",
   "http_status": 200,
-  "ms": 372
- },
- "https://flushdetoxspa.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 28
- },
- "https://www.ulta.com/stores/albuquerque-nm-1558": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 161
- },
- "https://www.suncareabq.com/montgomery-ne/": {
-  "status": "live",
-  "http_status": 202,
-  "ms": 268
- },
- "https://nailspaloslunas.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 158
- },
- "https://www.bodiesbysandy.com/": {
-  "status": "live",
-  "http_status": 200,
-  "ms": 73
+  "ms": 835
  },
  "https://www.cosbar.com/santa-fe": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://cosbar.com/",
-  "ms": 742
+  "ms": 1263
  },
- "https://galaxy-nail-spa.business.site/": {
+ "https://markpardo.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1301
+ },
+ "https://www.markpardo.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://markpardo.com/",
+  "ms": 7437
+ },
+ "https://utopiasantafesalon.com/": {
   "status": "dead",
-  "http_status": 404,
-  "ms": 559
+  "error": "ENOTFOUND",
+  "ms": 947
+ },
+ "http://luxurynailsnm.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 301
+ },
+ "http://luckynailsnm.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 258
+ },
+ "https://www.swanksalonabq.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 1413
+ },
+ "https://gopronails.com/": {
+  "status": "error",
+  "error": "UND_ERR_SOCKET",
+  "ms": 794
+ },
+ "http://happynailsalbuquerque.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 2393
+ },
+ "https://magicnailslascruces.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 2363
+ },
+ "https://sherrysugar.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.sherrysugar.com/",
+  "ms": 3797
+ },
+ "https://www.placitasdelsalon.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://placitasdelsalon.com/",
+  "ms": 3986
+ },
+ "https://idealeyebrow.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 2321
+ },
+ "https://www.suncareabq.com/montgomery-ne/": {
+  "status": "error",
+  "error": "UND_ERR_SOCKET",
+  "ms": 2488
+ },
+ "https://www.kendraspsc.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 321
  },
  "https://glamournailspa505.com/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://www.glamournailspa505.com/",
-  "ms": 650
+  "ms": 3933
+ },
+ "https://flushdetoxspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 309
+ },
+ "https://www.agelesssantafe.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 295
+ },
+ "https://www.bodiesbysandy.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 234
+ },
+ "https://nailspaloslunas.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 458
+ },
+ "http://serenetouchsalon.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 54
+ },
+ "https://www.ulta.com/stores/albuquerque-nm-1558": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 658
+ },
+ "https://galaxy-nail-spa.business.site/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 3053
+ },
+ "http://taosmountaininn.com/blog/?page_id=13": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 72
+ },
+ "https://fenomenaillounge.as.me/schedule/36585a44": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 621
  },
  "https://5800.state-rda.com/": {
   "status": "blocked",
   "http_status": 403,
   "final_url": "https://www.saloncentric.com/",
-  "ms": 87
+  "ms": 327
  },
- "https://blushabq.com/": {
+ "https://beewaxedskincare.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 85
+  "ms": 345
  },
- "https://www.agelesssantafe.com/": {
+ "https://www.slt-massage.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 67
+ },
+ "https://www.allisonetattoo.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 470
+  "ms": 182
+ },
+ "https://riograndebodyworks.com/": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 86
  },
  "https://daretobarewaxden.com/about-us": {
   "status": "dead",
   "http_status": 404,
   "final_url": "https://www.daretobarewaxden.com/about-us",
-  "ms": 515
+  "ms": 481
  },
- "https://fenomenaillounge.as.me/schedule/36585a44": {
+ "https://www.sacredjourneyswellness.com/indexr.html": {
+  "status": "dead",
+  "error": "ENOTFOUND",
+  "ms": 78
+ },
+ "https://www.treeoflifemassage.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 645
+  "ms": 174
  },
- "https://beewaxedskincare.com/": {
+ "https://www.theglow-standard.com/": {
   "status": "live",
   "http_status": 200,
-  "ms": 436
+  "final_url": "https://theglow-standard.com/",
+  "ms": 647
+ },
+ "https://www.loveshealingtouch.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 299
+ },
+ "https://luckyneedle.carrd.co/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 371
+ },
+ "https://www.goodmedicinetattooabq.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 128
  },
  "https://www.thelashlounge.com/nm-albuquerque-ne/": {
   "status": "live",
   "http_status": 200,
   "final_url": "https://www.thelashlounge.com/locations/nm/albuquerque/north-town-plaza-ne/",
-  "ms": 1464
+  "ms": 1603
+ },
+ "https://albuquerquemassagetherapies.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 641
+ },
+ "https://eastwestayurveda.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://sites.google.com/site/ewayurveda2/",
+  "ms": 536
+ },
+ "https://thebackporchdayspa.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 234
+ },
+ "https://blushabq.com/": {
+  "status": "live",
+  "http_status": 200,
+  "ms": 273
+ },
+ "https://ohsmassage.com/": {
+  "status": "live",
+  "http_status": 200,
+  "final_url": "https://www.ohsmassage.com/",
+  "ms": 421
+ },
+ "https://serenity-body-spa-chinese-massage.business.site/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 901
+ },
+ "https://lucky-massage-spa-massage-spa.business.site/": {
+  "status": "dead",
+  "http_status": 404,
+  "ms": 958
  },
  "https://www.dripdriveiv.com/": {
   "status": "error",
   "error": "UND_ERR_CONNECT_TIMEOUT",
-  "ms": 10231
+  "ms": 10484
  }
 }
