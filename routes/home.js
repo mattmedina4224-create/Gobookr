@@ -1,4 +1,5 @@
 'use strict';
+const { categoryCover } = require('../lib/category-cover');
 
 const db = require('../db');
 const { favoriteIds, favoriteControl } = require('../lib/favorites');
@@ -33,24 +34,27 @@ function initials(name) {
 }
 
 function homeCard(pro, ctx, savedIds) {
-  const photoUrl = pro.profile_photo_url || (pro.coverPhoto && pro.coverPhoto.image_url) || '';
-  const photo = photoUrl
-    ? `<img src="${escapeHtml(photoUrl)}" alt="${escapeHtml(pro.business_name)}" loading="lazy" decoding="async" />`
-    : `<span aria-hidden="true">${escapeHtml(initials(pro.business_name))}</span>`;
-  const categories = (pro.categories || []).slice(0, 3).map(slugCategory);
-  const extraSpecialties = (pro.categories || []).length > 3 ? `<span>+${pro.categories.length - 3}</span>` : '';
-  const tags = categories.length ? categories.map((label) => `<span>${escapeHtml(label)}</span>`).join('') + extraSpecialties : '<span>Professional</span>';
+  const ownPhoto = pro.profile_photo_url || (pro.coverPhoto && pro.coverPhoto.image_url) || '';
+  const categories = (pro.categories || []).filter(Boolean);
+  const cover = categoryCover(categories, pro.id);
+  const label = categories.length ? slugCategory(categories[0]) : 'Professional';
+  const media = ownPhoto
+    ? `<img src="${escapeHtml(ownPhoto)}" alt="${escapeHtml(pro.business_name)}" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='${cover.src}';this.className='${cover.className}'" />`
+    : `<img class="${cover.className}" src="${cover.src}" alt="" loading="lazy" decoding="async" /><span class="gb-cover-tag">${escapeHtml(label)}</span><span class="gb-cover-initials" aria-hidden="true">${escapeHtml(initials(pro.business_name))}</span>`;
   const rating = pro.rating != null
     ? `<span class="gb-rating"><span class="gb-star">${ICON.star}</span>${pro.rating} <span class="muted">(${pro.reviewCount})</span></span>`
-    : `<span class="gb-new">New on Tovara</span>`;
+    : '';
   const place = [pro.city, pro.state].filter(Boolean).join(', ');
-  const sub = pro.workplace_name && pro.workplace_name !== pro.business_name ? pro.workplace_name : place;
-  return `<div class="favorite-card gb-pro-card-wrap"><a class="gb-pro-card" href="/pro/${pro.id}"><div class="gb-pro-media${photoUrl ? '' : ' gb-monogram'}">${photo}</div><div class="gb-pro-body"><h3>${escapeHtml(pro.business_name)}</h3><p class="gb-pro-sub">${escapeHtml(sub || 'Tovara professional')}</p><div class="gb-pro-tags">${tags}</div><div class="gb-pro-foot">${rating}${place && sub !== place ? `<span>${escapeHtml(place)}</span>` : ''}</div></div></a>${favoriteControl(pro, ctx, savedIds.has(Number(pro.id)))}</div>`;
+  const specialtyLabels = (pro.categories || []).slice(0, 3).map(slugCategory);
+  const sub = [specialtyLabels.join(' · '), place].filter(Boolean).join(' · ');
+  return `<div class="favorite-card gb-pro-card-wrap"><a class="gb-pro-card has-cover" href="/pro/${pro.id}"><div class="gb-pro-media">${media}</div><div class="gb-pro-body"><h3>${escapeHtml(pro.business_name)}</h3>${pro.workplace_name && pro.workplace_name !== pro.business_name ? `<p class="gb-pro-work">${escapeHtml(pro.workplace_name)}</p>` : ''}<p class="gb-pro-sub">${escapeHtml(sub || 'Tovara professional')}</p>${rating ? `<div class="gb-pro-foot">${rating}</div>` : ''}</div></a>${favoriteControl(pro, ctx, savedIds.has(Number(pro.id)))}</div>`;
 }
 
 function businessCard(shop) {
   const place = [shop.city, shop.state].filter(Boolean).join(', ');
-  return `<a class="gb-biz-card" href="/shop/${shop.id}"><span class="gb-monogram" aria-hidden="true">${escapeHtml(initials(shop.name))}</span><h3>${escapeHtml(shop.name)}</h3><p>${escapeHtml(place)}</p></a>`;
+  const cats = shop.categories || [];
+  const cover = categoryCover(cats.length ? cats : [shop.name], shop.id);
+  return `<a class="gb-biz-card has-cover" href="/shop/${shop.id}"><div class="gb-biz-media"><img class="${cover.className}" src="${cover.src}" alt="" loading="lazy" decoding="async" /><span class="gb-cover-initials" aria-hidden="true">${escapeHtml(initials(shop.name))}</span></div><div class="gb-biz-body"><h3>${escapeHtml(shop.name)}</h3><p>${escapeHtml(place)}</p></div></a>`;
 }
 
 function safeAll(sql, ...args) {
@@ -66,6 +70,10 @@ module.exports = function (router) {
       .sort((a, b) => (b.rating || 0) - (a.rating || 0))
       .slice(0, 6);
     const businesses = safeAll('SELECT id, name, city, state FROM shops ORDER BY id DESC LIMIT 4');
+    if (businesses.length) {
+      const cats = safeAll(`SELECT shop_id, category FROM shop_categories WHERE shop_id IN (${businesses.map(() => '?').join(',')})`, ...businesses.map((shop) => shop.id));
+      for (const shop of businesses) shop.categories = cats.filter((row) => Number(row.shop_id) === Number(shop.id)).map((row) => row.category);
+    }
     const cities = safeAll("SELECT city, state, COUNT(*) AS total FROM pro_profiles WHERE city <> '' GROUP BY city, state ORDER BY total DESC, city ASC LIMIT 10");
 
     const savedIds = favoriteIds(ctx, featured);

@@ -6,8 +6,8 @@ Tovara is a marketplace/directory for appointment-based personal-service profess
 The product owner uses ChatGPT as the project manager. Codex is the implementation engineer. Product behavior, pricing, branding, marketplace policy, and major architecture changes should follow the requirements in this repository or the task provided by the project manager; do not invent major product decisions.
 
 ## Current product direction
-- Customer-facing brand: **Tovara** (capital G and B).
-- Domain: `gobookr.com`.
+- Customer-facing brand: **Tovara** (wordmark is lowercase "tovara"). Renamed from GoBookr in Nov 2026; internal names (cookies, file names, `gobookr-ui.css`, the subscription price ID) intentionally still say gobookr.
+- Domain: `gobookr.com` until a Tovara domain is purchased; then move the domain and email sender and redirect old links.
 - Professional plan: 30-day free trial, then $20/month.
 - Primary categories: barbers, hairstylists, colorists, nail technicians, eyelash technicians, eyebrow/brow professionals, waxing specialists, tattoo artists, massage therapists, and similar appointment-based personal services.
 - Tovara is not intended to become a broad home-services marketplace.
@@ -96,11 +96,12 @@ The intended ownership flow is:
 
 ## UI and brand guardrails
 - Design system: `public/gobookr-ui.css` is the single source of truth for color, type, spacing and components. It loads last on every page. Add new UI with its tokens and components instead of hard-coded colors or one-off inline styles.
-- Brand palette (2026 redesign): Midnight `#101828` (text, dark sections), Cloud `#F8FAFC` (light background), Iris `#6558F5` (buttons, links, active states only), Mint `#18B6A4` (sparing: verified/open-now signals), Silver `#E9EAF2` (borders, subtle surfaces), white (cards). Use the `--gb-*` variables, not hex values.
+- Brand palette (Nov 2026 peach refresh): Peach `--gb-iris` `#FFB27A` (button/accent fills only, always with dark `--gb-on-accent` text, never peach text on white), deep orange `--gb-iris-ink` `#B4440C` (links and accent text), warm charcoal `--gb-midnight`/`--gb-ink` `#2A211B` (text), warm Cloud `#FBF7F3` (light sections), Silver `#EEE6DF` (borders), Mint `#18B6A4` (sparing: verified/open-now signals), white (cards). Variable names were kept from the earlier palette; use the `--gb-*` variables, not hex values. No harsh dark blocks: bands and banners are light and warm.
+- Photos: listings without their own photo show a service photo (`lib/category-cover.js`) as the card cover, labeled with the service (cards) or "Example photo" (profile banner), and swap to the listing's own photo once uploaded. Business pages keep the typographic cover when they have no photo. Never present a stock photo as a professional's own work.
 - Typography: Inter (UI/body) and Inter Display (headlines), self-hosted in `public/fonts/` (OFL). Sentence-case labels; no tracked ALL-CAPS eyebrows.
 - Visual direction: premium, minimal, editorial technology marketplace. Most real profiles have no photos or reviews, so every card and profile must look finished without them.
 - Existing approved homepage and mobile header should be preserved unless the task explicitly requests a redesign.
-- The approved logo/favicon concept is a Midnight square with a white calendar grid and one Iris date square (`public/gobookr-mark-2026.svg`), with the Tovara wordmark.
+- The approved logo/favicon is a peach coin with a white rounded T (`public/tovara-mark.svg`), beside the heavy lowercase "tovara" wordmark.
 - Keep the favicon consistent across pages.
 - Mobile usability matters; do not treat mobile as an afterthought.
 - Avoid unrelated visual changes while fixing backend/performance issues.

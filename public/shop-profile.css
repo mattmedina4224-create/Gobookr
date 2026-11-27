@@ -161,3 +161,9 @@
   .sp-actionbar .btn { flex: 1; justify-content: center; text-align: center; min-height: 46px; }
 }
 @media (prefers-reduced-motion: reduce) { .sp-photo img, .sp-member { transition: none; } .sp-photo:hover img { transform: none; } }
+
+/* 2026-11: lighter, shorter cover when a business has no photo yet */
+.sp-cover.sp-cover-fallback { height: clamp(150px, 18vw, 220px); background-color: #FFF6EE; background-image: radial-gradient(rgba(180, 68, 12, .1) 1px, transparent 1.3px); background-size: 18px 18px; border-color: #F6E4D4; }
+.sp-cover-fallback .sp-cover-initial { display: none; }
+.sp-logo-fallback { background: var(--gb-iris-wash); color: var(--gb-iris-ink); }
+@media (max-width: 700px) { .sp-cover.sp-cover-fallback { height: 140px; } }

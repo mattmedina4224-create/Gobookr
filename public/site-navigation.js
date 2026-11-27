@@ -3,12 +3,20 @@
   const header = document.querySelector('.site-header');
   const button = header && header.querySelector('.mobile-menu-toggle');
   const nav = header && header.querySelector('#site-navigation');
+  const accountMenu = header && header.querySelector('.gb-account-menu');
+  if (accountMenu) {
+    document.addEventListener('click', (event) => { if (accountMenu.open && !accountMenu.contains(event.target) && !header.hasAttribute('data-nav-open')) accountMenu.open = false; });
+    document.addEventListener('keydown', (event) => { if (event.key === 'Escape' && accountMenu.open) { accountMenu.open = false; accountMenu.querySelector('summary').focus(); } });
+  }
   if (button && nav) {
     const mobile = window.matchMedia('(max-width: 720px)');
     function setOpen(open) {
       header.toggleAttribute('data-nav-open', open);
       button.setAttribute('aria-expanded', String(open));
       button.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      // In the phone menu the account links show inline, so the account dropdown stays expanded.
+      const account = nav.querySelector('.gb-account-menu');
+      if (account) account.open = open && mobile.matches;
     }
     button.hidden = false;
     header.setAttribute('data-nav-ready', '');

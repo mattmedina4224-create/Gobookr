@@ -961,3 +961,102 @@ td { border-bottom: 1px solid var(--gb-line); padding: 12px; vertical-align: top
   .gb-collage-chip { left: 12px; bottom: 12px; }
 }
 @media (max-width: 520px) { .gb-collage { gap: 8px; } .gb-collage figure { border-radius: 16px; } }
+
+/* ===== 2026-11 cards with photos (service photo cover when a listing has none) ===== */
+.gb-cover-v1 { transform: scaleX(-1) !important; }
+.gb-cover-v2 { transform: scale(1.3) !important; transform-origin: 50% 35%; }
+.market-cover, .gb-pro-media, .gb-biz-media { position: relative; overflow: hidden; background: #F6EDE5; }
+.market-cover img, .gb-pro-card.has-cover .gb-pro-media img, .gb-biz-media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.market-cover-tag, .gb-cover-tag { position: absolute; left: 12px; bottom: 12px; padding: 4px 10px; border-radius: var(--gb-r-pill); background: rgba(255, 255, 255, .92); color: var(--gb-ink); font-size: .75rem; font-weight: 600; line-height: 1.3; box-shadow: 0 1px 2px rgba(42, 33, 27, .12); }
+.market-cover-initials, .gb-cover-initials, .biz-cover-logo { position: absolute; right: 12px; bottom: 12px; width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; background: var(--gb-white) !important; color: var(--gb-ink) !important; font: 700 .875rem/1 var(--gb-font-display); letter-spacing: -.01em; border: 2px solid var(--gb-white); box-shadow: 0 2px 8px rgba(42, 33, 27, .2); object-fit: cover; }
+
+/* Search results */
+.pro-grid, .search-results-page .pro-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.pro-grid > .favorite-card { overflow: hidden; }
+.pro-card.market-pro-card.has-cover, .pro-card.business-card.has-cover { display: flex !important; flex-direction: column; padding: 0 !important; border: 0 !important; }
+.pro-card.business-card.has-cover { border: 1px solid var(--gb-line) !important; overflow: hidden; height: 100%; }
+.has-cover .market-cover { aspect-ratio: 3 / 2; border-radius: 0; }
+.has-cover .market-pro-info { padding: 14px 18px 4px !important; }
+.business-card.has-cover .market-pro-info { padding-bottom: 16px !important; }
+.has-cover .market-specialties { margin-top: 4px; }
+.has-cover .market-meta { margin-top: 10px; }
+.business-card.has-cover .view-profile { display: inline-block; margin-top: 12px; font-size: .8125rem; font-weight: 600; color: var(--gb-iris-ink); }
+.pro-grid > .favorite-card .market-claim-link { margin: 10px 18px 0 !important; padding: 10px 0 14px !important; }
+.pro-grid > .favorite-card > .favorite-form, .pro-grid > .favorite-card > .favorite-control { top: 12px !important; right: 12px !important; }
+.pro-grid > .favorite-card .favorite-control, .pro-grid > .favorite-card .favorite-form button { width: 38px; height: 38px; min-height: 38px; padding: 0; justify-content: center; font-size: 0; gap: 0; border-radius: 50%; background: rgba(255, 255, 255, .94); border-color: transparent; box-shadow: 0 1px 3px rgba(42, 33, 27, .18); }
+.pro-grid > .favorite-card .favorite-control span, .pro-grid > .favorite-card .favorite-form button span { font-size: 1.0625rem; line-height: 1; }
+
+/* Homepage cards */
+.gb-pro-card.has-cover, .favorite-card > a.gb-pro-card.has-cover { display: flex; flex-direction: column; gap: 0; padding: 0; overflow: hidden; }
+.gb-pro-card.has-cover .gb-pro-media { width: 100%; height: auto; aspect-ratio: 16 / 10; border-radius: 0; }
+.gb-pro-card.has-cover .gb-pro-body { padding: 14px 18px 16px; }
+.gb-pro-card.has-cover .gb-pro-body h3, .gb-pro-card.has-cover .gb-pro-sub { margin-right: 0 !important; }
+.gb-pro-work { margin: 0 0 2px; font-size: var(--gb-text-sm); color: var(--gb-ink-2); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.gb-pro-card.has-cover .gb-pro-foot { margin-top: 10px; padding-top: 0; border-top: 0; }
+.favorite-card.gb-pro-card-wrap > .favorite-form, .favorite-card.gb-pro-card-wrap > .favorite-control { top: 12px; right: 12px; }
+.gb-pro-card-wrap .favorite-control, .gb-pro-card-wrap .favorite-form button { background: rgba(255, 255, 255, .94); border-color: transparent; box-shadow: 0 1px 3px rgba(42, 33, 27, .18); }
+.gb-biz-card.has-cover { padding: 0; gap: 0; overflow: hidden; }
+.gb-biz-media { aspect-ratio: 16 / 10; }
+.gb-biz-body { padding: 14px 16px 16px; display: grid; gap: 2px; }
+
+@media (max-width: 1100px) { .pro-grid, .search-results-page .pro-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) {
+  .pro-grid, .search-results-page .pro-grid { grid-template-columns: 1fr; gap: 12px; }
+  /* Compact rows on phones: photo on the left so more results fit on screen */
+  .pro-card.market-pro-card.has-cover, .pro-card.business-card.has-cover { display: grid !important; grid-template-columns: 112px minmax(0, 1fr); }
+  .has-cover .market-cover { aspect-ratio: auto; height: 100%; min-height: 128px; }
+  .has-cover .market-cover-tag { display: none; }
+  .has-cover .market-cover-initials, .has-cover .biz-cover-logo { width: 32px; height: 32px; right: 8px; bottom: 8px; font-size: .75rem; }
+  .has-cover .market-pro-info { padding: 12px 52px 10px 14px !important; }
+  .pro-grid > .favorite-card .market-claim-link { margin: 0 14px !important; }
+  .pro-grid > .favorite-card > .favorite-form, .pro-grid > .favorite-card > .favorite-control { top: 10px !important; right: 10px !important; }
+  .pro-grid > .favorite-card .favorite-control { background: var(--gb-white); border: 1px solid var(--gb-line); box-shadow: none; }
+  .gb-pro-grid { grid-template-columns: 1fr; }
+}
+
+/* ===== 2026-11 header: account links live in one menu under the avatar ===== */
+.gb-account-menu { position: relative; margin-left: 4px; }
+.gb-account-menu > summary { list-style: none; display: inline-flex; align-items: center; gap: 4px; height: 40px; padding: 0 6px 0 4px; border-radius: var(--gb-r-pill); cursor: pointer; }
+.gb-account-menu > summary::-webkit-details-marker { display: none; }
+.gb-account-menu > summary:hover, .gb-account-menu[open] > summary { background: var(--gb-cloud); }
+.gb-account-menu > summary:focus-visible { outline: 2px solid var(--gb-iris-ink); outline-offset: 2px; }
+.gb-account-menu .gb-avatar-dot { width: 32px; height: 32px; font-size: .75rem; }
+.gb-account-caret { width: 8px; height: 8px; border: solid var(--gb-ink-3); border-width: 0 1.6px 1.6px 0; transform: translateY(-2px) rotate(45deg); }
+.gb-account-panel { position: absolute; right: 0; top: calc(100% + 8px); z-index: 60; min-width: 220px; display: grid; padding: 6px; background: var(--gb-white); border: 1px solid var(--gb-line); border-radius: 14px; box-shadow: 0 18px 40px -16px rgba(42, 33, 27, .28); }
+.gb-account-who { display: grid; gap: 1px; margin: 0 0 4px; padding: 8px 10px 10px; border-bottom: 1px solid var(--gb-line); }
+.gb-account-who strong { font-size: var(--gb-text-sm); color: var(--gb-ink); }
+.gb-account-who span { font-size: .75rem; color: var(--gb-ink-3); }
+.site-header .gb-account-panel a, .gb-account-panel form button { display: flex; align-items: center; width: 100%; min-height: 38px; padding: 0 10px !important; border-radius: 8px; font-size: var(--gb-text-sm); font-weight: 550; color: var(--gb-ink); text-align: left; background: none; border: 0; cursor: pointer; }
+.site-header .gb-account-panel a:hover, .gb-account-panel form button:hover { background: var(--gb-cloud); }
+.gb-account-panel form { margin: 4px 0 0; padding-top: 4px; border-top: 1px solid var(--gb-line); }
+@media (min-width: 721px) { .gb-account-panel .gb-account-dash { display: none !important; } }
+@media (max-width: 720px) {
+  .site-header[data-nav-ready] .gb-nav-account > .gb-nav-dashboard { display: none; }
+  .site-header[data-nav-ready] .gb-account-menu { margin: 0; }
+  .site-header[data-nav-ready] .gb-account-menu > summary { display: none; }
+  .site-header[data-nav-ready] .gb-account-panel { position: static; min-width: 0; padding: 0; border: 0; box-shadow: none; background: transparent; }
+}
+
+/* ===== 2026-11 profile: photo banner joined to the header card ===== */
+.profile-banner { position: relative; height: clamp(150px, 22vw, 260px); overflow: hidden; border: 1px solid var(--gb-line); border-bottom: 0; border-radius: var(--gb-r-xl) var(--gb-r-xl) 0 0; background: #F6EDE5; }
+.profile-banner img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 35%; display: block; }
+.profile-banner-note { position: absolute; right: 12px; bottom: 12px; padding: 3px 9px; border-radius: var(--gb-r-pill); background: rgba(42, 33, 27, .55); color: #fff; font-size: .6875rem; font-weight: 550; backdrop-filter: blur(4px); }
+.profile-page .profile-head.has-banner, .profile-v3 .profile-head.has-banner { border-top-left-radius: 0 !important; border-top-right-radius: 0 !important; padding-top: 20px !important; background: var(--gb-white) !important; }
+.profile-head.has-banner .avatar, .profile-head.has-banner .avatar.lg { margin-top: -76px; border: 4px solid var(--gb-white); box-shadow: 0 6px 18px -6px rgba(42, 33, 27, .3) !important; background-color: var(--gb-white); position: relative; z-index: 1; }
+.profile-head .avatar:not(.profile-photo-avatar) { background: var(--gb-iris-wash) !important; color: var(--gb-iris-ink) !important; }
+.profile-categories { align-items: center; }
+.profile-distance { color: var(--gb-ink-3) !important; font-weight: 500 !important; }
+.profile-head .cta-col { gap: 10px; }
+.profile-cta-secondary { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.profile-cta-secondary:empty { display: none; }
+.profile-cta-secondary > * { min-width: 0; display: flex; margin: 0 !important; }
+.profile-cta-secondary > * > button, .profile-cta-secondary > form > * { flex: 1; }
+.profile-cta-secondary .favorite-control, .profile-cta-secondary .follow-control, .profile-cta-secondary button { height: 44px !important; min-height: 44px !important; width: 100%; }
+.profile-head .cta-col .profile-cta-secondary .favorite-control, .profile-head .cta-col .profile-cta-secondary .follow-control, .profile-cta-secondary form button { min-height: 42px !important; font-size: .8125rem !important; white-space: nowrap; }
+.profile-claim-line { margin: 2px 0 0; text-align: center; font-size: .8125rem; color: var(--gb-ink-3); }
+.profile-claim-line a { color: var(--gb-iris-ink); font-weight: 600; }
+@media (max-width: 860px) { .profile-head .cta-col { display: flex !important; flex-direction: column; } }
+@media (max-width: 700px) {
+  .profile-banner { border-radius: 0; border-left: 0; border-right: 0; margin: 0; height: 170px; }
+  .profile-head.has-banner .avatar, .profile-head.has-banner .avatar.lg { margin-top: -62px; }
+}

@@ -1,4 +1,5 @@
 'use strict';
+const { categoryCover } = require('../lib/category-cover');
 
 const db = require('../db');
 const { favoriteIds, favoriteControl } = require('../lib/favorites');
@@ -52,42 +53,39 @@ function profileGlance(pro, bookingUrl) {
 }
 
 function proCard(pro, ctx, savedIds) {
-  const startingPrice = pro.services && pro.services.length ? money(Math.min(...pro.services.map((s) => Number(s.price)).filter(Number.isFinite))) + '+' : (pro.price_min ? money(pro.price_min) + '+' : 'Pricing varies');
+  const prices = (pro.services || []).map((s) => Number(s.price)).filter(Number.isFinite);
+  const startingPrice = prices.length ? money(Math.min(...prices)) + '+' : (pro.price_min ? money(pro.price_min) + '+' : '');
   const ratingHtml = pro.rating != null
     ? `<div class="market-rating"><span class="market-star" aria-hidden="true">★</span><strong>${pro.rating}</strong><span class="market-review-count">(${pro.reviewCount} review${pro.reviewCount === 1 ? '' : 's'})</span></div>`
-    : `<div class="market-new">New on Tovara</div>`;
+    : '';
   const specialties = (pro.categories || [pro.category]).filter(Boolean);
   const specialtyLabels = specialties.slice(0, 3).map((category) => escapeHtml(slugCategory(category))).join(' · ');
   const extraSpecialties = specialties.length > 3 ? ` <span class="market-specialty-more">+${specialties.length - 3}</span>` : '';
-  const serviceNames = pro.services.slice(0, 2).map((s) => escapeHtml(s.name)).join(' · ');
+  const serviceNames = (pro.services || []).slice(0, 2).map((s) => escapeHtml(s.name)).join(' · ');
   const specialtyHtml = specialtyLabels ? `<div class="market-specialties" aria-label="Specialties">${specialtyLabels}${extraSpecialties}</div>` : '';
   const hasLocation = pro.latitude !== null && pro.latitude !== '' && pro.longitude !== null && pro.longitude !== '' && Number.isFinite(Number(pro.latitude)) && Number.isFinite(Number(pro.longitude));
   const locationAttrs = hasLocation ? ` data-lat="${Number(pro.latitude)}" data-lon="${Number(pro.longitude)}"` : '';
   const distanceHtml = pro.cityOnly ? '<span class="market-distance">Distance unavailable</span>' : typeof pro.distanceMiles === 'number' && Number.isFinite(pro.distanceMiles) ? `<span class="market-distance">${pro.distanceMiles.toFixed(1)} mi away</span>` : '';
-  const workplaceHtml = pro.workplace_name ? `<div class="market-workplace">${escapeHtml(pro.workplace_name)}</div>` : '';
-  const photoHtml = pro.profile_photo_url
-    ? `<img class="market-avatar-img" src="${escapeHtml(pro.profile_photo_url)}" alt="${escapeHtml(pro.business_name)} profile photo" loading="lazy" />`
-    : pro.coverPhoto
-      ? `<img class="market-avatar-img" src="${escapeHtml(pro.coverPhoto.image_url)}" alt="${escapeHtml(pro.coverPhoto.caption || pro.business_name)}" loading="lazy" />`
-      : `<div class="market-avatar-fallback accent-${escapeHtml(pro.accent)}">${escapeHtml(pro.initials || initialsFrom(pro.business_name))}</div>`;
-  const verified = pro.license_verified ? `<span class="market-verified">${verifiedBadge()}<span>Verified</span></span>` : '';
-  const claim = pro.claim_status === 'unclaimed' ? `<span class="market-status">Unclaimed</span>` : '';
+  const workplaceHtml = pro.workplace_name && pro.workplace_name !== pro.business_name ? `<div class="market-workplace">${escapeHtml(pro.workplace_name)}</div>` : '';
+  const ownPhoto = pro.profile_photo_url || (pro.coverPhoto && pro.coverPhoto.image_url) || '';
+  const cover = categoryCover(specialties, pro.id);
+  const photoHtml = ownPhoto
+    ? `<img class="market-cover-img" src="${escapeHtml(ownPhoto)}" alt="${escapeHtml(pro.business_name)}" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='${cover.src}';this.className='market-cover-img ${cover.className}'" />`
+    : `<img class="market-cover-img ${cover.className}" src="${cover.src}" alt="" loading="lazy" decoding="async" /><span class="market-cover-tag">${escapeHtml(specialties.length ? slugCategory(specialties[0]) : 'Professional')}</span>`;
+  const initialsHtml = `<span class="market-cover-initials accent-${escapeHtml(pro.accent || 'slate')}" aria-hidden="true">${escapeHtml(pro.initials || initialsFrom(pro.business_name))}</span>`;
   const claimAction = pro.claim_status === 'unclaimed' ? `<a class="market-claim-link" href="/pro/${pro.id}/claim">Is this you? Claim profile</a>` : '';
-  return `<div class="favorite-card"><a class="pro-card market-pro-card" href="/pro/${pro.id}"${locationAttrs}>
-    <div class="market-pro-inner">
-      <div class="market-avatar-wrap">${photoHtml}</div>
-      <div class="market-pro-info">
-        <div class="market-name-row"><h3>${escapeHtml(pro.business_name)}</h3>${pro.license_verified ? verifiedBadge() : ''}</div>
-        ${pro.professional_handle ? `<div class="market-handle">@${escapeHtml(pro.professional_handle)}</div>` : ''}
-        ${workplaceHtml}
-        <div class="market-trust-row">${verified}${claim}</div>
-        ${ratingHtml}
-        ${specialtyHtml}
-        ${pro.matchReason ? `<div class="market-match-reason">${escapeHtml(pro.matchReason)}</div>` : ''}
-        ${serviceNames ? `<div class="market-service">${serviceNames}</div>` : ''}
-        <div class="market-meta"><span class="market-price">${startingPrice === 'Pricing varies' ? startingPrice : 'From ' + startingPrice}</span>${distanceHtml}${pro.city ? `<span class="market-place">${escapeHtml(pro.city)}, ${escapeHtml(pro.state)}</span>` : ''}</div>
-      </div>
-      <span class="market-chevron" aria-hidden="true">›</span>
+  const place = pro.city ? `<span class="market-place">${escapeHtml(pro.city)}, ${escapeHtml(pro.state)}</span>` : '';
+  return `<div class="favorite-card"><a class="pro-card market-pro-card has-cover" href="/pro/${pro.id}"${locationAttrs}>
+    <div class="market-cover">${photoHtml}${ownPhoto ? '' : initialsHtml}</div>
+    <div class="market-pro-info">
+      <div class="market-name-row"><h3>${escapeHtml(pro.business_name)}</h3>${pro.license_verified ? verifiedBadge() : ''}</div>
+      ${pro.professional_handle ? `<div class="market-handle">@${escapeHtml(pro.professional_handle)}</div>` : ''}
+      ${workplaceHtml}
+      ${specialtyHtml}
+      ${ratingHtml}
+      ${pro.matchReason ? `<div class="market-match-reason">${escapeHtml(pro.matchReason)}</div>` : ''}
+      ${serviceNames ? `<div class="market-service">${serviceNames}</div>` : ''}
+      <div class="market-meta">${startingPrice ? `<span class="market-price">From ${startingPrice}</span>` : ''}${place}${distanceHtml}</div>
     </div>
   </a>${claimAction}${favoriteControl(pro, ctx, savedIds.has(Number(pro.id)))}</div>`;
 }
@@ -110,14 +108,18 @@ function businessCard(shop) {
   const published = shop.claim_status === 'claimed' && Boolean(shop.profile_published_at);
   let logo = ''; try { const u = new URL(String(shop.logo_url || '')); if (['http:', 'https:'].includes(u.protocol)) logo = u.toString(); } catch (_) {}
   const location = [shop.city, shop.state].filter(Boolean).join(', ');
-  const status = shop.claim_status === 'unclaimed' ? '<span class="badge" style="background:var(--gb-iris-wash);color:var(--gb-midnight);border:1px solid var(--gb-iris-line);">Unclaimed business</span>' : '';
-  const action = shop.claim_status === 'unclaimed' ? 'View & claim business →' : 'View business →';
-  const distanceHtml = shop.cityOnly ? '<span class="distance-away">Distance unavailable</span>' : typeof shop.distanceMiles === 'number' && Number.isFinite(shop.distanceMiles) ? '<span class="distance-away">' + shop.distanceMiles.toFixed(1) + ' miles away</span>' : '';
-  return '<a class="pro-card business-card" href="/shop/' + shop.id + '"><div class="pro-card-body"><div class="pro-card-top">' +
-    (published && logo ? '<img src="' + escapeHtml(logo) + '" alt="" loading="lazy" style="width:52px;height:52px;border-radius:14px;object-fit:cover;border:1px solid var(--paper-line);"/>' : '<div class="avatar accent-slate">' + escapeHtml((String(shop.name || 'B').match(/[A-Za-z0-9]/) || ['B'])[0].toUpperCase()) + '</div>') +
-    '<div class="pro-card-main"><div style="margin-bottom:5px;"><span class="badge category">Business</span></div><h3>' + escapeHtml(shop.name) + '</h3><div class="pro-location">' + escapeHtml(location) + (distanceHtml ? ' <span aria-hidden="true">·</span> ' + distanceHtml : '') + '</div></div></div>' +
-    (status ? '<div style="margin:8px 0;">' + status + '</div>' : '') +
-    '<div class="services-line">' + escapeHtml(((published && (shop.tagline || shop.description)) || shopCategoryLabels(shop).join(' · ') || 'Local service business').slice(0, 140)) + '</div><div class="pro-card-footer"><span></span><span class="view-profile">' + action + '</span></div></div></a>';
+  const labels = shopCategoryLabels(shop);
+  const cover = categoryCover(shop.categories && shop.categories.length ? shop.categories : [shop.name], shop.id);
+  const distanceHtml = shop.cityOnly ? '<span class="distance-away">Distance unavailable</span>' : typeof shop.distanceMiles === 'number' && Number.isFinite(shop.distanceMiles) ? '<span class="distance-away">' + shop.distanceMiles.toFixed(1) + ' mi away</span>' : '';
+  const mark = published && logo
+    ? '<img class="biz-cover-logo" src="' + escapeHtml(logo) + '" alt="" loading="lazy" />'
+    : '<span class="market-cover-initials accent-slate" aria-hidden="true">' + escapeHtml((String(shop.name || 'B').match(/[A-Za-z0-9]/) || ['B'])[0].toUpperCase()) + '</span>';
+  const action = shop.claim_status === 'unclaimed' ? 'View &amp; claim business' : 'View business';
+  return '<a class="pro-card business-card has-cover" href="/shop/' + shop.id + '"><div class="market-cover"><img class="market-cover-img ' + cover.className + '" src="' + cover.src + '" alt="" loading="lazy" decoding="async" /><span class="market-cover-tag">' + escapeHtml(labels[0] || 'Business') + '</span>' + mark + '</div>' +
+    '<div class="market-pro-info"><div class="market-name-row"><h3>' + escapeHtml(shop.name) + '</h3></div>' +
+    '<div class="market-specialties">' + escapeHtml(((published && (shop.tagline || shop.description)) || labels.join(' · ') || 'Local service business').slice(0, 140)) + '</div>' +
+    '<div class="market-meta">' + (location ? '<span class="market-place">' + escapeHtml(location) + '</span>' : '') + distanceHtml + '</div>' +
+    '<span class="view-profile">' + action + '</span></div></a>';
 }
 
 function socialLinks(pro) {
@@ -332,17 +334,22 @@ module.exports = function (router) {
     const bookingHref = '/book/' + pro.id + (attributionSource ? '?source=' + encodeURIComponent(attributionSource) : '');
     let ctaHtml;
     if (isOwnProfile) ctaHtml = `<a class="btn secondary block" href="/dashboard/pro/profile">Manage your profile</a>`;
-    else if (pro.claim_status === 'unclaimed') ctaHtml = `${bookingUrl ? `<a class="btn block profile-book-btn" href="${escapeHtml(bookingHref)}">Book Appointment <span aria-hidden="true">↗</span></a>` : ''}<a class="btn secondary block" href="/pro/${pro.id}/claim" style="margin-top:10px;">Claim this profile</a><p class="muted" style="font-size:12px;margin:8px 0 0;text-align:center;">Are you this professional? Verify ownership to manage this listing.</p>`;
+    else if (pro.claim_status === 'unclaimed') ctaHtml = `${bookingUrl ? `<a class="btn block profile-book-btn" href="${escapeHtml(bookingHref)}">Book Appointment <span aria-hidden="true">↗</span></a>` : ''}<p class="profile-claim-line">Is this you? <a href="/pro/${pro.id}/claim">Claim this profile</a></p>`;
     else if (pro.claim_status === 'claim_pending') ctaHtml = `${bookingUrl ? `<a class="btn block profile-book-btn" href="${escapeHtml(bookingHref)}">Book Appointment <span aria-hidden="true">↗</span></a>` : ''}<div class="booking-unavailable" style="margin-top:10px;"><strong>Claim pending</strong><p class="muted" style="margin:4px 0 0;">Tovara is verifying ownership of this profile.</p></div>`;
     else if (bookingUrl) ctaHtml = `<a class="btn block profile-book-btn" href="${escapeHtml(bookingHref)}">Book Appointment <span aria-hidden="true">↗</span></a><p class="muted" style="font-size:12px;margin:8px 0 0;text-align:center;">You'll book on this professional's scheduling site.</p>`;
     else ctaHtml = `<div class="booking-unavailable"><strong>Online booking not connected yet</strong><p class="muted" style="margin:4px 0 0;">Check back soon for this professional's booking link.</p></div>`;
     const accentColors = ['#6d3bf0','#a06bff','#e8a33d','#f2c675','#1c8a8a','#4fc7c0','#d13b6f','#ef7ba0']; const gradientFor = (i) => `linear-gradient(135deg, ${accentColors[i % accentColors.length]}, ${accentColors[(i + 3) % accentColors.length]})`;
     const hasLocation = pro.latitude !== null && pro.latitude !== '' && pro.longitude !== null && pro.longitude !== '' && Number.isFinite(Number(pro.latitude)) && Number.isFinite(Number(pro.longitude)); const workplaceHtml = pro.workplace_name ? `<p class="profile-workplace">${escapeHtml(pro.workplace_name)}</p>` : '';
     const verifiedHtml = pro.license_verified ? `<div class="profile-verified">${verifiedBadge()} <span>License verified by Tovara</span></div>` : ''; const experienceHtml = Number(pro.years_experience) > 0 ? `<span class="stat"><b>${Number(pro.years_experience)}</b> yrs experience</span>` : ''; const priceHtml = pro.price_min && pro.price_max ? `<span class="stat"><b>${money(pro.price_min)}–${money(pro.price_max)}</b> typical range</span>` : '';
+    const bannerOwn = (portfolio.find((p) => p && p.image_url) || {}).image_url || '';
+    const bannerCover = categoryCover(displayCategories && displayCategories.length ? displayCategories : [pro.category], pro.id);
+    const profileBanner = `<div class="profile-banner">${bannerOwn
+      ? `<img src="${escapeHtml(bannerOwn)}" alt="" onerror="this.onerror=null;this.src='${bannerCover.src}'" />`
+      : `<img class="${bannerCover.className === 'gb-cover-v1' ? 'gb-cover-v1' : ''}" src="${bannerCover.src}" alt="" /><span class="profile-banner-note">Example photo</span>`}</div>`;
     const profileFollowing = followIds(ctx, [pro]).has(Number(pro.id));
     const followHtml = isOwnProfile ? '' : followControl(pro, ctx, profileFollowing);
     const updatesHtml = pro.user_id != null ? `<section aria-labelledby="profile-updates"><h2 id="profile-updates">Latest updates</h2>${publicUpdates(pro.id).map(u => renderUpdate(u)).join('') || '<p class="muted">No updates from this professional yet.</p>'}</section>` : '';
-    const body = `<link rel="stylesheet" href="/following.css">${isOwnProfile ? `<div class="container" style="padding-top:20px;"><div class="panel"><strong>${pro.onboarding_completed ? 'Your profile preview' : 'Private draft preview'}</strong><p>${pro.onboarding_completed ? 'Review how your profile appears to customers.' : 'Only you can see this draft. Complete setup before publishing.'}</p><a class="btn secondary" href="/dashboard/pro/onboarding?step=review">Back to review &amp; publish</a></div></div>` : ''}<section class="section container profile-page"><div class="profile-head"${hasLocation ? ` data-lat="${Number(pro.latitude)}" data-lon="${Number(pro.longitude)}"` : ''}>${pro.profile_photo_url ? `<div class="avatar lg profile-photo-avatar"><img src="${escapeHtml(pro.profile_photo_url)}" alt="${escapeHtml(pro.business_name)} profile photo" /></div>` : `<div class="avatar lg accent-${escapeHtml(pro.accent)}">${escapeHtml(pro.initials || initialsFrom(pro.business_name))}</div>`}<div class="meta"><div style="margin-bottom:8px;">${claimBadge(pro)}</div><div class="profile-categories">${categoryBadges(displayCategories)}</div><h1>${escapeHtml(pro.business_name)}${pro.license_verified ? verifiedBadge() : ''}</h1>${pro.professional_handle ? `<div class="profile-handle">@${escapeHtml(pro.professional_handle)}</div>` : ''}${workplaceHtml}<div class="profile-location">${escapeHtml(pro.city)}, ${escapeHtml(pro.state)}${hasLocation ? ' <span aria-hidden="true">·</span> <span class="profile-distance">Use location for distance</span>' : ''}</div><div class="stat-row"><span class="stat">${rating != null ? `<span class="rating">${stars(rating)}</span> <b>${rating}</b> <span class="muted">(${reviews.length} review${reviews.length === 1 ? '' : 's'})</span>` : '<b>New</b> <span class="muted">No reviews yet</span>'}</span>${experienceHtml}${priceHtml}</div>${verifiedHtml}</div><div class="cta-col">${favoriteControl(pro, ctx, favoriteIds(ctx, [pro]).has(Number(pro.id)))}${followHtml}${ctaHtml}</div></div>${openingHtml}<div class="profile-mobile-actions">${!isOwnProfile && bookingUrl ? `<a class="btn block" href="${escapeHtml(bookingHref)}">Book Appointment <span aria-hidden="true">↗</span></a>` : ''}${!isOwnProfile ? favoriteControl(pro, ctx, favoriteIds(ctx, [pro]).has(Number(pro.id))) : ''}</div><div class="profile-follow-mobile">${followHtml}</div><div class="tabs-grid"><main>${updatesHtml}<div class="panel profile-about"><h2>About</h2><p>${escapeHtml(pro.bio) || (isOwnProfile ? 'Add an About section so customers understand your specialties and what to expect.' : 'More details from this professional are coming soon.')}</p></div>${profileGlance(pro, bookingUrl)}<div class="panel"><div class="profile-section-head"><h2>Portfolio</h2><span class="muted">${portfolio.length} photo${portfolio.length === 1 ? '' : 's'}</span></div><div class="portfolio-grid profile-portfolio">${portfolio.length ? portfolio.map((p,i) => p.image_url ? `<figure><div class="portfolio-item"><img src="${escapeHtml(p.image_url)}" alt="${escapeHtml(p.caption || 'Portfolio photo')}" loading="lazy" /></div>${p.caption ? `<figcaption>${escapeHtml(p.caption)}</figcaption>` : ''}</figure>` : `<figure><div class="portfolio-item" style="background:${gradientFor(i)};"><span>${escapeHtml(p.caption)}</span></div></figure>`).join('') : isOwnProfile ? '<p class="muted">Add portfolio photos to show customers your work.</p>' : '<p class="muted">More work from this professional is coming soon.</p>'}</div></div><div class="panel"><div class="profile-section-head"><h2>Reviews</h2>${rating != null ? `<strong>${rating} ${stars(rating)}</strong>` : ''}</div>${reviews.length ? reviews.map((r) => `<div class="review"><div class="review-top"><span class="name">${escapeHtml(r.customer_name)}</span><span class="rating">${stars(r.rating)}</span></div><p>${escapeHtml(r.comment)}</p></div>`).join('') : '<p class="muted">No reviews yet.</p>'}</div></main><aside><div class="panel services-panel"><h2>Services &amp; pricing</h2>${services.length ? services.map((s) => `<div class="service-row"><div><div class="name">${escapeHtml(s.name)}</div><div class="duration">${Number(s.duration_minutes) || 0} min</div></div><div class="price-tag">${money(s.price)}</div></div>`).join('') : '<p class="muted">Services coming soon.</p>'}${!isOwnProfile && bookingUrl ? `<a class="btn block" href="${escapeHtml(bookingHref)}" style="margin-top:18px;">Book Appointment <span aria-hidden="true">↗</span></a>` : ''}</div>${socialLinks(pro)}</aside></div></section>`;
+    const body = `<link rel="stylesheet" href="/following.css">${isOwnProfile ? `<div class="container" style="padding-top:20px;"><div class="panel"><strong>${pro.onboarding_completed ? 'Your profile preview' : 'Private draft preview'}</strong><p>${pro.onboarding_completed ? 'Review how your profile appears to customers.' : 'Only you can see this draft. Complete setup before publishing.'}</p><a class="btn secondary" href="/dashboard/pro/onboarding?step=review">Back to review &amp; publish</a></div></div>` : ''}<section class="section container profile-page">${profileBanner}<div class="profile-head has-banner"${hasLocation ? ` data-lat="${Number(pro.latitude)}" data-lon="${Number(pro.longitude)}"` : ''}>${pro.profile_photo_url ? `<div class="avatar lg profile-photo-avatar"><img src="${escapeHtml(pro.profile_photo_url)}" alt="${escapeHtml(pro.business_name)} profile photo" /></div>` : `<div class="avatar lg accent-${escapeHtml(pro.accent)}">${escapeHtml(pro.initials || initialsFrom(pro.business_name))}</div>`}<div class="meta"><div class="profile-categories">${categoryBadges(displayCategories)}${claimBadge(pro)}</div><h1>${escapeHtml(pro.business_name)}${pro.license_verified ? verifiedBadge() : ''}</h1>${pro.professional_handle ? `<div class="profile-handle">@${escapeHtml(pro.professional_handle)}</div>` : ''}${workplaceHtml}<div class="profile-location">${escapeHtml(pro.city)}, ${escapeHtml(pro.state)}${hasLocation ? ' <span aria-hidden="true">·</span> <span class="profile-distance">Use location for distance</span>' : ''}</div><div class="stat-row"><span class="stat">${rating != null ? `<span class="rating">${stars(rating)}</span> <b>${rating}</b> <span class="muted">(${reviews.length} review${reviews.length === 1 ? '' : 's'})</span>` : '<b>New</b> <span class="muted">No reviews yet</span>'}</span>${experienceHtml}${priceHtml}</div>${verifiedHtml}</div><div class="cta-col">${ctaHtml}<div class="profile-cta-secondary">${isOwnProfile ? '' : favoriteControl(pro, ctx, favoriteIds(ctx, [pro]).has(Number(pro.id)))}${followHtml}</div></div></div>${openingHtml}<div class="profile-mobile-actions">${!isOwnProfile && bookingUrl ? `<a class="btn block" href="${escapeHtml(bookingHref)}">Book Appointment <span aria-hidden="true">↗</span></a>` : ''}${!isOwnProfile ? favoriteControl(pro, ctx, favoriteIds(ctx, [pro]).has(Number(pro.id))) : ''}</div><div class="profile-follow-mobile">${followHtml}</div><div class="tabs-grid"><main>${updatesHtml}<div class="panel profile-about"><h2>About</h2><p>${escapeHtml(pro.bio) || (isOwnProfile ? 'Add an About section so customers understand your specialties and what to expect.' : 'More details from this professional are coming soon.')}</p></div>${profileGlance(pro, bookingUrl)}<div class="panel"><div class="profile-section-head"><h2>Portfolio</h2><span class="muted">${portfolio.length} photo${portfolio.length === 1 ? '' : 's'}</span></div><div class="portfolio-grid profile-portfolio">${portfolio.length ? portfolio.map((p,i) => p.image_url ? `<figure><div class="portfolio-item"><img src="${escapeHtml(p.image_url)}" alt="${escapeHtml(p.caption || 'Portfolio photo')}" loading="lazy" /></div>${p.caption ? `<figcaption>${escapeHtml(p.caption)}</figcaption>` : ''}</figure>` : `<figure><div class="portfolio-item" style="background:${gradientFor(i)};"><span>${escapeHtml(p.caption)}</span></div></figure>`).join('') : isOwnProfile ? '<p class="muted">Add portfolio photos to show customers your work.</p>' : '<p class="muted">More work from this professional is coming soon.</p>'}</div></div><div class="panel"><div class="profile-section-head"><h2>Reviews</h2>${rating != null ? `<strong>${rating} ${stars(rating)}</strong>` : ''}</div>${reviews.length ? reviews.map((r) => `<div class="review"><div class="review-top"><span class="name">${escapeHtml(r.customer_name)}</span><span class="rating">${stars(r.rating)}</span></div><p>${escapeHtml(r.comment)}</p></div>`).join('') : '<p class="muted">No reviews yet.</p>'}</div></main><aside><div class="panel services-panel"><h2>Services &amp; pricing</h2>${services.length ? services.map((s) => `<div class="service-row"><div><div class="name">${escapeHtml(s.name)}</div><div class="duration">${Number(s.duration_minutes) || 0} min</div></div><div class="price-tag">${money(s.price)}</div></div>`).join('') : '<p class="muted">Services coming soon.</p>'}${!isOwnProfile && bookingUrl ? `<a class="btn block" href="${escapeHtml(bookingHref)}" style="margin-top:18px;">Book Appointment <span aria-hidden="true">↗</span></a>` : ''}</div>${socialLinks(pro)}</aside></div></section>`;
     const profileUrl = 'https://gobookr.com/pro/' + pro.id;
     const structuredData = { '@context': 'https://schema.org', '@type': 'Person', name: pro.business_name, url: profileUrl, description: pro.bio || undefined, image: pro.profile_photo_url || (portfolio.find((item) => item.image_url) || {}).image_url || undefined, jobTitle: displayCategories.map(slugCategory).join(', '), address: (pro.city || pro.state) ? { '@type': 'PostalAddress', addressLocality: pro.city || undefined, addressRegion: pro.state || undefined } : undefined, worksFor: pro.workplace_name ? { '@type': 'Organization', name: pro.workplace_name } : undefined };
     if (rating != null && reviews.length) structuredData.aggregateRating = { '@type': 'AggregateRating', ratingValue: rating, reviewCount: reviews.length };
