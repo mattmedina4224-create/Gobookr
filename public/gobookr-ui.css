@@ -1060,3 +1060,64 @@ td { border-bottom: 1px solid var(--gb-line); padding: 12px; vertical-align: top
   .profile-banner { border-radius: 0; border-left: 0; border-right: 0; margin: 0; height: 170px; }
   .profile-head.has-banner .avatar, .profile-head.has-banner .avatar.lg { margin-top: -62px; }
 }
+
+/* ===== 2026-11 names-first listings: no stock photos on pros/businesses ===== */
+.pro-card.no-photo .market-pro-info, .market-pro-card.no-photo .market-pro-info { padding: 18px 64px 6px 20px !important; }
+.business-card.no-photo .market-pro-info { padding: 18px 20px 16px !important; }
+.no-photo .market-name-row h3 { font-size: 1.125rem !important; white-space: normal; }
+.pro-grid > .favorite-card:has(.no-photo) > .favorite-form, .pro-grid > .favorite-card:has(.no-photo) > .favorite-control { top: 14px !important; right: 14px !important; }
+.pro-grid > .favorite-card:has(.no-photo) .favorite-control, .pro-grid > .favorite-card:has(.no-photo) .favorite-form button { background: var(--gb-white); border: 1px solid var(--gb-line); box-shadow: none; }
+.pro-grid > .favorite-card:has(.no-photo) { border-top: 3px solid var(--gb-iris); }
+.gb-pro-card.no-photo .gb-pro-body { padding: 20px 64px 18px 20px; }
+.gb-pro-card.no-photo { border-top: 3px solid var(--gb-iris) !important; }
+.gb-pro-card.no-photo .gb-pro-body h3 { white-space: normal; font-size: 1.125rem; }
+.gb-pro-card.no-photo .gb-pro-foot { display: flex; gap: 6px 14px; color: var(--gb-ink-3); }
+.favorite-card.gb-pro-card-wrap:has(.no-photo) .favorite-control { background: var(--gb-white); border: 1px solid var(--gb-line); box-shadow: none; }
+.gb-biz-card { padding: 18px 20px; border-top: 3px solid var(--gb-iris); }
+.gb-biz-card .gb-biz-kind { color: var(--gb-ink-2); font-weight: 550; }
+@media (max-width: 600px) {
+  .pro-card.market-pro-card.no-photo, .pro-card.business-card.no-photo { display: block !important; }
+  .pro-card.no-photo .market-pro-info { padding: 14px 58px 6px 16px !important; }
+}
+
+/* Search: photo service shortcuts */
+.gb-svc-row { display: flex; gap: 10px; overflow-x: auto; margin: 0 0 22px; padding: 2px 2px 6px; scrollbar-width: none; }
+.gb-svc-row::-webkit-scrollbar { display: none; }
+.gb-svc-row a { flex: 0 0 auto; display: grid; justify-items: center; gap: 6px; width: 84px; text-decoration: none; color: var(--gb-ink-2); font-size: .8125rem; font-weight: 600; }
+.gb-svc-row img { width: 72px; height: 72px; border-radius: 50%; object-fit: cover; border: 3px solid var(--gb-white); box-shadow: 0 0 0 1px var(--gb-line); transition: box-shadow .15s var(--gb-ease); }
+.gb-svc-row a:hover img { box-shadow: 0 0 0 2px var(--gb-iris); }
+.gb-svc-row a.active { color: var(--gb-ink); }
+.gb-svc-row a.active img { box-shadow: 0 0 0 3px var(--gb-iris); }
+@media (max-width: 600px) { .gb-svc-row a { width: 70px; } .gb-svc-row img { width: 60px; height: 60px; } }
+
+/* Homepage: photos on steps, pro band and specialty chips */
+.gb-steps li { padding: 0 0 22px; overflow: hidden; }
+.gb-steps li::before { position: relative; z-index: 1; margin: -15px 0 12px 22px; background: var(--gb-iris); color: var(--gb-on-accent); box-shadow: 0 0 0 4px var(--gb-white); }
+.gb-steps h3, .gb-steps p { padding: 0 22px; }
+.gb-step-photo { margin: 0; aspect-ratio: 16 / 9; overflow: hidden; background: #F6EDE5; order: -1; }
+.gb-steps li { display: flex; flex-direction: column; }
+.gb-step-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.gb-band-photos { display: flex; margin-bottom: 18px; }
+.gb-band-photos img { width: 64px; height: 64px; border-radius: 50%; object-fit: cover; border: 3px solid #FFF6EE; margin-left: -12px; box-shadow: 0 4px 12px -4px rgba(42, 33, 27, .25); }
+.gb-band-photos img:first-child { margin-left: 0; }
+.gb-photo-chips a { display: inline-flex; align-items: center; gap: 8px; padding-left: 5px !important; }
+.gb-photo-chips img { width: 28px; height: 28px; border-radius: 50%; object-fit: cover; }
+
+/* Own photo = square thumbnail beside the name, so photo and name-only cards share one compact size */
+.pro-card.market-pro-card.has-cover:not(.no-photo), .pro-card.business-card.has-cover:not(.no-photo) { display: grid !important; grid-template-columns: 94px minmax(0, 1fr); align-items: start; }
+.pro-card.has-cover:not(.no-photo) .market-cover { aspect-ratio: 1 / 1 !important; width: 76px; height: 76px !important; min-height: 0 !important; margin: 18px 0 0 18px; border-radius: 14px; }
+.pro-card.has-cover:not(.no-photo) .market-pro-info { padding: 18px 64px 6px 16px !important; }
+.pro-grid > .favorite-card > .favorite-form, .pro-grid > .favorite-card > .favorite-control { top: 14px !important; right: 14px !important; }
+.pro-grid > .favorite-card .favorite-control, .pro-grid > .favorite-card .favorite-form button { background: var(--gb-white) !important; border: 1px solid var(--gb-line) !important; box-shadow: none !important; }
+.pro-grid > .favorite-card { border-top: 3px solid var(--gb-iris); }
+.gb-pro-card.has-cover:not(.no-photo) { display: grid !important; grid-template-columns: 90px minmax(0, 1fr); align-items: start; border-top: 3px solid var(--gb-iris) !important; }
+.gb-pro-card.has-cover:not(.no-photo) .gb-pro-media { width: 72px; height: 72px !important; aspect-ratio: 1 / 1; margin: 18px 0 0 18px; border-radius: 14px; }
+.gb-pro-card.has-cover:not(.no-photo) .gb-pro-body { padding: 18px 64px 18px 14px; }
+.gb-pro-card-wrap .favorite-control, .gb-pro-card-wrap .favorite-form button { background: var(--gb-white) !important; border: 1px solid var(--gb-line) !important; box-shadow: none !important; }
+@media (max-width: 600px) {
+  .pro-card.market-pro-card.has-cover:not(.no-photo), .pro-card.business-card.has-cover:not(.no-photo) { grid-template-columns: 78px minmax(0, 1fr); }
+  .pro-card.has-cover:not(.no-photo) .market-cover { width: 64px; height: 64px !important; margin: 14px 0 0 14px; }
+  .pro-card.has-cover:not(.no-photo) .market-pro-info { padding: 14px 58px 6px 12px !important; }
+}
+.profile-page .profile-head.no-avatar, .profile-v3 .profile-head.no-avatar { grid-template-columns: minmax(0, 1fr) minmax(240px, 300px); }
+@media (max-width: 860px) { .profile-page .profile-head.no-avatar, .profile-v3 .profile-head.no-avatar { grid-template-columns: minmax(0, 1fr); } }

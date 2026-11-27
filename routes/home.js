@@ -1,5 +1,4 @@
 'use strict';
-const { categoryCover } = require('../lib/category-cover');
 
 const db = require('../db');
 const { favoriteIds, favoriteControl } = require('../lib/favorites');
@@ -33,28 +32,31 @@ function initials(name) {
   return String(name || '').trim().split(/\s+/).filter(Boolean).slice(0, 2).map((part) => part[0].toUpperCase()).join('') || 'G';
 }
 
+// Small illustrative thumbnails for the popular specialty chips.
+const SPECIALTY_PHOTOS = {
+  'Skin fade': '/images/category-barber-v1.webp', 'Beard trim': '/images/category-barber-v1.webp',
+  'Balayage': '/images/category-hair-v1.webp', 'Silk press': '/images/category-hair-v1.webp',
+  'Russian manicure': '/images/category-nails-stock-v2.webp', 'Lash extensions': '/images/category-lashes-v1.webp',
+  'Brow lamination': '/images/category-lashes-stock-v1.webp', 'Bridal makeup': '/images/category-lashes-v1.webp',
+  'Deep tissue massage': '/images/category-massage-stock-v1.webp', 'Fine-line tattoo': '/images/category-tattoos-v1.webp',
+};
+
 function homeCard(pro, ctx, savedIds) {
+  // Only the professional's own photo is shown; without one the card is name-first.
   const ownPhoto = pro.profile_photo_url || (pro.coverPhoto && pro.coverPhoto.image_url) || '';
-  const categories = (pro.categories || []).filter(Boolean);
-  const cover = categoryCover(categories, pro.id);
-  const label = categories.length ? slugCategory(categories[0]) : 'Professional';
-  const media = ownPhoto
-    ? `<img src="${escapeHtml(ownPhoto)}" alt="${escapeHtml(pro.business_name)}" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='${cover.src}';this.className='${cover.className}'" />`
-    : `<img class="${cover.className}" src="${cover.src}" alt="" loading="lazy" decoding="async" /><span class="gb-cover-tag">${escapeHtml(label)}</span><span class="gb-cover-initials" aria-hidden="true">${escapeHtml(initials(pro.business_name))}</span>`;
+  const media = ownPhoto ? `<div class="gb-pro-media"><img src="${escapeHtml(ownPhoto)}" alt="${escapeHtml(pro.business_name)}" loading="lazy" decoding="async" onerror="this.closest('.gb-pro-card').classList.add('no-photo');this.parentNode.remove()" /></div>` : '';
   const rating = pro.rating != null
     ? `<span class="gb-rating"><span class="gb-star">${ICON.star}</span>${pro.rating} <span class="muted">(${pro.reviewCount})</span></span>`
     : '';
   const place = [pro.city, pro.state].filter(Boolean).join(', ');
   const specialtyLabels = (pro.categories || []).slice(0, 3).map(slugCategory);
-  const sub = [specialtyLabels.join(' · '), place].filter(Boolean).join(' · ');
-  return `<div class="favorite-card gb-pro-card-wrap"><a class="gb-pro-card has-cover" href="/pro/${pro.id}"><div class="gb-pro-media">${media}</div><div class="gb-pro-body"><h3>${escapeHtml(pro.business_name)}</h3>${pro.workplace_name && pro.workplace_name !== pro.business_name ? `<p class="gb-pro-work">${escapeHtml(pro.workplace_name)}</p>` : ''}<p class="gb-pro-sub">${escapeHtml(sub || 'Tovara professional')}</p>${rating ? `<div class="gb-pro-foot">${rating}</div>` : ''}</div></a>${favoriteControl(pro, ctx, savedIds.has(Number(pro.id)))}</div>`;
+  return `<div class="favorite-card gb-pro-card-wrap"><a class="gb-pro-card has-cover${ownPhoto ? '' : ' no-photo'}" href="/pro/${pro.id}">${media}<div class="gb-pro-body"><h3>${escapeHtml(pro.business_name)}</h3>${pro.workplace_name && pro.workplace_name !== pro.business_name ? `<p class="gb-pro-work">${escapeHtml(pro.workplace_name)}</p>` : ''}<p class="gb-pro-sub">${escapeHtml(specialtyLabels.join(' · ') || 'Professional')}</p><div class="gb-pro-foot">${place ? `<span>${escapeHtml(place)}</span>` : ''}${rating}</div></div></a>${favoriteControl(pro, ctx, savedIds.has(Number(pro.id)))}</div>`;
 }
 
 function businessCard(shop) {
   const place = [shop.city, shop.state].filter(Boolean).join(', ');
-  const cats = shop.categories || [];
-  const cover = categoryCover(cats.length ? cats : [shop.name], shop.id);
-  return `<a class="gb-biz-card has-cover" href="/shop/${shop.id}"><div class="gb-biz-media"><img class="${cover.className}" src="${cover.src}" alt="" loading="lazy" decoding="async" /><span class="gb-cover-initials" aria-hidden="true">${escapeHtml(initials(shop.name))}</span></div><div class="gb-biz-body"><h3>${escapeHtml(shop.name)}</h3><p>${escapeHtml(place)}</p></div></a>`;
+  const labels = (shop.categories || []).slice(0, 2).map(slugCategory);
+  return `<a class="gb-biz-card" href="/shop/${shop.id}"><h3>${escapeHtml(shop.name)}</h3><p class="gb-biz-kind">${escapeHtml(labels.join(' · ') || 'Shop or studio')}</p><p>${escapeHtml(place)}</p></a>`;
 }
 
 function safeAll(sql, ...args) {
@@ -162,7 +164,7 @@ module.exports = function (router) {
     <div class="container gb-split">
       <div>
         <h2>Popular specialties</h2>
-        <div class="gb-chips">${POPULAR_SPECIALTIES.map((term) => `<a href="/search?q=${encodeURIComponent(term)}">${escapeHtml(term)}</a>`).join('')}</div>
+        <div class="gb-chips gb-photo-chips">${POPULAR_SPECIALTIES.map((term) => `<a href="/search?q=${encodeURIComponent(term)}">${SPECIALTY_PHOTOS[term] ? `<img src="${SPECIALTY_PHOTOS[term]}" alt="" loading="lazy" decoding="async" />` : ''}${escapeHtml(term)}</a>`).join('')}</div>
       </div>
       ${cities.length ? `<div>
         <h2>Explore by city</h2>
@@ -175,9 +177,9 @@ module.exports = function (router) {
     <div class="container">
       <div class="gb-section-head"><div><h2 id="home-how-title">How booking works</h2></div></div>
       <ol class="gb-steps">
-        <li><h3>Search by service and city</h3><p>Look for a service, a specialty like balayage, or a professional by name.</p></li>
-        <li><h3>Compare profiles</h3><p>Check where they work, what they offer, and whether their license is verified.</p></li>
-        <li><h3>Book on their site</h3><p>Booking opens the scheduling page the professional already uses, like Booksy or Vagaro.</p></li>
+        <li><figure class="gb-step-photo"><img src="/images/category-lashes-v1.webp" alt="" width="720" height="720" loading="lazy" decoding="async" /></figure><h3>Search by service and city</h3><p>Look for a service, a specialty like balayage, or a professional by name.</p></li>
+        <li><figure class="gb-step-photo"><img src="/images/category-tattoos-v1.webp" alt="" width="720" height="720" loading="lazy" decoding="async" /></figure><h3>Compare profiles</h3><p>Check where they work, what they offer, and whether their license is verified.</p></li>
+        <li><figure class="gb-step-photo"><img src="/images/category-massage-v1.webp" alt="" width="720" height="720" loading="lazy" decoding="async" /></figure><h3>Book on their site</h3><p>Booking opens the scheduling page the professional already uses, like Booksy or Vagaro.</p></li>
       </ol>
     </div>
   </section>
@@ -186,6 +188,7 @@ module.exports = function (router) {
     <div class="container">
       <div class="gb-pro-band home-pro-claim-entry">
         <div>
+          <div class="gb-band-photos" aria-hidden="true"><img src="/images/category-barber-v1.webp" alt="" loading="lazy" decoding="async" /><img src="/images/category-nails-v1.webp" alt="" loading="lazy" decoding="async" /><img src="/images/category-tattoos-stock-v1.webp" alt="" loading="lazy" decoding="async" /></div>
           <h2 id="home-pro-title">Get found by clients searching near you.</h2>
           <p>Already listed? Find and claim your profile. Not on Tovara yet? Create a new profile from scratch.</p>
           <ul>
