@@ -1121,3 +1121,4 @@ td { border-bottom: 1px solid var(--gb-line); padding: 12px; vertical-align: top
 }
 .profile-page .profile-head.no-avatar, .profile-v3 .profile-head.no-avatar { grid-template-columns: minmax(0, 1fr) minmax(240px, 300px); }
 @media (max-width: 860px) { .profile-page .profile-head.no-avatar, .profile-v3 .profile-head.no-avatar { grid-template-columns: minmax(0, 1fr); } }
+.gb-collage-bottom img { object-position: 50% 30%; }

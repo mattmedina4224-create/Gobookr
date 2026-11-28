@@ -55,7 +55,7 @@ function profileGlance(pro, bookingUrl) {
 const SEARCH_SERVICE_PHOTOS = [
   { value: 'barber', label: 'Barbers', img: '/images/category-barber-v1.webp' },
   { value: 'stylist', label: 'Hair', img: '/images/category-hair-v1.webp' },
-  { value: 'nail_technician', label: 'Nails', img: '/images/category-nails-stock-v2.webp' },
+  { value: 'nail_technician', label: 'Nails', img: '/images/category-nails-stock-v1.webp' },
   { value: 'eyelash_technician', label: 'Lashes', img: '/images/category-lashes-v1.webp' },
   { value: 'eyebrow_technician', label: 'Brows', img: '/images/category-lashes-stock-v1.webp' },
   { value: 'massage_therapist', label: 'Massage', img: '/images/category-massage-v1.webp' },

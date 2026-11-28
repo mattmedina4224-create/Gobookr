@@ -20,7 +20,7 @@ const CATALOG_VALUES = new Set(PROFESSIONAL_CATEGORIES.map((item) => item.value)
 const PHOTO_CATEGORIES = [
   { value: 'barber', label: 'Barbers', sub: 'Fades, cuts, beards', img: '/images/category-barber-v1.webp', alt: 'A barber finishing a clean fade haircut' },
   { value: 'stylist', label: 'Hairstylists', sub: 'Cuts, color, styling', img: '/images/category-hair-v1.webp', alt: 'Hair styling in a bright salon' },
-  { value: 'nail_technician', label: 'Nails', sub: 'Manicures, nail art', img: '/images/category-nails-stock-v2.webp', alt: 'Close-up of glossy red nails during a professional manicure' },
+  { value: 'nail_technician', label: 'Nails', sub: 'Manicures, nail art', img: '/images/category-nails-stock-v1.webp', alt: "A nail technician shaping a client's nails at her desk" },
   { value: 'eyelash_technician', label: 'Lashes & brows', sub: 'Extensions, lifts, shaping', img: '/images/category-lashes-stock-v1.webp', alt: "A beauty professional grooming a client's brows" },
   { value: 'tattoo_artist', label: 'Tattoo artists', sub: 'Fine line to full sleeves', img: '/images/category-tattoos-stock-v1.webp', alt: 'A tattoo artist working with blue gloves' },
   { value: 'massage_therapist', label: 'Massage', sub: 'Deep tissue, relaxation', img: '/images/category-massage-stock-v1.webp', alt: 'A professional providing a neck and shoulder massage in a spa' },
@@ -36,7 +36,7 @@ function initials(name) {
 const SPECIALTY_PHOTOS = {
   'Skin fade': '/images/category-barber-v1.webp', 'Beard trim': '/images/category-barber-v1.webp',
   'Balayage': '/images/category-hair-v1.webp', 'Silk press': '/images/category-hair-v1.webp',
-  'Russian manicure': '/images/category-nails-stock-v2.webp', 'Lash extensions': '/images/category-lashes-v1.webp',
+  'Russian manicure': '/images/category-nails-stock-v1.webp', 'Lash extensions': '/images/category-lashes-v1.webp',
   'Brow lamination': '/images/category-lashes-stock-v1.webp', 'Bridal makeup': '/images/category-lashes-v1.webp',
   'Deep tissue massage': '/images/category-massage-stock-v1.webp', 'Fine-line tattoo': '/images/category-tattoos-v1.webp',
 };
@@ -118,7 +118,7 @@ module.exports = function (router) {
       <div class="gb-collage" aria-hidden="true">
         <figure class="gb-collage-main"><img src="/images/category-hair-v1.webp" alt="" width="720" height="720" fetchpriority="high" decoding="async" /></figure>
         <figure class="gb-collage-top"><img src="/images/category-barber-v1.webp" alt="" width="720" height="720" decoding="async" /></figure>
-        <figure class="gb-collage-bottom"><img src="/images/category-nails-stock-v2.webp" alt="" width="720" height="480" decoding="async" /></figure>
+        <figure class="gb-collage-bottom"><img src="/images/category-nails-stock-v1.webp" alt="" width="481" height="720" decoding="async" /></figure>
         <div class="gb-collage-chip"><span class="gb-collage-dot"></span><div><strong>Skin fade</strong><span>Booked for 2:30 PM</span></div></div>
       </div>
     </div>
@@ -188,7 +188,7 @@ module.exports = function (router) {
     <div class="container">
       <div class="gb-pro-band home-pro-claim-entry">
         <div>
-          <div class="gb-band-photos" aria-hidden="true"><img src="/images/category-barber-v1.webp" alt="" loading="lazy" decoding="async" /><img src="/images/category-nails-v1.webp" alt="" loading="lazy" decoding="async" /><img src="/images/category-tattoos-stock-v1.webp" alt="" loading="lazy" decoding="async" /></div>
+          <div class="gb-band-photos" aria-hidden="true"><img src="/images/category-barber-v1.webp" alt="" loading="lazy" decoding="async" /><img src="/images/category-nails-stock-v1.webp" alt="" loading="lazy" decoding="async" /><img src="/images/category-tattoos-stock-v1.webp" alt="" loading="lazy" decoding="async" /></div>
           <h2 id="home-pro-title">Get found by clients searching near you.</h2>
           <p>Already listed? Find and claim your profile. Not on Tovara yet? Create a new profile from scratch.</p>
           <ul>
